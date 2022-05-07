@@ -1,1 +1,68 @@
-<h1>hello<h1>
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>布局</title> 
+</head>
+<body>
+
+<div id="container" style="width:1000px">
+
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要的网页标题11</h1></div>
+
+<div id="menu" style="background-color:#FFD700;height:500px;width:100px;float:left;">
+    1<br>
+    2<br>
+    3<br>
+    4
+</div>
+
+<div id="content" style="background-color:#EEEEEE;height:500px;width:900px;float:left;">
+    <div><!--向服务器提交数据的 Web 表单。action属性来实现，form-->
+        <form action="网址服务器11"><!--文本输入框（textarea）-->
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" placeholder="lastname"><br>
+            Password: <input type="password" name="pwd">
+        </form>
+        <!--单选按钮-->
+        <!--value属性发送值到服务器并-->
+        <!--checked属性默认选中单选按钮和复选框-->
+        <form action="">
+            <input type="radio" name="sex" value="male" checked>男<br>
+            <input type="radio" name="sex" value="female">女
+        </form>
+        <!--复选按钮-->
+        <form>
+            <input type="checkbox" name="vehicle" value="Bike">我喜欢自行车<br>
+            <input type="checkbox" name="vehicle" value="Car">我喜欢小汽车
+        </form>
+      
+        <form name="input" action="html_form_action.php" method="get">
+            Username: <input type="text" name="user">
+            <input type="submit" value="Submit"><!--提交按钮-->
+        </form>
+        
+        <form action=""><!--创建按钮-->
+            <input type="button" value="Hello world!">
+        </form>
+    </div>
+    <iframe src="http://www.runoob.com"style= height:200px;width:400px>
+        <p>您的浏览器不支持  iframe 标签。</p>
+    </iframe>
+</div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+    版权 © runoob.com
+</div>
+
+<form action="https://www.freecatphotoapp.com/submit-cat-photo">
+    <input type="text"><br><!--文本框字段-->
+    <input type="text" required><br><!--required提示必填字段-->
+    <input type="text" required placeholder="cat photo URL"><!--placeholder字段内容提示-->
+    <button type="submit">Submit</button><!--Subimt发送按钮-->
+</form>
+
+</div>
+</body>
+</html>
