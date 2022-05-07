@@ -1,37 +1,79 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>网站标题</title>
+    <base>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"><!外部样式�? 
+    <link rel="shortcut icon" href="页面ico图标文件路径">
+    <meta charset="utf-8">
+    <script></script>
+    <style type="text/css"> h1 {background-color:yellow;} p1 {color:blue;}</style><!内部样式�? 
+</head>
 
-You can use the [editor on GitHub](https://github.com/wodemingzihenchang/littleboy.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<body>
+    <h1>h1标题标签</h1><!h1~6> 
+    <hr><!这是分割�? 
+    <div><!块级元素
+        <p>段落标签
+            <br>分段标签</br>
+            <b>加粗文本</b><br>
+            <i>斜体文本</i><br>        
+            <code>电脑自动输出</code><br>
+            <sub> 下标</sub> �?<sup> 上标</sup><br>
+            <a href="https://www.runoob.com">链接标签</a><br>
+            <a href="#">链接标签</a><br><!--#号死链接-->
+            <a href="#跳转id">Contacts</a><!--#号+id可用于跳转-->
+            <h2 id="跳转id">Contacts</h2>
+            <img src="Assert\图片路径.png" width="258" height="39"alt="无法加载提示">
+            <map><!定义图像地图></map>
+            <area><!定义图像地图的可点击区域>   
+        </p>
+    </div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        
+    <table border="1" cellpadding="10" cellspacing="0">
+        <caption>table name</caption>
+        <tr>
+            <td>1,1</td>
+            <td>1,2</td>
+            <th colspan="2">单元格跨两列</th>
+        </tr>
+        <tr>
+            <th rowspan="2">单元格跨两行</th>
+            <td>2,1</td>
+            <td>2,2</td>
+            <td>2,3</td>
+            
+        </tr>
+        <tr>
+            <td>3,1</td>
+            <td>3,2</td>
+            <td>3,3</td>
+        </tr>
+    </table>
+ 
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
 
-### Markdown
+    <p><hr>
+        <h3>笔记�?/h3> 
+        属性（有参考文件）：单双引号括起， 属性和属性值对大小写不敏感�?X)HTML 要求使用小写属�?br>
+        <a href="//www.runoob.com/html/html-formatting.html">标签�?/a><br>
+        CSS：内联样式（属性）、内部样式表（head里的style）、外部引用（CSS文件�?br>
+        <a href="//www.runoob.com/html/html-entities.html">特殊字符输入参考：</a><br>
+        CSS被用来同时控制多重网页的样式和布局�?br>
+        JavaScript 可以让你的网页更加生动。与用户进行交换或者让网页更加生动�?br>
+    </p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+</body>
 
-```markdown
-Syntax highlighted code block
+</html>
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wodemingzihenchang/littleboy.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
