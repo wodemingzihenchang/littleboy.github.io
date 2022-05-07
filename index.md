@@ -1,79 +1,68 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-<head>
-    <title>网站标题</title>
-    <base>
-    <link rel="stylesheet" type="text/css" href="mystyle.css"><!外部样式�? 
-    <link rel="shortcut icon" href="页面ico图标文件路径">
-    <meta charset="utf-8">
-    <script></script>
-    <style type="text/css"> h1 {background-color:yellow;} p1 {color:blue;}</style><!内部样式�? 
+<head> 
+<meta charset="utf-8"> 
+<title>布局</title> 
 </head>
-
 <body>
-    <h1>h1标题标签</h1><!h1~6> 
-    <hr><!这是分割�? 
-    <div><!块级元素
-        <p>段落标签
-            <br>分段标签</br>
-            <b>加粗文本</b><br>
-            <i>斜体文本</i><br>        
-            <code>电脑自动输出</code><br>
-            <sub> 下标</sub> �?<sup> 上标</sup><br>
-            <a href="https://www.runoob.com">链接标签</a><br>
-            <a href="#">链接标签</a><br><!--#号死链接-->
-            <a href="#跳转id">Contacts</a><!--#号+id可用于跳转-->
-            <h2 id="跳转id">Contacts</h2>
-            <img src="Assert\图片路径.png" width="258" height="39"alt="无法加载提示">
-            <map><!定义图像地图></map>
-            <area><!定义图像地图的可点击区域>   
-        </p>
-    </div>
 
+<div id="container" style="width:1000px">
+
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+
+<div id="menu" style="background-color:#FFD700;height:500px;width:100px;float:left;">
+    1<br>
+    2<br>
+    3<br>
+    4
+</div>
+
+<div id="content" style="background-color:#EEEEEE;height:500px;width:900px;float:left;">
+    <div><!--向服务器提交数据的 Web 表单。action属性来实现，form-->
+        <form action="网址服务器"><!--文本输入框（textarea）-->
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" placeholder="lastname"><br>
+            Password: <input type="password" name="pwd">
+        </form>
+        <!--单选按钮-->
+        <!--value属性发送值到服务器并-->
+        <!--checked属性默认选中单选按钮和复选框-->
+        <form action="">
+            <input type="radio" name="sex" value="male" checked>男<br>
+            <input type="radio" name="sex" value="female">女
+        </form>
+        <!--复选按钮-->
+        <form>
+            <input type="checkbox" name="vehicle" value="Bike">我喜欢自行车<br>
+            <input type="checkbox" name="vehicle" value="Car">我喜欢小汽车
+        </form>
+      
+        <form name="input" action="html_form_action.php" method="get">
+            Username: <input type="text" name="user">
+            <input type="submit" value="Submit"><!--提交按钮-->
+        </form>
         
-    <table border="1" cellpadding="10" cellspacing="0">
-        <caption>table name</caption>
-        <tr>
-            <td>1,1</td>
-            <td>1,2</td>
-            <th colspan="2">单元格跨两列</th>
-        </tr>
-        <tr>
-            <th rowspan="2">单元格跨两行</th>
-            <td>2,1</td>
-            <td>2,2</td>
-            <td>2,3</td>
-            
-        </tr>
-        <tr>
-            <td>3,1</td>
-            <td>3,2</td>
-            <td>3,3</td>
-        </tr>
-    </table>
- 
-    <ul>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-    </ul>
-    <ol>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-    </ol>
+        <form action=""><!--创建按钮-->
+            <input type="button" value="Hello world!">
+        </form>
+    </div>
+    <iframe src="http://www.runoob.com"style= height:200px;width:400px>
+        <p>您的浏览器不支持  iframe 标签。</p>
+    </iframe>
+</div>
 
-    <p><hr>
-        <h3>笔记�?/h3> 
-        属性（有参考文件）：单双引号括起， 属性和属性值对大小写不敏感�?X)HTML 要求使用小写属�?br>
-        <a href="//www.runoob.com/html/html-formatting.html">标签�?/a><br>
-        CSS：内联样式（属性）、内部样式表（head里的style）、外部引用（CSS文件�?br>
-        <a href="//www.runoob.com/html/html-entities.html">特殊字符输入参考：</a><br>
-        CSS被用来同时控制多重网页的样式和布局�?br>
-        JavaScript 可以让你的网页更加生动。与用户进行交换或者让网页更加生动�?br>
-    </p>
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+    版权 © runoob.com
+</div>
 
+<form action="https://www.freecatphotoapp.com/submit-cat-photo">
+    <input type="text"><br><!--文本框字段-->
+    <input type="text" required><br><!--required提示必填字段-->
+    <input type="text" required placeholder="cat photo URL"><!--placeholder字段内容提示-->
+    <button type="submit">Submit</button><!--Subimt发送按钮-->
+</form>
+
+</div>
 </body>
-
 </html>
-
