@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #f6f6f6 url(./assets/img/bg.gif) no-repeat;
+    color: #333;
+}
+/*头部*/
+.container {
+    padding: 20px;
+}
+a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, label, legend, li, object, ol, p, pre, q, small, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li a {
+    color: #fff;
+}
+
+
+/*菜单*/
+.menusize
+{
+    background: #96b97d;
+    padding: 10px;
+    
+}
+
+.home-left-column {
+    width: 16%;
+}
+
+
+/*内容*/
+.middle-column-home {
+    width: 78%;
+    margin-right: 0;
+    padding: 12px 20px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-list:before {
+    content: "\f03a";
+}
+
+
+
+/*尾部*/
+#footer{
+    background: #96b97d;
+    clear:both;
+ 
+    font-size: 16px;
+    color: rgb(54, 53, 53);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
