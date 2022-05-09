@@ -6,6 +6,7 @@ body {
     background: #f6f6f6 url(./assets/img/bg.gif) no-repeat;
     color: #333;
 }
+
 /*头部*/
 .container {
     padding: 20px;
@@ -15,9 +16,9 @@ a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, 
     margin: 0;
     padding: 0;
 }
-
 .nav li a {
     color: #fff;
+    padding-right:10px;
 }
 
 
@@ -25,36 +26,38 @@ a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, 
 .menusize
 {
     background: #96b97d;
-    padding: 10px;
+    padding-left:40px;
+    
     
 }
 
-.home-left-column {
-    width: 16%;
-}
-
+/*内容菜单*/
 
 /*内容*/
-.middle-column-home {
-    width: 78%;
-    margin-right: 0;
-    padding: 12px 20px;
-    border: 1px solid #eaeaea;
-    background-color: #fff;
-    border-radius: 4px;
+.codelist {
+    overflow: hidden;
 }
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.fa-list:before {
-    content: "\f03a";
+div {
+    display: block;
 }
 
+@media handheld, only screen and (max-width: 1024px)
+.codelist a.item-top {
+    width: 40%;
+}
+
+.codelist a {
+    width: 144px;
+    margin: 8px 5px 8px 5px;
+    float: left;
+    text-align: center;
+    color: #999;
+    background: #f6f6f6;
+    font-size: 12px;
+    height: 65px;
+    overflow: hidden;
+    text-decoration: none;
+}
 
 
 /*尾部*/
