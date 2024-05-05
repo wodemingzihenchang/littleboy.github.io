@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-30 23:29:40</span>
+</div>
+
+<div id="article"><h1 id="内存不足问题"><a href="#内存不足问题" class="headerlink" title="内存不足问题"></a>内存不足问题</h1><p>-A</p>
+<p>-B：增加 Speedpak 对内存影响的说明</p>
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>“SOLIDWORKS 资源监控器”检测 “内存使用”限制超过 78% 时，将显示一系列警告。</p>
+<img src="提示内存不足问题/image1.png">
+
+<p>SOLIDWORKS 资源监控器：用于监视您的 SOLIDWORKS<br>软件或您的系统所使用的资源。<br>当您运行的资源不足时，（大概是占用超 70%就开始提示）SOLIDWORKS<br>资源监控器在 Windows<br>任务栏的通知区域中提供信息，帮助您采取适当行动以避免系统故障或丢失数据。</p>
+<p>你可能需要了解的内存小知识：<strong>即：计算机内存使用&#x3D;物理内存+虚拟内存</strong></p>
+<p>“内存使用”：是系统提供或预留给 SOLIDWORKS<br>以及任何其他运行在计算机上的进程的内存量。操作系统会建立”内存使用”的限制，即物理随机存储器<br>(RAM) 的内存加上您的虚拟内存（分页内存）大小。（例如：计算机有 32 GB 的<br>RAM，虚拟内存（分页内存）大小是 8 GB，那么”内存使用”限制为 40 GB）</p>
+<h2 id="方法1：设置虚拟内存"><a href="#方法1：设置虚拟内存" class="headerlink" title="方法1：设置虚拟内存"></a>方法1：设置虚拟内存</h2><p>验证分页文件大小配置。建议使用”系统自动分配大小”。要验证您的分页文件大小，请执行以下步骤：</p>
+<p>1.转至”控制面板”&gt;“系统”。单击”高级系统设置”。</p>
+<img src="提示内存不足问题/image2.png">
+
+<p>2.在”性能”组中，单击”设置”。</p>
+<img src="提示内存不足问题/image3.png">
+
+<p>3.单击”高级”选项卡。在”虚拟内存”组中，单击”更改”。</p>
+<img src="提示内存不足问题/image4.png">
+
+<p>4.确保”系统自动分配大小”选项至少在一个驱动器上处于激活状态。</p>
+<img src="提示内存不足问题/image5.png">
+
+<p>通过分页文件确保操作系统和其他进程有更多的可用内存。例如，如果您没有分页文件，那么操作系统就不得不将物理内存提供给运行的进程。在您的计算机上可能有一个需要<br>2 GB 内存的进程，但仅使用了 500 MB。这意味着操作系统要强制预留 2 GB<br>的物理内存，不得由其他进程使用，而其中有 1.5 GB 物理内存未被激活使用。</p>
+<h2 id="方法2：排除消耗内存最多进程"><a href="#方法2：排除消耗内存最多进程" class="headerlink" title="方法2：排除消耗内存最多进程"></a>方法2：排除消耗内存最多进程</h2><p>1.按下 Ctrl + Alt + Delete 并启动 Windows®”任务管理器”。</p>
+<p>2.单击”性能”选项卡，然后单击”打开资源监视器”。</p>
+<img src="提示内存不足问题/image6.png">
+
+<p>3.单击”内存”选项卡。</p>
+<p>4.单击”提交<br>(KB)”列标题按降序排列。消耗提交内存最多的进程会显示在最顶部。</p>
+<p>（如果有其他占用异常大的进程，则可用考虑临时退出，为 SW 设计让出资源）</p>
+<img src="提示内存不足问题/image7.png">
+
+<p>利用该信息了解和调查管理消耗最多提交内存的进程的必要步骤。您可以尝试结束那些不需要的进程。</p>
+<p>如果进程是基本进程，则调查其占用太多提交内存的原因。</p>
+<p>如果进程不是 SOLIDWORKS<br>进程，且您需要进一步协助，请咨询开发此进程的公司的支持团队。</p>
+<p>如果您需要计算机上运行的所有进程，并且确定所有进程均按预期运行，那么您可能需要为您的计算机安装更多的物理内存。</p>
+<h2 id="方法3：使用Speedpak"><a href="#方法3：使用Speedpak" class="headerlink" title="方法3：使用Speedpak"></a>方法3：使用Speedpak</h2><p>本次测试数据：6000+零部件（独立零件 1500 个），总装文件大小：95.4MB。全部文件大小：1.07GB</p>
+<p>关于 Speedpak 的使用方法，可以往期文章或视频。</p>
+<h3 id="还原模式"><a href="#还原模式" class="headerlink" title="还原模式"></a>还原模式</h3><p>还原模式下的内存占用，电脑是几乎占满的状态（15.9&#x2F;16GB）如图。还原模式下的零部件内存信息会被加载进内存，从而产生过多的内存占用的情况。</p>
+<img src="提示内存不足问题/image8.png">
+
+<h3 id="单个-Speedpak"><a href="#单个-Speedpak" class="headerlink" title="单个 Speedpak"></a>单个 Speedpak</h3><p>Speedpak 对子装配体做优化处理，该模式下的零件会被隐藏（不可编辑），所以这部分的信息几乎不进内容。那么对于内存来说，占用就不会过高（如图从 9GB 减少至 4GB 内存占用）</p>
+<img src="提示内存不足问题/image9.png">
+
+<h3 id="全部-Speedpak"><a href="#全部-Speedpak" class="headerlink" title="全部 Speedpak"></a>全部 Speedpak</h3><p>全部 Speedpak，总装配体只有图形显示，其子装配体就不能编辑，这个模式下打开文件将变得非常的快（”似乎和大型装配体审阅”有的一拼）。如图的内存占用从 9GB 减少至 2GB，大大减少内存的占用。</p>
+<img src="提示内存不足问题/image10.png">
+
+<h3 id="编辑和更新-Speedpak"><a href="#编辑和更新-Speedpak" class="headerlink" title="编辑和更新 Speedpak"></a>编辑和更新 Speedpak</h3><p>对于需要编辑的零部件，我们可以打开需编辑的零部件。在做完编辑后，可在总装使用：</p>
+<ol>
+<li><p>将 Speedpak 设定到父系，来恢复部件的可编辑状态（这个命令会将部件内存加载进来）</p>
+</li>
+<li><p>更新 Speedpak 子装配体，这个会保持 Speedpak 模式，然后把修改后的零件更新到总装里（推荐用这个）</p>
+</li>
+</ol>
+<img src="提示内存不足问题/image11.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

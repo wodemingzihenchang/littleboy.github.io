@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-24 16:33:20</span>
+</div>
+
+<div id="article"><h1 id="DSComposer-如何正确更新文档"><a href="#DSComposer-如何正确更新文档" class="headerlink" title="DSComposer-如何正确更新文档"></a>DSComposer-如何正确更新文档</h1><p>请注意以下规则和限制： </p>
+<h2 id="相同名称"><a href="#相同名称" class="headerlink" title="相同名称"></a>相同名称</h2><p>1.如果您使用 SOLIDWORKS® 文件进行更新，该 SOLIDWORKS 文件必须与您用于创建 Composer 文档的 SOLIDWORKS 文件（源文件）具有相同的名称。</p>
+<p>装配体树的根节点下的名称与 SOLIDWORKS 文件的名称必须始终匹配。您可以更改根节点下的名称或更改 SOLIDWORKS 文件的名称，以使它们匹配。但是，您在更新时可能会看到意外的结果。例如，您导入“Assembly1”以创建 Composer 文档。您修改该装配体并将其保存为“Assembly2”。如果您使用“Assembly2”进行更新，更新将失败。为了让更新成功，您必须将根节点下的名称更改为“Assembly2”，或者您必须将 SOLIDWORKS 文件名更改为“Assembly1”。</p>
+<h2 id="示例名称"><a href="#示例名称" class="headerlink" title="示例名称"></a>示例名称</h2><p>2.请勿从角色具有不同 NetGuids 的另一个 Composer 文档进行更新。<br>您可以更改装配体树中的角色名称。但是这不会更改角色的 NetGUID。仅在导入或更新过程中创建 NetGUID。</p>
+<p>3.如果您使用 SOLIDWORKS 装配体文件进行更新，转换过程必须加载完全还原的装配体文件。 要确保发生此行为，请在 SOLIDWORKS 中关闭系统选项：“Use Large Assembly Mode”、“自动以轻化状态装入零部件”和“Use Large Design Review”。如果您使用 SOLIDWORKS® Translator，请参阅解决方案 S-053656 了解更多信息。 </p>
+<p>4.请使用您用于创建 Composer 文档的同一导入选项。 </p>
+<p>5.您不能在装配体树中重新排列几何体、零件和装配体节点。 更新过程会使用更新文件的装配体树覆盖现有装配体树。</p>
+<p>6.请勿将 CAD 文件或其他 Composer 文档合并到您更新的 Composer 文档中。<br>如果您执行此操作，则会违反规则 #5。更新过程将从 Composer 文档移除合并的文档。</p>
+<p>7.不要对几何体角色应用运动（父子关系）。如果您执行此操作，则会违反规则 #5。</p>
+<p>8.如果您使用 SOLIDWORKS® 文件进行更新，请勿在 Composer 文档中创建元属性。<br>更新过程会从 Composer 文档移除 Composer 创建的元属性，因为元属性不存在于 SOLIDWORKS 文件中。<br>如果您从另一个 Composer 文档进行更新，更新过程不会移除 Composer 创建的元属性。但是，如果两个 Composer 文档包含相同的元属性，更新过程将不会更新元属性。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

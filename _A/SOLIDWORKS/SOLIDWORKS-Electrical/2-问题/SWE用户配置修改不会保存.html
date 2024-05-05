@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-03-06 15:29:59</span>
+</div>
+
+<div id="article"><h1 id="用户配置修改不会保存"><a href="#用户配置修改不会保存" class="headerlink" title="用户配置修改不会保存"></a>用户配置修改不会保存</h1><p>出现设置“用户配置”后，重启软件会恢复默认设置的情况，而自定义设置不能被保存问题。</p>
+<h2 id="方法1检查权限"><a href="#方法1检查权限" class="headerlink" title="方法1检查权限"></a>方法1检查权限</h2><p>可能没有更改显示语言所需的权限，要解决此问题，请执行以下步骤:</p>
+<p>警告：不正确地编辑注册表可能会严重损坏操作系统。SOLIDWORKS技术支持团队强烈建议您在对注册表进行任何更改之前备份注册表数据。</p>
+<ol>
+<li><p>关闭所有SOLIDWORKS®Electrical程序进程。</p>
+</li>
+<li><p>打开Windows管理工具-注册表编辑器。 找到以下注册表项：</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2022以及之后的版本，对应的注册表项为</span><br><span class="line">【计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SOLIDWORKSElectrical\Schematic\Services】</span><br><span class="line">2022年之前的版本，对应的注册表项为</span><br><span class="line">【计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Trace SOFTWARE\ SolidWorks Electrical\Services】</span><br></pre></td></tr></table></figure>
+
+<img src="SWE用户配置修改不会保存/打开注册表管理器.png">
+
+<ol start="3">
+<li>右键单击“Services &gt; 权限.”。</li>
+</ol>
+<img src="SWE用户配置修改不会保存/image-20240306115121437.png">
+
+<ol start="4">
+<li>选择当前用户。在“用户权限”中，选择“完全控制”，选择“允许”。点击确定。</li>
+</ol>
+<img src="SWE用户配置修改不会保存/image-20240306115129738.png">
+
+<ol start="5">
+<li>关闭注册表编辑器。 打开SOLIDWORKS Electrical程序。 转到“工具-用户配置”对话框，修改设置并确定。然后重新启动应用程序，检查设置是否保存。</li>
+</ol>
+<img src="SWE用户配置修改不会保存/image-20240306115136737.png">
+
+<h2 id="方法2修改注册表"><a href="#方法2修改注册表" class="headerlink" title="方法2修改注册表"></a>方法2修改注册表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2022以及之后的版本，对应的注册表项为</span><br><span class="line">【计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SOLIDWORKS Electrical\VariableSystem】</span><br><span class="line">2022年之前的版本，对应的注册表项为</span><br><span class="line">【计算机\HKEY_CURRENT_USER\SOFTWARE\Trace Software\SOLIDWORKS Electrical\VariableSystem】</span><br></pre></td></tr></table></figure>
+
+<img src="SWE用户配置修改不会保存/image-20240410204021362.png">
+
+<p>拾取框大小：ValuePickBox</p>
+<p>十字光标大小：ValueCursorSize</p>
+<p>反向缩放：MOUSEWHEELREVERSE</p>
+<p>缩放速度：MouseWheelSpeed</p>
+<p>图纸底色：Color</p>
+<p>标记颜色：SNAPCOLOR</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-10 00:44:10</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-方程式和属性"><a href="#SOLIDWORKS-方程式和属性" class="headerlink" title="SOLIDWORKS-方程式和属性"></a>SOLIDWORKS-方程式和属性</h1><p>看过《SOLIDWORKS-模板-属性》文章的同学，应该有见过：在属性页内添加方程式结果的属性。</p>
+<p>那这个有啥用呢？这里列举一项由方程式计算钣金下料”毛重”的方程式计算。</p>
+<p>0、前期准备、你需要一份带有长宽高数值属性的钣金零件，其属性页如下：提前在属性页做好钣金展开的”边界框长度”和”边界框宽度”属性。方法可以参考钣金属性教程。</p>
+<img src="方程式和属性/image1.png">
+
+<p>1、右键【方程式-管理方程式】既然方程式的编辑窗口。</p>
+<img src="方程式和属性/image2.png">
+
+<p>2、在方程式界面添加变量：毛重&#x3D; &quot;SW-密度&quot; * &quot;展开长度&quot; * &quot;展开宽度&quot; * &quot;钣金厚度&quot;</p>
+<img src="方程式和属性/image3.png">
+
+<p>3、完成后，我们可以将方程式写回属性页。（注意：属性这里的变量和方程式的变量不能同名，所以此处的属性名设为”下料重量”）</p>
+<img src="方程式和属性/image4.png">
+
+<h1 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h1><p>新功能：2021更新了直接在属性中选择“方程式”类型的属性，这里就就可以绕过方程式直接在属性页填写。</p>
+<p>不过截至2023属性API貌似不支持批量填入“方程式”的类型。这也导致批量添加的是文本数据不能进行计算。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

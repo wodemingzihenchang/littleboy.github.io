@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="无法访问数据库中的项目"><a href="#无法访问数据库中的项目" class="headerlink" title="无法访问数据库中的项目"></a>无法访问数据库中的项目</h1><img src="无法访问数据库中的项目/无法访问数据库中的项目.png">
+
+<h2 id="问题日志1"><a href="#问题日志1" class="headerlink" title="问题日志1"></a>问题日志1</h2><p>客户端日志显示fk_groupprojectnotification约束错误:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">在SpDbOdbc中运行查询错误</span><br><span class="line">状态= 23000</span><br><span class="line">Msg=[Microsoft][ODBC SQL Server Driver][SQL Server] DELETE语句与REFERENCE约束&quot;FK_GroupProjectNotification_Notifications&quot;冲突。冲突发生在数据库“Tor_Orbit_ePDM_”，表“dbo”。“GroupProjectNotification”，列“NotificationID”。</span><br><span class="line">=========最后一条命令========</span><br><span class="line">开始事务</span><br><span class="line">Exec SPWF_SaveWorkflow 2,7,60, N&#x27; orbit General Workflow&#x27;， 0</span><br><span class="line">更新工作流集描述= N &quot;其中WorkflowID = 7</span><br><span class="line">模块:ConisioAdmin.exe</span><br><span class="line">功能:hGetErrCode</span><br><span class="line">错误码:E_EDM_DATABASE_ACCESS</span><br><span class="line">错误代码一般描述:无法访问数据库中的项目。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>导致<br>如果我们关注其中一个在修改时导致保存错误的转换(RnD EditingRequired)，我们可以看到它被配置为通知根文件夹“\Projects\”下的所有文件的两个组</p>
+<p>此转换的两个组的通知分配为NotificationID &#x3D; 547和548</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>要解决此问题并允许删除转换，可以使用脚本在删除转换之前删除链接到该转换的所有通知项。</p>
+<ol>
+<li>   修改前请先备份数据库。</li>
+<li>   记录删除失败的转换的名称、源状态和目标状态。关闭工作流。</li>
+<li>   加载附加的“ListAllWorkflowTransitions”。在sql管理工作室。在保险库数据库上运行它。</li>
+<li>   定位上述转换的TransitionID -确保源状态和目的状态匹配。</li>
+<li>   加载附加的“DeleteAllNotificationsForSelectTransition.sql”。确保使用上一步中的TransitionID进行更新。注意!运行此脚本后，所有链接到转换的通知都将被删除。</li>
+<li>   重新打开工作流。转换现在应该显示它没有通知。</li>
+<li>   删除转换后保存工作流现在应该成功完成。</li>
+<li></li>
+</ol>
+<p>	</p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>参考安装手册P35。有一种情况是主数据库log文件满了导致。需要清除下日志。</p>
+<img src="无法访问数据库中的项目/错误日志.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

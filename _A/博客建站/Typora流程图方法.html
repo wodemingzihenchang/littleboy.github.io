@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-01-11 11:44:04</span>
+</div>
+
+<div id="article"><h1 id="Typora流程图方法"><a href="#Typora流程图方法" class="headerlink" title="Typora流程图方法"></a>Typora流程图方法</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/notes/hexo/website/13-flowchart/flowchart/">flowchart</a></p>
+<p><a target="_blank" rel="noopener" href="https://mermaid.nodejs.cn/">Mermaid</a></p>
+<span id="more"></span>
+
+<h1 id="flowchart"><a href="#flowchart" class="headerlink" title="flowchart"></a>flowchart</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始节点</span><br><span class="line">in=&gt;inputoutput: 输入</span><br><span class="line">e=&gt;end: 结束节点</span><br><span class="line">op=&gt;operation: 操作节点</span><br><span class="line">cond=&gt;condition: 条件节点</span><br><span class="line">sub=&gt;subroutine: 子例程</span><br><span class="line">out=&gt;inputoutput: 输出</span><br><span class="line"></span><br><span class="line">st(right)-&gt;in(right)-&gt;op(right)-&gt;cond</span><br><span class="line">cond(yes,right)-&gt;out(right)-&gt;e</span><br><span class="line">cond(no)-&gt;sub</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<div id="flowchart-0" class="flow-chart"></div>
+
+
+
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p>安装：npm install hexo-filter-flowchart</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zywvvd/article/details/110150617">语法 flowchart</a></p>
+<h1 id="mermaid"><a href="#mermaid" class="headerlink" title="mermaid"></a>mermaid</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A1--&gt;B1</span><br><span class="line">B[bname]</span><br><span class="line">C(cname)</span><br><span class="line">D((dname))</span><br><span class="line">E&gt;ename]</span><br><span class="line">F&#123;fname&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<pre class="mermaid">graph TB
+A1
+B[bname]
+C(cname)
+D((dname))
+E>ename]
+F{fname}</pre>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A1--&gt;B1</span><br><span class="line">A2---B2</span><br><span class="line">A3--text---B3</span><br><span class="line">A4--text--&gt;B4</span><br><span class="line">A5-.-B5</span><br><span class="line">A6-.-&gt;B6</span><br><span class="line">A7-.text.-B7</span><br><span class="line">A8-.text.-&gt;B8</span><br><span class="line">A9===B9</span><br><span class="line">A10==&gt;B10</span><br><span class="line">A11==text===B11</span><br><span class="line">A12==text===&gt;B12</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<pre class="mermaid">graph TB
+A1-->B1
+A2---B2
+A3--text---B3
+A4--text-->B4
+A5-.-B5
+A6-.->B6
+A7-.text.-B7
+A8-.text.->B8
+A9===B9
+A10==>B10
+A11==text===B11
+A12==text===>B12</pre>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">st(开始)--&gt;op[操作]</span><br><span class="line">op--&gt;co(是或者不是)</span><br><span class="line">co--no--&gt;sub((子程序))</span><br><span class="line">sub--&gt;op</span><br><span class="line">co--yes--&gt;out&gt;输出]</span><br><span class="line">out--&gt;en(结束)</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<pre class="mermaid">graph TB
+st(开始)-->op[操作]
+op-->co(是或者不是)
+co--no-->sub((子程序))
+sub-->op
+co--yes-->out>输出]
+out-->en(结束)</pre>
+
+<h2 id="参考：-1"><a href="#参考：-1" class="headerlink" title="参考："></a>参考：</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/subson/article/details/78054689">Markdown里面使用mermaid画流程图（基础）-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams">GitHub - mermaid for hexo</a></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始节点
+in=>inputoutput: 输入
+e=>end: 结束节点
+op=>operation: 操作节点
+cond=>condition: 条件节点
+sub=>subroutine: 子例程
+out=>inputoutput: 输出
+
+st(right)->in(right)->op(right)->cond
+cond(yes,right)->out(right)->e
+cond(no)->sub</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

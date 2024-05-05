@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS工程图培训"><a href="#SOLIDWORKS工程图培训" class="headerlink" title="SOLIDWORKS工程图培训"></a>SOLIDWORKS工程图培训</h1><h1 id="1视图"><a href="#1视图" class="headerlink" title="1视图"></a>1视图</h1><p>SOLIDWORKS工程图文件可以包含一张或多张的图纸，图纸中又可以包含多个工程图视图</p>
+<ul>
+<li><strong>图纸</strong>：用于存放视图、尺寸、注解等内容的载体</li>
+<li><strong>图纸格式</strong>：用于定义边框、标题栏的模板</li>
+</ul>
+<h2 id="创建工程图"><a href="#创建工程图" class="headerlink" title="创建工程图"></a>创建工程图</h2><p>【文件-新建】创建一个新的工程图文件</p>
+<img src="工程图-教程/1创建工程图.png">
+
+<p>多工程图图纸 </p>
+<img src="工程图-教程/1单文件多图纸.png">
+
+
+
+<h2 id="图纸设置"><a href="#图纸设置" class="headerlink" title="图纸设置"></a>图纸设置</h2><p>（注意这里的文档属性是只针对当前的文件，或模板生效。会跟随在文件在其他电脑生效。这里要区别与“系统选项”）</p>
+<p>【工具-选项-文档属性-绘图标准】设置当前文档的绘图标准</p>
+<p>【工具-选项-文档属性-出详图】</p>
+<p>【工具-选项-文档属性-尺寸-字体】</p>
+<p>【工具-选项-文档属性-视图标号-字体】此设置对剖面和局部视图的标号文字有效</p>
+<p>【工具-选项-系统选项-工程图】对在当前电脑打开所有工程图进行的设置</p>
+<p>【工具-选项-系统选项-工程图-显示类型】</p>
+<h2 id="图纸属性"><a href="#图纸属性" class="headerlink" title="图纸属性"></a>图纸属性</h2><p>菜单栏【编辑-属性】，或者在视图【右键-属性】进入图纸属性的编辑窗口。</p>
+<img src="工程图-教程/1图纸属性.png">
+
+
+
+<h2 id="工程视图"><a href="#工程视图" class="headerlink" title="工程视图"></a>工程视图</h2><p>视图内容包括“比例”、“视图方向”、“视图位置”。每一个视图都有一个单独的参考，但是每一张图纸可以有多个不同参考的视图。</p>
+<p>视图类型包括：</p>
+<ul>
+<li>模型视图</li>
+<li>标准三视图</li>
+<li>投影视图</li>
+<li>相对视图</li>
+<li>辅助视图</li>
+<li>断裂视图</li>
+<li><!-- 装配体剖切视图 --></li>
+<li><!-- 生成钣金零件的工程图 --></li>
+</ul>
+<p>用草图绘制的工程视图：</p>
+<ul>
+<li>剖面视图</li>
+<li>旋转剖视</li>
+<li>局部视图</li>
+<li>断开的剖视图</li>
+<li>裁剪视图</li>
+<li>空白视图</li>
+<li><!-- 旋转剖面视图 --></li>
+<li>标准三视图</li>
+</ul>
+<img src="工程图-教程/1标准三视图.png">
+
+<h2 id="父视图"><a href="#父视图" class="headerlink" title="父视图"></a>父视图</h2><p>工程视图的父视图。工程图视图的某些特性在视图间共享关联，形成所谓的父子级关系。（例如：从已有的视图中生成如投影视图、辅助视图、剖面视图、局部视图等，已有视图将成为新视图的父视图）父视图将对子视图有如下影响：</p>
+<ul>
+<li>显示样式</li>
+<li>比例</li>
+<li>单击子视图将高亮父视图</li>
+</ul>
+<p>工程视图的命名</p>
+<p>添加工程视图</p>
+<p><strong>激活视图</strong></p>
+<p>部分视图需要在工程视图中绘制草图来生成，绘制草图需要注意在“激活视图”的情况下绘制。这样才能保住草图与视图相关。</p>
+<ul>
+<li>视图锁焦</li>
+<li>图纸锁焦</li>
+</ul>
+<p><strong>局部视图</strong> </p>
+<p>利用草图区域对改位置进行局部放大的效果（如下3个位置）</p>
+<img src="工程图-教程/1局部视图.png">
+
+
+
+<p><strong>投影视图</strong></p>
+<img src="工程图-教程/1投影视图.png">
+
+
+
+<p><strong>剖面视图</strong></p>
+<p>通过在父视图绘制剖面的草图线</p>
+<p>小知识点：在放置投影视图前，按住Ctrl可以接触与父视图的对齐关系。</p>
+<img src="工程图-教程/1剖面视图.png">
+
+
+
+<p><strong>模型视图</strong></p>
+<p>可以【模型视图】创建基于一个预定义的视图方向（如俯视图、主视图、等轴测图）的单个视图，这个视图是基于零件或装配体的命名视图，选择完设置后，可在工程图空白处放置模型视图。</p>
+<img src="工程图-教程/1模型视图.png">
+
+<p>还可以通过【视图调色板】创建基于视图方向的视图</p>
+<img src="工程图-教程/1视图调色板.png">
+
+
+
+<p>设置视图</p>
+<img src="工程图-教程/1设置视图.png">
+
+
+
+<h2 id="中心符号"><a href="#中心符号" class="headerlink" title="中心符号"></a>中心符号</h2><p><strong>中心符号线</strong></p>
+<p>在工具栏【注解-中心符号线】添加，对象选择圆边即可识别。</p>
+<img src="工程图-教程/1中心符号线.png">
+
+<p><strong>中心线</strong></p>
+<p>在工具栏【注解-中心线】添加，对象选择圆柱面即可识别。</p>
+<img src="工程图-教程/1中心线.png">
+
+<h2 id="模型边线"><a href="#模型边线" class="headerlink" title="模型边线"></a>模型边线</h2><p>用户可以对视图里显示的变现进行“隐藏”、“线型”、“颜色”、“线粗”进行操作。</p>
+<img src="工程图-教程/1模型边线处理.png">
+
+<h1 id="2尺寸"><a href="#2尺寸" class="headerlink" title="2尺寸"></a>2尺寸</h1><p> 工程图中尺寸用来描述模型的形状和大小。重要的一点是，在SW设计模式里，3D模型的设计尺寸与工程图图形是相关联的。着意味着我们可以很多程度上使用现有的3D尺寸。</p>
+<h2 id="尺寸类型"><a href="#尺寸类型" class="headerlink" title="尺寸类型"></a>尺寸类型</h2><p>工程图中大致分成两种类型：</p>
+<ul>
+<li><p><strong>模型尺寸</strong></p>
+<p>模型尺寸是建立在零件特征时标注的尺寸，模型尺寸可以插入到不同工程图视图中；</p>
+</li>
+<li><p><strong>参考尺寸</strong></p>
+<p>可以直接在工程图里标注尺寸，这里的尺寸只是参考模型从动的尺寸，不能通过图纸的尺寸来修改模型。</p>
+</li>
+</ul>
+<p><strong>模型项目</strong></p>
+<p>利用【模型项目】功能可以插入模型尺寸到工程图视图里来。</p>
+<p>1、为工程图标注尺寸（默认勾选）</p>
+<p>2、实例&#x2F;圈数计数</p>
+<p>3、异形孔向导轮廓</p>
+<p>4、异形孔向导位置</p>
+<img src="工程图-教程/2模型项目.png">
+
+
+
+
+
+<h2 id="操作尺寸"><a href="#操作尺寸" class="headerlink" title="操作尺寸"></a>操作尺寸</h2><ul>
+<li><p><strong>拖动尺寸</strong></p>
+</li>
+<li><p><strong>隐藏尺寸</strong></p>
+</li>
+<li><p><strong>尺寸移动到其他视图</strong></p>
+</li>
+<li><p><strong>删除尺寸</strong></p>
+</li>
+<li><p><strong>对齐尺寸</strong></p>
+<p>（补充一点：该命令获得的尺寸是有建模时的尺寸位置相关，使用会出现尺寸位置重叠错乱的现象。</p>
+<p>我们可以框选尺寸，在菜单栏【工具】——【对齐】——【自动对齐】）</p>
+</li>
+</ul>
+<h2 id="尺寸属性"><a href="#尺寸属性" class="headerlink" title="尺寸属性"></a>尺寸属性</h2><p>在尺寸属性里，你可以修改尺寸的“样式”、“公差&#x2F;精度”、“主要值”、“字体”、“双制尺寸”等。</p>
+<p>不过这里如果是【模型项目】生成的尺寸，尺寸的依据是模型参考的尺寸，即修改需在模型端修改。</p>
+<img src="工程图-教程/2尺寸属性.png">
+
+<p>标注样式：利用尺寸样式可以快速定义尺寸的精度、字体、尺寸类型等。</p>
+<img src="工程图-教程/2标注样式.png">
+
+<p><strong>主要精度</strong></p>
+<p>选择将精度与模型链接以链接主要单位和公差精度。</p>
+<p><strong>双精度</strong></p>
+<p>选择将精度与模型链接以链接次要单位和公差精度。</p>
+<h1 id="3注解"><a href="#3注解" class="headerlink" title="3注解"></a>3注解</h1><p>注解是描述工程图内容的说明信息。</p>
+<h2 id="注解类型"><a href="#注解类型" class="headerlink" title="注解类型"></a>注解类型</h2><ul>
+<li>注释</li>
+<li>焊接</li>
+<li>毛虫</li>
+<li>端点处理</li>
+<li>形位公差</li>
+<li>表面粗糙度</li>
+<li>多转指引线</li>
+<li>孔标注</li>
+<li>基准特征</li>
+<li>基准目标</li>
+<li>销钉</li>
+<li>装饰螺纹线</li>
+<li>零件序号</li>
+<li>成组的零件序号</li>
+<li>修订表</li>
+<li>工程图块</li>
+<li>。。。。。。</li>
+</ul>
+<h2 id="添加注释"><a href="#添加注释" class="headerlink" title="添加注释"></a>添加注释</h2><p>注释是一种文字注解，可以带引线吸附在模型对象上。</p>
+<img src="工程图-教程/3添加注释.png">
+
+<p>注释内容可以关联零件的自定义属性方法。关联其他对象的方法类同，可举一反三（或是看看<a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/Solidworks/sldworks/HIDD_SELECT_PROPERTY.htm?rid=134702">Help 手册</a>）  </p>
+<img src="工程图-教程/3链接到属性.png">
+
+<h2 id="基准特征符号"><a href="#基准特征符号" class="headerlink" title="基准特征符号"></a>基准特征符号</h2><img src="工程图-教程/3基准特征符号.png">
+
+<h2 id="形位公差符号"><a href="#形位公差符号" class="headerlink" title="形位公差符号"></a>形位公差符号</h2><img src="工程图-教程/3形位公差符号.png">
+
+<h2 id="块"><a href="#块" class="headerlink" title="块"></a>块</h2><p>块可以被用来建立标准注释、标签以及其他solidwork接受的用户自定义符号。</p>
+<p>块可以是由草图绘制而成，保存成（.sldblk格式）</p>
+<h1 id="4装配体视图"><a href="#4装配体视图" class="headerlink" title="4装配体视图"></a>4装配体视图</h1><p>同零件的工程图类似，但是装配体模型的工程图在视图上会多了【交替视图】的使用。</p>
+<h2 id="设置自动隐藏"><a href="#设置自动隐藏" class="headerlink" title="设置自动隐藏"></a>设置自动隐藏</h2><p>使用【生成视图时自动隐藏零部件】隐藏零部件，被隐藏的零部件即使改变工程视图的视图方向也无法显示。自动隐藏在【选项-系统选项-工程图-生成视图时自动隐藏零部件】</p>
+<h2 id="配置选择"><a href="#配置选择" class="headerlink" title="配置选择"></a>配置选择</h2><p>每个视图都可以选择装配体的配置</p>
+<img src="工程图-教程/4配置选择.png">
+
+<h2 id="断开的剖视图"><a href="#断开的剖视图" class="headerlink" title="断开的剖视图"></a>断开的剖视图</h2><p>利用断开的剖视图可以检查装配体内部的内容</p>
+<img src="工程图-教程/4断开的剖视图.png">
+
+<h2 id="隐藏-显示零部件和实体"><a href="#隐藏-显示零部件和实体" class="headerlink" title="隐藏&#x2F;显示零部件和实体"></a>隐藏&#x2F;显示零部件和实体</h2><p>利用【隐藏&#x2F;显示零部件】和【隐藏实体】可以在工程图视图里指定某些零部件的显示与隐藏</p>
+<img src="工程图-教程/4隐藏显示零部件.png">
+
+<p>与此相同的效果的还有【隐藏&#x2F;显示边线】和【隐藏&#x2F;显示实体】</p>
+<img src="工程图-教程/4隐藏显示零部件2">
+
+
+
+<h2 id="交替位置视图"><a href="#交替位置视图" class="headerlink" title="交替位置视图"></a>交替位置视图</h2><p>在表示装配体不同工况下的位置时，可以使用【交替位置视图】来表示。交替位置视图，是通过装配体的派生配置来作为前后位置的表达的。</p>
+<ul>
+<li><strong>创建新配置</strong></li>
+</ul>
+<p>1、如果当前装配体只有一个配置，则你需要通过如下新配置，然后点确定到装配体里通过【移动零部件】的方式产生新配置</p>
+<img src="工程图-教程/4交替视图创建新配置1.png">
+
+<p>2、选择“新配置”确认后，软件会自动切换到装配体模式并直接进入到【移动零部件】的命令操作。你可以使用自由拖动等方式，获得一个“新的位置的配置”。确定</p>
+<img src="工程图-教程/4交替视图创建新配置2.png">
+
+<p>3、软件回到工程图模式，此时视图1上就会有【交替位置视图】的显示，这就可以表示装配体在不同工况下的位置变化。</p>
+<img src="工程图-教程/4交替视图创建新配置3.png">
+
+<ul>
+<li><strong>使用现有配置</strong></li>
+</ul>
+<p>如果你是已经在装配体设置好了位置的配置（或派生配置）。那直接使用“现有配置”即可。相当于跳过了上面说的在装配体设置的新建配置这步骤。</p>
+<img src="工程图-教程/4交替视图使用现有配置.png">
+
+<h2 id="爆炸视图"><a href="#爆炸视图" class="headerlink" title="爆炸视图"></a>爆炸视图</h2><p>利用装配体中已有的爆炸视图可以在工程图中显示。</p>
+<img src="工程图-教程/4爆炸视图.png">
+
+<h2 id="显示状态"><a href="#显示状态" class="headerlink" title="显示状态"></a>显示状态</h2><p>用来定义装配体中每个零部件的不同设置组合，并保存在配置中。</p>
+<img src="工程图-教程/4显示状态.png">
+
+<h1 id="5模板"><a href="#5模板" class="headerlink" title="5模板"></a>5模板</h1><p>模板主要需要包括如下几点：</p>
+<ul>
+<li>属性</li>
+<li>注释属性</li>
+<li>logo图标</li>
+<li>材料明细表定位点</li>
+<li>预定义视图</li>
+</ul>
+<pre class="mermaid">graph LR
+图纸模板slddot-->文档属性
+图纸模板slddot-->图纸大小
+图纸模板slddot-->图纸格式slddrt-->可以用于后续文件图框替换</pre>
+
+<h2 id="图纸格式"><a href="#图纸格式" class="headerlink" title="图纸格式"></a>图纸格式</h2><p>定制工程图模板和图纸格式，通常意义上所说的图框的内容，就是SW里的图纸格式。</p>
+<img src="工程图-教程/5图纸格式.png">
+
+<p>在工程图模式下，你需要留意【编辑图纸格式】模式。这个模式可以在空白图纸上【右键-编辑图纸格式】进入。以下操作皆在该模式下进行。</p>
+<img src="工程图-教程/5编辑图纸格式.png">
+
+<h2 id="模板属性"><a href="#模板属性" class="headerlink" title="模板属性"></a>模板属性</h2><p>默认的SW图纸格式模板有对名称和材质等属性做了关联。关联后的属性会有如下的关联表示描述。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;$PRPSHEET:&quot;属性名&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>当前文件</li>
+</ul>
+<p>工程图文件的属性</p>
+<ul>
+<li>此处发现的模型</li>
+</ul>
+<p>模型的属性，并且该选项还可以选择指定的视图或模型进行读取。（不过一般SW工程图大都建议一图一零件）<!-- SOLIDWORKS 其他属性：特定属性、特定属性的特别之处、在工程图中保存视图状态--></p>
+<img src="工程图-教程/5模板属性.png">
+
+<h2 id="插人OLE和图像"><a href="#插人OLE和图像" class="headerlink" title="插人OLE和图像"></a>插人OLE和图像</h2><p>OLE是一种文件对象，OLE（Object Linking and Embedding，对象连接与嵌入），是“面向对象”的技术，利用这种技术可开发可重复使用的 软件组件 （COM）内容如下图：</p>
+<img src="工程图-教程/5插人OLE和图像.png">
+
+<p>图像对象，大都是我们企业自己的logo标识。建议是以【插入-对象】</p>
+<h2 id="表格定位点"><a href="#表格定位点" class="headerlink" title="表格定位点"></a>表格定位点</h2><p>定位点是用在给插入表格时指定位置的作用。记得在进入【编辑图纸格式】模式下进行操作。</p>
+<img src="工程图-教程/5表格定位点1.png">
+
+<p>使用表格时，勾选定位点选项即可。</p>
+<img src="工程图-教程/5表格定位点2.png">
+
+<h2 id="打印页面设置"><a href="#打印页面设置" class="headerlink" title="打印页面设置"></a>打印页面设置</h2><p>在【打印-页面设置】里，须“使用此文件的设定”来约束当前模板的打印页面设置。这样就能保证后续新建的文件的页面设置。</p>
+<img src="工程图-教程/5页面设置.png">
+
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><p>完成上述操作后就可以对自定义模板和图纸格式进行保存。这里还是再强调一般这两种的区别：</p>
+<ul>
+<li>图纸格式（格式.slddrt）：只是图框，可在后续图纸图框进行替换；</li>
+</ul>
+<img src="工程图-教程/5保存图纸格式.png">
+
+<img src="工程图-教程/5保存图纸格式2.png">
+
+<ul>
+<li>图纸模板（格式.slddot）：用在新建文件时生效</li>
+</ul>
+<img src="工程图-教程/5另存图纸模板.png">
+
+<img src="工程图-教程/5另存图纸模板2.png">
+
+<h2 id="预定义视图"><a href="#预定义视图" class="headerlink" title="预定义视图"></a>预定义视图</h2><p>在图纸格式中添加几何关系</p>
+<p>工程图模板设置</p>
+<p>预定义视图的模板</p>
+<p>使用工程图模板</p>
+<p>标题块字段</p>
+<p>选择编辑对象</p>
+<p>填写标题块</p>
+<h2 id="更新图纸格式"><a href="#更新图纸格式" class="headerlink" title="更新图纸格式"></a>更新图纸格式</h2><p>当你在后续图纸模板更新时，你就需要在设计树选择图纸右键【属性-图纸格式&#x2F;大小】来替换新图纸模板模板</p>
+<img src="工程图-教程/5更新图纸格式.png">
+
+<h2 id=""><a href="#" class="headerlink" title=""></a><!-- DrafSight概述 --></h2><h1 id="6材料明细表和设计表"><a href="#6材料明细表和设计表" class="headerlink" title="6材料明细表和设计表"></a>6材料明细表和设计表</h1><p>材料明细表</p>
+<h2 id="添加材料明细表"><a href="#添加材料明细表" class="headerlink" title="添加材料明细表"></a>添加材料明细表</h2><ul>
+<li>选择模板</li>
+<li>吸附到定位点</li>
+</ul>
+<img src="工程图-教程/5表格定位点2.png">
+
+<p>表的明细内容还分：顶层、零件、缩进三种；具体后面我觉得可以参考官方文档说明：</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2017/Chinese-Simplified/SolidWorks/sldworks/HIDD_DVE_INSERT_BOM.htm">材料明细表 PropertyManager - 2017 - SOLIDWORKS 帮助</a></p>
+<h2 id="修改材料明细表"><a href="#修改材料明细表" class="headerlink" title="修改材料明细表"></a>修改材料明细表</h2><p>移动列&amp;添加列</p>
+<p>设置表格格式：对表格内“字体”、“对齐”、“行高列宽”等进行设置。</p>
+<p>分割材料明细表：通过水平或垂直分割成更小的表格，便于更好的放置在工程图纸内。</p>
+<h2 id="制作材料明细表"><a href="#制作材料明细表" class="headerlink" title="制作材料明细表"></a>制作材料明细表</h2><p>当装配体有多个配置时，可以利用【制作材料明细表】功能，但此功能只对数量列起作用。</p>
+<p>派加顶目</p>
+<p>在装配体中不以零件形式存在的项目可以通过手动方式添加到材料明细表中，即通过添加行手动编辑的方式添加。</p>
+<p>（图）</p>
+<p>制作材料明细表</p>
+<p>零值数量，可以按3种方式显示数量为0的单元格：虚线、零值、空单元格。</p>
+<p>隐藏行</p>
+<img src="工程图-教程/6隐藏行.png">
+
+<p>排序：</p>
+<img src="工程图-教程/6排序.png">
+
+<p>零件序号</p>
+<img src="工程图-教程/6自动序号.png">
+
+
+
+<h2 id="工程图中的表格"><a href="#工程图中的表格" class="headerlink" title="工程图中的表格"></a>工程图中的表格</h2><p>在工程图里插入设计表，并修改设计表尺寸。</p>
+<img src="工程图-教程/6设计表.png">
+
+<h1 id="7性能和显示"><a href="#7性能和显示" class="headerlink" title="7性能和显示"></a>7性能和显示</h1><h2 id="大型装配体模式"><a href="#大型装配体模式" class="headerlink" title="大型装配体模式"></a>大型装配体模式</h2><p>在【选项-系统性选-装配体-大型装配体】里设置。这是用于操作处理SW装配体的一种系统选项，可以有效的提高视图和工程图的创建性能。</p>
+<p>大型装配体模式打开后，【动态高亮显示】会被禁用该选项会影响视图选择零部件对象时，</p>
+<h2 id="轻化工程图"><a href="#轻化工程图" class="headerlink" title="轻化工程图"></a>轻化工程图</h2><p>工程图可以采用类似装配体的轻化格式打开工程图。理论上工程图所参考的零部件文件是不会被可写加载，对性能是有提升的。切换大型装配体模式</p>
+<h2 id="分离工程图"><a href="#分离工程图" class="headerlink" title="分离工程图"></a>分离工程图</h2><p>（注意：2023版本后【分离工程图】功能被【出详图】模式代替，这部分可以跳过学习）</p>
+<p>利用【分离工程图】可以创建一份最后一次保存时的零部件参考的图纸，该图纸是分离于零部件的关联参考的。这就可以将分离的工程图传送给其他人而不需要传送模型文件。</p>
+<p>分离工程图在设计树上有个“断开连接符号标记”表示</p>
+<img src="工程图-教程/7分离工程图.png">
+
+<p>如果需要对参考模型进行处理，这时将提示用户装入模型文件。可以通过右键单击视图并从弹出的快捷菜单里选择【装入模型】</p>
+<img src="工程图-教程/7装入模型.png">
+
+
+
+<p>注意：在创建分离工程图时，模型参考会以当前的状态保存。建议是在零部件做Ctrl+Q【强制重建】操作。以保住当前的模型是最新版本。</p>
+<ul>
+<li><strong>强制重建</strong>：是重新对模型的所有特征进行重建；</li>
+<li><strong>重建</strong>：只是对模型中新的特征或修改的特征进行重建；</li>
+</ul>
+<p>备份工程图<br>转换到分离的工程图<br>修改参考装配体<br>装人模型</p>
+<h2 id="显示品质设置"><a href="#显示品质设置" class="headerlink" title="显示品质设置"></a>显示品质设置</h2><p>在【选项-文档属性-图像品质】调整以性能优先或显示优先</p>
+<h1 id="8工程图参考和对比"><a href="#8工程图参考和对比" class="headerlink" title="8工程图参考和对比"></a>8工程图参考和对比</h1><h2 id="工程图重用"><a href="#工程图重用" class="headerlink" title="工程图重用"></a>工程图重用</h2><p>另存为工程图重用时，在弹窗的另存为对话框中，勾选下面“包括所有参考的零部件”选项。并打开【高级】设置。</p>
+<p>在【高级】设置列表里，就是该工程图所带有的零部件参考，以及你可以对里面的内容进行选择【查找&#x2F;替换】等操作。</p>
+<img src="工程图-教程/8工程图重用.png">
+
+<p>对于工程图文件中零部件的参考，可以在【文件-查找相关文件】。或【右键视图-属性】里查看。</p>
+<h2 id="替换工程图参考"><a href="#替换工程图参考" class="headerlink" title="替换工程图参考"></a>替换工程图参考</h2><p>在程序打开文件对话框里，选择参考进行设置，这里可以看到文件目前所参考的位置。</p>
+<img src="工程图-教程/8替换工程图参考.png">
+
+<p>编辑工程图参考：可以双击名称或查找文件的文件夹位置进行参考。</p>
+<img src="工程图-教程/8编辑工程图参考.png">
+
+<p>替换模型参考，往往会出现特征不同导致的尺寸悬空的问题，如下：将列举出当前替换之后，出现的悬空问题。你可以勾选删除，也可以跳过，后续再删除。</p>
+<img src="工程图-教程/8替换参考的悬空问题.png">
+
+
+
+<h2 id="DrawCompare"><a href="#DrawCompare" class="headerlink" title="DrawCompare"></a>DrawCompare</h2><p>使用【工具-比较-DrawCompare】工具来高亮显示两个所选工程图的不同之处。</p>
+<p>第一个所选工程图的【添加部分】和【移除部分】选项使用彩色字体，以便观察比较。</p>
+<h2 id="Design-Checker"><a href="#Design-Checker" class="headerlink" title="Design Checker"></a>Design Checker</h2><p>可以根据指定的标准进行检查零件、装配体、工程图等文件的文档属性标准。检查激活的文档</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

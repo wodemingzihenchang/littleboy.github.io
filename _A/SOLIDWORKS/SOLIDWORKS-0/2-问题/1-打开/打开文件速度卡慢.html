@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-09 22:04:19</span>
+</div>
+
+<div id="article"><h1 id="打开文件速度卡慢"><a href="#打开文件速度卡慢" class="headerlink" title="打开文件速度卡慢"></a>打开文件速度卡慢</h1><p>我们在打开SW文件时会经过一些我们看不到的流程（如图）。针对过程中，可能会出现的卡慢现象我们进行如下分析：</p>
+<img src="打开文件遇到错误/111.png">
+
+<span id="more"></span>
+
+
+
+<h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><p>针对问题零件，我们最终目标是确认它是否还能通过 SW 打开，如果不行则需考虑重新设计该零件。</p>
+<pre class="mermaid">graph LR
+检查-->是否有加密问题--no-->是否有网盘问题--no-->是否电脑问题
+是否有加密问题--yes-->验证解密并在未加密环境打开
+是否有网盘问题--yes-->验证在本地打开能否打开
+是否电脑问题--yes-->验证在其他电脑打开</pre>
+
+
+<p>通过改变问题文件的使用环境打开该文件，验证是否为特定电脑或特定文件的限制问题。</p>
+<p>其他情况：例如使用了第三方API操作情况导致，需要具体问题文件进行分析。或者是当作文件损坏（建议查找备份或新建）</p>
+<h1 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h1><h2 id="参考文件夹"><a href="#参考文件夹" class="headerlink" title="参考文件夹"></a>参考文件夹</h2><p>【】</p>
+<h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><h1 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h1><h2 id="索引选项"><a href="#索引选项" class="headerlink" title="索引选项"></a>索引选项</h2><p>同份文件在打开时卡慢，</p>
+<p>打开后保存，再打开恢复正常。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

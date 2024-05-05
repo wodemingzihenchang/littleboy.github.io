@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-06-18 22:12:59</span>
+</div>
+
+<div id="article"><h1 id="Toolbox"><a href="#Toolbox" class="headerlink" title="Toolbox"></a>Toolbox</h1><span id="more"></span>
+
+<h2 id="自定义-异形孔"><a href="#自定义-异形孔" class="headerlink" title="自定义-异形孔"></a>自定义-异形孔</h2><p>Toolbox配置界面选择1异形孔向导</p>
+<p>在此界面中，我们可以将不需要使用的标准取消勾选</p>
+<p>在标准里，也可以取消勾选不需要使用的规格，或修改的孔规格</p>
+<p>增加规格，则在螺纹数据中修改数值</p>
+<p>批量修改则可以使用【导出】excel表格，进行批量化处理，再【导入】已修改好的excel表格数据</p>
+<h2 id="自定义-标准件"><a href="#自定义-标准件" class="headerlink" title="自定义-标准件"></a>自定义-标准件</h2><p>原有规格的修改</p>
+<p>新制自定义的零件不在数据库内，不好操作</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="没有进行配置"><a href="#没有进行配置" class="headerlink" title="没有进行配置"></a>没有进行配置</h2><p>Toolbox 没有进行配置，Failed to create ToolboxLibrary object。原因：Toolbox 没有进行配置或没有文件配置（文件不完整）。</p>
+<p>方法 1 ：修复 SW</p>
+<ol>
+<li><p>检查 SOLIDWORKS Data 文件夹的完整性；</p>
+</li>
+<li><p>打开 solidworks 安装程序，选修复安装 Toolbox；详细见安装说明。</p>
+</li>
+</ol>
+<p>方法 2： 卸载补丁限制</p>
+<ol>
+<li>关闭 solidwokrs 软件，点击 开始——进入控制面板——进入卸载程序——找到卸载程序中的‘查看已安装的更新’，如下图所示红色方框处。</li>
+</ol>
+<img src="Toolbox\Toolbox没有进行配置\卸载补丁.png" >
+
+<ol start="2">
+<li>然后找到”Microsoft Windows 的安全更新(KB3072630)”鼠标右键将它卸载掉，电脑会提示重启，点击”稍后重启“按钮</li>
+</ol>
+<img src="Toolbox\Toolbox没有进行配置\卸载补丁2.png" >
+
+<ol start="3">
+<li>打开命令提示符 cmd 键入以下命令（ cd ..\solidworks 程序位置）回车</li>
+</ol>
+<blockquote>
+<p>“cd C:\Program Files\SolidWorks Corp\SolidWorks\SLDWORKS”&#x2F;regserver</p>
+</blockquote>
+<ol start="4">
+<li>关闭命令提示符 cmd 并重新启动 solidwork。</li>
+</ol>
+<h2 id="不是预期版本"><a href="#不是预期版本" class="headerlink" title="不是预期版本"></a>不是预期版本</h2><p>如果SOLIDWORKS升级到更高版本，您可能会发现SOLIDWORKS Toolbox失败并显示一条消息，指出Toolbox数据库是“……不是预期的版本”，从而阻止了它的使用。  </p>
+<p>这种情况的常见原因是当升级到较新版本的SOLIDWORKS时，在SOLIDWORKS安装过程中没有“指向”正确的Toolbox位置，因此在升级过程中会出错。</p>
+<img src="Toolbox\Toolbox不是预期版本\不是预期版本.png" >
+
+<!--（备注2015年的toolbox设计库是sql server，2015后有更改成其他类型的数据库，好像是Mysql）-->
+
+<p>方法1：设置正确版本</p>
+<p>1、在【系统选项-异形孔向导&#x2F;Toolbox-异形孔向导和Toolbox文件夹】检查Toolbox数据库路径<br>2、如果电脑存在多版本，且使用的是低版本的数据库，则你需要浏览到适合当前SW版本的“SOLIDWORKS Data”文件夹。<br>3、如果电脑使用单一版本的SW，则需要升级Toolbox数据库的版本（详见方法2）</p>
+<img src="Toolbox\Toolbox不是预期版本\Toolbox文件夹.png" >
+
+<p>方法2：升级标准库版本</p>
+<p>因目前升级后回退版本方法暂时未知，所以在升级前请复制备份好..\SOLIDWORKS Data 下的文件。<br></p>
+<ol>
+<li><p>打开 SOLIDWORKS 安装文件夹位置：</p>
+<blockquote>
+<p>X:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\Toolbox\data utilities</p>
+</blockquote>
+</li>
+<li><p>右键“UpdateBrowserDatabase.exe”并选择以<strong>管理员身份运行</strong>;</p>
+</li>
+<li><p>打开更新 Toolbox 数据库对话,如下图单击“…”按钮，打开浏览对话框，寻找通常位于</p>
+<blockquote>
+<p>..\SOLIDWORKS Data\lang\english”中的文件“swbrowser.sldedb</p>
+</blockquote>
+</li>
+</ol>
+<img src="Toolbox\Toolbox不是预期版本\更新数据库.png" >
+
+
+<ol start="4">
+<li>开始更新，请单击“更新”按钮。</li>
+</ol>
+<img src="Toolbox\Toolbox不是预期版本\更新.png" >
+
+<h2 id="找不到标准数据库"><a href="#找不到标准数据库" class="headerlink" title="找不到标准数据库"></a>找不到标准数据库</h2><p>可能是升级SW时，标准件库文件夹的设置没安装或引用了旧的丢失数据文件夹。</p>
+<img src="Toolbox\找不到标准数据库/找不到标准数据库.png">
+
+<p>顾名思义，就是在”SOLIDWORKS Data”没有.sldedb的文件，你可能需要去复制正常使用Toolbox的文件夹来使用，或者修复一下SW。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">（X:\Program Files\SolidWorks 2018\SOLIDWORKS Data\lang\english）</span><br></pre></td></tr></table></figure>
+
+<p>方法：</p>
+<p>在【选项-系统选项-异形孔向导&#x2F;Toolbox】文件夹设置中，需确保这个Data文件夹内有swbrowser.sldedb文件。位置选择只需要设置到Data即可，不用设置到”\lang\english”。</p>
+<img src="Toolbox\找不到标准数据库\系统选项-异形孔向导.png">
+
+<h2 id="型号不对问题"><a href="#型号不对问题" class="headerlink" title="型号不对问题"></a>型号不对问题</h2><p>出现装配体所用的标准件在其他电脑打开时，型号规格发生变化变大变小的情况。</p>
+<p>该问题的出现在toolbox选用的规格丢失软件调用该标准件的默认规格导致</p>
+<p>方法：</p>
+<p>1． 选择包括“Toolbox零部件”进行打包。</p>
+<img src="Toolbox\Toolbox型号不对问题/打包Toolbox零部件.png">
+
+<p>2．在各自电脑软件的系统选项中做如下设置（不勾选下图红框中的内容）.取消SW搜索本身的Toolbox标准件，避免同名冲突。</p>
+<img src="Toolbox\Toolbox型号不对问题/取消默认搜索位置.png">
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

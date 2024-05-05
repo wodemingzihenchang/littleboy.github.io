@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-11 09:35:57</span>
+</div>
+
+<div id="article"><h1 id="重建索引"><a href="#重建索引" class="headerlink" title="重建索引"></a>重建索引</h1><p>当PDM数据库使用时间较长，使用过程中数据表增删涂改量大的时候，索引往往会出现失效问题，若手工重建又极为麻烦，下面利用数据库创建维护计划自动重建&#x2F;组织数据库表索引方法：</p>
+<p>查看表碎片情况，可使用语句：DBCC SHOWCONFIG。可以查看表的扫描密度大小，逻辑碎片及区碎片数量判断表是否需要重建。</p>
+<p>1、	打开SQL SERVER数据库（SSMS），选择展开【管理】，找到【维护计划】，右键，选择【维护计划向导】</p>
+<p>注意：若【管理】无法展开，或【维护计划向导】创建失败，检查服务中【SQL Server代理】是否处于运行状态，如若未运行，右键【启动】服务。</p>
+<p>2、	创建【维护计划向导】后，对弹出的【SQL Server维护计划向导】选择“下一页”</p>
+<p>3、	在【选择计划属性】界面中，可重命名维护计划名称。我们也可以对维护计划执行时间周期进行设置，选择【更改】。</p>
+<p>在【新建作业计划】界面中，我们可以对计划执行的类型，频率以及持续时间进行设置，设置完毕后，点击“确定”。<br>Eg. 设置重建索引计划为每周执行一次，执行时间为每周日上午12:00:00分开始执行。计划将于2021&#x2F;11&#x2F;12开始执行，持续不间断执行。</p>
+<p>【选择计划属性】设置完成后，选择“下一步”。</p>
+<p>4、	【选择维护任务】中，勾选“重新生成索引”选项（也可以勾选“重新组织索引”选项对表中索引进行整理与压缩，以提升索引扫描性能），勾选完成后，点击“下一步”。</p>
+<p>【选择维护任务顺序】中对任务执行顺序进行设置，如下图仅存在一个任务，无需设置任务执行顺序，点击“下一步”。</p>
+<p>5、	【定义“重新生成索引”任务】中，选择需要执行的数据库，也可以对执行索引选项（扫描类型、碎片、页计数等）进行自定义设置执行<br>Eg. 选择所有数据库执行，对数据库中碎片&gt;30%，页计数&gt;1000表进行索引重建</p>
+<p>选择执行维护计划数据库中，可以选择所有数据库，也可以对指定数据库进行勾选执行</p>
+<p>6、	【选择报告选项】中，可以设置将报告写入文本文件或以电子邮件形式发送维护计划操作报告。设置完成，点击“下一步”。</p>
+<p>7、	得到【完成向导】，点击“完成”。</p>
+<p>【维护计划向导进度】，创建成功。</p>
+<p>8、	创建维护计划完成后，刷新SQLServer对象资源管理器，如下图，新建的“RebuildIndex”维护计划已显示，选择“RebuildIndex”，右键，【执行】</p>
+<p>执行维护计划成功。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

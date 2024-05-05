@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:11</span>
+</div>
+
+<div id="article"><h1 id="浏览器如何使用GPU"><a href="#浏览器如何使用GPU" class="headerlink" title="浏览器如何使用GPU"></a>浏览器如何使用GPU</h1><!--依据QA00000103982进行汉化 -->
+
+<h2 id="查看浏览器显卡"><a href="#查看浏览器显卡" class="headerlink" title="查看浏览器显卡"></a>查看浏览器显卡</h2><p>确保您的浏览器正在使用高性能显卡(如认证和派生配置网站上的文档所示)要验证浏览器使用的GPU取决于你的浏览器: 它应该与您的认证GPU匹配。</p>
+<ul>
+<li>【Firefox】浏览器:在地址栏中输入about:support，搜索WebGL 1 Driver Renderer</li>
+<li>【Chrome】浏览器:在浏览器地址栏中输入Chrome:&#x2F;&#x2F;gpu&#x2F;，搜索GL_RENDERER Chrome</li>
+</ul>
+<h2 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h2><p>如果在Windows 10上使用英特尔GPU(当您同时拥有集成和分立GPU时发生这种情况)，请执行以下操作:</p>
+<p>a.    打开显示设置面板(右键单击桌面)。</p>
+<p>b.    点击图形设置。  </p>
+<p>单击Browse并选择浏览器可执行文件的路径。里谷歌浏览器为例:C:\Program Files\Google\Chrome\ Application\chrome.exe)在图形设置里选择“高性能GPU”。</p>
+<img src="浏览器如何使用GPU/image-20231122143321236.png">
+
+
+
+<h2 id="注册表"><a href="#注册表" class="headerlink" title="注册表"></a>注册表</h2><p>你也可以要求你的管理员修改Windows注册表:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\DirectX\UserGpuPreferences</span><br></pre></td></tr></table></figure>
+
+<p>在UserGpuPreferences项里，右键单击选择新建<strong>New &gt; String Value</strong>。</p>
+<p><strong>名称</strong>：输入浏览器可执行程序&lt;文件路径&gt;</p>
+<p><strong>数值</strong>：GpuPreference&#x3D;2</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

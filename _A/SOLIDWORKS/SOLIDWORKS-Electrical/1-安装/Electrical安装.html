@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-03-06 15:29:59</span>
+</div>
+
+<div id="article"><h1 id="Electrical安装"><a href="#Electrical安装" class="headerlink" title="Electrical安装"></a>Electrical安装</h1><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>启动安装版，对于新安装的电脑，可以选择默认的“在此电脑上安装”</p>
+<p>序列号</p>
+<p>选择产品</p>
+<p>Electrical选项设置</p>
+<ul>
+<li>数据文档</li>
+<li>协作服务器</li>
+<li>SQL服务器</li>
+</ul>
+<img src="Electrical安装/SWE SQL.png">
+
+<p>确定安装并等待完成</p>
+<h1 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h1><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>Electrical通过数据库方式，将设计素材和工程文件进行共享。数据库使用的是SQL Server ，端口为26666。</p>
+<h2 id="协同服务器："><a href="#协同服务器：" class="headerlink" title="协同服务器："></a>协同服务器：</h2><img src="Electrical安装/协同服务器.png">
+
+<h2 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h2><p>这里一般会需要又两个位置的设置：”应用程序数据文件夹“和”数据库名称“。</p>
+<p>应用程序数据文件夹：相当于是存档文件位置；这里一般会是网盘，并设置文件夹共享</p>
+<p>数据库名称：是SQL运行的电脑地址，里面会有如下表格：</p>
+<img src="Electrical安装/数据库.png">
+
+<p>SQL数据库里的内容对应：</p>
+<img src="Electrical安装/数据库2.png">
+
+<h2 id="3D"><a href="#3D" class="headerlink" title="3D"></a>3D</h2><p>3D布线用的部件文件夹。确保零部件名称唯一性，可以关闭”将3D零件复制到工程“选项，使布线零件参考库中文件。</p>
+<img src="Electrical安装/3D.png">
+
+
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="数据库连接问题"><a href="#数据库连接问题" class="headerlink" title="数据库连接问题"></a>数据库连接问题</h2><h2 id="安装错误：27502"><a href="#安装错误：27502" class="headerlink" title="安装错误：27502"></a>安装错误：27502</h2><p>错误代码是一个通用的SQL连接错误消息。此错误是SOLIDWORKS®Electrical最常见的安装问题。该错误可能是由于：</p>
+<ul>
+<li><p>权限不足</p>
+</li>
+<li><p>连接问题</p>
+</li>
+<li><p>密码问题</p>
+</li>
+<li><p>安装设置</p>
+</li>
+</ul>
+<p>要解决该问题，请测试每个可能的原因。</p>
+<p>如果正在安装软件的用户对客户机机器、服务器或SQL服务器没有足够的权限，请咨询您的IT代表，以确保允许对安装管理器在服务器和客户机机器上指向的位置进行完全的读写访问。另外，尝试以管理员身份运行安装管理器。为此，右键单击安装可执行文件并选择“以管理员身份运行”。</p>
+<p>如果客户端机器不能建立连接，防火墙和防病毒软件是这些连接问题的主要原因。请联系您的IT代表，以确保适当的例外情况已到位。还建议查看网络连接，因为这可能是连接问题的另一个来源。使用SQL Server Management Studio测试到SQL服务器的连接。</p>
+<p>如果执行了密码策略或使用的认证密码不正确，使用SQL Server ‘ authentication Mode ‘连接已有SQL Server时，请检查密码是否正确。检查相同的身份验证设置是否有效。’tew’用户的默认密码长度为9个字符。大多数密码策略要求10个字符。</p>
+<p>如果安装管理器中的“电气选项”没有设置为指向正确的位置，则默认设置是针对单个安装的。在这种情况下，您必须调整客户端安装的设置。</p>
+<h2 id="SQLEXPR安装失败"><a href="#SQLEXPR安装失败" class="headerlink" title="SQLEXPR安装失败"></a>SQLEXPR安装失败</h2><p>使用新建SQL实例时会失败。</p>
+<img src="Electrical安装/SQLEXPR安装失败.png">
+
+<h2 id="15247"><a href="#15247" class="headerlink" title="15247"></a>15247</h2><p>SQL账号权限问题，可以使用SQL的管理员“sa”账号，做身份验证安装。</p>
+<img src="Electrical安装/安装失败用户没有执行此操作的权限(15247).png">
+
+<img src="Electrical安装/SWE SQL.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

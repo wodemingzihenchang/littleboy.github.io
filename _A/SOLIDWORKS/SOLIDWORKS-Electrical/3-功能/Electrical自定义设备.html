@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-29 23:44:07</span>
+</div>
+
+<div id="article"><h1 id="Electrical自定义符号"><a href="#Electrical自定义符号" class="headerlink" title="Electrical自定义符号"></a>Electrical自定义符号</h1><h2 id="图形"><a href="#图形" class="headerlink" title="图形"></a>图形</h2><p>导入导出dwg文件：</p>
+<p>【导入DWG文件】-选择文件-定义dwg图纸的类型（首页，原理图，方框图等）-</p>
+<p>新建符号：使用现用符号模板新建</p>
+<p>1、右键符号-符号-添加至数据库-新建-设置符号属性，</p>
+<h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><p>2、【数据库】-【符号数据库】-找到新建符号双击打开-对符号和注解修改</p>
+<h2 id="连接点"><a href="#连接点" class="headerlink" title="连接点"></a>连接点</h2><p>3、【编辑符号】-【多个连接点】-空格鼠标点击（用于截断电线）</p>
+<p>3D零件连接点：</p>
+<ul>
+<li>含回路信息的 CPoint：</li>
+</ul>
+<p>此选项允许您手动为电线或电缆芯创建连接点。您必须输入回路号、连接点号（参见连接点定义一章），然后在图形区域中选择草图点。</p>
+<ul>
+<li>来自制造商零件的 CPoint：</li>
+</ul>
+<p>此选项允许您根据制造商零件的回路定义为电线或电缆芯创建连接点。单击浏览从制造商零件管理中选择设备型号，然后在列表中选择所需型号。在列表中选择材料端子，然后在图形区域中选择相应的草图点、边线或圆柱曲面。</p>
+<ul>
+<li>电缆 CPoint：2022新功能<a target="_blank" rel="noopener" href="https://swelectrical-help.solidworks.com/dl/swe/CHM/2022/ZH/HelpOnLine/EwSwConnPointCreatorPropertyPage.htm">电缆连接点</a></li>
+</ul>
+<p>此选项允许您为电缆创建连接点。它与电缆绝缘件切割点对应。您必须在要创建连接点的面上创建一个平行平面。在图形区域中选择草图点、边线或圆柱曲面</p>
+<p><img src="https://swelectrical-help.solidworks.com/dl/swe/CHM/2022/ZH/HelpOnLine/Screenshot/SWCompWiz06.gif" alt="img"></p>
+<p><img src="Electrical%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E5%A4%87/v2-662104bdd5f127759dc3be8148b9e05f_720w.webp" alt="img"></p>
+<h1 id="Electrical自定义设备"><a href="#Electrical自定义设备" class="headerlink" title="Electrical自定义设备"></a>Electrical自定义设备</h1><h2 id="添加设备型号"><a href="#添加设备型号" class="headerlink" title="添加设备型号"></a>添加设备型号</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h3 id="用户数据"><a href="#用户数据" class="headerlink" title="用户数据"></a>用户数据</h3><p>预览的可编辑字段？那关联的字符串名称是什么？</p>
+<h3 id="回路端子"><a href="#回路端子" class="headerlink" title="回路端子"></a>回路端子</h3><p>“回路_系数”将成为3D“接线点”命名的关键，你需要保证他们是同名称。否则，你可能会遇到找不到来着2D原理图的某某“回路_系数”提示。</p>
+<p>以端子零件回路举例：1回路里有进出的两个端子接口，即如图所设。</p>
+<img src="Electrical自定义设备/回路端子.png">
+
+<h1 id="3D模型的连接点设置："><a href="#3D模型的连接点设置：" class="headerlink" title="3D模型的连接点设置："></a>3D模型的连接点设置：</h1><h2 id="Routing功能点"><a href="#Routing功能点" class="headerlink" title="Routing功能点"></a>Routing功能点</h2><p>这里就是设置3D部件的“连接点”有多种方式，常用第3种“来着制造商零件的连接点”，它会同步2D原理图的部件“回路_系数”，确保名称一致。当然，选择对的连接点还是需要你人为确定。</p>
+<img src="Electrical自定义设备/来自制造商零件的连接点.png">
+
+<h2 id="配合参考"><a href="#配合参考" class="headerlink" title="配合参考"></a>配合参考</h2><h2 id="有效性检查"><a href="#有效性检查" class="headerlink" title="有效性检查"></a>有效性检查</h2><h2 id="设计表"><a href="#设计表" class="headerlink" title="设计表"></a>设计表</h2><h2 id="零部件属性"><a href="#零部件属性" class="headerlink" title="零部件属性"></a>零部件属性</h2><h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><h1 id="新建部件库："><a href="#新建部件库：" class="headerlink" title="新建部件库："></a>新建部件库：</h1><p>【数据库】-【设备型号管理器】-添加-填写属性-选择3D零部件-接口号。。。</p>
+<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/swelec/EwUiDlgWizardProjectDataImport.htm">导入数据 </a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:11</span>
+</div>
+
+<div id="article"><h1 id="库无效"><a href="#库无效" class="headerlink" title="库无效"></a>库无效</h1><p>SOLIDWORKS Document Manager 库无效</p>
+<img src="库无效/库无效.png">
+
+<p>如果位于 C:\Program Files\CommonFiles\SolidWorks Shared 的“SwDocumentMgr.dll”文件的版本不正确，则可能出现此错误。将计算机上出现此问题的版本和没有出现此问题的版本进行比较。<br>要查找版本，右键单击此文件，选择“属性”，然后转到版本选项卡。</p>
+<span id="more"></span>
+
+<h2 id="方法1：安装修复"><a href="#方法1：安装修复" class="headerlink" title="方法1：安装修复"></a>方法1：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p>
+<h2 id="方法2：手动注册"><a href="#方法2：手动注册" class="headerlink" title="方法2：手动注册"></a>方法2：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure>
+
+<p> 1.以管理员身份打开 Windows 命令提示符。</p>
+<p> 2.在命令提示符中输入：cd [DLL 路径]</p>
+<p> 3.接着输入：regsvr32 sldshellutils14u.dll</p>
+<h2 id="方法2：设置"><a href="#方法2：设置" class="headerlink" title="方法2：设置"></a>方法2：设置</h2><p>恢复文件关联</p>
+<!-- 方法 1：
+
+如果版本不同，则将现有文件重命名为：old_SwDocumentMgr.dll。接着从计算机将没有此问题的版本复制到有问题的计算机，然后重试。
+
+
+
+ 如果您在 2015 年 7 月 15 日之后执行升级或安装，最可能的原因是 Microsoft® 更新 KB 3072630（于 2015 年 7 月 15 日发布）导致的已知冲突。此更新更改了 Windows 安装程序。 https://support.microsoft.com/en-us/kb/3072630  要解决此问题，请在 IT 部门的协助下（若需要）尝试以下步骤：  
+
+独立安装： 
+
+1.单击“开始”->“运行”，在“打开”对话框中键入“regedit”，然后单击“确定”。 
+
+2.找到并单击以下注册表子项：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer。 注意：如果该子项不存在，请创建它。 
+
+3.在“编辑”菜单中，转到“新建”，然后单击“DWORD 值”。 
+
+4.对于 DWORD 名称，请键入“RemappedElevatedProxiesPolicy”，然后按“Enter”。 
+
+5.右键单击“RemappedElevatedProxiesPolicy”，然后单击“修改”。
+
+6.在“值”数据框中键入“1”，然后单击“确定”。 
+
+7.运行“修复您的 SOLIDWORKS 安装 (S-050527)”。
+
+8.在应用程序安装成功后，将“RemappedElevatedProxiesPolicy”DWORD 重置为“0”，重新启用安全修补程序 KB 3072630。  
+
+管理映像安装： 
+
+1.从“程序和功能”中卸载 SOLIDWORKS。 
+
+2.单击“开始”->“运行”，在“打开”对话框中键入“regedit”，然后单击“确定”。 
+
+3.找到并单击以下注册表子项：HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer。 注意：如果该子项不存在，请创建它。 
+
+4.在“编辑”菜单中，转到“新建”，然后单击“DWORD 值”。 
+
+5.对于 DWORD 名称，请键入“RemappedElevatedProxiesPolicy”，然后按“Enter”。 
+
+6.右键单击“RemappedElevatedProxiesPolicy”，然后单击“修改”。 
+
+7.在“值”数据框中键入“1”，然后单击“确定”。 
+
+8.从管理映像安装 SOLIDWORKS。 
+
+9.在应用程序安装成功后，将“RemappedElevatedProxiesPolicy”DWORD 重置为“0”，重新启用安全修补程序 KB 3072630。  您可以使用随附的“RunBeforeRepair_disable_KB3072630.reg.txt”和“RunAfterRepair_enable_KB3072630.reg.txt”文件（删除文件名末尾的 .txt 并按此方法应用注册表项）。  
+
+SOLIDWORKS® 开发团队一直在与 Microsoft® 努力合作，以便在 SOLIDWORKS 2015 SP5 和 SOLIDWORKS 2016 SP0 及更高版本中解决此问题。如果您安装了旧版 SOLIDWORKS 软件，请卸载较旧的版本，然后安装更新的版本 --></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-08-09 16:21:27</span>
+</div>
+
+<div id="article"><p>记录有关SOLIDWORKS设置的注册表内容。</p>
+<span id="more"></span>
+
+<h2 id="注册表简介"><a href="#注册表简介" class="headerlink" title="注册表简介"></a>注册表简介</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager：网络版借用信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks：设置信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks BackOffice：批量处理任务工具</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\srac：Simulation 信息</span><br></pre></td></tr></table></figure>
+
+<h2 id="SolidWorks"><a href="#SolidWorks" class="headerlink" title="SolidWorks"></a>SolidWorks</h2><p>下面即是 SW 在电脑上的注册表信息。有时我们需要重置注册表时，可将注册表改名备份，再启动 SOLIDWORKS 即可。</p>
+<blockquote>
+<p>[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks]<br> [HKEY_CURRENT_USER\SOFTWARE\Solidworks]<br></p>
+</blockquote>
+<p>再下面我们来看看注册表里有哪些内容吧：</p>
+<p>· AddIns： 插件信息<br><br>· AddInsStartup：插件自启动<br><br>· Application： 工具插件<br><br>· IM： 安装管理器设定信息<br><br>· Licenses： 所有产品序列号<br><br>· Security： CAD 序列号信息<br><br>· SOLIDWORKS 20XX 对应版本的设定信息<br></p>
+<h3 id="许可"><a href="#许可" class="headerlink" title="许可"></a>许可</h3><p>强制归还许可，删除 BORROW 信息，并重启网络版服务，可强制归还许可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager]</span><br></pre></td></tr></table></figure>
+
+<h3 id="图标恢复"><a href="#图标恢复" class="headerlink" title="图标恢复"></a>图标恢复</h3><p>命令管理器无图标恢复，使用正确的注册表覆写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SolidWorks 201X\User Interface\CommandManager]</span><br><span class="line">	-\AssyContext 装配体工具栏</span><br><span class="line">	-\Caption 菜单栏</span><br><span class="line">	-\DrwContext 工程图工具栏</span><br><span class="line">	-\EditPartContext 装配体编辑零件工具栏</span><br><span class="line">	-\PartContext 零件工具栏</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="快速更换序列号"><a href="#快速更换序列号" class="headerlink" title="快速更换序列号"></a>快速更换序列号</h3><p>修改以下几个位置的注册表中的值即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Licenses\Serial Numbers]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Security]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Licenses\Serial Numbers]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Security]</span><br></pre></td></tr></table></figure>
+
+<h3 id="EPDM"><a href="#EPDM" class="headerlink" title="EPDM"></a>EPDM</h3><p>EPDM 的库在 SQL 中被删除，但存档库还存在。存档库服务器所在电脑中的找到下列注册项,删除其中与库同名的项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults]</span><br></pre></td></tr></table></figure>
+
+<p>EPDM 中如何清理新建用户名中的历史记录？删除注册表中的不需要的用户名即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\ConisioUsers]</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>删除搜索信息，删除下列项中的所有键值即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\Solidworks 20XX\Search\Quick Search History]</span><br></pre></td></tr></table></figure>
+
+<p>备份的注册表信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node] &gt; [HKEY_USERS\S-1-5-XXX]</span><br></pre></td></tr></table></figure>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

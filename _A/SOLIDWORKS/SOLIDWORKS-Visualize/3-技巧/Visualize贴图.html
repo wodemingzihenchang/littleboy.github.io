@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-12 19:31:18</span>
+</div>
+
+<div id="article"><h1 id="Visualize的10种贴图"><a href="#Visualize的10种贴图" class="headerlink" title="Visualize的10种贴图"></a>Visualize的10种贴图</h1><p><strong>Diffuse</strong>颜色、<strong>Emissive</strong>自发光、<strong>Normal</strong>法线、<strong>Opacity</strong>透明贴图、<strong>Specular</strong>高光贴图、<strong>Roughness</strong>粗糙度</p>
+<span id="more"></span>
+
+<h2 id="1、反照率（Albedo）"><a href="#1、反照率（Albedo）" class="headerlink" title="1、反照率（Albedo）"></a>1、反照率（Albedo）</h2><p>反照率主要决定了纹理的“颜色”。在金属纹理中，它决定了材料反射的颜色。</p>
+<h2 id="2、法线贴图（Normal）"><a href="#2、法线贴图（Normal）" class="headerlink" title="2、法线贴图（Normal）"></a>2、法线贴图（Normal）</h2><img src="Visualize的10种贴图\1.png">
+
+<p>法线贴图提供纹理深度。它使用复杂的计算模拟光线与物质表面相互作用的方式，以创建较小的凸起和凹痕。法线贴图不会更改你的基本几何图形。</p>
+<h2 id="3、粗糙度贴图（Roughness）"><a href="#3、粗糙度贴图（Roughness）" class="headerlink" title="3、粗糙度贴图（Roughness）"></a>3、粗糙度贴图（Roughness）</h2><img src="Visualize的10种贴图\2.png">
+
+<p>表面的粗糙度决定了它的粗糙度或光滑度。它们决定了光线在模型表面上的分布方式。粗糙的表面比光滑的表面在更多的方向上散射光线，导致更模糊而不是更清晰的反射。</p>
+<h2 id="4、金属度贴图（Metallic）"><a href="#4、金属度贴图（Metallic）" class="headerlink" title="4、金属度贴图（Metallic）"></a>4、金属度贴图（Metallic）</h2><img src="Visualize的10种贴图\3.png">
+
+<p>它是指表面反射其周围环境的程度。值的范围是 0.0 到 1.0。当金属度为0.0时，反照率颜色完全可见，材料似乎是塑料或陶瓷。当金属度为0.5时，它似乎是涂成金属的。当金属度达到1.0时，表面几乎失去了所有的反照率颜色，只反射环境。例如，当金属度为 1.0 且粗糙度为 0.0 时，表面类似于真实世界的镜子。</p>
+<p>金属贴图同样是灰度，但最好坚持使用白色和黑色值，并利用粗糙度贴图来填充空白。反照率贴图将用作金属性贴图中黑色部分的漫反射颜色（纹理在光线接触时出现的颜色）。相反，白色将使用反照率颜色确定反射的颜色和亮度，材质的漫反射颜色将为黑色。在这种情况下，不再需要漫反射颜色，因为反射将为材料的该部分提供所有颜色和细节，从而将其变成黑色。</p>
+<h2 id="5、反射贴图（其实是高光Specula贴图）"><a href="#5、反射贴图（其实是高光Specula贴图）" class="headerlink" title="5、反射贴图（其实是高光Specula贴图）"></a>5、反射贴图（其实是高光Specula贴图）</h2><img src="Visualize的10种贴图\4.png">
+
+<p>用来表现物体对光照反应的材质。当光照到塑料，布料，金属上时，所展现出来的高光部分和高光表现是不一样的。通过高光贴图上的颜色值来表现高光的强度，值越大表示高光反射越强。</p>
+<h2 id="6、位移贴图"><a href="#6、位移贴图" class="headerlink" title="6、位移贴图"></a>6、位移贴图</h2><img src="Visualize的10种贴图\5.png">
+
+<p>法线贴图和高度贴图的相似之处在于它们都为底层网格体提供了次要细节。两者之间的主要区别在于，与法线贴图不同，高度贴图实际上将数据添加到 3D 网格并提高多边形计数。</p>
+<p>在上图中，你可以看到网格在球体外边缘的脊处伸出。当你查看标准贴图时，会注意到边缘仍然是完美的圆形，这打破了深度感。高度贴图是一种灰度贴图，其中黑色表示网格的底部，白色表示网格的最高峰，灰色阴影表示介于两者之间的所有内容。高度贴图的好处是它们提供的细节量，从各个角度和任何照明条件下看起来都很完美。另一方面，对模型进行细分的必要性增加了渲染时间。因此，为了方便和性能起见，首选法线贴图。</p>
+<h2 id="7、不透明度贴图（Alpha）"><a href="#7、不透明度贴图（Alpha）" class="headerlink" title="7、不透明度贴图（Alpha）"></a>7、不透明度贴图（Alpha）</h2><img src="Visualize的10种贴图\6.png">
+
+<p>可以使用不透明度贴图使材质区域透明。如果你正在建造玻璃或低聚树枝或贴花，这一点非常有用。它可以用于树木或贴花，如上图所示。你可以在单个多边形平面上构造一堆完整的叶子，并使用不透明度贴图使多边形的多余消失。然后可以对这些多边形进行分层，以创建需要很少处理能力的逼真的树。</p>
+<p>灰度不透明度贴图可用。白色是完全不透明的，而黑色是完全透明的。它们之间不同程度的半透明性由灰色的色调表示。0.0 是不透明的，而 1.0 是透明的。</p>
+<h2 id="8、环境光遮蔽贴图"><a href="#8、环境光遮蔽贴图" class="headerlink" title="8、环境光遮蔽贴图"></a>8、环境光遮蔽贴图</h2><p>（不知道是不是半透明贴图的一种）</p>
+<img src="Visualize的10种贴图\7.png">
+
+<p>环境光遮蔽为有缝隙的对象的遮挡部分添加阴影，使它们看起来更逼真。在渲染时，此贴图与反照率混合，以描述它对光线的反应。地图是灰度的，白色占据了大部分明部，而较暗的部分则处于阴影中，光线反应较少。遮挡值范围为 0.0 到 1.0，其中 0.0 表示完全黑暗（遮挡），1.0 表示无遮挡。</p>
+<h2 id="9、折射贴图"><a href="#9、折射贴图" class="headerlink" title="9、折射贴图"></a>9、折射贴图</h2><p>折射是光线在穿过固体、液体或气体时弯曲的过程，扭曲了通过透明物体（顾名思义）观察时的外观。正是这种现象使放大镜发挥作用，并导致物体在水下观察时看起来不同。这是材质工作流程的关键要素，因为所有透明材质在现实生活中都会引起折射，因此需要在CG工作中复制它以尽可能逼真。在大多数情况下，折射贴图本质上是一组常量值。无论如何，你不想折射光线的模型部分几乎肯定是不透明的，因此它们是否折射光线并不重要。</p>
+<h2 id="10、自发光贴图"><a href="#10、自发光贴图" class="headerlink" title="10、自发光贴图"></a>10、自发光贴图</h2><p>这些贴图会使材质的某些元素看起来会散发出自己的光，从而可以在黑暗的地方看到它们。自发光有利于照亮小型 LED 或创建独特的条形照明效果。但是，如果应用太多，场景中的细节将被完全冲刷掉，场景将失去其活力。这些是完整的 RGB贴图。它们类似于反照率贴图，但它们用于光线。虽然自发光贴图可用于照亮整个场景，但它比添加传统照明要复杂得多。</p>
+<h1 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h1><p>游戏资源中常见的贴图类型</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/260973533">https://zhuanlan.zhihu.com/p/260973533</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/DassaultSystemes-Technology/EnterprisePBRShadingModel">GitHub - 达索PBR模型说明</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

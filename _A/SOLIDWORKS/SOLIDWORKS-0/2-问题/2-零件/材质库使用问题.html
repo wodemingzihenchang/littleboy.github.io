@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-06-18 22:12:59</span>
+</div>
+
+<div id="article"><h1 id="材质库使用问题"><a href="#材质库使用问题" class="headerlink" title="材质库使用问题"></a>材质库使用问题</h1><span id="more"></span>
+
+<h1 id="xml声明无效"><a href="#xml声明无效" class="headerlink" title="xml声明无效"></a>xml声明无效</h1><p>材质库报错 0xc00ce557 xml 声明无效。原因：一般为文件格式错误（或损坏）</p>
+<img src="材质库使用问题/材质库报错0xc00ce557 xml声明无效.png" >
+
+<h2 id="方法：删除异常模板"><a href="#方法：删除异常模板" class="headerlink" title="方法：删除异常模板"></a>方法：删除异常模板</h2><p>1、检查“文件位置”所在路径下的“自定义材质.sldmat”是否正常；<br><br>2、右键.sldmat 文件，用（支持 utf-8 格式）浏览器打开；<br><br>3、删除异常的自定义材质.sldmat 文件即可。<br></p>
+<img src="材质库使用问题/材质库报错0xc00ce557 xml声明无效2.png">
+
+<img src="材质库使用问题/image-20240322154315586.png">
+
+<h1 id="意外元素"><a href="#意外元素" class="headerlink" title="意外元素"></a>意外元素</h1><p>sheetmetalOption 为意外元素：在打开材质库编辑时出现的弹窗。该情况是高低版本的材质库问题，出现在 2019 材质更新的新功能导致 2019 以下的低版本不能使用高版本的材质库.sldmat。</p>
+<img src="材质库使用问题/image1.png" >
+
+<h2 id="方法1：手动修改"><a href="#方法1：手动修改" class="headerlink" title="方法1：手动修改"></a>方法1：手动修改</h2><p>因为材质库是以 XML 文件的格式储存材质信息，那么我们可以找到 2019 更新增加的元素，并将其删除即可（因为这段元素在低版本是没有的，不支持使用的）</p>
+<p>补充说明：2019 后材质库更新了”钣金属性”可以对材质进行钣金规格的预定义，在使用该材质时就默认了使用改材质的钣金规格</p>
+<img src="材质库使用问题/image2.png" >
+
+<p>通常情况是建议找到旧的版本材质库还原替换新版本使用；这是因为手动删除这些元素需要耗费挺多时间。</p>
+<img src="材质库使用问题/image3.png" >
+
+<h2 id="方法2：批量修改"><a href="#方法2：批量修改" class="headerlink" title="方法2：批量修改"></a>方法2：批量修改</h2><p>另一种方法是借助 XML 编辑工具修改。</p>
+<p>2-1【选择文件】选择有问题的材质库文件.sldmat</p>
+<p>2-2 输入”sheetmetalOption”，选择【删除元素】</p>
+<p>2-3 你还需要删除”sheetmetalThicknessRange”元素</p>
+<p>2-4 删除后，再用 SW 打开材质库编辑，检查是否还出现问题弹窗。</p>
+<img src="材质库使用问题/批量修改.png" >
+
+<h1 id="材料无法修改"><a href="#材料无法修改" class="headerlink" title="材料无法修改"></a>材料无法修改</h1><p>零部件的总质量在该材料更改之前被费盖。该新材料的密度将不影要部件的居量。</p>
+<img src="材质库使用问题/image1-17098021273821.png" >
+
+<h2 id="方法：取消属性覆盖"><a href="#方法：取消属性覆盖" class="headerlink" title="方法：取消属性覆盖"></a>方法：取消属性覆盖</h2><p>是因为 stp 标准件导入时，自带的质量信息设置覆盖了。在如下位置取消覆盖质量即可：</p>
+<p>在零件工具栏界面【评估】-【质量属性】-【覆盖质量属性】取消勾选覆盖</p>
+<img src="材质库使用问题/image2.jpeg" >
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

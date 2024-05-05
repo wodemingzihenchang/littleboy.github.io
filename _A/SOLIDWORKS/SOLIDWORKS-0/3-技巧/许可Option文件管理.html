@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="Option文件管理许可"><a href="#Option文件管理许可" class="headerlink" title="Option文件管理许可"></a>Option文件管理许可</h1><p>Option 文件是一个用来设置许可证服务器选项的文本文件。Options 文件可以用于各种类型的许可证：浮动许可证，临时&#x2F;试用许可证，或是永久许可证。</p>
+<span id="more"></span>
+
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>如何生成或是关联这个文件的方法根据 FLEXlm 许可证服务器的版本不同而不同。如果您需要更多的关于如何生成和关联该文件的信息，或是更多的关于 FLEXlm 许可证服务器的信息，请查看 FLEXlm 用户手册的第五章，您可以在 Macrovison 网站找到。</p>
+<p>SolidNetwork 许可管理器的 Option 文件通常存在于 C:\Program Files (x86)\SOLIDWORKS Corp\SolidNetWork License Manager 目录下。</p>
+<h1 id="功能语法"><a href="#功能语法" class="headerlink" title="功能语法:"></a>功能语法:</h1><p>Option 文件可以用来管理许可的分配。具体而言，Option 文件可以实现以下目的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--设置分组--&gt;</span><br><span class="line">GROUP             #定义一个组，基于用户名</span><br><span class="line">HOST_GROUP        #定义一个组，基于电脑名</span><br><span class="line"></span><br><span class="line">&lt;!--设置限制许可--&gt;</span><br><span class="line">BORROW_LOWWATER   #禁止借出许可</span><br><span class="line">EXCLUDE           #拒绝某个用户访问某个许可</span><br><span class="line">EXCLUDE_BORROW    #拒绝某个用户借用某个许可</span><br><span class="line">EXCLUDEALL        #拒绝某个用户使用所有许可</span><br><span class="line"></span><br><span class="line">&lt;!--设置保留许可--&gt;</span><br><span class="line">INCLUDE           #允许一个用户使用某个许可</span><br><span class="line">INCLUDE_BORROW    #允许某个用户借用许可</span><br><span class="line">INCLUDEALL        #允许某个用户使用所有的许可</span><br><span class="line">MAX               #为用户优先保留许可</span><br><span class="line">RESERVE           #为某个组保留许可</span><br><span class="line"></span><br><span class="line">&lt;!--设置超时--&gt;</span><br><span class="line">MAX_BORROW_HOURS  #设定许可借用最长时间</span><br><span class="line">TIMEOUT           #为某个许可设置超时</span><br><span class="line">TIMOUTALL         #为所有的许可设置超时</span><br><span class="line">没有TIMEOUT设置时，默认是2小时没有在使用程序会自动回收</span><br></pre></td></tr></table></figure>
+
+<h2 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">TIMEOUT swepdm_viewer 3600</span><br><span class="line">//如果 3600 秒没有任何活动（没有在使用程序），swepdm_viewer 许可将被强制归还</span><br><span class="line"></span><br><span class="line">TIMEOUTALL 900</span><br><span class="line">//如果 900 秒没有任何活动（没有在使用程序），所有的许可将被强制归还 (TIMEOUT 的最小值为 900 秒)。</span><br><span class="line"></span><br><span class="line">EXLUDE swofficepremium [windows user name]</span><br><span class="line">//[windows user name] 内列举的用户名无法使用 SOLIDWORKS Premium 许可</span><br><span class="line"></span><br><span class="line">RESERVE 1 solidworks USER John</span><br><span class="line">RESERVE 1 swofficepro USER &quot;Mark Brown&quot;</span><br><span class="line">//为用户 John 保留一个 SOLIDWORKS Standard 许可，为用户 Mark Brown 保留一个 SOLIDWORKS Professional 许可</span><br><span class="line"></span><br><span class="line">GROUP ProjectA zhangsan lishi wangwu</span><br><span class="line">RESERVE 2 solidworks GROUP ProjectA</span><br><span class="line">//创建一个组 ProjectA，包括 zhangsan lishi wangwu 三个用户。为 ProjectA 保留两个 SOLIDWORKS Standard 许可</span><br><span class="line"></span><br><span class="line">GROUP ProjectB zhaoliu shunqi zhouba</span><br><span class="line">EXCLUDE swofficepro GROUP ProjectB</span><br><span class="line">//创建一个组 ProjectB， 包括 zhaoliu shunqi zhouba 三个用户。阻止 ProjectB 使用 SOLIDWORKS Professional 许可</span><br><span class="line"></span><br><span class="line">GROUP DeptA zhangsan lishi wangwu</span><br><span class="line">MAX 1 solidworks GROUP DeptA</span><br><span class="line">//创建一个组 DeptA，包括 zhangsan lishi wangwu 三个用户，DeptA 可以最多使用 1 个 SOLIDWORKS standard 许可</span><br><span class="line"></span><br><span class="line">GROUP DeptB zhaoliu shunqi zhouba</span><br><span class="line">MAX 2 swofficepros GROUP DeptB</span><br><span class="line">//创建一个组 DeptB， 包括 zhaoliu shunqi zhouba 三个用户，DeptB 可以最多使用 2 个 SOLIDWORKS Professional 许可</span><br></pre></td></tr></table></figure>
+
+<h2 id="产品许可名"><a href="#产品许可名" class="headerlink" title="产品许可名"></a>产品许可名</h2><p>3D CAD：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SOLIDWORKS Office——swoffice</span><br><span class="line">SOLIDWORKS Standard——solidworks</span><br><span class="line">SOLIDWORKS Professional——swofficepro</span><br><span class="line">SOLIDWORKS Premium——swofficepremium</span><br><span class="line">SOLIDWORKS Premium with Simulation Professional swofficepremium_cwpro</span><br><span class="line">SOLIDWORKS Premium with Simulation Premium swofficepremium_cwadvpro</span><br><span class="line">eDrawings Professional edrw</span><br></pre></td></tr></table></figure>
+
+<p>Simulation：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SOLIDWORKS Simulation Standard cae_cwstd</span><br><span class="line">SOLIDWORKS Simulation Professional cae_cwpro</span><br><span class="line">SOLIDWORKS Simulation Premium cae_cwadvpro</span><br><span class="line">SOLIDWORKS Flow Simulation cae_cosmosfloworkspe</span><br><span class="line">SOLIDWORKS Flow Simulation HVAC Module cae_cosmosfloworks_hvac</span><br><span class="line">SOLIDWORKS Flow Simulation Electronic Cooling Module cae_cosmosfloworks_elec</span><br><span class="line">SOLIDWORKS Sustainability swsustainability</span><br><span class="line">SOLIDWORKS Plastics Standard plastics_professional</span><br><span class="line">SOLIDWORKS Plastics Professional plastics_premium</span><br><span class="line">SOLIDWORKS Plastics Premium plastics_advanced</span><br></pre></td></tr></table></figure>
+
+<p>PDM：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SOLIDWORKS PDM Professional CAD Editor swepdm_cadeditor</span><br><span class="line">SOLIDWORKS PDM Professional CAD Editor &amp; Web swepdm_cadeditorandweb</span><br><span class="line">SOLIDWORKS PDM Professional Contributor swepdm_contributor</span><br><span class="line">SOLIDWORKS PDM Professional Contributor &amp; Web swepdm_contributorandweb</span><br><span class="line">SOLIDWORKS PDM Professional Processor License swepdm_processor</span><br><span class="line">SOLIDWORKS PDM Professional Viewer swepdm_viewer</span><br><span class="line">SOLIDWORKS PDM Professional Web swepdm_web</span><br><span class="line">SOLIDWORKS PDM Standard CAD Editor swpdmstd_cadeditor</span><br><span class="line">SOLIDWORKS PDM Standard Contributor swpdmstd_contributor</span><br><span class="line">SOLIDWORKS PDM Standard Viewer swpdmstd_viewer</span><br></pre></td></tr></table></figure>
+
+<p>Electrical：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CircuitWorks circuitworks</span><br><span class="line">SOLIDWORKS Electircal 2D elec2d</span><br><span class="line">SOLIDWORKS Electrical 3D elec3d</span><br><span class="line">SOLIDWORKS Electrical Professional elecpro</span><br></pre></td></tr></table></figure>
+
+<p>Technical Communication：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SOLIDWORKS Composer swcomposer</span><br><span class="line">SOLIDWORKS Composer Check swcomposer_check</span><br><span class="line">SOLIDWORKS Composer Path Planning swcomposer_pathplanning</span><br><span class="line">SOLIDWORKS Composer Player Pro swcomposer_playerpro</span><br><span class="line">SOLIDWORKS Composer Sync swcomposer_sync</span><br><span class="line">SOLIDWORKS Composer Enterprise Sync swcomposer_syncenterprise</span><br><span class="line">SOLIDWORKS Inspection Professional swinspection_pro</span><br><span class="line">SOLIDWORKS Inspection Standard swinspection_std</span><br><span class="line">SOLIDWORKS MBD swmbd_std</span><br></pre></td></tr></table></figure>
+
+<p>2D CAD：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DraftSight Enterprise draftsightpremium</span><br></pre></td></tr></table></figure>
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>opt文件的读取规则是从上到下读取规则的。我们排查可以逆着排查，通过在语句前加“#”注释</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

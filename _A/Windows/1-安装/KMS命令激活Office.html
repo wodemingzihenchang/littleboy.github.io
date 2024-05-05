@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-06 12:16:50</span>
+</div>
+
+<div id="article"><h1 id="KMS命令激活Office-转载"><a href="#KMS命令激活Office-转载" class="headerlink" title="KMS命令激活Office[转载]"></a>KMS命令激活Office[转载]</h1><span id="more"></span>
+
+<p><strong>KMS命令激活Office2016步骤如下：</strong></p>
+<p>1、首先查看Office2016安装目录在哪里，如果是默认安装，没有修改路径，在C:\Program Files\Microsoft Office\Office16目录下，64位系统装32位office路径是C:\Program Files (x86)\Microsoft Office\Office16，具体路径还得自行查看；我的目录如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1784926/202009/1784926-20200901134818460-1956603051.png" alt="img"></p>
+<p>2、接着右键点击开始图标，选择【Windows PowerShell(管理员)】，或者【命令提示符(管理员)】；开始键+R键，输入cmd，进入命令行：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1784926/202009/1784926-20200901134923011-1466539614.png" alt="img"></p>
+<p>3、打开命令提示符，复制这个命令，在命令窗口鼠标右键，会自动粘贴，按回车进入office2016安装路径，如果你不是在这个目录，需手动修改；</p>
+<p>①32位系统装32位office或者64位系统装64位office命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;C:\Program Files\Microsoft Office\Office16&quot;</span><br></pre></td></tr></table></figure>
+
+<p>②64位系统装32位office命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;C:\Program Files (x86)\Microsoft Office\Office16&quot;</span><br></pre></td></tr></table></figure>
+
+<p>4、接着复制下面这个命令，在命令窗口鼠标右键自动粘贴命令，按回车执行，安装office2016专业增强版密钥，<strong>如果提示无法找到脚本文件，说明第3步打开的路径错误，需要执行另一个命令</strong>；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2020.cnblogs.com/blog/1784926/202009/1784926-20200901135156623-347439239.png" alt="img"></p>
+<p>5、接着复制这个命令，右键自动粘贴，按回车，设置kms服务器；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /sethst:kms.03k.org</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2020.cnblogs.com/blog/1784926/202009/1784926-20200901135324797-903593893.png" alt="img"> </p>
+<p>6、最后执行这个命令，按回车激活office2016；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /act</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2020.cnblogs.com/blog/1784926/202009/1784926-20200901135354743-1945730448.png" alt="img"></p>
+<p>7、如果要查询office2016激活状态，执行这个命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /dstatus</span><br></pre></td></tr></table></figure>
+
+<p>可以回office账号里面查看：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1784926/202009/1784926-20200901135422648-1268831990.png" alt="img"></p>
+<p> 以上就是使用kms命令激活Office2016的方法，有需要的用户可以学习下，希望对大家有帮助。</p>
+<p>本文来自博客园，作者：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zenghongfei/">无泪人</a>，转载请注明原文链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zenghongfei/p/13595797.html">https://www.cnblogs.com/zenghongfei/p/13595797.html</a></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="office"><a href="#office" class="headerlink" title="office"></a>office</h2><p>Q：性能正常，打开程序出现极大的卡顿现象</p>
+<p>A：打开word或者ppt，勾选【文件-选项-高级-禁用硬件加速前面】</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-29 23:44:07</span>
+</div>
+
+<div id="article"><h1 id="Electrical布线3D常见问题"><a href="#Electrical布线3D常见问题" class="headerlink" title="Electrical布线3D常见问题"></a>Electrical布线3D常见问题</h1><h2 id="有线头无电线"><a href="#有线头无电线" class="headerlink" title="有线头无电线"></a>有线头无电线</h2><p>自动布线不成功，或者无法布线，或者布线结束后模型连接点处有接线头但是无电线</p>
+<p>方法：这时检查软件是否设置了默认模板，如图10所示</p>
+<p>完成电线、电缆或线束布线过程后，布线分析对话框将列出所有错误或警告。单击 […] 可帮助您纠正错误。请参阅错误和警告列表上的可预览项。<a target="_blank" rel="noopener" href="https://swelectrical-help.solidworks.com/dl/swe/CHM/2018/ZH/HelpOnLine/Index.htm#DialogRoutingAnalysis.htm#PartNotInserted">Electrical布线3D常见问题</a></p>
+<h2 id="未插入设备型号"><a href="#未插入设备型号" class="headerlink" title="未插入设备型号"></a>未插入设备型号</h2><p>类型： 错误</p>
+<p>名称： 未插入设备型号</p>
+<p>示例： “+L2+L3+F1-K1-P1 (LC1254D6)”未插入</p>
+<p>详细信息： 设备树中所有未插入或未与SOLIDWORKS 3D 零件&#x2F;装配体相关联的设备型号。</p>
+<p>解决方法： 插入或关联设备型号。</p>
+<p>可预览： 在 SOLIDWORKS Electrical 设备树中高亮显示设备。</p>
+<h2 id="已在另一个装配体中插入设备型号"><a href="#已在另一个装配体中插入设备型号" class="headerlink" title="已在另一个装配体中插入设备型号"></a>已在另一个装配体中插入设备型号</h2><p>类型：警告。</p>
+<p>名称：已在另一个装配体中插入设备型号</p>
+<p>示例：“+L2+L3+F1-K1-P1 (LC1254D6)”已插入到另一装配体</p>
+<p>详细信息：设备树中与 SOLIDWORKS 3D 零件&#x2F;装配体关联的所有电气设备在当前打开的 SOLIDWORKS 树中不可用。</p>
+<p>解决方法：插入包含需要布线之设备型号的装配体。</p>
+<p>可预览：在 SOLIDWORKS Electrical 设备树中高亮显示设备型号。</p>
+<h2 id="设备型号已与一个装配体相关联"><a href="#设备型号已与一个装配体相关联" class="headerlink" title="设备型号已与一个装配体相关联"></a>设备型号已与一个装配体相关联</h2><p>类型：错误</p>
+<p>名称：设备型号已与一个装配体相关联</p>
+<p>详细信息：如果带有设备端子的电气零件与 SOLIDWORKS 装配体相关联，则会出现此情况。</p>
+<p>备注：无法定义到 SOLIDWORKS 装配体的设备连接点。</p>
+<p>解决方法：关联零件或将装配体保存为零件。</p>
+<p>可预览：放大并高亮显示设备树中的 SOLIDWORKS 装配体和所选设备型号。</p>
+<h2 id="设备型号插入了两次"><a href="#设备型号插入了两次" class="headerlink" title="设备型号插入了两次"></a>设备型号插入了两次</h2><p>类型：错误</p>
+<p>名称：设备型号插入了两次</p>
+<p>详细信息：如果装配体包含与电气设备相关联的零件，且向主装配体插入两次这样的装配体，则会出现此情况。</p>
+<p>解决方法：您可以选择消除有重复设备型号的主装配体，然后重新关联，或者移除其中一个含有重复设备型号的装配体。</p>
+<p>可预览：在 SOLIDWORKS 中放大并高亮显示两个 3D 零件，然后在设备树中选择设备型号。</p>
+<h2 id="缺少设备连接点"><a href="#缺少设备连接点" class="headerlink" title="缺少设备连接点"></a>缺少设备连接点</h2><p>类型：错误</p>
+<p>名称：缺少设备连接点</p>
+<p>详细信息：电气零件的定义与 3D 零件的定义不匹配。SOLIDWORKS 零件中缺少连接点。</p>
+<p>备注：如果只存在一个设备连接点，则不会出现此错误。</p>
+<p>解决方法：通过设备向导向 3D 零件添加缺少的设备连接点。</p>
+<p>可预览：高亮显示并放大 3D 零件。</p>
+<h2 id="设备连接点定义无效"><a href="#设备连接点定义无效" class="headerlink" title="设备连接点定义无效"></a>设备连接点定义无效</h2><p>类型：警告</p>
+<p>名称：设备连接点定义无效</p>
+<p>详细信息：3D 零件的一个或多个设备连接点在电气设备的设备终端中不存在。</p>
+<p>备注：此设备连接点无法用于布线。</p>
+<p>解决方法：通过设备向导编辑 3D 零件，以添加缺少的设备连接点。</p>
+<p>可预览：高亮显示设备连接点并放大 3D 零件。</p>
+<h2 id="只有一个设备连接点"><a href="#只有一个设备连接点" class="headerlink" title="只有一个设备连接点"></a>只有一个设备连接点</h2><p>类型：信息</p>
+<p>名称：只有一个设备连接点</p>
+<p>详细信息：3D 零件中只定义了一个设备连接点，并且它与设备型号定义不匹配。</p>
+<p>解决方法：通过设备向导定义 3D 零件内部的设备连接点。</p>
+<p>可预览：高亮显示设备连接点并放大 3D 零件。</p>
+<h2 id="连接点“线路类型”不是电气连接点"><a href="#连接点“线路类型”不是电气连接点" class="headerlink" title="连接点“线路类型”不是电气连接点"></a>连接点“线路类型”不是电气连接点</h2><p>类型：错误</p>
+<p>名称：设备连接点线路类型不是电气设备连接点</p>
+<p>详细信息：如果插入至 3D 零件的非电气设备连接点与设备型号中的电气设备连接点定义相匹配，则会出现此情况。</p>
+<p>解决方法：编辑零件并更改设备连接点布线类型。</p>
+<p>可预览：高亮显示设备连接点并放大 3D 零件。</p>
+<h2 id="缺少用于电缆源-目标的-3D-零件"><a href="#缺少用于电缆源-目标的-3D-零件" class="headerlink" title="缺少用于电缆源&#x2F;目标的 3D 零件"></a>缺少用于电缆源&#x2F;目标的 3D 零件</h2><p>类型：错误</p>
+<p>名称：缺少用于电缆源&#x2F;目标的 3D 零件</p>
+<p>定义：装配体中不存在定义为源电缆或目标的 SOLIDWORKS 零件。</p>
+<p>解决方法：使用“设置电缆源&#x2F;目标”命令可解决此问题。</p>
+<p>可预览：无。</p>
+<h2 id="缺少用于电缆源-目标的-3D-零件，但已布线"><a href="#缺少用于电缆源-目标的-3D-零件，但已布线" class="headerlink" title="缺少用于电缆源&#x2F;目标的 3D 零件，但已布线"></a>缺少用于电缆源&#x2F;目标的 3D 零件，但已布线</h2><p>类型：警告</p>
+<p>名称：缺少用于电缆源&#x2F;目标的 3D 零件，但已布线</p>
+<p>定义：如果装配体中不存在使用“设置源&#x2F;目标”命令定义为电缆源或目标的 SOLIDWORKS 零件，则会出现此情况。但是，可以使用布线方框图或多线连接对电缆布线。</p>
+<p>解决方法：使用“设置电缆源&#x2F;目标”命令可解决此问题。</p>
+<p>可预览：无。</p>
+<h2 id="缺少电缆的设备连接点"><a href="#缺少电缆的设备连接点" class="headerlink" title="缺少电缆的设备连接点"></a>缺少电缆的设备连接点</h2><p>类型：错误</p>
+<p>名称：缺少电缆的设备连接点</p>
+<p>定义：源或目标 SOLIDWORKS 零件（在电缆从&#x2F;到目标、布线方框图连接或原理图连接中出现）不具有 EW_CABLE 点。</p>
+<p>备注：如果只存在一个设备连接点，则不会出现此错误。</p>
+<p>解决方法：通过设备向导编辑 3D 零件中的源&#x2F;目标，以添加缺少的电缆点。</p>
+<p>可预览：无。</p>
+<h2 id="缺少电缆的设备连接点，但已布线"><a href="#缺少电缆的设备连接点，但已布线" class="headerlink" title="缺少电缆的设备连接点，但已布线"></a>缺少电缆的设备连接点，但已布线</h2><p>类型：警告</p>
+<p>名称：缺少电缆的设备连接点，但已布线</p>
+<p>定义：如果源或目标 SOLIDWORKS 零件电缆从&#x2F;到目标、布线方框图连接或原理图连接不具有 EW_CABLE 点，则会出现此情况。</p>
+<p>将改为使用通过布线方框图、电缆芯等发现的包含 EW_CABLE 的 3D 零件。</p>
+<p>备注：如果只存在一个设备连接点，则不会出现此错误。</p>
+<p>解决方法：通过设备向导编辑 3D 零件中的源&#x2F;目标，以添加缺少的电缆点。</p>
+<p>可预览：无。</p>
+<h2 id="未找到有效路径"><a href="#未找到有效路径" class="headerlink" title="未找到有效路径"></a>未找到有效路径</h2><p>类型：警告</p>
+<p>名称：未找到有效路径</p>
+<p>详细信息：出现的条件：</p>
+<ul>
+<li><p>电线或电缆不存在路径。</p>
+</li>
+<li><p>已定义 SOLIDWORKS 从&#x2F;到零件，但自动布线功能无法找到有效路径。</p>
+</li>
+<li><p>避让设置阻止使用有效路径。</p>
+</li>
+</ul>
+<p>解决方法：通过预览查看三色草图并识别缺少的路径零件。</p>
+<p>可预览：预览能够使用不同颜色创建三个草图。第一张草图从第一个设备连接点开始。第二张草图从第二个设备连接点开始。第三张草图跟踪避让线段。</p>
+<h2 id="错误的电线属性"><a href="#错误的电线属性" class="headerlink" title="错误的电线属性"></a>错误的电线属性</h2><p>类型：警告</p>
+<p>名称：错误的电线属性</p>
+<p>定义：电线直径未定义，无法从电线截面图进行计算。</p>
+<p>解决方法：定义截面积&#x2F;规格、标准电线尺寸和电线颜色。</p>
+<p>可预览：显示电线的“属性”对话框。</p>
+<h2 id="错误的电缆属性"><a href="#错误的电缆属性" class="headerlink" title="错误的电缆属性"></a>错误的电缆属性</h2><p>类型：警告</p>
+<p>名称：错误的电缆属性</p>
+<p>定义：如果电缆直径或颜色未定义，则会出现此情况。</p>
+<p>解决方法：定义电缆直径和颜色。</p>
+<p>可预览：显示电缆的“属性”对话框。</p>
+<h2 id="3D-零件连接点的-2D-原理图针脚-ID-的定义错误"><a href="#3D-零件连接点的-2D-原理图针脚-ID-的定义错误" class="headerlink" title="3D 零件连接点的 2D 原理图针脚 ID 的定义错误"></a>3D 零件连接点的 2D 原理图针脚 ID 的定义错误</h2><p>类型：错误</p>
+<p>名称：2D 原理图针脚 ID 定义错误。</p>
+<p>定义：连接点属性“2D 原理图针脚 ID”的值错误。对于有多个连接点的 3D 零件，只能定义一个针脚。</p>
+<p>解决方法：删除不必要的针脚。</p>
+<p>可预览：高亮显示设备连接点并放大 3D 零件。</p>
+<h2 id="错误的电缆芯属性"><a href="#错误的电缆芯属性" class="headerlink" title="错误的电缆芯属性"></a>错误的电缆芯属性</h2><p>类型： 警告</p>
+<p>名称： 错误的电缆芯属性。</p>
+<p>说明： 未定义电缆芯直径</p>
+<p>定义：未定义电缆芯的直径。</p>
+<p>解决方法：定义电缆芯直径。使用工程电缆管理器中的替换命令。</p>
+<p>可预览：显示具有已选电缆的电缆管理器。</p>
+<h2 id="与另一个连接点共线的电缆点"><a href="#与另一个连接点共线的电缆点" class="headerlink" title="与另一个连接点共线的电缆点"></a>与另一个连接点共线的电缆点</h2><p>类型：警告</p>
+<p>名称：与另一个连接点共线的电缆点</p>
+<p>说明：此零件包含两个连接点共线：“<CPoint_Name1>”和“<CPoint_Name2>”</p>
+<p>定义：在同一个零件上具有两个连接点共线时，不会产生意外的结果。类似于将多个电线和电缆芯连接至同一连接点。</p>
+<p>解决方法：移动电缆点使其与零件的任何其他连接点均不共线。</p>
+<p>可预览：缩放 3D 零件并突出显示出现故障的电缆点。</p>
+<h2 id="不完整的线束"><a href="#不完整的线束" class="headerlink" title="不完整的线束"></a>不完整的线束</h2><p>类型：错误</p>
+<p>名称：不完整的线束</p>
+<p>电线说明：  电线 &lt;电线标注&gt;：必须将此元素添加到线束，才能为其布线。</p>
+<p>电缆芯说明：电缆芯 &lt;电缆标注 - 电缆芯&gt;：必须将此元素添加到线束，才能为其布线。</p>
+<p>定义：当连接线束设备的某些电缆&#x2F;电线未添加至线束时，这些电缆&#x2F;电线未布线，执行“绘制线束”。</p>
+<p>解决方法：将提及的电缆&#x2F;电线添加至线束。</p>
+<p>可预览：缩放并突出显示电线&#x2F;电缆芯连接所在线束的 3D 零件。</p>
+<h2 id="无法对电线布线"><a href="#无法对电线布线" class="headerlink" title="无法对电线布线"></a>无法对电线布线</h2><p>类型：错误</p>
+<p>名称：无法对电线布线</p>
+<p>电线说明：  电线 &lt;电线标注&gt;：无法对此元素布线，因为它已连接到属于一个线束的设备。必须将其添加到线束。</p>
+<p>电缆芯说明：电缆芯 &lt;电缆标注 - 电缆芯&gt;：无法对此元素布线，因为它已连接到属于一个线束的设备。必须将其添加到线束。</p>
+<p>定义：当某些电缆&#x2F;电线连接至属于线束的设备时，这些电缆&#x2F;电线未布线，执行“电线&#x2F;电缆布线”。</p>
+<p>解决方法：将提及的电缆&#x2F;电线添加至线束。</p>
+<p>可预览：缩放并突出显示电线&#x2F;电缆芯连接所在线束的 3D 零件。</p>
+<h2 id="2D-原理图销-ID-不同于端子标注"><a href="#2D-原理图销-ID-不同于端子标注" class="headerlink" title="2D 原理图销 ID 不同于端子标注"></a>2D 原理图销 ID 不同于端子标注</h2><p>类型：警告</p>
+<p>名称：2D 原理图针脚 ID 不同于端子标注</p>
+<p>说明：CPoint “&lt;CPoint3DName@ComponentReference&gt;”，2D 原理图针脚 ID &#x3D; “&lt;2D ID&gt;”，端子标注 &#x3D; “<Mark>“</p>
+<p>定义：连接点属性“2D 原理图针脚 ID”的值不同于在制造商零件中定义的端子的关联标注。2D 原理图销 ID 的值是：“&lt;2D Schematic pin ID&gt;”。端子标注的值是：<Terminal mark>。</p>
+<p>解决方法：移除 2D 原理图针脚 ID 的当前值，然后再次布线或仅将其更改为当前值。</p>
+<p>可预览：突出显示连接点并缩放 3D 零件，但最好是：编辑连接点特征，然后选择 2D 原理图针脚 ID 单元格。</p>
+<h2 id="2D-原理图销-ID-重复"><a href="#2D-原理图销-ID-重复" class="headerlink" title="2D 原理图销 ID 重复"></a>2D 原理图销 ID 重复</h2><p>类型：错误</p>
+<p>名称：“2D 原理图销 ID”错误</p>
+<p>说明：CPoint “&lt;CPoint3DName@ComponentReference&gt;”, 2D 原理图销 ID &#x3D;“&lt;2D ID&gt;”重复</p>
+<p>定义：部件中的多个连接点具有用户预定义的相同属性“2D 原理图销 ID”（不区分大小写）。2D 原理图销 ID 的值是：“&lt;2D Schematic pin ID&gt;”。</p>
+<p>解决方法：将 2D 原理图销 ID 的当前值修改为唯一的值并再次布线，或者仅将其清除（留空），以便软件自动分配正确的值。</p>
+<h2 id="折弯半径错误"><a href="#折弯半径错误" class="headerlink" title="折弯半径错误"></a>折弯半径错误</h2><p>类型：错误</p>
+<p>名称：折弯半径错误</p>
+<p>说明：线路装配体中发现折弯半径错误：&lt;线路装配体的名称&gt;</p>
+<p>定义：有些电线&#x2F;电缆布线的线路折弯半径小于最小值。</p>
+<p>解决方法：编辑线路装配体以手动修复几何形状。如果您不想在发现折弯半径错误时对布线的几何形状建模，请从工具 &gt; 选项… &gt; 布线下取消选中“如果折弯半径小于最小值，则为线段创建布线部件”选项。</p>
+<h2 id="连接点共享-3D-位置"><a href="#连接点共享-3D-位置" class="headerlink" title="连接点共享 3D 位置"></a>连接点共享 3D 位置</h2><p>类型：错误</p>
+<p>名称：连接点共享 3d 位置</p>
+<p>说明：&lt;设备名称&gt;的连接点共享相同的 3D 位置：&lt;连接点名称&gt;</p>
+<p>定义：两个或多个连接点共享相同的草图点，或位于 3D 中的同一几何点。</p>
+<p>解决方法：如果未使用连接点，则分离连接点或移除其中一个连接点。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

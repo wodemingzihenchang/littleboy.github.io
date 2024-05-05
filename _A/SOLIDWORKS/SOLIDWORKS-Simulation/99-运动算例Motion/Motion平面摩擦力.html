@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-27 14:21:22</span>
+</div>
+
+<div id="article"><h1 id="Motion-平面摩擦力"><a href="#Motion-平面摩擦力" class="headerlink" title="Motion-平面摩擦力"></a>Motion-平面摩擦力</h1><p>模拟平面模型下的摩擦力工况</p>
+<img src="Motion-平面摩擦力/image-20240422160659423.png">
+
+<h2 id="初始状态"><a href="#初始状态" class="headerlink" title="初始状态"></a>初始状态</h2><p>设置静止的初始状态，这里是建议将装配体配合成“只能水平移动”的效果</p>
+<img src="Motion-平面摩擦力/image-20240422165523790.png">
+
+<p>使用Motion插件</p>
+<img src="Motion-平面摩擦力/image-20240422165711573.png">
+
+
+
+<h2 id="接触"><a href="#接触" class="headerlink" title="接触"></a>接触</h2><p>通过选择零件，来实现所选对象间接触摩擦</p>
+<p>摩擦系数默认有预定义的材料和摩擦系数（这里的材料不是零件材料，只是对应摩擦材质预设而已）。取消勾选材料项可自定义系数。摩擦系数：会分摩擦类型（动态和静态），按速度决定摩擦系数的取值。<a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/SolidWorks/motionstudies/HIDD_DVE_SIM_3DCONTACT.htm?id=d51b3831a9ae4555b8b981d81bd78394#Pg0">接触说明</a></p>
+<img src="Motion-平面摩擦力/image-20240422162231469.png">
+
+
+
+<h2 id="重力"><a href="#重力" class="headerlink" title="重力"></a>重力</h2><p>添加重力，这里的重力会对零件产生向下的重力，和平面产生摩擦正压力。</p>
+<img src="Motion-平面摩擦力/image-20240422162638792.png">
+
+<h2 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h2><p>摩擦在物理概念力，还需要具有移动或移动趋势的状态。那这部分我们直接添加【线性电机】进行模型移动。</p>
+<img src="Motion-平面摩擦力/image-20240422162930710.png">
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>设置结果</p>
+<img src="Motion-平面摩擦力/image-20240422163214188.png">
+
+<p>按理论计算，摩擦力和接触力符合结果。</p>
+<img src="Motion-平面摩擦力/image-20240422160659423.png">
+
+
+
+<h1 id="斜面摩擦力"><a href="#斜面摩擦力" class="headerlink" title="斜面摩擦力"></a>斜面摩擦力</h1><h2 id="结果设置"><a href="#结果设置" class="headerlink" title="结果设置"></a>结果设置</h2><p>在斜面上，力的方向不再是装配体主坐标系的XYZ方向，即我们需要选择参考模型的坐标来确定斜面方向。如图：</p>
+<img src="Motion-平面摩擦力/image-20240422183735297.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

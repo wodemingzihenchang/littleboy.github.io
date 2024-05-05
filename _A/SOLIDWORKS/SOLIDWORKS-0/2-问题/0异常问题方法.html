@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-20 23:23:31</span>
+</div>
+
+<div id="article"><h1 id="模型异常"><a href="#模型异常" class="headerlink" title="模型异常"></a>模型异常</h1><h2 id="解决配合问题"><a href="#解决配合问题" class="headerlink" title="解决配合问题"></a>解决配合问题</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2024/chinese-simplified/SolidWorks/sldworks/c_Solving_Mate_Problems.htm?verRedirect=1">解决配合问题 - 2024 - SOLIDWORKS 帮助</a></p>
+<p>配合错误<br>MateXpert<br>您可以使用 MateXpert 识别装配体中的配合问题。 可以详细检查不满意的配合，并确定过定义装配体的配合组。</p>
+<p>修复配合问题的技巧<br>许多过定义及冗余配合问题可通过以下步骤而解决。</p>
+<p>配合错误范例<br>配合的实体 PropertyManager<br>在配合的实体 PropertyManager 中，您可重新附加悬空的配合实体。</p>
+<p>全局替换失败的配合参考<br>如果用于装配体中的许多位置的某个部件缺少配合参考，则您可同时替换所有实例的缺失参考。</p>
+<p>遗失实体弹出式工具栏<br>当您替换装配体中的零部件时，可在替换配合参考时利用“遗失的实体”弹出式工具栏来导览现有的配合</p>
+<h2 id="虚拟零部件丢失"><a href="#虚拟零部件丢失" class="headerlink" title="虚拟零部件丢失"></a>虚拟零部件丢失</h2><img src="0异常问题方法/虚拟零件丢失问题.png">
+
+<p>方法Solution S-034052</p>
+<p>有一种比较常见的原因是因为文件损坏问题导致内部保存的零部件丢失，</p>
+<p>还有一种原因可能是使用了‘打包’功能，建议多做一个备份。</p>
+<p>目前有一个可行的方法，是需要客户去确认在C:\Users&lt;username&gt;\AppData\Local\Temp\sw（xxxx）中是否有丢失的复件“零件.sldprt”. 如果有，手动再装配体中解压零件，您应该会得到通知无法加载该零件，是否手动浏览选择，手动浏览到该路径，然后选择。</p>
+<h2 id="无法写入错误日志文件，确保磁盘没有写入保护"><a href="#无法写入错误日志文件，确保磁盘没有写入保护" class="headerlink" title="无法写入错误日志文件，确保磁盘没有写入保护"></a>无法写入错误日志文件，确保磁盘没有写入保护</h2><p>常见另存stp时出现，</p>
+<p>说法1、打开别人发过来的step文件，显示“无法写入错误日志文件”。文件名有特殊符号（ф）导致另存失败；</p>
+<p>说法2、是【3Dinterconnect】影响了导入的stp零部件，再次另存时受影响</p>
+<h2 id="重建模型错误"><a href="#重建模型错误" class="headerlink" title="重建模型错误"></a>重建模型错误</h2><p>Q：由于深度较大，开环轮廓盲孔切割失败</p>
+<p>A：切除位置为空导致，需要检查特征应用的范围。（例如：拉伸切除是否使用了“反侧切除”，然后在新位置不能镜像导致）</p>
+<img src="0异常问题方法/由于深度较大，开环轮廓盲孔切割失败.png">
+
+<h1 id="显示异常"><a href="#显示异常" class="headerlink" title="显示异常"></a>显示异常</h1><h2 id="文件"><a href="#文件" class="headerlink" title="~$文件"></a>~$文件</h2><p>出现~$文件并且不能隐藏。</p>
+<h2 id="注解光标不显示"><a href="#注解光标不显示" class="headerlink" title="注解光标不显示"></a>注解光标不显示</h2><p>工程图注解文字在编辑时，鼠标光标不显示问题。这似乎是SW2022 中其中一个 Microsoft 版本的问题（问题出现于）</p>
+<p>方法1：显卡驱动显示问题，经RX和回退驱动得到验证</p>
+<p>方法2：可以通过关闭（禁用）集成显卡的方式，恢复光标。</p>
+<p>方法3：可以通过【右键注解-在窗口中编辑】来看到光标编辑。</p>
+<h2 id="装配体图形显示"><a href="#装配体图形显示" class="headerlink" title="装配体图形显示"></a>装配体图形显示</h2><h2 id="透明度100-才透明"><a href="#透明度100-才透明" class="headerlink" title="透明度100%才透明"></a>透明度100%才透明</h2><p>透明度不能连续变化，只有不透明（0~99%）和透明（100%）。</p>
+<p>1、尝试【RX工具-OpenGL模式】打开文件，排除显卡显示问题；</p>
+<p>2、如果1正常检查当前显卡的型号和驱动，尝试验证其他电脑是否显示正常，或尝试修改显卡驱动看是否显示正常</p>
+<h2 id="纹理图片黑色"><a href="#纹理图片黑色" class="headerlink" title="纹理图片黑色"></a>纹理图片黑色</h2><p>不同版本效果还不一样</p>
+<h1 id="异常错误信息"><a href="#异常错误信息" class="headerlink" title="异常错误信息"></a>异常错误信息</h1><h2 id="弹窗此副本未通过验证"><a href="#弹窗此副本未通过验证" class="headerlink" title="弹窗此副本未通过验证"></a>弹窗此副本未通过验证</h2><p>sw2022 关闭许可证验证错误弹窗(弹窗此副本未通过验证，你可能是盗版受害者)</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line">;关闭 SOLIDWORKS <span class="number">2022</span> 许可证验证错误弹窗</span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS <span class="number">2022</span>\User Interface\MessageBoxes]</span><br><span class="line">&quot;MessageBox30427&quot;=dword:<span class="number">00000000</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="脚本错误"><a href="#脚本错误" class="headerlink" title="脚本错误"></a>脚本错误</h2><p>file:&#x2F;&#x2F;C:&#x2F;Program%20Files&#x2F;Solidworks%20Comp&#x2F;SolidWorks&#x2F;data&#x2F;taskpane&#x2F;common&#x2F;taskPaneFuncs.js</p>
+<p>方法：</p>
+<p>重新注册 DDL 解决了该问题 ，RegSvr32 C:\Program Files\SOLIDWORKS Corp\SW2021\SOLIDWORKS\swHTMLControl.dll</p>
+<p><img src="0%E5%BC%82%E5%B8%B8%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/image-20231220095342994.png" alt="image-20231220095342994"></p>
+<h2 id="为什么会出现错误-包含无效路径"><a href="#为什么会出现错误-包含无效路径" class="headerlink" title="为什么会出现错误 包含无效路径"></a>为什么会出现错误<path> 包含无效路径</h2><p>(图)</p>
+<p>之所以出现此问题，是因为 *.obj 纹理文件路径与当前路径不匹配。</p>
+<p>要解决此问题，请执行以下步骤：</p>
+<p>1.在 Windows® 文件资源管理器中，右键单击 *.obj 文件，然后依次选择“打开方式”&gt;“记事本”。<br>2.在记事本中，选择“编辑”&gt;“替换”。<br>3.在“查找内容”文本框中，键入或粘贴 *.mtl 文件的路径。此路径一般显示在 *.obj 文件的第一行。<br>4.在文件资源管理器中，转至 *.mtl 文件的文件夹位置。<br>5.按下键盘上的“Shift”键，同时右键单击该文件，然后选择“复制为路径”。<br>6.返回到“替换”对话框，将该路径（不带引号）粘贴到“替换为”文本框中。然后，单击“全部替换”。</p>
+<p>如需相关的图形参考，请参阅随附的图片文件。请注意，该路径在文件中出现了多次，您必须在所有实例中替换该路径。</p>
+<h2 id="零部件特征显示"><a href="#零部件特征显示" class="headerlink" title="零部件特征显示"></a>零部件特征显示</h2><img src="0异常问题方法/装配体零部件没有特征.png">
+
+<h2 id="FeatueManage识别"><a href="#FeatueManage识别" class="headerlink" title="FeatueManage识别"></a>FeatueManage识别</h2><p>FM识别不受支持的实体</p>
+<img src="0异常问题方法/FM识别不受支持的实体.png">
+
+<img src="0异常问题方法/特征不受FeatureWorks支持.png">
+
+
+<h1 id="性能挂起"><a href="#性能挂起" class="headerlink" title="性能挂起"></a>性能挂起</h1><h2 id="右键重命名卡"><a href="#右键重命名卡" class="headerlink" title="右键重命名卡"></a>右键重命名卡</h2><p>造成卡死的原因是 SolidWorks2020 与 Windows11 不兼容，把系统换回 Windows10 就 OK 了。SolidWorks 对 Windows 家庭版系统的兼容性也不好！</p>
+<h2 id="sldbgproc-占用-100"><a href="#sldbgproc-占用-100" class="headerlink" title="sldbgproc 占用 100%"></a>sldbgproc 占用 100%</h2><img src="0常见问题方法/sldbgproc占用100%25.png">
+
+<h1 id="异常代码"><a href="#异常代码" class="headerlink" title="异常代码"></a>异常代码</h1><h2 id="打开图纸报错"><a href="#打开图纸报错" class="headerlink" title="打开图纸报错"></a>打开图纸报错</h2><p>闪退报错，然后我就去看了下host文件加了个PDM服务器IP，后正常</p>
+<h2 id="sldrsu-0017g51c"><a href="#sldrsu-0017g51c" class="headerlink" title="sldrsu:0017g51c"></a>sldrsu:0017g51c</h2><h2 id="sldappu-0019eacc"><a href="#sldappu-0019eacc" class="headerlink" title="sldappu:0019eacc"></a>sldappu:0019eacc</h2><p>操作“显示零部件”崩溃（可复现）<br>方法：是显示问题，在此SOLIDWORKS官网下载对应的2020版本修补补丁并安装<br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification/">https://www.solidworks.com/zh-hans/support/hardware-certification/</a></p>
+<h2 id="sldrglu-000b1559"><a href="#sldrglu-000b1559" class="headerlink" title="sldrglu:000b1559"></a>sldrglu:000b1559</h2><h2 id="swccu-0001834c"><a href="#swccu-0001834c" class="headerlink" title="swccu:0001834c"></a>swccu:0001834c</h2><p>重建崩溃</p>
+<h2 id="Mscorlib：0059d884"><a href="#Mscorlib：0059d884" class="headerlink" title="Mscorlib：0059d884"></a>Mscorlib：0059d884</h2><p>重建崩溃</p>
+<h2 id="vcruntime140-000012de"><a href="#vcruntime140-000012de" class="headerlink" title="vcruntime140.000012de"></a>vcruntime140.000012de</h2><p>拔模分析崩溃，软件退出。</p>
+<p>方法：出现vcruntime140报错，但是不是最终原因。原因在swatcolorlabel.ocx为注册安装导致。</p>
+<p><a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/2018/09/solidworks-crash-troubleshooting-guide-part-1/">SOLIDWORKS 崩溃故障排除指南（第 1 部分，共 3 部分） (javelin-tech.com)</a></p>
+<h2 id="sldworks-1000209d8"><a href="#sldworks-1000209d8" class="headerlink" title="sldworks:1000209d8"></a>sldworks:1000209d8</h2><p>打开工程图文件发生错误，软件退出。</p>
+<p>方法：可以在“出详图”模式下，删除该视图，保存，还原（或轻化）打开即可。就不会有错误</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>工程图图纸格式找不到，</p>
+<p>方法1：【系统选项-文件位置-图纸格式】需要做设置，链接到新制的图纸的文件夹位置</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/2018/09/solidworks-crash-troubleshooting-guide-part-1/">SOLIDWORKS 崩溃故障排除指南（第 1 部分，共 3 部分） (javelin-tech.com)</a></p>
+<p>疑似还原崩溃，但可能不是最终原因，需要问题原档或dmp检查。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

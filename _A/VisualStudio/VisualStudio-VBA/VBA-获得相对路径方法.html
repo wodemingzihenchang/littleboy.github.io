@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="VBA-获得相对路径方法"><a href="#VBA-获得相对路径方法" class="headerlink" title="VBA-获得相对路径方法"></a>VBA-获得相对路径方法</h1><h2 id="桌面"><a href="#桌面" class="headerlink" title="桌面"></a>桌面</h2><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Dim</span> path <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">path = Environ\$(\<span class="string">&quot;USERPROFILE\&quot;</span>) &amp;[\\\\Desktop](file:///\Desktop)</span><br></pre></td></tr></table></figure>
+
+<h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><h3 id="Excel-VBA-获得当前文件位置方法"><a href="#Excel-VBA-获得当前文件位置方法" class="headerlink" title="Excel_VBA 获得当前文件位置方法"></a>Excel_VBA 获得当前文件位置方法</h3><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ThisWorkbook.Path &amp; \<span class="string">&quot;\\\&quot;</span> &amp; ThisWorkbook.Name</span><br></pre></td></tr></table></figure>
+
+<h3 id="一、通过-ActiveWorkbook-路径获取文件路径"><a href="#一、通过-ActiveWorkbook-路径获取文件路径" class="headerlink" title="一、通过 ActiveWorkbook 路径获取文件路径"></a>一、通过 ActiveWorkbook 路径获取文件路径</h3><p>在 VBA 中，我们可以通过 ActiveWorkbook 获取当前操作的 Excel 文件的路径。ActiveWorkbook 属性返回当前活动工作簿（workbook）的对象。以下是获取当前文件路径的示例：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> GetFilePath()</span><br><span class="line">MsgBox ActiveWorkbook.Path</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<p>这将输出一个包含当前文件路径的信息框。</p>
+<h3 id="二、通过-ThisWorkbook-路径获取文件路径"><a href="#二、通过-ThisWorkbook-路径获取文件路径" class="headerlink" title="二、通过 ThisWorkbook 路径获取文件路径"></a>二、通过 ThisWorkbook 路径获取文件路径</h3><p>在 VBA 中，我们还可以通过 ThisWorkbook 获取当前打开的 Excel 文件的路径。ThisWorkbook 是指当前正在运行的 Excel 文件的工作簿对象。以下是获取当前文件路径的示例：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> GetFilePath()</span><br><span class="line">MsgBox ThisWorkbook.Path</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<p>这将输出一个包含当前文件路径的信息框。</p>
+<h3 id="三、使用-VBA-Dir-函数获取文件路径"><a href="#三、使用-VBA-Dir-函数获取文件路径" class="headerlink" title="三、使用 VBA Dir 函数获取文件路径"></a>三、使用 VBA Dir 函数获取文件路径</h3><p>我们还可以使用 VBA<br>Dir 函数来获取当前工作目录下的已知文件的路径。Dir 函数只能用于当前工作目录。</p>
+<p>以下是获取文件路径的示例：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> GetFilePath()</span><br><span class="line"><span class="keyword">Dim</span> fileName <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">fileName = \<span class="string">&quot;test.xlsx\&quot;</span> \<span class="comment">&#x27;设置文件名</span></span><br><span class="line">MsgBox CurDir() &amp; \<span class="string">&quot;\\\&quot;</span> &amp; fileName \<span class="comment">&#x27;输出文件路径</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，CurDir()函数会返回当前工作目录，我们使用它加上我们的文件名来获取文件的完整路径。</p>
+<h3 id="四、使用-Shell-对象获取文件路径"><a href="#四、使用-Shell-对象获取文件路径" class="headerlink" title="四、使用 Shell 对象获取文件路径"></a>四、使用 Shell 对象获取文件路径</h3><p>我们可以使用 VBA 的 Shell 对象来获取当前运行文件的路径。这种方法允许我们运行系统命令并查看结果。</p>
+<p>以下是获取文件路径的示例：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> GetFilePath()</span><br><span class="line"><span class="keyword">Dim</span> filePath <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line"><span class="keyword">With</span> CreateObject(\<span class="string">&quot;WScript.Shell\&quot;</span>)</span><br><span class="line">filePath = .Exec(\<span class="string">&quot;cmd /c cd\&quot;</span>).StdOut.ReadAll</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line">MsgBox filePath</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="五、使用-Environ-函数获取文件路径"><a href="#五、使用-Environ-函数获取文件路径" class="headerlink" title="五、使用 Environ 函数获取文件路径"></a>五、使用 Environ 函数获取文件路径</h3><p>我们可以使用 Environ 函数来获取计算机环境变量。其中一个环境变量是”USERPROFILE”，表示当前用户的主目录。我们可以使用这个环境变量来获取当前文件夹的路径。</p>
+<p>以下是获取文件路径的示例：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> GetFilePath()</span><br><span class="line"><span class="keyword">Dim</span> path <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">path = Environ(\<span class="string">&quot;USERPROFILE\&quot;</span>) &amp; \<span class="string">&quot;\\Documents\\\&quot;</span></span><br><span class="line">MsgBox path</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，我们使用 Environ 函数获取当前用户的主目录，然后加上”文档（Documents）”子文件夹，以获得当前 Excel 文件的路径。</p>
+<h3 id="六、使用-Application-对象获取文件路径"><a href="#六、使用-Application-对象获取文件路径" class="headerlink" title="六、使用 Application 对象获取文件路径"></a>六、使用 Application 对象获取文件路径</h3><p>最后，我们还可以使用 VBA 的 Application 对象来获取当前 Excel 文件的路径。</p>
+<p>以下是获取文件路径的示例：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> GetFilePath()</span><br><span class="line">MsgBox Application.ActiveWorkbook.FullName \<span class="comment">&#x27;完整路径</span></span><br><span class="line">MsgBox Application.ActiveWorkbook.Path \<span class="comment">&#x27;目录路径</span></span><br><span class="line">MsgBox ActiveDocument.Name \<span class="comment">&#x27;文件名</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，我们使用 ActiveWorkbook.FullName 和 ActiveWorkbook.Path 属性来获取文件的完整路径和目录路径。我们还可以使用 ActiveDocument.Name 属性来获取文件名。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

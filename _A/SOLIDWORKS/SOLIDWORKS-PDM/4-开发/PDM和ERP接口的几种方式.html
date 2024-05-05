@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-19 10:44:20</span>
+</div>
+
+<div id="article"><h1 id="PDM和ERP接口的几种方式"><a href="#PDM和ERP接口的几种方式" class="headerlink" title="PDM和ERP接口的几种方式"></a>PDM和ERP接口的几种方式</h1><p>PDM-ERP接口方案</p>
+<img src="PDM和ERP接口的几种方式\接口方案.png">
+
+<h2 id="手工方式"><a href="#手工方式" class="headerlink" title="手工方式"></a>手工方式</h2><p>()</p>
+<h2 id="中间格式集成"><a href="#中间格式集成" class="headerlink" title="中间格式集成"></a>中间格式集成</h2><img src="PDM和ERP接口的几种方式\中间格式集成方式.png">
+
+<p>优势：<br>1.	几乎没有开发及维护费用<br>2.	稳定性高<br>3.	不影响系统升级</p>
+<p>劣势：<br>1.	自动化程度低，需要人工导入</p>
+<h2 id="Web-Server自动数据传递"><a href="#Web-Server自动数据传递" class="headerlink" title="Web Server自动数据传递"></a>Web Server自动数据传递</h2><img src="PDM和ERP接口的几种方式\Web Server自动数据传递.png">
+
+<p>优势：<br>自动化程度较高<br>稳定性高<br>比较容易升级<br>劣势：<br>开发及维护成本较高<br>需要双方支持Web Service控件</p>
+<h2 id="中间表方式自动数据传递"><a href="#中间表方式自动数据传递" class="headerlink" title="中间表方式自动数据传递"></a>中间表方式自动数据传递</h2><img src="PDM和ERP接口的几种方式\中间表方式自动数据传递.png">
+
+<p>优势：<br>自动化程度较高<br>劣势：<br>开发及维护成本较高<br>升级较困难<br>稳定性差</p>
+<h2 id="控件开发自动数据传递"><a href="#控件开发自动数据传递" class="headerlink" title="控件开发自动数据传递"></a>控件开发自动数据传递</h2><img src="PDM和ERP接口的几种方式\控件开发自动数据传递.png">
+
+<p>优势：<br>自动化程度高<br>劣势：<br>开发及维护成本高<br>升级困难<br>稳定性差<br>数据合规性要求高</p>
+<!-- 中间表+Web Server自动数据传递-->
+
+<h1 id="PDM与ERP集成的内容"><a href="#PDM与ERP集成的内容" class="headerlink" title="PDM与ERP集成的内容"></a>PDM与ERP集成的内容</h1><h2 id="物料主数据"><a href="#物料主数据" class="headerlink" title="物料主数据"></a>物料主数据</h2><p>物料申请流程<br>研发数据的填写<br>物料编码</p>
+<img src="PDM和ERP接口的几种方式\物料主数据集成.png">
+
+<p>规划物料申请流程中所需的物料属性项；<br>物料类型<br>物料类别<br>物料名称<br>规格<br>单位<br>…</p>
+<h2 id="BOM数据"><a href="#BOM数据" class="headerlink" title="BOM数据"></a>BOM数据</h2><p>BOM就是Bill of Material物料清单，这个大家都懂，但是说到有几种类型的BOM大家就不是太拎得清了。主要涉及到以下三种BOM：</p>
+<ul>
+<li>第一种是<strong>DBOM（Design BOM）：设计BOM</strong>，这个可以理解为原始的产品设计图纸以及零件是如何组装成部件或者成品的；</li>
+<li>第二种是<strong>EBOM（Engineering BOM）：工程BOM</strong>，这个是在DBOM的基础上，增加了工艺要求以及质量要求等；</li>
+<li>第三种是<strong>MBOM（Manufacturing BOM）：制造BOM</strong>，这个是在DBOM的基础上，表明了零件是怎么生产出来的，或者是从哪里购买的；</li>
+</ul>
+<p>目前常见的ERP系统接受EBOM及PBOM两种格式，较少的企业会要求导入MBOM；</p>
+<img src="PDM和ERP接口的几种方式\BOM数据集成.png">
+
+
+
+<h2 id="变更数据"><a href="#变更数据" class="headerlink" title="变更数据"></a>变更数据</h2><p>•	物料的新增、修订及替换<br>•	BOM的批量变更</p>
+<img src="PDM和ERP接口的几种方式\BOM数据变更.png">
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-09 23:57:12</span>
+</div>
+
+<div id="article"><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>realview（小金球）无法正常显示材质的问题或 realview 无法开启问题。</p>
+<p>原因：多数是显卡兼容问题或是版本支持问题。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1、打开注册表位置：计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Solidworks 2020\Performance\Graphics\Hardware\Current<br><br>2、找到 Renderer 项，双击 Renderer，在打开的窗口中复制你的显卡的名字；<br><br><img src="realview无法使用问题\image001.png"><br><br>3、打开注册表位置：计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Solidworks 2020\Performance\Graphics\Hardware\Gl2Shaders<br><br>4、在左侧的列表中展开 R420 然后在 R420 处右键单击，选择新建项，并重命名为第三步中复制的显卡的名字：（笔者这里是 AMD 的显卡，如果是英伟达的显卡，就展开 NV40 目录，如果是 Intel 的核显，就展开 Other 目录）<br><br><img src="realview无法使用问题\image002.png"><br><br>5、在刚刚新建的以显卡命名的项那里点击右键，再次新建一个 DWORD（32 位）值：<br><br><img src="realview无法使用问题\image003.png"><br><br>6、将新建的 32 位值命名为 Workarounds，双击命名后的 Workarounds，将数值数据改为 30008：<br><br><img src="realview无法使用问题\image004.png"><br><br>7、检查 realview 是否能启用。<br></p>
+<p>似乎了解到不同版本和显卡和驱动的设置也是有所不同的，下面是在网上收集的一些：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">A卡</span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SOLIDWORKS 2017\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00030008</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2018\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00030408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2019\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00030408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2020\Performance\Graphics\Hardware\Gl2Shaders\R420\Radeon]</span><br><span class="line">&quot;Workarounds&quot;=dword:00032408</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">N卡</span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SOLIDWORKS 2017\Performance\Graphics\Hardware\Gl2Shaders\NV40\GeForce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00060008</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2018\Performance\Graphics\Hardware\Gl2Shaders\NV40\GeForce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00080408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2019\Performance\Graphics\Hardware\Gl2Shaders\NV40\GeForce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00080408</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2020\Performance\Graphics\Hardware\Gl2Shaders\NV40\Geforce]</span><br><span class="line">&quot;Workarounds&quot;=dword:00031408</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

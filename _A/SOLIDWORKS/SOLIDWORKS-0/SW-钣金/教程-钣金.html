@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-钣金教程"><a href="#SOLIDWORKS-钣金教程" class="headerlink" title="SOLIDWORKS 钣金教程"></a>SOLIDWORKS 钣金教程</h1><span id="more"></span>
+
+<iframe src="//player.bilibili.com/player.html?aid=476490848&bvid=BV1QK411z7b3&cid=927452099&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QK411z7b3/?spm_id_from=333.788&vd_source=61426b94de87e3e2baee96fc2f5b14f2">视频操作</a></p>
+<h1 id="1基体法兰特征"><a href="#1基体法兰特征" class="headerlink" title="1基体法兰特征"></a>1基体法兰特征</h1><h2 id="钣金概述"><a href="#钣金概述" class="headerlink" title="钣金概述"></a>钣金概述</h2><p>•钣金零件是有一块等厚的薄片材料加工形成的。通过各种手段，平板材料被弯曲成形，并最终制造成零件。</p>
+<p>•在SOLIDWORKS中，钣金零件是指通过特有功能创建的具有特殊属性的一类零件模型。</p>
+<h2 id="钣金设计树"><a href="#钣金设计树" class="headerlink" title="钣金设计树"></a>钣金设计树</h2><p>特有的钣金项目：与零件模式下的特征树区别</p>
+<ul>
+<li>1、切割清单 ：存放切割的钣金实体对象及属性</li>
+<li>2、钣金：编辑钣金厚度和折弯半径等，以及规格表</li>
+<li>3、平板型式：储存每一个钣金实体的平板型式</li>
+</ul>
+<img src="教程-钣金/1钣金零件设计树.png">
+
+<p>钣金规格表</p>
+<p>钣金规格：预定义好可用的钣金材料。定义文件一般在：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS程序位置\lang\chinese-simplified\Sheet Metal Gauge Tables</span><br></pre></td></tr></table></figure>
+
+<img src="教程-钣金/1钣金规格表.png">
+
+
+
+<h2 id="钣金特征"><a href="#钣金特征" class="headerlink" title="钣金特征"></a>钣金特征</h2><h3 id="【钣金草图】"><a href="#【钣金草图】" class="headerlink" title="【钣金草图】"></a>【钣金草图】</h3><p>生成钣金零件实体前，一般需要你先绘制钣金草图：<br>1、可以利用多线段草图作为“截面形状”生成钣金<br>2、可以利用封闭轮廓草图作为“面区域”生成钣金</p>
+<img src="教程-钣金/1.png">
+
+<h3 id="【基本法兰】"><a href="#【基本法兰】" class="headerlink" title="【基本法兰】"></a>【基本法兰】</h3><p>规定了钣金属性并拉伸出钣金，同时特征树会出来“钣金文件夹”和“基体-法兰”的特征</p>
+<img src="教程-钣金/2.png">
+
+<h3 id="【拉伸切除】"><a href="#【拉伸切除】" class="headerlink" title="【拉伸切除】"></a>【拉伸切除】</h3><p>对于钣金切割的结构（如冲孔、切割等），我们可以利用## 【草图】绘制切割轮廓，用## 【拉伸切除】方式进行设计。</p>
+<img src="教程-钣金/3.png">
+
+<p>（有时在切割斜面时，勾选“正交切除”可以让切口方向垂直于钣金面）</p>
+<img src="教程-钣金/4.png">
+
+<h3 id="【斜接法兰】"><a href="#【斜接法兰】" class="headerlink" title="【斜接法兰】"></a>【斜接法兰】</h3><p>斜接法兰允许你绘制特殊的轮廓草图，进行斜接钣金的生成。</p>
+<img src="教程-钣金/5.png">
+
+<h3 id="【边线法兰】"><a href="#【边线法兰】" class="headerlink" title="【边线法兰】"></a>【边线法兰】</h3><p>从边线拉伸折弯</p>
+<img src="教程-钣金/6.png">
+
+<p>可以编辑“边线法兰轮廓”确定钣金的形状。也可以【拉伸&#x2F;薄片】进行修补。</p>
+<h3 id="【绘制折弯】"><a href="#【绘制折弯】" class="headerlink" title="【绘制折弯】"></a>【绘制折弯】</h3><p>在原有钣金基础上绘制出折弯效果。</p>
+<img src="教程-钣金/7.png">
+
+<h3 id="【展开】"><a href="#【展开】" class="headerlink" title="【展开】"></a>【展开】</h3><img src="教程-钣金/8.png">
+
+<h3 id="【折叠】"><a href="#【折叠】" class="headerlink" title="【折叠】"></a>【折叠】</h3><p>在折叠状态下，再进行## 【拉伸切除】进行板材折弯前的轮廓修剪，以获得特殊形状。把前一步的展开给折叠回去；</p>
+<img src="教程-钣金/9.png">
+
+<h3 id="【闭合角】"><a href="#【闭合角】" class="headerlink" title="【闭合角】"></a>【闭合角】</h3><p>在非垂直折弯的钣金时，钣金转角处会出现空隙。可以用闭合角填补。</p>
+<img src="教程-钣金/10.png">
+
+<h3 id="【褶边】"><a href="#【褶边】" class="headerlink" title="【褶边】"></a>【褶边】</h3><p>将钣金边线进行回卷的特征操作，你可以选择需要## 【褶边】的边线并设置类型参数。</p>
+<img src="教程-钣金/11.png">
+
+<img src="教程-钣金/12.png">
+
+<h3 id="【转折】"><a href="#【转折】" class="headerlink" title="【转折】"></a>【转折】</h3><p>转折可以实现在一块钣金上利用草图线生成两个折弯。## 【转折】功能要求我们先在折弯面上绘制“折弯线”草图。</p>
+<img src="教程-钣金/13.png">
+
+<p>进入【转折】编辑窗口，需要我们以绘制的草图线段两侧作为选择，来确定“固定面”。同时你还可以设置其他选项进行不同结果的尝试。</p>
+<img src="教程-钣金/14.png">
+
+<h1 id="2在平板型式下工作"><a href="#2在平板型式下工作" class="headerlink" title="2在平板型式下工作"></a>2在平板型式下工作</h1><p>钣金设计通常注重模型的成型状态，平板型式是用于表达零件是怎么生产的；</p>
+<h2 id="平板型设置"><a href="#平板型设置" class="headerlink" title="平板型设置"></a>平板型设置</h2><p>•1、固定面；展开时那个面保持静止</p>
+<p>•2、合并面；折弯的相切边线是否显示</p>
+<p>•3、简化折弯；折弯区域的曲线是否简化为直边线</p>
+<img src="教程-钣金/2平面设置合并面.png">
+
+
+
+<p>4、显示裂缝；【边角释放槽】比折弯区域小时，裂缝用到附加的折弯释放，是否显示该裂缝</p>
+<img src="教程-钣金/2平面设置显示裂缝.png">
+
+<p>5、边角处理；在平板型式中应用平滑边线。（是否允许添加自定义【边角剪裁】特征或是保持原样）</p>
+<img src="教程-钣金/2平面设置边角处理.png">
+
+<p>6、纹理方向；（选择一条边线或直线设置为纹理的方向，用于确定矩形边界框边线的方向）</p>
+<img src="教程-钣金/2平面设置纹理方向.png">
+
+<p>7、要排除的面；（在零件展开的平板中不需要被包含的面可以通过平板型式被排除和忽略)</p>
+<img src="教程-钣金/2平面设置排除面.png">
+
+<p>生成展平样式</p>
+<img src="教程-钣金/15.png">
+
+<h2 id="切割清单属性"><a href="#切割清单属性" class="headerlink" title="切割清单属性"></a>切割清单属性</h2><p>访问和修改切割清单项目属性，切割清单类似于多实体零件的材料单；</p>
+<img src="教程-钣金/2切割清单属性.png">
+
+
+
+<h2 id="展平工程图"><a href="#展平工程图" class="headerlink" title="展平工程图"></a>展平工程图</h2><p>钣金切割清单属性、以切割清单属性作注释</p>
+<p>零件文档属性</p>
+<img src="教程-钣金/2零件文档属性.png">
+
+<p>工程视图文档属性</p>
+<img src="教程-钣金/2工程视图文档属性.png">
+
+<p><strong>焊接切割清单</strong><br>显示切割清单项目属性；（可自定义列属性）</p>
+<img src="教程-钣金/2焊接切割清单.png">
+
+<p><strong>冲孔表</strong></p>
+<p>在钣金零件的工程图视图中，会多一种“展平视图”。该视图会包括钣金展开的信息，并且可以用于“冲孔表”和“折弯系数表”的信息选择来源。</p>
+<img src="教程-钣金/16.png">
+
+
+<p>在工程图中指定冲孔表的属性，一般“基准点”选择钣金边界框的基准点，“特征”选择钣金展开面</p>
+<img src="教程-钣金/17.png">
+
+<img src="教程-钣金/18.png">
+
+<p><strong>折弯系数表</strong><br>在工程图中指定折弯系数表的属性。</p>
+<img src="教程-钣金/19.png">
+
+<img src="教程-钣金/20.png">
+
+<h2 id="输出DXF格式"><a href="#输出DXF格式" class="headerlink" title="输出DXF格式"></a>输出DXF格式</h2><p>1、选择固定面【右键-输出到DWG&#x2F;DXF】<br>2、设置输出属性选项<br>3、预览保存DWG&#x2F;DXF</p>
+<img src="教程-钣金/2输出DXF格式.png">
+
+
+
+
+
+
+<h2 id="加工的特征"><a href="#加工的特征" class="headerlink" title="加工的特征"></a>加工的特征</h2><ul>
+<li>边角剪裁特征</li>
+<li>成型状态中的边角</li>
+<li>闭合角</li>
+<li>边角释放槽</li>
+<li>断开的边角&#x2F;边角剪裁</li>
+</ul>
+<h1 id="3其它钣金技术"><a href="#3其它钣金技术" class="headerlink" title="3其它钣金技术"></a>3其它钣金技术</h1><h2 id="从展开状态设计"><a href="#从展开状态设计" class="headerlink" title="从展开状态设计"></a>从展开状态设计</h2><h2 id="转折特征"><a href="#转折特征" class="headerlink" title="转折特征"></a>转折特征</h2><p>绘制的折弯特征。在现有的钣金上添加一个转折或者偏移，该特征也可以称为错接或者等距；<br>与【绘制折弯】类似，需草图绘制转折线；</p>
+<p>（注意：固定投影长度：影响转折后是否保留原有长度，勾选会使材料长料，取消则保持平展的总长不变。）</p>
+<img src="教程-钣金/3转折特征.png">
+
+
+
+
+
+
+
+<h2 id="展开和折叠"><a href="#展开和折叠" class="headerlink" title="展开和折叠"></a>展开和折叠</h2><p>在折叠状态添加特征。已经存在的折弯可以通过【展开】命令被展开，切除特征可以使用到展开的平面上，然后使用【折叠】命令重新折叠折弯；</p>
+<img src="教程-钣金/3展开.png">
+
+
+
+<img src="教程-钣金/3折叠.png">
+
+
+
+<h2 id="扫描法兰"><a href="#扫描法兰" class="headerlink" title="扫描法兰"></a>扫描法兰</h2><p>扫描法兰平板型式选项。类似于创建扫描的方法生成的一个法兰，它拥有轮廓和路径草图；</p>
+<img src="教程-钣金/3扫描法兰.png">
+
+
+
+<h2 id="放样折弯"><a href="#放样折弯" class="headerlink" title="放样折弯"></a>放样折弯</h2><p>成型的放样折弯</p>
+<p>-【沿路径平展】特征有一些独特的特征来控制以怎样的方式创建平板型式</p>
+<img src="教程-钣金/3放样折弯.png">
+
+<p>通过放样的方法创建钣金零件；<br>独特的要求：<br>1）草图中只能包含开环轮廓；<br>2）轮廓中的缝隙应该和平板型式中的精度保持一致；<br>3）只允许在两个轮廓间进行放样；<br>4）不支持引导线；<br>5）不支持中心线；<br>折弯的制造方法在零件平坦面间的折弯区域，将被平面铣削为多个折弯；<br>平面铣削选项</p>
+<p>成型折弯区域选项</p>
+<h1 id="4钣金转换方法"><a href="#4钣金转换方法" class="headerlink" title="4钣金转换方法"></a>4钣金转换方法</h1><p>钣金转换概述</p>
+<p>插入折弯方法</p>
+<h2 id="转换到钣金"><a href="#转换到钣金" class="headerlink" title="转换到钣金"></a>转换到钣金</h2><p>适合标准的、没有薄壁特征的零件。使用从实体上选择的线和面作为折弯边线和折弯面来生成钣金模型；</p>
+<img src="教程-钣金/4转换到钣金.png">
+
+
+
+<p>（该特征会移除部分特征，例如凸台等成型工具特征）</p>
+<h2 id="插入折弯"><a href="#插入折弯" class="headerlink" title="插入折弯"></a>插入折弯</h2><p>适合输入的钣金几何体或SOLIDWORKS抽壳零件。定义出折弯系数和默认的折弯半径值，而已经存在的几何体将决定钣金件的厚度，模型中所有的尖锐边角将被默认的折弯半径替代</p>
+<ul>
+<li><strong>折弯件</strong></li>
+</ul>
+<img src="教程-钣金/4插入折弯.png">
+
+<p>1、对需要识别的实体零件，选择固定面；</p>
+<p>2、在切口参数处，选择需要断开的切口边线（如上图）；</p>
+<!-- 焊接的边角 -->
+
+<ul>
+<li><strong>圆柱件</strong></li>
+</ul>
+<p>转换圆锥和圆柱</p>
+<img src="教程-钣金/4插入折弯圆柱.png">
+
+<h1 id="5多实体钣金零件"><a href="#5多实体钣金零件" class="headerlink" title="5多实体钣金零件"></a>5多实体钣金零件</h1><p>多实体钣金零件概述</p>
+<p>带有基体法兰的多实体</p>
+<h2 id="多实体钣金参数"><a href="#多实体钣金参数" class="headerlink" title="多实体钣金参数"></a>多实体钣金参数</h2><p>多实体的切割清单项目属性</p>
+<h2 id="多实体平板视图"><a href="#多实体平板视图" class="headerlink" title="多实体平板视图"></a>多实体平板视图</h2><p>切割清单零件序号注释</p>
+<p>带多实体的 DXF&#x2F;DWG格式文件输出</p>
+<h2 id="带多实体转换钣金"><a href="#带多实体转换钣金" class="headerlink" title="带多实体转换钣金"></a>带多实体转换钣金</h2><p>隐藏和显示实体</p>
+<p>在钣金零件中使用分割</p>
+<h2 id="多实体阵列"><a href="#多实体阵列" class="headerlink" title="多实体阵列"></a>多实体阵列</h2><p>使用边线法兰合并实体行</p>
+<h2 id="干涉实体"><a href="#干涉实体" class="headerlink" title="干涉实体"></a>干涉实体</h2><p>和其他实体合并钣金零件 </p>
+<h1 id="6成形工具和角撑板"><a href="#6成形工具和角撑板" class="headerlink" title="6成形工具和角撑板"></a>6成形工具和角撑板</h1><h2 id="成型工具"><a href="#成型工具" class="headerlink" title="成型工具"></a>成型工具</h2><iframe src="//player.bilibili.com/player.html?aid=518694789&bvid=BV18g411n7ej&cid=921681639&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18g411n7ej/?spm_id_from=333.788&vd_source=61426b94de87e3e2baee96fc2f5b14f2">视频操作</a></p>
+<p><strong>制作</strong></p>
+<p>1、 首先您需要准备好成型工具零件（一般为冲压模的冲头零件，如下图：）</p>
+<p>2、 在【钣金-成型工具】开启编辑成型工具的“停止面”和“要移除的面”</p>
+<ul>
+<li>停止面————使用时，在钣金的放置面</li>
+<li>要移除的面——使用时，在钣金是否开通孔的面</li>
+</ul>
+<img src="教程-钣金/6成型工具.png">
+
+<p><strong>使用</strong></p>
+<p>1、 使用时在【设计库-成型工具文件夹】拖放相应的成型工具到钣金表面（停止面）上即可，</p>
+<p>2、 具体参数介绍：<br><br>a) 方位面：成型工具的放置面（也是停止面）<br><br>b) 旋转角度：放置方向的角度<br><br>c) 配置：当成型工具有多配置时，可在此处<br><br>d) 链接：保持插入目标零件的成形工具与父成形工具零件之间的链接。如果您更新父成形工具，则在您更新目标零件时会将更改延伸到目标零件中的成形工具。<br><br>e) 链接-冲孔 ID：分配冲孔 ID。这个到时会在工程图冲孔表显示。<br><br>f) 平板形式显示状态：图下图<br></p>
+<p>3、 位置介绍：你需要在 2D 草图画点的方式进行成型工具位置的定位操作，</p>
+<h2 id="角撑板"><a href="#角撑板" class="headerlink" title="角撑板"></a>角撑板</h2><p>钣金的角撑板</p>
+<img src="教程-钣金/6钣金的角撑板.png">
+
+<p>这是焊接的角撑板</p>
+<img src="教程-钣金/6焊接的角撑板.png">
+
+
+
+<h1 id="7其它钣金功能"><a href="#7其它钣金功能" class="headerlink" title="7其它钣金功能"></a>7其它钣金功能</h1><h2 id="交叉折断"><a href="#交叉折断" class="headerlink" title="交叉折断"></a>交叉折断</h2><p>交叉折断主要用于大型钣金件中，由于钣金件板材的壁厚较薄，大型钣金件的强度就显得相对薄弱，所以就需要提升板材的刚度，这里就需要用到交叉折断了</p>
+<p>交叉折断并不会直接改变模型的形状，它的主要作用是一种注释，标识钣金件的某个位置需要按照指定参数进行加强，在实际生产制造中就会根据图纸的要求对板材指定位置冲出加强筋。</p>
+<img src="教程-钣金/7交叉折断.png">
+
+
+
+<h2 id="通风口"><a href="#通风口" class="headerlink" title="通风口"></a>通风口</h2><p>用来创建钣金零件和塑料件上的通风口特征；<br>该特征需要一个定义了边界、筋和翼梁等通风口特征的草图</p>
+<img src="教程-钣金/7通风口.png">
+
+
+
+<h2 id="加工规划"><a href="#加工规划" class="headerlink" title="加工规划"></a>加工规划</h2><p>•通过创建不同的配置特征，能够在工程图中展示不同的成形阶段</p>
+<img src="教程-钣金/7加工规划.png">
+
+<h2 id="钣金-Costin"><a href="#钣金-Costin" class="headerlink" title="钣金 Costin"></a>钣金 Costin</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

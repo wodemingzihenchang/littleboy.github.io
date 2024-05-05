@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-20 21:48:58</span>
+</div>
+
+<div id="article"><h1 id="SQL-server-问题和方法"><a href="#SQL-server-问题和方法" class="headerlink" title="SQL server 问题和方法"></a>SQL server 问题和方法</h1><h2 id="错误18456"><a href="#错误18456" class="headerlink" title="错误18456"></a>错误18456</h2><p>用户’sa’登录失败（错误18456）解决方法</p>
+<p>1、SQL2008.sa’登录失败（错误18456）图文解决方法—-<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/656db918faf80fe381249c1e.html">https://jingyan.baidu.com/article/656db918faf80fe381249c1e.html</a></p>
+<p>2、怎样SQL Server 18452登录错误怎么解决?—-<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/f25ef25433bccf482c1b82b9.html">https://jingyan.baidu.com/article/f25ef25433bccf482c1b82b9.html</a></p>
+<p>用户’sa’登录失败（错误18456）解决方案图解<br>    当我们在使用sql server 的时候可能会遇见这样错误提示“无法连接到.,用户’sa’登录失败（错误18456）”,</p>
+<p>具体的解决方案：</p>
+<p>首先使用管理员身份打开SQL server ，并且以windows身份进入。<br>然后打开“安全性”–“登录名”中找到用户“sa”打开其属性面板。</p>
+<p>接下来选择“常规”设置密码，并且点击“确定”保存。</p>
+<p>然后选择“状态”–登录设置为“启用”，并且点击“确定”保存。</p>
+<p>然后再打开sql服务器属性页面操作是“选择服务器右击–属性”，选择“安全性”将服务器身份验证选择为“SQL server 和 Windows 身份验证模式（s）”，点击“确定”保存。</p>
+<p>最后再右击服务器选择“重新启动（A）”，将服务器重新启动就OK 了。</p>
+<p>假如以上的办法还是不能解决就再进行一下的操作：</p>
+<p>打开 “开始菜单”——“Microsoft SQL Server 2008”——“配置工具”——“Microsoft SQL Server 2008”选择“SQL server网络配置”将其中的“Named Pipes状态”“TCPIP状态”全部修改为“已启用”</p>
+<p><a target="_blank" rel="noopener" href="https://www.goengineer.com/blog/solidworks-pdm-how-to-reset-the-sql-sa-user-password">SOLIDWORKS PDM - 如何重置 SQL“sa”用户密码 |Go工程师 (goengineer.com)</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

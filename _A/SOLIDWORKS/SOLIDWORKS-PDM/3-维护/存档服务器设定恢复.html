@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 10:44:20</span>
+</div>
+
+<div id="article"><h1 id="存档服务器设定恢复"><a href="#存档服务器设定恢复" class="headerlink" title="存档服务器设定恢复"></a>存档服务器设定恢复</h1><!-- 参考S-055135 -->
+
+
+
+<p>存档服务器的所有设置(保管库、登录、安全信息等)都存储在以下注册表项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks\Enterprise\ArchiveServer]</span><br></pre></td></tr></table></figure>
+
+
+<p>如果由于某种原因该注册表项已被删除，或者在系统恢复或操作系统重新安装时丢失了信息，那么存档服务器管理的任何文件保管库将无法访问。从连接到服务器的客户端登录将失败，错误如下：</p>
+<ul>
+<li><p>无法连接到服务器</p>
+</li>
+<li><p>无法登录服务器，存档服务器不存在</p>
+</li>
+</ul>
+<span id="more"></span> 
+
+<p>使用以下过程修复存档服务器上的注册表设置。</p>
+<p>注意，这些步骤假定在重新安装服务器之前，物理文件库归档文件(文件夹0-F)在原始位置保持完整。重新安装的存档服务器具有与重新安装之前相同的主机名。</p>
+<p>如果没有，进行步骤1从最近的备份中恢复它们。</p>
+<h2 id="步骤1安装归档服务器"><a href="#步骤1安装归档服务器" class="headerlink" title="步骤1安装归档服务器"></a>步骤1安装归档服务器</h2><p>要修复默认归档服务器设置，必须重新安装归档服务器软件。如果你已经安装了软件，可以跳过此步骤。</p>
+<ol>
+<li>从安装介质重新安装归档服务器。请注意使用与使用的完全相同的版本重新安装之前。</li>
+<li>在安装过程中，您很可能会被要求提供默认的存档服务器设置(取决于丢失了多少注册表值)。尽可能多地填写“原始”设置。“根文件夹”指的是包含现有文件库存档的文件夹(依次为包含文件存档文件夹0-F)。</li>
+</ol>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104909329.png" alt="image-20240315104909329"></p>
+<p>输入与前面使用的相同的Admin用户密码(注意，这将“重置”Admin将此服务器上的密码设置为新值)</p>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104917293.png" alt="image-20240315104917293"></p>
+<p>确保输入具有访问文件库数据库权限的SQL用户(通常为“sa”用户)</p>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104940050.png" alt="image-20240315104940050"></p>
+<p>选择与前面使用的相同的默认登录类型</p>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104959530.png" alt="image-20240315104959530"></p>
+<p>4、归档服务器现在应该可以再次运行了。但是，文件库信息是最重要的可能还没找到，无法进入保险库。如果以下注册表项不包含文件保险库名称密钥，保险库将无法访问:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults</span><br></pre></td></tr></table></figure>
+
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105108315.png" alt="image-20240315105108315"></p>
+<h2 id="步骤2恢复注册表值。"><a href="#步骤2恢复注册表值。" class="headerlink" title="步骤2恢复注册表值。"></a>步骤2恢复注册表值。</h2><p>如果您有归档服务器设置的备份(由归档服务器配置创建的backup.dat)，在重新安装此服务器之前，使用该文件进行还原，然后重新启动存档服务器服务。库现在应该又可以运作了。</p>
+<p>如果没有来自此服务器的备份，并且由于备份库已被复制，则可以备份该备份库设置，并按照下面所述的方式使用它。</p>
+<p>请注意，如果这个重新安装的存档服务器有未复制的库(仅存在于此服务器上)，那么您应该按照KB解决方案S-019248中的说明为这些库重新创建注册表项</p>
+<ol>
+<li>在其中一台复制的服务器上，打开归档服务器配置工具并选择Tools, Backup设置。</li>
+</ol>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105211559-17104711503251.png" alt="image-20240315105211559"></p>
+<p>选择“包括选定的保险库”，然后选择要恢复设置的复制保险库。选择一个备份位置，备份文件的密码，然后按“启动备份”。注意，在修复恢复的服务器后，请确保在服务器上设置原始备份设置。</p>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105312828.png" alt="image-20240315105312828"></p>
+<p>将backup.dat文件复制到重新安装的归档服务器。在重新安装的归档服务器上，打开归档服务器配置工具，选择“Tools, Backup”设置。按“加载备份”，选择拷贝的backup.dat文件。</p>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121057818.png" alt="image-20240315121057818"></p>
+<p>复制保管库的注册表设置现在应该已经恢复。</p>
+<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121103723.png" alt="image-20240315121103723"></p>
+<p>由于在其上创建设置备份的服务器可能具有不同的存档位置您必须验证以下密钥下的归档文件夹的路径是否有效重新安装的服务器:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks </span><br><span class="line">Enterprise\ArchiveServer\Vaults\[Vaultname]\ArchiveTable</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121150591.png" alt="image-20240315121150591"></p>
+<p>重新启动每个复制服务器上的存档服务器服务。复制的保险库现在应该是再次运行。如果保险库仍然无法访问，则提供故障排除提示:</p>
+<ul>
+<li>查看存档服务器日志，查找与保险库和通信有关的错误。</li>
+<li>记住在重新安装的服务器上配置防火墙设置，以允许访问存档服务器端口3030.</li>
+<li>如果归档文件夹位于网络共享中，请确保归档服务器服务对文件具有完全访问权限文件(s - 012157)</li>
+<li>确保客户端和服务器可以通过主机名和IP PING重新安装的存档服务器。</li>
+<li>确保重新安装的归档服务器可以PING通其他复制的归档服务器和SQL服务器主机名和IP。如果找不到主机名，请更新服务器上的本地HOSTS文件(S-037242)。</li>
+<li>在每次更改后重新启动存档服务器服务，以确保它们重新连接到适当的设置</li>
+</ul>
+<h1 id="步骤2另一方法"><a href="#步骤2另一方法" class="headerlink" title="步骤2另一方法"></a>步骤2另一方法</h1><h2 id="ArcServCreator-v2"><a href="#ArcServCreator-v2" class="headerlink" title="ArcServCreator-v2"></a>ArcServCreator-v2</h2><p>适用于：- SOLIDWORKS PDM 2016及更新版本(专业版和标准版)企业PDM 2015及更早版本(仅限64位)存档服务器设定恢复。这个实用程序可以更容易地为测试设置客户保险库。</p>
+<h2 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h2><p>\1. 在SQL server上恢复客户的数据库备份。-注意，如果SQL服务器上没有ConisioMasterDb，您还需要ConisioMasterDb。</p>
+<p>\2. 将“CreateArchiveFromDb_v2_2016.zip”中的文件解压缩到Archive服务器的本地文件夹中。</p>
+<p>\3. 右键单击“ArcServCreator_V2.exe”，选择“以管理员身份运行”。</p>
+<p>\4. 填写SQL详细信息和归档根文件夹的路径。</p>
+<p>\5. 单击“创建”为恢复的保管库创建归档服务器设置。</p>
+<img src="存档服务器设定恢复\ArcServCreator.png">
+
+<h2 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h2><p>-该工具将创建登录vault所需的存档文件夹和注册表项。</p>
+<p>-该工具不会创建任何物理存档文件，只是空文件夹结构。</p>
+<p>-该工具不会创建任何用户登录存在于恢复的数据库中，所以您将最初以Admin身份登录。</p>
+<p>—如果您正在恢复的备份库是复制的，并且您打算将其保留为复制的备份库，请记住添加值为1的注册表标志“复制”。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

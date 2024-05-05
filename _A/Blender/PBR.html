@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-09 18:59:59</span>
+</div>
+
+<div id="article"><p>PBR</p>
+<span id="more"></span>
+
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>PBR 全称 Physicallly-BasedRendering；是一种着色和渲染技术，用于更精确的描述光如何与物体表面交互。</p>
+<h2 id="工作流"><a href="#工作流" class="headerlink" title="工作流"></a>工作流</h2><p>PBR 制作材质工作流目前主要分为两种，一种是基于金属的工作流，一种是基于镜面反射的工作流，它们都遵循着 PBR 的核心原理，最大的区别是如何识别反射与漫反射；</p>
+<h2 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h2><img src="PBR\材质参数.png">
+
+<h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><p>菲涅尔效应(Fresnel)：随着物体表面法线与视线的角度增大，物体的反射能力增大，这种现象称之为菲涅尔效应。在Unity中，无法直接调节菲涅尔效应的参数，但内部实现机制会自动处理。越光滑的表面具有越强的菲涅尔效应，相反，越粗糙的表面具有越弱的菲涅尔效应      </p>
+<p>下图展示了菲涅尔效应从弱到强的渐变。</p>
+<img src="PBR\菲涅尔效应.png">
+
+<img src="PBR\菲涅尔效应2.png">
+
+<h2 id="资源网站："><a href="#资源网站：" class="headerlink" title="资源网站："></a>资源网站：</h2><p>PBR 入门：<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106742593">https://zhuanlan.zhihu.com/p/106742593</a></p>
+<p>PBR 入门到精通：<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/timlly/p/10631718.html?from=timeline&isappinstalled=0#11-%E6%9C%AC%E6%96%87%E5%8A%A8%E6%9C%BA">https://www.cnblogs.com/timlly/p/10631718.html?from=timeline&amp;isappinstalled=0#11-%E6%9C%AC%E6%96%87%E5%8A%A8%E6%9C%BA</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

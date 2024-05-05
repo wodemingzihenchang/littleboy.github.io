@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-12 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="协同设计"><a href="#协同设计" class="headerlink" title="协同设计"></a>协同设计</h1><p>通常对于大型装配体的设计项目来说，一个总装文件可能会需要被多人打开查看或编辑。而计算机对文件的读写是又唯一性的要求的，所以你可能会遇到类似文件被占用的问题。而本文将列举几种协同设计，来控制文件的读写以避免文件占用的情况。分别是：</p>
+<ul>
+<li>协作设置</li>
+<li>PDM</li>
+<li>轻化模式</li>
+</ul>
+<h1 id="协作设置"><a href="#协作设置" class="headerlink" title="协作设置"></a>协作设置</h1><p>网盘模式下，一般是通过共享文件夹的方式，共享其中文件。这将出现一种情况（问题）：就是大家都能看到文件并可能会在同一时刻都编辑到文件。这将造成文件占用的情况。在打开时会提示如下：</p>
+<img src="协同设计/image1.png">
+
+<p>为了避免文件占用的问题，首先，我们需要了解下SOLIDWORKS软件内是如何规定协作的状态的：分别是【使之为只读】和【获取写入访问】状态。通过“只读”和“写入”的文件状态，来控制当前用户文件的编辑权限。文件状态可以有多个用户“只读”，唯一用户“写入”作设计编辑。</p>
+<pre class="mermaid">graph TB
+协作装配体-->使之为只读-->用户1
+协作装配体-->获得写入访问-->唯一编辑用户
+使之为只读-->用户2
+使之为只读-->用户3</pre>
+
+
+
+
+
+<p>默认【使之为只读】&#x2F;或【获取写入访问】是没有在文件菜单栏显示的，需要我们勾选【系统选项-协作】“为多用户环境添加快捷键菜单项目”，来开启该命令选项。</p>
+<img src="协同设计/协作设置.png">
+
+<h2 id="协同原则"><a href="#协同原则" class="headerlink" title="协同原则"></a>协同原则</h2><p>其协同的原则是通过在SOLDIWORKS软件内操作【文件-使之为只读】&#x2F;或【文件-获取写入访问】来控制文件状态。</p>
+<img src="协同设计/协同原则.png">
+
+<h2 id="协同操作"><a href="#协同操作" class="headerlink" title="协同操作"></a>协同操作</h2><p>当多电脑打开文件时，首先打开加载文件的电脑用户将获得文件的编辑权，此时其他用户打开该文件时则会提示：当前文件被“xxx”使用中，是否打开一个拷贝文件。</p>
+<img src="协同设计/协作设置操作1.png">
+
+<p>此时，为了在电脑1中打开文件，我们需要联系电脑2用户，将其正在打开的装配体文件操作【文件-使之为只读】，把电脑2环境下的文件状态修改成“只读”。</p>
+<img src="协同设计/协作设置操作2.png">
+
+<p>然后在电脑1环境下，就能正常打开该装配体编辑了。其他零部件的读写状态操作类似。</p>
+<img src="协同设计/协作设置操作3.png">
+
+<h1 id="PDM"><a href="#PDM" class="headerlink" title="PDM"></a>PDM</h1><p>当然原生软件的【协作】设置可以实现一定程度的协同设计，但在文件状态可视化、状态操作、文件更新上存在一定局限。这里我们会推荐使用PDM系统来管理我们的协作环境。</p>
+<h2 id="PDM简介"><a href="#PDM简介" class="headerlink" title="PDM简介"></a>PDM简介</h2><p>这里补充下SOLIDWORKS PDM的一些简介：其是一种产品数据管理系统（PDM）的软件解决方案。它帮助企业更有效地管理和共享产品数据，通过自动化的流程更好地协同产品开发与销售环节，使产品具有更好的质量、更低的价格和更短的开发周期。</p>
+<p>PDM应用对象为：工程师，设计师，制造商，供应商，销售人员，市场人员以及工程制造等相关人员。</p>
+<p>PDM管理数据包括：三维模型，工程图纸，项目计划，产品规格，数控加工程序，分析结果，函件，BOM等其他类型文件。</p>
+<h2 id="协同原则-1"><a href="#协同原则-1" class="headerlink" title="协同原则"></a>协同原则</h2><p>按谁”检出”谁编辑的方式，检出权限的用户可以在当前电脑内编辑检出的零件。</p>
+<p>在PDM系统里，你可以清楚看到用户检出的情况。（例如：Admin检出编辑总装文件，其他用户只读总装文件，但可以检出其他零件做编辑）</p>
+<img src="协同设计/image10.png">
+
+<p><img src="%E5%8D%8F%E5%90%8C%E8%AE%BE%E8%AE%A1/image-20240227100158584.png" alt="image-20240227100158584"></p>
+<h2 id="协同操作-1"><a href="#协同操作-1" class="headerlink" title="协同操作"></a>协同操作</h2><p>其他用户对零部件编辑完成后，需要”检入”后，用户通过获取最新版本来更新零部件到总装配体里显示。大致操作如下：</p>
+<ol>
+<li>可在PDM插件界面进行”检出&#x2F;入”操作。检出者将获得对应检出文件的编辑权限；</li>
+</ol>
+<img src="协同设计/检出.png">
+
+<ol start="2">
+<li><p>设计操作完成后，需检入对PDM存档文件进行更新；（检入似乎是必要的）</p>
+<img src="协同设计/检入.png">
+</li>
+<li><p>其他用户可以观察到，该文件的工作版本已经发生升版，并且本地文件版本较旧的提示。此时可在插件界面进行”获取最新版本”来更新总装的变化，达到协同设计的效果。</p>
+</li>
+</ol>
+<img src="协同设计/image14.png">
+
+<h1 id="轻化模式"><a href="#轻化模式" class="headerlink" title="轻化模式"></a>轻化模式</h1><p>协同编辑时需使用【轻化模式】，以保证装配体的零部件是类似“只读”状态的方式加载到装配体，避免文件占用的情况。为此，我们可以设置【系统选项-性能-以轻化模式加载零部件】，以默认轻化的方式打开装配体，使零部件轻化。</p>
+<img src="协同设计/轻化模式打开.png">
+
+<p>如果是你是以”轻化模式”打开总装，其他以“还原模式”打开的用户就可以打开编辑零部件。如果是还原状态的零部件，则可以手动选择【右键-设定为轻化】。</p>
+<img src="协同设计/image5.png">
+
+<p>还原零部件后，文件夹出现”~$xxxx”文件缓存，（即已在此电脑加载缓存，其他用户电脑使用该文件时会出现如”还原状态”下的文件被占用操作提示）</p>
+<img src="协同设计/image7.png">
+
+<p>轻化下的零件在文件夹不会产生”~$xxxx”的缓存（即不会占用文件操作，其他位置的用户即可在其他电脑进行编辑操作）</p>
+<img src="协同设计/image6.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

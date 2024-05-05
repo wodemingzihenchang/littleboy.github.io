@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-06 18:07:40</span>
+</div>
+
+<div id="article"><h1 id="教程-DSComposer"><a href="#教程-DSComposer" class="headerlink" title="教程-DSComposer"></a>教程-DSComposer</h1><h1 id="1概述"><a href="#1概述" class="headerlink" title="1概述"></a>1概述</h1><h1 id="2基础知识"><a href="#2基础知识" class="headerlink" title="2基础知识"></a>2基础知识</h1><h1 id="3创建封面和局部视图"><a href="#3创建封面和局部视图" class="headerlink" title="3创建封面和局部视图"></a>3创建封面和局部视图</h1><h1 id="4创建爆炸视图"><a href="#4创建爆炸视图" class="headerlink" title="4创建爆炸视图"></a>4创建爆炸视图</h1><h1 id="5创建其他爆炸视图"><a href="#5创建其他爆炸视图" class="headerlink" title="5创建其他爆炸视图"></a>5创建其他爆炸视图</h1><img src="DSComposer-教程/5/【变换-对齐】.png">
+
+
+
+<h1 id="6创建材料明细表"><a href="#6创建材料明细表" class="headerlink" title="6创建材料明细表"></a>6创建材料明细表</h1><h1 id="7创建一个动画"><a href="#7创建一个动画" class="headerlink" title="7创建一个动画"></a>7创建一个动画</h1><h2 id="关键帧编辑"><a href="#关键帧编辑" class="headerlink" title="关键帧编辑"></a>关键帧编辑</h2><h3 id="反转关键帧（倒放）"><a href="#反转关键帧（倒放）" class="headerlink" title="反转关键帧（倒放）"></a>反转关键帧（倒放）</h3><img src="DSComposer-教程/7/反转时间选择.png">
+
+
+
+<h2 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h2><p>【另存为-视频】</p>
+<p>视频的尺寸会是按程序显示的实际大小输出</p>
+<img src="DSComposer-教程/7/image-20240401180612220.png">
+
+<p>【工作间-视频】</p>
+<img src="DSComposer-教程/7/image-20240401180737825.png">
+
+<img src="DSComposer-教程/7/image-20240401180715076.png">
+
+
+
+<h1 id="8创建交互内容"><a href="#8创建交互内容" class="headerlink" title="8创建交互内容"></a>8创建交互内容</h1><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>链接类型：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">file：//  打开一个文件</span><br><span class="line">http：// 在一个浏览器中显示指定网页</span><br><span class="line">ftp ：//  在一个浏览器中显示指定FTP站点</span><br><span class="line">view：// 激活指定的SOLIDWORKS Composer视图</span><br><span class="line">previous：// 在动画模式中，将时间轴移至前面的标记在视图模式中，激活前面的视图</span><br><span class="line">next：//  在动画模式中，从当前时间到下一个标记之间播放动画在动画模式中，激活下一个视图</span><br><span class="line">first：// 在动画模式中，将时间轴移至第一个标记在视图模式中，激活第一个视图</span><br><span class="line">last：// 在动画模式中，当前时间到最后一个标记之间播放动画在视图模式中，激活最后一个视图</span><br><span class="line">marker：// 移动时间轴到指定标记</span><br><span class="line">play：// 从当前时间或指定标记到动画结束之间播放动画</span><br><span class="line">Playmarkersequence：// 从当前时间或指定标记到下一个标记之间播放动画</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="9创建排演动画"><a href="#9创建排演动画" class="headerlink" title="9创建排演动画"></a>9创建排演动画</h1><h1 id="10更新文件"><a href="#10更新文件" class="headerlink" title="10更新文件"></a>10更新文件</h1><h1 id="11发布交互内容"><a href="#11发布交互内容" class="headerlink" title="11发布交互内容"></a>11发布交互内容</h1><h2 id="纹理"><a href="#纹理" class="headerlink" title="纹理"></a>纹理</h2><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2024/chinese-simplified/dsswxcomposerdoc/cps1usermap/cps-r-Properties-Annotation.htm">注解属性 - 2024 - SOLIDWORKS Composer 帮助</a></p>
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2023/chinese-simplified/DSSWXComposerDoc/Cps1UserMap/cps-r-LeftPane-Assembly.htm">https://help.solidworks.com/2023/chinese-simplified/DSSWXComposerDoc/Cps1UserMap/cps-r-LeftPane-Assembly.htm</a></p>
+<h2 id="纹理-1"><a href="#纹理-1" class="headerlink" title="纹理"></a>纹理</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

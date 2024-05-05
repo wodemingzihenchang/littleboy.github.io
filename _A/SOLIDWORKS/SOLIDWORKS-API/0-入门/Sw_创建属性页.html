@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="创建属性页"><a href="#创建属性页" class="headerlink" title="创建属性页"></a>创建属性页</h1><img src="Sw_创建属性页\属性页示例.png">
+
+<span id="more"></span>
+
+<h2 id="代码实例："><a href="#代码实例：" class="headerlink" title="代码实例："></a>代码实例：</h2><p>演示一个简单的属性页代码：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"><span class="meta">## 1</span></span><br><span class="line"></span><br><span class="line">```C<span class="meta">#</span></span><br><span class="line"><span class="keyword">using</span> SolidWorks.Interop.sldworks;</span><br><span class="line"><span class="keyword">using</span> SolidWorks.Interop.swconst;</span><br><span class="line"><span class="keyword">using</span> SolidWorks.Interop.swpublished;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Runtime.InteropServices;</span><br><span class="line"><span class="keyword">using</span> System.Diagnostics;</span><br><span class="line"></span><br><span class="line">[<span class="meta">ComVisibleAttribute(true)</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">clsPropMgr</span> : <span class="title">PropertyManagerPage2Handler9</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2控件对象定义"><a href="#2控件对象定义" class="headerlink" title="2控件对象定义"></a>2控件对象定义</h2><p>控件ID定义，这里的ID对后面事件是有用的。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//属性管理器页面所需的控件对象Control objects required for the PropertyManager page </span></span><br><span class="line">PropertyManagerPage2 pm_Page;</span><br><span class="line">PropertyManagerPageGroup pm_Group;</span><br><span class="line">PropertyManagerPageSelectionbox pm_Selection;</span><br><span class="line">PropertyManagerPageSelectionbox pm_Selection2;</span><br><span class="line">PropertyManagerPageLabel pm_Label;</span><br><span class="line">PropertyManagerPageCombobox pm_Combo;</span><br><span class="line">PropertyManagerPageListbox pm_List;</span><br><span class="line">PropertyManagerPageNumberbox pm_Number;</span><br><span class="line">PropertyManagerPageOption pm_Radio;</span><br><span class="line">PropertyManagerPageSlider pm_Slider;</span><br><span class="line">PropertyManagerPageTab pm_Tab;</span><br><span class="line">PropertyManagerPageButton pm_Button;</span><br><span class="line">PropertyManagerPageBitmapButton pm_BMPButton;</span><br><span class="line">PropertyManagerPageBitmapButton pm_BMPButton2;</span><br><span class="line">PropertyManagerPageBitmap pm_Bitmap;</span><br><span class="line">PropertyManagerPageActiveX pm_ActiveX;</span><br><span class="line">    </span><br><span class="line"><span class="comment">//页面中的每个控件都需要一个惟一的IDEach control in the page needs a unique ID </span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> GroupID = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> LabelID = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> SelectionID = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> ComboID = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> ListID = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> Selection2ID = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> NumberID = <span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> RadioID = <span class="number">8</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> SliderID = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> TabID = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> ButtonID = <span class="number">11</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> BMPButtonID = <span class="number">12</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> BMPButtonID2 = <span class="number">13</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> BitmapID = <span class="number">14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> ActiveXID = <span class="number">15</span>;</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Show</span>()</span> &#123; pm_Page.Show2(<span class="number">0</span>); &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h2><p>Create the PropertyManager page</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//属性管理器按钮类型</span></span><br><span class="line"><span class="built_in">int</span> options = </span><br><span class="line">(<span class="built_in">int</span>)swPropertyManagerButtonTypes_e.swPropertyManager_OkayButton + (<span class="built_in">int</span>)swPropertyManagerButtonTypes_e.swPropertyManager_CancelButton + (<span class="built_in">int</span>)swPropertyManagerPageOptions_e.swPropertyManagerOptions_LockedPage + (<span class="built_in">int</span>)swPropertyManagerPageOptions_e.swPropertyManagerOptions_PushpinButton;</span><br><span class="line"></span><br><span class="line">pm_Page = (PropertyManagerPage2)swApp.CreatePropertyManagerPage(<span class="string">&quot;属性页名称&quot;</span>, (<span class="built_in">int</span>)options, <span class="keyword">this</span>, <span class="keyword">ref</span> longerrors);</span><br></pre></td></tr></table></figure>
+
+<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><p>在前面属性页pm_Page的基础上，AddTab添加菜单栏。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm_Tab = pm_Page.AddTab(TabID, <span class="string">&quot;菜单名&quot;</span>, <span class="string">@&quot;\图标路径.png&quot;</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="控件组"><a href="#控件组" class="headerlink" title="控件组"></a>控件组</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm_Group = pm_Tab.AddGroupBox(GroupID, <span class="string">&quot;名称&quot;</span>, options);</span><br></pre></td></tr></table></figure>
+
+<h3 id="控件"><a href="#控件" class="headerlink" title="控件"></a>控件</h3><p>Controls 添加控件的方法如下：默认的对齐方式和选项，可按内容来，其他情况请<a href="[AddControl2 Method (IPropertyManagerPageGroup) - 2018 - SOLIDWORKS API Help](https://help.solidworks.com/2018/english/api/sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPageGroup~AddControl2.html)">参考手册</a></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">System.<span class="function"><span class="built_in">object</span> <span class="title">AddControl2</span>(<span class="params"> </span></span></span><br><span class="line"><span class="params"><span class="function">   System.<span class="built_in">int</span> ID, //对象ID，似乎在事件有用</span></span></span><br><span class="line"><span class="params"><span class="function">   System.<span class="built_in">short</span> ControlType,//控件类型(按钮，文本等</span>)</span></span><br><span class="line"><span class="function">   System.<span class="built_in">string</span> Caption, <span class="comment">//控件名称</span></span></span><br><span class="line"><span class="function">   System.<span class="built_in">short</span> LeftAlign, <span class="comment">//控件对齐</span></span></span><br><span class="line"><span class="function">   System.<span class="built_in">int</span> Options,  <span class="comment">//选项</span></span></span><br><span class="line"><span class="function">   System.<span class="built_in">string</span> Tip <span class="comment">//提示</span></span></span><br><span class="line"><span class="function">)</span></span><br><span class="line"><span class="function"><span class="comment">//默认对齐</span></span></span><br><span class="line"><span class="function"><span class="built_in">int</span> alignment</span> = (<span class="built_in">int</span>)swPropertyManagerPageControlLeftAlign_e.swControlAlign_Indent;</span><br><span class="line"><span class="comment">//默认选项</span></span><br><span class="line"><span class="built_in">int</span> options = (<span class="built_in">int</span>)swAddControlOptions_e.swControlOptions_Visible + (<span class="built_in">int</span>)swAddControlOptions_e.swControlOptions_Enabled;</span><br></pre></td></tr></table></figure>
+
+<p>添加示例：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PropertyManagerPageSelectionbox pm_Selection;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> SelectionID = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">pm_Selection = pm_Group.AddControl2(ID, (<span class="built_in">short</span>)controlType, “名称”, (<span class="built_in">short</span>)alignment, (<span class="built_in">int</span>)options, “提示”);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>类型：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Member</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>swControlType_ActiveX</strong></td>
+<td align="left">10</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Bitmap</strong></td>
+<td align="left">14</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_BitmapButton</strong></td>
+<td align="left">11</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Button</strong></td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_CheckableBitmapButton</strong></td>
+<td align="left">12</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Checkbox</strong></td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Combobox</strong></td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Label</strong></td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Listbox</strong></td>
+<td align="left">6</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Numberbox</strong></td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Option</strong></td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Selectionbox</strong></td>
+<td align="left">9</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Slider</strong></td>
+<td align="left">13</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_Textbox</strong></td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left"><strong>swControlType_WindowFromHandle</strong></td>
+<td align="left">15</td>
+</tr>
+</tbody></table>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/english/api/swpublishedapi/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler9_members.html">IPropertyManagerPage2Handler9 Member事件方法</a></p>
+<h3 id="打开属性页时"><a href="#打开属性页时" class="headerlink" title="打开属性页时"></a>打开属性页时</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> IPropertyManagerPage2Handler9.OnActiveXControlCreated(<span class="built_in">int</span> Id, <span class="built_in">bool</span> Status)</span><br><span class="line">&#123;</span><br><span class="line">    Debug.Print(<span class="string">&quot;ActiveX control created&quot;</span>);<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="确认和关闭时"><a href="#确认和关闭时" class="headerlink" title="确认和关闭时"></a>确认和关闭时</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> IPropertyManagerPage2Handler9.OnClose(<span class="built_in">int</span> Reason)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (Reason == (<span class="built_in">int</span>)swPropertyManagerPageCloseReasons_e.swPropertyManagerPageClose_Cancel)</span><br><span class="line">    &#123;<span class="comment">//关闭属性页操作</span></span><br><span class="line">Debug.Print(<span class="string">&quot;Cancel button clicked&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (Reason == (<span class="built_in">int</span>)swPropertyManagerPageCloseReasons_e.swPropertyManagerPageClose_Okay)</span><br><span class="line">    &#123;<span class="comment">//确认属性页操作</span></span><br><span class="line">Debug.Print(<span class="string">&quot;OK button clicked&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="按钮按下时"><a href="#按钮按下时" class="headerlink" title="按钮按下时"></a>按钮按下时</h3><p>OnButtonPress(int id)通过判断ID，来选择使用那个内容。这里多按钮的话，建议可以用switch判断。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnButtonPress</span>(<span class="params"><span class="built_in">int</span> id</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (id == UserPMPage.buttonID1) &#123; &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (id == UserPMPage.buttonID2)    &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

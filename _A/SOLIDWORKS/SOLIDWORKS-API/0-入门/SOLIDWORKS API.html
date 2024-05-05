@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-API"><a href="#SOLIDWORKS-API" class="headerlink" title="SOLIDWORKS-API"></a>SOLIDWORKS-API</h1><h2 id="对象拓扑图："><a href="#对象拓扑图：" class="headerlink" title="对象拓扑图："></a>对象拓扑图：</h2><h3 id="获得程序"><a href="#获得程序" class="headerlink" title="获得程序"></a>获得程序</h3><p>（ISldWorks）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> SldWorks swApp = (SldWorks)Marshal.GetActiveObject(<span class="string">&quot;SldWorks.Application&quot;</span>);</span><br><span class="line"></span><br><span class="line">如果是有多个版本的SW，可能需要区分：</span><br><span class="line">(SldWorks)Marshal.GetActiveObject(<span class="string">&quot;SldWorks.Application.26&quot;</span>);<span class="comment">//2018</span></span><br><span class="line">(SldWorks)Marshal.GetActiveObject(<span class="string">&quot;SldWorks.Application.27&quot;</span>);<span class="comment">//2019</span></span><br><span class="line">(SldWorks)Marshal.GetActiveObject(<span class="string">&quot;SldWorks.Application.28&quot;</span>);<span class="comment">//2020……</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="获得文件"><a href="#获得文件" class="headerlink" title="获得文件"></a>获得文件</h3><p>1、打开方式</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swApp.OpenDoc(filename, (<span class="built_in">int</span>)swDocumentTypes_e.swDocPART); <span class="comment">//Fun（文件路径，文件类型）：</span></span><br></pre></td></tr></table></figure>
+
+<p>2、激活当前文件：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PartDoc swPart = (AssemblyDoc)swApp.ActiveDoc;<span class="comment">//类型1：零件</span></span><br><span class="line">AssemblyDoc swAssy = (AssemblyDoc)swApp.ActiveDoc; <span class="comment">//类型2：装配体</span></span><br><span class="line">DrawingDoc swDraw = (AssemblyDoc)swApp.ActiveDoc; <span class="comment">//类型3：工程图</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="获得属性"><a href="#获得属性" class="headerlink" title="获得属性"></a>获得属性</h3><p>（CustomPropertyManager）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获得自定义属性对象（配置属性在双引号填“配置名称”）</span></span><br><span class="line">CustomPropertyManager cusPropMgr = swDoc.Extension.CustomPropertyManager[<span class="string">&quot;&quot;</span>];</span><br><span class="line"></span><br><span class="line">Get：</span><br><span class="line"><span class="comment">//GetAll获得自定义属性内容，将obj转属性名数组</span></span><br><span class="line">cusPropMgr.GetAll2(<span class="keyword">ref</span> vPropNamesObject, <span class="keyword">ref</span> vPropTypes, <span class="keyword">ref</span> vPropValues, swCustomInfoGetResult_e.swCustomInfoGetResult_NotPresent);</span><br><span class="line"><span class="built_in">object</span>[] vPropNames = (<span class="built_in">object</span>[])vPropNamesObject; <span class="keyword">if</span> (vPropNames == <span class="literal">null</span>) &#123; <span class="keyword">return</span>; &#125;</span><br><span class="line"></span><br><span class="line">Set：</span><br><span class="line">增：Add(属性名,类型,属性值,添加时的设置)</span><br><span class="line">cusPropMgr.Add3(PropertyName, (<span class="built_in">int</span>)swCustomInfoType_e.swCustomInfoText, PropertyValue, (<span class="built_in">int</span>)swCustomPropertyAddOption_e.swCustomPropertyDeleteAndAdd);<span class="comment">//输入属性内容</span></span><br><span class="line">改：</span><br><span class="line">vPropNames[i]=””</span><br><span class="line">删：</span><br><span class="line">cusPropMgr.Delete2((<span class="built_in">string</span>)vPropNames[i]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="获得特征"><a href="#获得特征" class="headerlink" title="获得特征"></a>获得特征</h3><p>遍历特征对象，根据特征名称找到特征对象来操作。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 遍历特征对象</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">TraverseFeatures</span>(<span class="params"><span class="built_in">bool</span> isTopLevel</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//获得第一个特征，并赋值到当前特征curFeat</span></span><br><span class="line">            Feature thisFeat = (Feature)swDoc.FirstFeature();</span><br><span class="line">            Feature curFeat = <span class="literal">default</span>(Feature); curFeat = thisFeat;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//当前特征非空就继续输出特征信息</span></span><br><span class="line">            <span class="keyword">while</span> ((curFeat != <span class="literal">null</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                Debug.Print(curFeat.Name);</span><br><span class="line">                <span class="comment">//特征操作</span></span><br><span class="line">                <span class="built_in">bool</span> isShowDimension = <span class="literal">false</span>; <span class="keyword">if</span> (isShowDimension == <span class="literal">true</span>) ShowDimensionForFeature(curFeat);</span><br><span class="line">    </span><br><span class="line">                <span class="comment">/*//子特征的遍历</span></span><br><span class="line"><span class="comment">                Feature subfeat = default(Feature);</span></span><br><span class="line"><span class="comment">                subfeat = (Feature)curFeat.GetFirstSubFeature();</span></span><br><span class="line"><span class="comment">                while ((subfeat != null))</span></span><br><span class="line"><span class="comment">                &#123;</span></span><br><span class="line"><span class="comment">                    //if (isShowDimension == true) ShowDimensionForFeature(subfeat);</span></span><br><span class="line"><span class="comment">                    TraverseFeatures(subfeat, false);</span></span><br><span class="line"><span class="comment">                    Feature nextSubFeat = default(Feature);</span></span><br><span class="line"><span class="comment">                    nextSubFeat = (Feature)subfeat.GetNextSubFeature();</span></span><br><span class="line"><span class="comment">                    subfeat = nextSubFeat; nextSubFeat = null;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">                subfeat = null;*/</span></span><br><span class="line">    </span><br><span class="line">                <span class="comment">//进入下一个特征</span></span><br><span class="line">                Feature nextFeat = <span class="literal">default</span>(Feature);</span><br><span class="line">                <span class="keyword">if</span> (isTopLevel) &#123; nextFeat = (Feature)curFeat.GetNextFeature(); &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123; nextFeat = <span class="literal">null</span>; &#125;</span><br><span class="line">    </span><br><span class="line">                curFeat = nextFeat; nextFeat = <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获得零部件"><a href="#获得零部件" class="headerlink" title="获得零部件"></a>获得零部件</h3><p>dynamic IAssemblyDoc.GetComponents(bool ToplevelOnly);<br>通常用object[]接受，可在实际使用时转其他可用类型，常见转string[]。</p>
+<p>举例：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span>[] <span class="title">GetComps</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//打开文件&amp;获得零部件集合</span></span><br><span class="line">            AssemblyDoc swAssy = (AssemblyDoc)swApp.ActiveDoc; </span><br><span class="line">            <span class="built_in">string</span>[] Comppaths = (<span class="built_in">string</span>[])swAssy.GetComponents(<span class="literal">true</span>); <span class="keyword">return</span> Comppaths;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获得图纸"><a href="#获得图纸" class="headerlink" title="获得图纸"></a>获得图纸</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">GetSheetNames</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            Sheet drwSheet = (Sheet)swDraw.GetCurrentSheet();       <span class="comment">//获取当前工程图对象</span></span><br><span class="line">            <span class="built_in">object</span>[] sheetNames = (<span class="built_in">object</span>[])swDraw.GetSheetNames(); <span class="comment">//获取当前工程图中的所有图纸名称</span></span><br><span class="line">            <span class="built_in">object</span>[] views = (<span class="built_in">object</span>[])drwSheet.GetViews();         <span class="comment">//获取当前工程图中的所有图纸视图</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">foreach</span> (View view <span class="keyword">in</span> views)<span class="comment">//遍历工程图零部件,输入选择视图,输出零部件名</span></span><br><span class="line">            &#123;</span><br><span class="line">                DrawingComponent comp = view.RootDrawingComponent; Debug.Print(comp.Name); <span class="comment">//选择视图激活</span></span><br><span class="line">                <span class="built_in">object</span>[] childrencomps = (<span class="built_in">object</span>[])comp.GetChildren();<span class="comment">//获得子件对象</span></span><br><span class="line">                <span class="comment">//遍历工程图零部件</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = childrencomps.GetLowerBound(<span class="number">0</span>); i &lt;= childrencomps.GetUpperBound(<span class="number">0</span>); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Debug.Print(<span class="string">&quot;零部件是&quot;</span> + ((DrawingComponent)childrencomps[i]).Name);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h1><h2 id="多选尺寸修改操作："><a href="#多选尺寸修改操作：" class="headerlink" title="多选尺寸修改操作："></a>多选尺寸修改操作：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="宏程序"><a href="#宏程序" class="headerlink" title="宏程序"></a>宏程序</h1><p>尺寸标注</p>
+<h2 id="Sw-实体转换钣金"><a href="#Sw-实体转换钣金" class="headerlink" title="Sw_实体转换钣金"></a>Sw_实体转换钣金</h2><p>solidwork程序在零件类型里有个“钣金”类型。这个钣金零件会有一些特殊的属性。如果是通过其他格式（如stp，x_t等）打开的模型，软件默认只会识别成一个实体特征。实体特征将不会带有钣金的属性。</p>
+<ul>
+<li>钣金参数</li>
+<li>钣金展开</li>
+<li>……</li>
+</ul>
+<p>使用我去找了相关程序来实现：实体特征转钣金的方法。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

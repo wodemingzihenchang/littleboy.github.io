@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-11 11:44:04</span>
+</div>
+
+<div id="article"><h1 id="Typora-旧版本使用方法"><a href="#Typora-旧版本使用方法" class="headerlink" title="Typora 旧版本使用方法"></a>Typora 旧版本使用方法</h1><p>使用最后一个免费版本，并延长试用时间。这种方法适用于 Typora 的最后一个 Beta 版（0.11.18）,这个版本还是免费的，但是系统会进行检测要求升级才能使用，通过修改注册表它可以让你延长 Typora 的试用期限，并且防止它检测到你的修改。具体步骤如下：</p>
+<h2 id="旧版本下载"><a href="#旧版本下载" class="headerlink" title="旧版本下载"></a>旧版本下载</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1wMkwc61Fe8o5Xhvfa5u1wQ?pwd=5csy">https://pan.baidu.com/s/1wMkwc61Fe8o5Xhvfa5u1wQ?pwd=5csy</a><br>提取码：5csy</p>
+<h2 id="许可设置"><a href="#许可设置" class="headerlink" title="许可设置"></a>许可设置</h2><p>打开注册表编辑器。你可以按 Windows+R 键，输入 regedit，然后点击确定。注册表操作可见本站《注册表》文章</p>
+<p>在注册表编辑器中，找到“计算机\HKEY_CURRENT_USER\SOFTWARE\Typora”这个路径。修改 IDate 的值，把它改成一个未来的日期。这样就可以延长 Typora 的试用期限。</p>
+<img src="Typora旧版本使用方法\2.png">
+
+<p>右键点击 Typora 这个文件夹，选择“权限”选项。在弹出的窗口中，选中 Administrators 这个用户组，然后把所有的权限都设置为“拒绝”。这样就可以阻止 Typora 检测到你修改了注册表。</p>
+<img src="Typora旧版本使用方法\3.png">
+
+<p>关闭注册表编辑器，重新打开 Typora。你就可以继续使用免费版了。</p>
+<h2 id="关闭自动更新"><a href="#关闭自动更新" class="headerlink" title="关闭自动更新"></a>关闭自动更新</h2><p>注意：建议你在 Typora 的偏好设置里，把自动更新关闭。这样就可以避免被强制升级到付费版。</p>
+<img src="Typora旧版本使用方法\4.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

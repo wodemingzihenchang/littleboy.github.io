@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><p>电机作为最常用的动力装置，其原理是依据【电磁感应定律】实现“电能”&amp;“机械能”转换或传递的一种电磁装置。</p>
+<span id="more"></span>
+
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="有刷电机"><a href="#有刷电机" class="headerlink" title="有刷电机"></a>有刷电机</h3><p>转子绕组+永磁定子+换向器和电刷。换向器通过改变绕组的电流方向从而改变磁场，进而使的转子持续被永磁定子吸引。其通电就能动,一般通过调节电压改变速度。（注意：电枢绕组如果只有 1 圈会有死点，十字交叉 2 圈以上就没有了。）<br>特点：定子上安装有固定的主磁极和电刷，转子上安装有电枢绕组和换向器。由于电刷和换向器的存在，有刷电机的结构复杂，可靠性差，故障多，维护工作量大，寿命短，换向火花易产生电磁干扰。</p>
+<img src="电机原理及应用\有刷电机.gif">
+
+<h3 id="无刷电机"><a href="#无刷电机" class="headerlink" title="无刷电机"></a>无刷电机</h3><p>永磁转子+定子绕组+传感器（检测转子位置用于驱动器控制）。驱动器控制定子形成旋转磁场从而带动永磁转子旋转。驱动器 EN 接地打开控制启动，驱动电位器调试<br>特点：铁氧体永磁无刷直流电动机以廉价见长，且性能良好，广泛用于家用电器、汽车、玩具、电动工具等领域。用稀土永磁无刷直流电动机，体积小且性能更好，但价格昂贵，主要用于航天、计算机、井下仪器等。</p>
+<img src="电机原理及应用\无刷电机.gif">
+
+<h3 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h3><ul>
+<li><p>单相交流电机：</p>
+</li>
+<li><p>变频电机：</p>
+</li>
+<li><p>调速电机：</p>
+</li>
+<li><p>步进电机：脉冲频率</p>
+</li>
+</ul>
+<img src="电机原理及应用\步进电机.gif">
+
+<ul>
+<li><p>伺服电机：脉冲频率</p>
+</li>
+<li><p>同（异）步电机：<br>转子转速与定子旋转磁场转速是同步（相同）还是异步（滞后），因而只有交流能产生旋转磁场，使用只有交流电机有同步异步的概念。</p>
+<!--转载自https://zhuanlan.zhihu.com/p/34704721--></li>
+</ul>
+<h2 id="减速器"><a href="#减速器" class="headerlink" title="减速器"></a>减速器</h2><p>减速机的作用是：改变原动机输送到工作机的转速和扭矩。机械式、液力耦合式；固定速比、可调速比。</p>
+<h3 id="多级减速器"><a href="#多级减速器" class="headerlink" title="多级减速器"></a>多级减速器</h3><p>减速器一般以齿轮啮合传动，利用杠杆力臂实现增减速。在有限空间内，利用传动齿轮间组合出多次传动效果，实现多级传动。而利用多级传动又可进一步提高减速比。<br><img src="电机原理及应用\二级减速器.gif"><br></p>
+<h3 id="行星轮减速器："><a href="#行星轮减速器：" class="headerlink" title="行星轮减速器："></a>行星轮减速器：</h3><p>传动结构为：行星轮，行星架，太阳轮，外齿圈。</p>
+<p>齿数比：太阳轮+2*行星轮&#x3D;外齿圈  </p>
+<p><img src="电机原理及应用\行星轮.gif"><br></p>
+<p>行星我们都知道行星是围绕着太阳运动的有着不同的轨迹方式，同样行星减速机的这种结构也决定了它的几种不同工作转动方式：</p>
+<p>1、太阳轮固定，齿圈和行星架的转向相同，<br>2、齿圈固定，太阳轮和行星架的转向相同，<br>3、行星架固定，太阳轮和齿圈的转向相反，</p>
+<p>减速比计算：</p>
+<p>1、推导法：</p>
+<p>2、目测法：</p>
+<p>根据转圈的数量比，即为减速比；</p>
+<p>3、公式法：</p>
+<p>依据线速度相同原则：我们可以得到：<br>$$<br>\omega_1<em>Z_1&#x3D;\omega_2</em>Z_2\<br>i&#x3D;\frac{\omega_1}{\omega_2}&#x3D;\frac{Z_1}{Z_2}<br>$$</p>
+<p>行星轮系一般为周转轮系，需先假象成定轴轮系计算然后判断固定的对象，且设置转速 n 为 0 代入计算。</p>
+<p>由于结构的原因，使得它的传动种类不同能广泛应用于各类传动机械行业中。</p>
+<h3 id="摆线针减速器"><a href="#摆线针减速器" class="headerlink" title="摆线针减速器"></a>摆线针减速器</h3><p>摆线针轮减速机，是一种应用行星式传动原理，采用摆线针齿啮合的新颖传动装置。摆线针轮减速机全部传动装置可分为三部分：输入部分、减速部分、输出部分。<br><img src="电机原理及应用\摆线轮.gif"><br></p>
+<h3 id="谐波传动减速器"><a href="#谐波传动减速器" class="headerlink" title="谐波传动减速器"></a>谐波传动减速器</h3><p>英文：harmonic gear drive 定义：主要由波发生器、柔性齿轮、柔性轴承、刚性齿轮四个基本构件组成，谐波传动减速器，是一种靠波发生器装配上柔性轴承使柔性齿轮产生可控弹性变形，并与刚性齿轮相啮合来传递运动和动力的齿轮传动。<br><img src="电机原理及应用\谐波减速器.gif"><br></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>Q：直流电机与交流电机有什么区别？<br>A：直流电机是磁场不动，导体在磁场中运动；交流电机是磁场旋转运动，而导体不动。直流电机可以通过改变输入的电流达到改表转速的目的，调速性能较好。交流电动机可以通过改变磁场变化频率调整电机输出转速。同等功率的直流电机低速起动时力矩比交流电机大。一般情况下直流电机维护工作量比交流电机大。</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><blockquote>
+<p>GB&#x2F;T 1993-1993 旋转电机冷却方法<br>GB 20237-2006 起重冶金和屏蔽电机安全要求<br>GB&#x2F;T 2900.25-2008 电工术语 旋转电机<br>GB&#x2F;T 2900.26-2008 电工术语 控制电机<br>GB 4831-1984 电机产品型号编制方法<br>GB 4826-1984 电机功率等级<br>JB&#x2F;T 1093-1983 牵引电机基本试验方法</p>
+</blockquote>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

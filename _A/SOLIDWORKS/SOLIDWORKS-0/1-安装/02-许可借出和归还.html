@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-26 10:50:59</span>
+</div>
+
+<div id="article"><h1 id="许可借出和归还"><a href="#许可借出和归还" class="headerlink" title="许可借出和归还"></a>许可借出和归还</h1><img src="02-许可借出和归还/借用&归还许可.png">
+
+<p>在客户端机器上，将“借用”文件夹添加到注册表中，用户不能删除或编辑此文件夹。如果发生这种情况，他们将无法将许可证“返回”给服务器，必须等待借用期到期才能再次使用许可证。<!--参考QA00000115374--></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“HKEY_CURRENT_USER/Software/Flexlm License Manager/”</span><br></pre></td></tr></table></figure>
+
+<p>既然信息是填入到“HKEY_CURRENT_USER”里的，也就意味着许可是跟着用户走的，而不是电脑。这会出现同一电脑不同用户登录时，无法使用其他用户借用来的许可。</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="没有可供借用的许可证"><a href="#没有可供借用的许可证" class="headerlink" title="没有可供借用的许可证"></a>没有可供借用的许可证</h2><p>QUESTION	<br>什么原因导致借用许可证时发生错误“无法借用许可证。 没有可供借用的许可证 (-67, 147, 0)”?<br>ANSWER	<br>当没有可供借用的许可证时，会出现错误“无法借用 XXX 许可证”。 在以下情况下会发生此错误：1) 该用户正在借用的产品许可证已达到其最大使用次数。 例如，客户有两个 SolidWorks Professional 许可证，并且每个许可证被两个用户使用。 同时，如果有第三个用户尝试借用 SolidWorks Professional 许可证，则将在屏幕上出现上述错误消息。 2) 管理员在选项文件中设置了选项 BORROW_LOWWATER。 请参见 licensingenduserguide.pdf 了解更多信息。</p>
+<h2 id="没有借用信息"><a href="#没有借用信息" class="headerlink" title="没有借用信息"></a>没有借用信息</h2><p>如果客户端计算机借用 SOLIDWORKS产品，但许可并未出现在 SolidNetWork License (SNL) Manager 的“借用的产品许可”列表中，该怎么办？</p>
+<p><strong>方法：</strong></p>
+<p>您可以通过在 Windows 注册表中重命名“FLEXlm License Manager”文件夹来解决此问题。请执行下列步骤：</p>
+<p>1.关闭 SolidNetWork License (SNL) Manager。<br>2.打开 Windows 注册表编辑器。<br>3.浏览至以下注册表位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\FLEXlm License Manager\Borrow</span><br></pre></td></tr></table></figure>
+
+<p>4.确认有一个注册表项显示借用的产品。<br>5.将“FLEXlm License Manager”注册表文件夹重命名为类似“FLEXlm License Manager_old”的文件夹。<br>6.打开 SNL Manager。确认没有任何更改，然后关闭 SNL Manager。<br>7.返回到注册表编辑器，并将注册表文件夹名称恢复为“FLEXlm License Manager”。<br>8.打开 SNL Manager &gt; 单击“许可借用”选项卡。借用的产品现在显示在“借用的产品许可”区域中。</p>
+<h2 id="许可强制归还"><a href="#许可强制归还" class="headerlink" title="许可强制归还"></a>许可强制归还</h2><p>A1、请确保客户端已经完全退出，在“任务管理器”，将 SOLIDWORKS 结束进程</p>
+<p>A2、若已退出，用户还在服务器上挂着，请在服务器上尝试以下操作，踢出已退出用户； </p>
+<p>确保是 SOLIDWORKS 2020 SP5 及后的版本； 在服务器上使用 CD 命令，将目录指定到 license file 路径，一般目录如下：再运行 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Program Files (x86)\SOLIDWORKS SolidNetWork License Manager\utils</span><br><span class="line">Imutil Imremove –c[“path to the license file”] [feature] [user] [computer]  [Display]；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">其中： 对照下图红框信息</span><br><span class="line">路径（path to the license file）：到sw d.lic路径；</span><br><span class="line">特征（Feature）：产品特征名，SOLIDWORKS 就是 SOLIDWORKS； </span><br><span class="line">用户（User）：客户端用户名；</span><br><span class="line">电脑（Computer）：客户端机器名；</span><br><span class="line">显示（Display）：一般同客户端机器名；</span><br></pre></td></tr></table></figure>
+
+<img src="02-许可借出和归还/归还许可.png">
+
+<p>注：后几者可在许可管理器-许可证的使用中查看。（若其它电脑远程， 显示那项有所不同， 不是被查询的客户端机器名）</p>
+<p>A3：似乎在删除客户端“C:\ProgramData\FLEXnet”文件夹后，许可会重置并归还。</p>
+<h2 id="借出许可失败"><a href="#借出许可失败" class="headerlink" title="借出许可失败"></a>借出许可失败</h2><img src="02-许可借出和归还/借出许可失败.png">
+
+<img src="02-许可借出和归还/不能归还许可.png"></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

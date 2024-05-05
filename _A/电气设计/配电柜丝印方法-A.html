@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="配电柜丝印方法-A"><a href="#配电柜丝印方法-A" class="headerlink" title="配电柜丝印方法-A"></a>配电柜丝印方法-A</h1><!--mort-->
+
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文章介绍关于在零件表面制作印刷内容的方法，通常该方法是用在我们需要做“镭雕”、“丝印”、“贴图”等设计中。本次方法将会着重使用到SOLIDWORKS的【设计库】功能，以及图块的编辑和使用。可以利用其【设计库】来制作并规范我们的丝印标准。</p>
+<p>下面以成套行业的配电柜柜体表面做丝印为例子：（实物完成图）在柜体表面我们需要印刷，譬如：“眉头”“警示牌”“操作说明”“一次方案图”等等的图像或贴纸。</p>
+<img src="配电柜丝印方法-A\clip_image001.png">
+
+<p>那下面我们来看下在SOLIDWORKS里是如何体现的？</p>
+<h2 id="1、图形类："><a href="#1、图形类：" class="headerlink" title="1、图形类："></a>1、图形类：</h2><p>以隔离小车的开关为例，其包括文字及旋钮的图形（不单是纯文字），并且是依据前门板的开孔定位。所以我们可以将其制作成【设计库】的“特征设计库”</p>
+<img src="配电柜丝印方法-A\clip_image002.png">
+
+<p>制作方法和使用：</p>
+<p>1-1、先绘制基体特征，这一步是模拟配电柜前门板的开孔环境；</p>
+<p>1-2、在根据小车操作孔的图形样式做出该图形的草图</p>
+<p>1-3、在【拉伸凸台】形成特征，为后面的设计库做准备。</p>
+<p>1-4、选择拉伸的图形特征在【设计库-保存到库】</p>
+<p>那么，在下一次使用该“特征设计库”时，你只需要从【设计库】中拖放特征到新零件表面即可。这个过程无需我们再去制作草图和标注，是对标准特征的重用。</p>
+<h2 id="2、文本类"><a href="#2、文本类" class="headerlink" title="2、文本类"></a>2、文本类</h2><p>文本类多为“操作说明”和“注意事项”等多文字的内容。这一部分可以考虑做成【设计库】的“图块设计库”。</p>
+<img src="配电柜丝印方法-A\clip_image003.png">
+
+<p>图块可由多部分组成：以“分闸装置的操作说明”为例。其是由矩形草图框加内部的文字注解组成。我们可以通过草图编辑绘制上述的两者。</p>
+<p>将矩形草图和注解文本组合成块，那之后这两者就将是作为一个整体出现使用。这将节省我们绘制草图和书写文本的时间。</p>
+<img src="配电柜丝印方法-A\clip_image005.png">
+
+<p>制作完成“图块”后，我们也可以将其保存到【设计库】中。</p>
+<h2 id="完成效果"><a href="#完成效果" class="headerlink" title="完成效果"></a>完成效果</h2><img src="配电柜丝印方法-A\clip_image007.png">
+
+<p>转载于：</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

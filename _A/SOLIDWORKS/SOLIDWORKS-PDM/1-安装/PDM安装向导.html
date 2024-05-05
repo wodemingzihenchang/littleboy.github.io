@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-15 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS安装向导"><a href="#SOLIDWORKS安装向导" class="headerlink" title="SOLIDWORKS安装向导"></a>SOLIDWORKS安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
+<span id="more"></span>
+
+<h2 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h2><p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。<br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a><br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a><br><br><a href="../SOLIDWORKS问题/【0安装】-SOLIDWORKS硬件配置.html">SOLIDWORKS硬件配置参考</a><br><br><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/recommended/">普吉网站的选配参考</a><br></p>
+<h2 id="PDM-安装"><a href="#PDM-安装" class="headerlink" title="PDM 安装"></a>PDM 安装</h2><p>注意：安装前，需检查当前服务器配置是否支持PDM的安装环境（详细见<a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">#配置要求</a>）。</p>
+<p>1、安装SQL服务器</p>
+<blockquote>
+<p>..\SQLsetup.exe<br><br>2、安装PDM服务器<br>..\SOLIDWORKS 20xx SP05 安装包\SWPDMServer\setup.exe<br><br>3、安装PDM客户端<br>..\SOLIDWORKS 20xx SP05 安装包\SWPDMClient\setup.exe<br></p>
+</blockquote>
+<h2 id="PDM-升级"><a href="#PDM-升级" class="headerlink" title="PDM 升级"></a>PDM 升级</h2><p>注意：升级前，建议检入所有文件；备份数据库和 PDM 数据库，升级后功能使用测试。本章默认只考虑在原 PDM 服务器下升级，如需进行 PDM 迁移阅读下文“SOLIDWORKS PDM 迁移”。</p>
+<p>1、升级PDM服务器</p>
+<blockquote>
+<p>..\SOLIDWORKS 20xx SP05 安装包\SWPDMServer\setup.exe<br><br>2、升级PDM库文件<br>..\SOLIDWORKS 20xx SP05 安装包\SWPDMServer\Upgrade\Upgrade.exe<br><br>3、升级各客户端<br>..\SOLIDWORKS 20xx SP05 安装包\SWPDMClient\setup.exe<br></p>
+</blockquote>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="ODBC-Driver17"><a href="#ODBC-Driver17" class="headerlink" title="ODBC Driver17"></a>ODBC Driver17</h2><p>可在如下文件夹内找到安装程序，安装后再运行PDM安装程序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS安装包\PreReqs\ODBCSQLDriver17</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="不兼容的版本"><a href="#不兼容的版本" class="headerlink" title="不兼容的版本"></a>不兼容的版本</h2><img src="PDM安装向导/不兼容的版本.png">
+
+<p>需检出当前客户端和服务器的版本，并尝试修改客户端的版本。这里涉及客户端PDM的卸载和安装操作（详见#安装说明）</p>
+<h2 id="需要SQL更高版本"><a href="#需要SQL更高版本" class="headerlink" title="需要SQL更高版本"></a>需要SQL更高版本</h2><img src="PDM安装向导/PDM需要SQL2019版本.png">
+
+<p>要在 Microsoft® SQL Server 2019 或 Microsoft® SQL Server Express 2019 上创建或升级文件库数据库，SOLIDWORKS® PDM 软件需要“SQL Server 2019 Cumulative Update 4”或更高版本。更新 SQL Server 安装，请执行以下步骤：</p>
+<p>1.安装 SQL Server 2019 或 SQL Server Express 2019 RTM（“SP0”）。</p>
+<p>2.从 <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=100809">Microsoft.com下载</a> 最新 SQL Server Cumulative Update。</p>
+<p>3.在包含 SQL 2019 安装的同一计算机上运行更新程序文件。</p>
+<p>4.继续创建 PDM 库的流程。</p>
+<p>（要运行较旧的 SQL Cumulative Update（至少为“CU4”），您可以从 Microsoft 更新目录 (<a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019">https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019</a>) 中选择其他内容）</p>
+<h2 id="密码不正确"><a href="#密码不正确" class="headerlink" title="密码不正确"></a>密码不正确</h2><p>首次安装 SOLIDWORKS PDM 客户端后，必须在 <a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-client/">PDM</a> 管理中识别存档服务器。</p>
+<p><img src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/06/13-06-2022-03-04-57.png" alt="img"></p>
+<p>加载项服务器到客户端计算机。将客户端计算机连接到存档服务器时，将登录的用户配置文件与用户配置文件的“附加访问权限”和“管理访问权限”进行比较。如果用户配置文件凭据不匹配，系统将提示用户登录 PDM 存档服务器。</p>
+<p>客户端添加服务器连接失败，输入的用户名或密码不正确</p>
+<img src="PDM安装向导/输入账号密码不正确.png">
+
+<p>需确保在网络访问到服务器的电脑用户存在，并由密码设置（空密码好像是不行的）</p>
+<img src="PDM安装向导/从网络访问此电脑.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,4 @@
+LIST.TXT
+nameList.txt
+获得文件夹内的文件名称 - 副本.bat
+获得文件夹内的文件名称.bat

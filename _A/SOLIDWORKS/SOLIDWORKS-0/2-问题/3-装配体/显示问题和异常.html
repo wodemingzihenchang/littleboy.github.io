@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-21 17:01:10</span>
+</div>
+
+<div id="article"><h1 id="显示问题和异常"><a href="#显示问题和异常" class="headerlink" title="显示问题和异常"></a>显示问题和异常</h1><h1 id="异常线条"><a href="#异常线条" class="headerlink" title="异常线条"></a>异常线条</h1><p>奇怪异常的蓝色放射线，像刺猬</p>
+<img src="显示问题和异常/异常线条.png" >
+
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h1 id="透明黑框"><a href="#透明黑框" class="headerlink" title="透明黑框"></a>透明黑框</h1><p>装配体模式界面显示很多黑色轮廓线。（即使显示是“带边线上色”的模式）零件出现透明黑框</p>
+<img src="显示问题和异常/透明黑框.png" >
+
+
+
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>【系统选项-显示-未薄壁零件优化】勾选。</p>
+<img src="显示问题和异常/为薄壁零件优化.png" >
+
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>选项-系统选项-显示&#x2F;选择-在带边线上色模式下显示边线（点亮消除隐藏线）</p>
+<h1 id="上色模式但显示线框"><a href="#上色模式但显示线框" class="headerlink" title="上色模式但显示线框"></a>上色模式但显示线框</h1><p>上色模式但显示线框</p>
+<img src="显示问题和异常\上色模式但显示线框.png" >
+
+<h2 id="方法1-1"><a href="#方法1-1" class="headerlink" title="方法1"></a>方法1</h2><p>取消勾选【系统选项-显示-为薄壁零件优化】</p>
+<img src="显示问题和异常\为薄壁零件优化.png" >
+
+
+
+<h2 id="方法2-1"><a href="#方法2-1" class="headerlink" title="方法2"></a>方法2</h2><p>如果当前显卡和驱动有异常，可以通过取消勾选“增强的图形性能”选项解决。</p>
+<img src="显示问题和异常\增强的图形性能.png" >
+
+<h2 id="方法3：待确认"><a href="#方法3：待确认" class="headerlink" title="方法3：待确认"></a>方法3：待确认</h2><p>该问题是 NIVIDIA GPU 驱动程序已知问题，从 530.xx 开始，在 535.xx 中修复。</p>
+<h1 id="透明度无效"><a href="#透明度无效" class="headerlink" title="透明度无效"></a>透明度无效</h1><p>在装配体零部件设置“透明度显示”后，模型还是实体上色的样子，而不是透明的。</p>
+<h2 id="方法：取消上层外观"><a href="#方法：取消上层外观" class="headerlink" title="方法：取消上层外观"></a>方法：取消上层外观</h2><p>检查该装配体的上层文件是否被设置了外观上色（如下图）。该情况下会以顶层的装配体外观为主覆盖零部件的显示，即透明度显示也会被外观覆盖。</p>
+<img src="显示问题和异常\透明度无效.png" >
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

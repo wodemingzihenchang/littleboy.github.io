@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 10:42:25</span>
+</div>
+
+<div id="article"><h1 id="如何新建PDM客户端注册表"><a href="#如何新建PDM客户端注册表" class="headerlink" title="如何新建PDM客户端注册表"></a>如何新建PDM客户端注册表</h1><p>如果意外删除，如何重新创建企业PDM客户端注册，</p>
+<p>SolidWorks Enterprise PDM在HKLM和HKCU下的注册表中存储设置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise</span><br></pre></td></tr></table></figure>
+
+<p>任何本地视图信息都将存储在这些键下。如果您删除这些注册表项，PDM客户端停止工作并产生各种错误。任何本地文件库将可能不再连接到服务器。</p>
+<p>这些说明如何重新创建Enterprise PDM客户端注册表项(如果它们已经存在)。由于某些原因被删除了。在这个演示中，我们将使用名为“Test_EPDM”的保险库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Shared View: </span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\&lt;VaultName&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Applicati</span><br><span class="line">ons\PDMWorks Enterprise\Databases\&lt;VaultName&gt;</span><br><span class="line">Private View:</span><br><span class="line">HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\&lt;VaultName&gt;</span><br></pre></td></tr></table></figure>
+
+<p>请注意，如果注册表项在归档服务器本身上被删除，则需要按照以下步骤修复它们。解决方案S-014199中的说明-“是否有可能重新创建PDMWorks®Enterprise归档服务器注册表?值是否已被意外删除?”。</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤:"></a>步骤:</h1><ol>
+<li>卸载并重新安装Enterprise PDM(不使用修复选项，必要时重新启动系统)。这是为EPDM创建默认程序密钥所必需的。<br>•如果文件Vault View存在于第二个客户端并且注册表是完整的，则最容易导出查看上面显示的密钥，并将它们导入到受影响的系统中。一定要仔细检查之后导入的注册表值。</li>
+<li>启动SolidWorks企业PDM管理工具，如果没有，则连接到存档服务器</li>
+</ol>
+<p><img src="%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BAPDM%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20240312115439392.png" alt="image-20240312115439392"></p>
+<p>如果存档服务器存在，只需右键单击服务器名称并选择“刷新”。</p>
+<p><img src="%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BAPDM%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20240312115504060.png" alt="image-20240312115504060"></p>
+<h2 id="仅用于共享保险库视图"><a href="#仅用于共享保险库视图" class="headerlink" title="仅用于共享保险库视图"></a>仅用于共享保险库视图</h2><ol start="3">
+<li>使用客户端信息修改“SHARED_view_details.reg”并打开修改注册表内容。</li>
+</ol>
+<p><img src="%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BAPDM%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20240312115917468.png" alt="image-20240312115917468"></p>
+<table>
+<thead>
+<tr>
+<th>注册表项名称</th>
+<th>Vault name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ShellRoot</td>
+<td>本地Vault视图的路径</td>
+</tr>
+<tr>
+<td>DbName</td>
+<td>SQL数据库名称</td>
+</tr>
+<tr>
+<td>DbServer</td>
+<td>SQL Server的名称</td>
+</tr>
+<tr>
+<td>ServerLoc</td>
+<td>归档服务器的名称</td>
+</tr>
+<tr>
+<td>ServerPort</td>
+<td>HEX端口格式为3030</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li><p>导入更新后的注册表文件</p>
+</li>
+<li><p>您现在应该能够访问现有的文件保管库视图</p>
+</li>
+</ol>
+<h2 id="仅用于私人保险库视图"><a href="#仅用于私人保险库视图" class="headerlink" title="仅用于私人保险库视图"></a>仅用于私人保险库视图</h2><ol start="3">
+<li>使用客户端信息修改“PRIVATE_view_details.reg”并打开修改注册表内容。</li>
+</ol>
+<p><img src="%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BAPDM%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20240312120103996.png" alt="image-20240312120103996"></p>
+<table>
+<thead>
+<tr>
+<th>注册表项名称</th>
+<th>Vault name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ShellRoot</td>
+<td>本地Vault视图的路径</td>
+</tr>
+<tr>
+<td>DbName</td>
+<td>SQL数据库名称</td>
+</tr>
+<tr>
+<td>DbServer</td>
+<td>SQL Server的名称</td>
+</tr>
+<tr>
+<td>ServerLoc</td>
+<td>归档服务器的名称</td>
+</tr>
+<tr>
+<td>ServerPort</td>
+<td>HEX端口格式为3030</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>导入更新后的注册表文件</li>
+<li>您现在应该能够访问现有的文件保管库视图</li>
+</ol>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

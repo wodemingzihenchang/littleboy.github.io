@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><p>SOLIDWORKS lang 文件夹包含多个 SW 的定制文件，可对 SW 软件的部分样式进行定制：</p>
+<blockquote>
+<p>定制文件位置：..\SOLIDWORKS\lang\chinese-simplified\</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="外观调色盘"><a href="#外观调色盘" class="headerlink" title="外观调色盘"></a>外观调色盘</h2><p>.sldclr 文件可修改外观颜色调色盘,默认是 greys（灰度等级）；pastels（蜡笔）；standard（标准）三种。外观颜色调色盘采用的是 RGB 调色，具体颜色 RGB 值请可借助网上在线工具获得。</p>
+<div>
+<img src="SOLIDWORKS定制文件/外观颜色调色盘.png">
+<img src="SOLIDWORKS定制文件/外观颜色调色盘2.png">
+</div>
+
+<h2 id="外观-布景"><a href="#外观-布景" class="headerlink" title="外观&amp;布景"></a>外观&amp;布景</h2><p>SW 的外观&amp;布景类型有：1、贴图；外观；布局；纹理；分析布景。定制文件内容一般为【图像文件】+【.P2X】的形式。下面仅介绍贴图定制的方法，其他类型定制方法类同。<br></p>
+<p><strong>贴图定制：</strong><br>随便打开个模型，使用贴图库随意放置一种贴图。在贴图属性框内就可以浏览自己制作好的贴图。保存贴图后会生成一份.P2D 文件。将原图和.P2D 文件放置设计库可以读到的位置即可。</p>
+<blockquote>
+<p>【图像文件】默认位置：..\SOLIDWORKS\data\Images<br><br>【P2X 文件】默认位置：..\SOLIDWORKS\data\graphics<br></p>
+</blockquote>
+<img src="SOLIDWORKS定制文件/贴图定制1.png">
+
+<h2 id="钣金规格表"><a href="#钣金规格表" class="headerlink" title="钣金规格表"></a>钣金规格表</h2><p>Sheet Metal Gauge Tables 文件夹内的 Excel 文件记录了钣金规格表，建议是复制原有 Excel 文件按已有格式进行修改。</p>
+<blockquote>
+<p>位置：SOLIDWORKS\lang\chinese-simplified\Sheet Metal Gauge Tables）</p>
+</blockquote>
+<img src="SOLIDWORKS定制文件/钣金规格表.png">
+
+<h2 id="折弯系数表"><a href="#折弯系数表" class="headerlink" title="折弯系数表"></a>折弯系数表</h2><p>Sheetmetal Bend Tables 文件夹内的 Excel 文件记录了折弯系数表，建议是复制原有 Excel 文件按已有格式进行修改。</p>
+<blockquote>
+<p>位置：SOLIDWORKS\lang\chinese-simplified\Sheetmetal Bend Tables）</p>
+</blockquote>
+<img src="SOLIDWORKS定制文件/折弯系数表.png">
+
+<h2 id="焊件轮廓"><a href="#焊件轮廓" class="headerlink" title="焊件轮廓"></a>焊件轮廓</h2><p>焊件轮廓的本质其实就是草图轮廓的再利用，要求我们自定义草图轮廓，并保存在如下默认位置即可。（默认位置：..\SOLIDWORKS\lang\chinese-simplified\weldment profiles）<br><img src="SOLIDWORKS定制文件/焊件轮廓.png"></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>表格定制主要归纳为两类：“表格布局”和“内容链接”。表格布局：可以右键空白表格，添加左（右）列，上（下）行。内容链接：参考<a href="https://wodemingzihenchang.github.io/SOLIDWORKS%20技巧/SOLIDWORKS技巧-工程图.html#注解属性">SOLIDWORKS 工程图技巧 - 注解属性</a></p>
+<ul>
+<li>总表.sldtbt</li>
+<li>孔表.sldholtbt</li>
+<li>材料明细表.sldbomtbt</li>
+<li>修订表.sldrevtbt</li>
+<li>焊件切割清单.sldwldtbt</li>
+<li>焊接表.sldwldtbt</li>
+<li>折弯系数表</li>
+<li>冲孔表.sldpuntbt</li>
+<li>总公差表</li>
+</ul>
+<h2 id="符号图库"><a href="#符号图库" class="headerlink" title="符号图库"></a>符号图库</h2><p>gtol97.sym 文件定义了在 SolidWorks 中应用的各种符号样式，如表面粗糙度符号、形位公差符号、焊接符号及其它常用的各种图形符号。用户可自行编辑该文件。当文件出错时（或丢失），SW 里的符号会出现乱码或无显示情况，并有报错弹窗。这时需要在【系统选项】-【文件位置】-符号图库文件重新定义文件位置。<br><img src="SOLIDWORKS定制文件/gtol.sym文件缺失.png"><br><img src="SOLIDWORKS定制文件/gtol.sym文件缺失2.png"></p>
+<h2 id="折弯线注释"><a href="#折弯线注释" class="headerlink" title="折弯线注释"></a>折弯线注释</h2><p>钣金折弯线注释文件 bendnoteformat.txt 修改工程图在外边的折弯注释<br>&lt;bend-direction&gt; <bend-complementary-angle> <bend-radius><br><img src="SOLIDWORKS定制文件/折弯线注释.png"></p>
+<h2 id="孔标注定制"><a href="#孔标注定制" class="headerlink" title="孔标注定制"></a>孔标注定制</h2><p>异型孔向导标注格式定义文件 calloutformat.txt 修改工程图【孔标注】的内容。txt 文件内编辑内容：<br>1、具体属性值对应代码可看 txt 文档最底下说明。<br>2、或是可以在工程图孔标注好再复制回 txt 文档。<br><img src="SOLIDWORKS定制文件/孔标注定制1.png"><br><img src="SOLIDWORKS定制文件/孔标注定制2.png"></p>
+<h2 id="钣金切割属性"><a href="#钣金切割属性" class="headerlink" title="钣金切割属性"></a>钣金切割属性</h2><p>钣金切割列表属性说明格式定义文件 clpnoteformat.txt 剪切列表属性的默认格式<br><img src="SOLIDWORKS定制文件/切割清单属性.png"></p>
+<h2 id="工程图比例"><a href="#工程图比例" class="headerlink" title="工程图比例"></a>工程图比例</h2><p>drawingscales.txt 修改工程图默认的视图比例<br><img src="SOLIDWORKS定制文件/#.png"></p>
+<h2 id="剖面线"><a href="#剖面线" class="headerlink" title="剖面线"></a>剖面线</h2><p>Sldwks.ptn 定义了工程图的剖面线效果，剖面样式文件可在<a target="_blank" rel="noopener" href="http://www.cadhatch.com/#/autocad-wood-hatch-patterns/4555347745">链接网站</a>获得。把*后内容复制到该文件后即可使用。（详见.ptn 说明）</p>
+ <!--## 映射文件
+多用于翻译映射文件的名字
+表格式文件名映射文件：sheetformats.txt
+焊件配置文件名称映射文件：weldmentprofiles.txt
+-->
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

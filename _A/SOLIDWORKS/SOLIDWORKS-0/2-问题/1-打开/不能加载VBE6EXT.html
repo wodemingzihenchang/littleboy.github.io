@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-08 15:03:57</span>
+</div>
+
+<div id="article"><h1 id="不能加载-VBE6EXT"><a href="#不能加载-VBE6EXT" class="headerlink" title="不能加载 VBE6EXT"></a>不能加载 VBE6EXT</h1><p>原因：可能是因为安装又卸载了Office所致，根据经验，Office和WPS卸载均可产生上述问题。</p>
+<img src="不能加载VBE6EXT/image1.png" >
+
+<h2 id="方法1-改变文件位置"><a href="#方法1-改变文件位置" class="headerlink" title="方法1:改变文件位置"></a>方法1:改变文件位置</h2><p>1、更改 VB6EXT.OLB 的文件位置（网上最常用方法），重启程序。操作如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文件从C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA7.1\VB6EXT.OLB</span><br><span class="line">复制到C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA6\VB6EXT.OLB</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法2-修改注册表"><a href="#方法2-修改注册表" class="headerlink" title="方法2:修改注册表"></a>方法2:修改注册表</h2><p>1、按 win+R 打开运行，输入 regedit 进入注册表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CLASSES_ROOT\TypeLib\&#123;0002E157-0000-0000-C000-000000000046&#125;\5.3\0\win32</span><br><span class="line">计算机\HKEY_CLASSES_ROOT\TypeLib\&#123;0002E157-0000-0000-C000-000000000046&#125;\5.3\0\win64</span><br></pre></td></tr></table></figure>
+
+<p>右击，然后点击修改（或者鼠标连点两次），将下面目录改成你的 VB6EXT.OLB 的目录：C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA7.1\VB6EXT.OLB</p>
+<img src="不能加载VBE6EXT/image2.png" >
+
+<h2 id="方法3-安装运行库"><a href="#方法3-安装运行库" class="headerlink" title="方法3:安装运行库"></a>方法3:安装运行库</h2><p>尝试覆盖安装了一下【微软常用运行库】搜索安装Microsoft visualBasic for Application 7.1 Chinese （Simpified）包，文件名：VBA71_2052.msi</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

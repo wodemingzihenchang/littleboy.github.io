@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 13:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-Composer-发布-PDF："><a href="#SOLIDWORKS-Composer-发布-PDF：" class="headerlink" title="SOLIDWORKS Composer 发布 PDF："></a>SOLIDWORKS Composer 发布 PDF：</h1><p>说明介绍 SOLIDWORKS Composer 在发布 PDF 时的一些操作。</p>
+<h2 id="制作-PDF-模板"><a href="#制作-PDF-模板" class="headerlink" title="制作 PDF 模板"></a>制作 PDF 模板</h2><p>默认无模板情况下发布，输出结果是一份只显示 Composer 界面的 PDF 文件。此时文件内并不包含其他文字等说明内容。所以我们需要通过先制作一份 PDF 模板用来填入文字内容等。</p>
+<ol>
+<li><p>你可以先在 Word 文档编辑排版，并另存为 PDF 格式。在 PDF 文件中需要通过工具创建一个按钮，以用作嵌入式 Composer 文件的占位符。按照以下步骤添加按钮，并将 Composer 文件导入 PDF。</p>
+</li>
+<li><p>以 Adobe 的 PDF 为例。在 PDF【富媒体】工具里”添加按钮”，划分出排版预留的位置，作为接收 Composer 文件的区域。按钮的域名称填：”SeemageReplace”。</p>
+</li>
+<li><p>完成后保存即可。</p>
+</li>
+</ol>
+<img src="DSComposer-发布PDF/image1.png">
+
+<h2 id="发布-PDF-文件"><a href="#发布-PDF-文件" class="headerlink" title="发布 PDF 文件"></a>发布 PDF 文件</h2><p>【文件-发布-PDF】进行 Composer 文件的发布。</p>
+<img src="DSComposer-发布PDF/image2.png">
+
+<p>在保存的弹窗里选择使用自定义模板。PDF 有三种类型的发布，下面是对几种 PDF 输出的展示类型说明：</p>
+<img src="DSComposer-发布PDF/image3.png">
+
+<h3 id="仅预览图像："><a href="#仅预览图像：" class="headerlink" title="仅预览图像："></a>仅预览图像：</h3><p>将当前视口的快照作为 2D 图像嵌入 PDF 文件。</p>
+<img src="DSComposer-发布PDF/image4.png">
+
+<h3 id="U3D："><a href="#U3D：" class="headerlink" title="U3D："></a>U3D：</h3><p>使用 Universal 3D (U3D) 格式将 3D 内容嵌入 PDF<br>文件，该格式是一种用于可视化和发布的开放式标准格式。使用 Acrobat U3D<br>界面查看 U3D 内容，然后查看功能。指定 U3D 选项页面上的其他选项</p>
+<img src="DSComposer-发布PDF/image5.png">
+
+<img src="DSComposer-发布PDF/image6.png">
+
+<img src="DSComposer-发布PDF/image7.png">
+
+<h3 id="SMG（增强内容）"><a href="#SMG（增强内容）" class="headerlink" title="SMG（增强内容）"></a>SMG（增强内容）</h3><p>使用 Composer SMG 格式将 3D 内容嵌入 PDF 文件。SMG 格式为用户提供丰富的<br>Composer 体验，类似于 Composer 创作环境。</p>
+<p>（注意：需要安装适用于 Adobe Acrobat 的免费 Composer 插件才能查看 3D<br>内容。安装 Composer Player<br>也会安装插件文件  PlayerControl.dll  和  PlayerReader.api。文件的位置取决于所安装的应用程序（Composer、Adobe<br>Reader 或 Adobe Acrobat）。</p>
+<p>如果文件已安装在 Composer 目录下，则您必须将这些文件复制到 PDF 目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Composer 目录:&lt;Composer_install_dir&gt;\Plugins\Acrobat\Reader\Plug_Ins</span><br><span class="line">PDF 目录:&lt;Reader_install_dir&gt;\plug_ins 或&lt;Acrobat_install_dir&gt;\plug_ins</span><br></pre></td></tr></table></figure>
+
+<img src="DSComposer-发布PDF/image8.png">
+
+<img src="DSComposer-发布PDF/image9.png">
+
+<img src="DSComposer-发布PDF/image10.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

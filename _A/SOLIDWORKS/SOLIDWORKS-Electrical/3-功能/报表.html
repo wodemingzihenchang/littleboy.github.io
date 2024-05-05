@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-11 10:05:39</span>
+</div>
+
+<div id="article"><h1 id="报表"><a href="#报表" class="headerlink" title="报表"></a>报表</h1><p>由于每个企业的清单报表格式不同，需要统计的信息也不同，SOLIDWORKS Electrical只提供了默认的清单报表格式，这就需要企业自己定制自己的报表格式。</p>
+<p>下面为大家简单介绍下，如何在SOLIDWORKS Electrical中定制自己的报表格式。</p>
+<p>如果企业想在清单中增加一条内容，例如元器件的物料编码，可以进行以下操作：</p>
+<ol>
+<li><p>通过快捷方式，在清单列表中右键，选择“编辑报表配置”，如下图示：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-5f2acfbe7289838a2920217598def597_720w.webp" alt="img"></p>
+</li>
+<li><p>在弹出的对话框中，选择“列”，可以看到当前报表配置中，只提取了4条属性内容：</p>
+</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-c5bc8c995c7e71a4d8135b7dc5b985ec_720w.webp" alt="img"></p>
+<ol start="3">
+<li>选择“列管理”，在弹出的对话框中列出了当前所有能添加到列中的属性，如图：</li>
+</ol>
+<p><img src="%E6%8A%A5%E8%A1%A8/image-20240411102618341.png" alt="image-20240411102618341"></p>
+<p>我们发现所需的物料编码属性在“列配置”中，勾选即可。点击“应用”后关闭。</p>
+<ol start="4">
+<li>这时若发现当前的报表并没有发生变化，这是因为所有配置是对下一次生效，所以我们需要更新一次已生成的清单报表，右键工程中的报表，在弹出的对话框中，单击“更新报表图纸”，如下图示：</li>
+</ol>
+<p><img src="https://pic2.zhimg.com/80/v2-6edbf394438fbcb174869aa68e5edfc9_720w.webp" alt="img"></p>
+<ol start="5">
+<li>更新后便发现所有的元器件都带上了物料编码，如果你创建数据库时，填写了该物料的编码就能提取出来，否则显示为空。</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/80/v2-13ef13a8e75c37e5bf1de70064a88494_720w.webp" alt="img"></p>
+<h2 id="专家模式"><a href="#专家模式" class="headerlink" title="专家模式"></a>专家模式</h2><p>若“列配置”中没有我们想要的内容，就需要激活专家模式，从SQL中调出我们需要的内容，如下图：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-ee48c05e20c207b04774b64a89c11c5d_720w.webp" alt="img"></p>
+<p>在SQL查询中，所有数据库中的信息都在这里存放。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-c8b5dabedbfbb43741868c0e5d64dec1_720w.webp" alt="img"></p>
+<h2 id="列属性说明"><a href="#列属性说明" class="headerlink" title="列属性说明"></a>列属性说明</h2><p>源</p>
+<p>目标</p>
+<p>电线编号</p>
+<p>截面积</p>
+<p>长度:(m)&#x2F;长度(英寸)</p>
+<p>基准</p>
+<p>位置目标</p>
+<p>线路样式</p>
+<p>源&#x2F;源(父设备)&#x2F;源(设备类型)</p>
+<p>位罟源</p>
+<p>端子源</p>
+<p>目标(父设备)&#x2F;目标(设备类型)&#x2F;</p>
+<p>端子目标</p>
+<p>电缆</p>
+<p>电缆基准(自线类型)</p>
+<p>电线顺序号</p>
+<p>目标位置标识符</p>
+<p>可译数据</p>
+<p>用户数据</p>
+<p>电位</p>
+<p>信号</p>
+<p>颜色代码</p>
+<p>线束</p>
+<p>Duct path (cable) [zh]</p>
+<p>Duct path (wire) [zh]</p>
+<p>完整源设备标注</p>
+<p>完整目标设备标注</p>
+<p>电位行标注</p>
+<p>电位列标注</p>
+<p>源位置说明</p>
+<p>目标位置说明</p>
+<p>电位文件标注</p>
+<p>电位文件集标注</p>
+<p>编号组名称</p>
+<p>编号组描述</p>
+<p>原始最大线号</p>
+<p>目标最大线号</p>
+<p>原始助记</p>
+<p>目标助记</p>
+<p>原始使用</p>
+<p>目标使用</p>
+<p>原始最大电线</p>
+<p>截面积 (mm)</p>
+<p>目标最大电线</p>
+<p>截面积</p>
+<p>原始最小电线截面积s(mm目标最小电线截面积原始最大电线规格(AWG)目标最大电线规格(AWG)原始最小电线规格(AWG)目标最小电线规格(AWG)</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

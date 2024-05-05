@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-06 18:07:40</span>
+</div>
+
+<div id="article"><h1 id="DSComposer-动画库"><a href="#DSComposer-动画库" class="headerlink" title="DSComposer-动画库"></a>DSComposer-动画库</h1><h2 id="默认动画库"><a href="#默认动画库" class="headerlink" title="默认动画库"></a>默认动画库</h2><h3 id="Hightlight："><a href="#Hightlight：" class="headerlink" title="Hightlight："></a>Hightlight：</h3><ul>
+<li>强调（enhance）</li>
+<li>重点（focus）</li>
+<li>验证（validated）</li>
+<li>警告（warning）</li>
+</ul>
+<h3 id="Motion"><a href="#Motion" class="headerlink" title="Motion"></a>Motion</h3><ul>
+<li>安装install</li>
+<li>删除remove</li>
+<li>旋转roll</li>
+<li>安装螺丝（screw）</li>
+<li>卸装螺丝（unscrew）</li>
+<li>松开untighten</li>
+</ul>
+<h2 id="自制动画库"><a href="#自制动画库" class="headerlink" title="自制动画库"></a>自制动画库</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><a href="ttps://help.solidworks.com/2023/chinese-simplified/DSSWXComposerDoc/Cps1UserMap/cps-c-Animations-XMLExample.htm#c-CodeExample">动画库语法</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Step创建一幅动画。参考如下所示：</span></span><br><span class="line"><span class="comment">Name：显示的文本用于在动画库工作间中识别动画。</span></span><br><span class="line"><span class="comment">ReadOnly：指定是(1)否(0)允许用户在动画库工作间中修改属性值。</span></span><br><span class="line"><span class="comment">MakeAngleAxisDistPtEditable：指定是否可在以下设置下在动画库工作间中编辑动画角色的角度、轴、距离和点属性：将 ReadOnly 设置为 &quot;1&quot;。</span></span><br><span class="line"><span class="comment">ShowStartEnd：针对动画中的每次运动，指定在动画库工作间中是隐藏(0)还是显示(1)开始时间和结束时间属性值。--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Step</span> <span class="attr">Name</span>=<span class="string">&quot;Enhance&quot;</span> <span class="attr">ReadOnly</span>=<span class="string">&quot;0&quot;</span> <span class="attr">ShowStartEnd</span>=<span class="string">&quot;1&quot;</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">Modifiables</span>/&gt;</span> <span class="comment">&lt;!--介绍组成动画的各个运动。独立、强制性元素--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Motions</span>&gt;</span><span class="comment">&lt;!--介绍组成动画的单独运动--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Motion</span> <span class="attr">Name</span>=<span class="string">&quot;Flash&quot;</span>&gt;</span><span class="comment">&lt;!--创建动画内的单独运动。每个运动都包含以下参数：--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">PropSet</span>&gt;</span><span class="comment">&lt;!--介绍运动的属性集--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Start</span> <span class="attr">Value</span>=<span class="string">&quot;0&quot;</span>/&gt;</span><span class="comment">&lt;!--使用一个或多个参数，定义运动的每个属性--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.End</span> <span class="attr">Value</span>=<span class="string">&quot;2&quot;</span>/&gt;</span><span class="comment">&lt;!-- --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Color</span> <span class="attr">R</span>=<span class="string">&quot;100&quot;</span> <span class="attr">G</span>=<span class="string">&quot;123&quot;</span> <span class="attr">B</span>=<span class="string">&quot;146&quot;</span>/&gt;</span>	<span class="comment">&lt;!-- --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Intensity</span> <span class="attr">Value</span>=<span class="string">&quot;1.0&quot;</span>/&gt;</span>	<span class="comment">&lt;!-- --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Repetition</span> <span class="attr">Value</span>=<span class="string">&quot;4&quot;</span>/&gt;</span> <span class="comment">&lt;!-- --&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">PropSet</span>&gt;</span><span class="comment">&lt;!-- --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Motion</span>&gt;</span><span class="comment">&lt;!-- --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Motion</span> <span class="attr">Name</span>=<span class="string">&quot;Translate&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">PropSet</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Start</span> <span class="attr">Value</span>=<span class="string">&quot;1&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.End</span> <span class="attr">Value</span>=<span class="string">&quot;4&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Distance</span> <span class="attr">Value</span>=<span class="string">&quot;100&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Axis</span> <span class="attr">X</span>=<span class="string">&quot;0.0&quot;</span> <span class="attr">Y</span>=<span class="string">&quot;0.0&quot;</span> <span class="attr">Z</span>=<span class="string">&quot;-1.0&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">PropSet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Motion</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">Motion</span> <span class="attr">Name</span>=<span class="string">&quot;Rotate&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">PropSet</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Start</span> <span class="attr">Value</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.End</span> <span class="attr">Value</span>=<span class="string">&quot;4&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Angle</span> <span class="attr">Value</span>=<span class="string">&quot;-360&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Motion.Axis</span> <span class="attr">X</span>=<span class="string">&quot;0.0&quot;</span> <span class="attr">Y</span>=<span class="string">&quot;0.0&quot;</span> <span class="attr">Z</span>=<span class="string">&quot;1.0&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">PropSet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Motion</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Motions</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Links</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Mirror</span> <span class="attr">FolderName</span>=<span class="string">&quot;Motion&quot;</span> <span class="attr">FileName</span>=<span class="string">&quot;Unscrew&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Links</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Step</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&lt;Motion.XXX&gt;属性对应：</p>
+<p>&lt;Motion.End Value&#x3D;”2”&#x2F;&gt;<!-- --><br>&lt;Motion.Color R&#x3D;”100” G&#x3D;”123” B&#x3D;”146”&#x2F;&gt;	<!-- --><br>&lt;Motion.Intensity Value&#x3D;”1.0”&#x2F;&gt;	<!-- --><br>&lt;Motion.Repetition Value&#x3D;”4”&#x2F;&gt; <!-- --></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

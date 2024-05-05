@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-13 16:52:42</span>
+</div>
+
+<div id="article"><h1 id="参考文件的读取顺序"><a href="#参考文件的读取顺序" class="headerlink" title="参考文件的读取顺序"></a>参考文件的读取顺序</h1><p>当打开参考文档时，SOLIDWORKS 进行搜索以找出文件。 </p>
+<p>例如，</p>
+<p>此搜索可能在您打开工程图而被参考的装配体找不到时发生，</p>
+<p>或者当您还原装配体中压缩零部件而零部件找不到时发生。</p>
+<p>当一参考的文件找到时，软件将更新至父文件中所参考的文件的路径。当您保存父文件时，更新的路径也被保存。</p>
+<p>以下规则栏说明软件用来找出遗失的参考文件的搜索常规。</p>
+<p>范例栏显示软件使用以下情形检查的路径：</p>
+<h2 id="移动装配体文件"><a href="#移动装配体文件" class="headerlink" title="移动装配体文件"></a>移动装配体文件</h2><p>装配体最后另存为 C:\zz\a1.sldasm。可将装配体移至 D:\ss\tt\a1.sldasm。</p>
+<p>装配体中的第一个零件上次保存为 C:\qq\p1.sldprt。您不移动此零件。</p>
+<p>装配体中的第二个零件上次保存为 C:\zz\yy\xx\p2.sldprt。此零件要么是通过删除、重新命名、或其它文件管理错误而遗失。</p>
+<p>文件位置选项对话框的 文件夹清单中有两个路径：D:\aa\bb\ 和 E:\cc\dd\。</p>
+<p>您单击文件 &gt; 打开在其新位置打开 a1.sldasm。</p>
+<h1 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h1><p>SolidWorks按照以下顺序搜索被引用文件:</p>
+<h2 id="1-读取内存–"><a href="#1-读取内存–" class="headerlink" title="1)读取内存–"></a>1)读取内存–</h2><p>如果一个具有与装配体同名的文件已经在内存中打开，SolidWorks将直接使用这个文件。例如： p2.sldprt 在其他打开的文件中，SOLIDWORKS 将使用此版本的 p2.sldprt。</p>
+<h2 id="2-参考文件夹"><a href="#2-参考文件夹" class="headerlink" title="2)参考文件夹"></a>2)参考文件夹</h2><ol start="2">
+<li>   搜索在 文件位置选项对话框的参考文档文件夹列表中指定的路径。</li>
+</ol>
+<p>D:\aa\bb\p2.sldprt<br>E:\cc\dd\p2.sldprt</p>
+<p>默认参考文件夹是在设置的位置下的同名零件查找，如果需要进到子文件夹，则需勾选如下选项。注意，如果参考引用的文档搜索路径包含大量子文件夹，则通过使用子文件夹来搜索文件可能会花费很长时间</p>
+<img src="参考文件的读取顺序/image-20240426142931832.png">
+
+
+
+<p>按【工具】&#x2F;【选项】&#x2F;【系统选项】&#x2F;【文件位置】中指定的参考文件路径–添加一个让SolidWorks优先搜索的目录列表，这些路径通常是保存项目的工作服务器上的网络共享位</p>
+<h2 id="3-最近一次打开文件时的路径–"><a href="#3-最近一次打开文件时的路径–" class="headerlink" title="3)最近一次打开文件时的路径–"></a>3)最近一次打开文件时的路径–</h2><p>打开父文件时，SolidWorks将在同一路径下搜索参考文</p>
+<h2 id="4-系统最近打开文件的路径–"><a href="#4-系统最近打开文件的路径–" class="headerlink" title="4)系统最近打开文件的路径–"></a>4)系统最近打开文件的路径–</h2><p>适用于系统曾在某路径下打开过参考文件的情况。</p>
+<h2 id="5-父文件最后保存时参考文件所在的路径–"><a href="#5-父文件最后保存时参考文件所在的路径–" class="headerlink" title="5)父文件最后保存时参考文件所在的路径–"></a>5)父文件最后保存时参考文件所在的路径–</h2><p>如果父文件被移动，将使用当前的磁盘盘符(如E:)来取代其在最后保存时的盘符(如C:、D:等)</p>
+<h2 id="6-父文件最后保存时参考文件的原始磁盘路径–"><a href="#6-父文件最后保存时参考文件的原始磁盘路径–" class="headerlink" title="6)父文件最后保存时参考文件的原始磁盘路径–"></a>6)父文件最后保存时参考文件的原始磁盘路径–</h2><p>指保存在父文件中的绝对路径。</p>
+<p>7)如果仍没有找到参考文件，SolidWorks将要求用户指定–当SolidWorks按上述6种方式没有找到参考文件时，则会要求用户指定路径。</p>
+<h2 id="上次保存位置"><a href="#上次保存位置" class="headerlink" title="上次保存位置"></a>上次保存位置</h2><p>3.	<br>搜索激活文件的路径，然后循环搜索所参考的文件上次保存在的路径。</p>
+<p>D:\ss\tt\p2.sldprt</p>
+<p>D:\ss\tt\xx\p2.sldprt</p>
+<p>D:\ss\tt\yy\xx\p2.sldprt</p>
+<p>D:\ss\tt\zz\yy\xx\p2.sldprt</p>
+<p>D:\ss\xx\p2.sldprt</p>
+<p>D:\ss\yy\xx\p2.sldprt</p>
+<p>D:\ss\zz\yy\xx\p2.sldprt</p>
+<p>D:\xx\p2.sldprt</p>
+<p>D:\yy\xx\p2.sldprt</p>
+<p>D:\zz\yy\xx\p2.sldprt</p>
+<p>4.	<br>搜索您上次打开一文件的路径，然后循环搜索所参考的文件上次保存在的路径。</p>
+<p>在大部分情况下，激活文件的路径与您上次打开一文件的路径相同。</p>
+<p>如果您单击文件 &gt; 打开来打开一个文档，然后从文件资源管理器将装配体拖动到该文档中，则两个路径不相同。 激活文档的路径为文件资源管理器中的路径，而您上次打开文档的路径为文件 &gt; 打开的路径。</p>
+<p>与步骤 3 相同</p>
+<p>5.	<br>搜索软件上次找到参考文件的路径。</p>
+<p>C:\qq\p2.sldprt</p>
+<p>此为 p1.sldprt 的位置。</p>
+<p>6.	<br>搜索文件上次无驱动器指定而保存的完整路径。</p>
+<p>\zz\yy\xx\p2.sldprt</p>
+<p>这在您以 UNC 路径保存零件时尤其有用，如 \machine\folder\p2.sldprt。</p>
+<p>7.	<br>搜索文件上次带其原始驱动器指定而保存的完整路径。</p>
+<p>C:\zz\yy\xx\p2.sldprt<br>8.	<br>允许您自己浏览文件。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

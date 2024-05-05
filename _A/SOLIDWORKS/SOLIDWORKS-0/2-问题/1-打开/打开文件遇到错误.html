@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-09 22:04:19</span>
+</div>
+
+<div id="article"><h1 id="打开文件遇到错误"><a href="#打开文件遇到错误" class="headerlink" title="打开文件遇到错误"></a>打开文件遇到错误</h1><p>通过该问题于加密的关系会很大，你可以以这篇文章作为参考，但请不要抱有太大的希望。并且我希望你能做好重建零件的心理准备。</p>
+<img src="打开文件遇到错误/1.png" >
+
+<span id="more"></span>
+
+<h2 id="自动修复功能"><a href="#自动修复功能" class="headerlink" title="自动修复功能"></a>自动修复功能</h2><p>SOLIDWORKS 2017 添加了用于修复损坏文件的自动功能。如果您尝试打开一个损坏的文件，该工具会尝试识别损坏的片段，将其删除并保存原始片段的副本。</p>
+<h2 id="从备份还原"><a href="#从备份还原" class="headerlink" title="从备份还原"></a>从备份还原</h2><p>如果启用了【系统选项-备份&#x2F;恢复】的“自动恢复”和“备份”选项，你可以尝试从选项中的文件路径进行还原，来替换问题文件使用。</p>
+<img src="打开文件遇到错误/备份.png">
+
+<p>除了上述两种方法之外，你还可以参考下面的操作进行尝试。</p>
+<h2 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h2><p>针对问题零件，我们最终目标是确认它是否还能通过 SW 打开，如果不行则需考虑重新设计该零件。</p>
+<pre class="mermaid">graph LR
+检查-->是否有加密问题--no-->是否有网盘问题--no-->是否电脑问题
+是否有加密问题--yes-->验证解密并在未加密环境打开
+是否有网盘问题--yes-->验证在本地打开能否打开
+是否电脑问题--yes-->验证在其他电脑打开</pre>
+
+
+<p>通过改变问题文件的使用环境打开该文件，验证是否为特定电脑或特定文件的限制问题。</p>
+<p>其他情况：例如使用了第三方API操作情况导致，需要具体问题文件进行分析。或者是当作文件损坏（建议查找备份或新建）</p>
+<h2 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h2><h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在使用【打开文件】时，选择“配置-&lt;高级&gt;”。在配置中选择“只显示装配体结构的新配置，并且随便写个配置名称“1”。完成后确定打开文件。</p>
+<img src="打开文件遇到错误/高级配置打开.png">
+
+<p>此时文件的设计树是以全压缩的形式，我们可以使用二分排查方式（一半一半的解压），当解压到问题文件时，装配体会报错或是闪退，此时我们就能定位到问题零件，并进行删除处理。</p>
+<img src="打开文件遇到错误/高级配置打开3.png">
+
+
+
+<h3 id="大型设计审阅方法"><a href="#大型设计审阅方法" class="headerlink" title="大型设计审阅方法"></a>大型设计审阅方法</h3><p>此方法加载的数据比高级配置方法多，但它仍可能用于故障排除。这里的一个主要区别是，您将能够在将组件完全加载到 RAM 之前看到它们。使用以下过程：</p>
+<p>在未打开任何文件的情况下启动 SOLIDWORKS。单击<em>“打开</em>”。在“<em>模式</em>设置”下，选择<em>“大型设计评审</em>”，然后打开文件。</p>
+<p><img src="https://store.trimech.com/wp-content/uploads/2020/08/Large_design_review_in_SOLIDWORKS-1.png" alt="Large_design_review_in_SOLIDWORKS"></p>
+<p>单击“<em>大型设计审阅</em>”弹出窗口中的<em>“确定</em>”。单击“<em>大型设计审查</em>命令管理器”选项卡上的“<em>选择性打开</em>”。</p>
+<p><img src="https://store.trimech.com/wp-content/uploads/2020/08/Selective_open_option_in_SOLIDWORKS-1.png" alt="Selective open option in SOLIDWORKS"></p>
+<p>在设计树中选择您认为可能未损坏的零件，然后单击<em>打开所选部分。</em></p>
+<p>如果你走到了这一步，你将不再处于<em>大型设计评审</em>模式。您选择的部件将完全加载到内存中，所有其他组件将被隐藏。弹出窗口将警告您内存中正在加载隐藏的组件注释。</p>
+<p>在正常情况下，隐藏组件只会使它们对我们不可见，但所有数据仍保存在 RAM 中供 SOLIDWORKS 使用。使用这种方法，您可以开始一个接一个地显示组件，并且随着每个组件的显示，它也将被完全加载。当其中一个失败时，您已经找到了损坏的组件。</p>
+<p>我建议扩展<em>显示窗格</em>以加快这项工作。（树上方的“管理器”选项卡右上角的小浮出箭头。您无需一次选择一个组件并从弹出工具栏中选择令人毛骨悚然的眼球图标，而是只需单击一下即可切换隐藏&#x2F;显示状态。但是，如果未选中“<em>打开”对话框</em>中“<em>大型设计审阅</em>”旁边的<em>“编辑程序集</em>”复选框，则它可能不可用。</p>
+<p><img src="https://store.trimech.com/wp-content/uploads/2020/08/Edit_assembly_option_in_SOLIDWORKS-1.png" alt="Edit assembly option in SOLIDWORKS"></p>
+<h2 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h2><p>欸。。。。，等我遇到了再写</p>
+<h1 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h1><h2 id="重复打开操作"><a href="#重复打开操作" class="headerlink" title="重复打开操作"></a>重复打开操作</h2><p>有时重启软件，重开文件也能恢复正常</p>
+<h2 id="Swshellfilelauncher"><a href="#Swshellfilelauncher" class="headerlink" title="Swshellfilelauncher"></a>Swshellfilelauncher</h2><p>如果是出现Swshellfilelauncher.exe程序的弹窗，则可以检查下面几种情况：</p>
+<p>A1：据说是多版本问题，先打开SW再拖拽文件到程序界面即可？</p>
+<p>A2：据说复制换个名字也能打开？</p>
+<p>A3：内存不足：建议您尝试关闭其他程序，然后重新打开SW并尝试打开该文件。</p>
+<p>Swshellfilelauncher这是 SolidWorks® 文件启动程序。SolidWorks 2012 SP4 中引入的 SolidWorks 文件启动程序让用户能够选择从 Windows 资源管理器中打开文件时要在哪个版本的 SolidWorks 中打开文件（安装有多个版本时）。</p>
+<h2 id="方法3：替换文件"><a href="#方法3：替换文件" class="headerlink" title="方法3：替换文件"></a>方法3：替换文件</h2><p>有时文件存在有些人能打不开的情况。那可以让正常打开的电脑进行问题文件的另存尝试。（相当于把问题文件更换，但内容不变）</p>
+<p>1、打开此装配体；<br>2、新建一个装配体；<br>3、将有问题装配体插入到新装配体内，并勾选“确定”，固定到原三视基准面；<br>4、解散插入的问题装配体；<br>5、替换或另存此新装配体，后续，用此新装配体工作；</p>
+<img src="打开文件遇到错误/3.png">
+
+
+
+<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>1、在【系统选项-备份&#x2F;恢复】中找到备份文件夹，</p>
+<p>2、在文件夹中知道“备份于 文件名称”的文件，用此文件改名替换原来的“文件名称”文件即可</p>
+<img src="打开文件遇到错误/备份.png">
+
+
+
+<!--flow
+st=>start: 检查
+cond1=>condition: 加密问题
+cond2=>condition: 网盘问题
+cond3=>condition: 电脑问题
+cond4=>condition: API操作
+cond11=>operation: 解密并在未加密环境打开
+cond22=>operation: 在其他电脑打开
+cond33=>operation: 在本地打开
+e=>end: 结束节点
+
+st(right)->cond1(right)
+cond1(yes,right)->cond11
+cond2(yes,right)->cond22
+cond3(yes,right)->cond33
+cond4(yes,right)->e
+cond1(no,)->cond2
+cond2(no,)->cond3
+cond3(no,)->cond4
+-->
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

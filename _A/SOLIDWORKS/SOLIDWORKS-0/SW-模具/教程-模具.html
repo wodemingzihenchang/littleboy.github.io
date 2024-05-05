@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><p>教程-SOLIDWORKS 模具提供一种模具设计的工具，其结果是输出一份“产品+模仁”的多实体零件。本文章模型已做拔模、缩放处理。</p>
+<span id="more"></span>
+<iframe src="//player.bilibili.com/player.html?aid=434006205&bvid=BV1FG411N79p&cid=933020066&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FG411N79p/?spm_id_from=333.788&vd_source=61426b94de87e3e2baee96fc2f5b14f2">视频操作</a></p>
+<p>【分型线】：<br>选择分型面用于生成分型线。</p>
+<img src="教程-模具\1.png">
+
+<p>【关闭曲面】：<br>对于一些有开口贯穿的产品，我们需要进行封闭处理才能进行模仁分割。</p>
+<img src="教程-模具\2.png">
+
+<p>【分型面】：<br>生成用于分割模仁的分割面</p>
+<img src="教程-模具\3.png">
+
+<p>【切削分割】：<br>利用“草图”轮廓生成上下模仁（草图轮廓需要在分型面范围内，才可进行上下模的分割操作）。<br><img src="教程-模具\4.png"></p>
+<p>选择草图后，会进入模仁分割设置窗口，你会需要设置上下模高度。</p>
+<img src="教程-模具\5.png">
+
+<p>【型腔】-<br>利用装配体零件生成模仁的方法。要求处理对象是具有上模、下模、产品的装配体文件。</p>
+<img src="教程-模具\6.png">
+
+<p>在“编辑上下模仁零件”模式下开启【插入-模具-型腔】功能</p>
+<img src="教程-模具\7.png">
+
+<img src="教程-模具\8.png">
+
+<p>【型心】-<br>利用【型心】功能，可以生成模具的滑块零件等。型心要求你需要先准备好“产品+模仁”，“型心草图”</p>
+<img src="教程-模具\9.png">
+
+<p>【插入-模具-型心】选择“型心草图”</p>
+<img src="教程-模具\10.png">
+
+<p>一般会根据“型心草图”自动获得相关对象</p>
+<img src="教程-模具\11.png">
+
+<p>补充说明：【评估-底切分析】可以分析出产品需要“型心滑块”结构的区域。</p>
+<img src="教程-模具\12.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

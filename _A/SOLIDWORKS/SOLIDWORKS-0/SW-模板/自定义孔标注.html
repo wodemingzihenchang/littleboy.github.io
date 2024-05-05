@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-27 16:24:07</span>
+</div>
+
+<div id="article"><h1 id="自定义孔标注"><a href="#自定义孔标注" class="headerlink" title="自定义孔标注"></a>自定义孔标注</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Solidworks孔标注默认会有很多内容。但对标注样式有定制要求的话，就需要制作符合自己标准的异型孔标注格式。<br>在自定义孔标注之前呢，我先大致说明下其语法格式。以下内容均以GB标准。</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>下面将举一个例子演示：对孔标注做简化操作说明。</p>
+<img src="自定义孔标注/image-20240327190442962.png">
+
+<p>a)去除不必要的空格；<br>b)去除“完全贯穿”（有些会写THR）；<br>c)去除螺纹精度“-6H”等{看需要}；<br>d)去除螺纹底孔（一般可以不标）；</p>
+<p>方法：</p>
+<p>打开“calloutformat.txt”文件，通过菜单“编辑”、用“查找”、”替换”的办法，即可很方便的解决问题：去掉前后空格：替换字符“（空格）&lt;”为“&lt;”、替换“&gt;（空格）”为“&gt;”；</p>
+<img src="自定义孔标注/image-20240327190455550.png">
+
+<p> “-6H”：直接替换去除；同理替换去除螺纹底孔：去除和字符串“<hw-tapdrldia>”、“<hw-thrutapdrldia>”、 “<MOD-DIAM>”、“<HOLE-DEPTH>”、“<hw-tapdrldepth>”；</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>相关的“calloutformat.txt”文件字符串含义：</p>
+<img src="自定义孔标注/image-20240327190502664.png">
+
+<p>“*”：后面是注释<br>“HOLE-BLIND(csns)&#x3D;”：孔类型，<br>后面就是标注样式：<HOLE-SINK><MOD-DIAM> <hw-nscsdia> X <hw-nscsang>, <hw-msgnearside><br>“\”：换行</p>
+<h2 id="孔类型9种："><a href="#孔类型9种：" class="headerlink" title="孔类型9种："></a>孔类型9种：</h2><h3 id="柱状沉头孔Counterbore"><a href="#柱状沉头孔Counterbore" class="headerlink" title="柱状沉头孔Counterbore"></a>柱状沉头孔Counterbore</h3><img src="自定义孔标注/image-20240327190511130.png">
+
+<p>通  孔格式：<MOD-DIAM> <hw-thruholedia> <hw-thru></p>
+<p>沉头孔格式：<HOLE-SPOT><MOD-DIAM> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth></p>
+<h3 id="锥形沉头孔Countersink"><a href="#锥形沉头孔Countersink" class="headerlink" title="锥形沉头孔Countersink"></a>锥形沉头孔Countersink</h3><img src="自定义孔标注/image-20240327190515764.png">
+
+<p>通  孔格式：<MOD-DIAM> <hw-thruholedia> <hw-thru></p>
+<p>沉头孔格式：<HOLE-SINK><MOD-DIAM> <hw-csdia> X <hw-csang></p>
+<p>锥形沉头孔只有“远端圆角”，正常也是不用设置，标注螺纹利边倒角即可。</p>
+<h3 id="孔Hole"><a href="#孔Hole" class="headerlink" title="孔Hole"></a>孔Hole</h3><img src="自定义孔标注/image-20240327190521767.png">
+
+<p>格式：<MOD-DIAM> <hw-diam> <HOLE-DEPTH> <hw-depth></p>
+<h3 id="直螺纹孔Straight-Tap"><a href="#直螺纹孔Straight-Tap" class="headerlink" title="直螺纹孔Straight Tap"></a>直螺纹孔Straight Tap</h3><img src="自定义孔标注/image-20240327190527559.png">
+
+<p>牙孔：<NUM_INST> x  <hw-threaddesc> - 6H <HOLE-DEPTH> <hw-threaddepth></p>
+<img src="自定义孔标注/image-20240327190532919.png">
+
+<p>钻孔：<MOD-DIAM> <hw-tapdrldia> <HOLE-DEPTH> <hw-tapdrldepth></p>
+<h3 id="锥形螺纹孔Tapered-Tap"><a href="#锥形螺纹孔Tapered-Tap" class="headerlink" title="锥形螺纹孔Tapered Tap"></a>锥形螺纹孔Tapered Tap</h3><img src="自定义孔标注/image-20240327190539193.png">
+
+<p>锥螺纹格式：<hw-descrp></p>
+<img src="自定义孔标注/image-20240327190557167.png">
+
+<p>钻  孔格式：<MOD-DIAM> <hw-tapdrldia> <HOLE-DEPTH> <hw-tapdrldepth></p>
+<h3 id="旧制孔Legacy-Hole"><a href="#旧制孔Legacy-Hole" class="headerlink" title="旧制孔Legacy Hole"></a>旧制孔Legacy Hole</h3><h3 id="柱孔沉头孔槽口Counterbore-Slot"><a href="#柱孔沉头孔槽口Counterbore-Slot" class="headerlink" title="柱孔沉头孔槽口Counterbore Slot"></a>柱孔沉头孔槽口Counterbore Slot</h3><img src="自定义孔标注/image-20240327190608143.png">
+
+<p>槽  口格式：<hw-thruholedia> X <hw-slot-length> <hw-thru></p>
+<p>沉头孔格式：<HOLE-SPOT> <hw-cbdia> <HOLE-DEPTH> <hw-cbdepth></p>
+<h3 id="锥形沉头孔槽口Countersink-Slot"><a href="#锥形沉头孔槽口Countersink-Slot" class="headerlink" title="锥形沉头孔槽口Countersink Slot"></a>锥形沉头孔槽口Countersink Slot</h3><img src="自定义孔标注/image-20240327190617297.png">
+
+<p>槽  口格式：<hw-thruholedia> X <hw-slot-length> <hw-thru></p>
+<p>沉头孔格式：<HOLE-SINK> <hw-csdia> X <hw-csang></p>
+<h3 id="槽口Slot"><a href="#槽口Slot" class="headerlink" title="槽口Slot"></a>槽口Slot</h3><img src="自定义孔标注/image-20240327190621721.png">
+
+<p>槽  口格式：<hw-diam> X <hw-slot-length> <hw-thru></p>
+<p>端面锥孔（通用）<br>倒角设置（一般不用）</p>
+<img src="自定义孔标注/image-20240327190629117.png">
+
+<p>近端锥孔格式：<HOLE-SINK><MOD-DIAM> <hw-nscsdia> X <hw-nscsang>, <hw-msgnearside><br>中端锥孔格式：<HOLE-SINK><MOD-DIAM> <hw-midcsdia> X <hw-midcsang>, <hw-msgmidside><br>远端锥孔格式：<HOLE-SINK><MOD-DIAM> <hw-fscsdia> X <hw-fscsang>, <hw-msgfarside></p>
+<img src="自定义孔标注/image-20240327190634751.png">
+
+<h2 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">标注变量</span><br><span class="line">&lt;hw-std&gt;	：标准</span><br><span class="line">&lt;hw-slot-width&gt;	：槽口宽度</span><br><span class="line">&lt;hw-slot-length&gt;	：槽口长度</span><br><span class="line">&lt;hw-cdrldepth&gt;	：沉头坑深度</span><br><span class="line">&lt;hw-cdrldia&gt;	：沉头坑直径</span><br><span class="line">&lt;hw-minordia&gt;	：次直径</span><br><span class="line">&lt;hw-cdrlang&gt;	：导头角度</span><br><span class="line">&lt;hw-thru&gt;	：贯穿</span><br><span class="line">&lt;NUM_INST&gt;	：计数</span><br><span class="line">&lt;hw-threaddiaonly&gt;	：仅螺纹直径</span><br><span class="line">&lt;hw-msgnearside&gt;	：近端</span><br><span class="line">&lt;hw-nscsang&gt;	：近端锥形沉头孔角度</span><br><span class="line">&lt;hw-nscsdia&gt;	：近端锥形沉头孔直径</span><br><span class="line">&lt;hw-holedepth&gt;	：孔深度</span><br><span class="line">&lt;hw-holedia&gt;	：孔直径</span><br><span class="line">&lt;hw-fstsze&gt;	：扣件大小</span><br><span class="line">&lt;hw-fsttyp&gt;	：扣件类型</span><br><span class="line">&lt;hw-headclr&gt;	：螺钉间隙</span><br><span class="line">&lt;hw-threadsize&gt;	：螺纹大小</span><br><span class="line">&lt;hw-threadclass&gt;	：螺纹等级</span><br><span class="line">&lt;hw-threadang&gt;	：螺纹角度</span><br><span class="line">&lt;hw-tapdrldepth&gt;	：螺纹孔钻头深度</span><br><span class="line">&lt;hw-tapdrldia&gt;	：螺纹孔钻头直径</span><br><span class="line">&lt;hw-threaddepth&gt;	：螺纹深度</span><br><span class="line">&lt;hw-threaddesc&gt;	：螺纹说明</span><br><span class="line">&lt;hw-threadseries&gt;	：螺纹系列</span><br><span class="line">&lt;hw-threaddia&gt;	：螺纹直径</span><br><span class="line">&lt;hw-depth&gt;	：深度</span><br><span class="line">&lt;hw-descrp&gt;	：说明</span><br><span class="line">&lt;hw-thrutapdrldp&gt;	：通孔螺纹孔钻头深度</span><br><span class="line">&lt;hw-thrutapdrldia&gt;	：通孔.螺纹孔钻头直径</span><br><span class="line">&lt;hw-thruholedepth&gt;	：通孔深度</span><br><span class="line">&lt;hw-thruholedia&gt;	：通孔直径</span><br><span class="line">&lt;hw-msgfarside&gt;	：远端</span><br><span class="line">&lt;hw-fscsang&gt;	：远端锥形沉头孔角度</span><br><span class="line">&lt;hw-fscsdia&gt;	：远端锥形沉头孔直径</span><br><span class="line">&lt;hw-diam&gt;	：直径</span><br><span class="line">&lt;hw-msgmidside&gt;	：中端</span><br><span class="line">&lt;hw-midcsang&gt;	：中间锥形沉头孔角度</span><br><span class="line">&lt;hw-midcsdia&gt;	：中间锥形沉头孔直径</span><br><span class="line">&lt;hw-mjrdia&gt;	：主直径</span><br><span class="line">&lt;hw-cbdepth&gt;	：柱坑深度</span><br><span class="line">&lt;hw-cbdia&gt;	：柱坑直径</span><br><span class="line">&lt;hw-counterbore&gt;	：柱孔肩</span><br><span class="line">&lt;hw-csang&gt;	：锥坑角度</span><br><span class="line">&lt;hw-csdia&gt;	：锥坑直径</span><br><span class="line">&lt;hw-drlang&gt;	：钻头角度</span><br><span class="line">标注符号</span><br><span class="line">&lt;HOLE-SINK&gt;	：V</span><br><span class="line">&lt;HOLE-DIAM&gt;	：φ</span><br><span class="line">&lt;HOLE-DEPTH&gt;	：↓</span><br><span class="line">&lt;MOD-PM&gt;	：±</span><br><span class="line">&lt;HOLE-SPOT&gt;	：凵</span><br></pre></td></tr></table></figure>
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

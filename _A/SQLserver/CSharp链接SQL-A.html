@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-30 23:34:17</span>
+</div>
+
+<div id="article"><h1 id="C-链接-SQL"><a href="#C-链接-SQL" class="headerlink" title="C#链接 SQL"></a>C#链接 SQL</h1><h2 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SqlConnection <span class="title">SqlConnection</span>(<span class="params"><span class="built_in">string</span> database</span>)<span class="comment">//连接数据库</span></span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//服务器名称(IP) / 数据库的实例名; uid = 登录名; pwd = 密码; database = 数据库名称</span></span><br><span class="line"><span class="built_in">string</span> server = <span class="string">&quot;server = .;uid = sa; pwd = 123456; database =&quot;</span> + database;</span><br><span class="line"><span class="comment">// 创建连接</span></span><br><span class="line">SqlConnection sql = <span class="keyword">new</span> SqlConnection(server);</span><br><span class="line"><span class="comment">// 打开数据库</span></span><br><span class="line">Console.WriteLine(sql.ConnectionString);</span><br><span class="line">Console.WriteLine(sql.Database);</span><br><span class="line">Console.WriteLine(sql.DataSource);</span><br><span class="line"><span class="keyword">return</span> sql;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h1><h2 id="数据库连接串"><a href="#数据库连接串" class="headerlink" title="数据库连接串"></a>数据库连接串</h2><p>使用 Connection 类连接 SQL Server 2014 时，先要编写数据库连接串。这里介绍两种常用的方法：</p>
+<h3 id="第-1-种方式"><a href="#第-1-种方式" class="headerlink" title="第 1 种方式"></a>第 1 种方式</h3><p>server &#x3D; 服务器名称 &#x2F; 数据库的实例名 ; uid &#x3D; 登录名 ; pwd &#x3D; 密码 ;database &#x3D; 数据库名称</p>
+<p>（举个例子：string server &#x3D; &quot;server &#x3D; .;uid &#x3D; sa; pwd &#x3D; 123456;database &#x3D; database&quot;;）</p>
+<p>其中：</p>
+<p>server：用于指定要访问数据库的数据库实例名，服务器名称可以换成 IP 地址或者数据库所在的计算机名称，如果访问的是本机数据库，则可以使用”.”来代替，如果使用的是默认的数据库实例名，则可以省略数据库实例名。例如连接的是本机的默认数据库，则可以写成”server&#x3D; .”。</p>
+<p>uid：登录到指定 SQL Server 数据库实例的用户名，相当于以 SQL Server 身份验证方式登录数据库时使用的用户名，例如 sa 用户。</p>
+<p>pwd：与 uid 用户对应的密码。</p>
+<p>database：要访问数据库实例下的数据库名。</p>
+<h3 id="第-2-种方式"><a href="#第-2-种方式" class="headerlink" title="第 2 种方式"></a>第 2 种方式</h3><p>Data Source &#x3D; 服务器名称 \ 数据库实例名 ; Initial Catalog &#x3D; 数据库名称; User ID &#x3D; 用户名 ; Password &#x3D; 密码</p>
+<p>其中：</p>
+<p>Data Source：与第 1 种连接串写法中的 server 属性的写法一样，用于指定数据库所在的服务器名称和数据库实例名，如果连接的是本机的默认数据库实例，则写成”DataSource&#x3D;. “的形式。</p>
+<p>Initial Catalog：与第 1 种连接串写法中的 database 属性的写法一样，用于指定在 Data Source 中数据库实例下的数据库名。</p>
+<p>User ID：与第 1 种连接串写法中的 uid 属性的写法一样，用于指定登录数据库的用户名。</p>
+<p>Password：与第 1 种连接串写法中的 pwd 属性的写法一样，用于指定 User ID 用户名所对应的密码。</p>
+<p>此外，还可以在连接字符串中使用 Integrate Security &#x3D; True 的属性，省略用户名和密码，即以 Windows 身份验证方式登录 SQL Server 数据库。</p>
+<p>将数据库连接更改如下：</p>
+<p>Data Source &#x3D; 服务器名称 \ 数据库实例名 ; Initial Catalog &#x3D; 数据库名称; Integrate Security &#x3D; True</p>
+<h3 id="登录方式"><a href="#登录方式" class="headerlink" title="登录方式"></a>登录方式</h3><p>需要注意的是，由于在使用 Windows 身份验证的方式登录数据库时，会对数据库的安全性造成一定的影响，因此不建议使用 Windows 身份验证的方法，而是使用 SQL Server 验证方式登录数据库，即指定用户名和密码。提示：在 SQL Server 2014 中更改数据库的身份验证方式并不复杂，只需要在 SQL Server 的 SQL Server Management Studio 2014 中右击数据库的服务器结点，弹出如下图所示的服务器属性界面，并在界面中选择”安全性”选项。</p>
+<img src="C#链接SQL-A/image1.png">
+
+<p>在该界面中可以通过选择”服务器身份验证”中的两个选项来切换身份验证方式，默认情况下选中”Windows 身份验证模式”。</p>
+<p>在选中任意一种身份验证模式后需要重启 SQL Server 服务器才能完成服务器身份验证模式的更改。</p>
+<p>在完成了数据库连接串的编写后即可使用 SqlConnection 类与数据库连接，分以下 3 步完成。</p>
+<p>创建 SqlConnection 类的实例</p>
+<p>对于 SqlConnection 类来说，上表中提供了两个构造方法，通常是使用带一个字符串参数的构造方法来设置数据库的连接串创建其实例，语句形式如下。</p>
+<p>SqlConnection 连接对象名 &#x3D; new SqlConnection( 数据库连接串 );</p>
+<h2 id="2-打开数据库连接"><a href="#2-打开数据库连接" class="headerlink" title="2 打开数据库连接"></a>2 打开数据库连接</h2><p>在创建 SqlConnection 连接类的实例后并没有连接上数据库，需要使用连接类的 Open 方法打开数据库的连接。</p>
+<p>在使用 Open 方法打开数据库连接时，如果数据库的连接串不正确或者数据库的服务处于关闭状态，会出现打开数据库失败的相关异常，因此需要通过异常处理来处理异常。</p>
+<p>打开数据库连接的语句形式如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">连接对象名.Open();</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关闭数据库连接"><a href="#3-关闭数据库连接" class="headerlink" title="3 关闭数据库连接"></a>3 关闭数据库连接</h2><p>在对数据库的操作结束后要将数据库的连接断开，以节省数据库连接的资源。</p>
+<p>关闭数据库连接的语句形式如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">连接对象名.Close();</span><br></pre></td></tr></table></figure>
+
+<p>如果在打开数据库连接时使用了异常处理，则将关闭数据库连接的语句放到异常处理的 finally 语句中，这样能保证无论是否发生了异常都将数据库连接断开，以释放资源。</p>
+<p>除了使用异常处理的方式释放资源外，还可以使用 using 的方式释放资源。</p>
+<p>具体的语句如下。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span>(SqlConnection 连接对象名 = <span class="keyword">new</span> SQLConnection( 数据库连接串 ))</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//打开数据库连接</span></span><br><span class="line"><span class="comment">//对数据库先关操作的语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>using 关键字的用法主要有两个，一个是引用命名空间，一个是创建非托管资源对象。</p>
+<p>在 .NET 平台上资源分为托管资源和非托管资源，托管资源是由 .NET 框架直接提供对其资源在内存中的管理，例如声明的变量；非托管资源则不能直接由.NET 框架对其管理，需要使用代码来释放资源，例如数据库资源、操作系统资源等。</p>
+<h1 id="常用查询-Query"><a href="#常用查询-Query" class="headerlink" title="常用查询 Query"></a>常用查询 Query</h1><h2 id="筛选列"><a href="#筛选列" class="headerlink" title="筛选列"></a>筛选列</h2><p>Select 列 from 表;</p>
+<h2 id="筛选指定值"><a href="#筛选指定值" class="headerlink" title="筛选指定值"></a>筛选指定值</h2><p>select * from 表 where 列&#x3D;值;</p>
+<p>其他：Text 类型</p>
+<p>SELECT *FROM 表 WHERE CONVERT(VARCHAR, 列) &#x3D; &#39;值&#39;</p>
+<h2 id="添加值"><a href="#添加值" class="headerlink" title="添加值"></a>添加值</h2><p>insert into 表([列], [列 2]) values(@内容 1,@内容 2)</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/3010.html">http://c.biancheng.net/view/3010.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/543053359">https://zhuanlan.zhihu.com/p/543053359</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

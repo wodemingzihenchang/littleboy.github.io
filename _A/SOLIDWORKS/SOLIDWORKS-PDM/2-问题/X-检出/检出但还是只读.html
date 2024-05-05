@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="检入但还是只读文件"><a href="#检入但还是只读文件" class="headerlink" title="检入但还是只读文件"></a>检入但还是只读文件</h1><p>您在 SOLIDWORKS PDM 中检出一个文件，然后在 SOLIDWORKS 中打开它。但是它仍然在标题栏中显示为只读！</p>
+<img src="检出但还是只读\Read_Only.jpg">
+
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>此问题的最常见原因是 SOLIDWORKS 处理多用户环境的方式与 SOLIDWORKS PDM 的方式之间存在冲突。</p>
+<p>SOLIDWORKS 使用其内置的协作功能，该功能在 SOLIDWORKS 系统中将文件标记为只读，以防止两个用户同时修改该文件。</p>
+<p>当然，SOLIDWORKS PDM 使用检出&#x2F;检入方法来管理这种情况。有时，这两种机制会同时启动，导致文件被 PDM 检出，但被 SOLIDWORKS 标记为只读。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>在 SOLIDWORKS 中，打开【选项-系统选项-协作】。选中标记为<strong>启用多用户环境</strong>和<strong>为多用户环境添加快捷菜单项</strong>的框（如下图所示）。关闭“<strong>选项</strong>”对话框。</p>
+<p>从“<strong>文件</strong>”菜单中，选择<strong>“获取写入权限</strong>”（下图）</p>
+<img src="检出但还是只读\协同设置.png">
+
+<p>完成此操作后，只读标记将从标题栏中消失，您可以继续修改文件，因为您知道您将能够成功保存您的工作。</p>
+<h2 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况"></a>其他情况</h2><p>可能Windows本身已通过其内部文件系统限制文件。在这种情况下，请在 Windows 资源管理器中右键单击该文件，选择“<strong>属性”</strong>，然后取消选中<strong>“只读”</strong>框。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

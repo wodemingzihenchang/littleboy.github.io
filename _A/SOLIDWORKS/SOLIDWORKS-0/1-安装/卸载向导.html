@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-08-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-卸载向导"><a href="#SOLIDWORKS-卸载向导" class="headerlink" title="SOLIDWORKS 卸载向导"></a>SOLIDWORKS 卸载向导</h1><p>首先说明：<br>1、该卸载操作只对客户端数据操作，服务器端最好先做数据备份；<br>2、正版用户注意：卸载前请进行序列号注销转移，操作详见《SW<em>安装</em>许可转移》</p>
+<h2 id="卸载步骤："><a href="#卸载步骤：" class="headerlink" title="卸载步骤："></a>卸载步骤：</h2><p>1、管理员账户登录电脑；打开控制面板 → 卸载程序 → 选择 SOLIDWORKS 20XX SPX，点击”卸载”</p>
+<img src="卸载向导/image1.png">
+
+<p>2、进入卸载界面，勾选全部产品，同时更改 “高级选项”</p>
+<img src="卸载向导/image2.png">
+
+<p>3、勾选所有数据文件和注册表文件，然后 “返回到摘要”，进行卸载软件</p>
+<img src="卸载向导/image3.png">
+
+<p>4、 卸载完成，找到并删除以下路径文件夹；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a\) &#x27;C:\\Users\\\[username\]\\AppData\\Roaming\\SOLIDWORKS&#x27;；</span><br><span class="line">b\) &#x27;C:\\Users\\\[username\]\\AppData\\Roaming\\DassaultSystemes&#x27;；</span><br><span class="line">c\) &#x27;C:\\Users\\\[username\]\\AppData\\Local\\DassaultSystemes&#x27;；</span><br><span class="line">d\) &#x27;C:\\Users\\\[username\]\\AppData\\Local\\TempSW 备份目录&#x27;；</span><br><span class="line">e\) &#x27;C:\\Users\\\[username\]\\AppData\\Local\\SolidWorks&#x27;；</span><br><span class="line">f\) &#x27;C:\\Program Files\\SOLIDWORKS Corp&#x27; ，此为默认安装目录路径；</span><br><span class="line">g\) &#x27;C:\\Program Files\\Common Files\\SOLIDWORKS Shared&#x27;</span><br><span class="line">h\) &#x27;C:\\ProgramData\\FLEXnet&#x27;；</span><br><span class="line">i\) &#x27;C:\\ProgramData\\SOLIDWORKS&#x27;；</span><br><span class="line">j\) &#x27;C:\\ProgramData\\SOLIDWORKS Electrical&#x27;；</span><br><span class="line">k\) &#x27;C:\\SOLIDWORKS Data&#x27;，</span><br></pre></td></tr></table></figure>
+
+<p>（请注意，”AppData”和”ProgramData”可能是隐藏文件夹。您可以在文件资源管理器的”文件夹选项”中激活”显示隐藏的文件、文件夹和驱动器”选项；）</p>
+<p>路径中存在多个相同带有序号的文件夹，请一并删除，如’C:\SOLIDWORKS Data (2)’；</p>
+<h2 id="注册表信息"><a href="#注册表信息" class="headerlink" title="注册表信息"></a>注册表信息</h2><p>（清除之前建议进行备份）</p>
+<p>若卸载程序无用（或没有了卸载程序），那需手动清除如下注册表。<a href="">#或下载清理 SW 注册表工具</a><br></p>
+<p>5、 Win+R 打开运行，输入”regedit”打开注册表编辑器</p>
+<p>6、 清除以下注册表键文件夹:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a\) &#x27;HKEY_CURRENT_USER\\Software\\FLEXlm License Manager&#x27;；</span><br><span class="line">b\) &#x27;HKEY_CURRENT_USER\\Software\\SolidWorks&#x27;；</span><br><span class="line">c\) &#x27;HKEY_CURRENT_USER\\Software\\SolidWorks BackOffice&#x27;；</span><br><span class="line">d\) &#x27;HKEY_CURRENT_USER\\Software\\SWActivation&#x27;；</span><br><span class="line">e\) &#x27;HKEY_CURRENT_USER\\SOFTWARE\\Trace Software&#x27;；</span><br><span class="line">f\) &#x27;HKEY_LOCAL_MACHINE\\SOFTWARE\\FLEXlm License Manager&#x27;；</span><br><span class="line">g\) &#x27;HKEY_LOCAL_MACHINE\\Software\\SolidWorks&#x27;；</span><br><span class="line">h\) &#x27;HKEY_LOCAL_MACHINE\\SOFTWARE\\Trace Software&#x27;；</span><br><span class="line">i\) &#x27;HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Dassault Systemes&#x27;；</span><br><span class="line">j\) &#x27;HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\FLEXlm License Manager</span><br><span class="line">k\) &#x27;HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\SolidWorks&#x27;；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>最后运行“清理 SW 注册表”，特别注意，这个也会清理 EPDM 的注册表信息。</p>
+</li>
+<li><p>[HKEY_CURRENT_USER\SOFTWARE\solidworks]</p>
+</li>
+<li><p>[HKEY_LOCAL_MACHINE\SOFTWARE\solidworks]</p>
+</li>
+</ul>
+<!-- 注册表相关：
+
+01-安装管理器信息
+[HKEY_CLASSES_ROOT\SOLIDWORKS Installation Manager]
+
+02-程序理器信息
+[HKEY_CURRENT_USER\SOFTWARE\solidworks]
+[HKEY_LOCAL_MACHINE\SOFTWARE\solidworks]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\solidworks]
+
+03-卸载清除注册表
+Windows Registry Editor Version 5.00
+[-HKEY_CURRENT_USER\Software\eDrawings]
+[-HKEY_CURRENT_USER\Software\FLEXlm License Manager]
+[-HKEY_CURRENT_USER\Software\SolidWorks]
+[-HKEY_CURRENT_USER\Software\SolidWorksInstall]
+[-HKEY_CURRENT_USER\SOFTWARE\srac]
+[-HKEY_CURRENT_USER\Software\SWActivation]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\FLEXlm License Manager]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\SRAC]
+-->
+
+<h2 id="文件夹残留"><a href="#文件夹残留" class="headerlink" title="文件夹残留"></a>文件夹残留</h2><p>删除 SW 文件夹相关目录，清理以下 4 个文件夹内容：（请在 C 盘和安装盘进行搜索查找）</p>
+<ul>
+<li>2DEditor</li>
+<li>SolidWorks</li>
+<li>FLEXnet</li>
+<li>Dassault</li>
+</ul>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

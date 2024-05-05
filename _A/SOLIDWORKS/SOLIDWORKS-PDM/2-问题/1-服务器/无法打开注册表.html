@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="无法打开注册表"><a href="#无法打开注册表" class="headerlink" title="无法打开注册表"></a>无法打开注册表</h1><p>存档服务器无法打开Windows注册表</p>
+<img src="无法打开注册表\存档服务器无法打开注册表.png">
+
+<p>情况1：生成本地视图失败</p>
+<p>情况2：检入时资源管理器闪退</p>
+<h2 id="方法1：本地权限问题"><a href="#方法1：本地权限问题" class="headerlink" title="方法1：本地权限问题"></a>方法1：本地权限问题</h2><p>本地的admin被禁用了，解禁后用admin配置参考1：<a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/2022/07/solidworks-pdm-archive-server-could-not-open-windows-registry/">SOLIDWORKS PDM 存档服务器无法打开 Windows 注册表？)</a></p>
+<p>存档服务器错误，在某些情况下，此过程可能会失败，并出现错误“存档服务器无法打开 Windows 注册表”</p>
+<p><img src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-10-28-33.png" alt="img"></p>
+<p>存档服务器无法打开 Windows 注册表</p>
+<p>可能还有其他相关错误，我在下面列出了这些错误：</p>
+<ul>
+<li>无法初始化存档服务连接。错误说明：系统检测到可能危及安全性的尝试。</li>
+<li>无法联系任何机构进行身份验证。</li>
+<li>安全包中没有可用的凭据。</li>
+<li>无法向服务器进行身份验证。</li>
+<li>在此上下文中，指定的存档服务器操作无效。</li>
+<li>存档服务器无法打开 Windows 注册表。</li>
+<li>不支持请求的函数。</li>
+</ul>
+<p>在创建本地库视图或尝试在 PDM 管理中“刷新”库时，也可能会出现此问题。</p>
+<p><img src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/06-07-2022-08-46-07.png" alt="img"></p>
+<p>此错误经常发生在与公司域断开连接的客户端计算机上。该问题源于当客户端发送 Windows 域配置文件凭据进行身份验证时域控制器没有响应。</p>
+<p>如果用户通过 Azure Active Directory 帐户使用 Windows 登录，也可能会出现此问题。当使用本地计算机用户配置文件安装 PDM 并且无法使用域网络帐户创建库时，也会出现此问题。</p>
+<h3 id="解决注册表访问错误"><a href="#解决注册表访问错误" class="headerlink" title="解决注册表访问错误"></a>解决注册表访问错误</h3><p>可能的解决方案包括：</p>
+<ul>
+<li><strong>使用其他 Windows 用户帐户运行管理工具或查看安装向导</strong>。<ul>
+<li>浏览至 SOLIDWORKS PDM 安装文件夹</li>
+<li>按住“SHIFT”键并右键单击应用程序以运行 ConisioAdmin.exe’ 以附加存档服务器或 ViewSetup.exe’ 以创建本地库视图。</li>
+<li>选择“以其他用户身份运行”。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-36-51.png" alt="img"></p>
+<p>以其他用户身份运行</p>
+<ul>
+<li><ul>
+<li>使用其他本地 Windows 帐户，并使用格式“SYSTEM_Name\USER_Name”输入本地系统名称。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/06-07-2022-08-35-34.png" alt="img"></p>
+<p>以其他用户身份运行</p>
+<ul>
+<li><strong>创建属于本地管理员组的临时 Windows 用户</strong>。以此临时 Windows 用户身份登录时，附加 Vault 或创建本地 Vault 视图。现在，登录到域时，应该可以访问保管库和保管库视图。</li>
+</ul>
+<h2 id="方法2：禁用服务器来宾"><a href="#方法2：禁用服务器来宾" class="headerlink" title="方法2：禁用服务器来宾"></a>方法2：禁用服务器来宾</h2><p>禁用服务器来宾 并将安全策略禁用 。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><img src="无法打开注册表/存档服务器无法打开Windows注册表.png">
+
+<p>解决方法： 禁用服务器来宾，并将安全策略禁用</p>
+<p>在“工具”菜单 &gt;“默认设置”&gt;“安全性”选项卡中，选中“SOLIDWORKS PDM 存档服务器配置”工具。<br>在启用托管存档服务器服务的计算机上，如果在 SOLIDWORKS 工作组网络设置中启用来宾帐户，也会看到此错误。禁用来宾帐户后，将服务器添加到客户端上的服务器列表中，您将收到输入 Windows 凭据的提示。</p>
+<p>在客户端机器上添加服务器后，您可以再次启用服务器的来宾帐户。不需要禁用客户端机器上的来宾帐户。</p>
+<img src="无法打开注册表/禁用来宾账号.png">
+
+<img src="无法打开注册表/禁用来宾账号2.png"></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

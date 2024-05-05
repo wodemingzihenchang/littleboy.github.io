@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-30 11:09:43</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORK曲面教程"><a href="#SOLIDWORK曲面教程" class="headerlink" title="SOLIDWORK曲面教程"></a>SOLIDWORK曲面教程</h1><h1 id="1理解曲面"><a href="#1理解曲面" class="headerlink" title="1理解曲面"></a>1理解曲面</h1><h2 id="1-1-实体与曲面"><a href="#1-1-实体与曲面" class="headerlink" title="1.1 实体与曲面"></a>1.1 实体与曲面</h2><ul>
+<li>实体 </li>
+<li></li>
+<li>边线</li>
+<li></li>
+</ul>
+<img src="教程-曲面/1实体与曲面 .png">
+
+<p><strong>曲线的几种形式</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Bezier</strong></th>
+<th><strong>B-Spline</strong></th>
+<th><strong>NURBS</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>贝塞尔曲线，又称贝兹曲线或贝济埃曲线，是应用于二维图形应用程序的数学曲线</td>
+<td>b样条曲线是指在数学的子学科数值分析里的一种特殊的表示形式。它是B-样条基曲线的线性组合</td>
+<td>NURBS是非均匀有理B样条的缩写，1991年，国际标准化组织（ISO）颁布的工业产品数据交换标准STEP中，把NURBS作为定义工业产品几何形状的唯一数学方法</td>
+</tr>
+<tr>
+<td>Bezier曲线的每个控制点对整条曲线都有影响，也就是说，改变一个控制点的位置，整条曲线的形状都会发生变化</td>
+<td>B样条中的每个控制点只会影响曲线的一段参数范围，从而实现了局部修改</td>
+<td>NURBS在Bezier与B-Spline的基础上，可以表示一些基本的曲线，比如圆。</td>
+</tr>
+<tr>
+<td><img src="教程-曲面/1Bezier.png"></td>
+<td><img src="教程-曲面/1B-Spline.png"/></td>
+<td><img src="教程-曲面/1NURBS.png"/></td>
+</tr>
+</tbody></table>
+<p>Bezier曲线只是B样条的一个特例，而B样条又是NURBS的一个特例，它们的关系可以图示为：</p>
+<img src="教程-曲面/1曲线关系.png">
+
+<p><strong>SOLIDWORKS****中曲线样式的选择</strong></p>
+<p>1、在SW中样条曲线即为B-Spline曲线：B-Spline曲线控制柄贯穿曲线，适合通过控制点定义曲线形状，有利于参数化实现</p>
+<p>2、样式曲线即为Bezier曲线：Bezier曲线控制柄不在曲线上方，曲线形状无法通过尺寸定义，不建议使用</p>
+<img src="教程-曲面/1样条曲线和样式曲线.png">
+
+
+
+<h2 id="1-2-使用曲面工作"><a href="#1-2-使用曲面工作" class="headerlink" title="1.2 使用曲面工作"></a>1.2 使用曲面工作</h2><p>1.2.1 检查曲面是否闭合</p>
+<p>1、尝试【加厚】只有闭合曲面【从闭合的体积生成实体】选项才有效</p>
+<p>2、使用【检查实体】可以高亮显示曲面的开环边线</p>
+<p>3、检查【工具-选项-系统选项-颜色-曲面,开环边线】显示开环边</p>
+<p>1.2.2 实体分解成曲面</p>
+<p>1、使用【删除面】用“删除”方式，删除其中一个实体面</p>
+<p>2、使用【等距面】选择实体表面等距为0的“复制面”的方式获得。</p>
+<p>1.2.3 参数化</p>
+<p>在SW中所有的曲面都可以通过一系列的参数化曲线网格来表示。通过【工具-草图工具-面部曲线】可以查看</p>
+<p>1.2.4 曲面类型</p>
+<ul>
+<li>代数曲面</li>
+<li>直纹曲面</li>
+<li>可展曲面</li>
+<li>NURBS曲面</li>
+</ul>
+<h2 id="1-3-使用曲面的原因"><a href="#1-3-使用曲面的原因" class="headerlink" title="1.3 使用曲面的原因"></a>1.3 使用曲面的原因</h2><p>1.3.1 不宜使用曲面的情况</p>
+<p>1.3.2 混合建模</p>
+<h2 id="1-4-连续性"><a href="#1-4-连续性" class="headerlink" title="1.4 连续性"></a>1.4 连续性</h2><p>不连续：</p>
+<p>C0：</p>
+<p>C1：</p>
+<p>C2：</p>
+<img src="教程-曲面/1连续性.png"/>
+
+<h2 id="1-5-曲面操作流程"><a href="#1-5-曲面操作流程" class="headerlink" title="1.5 曲面操作流程"></a>1.5 曲面操作流程</h2><p>1.5.1 使用图片操作</p>
+<p>1.5.2 规划草图</p>
+<p>1.5.3 识别对称和边线</p>
+<p>1.5.4 识别功能表面</p>
+<p>1.5.5 频繁检查模型</p>
+<p>1.5.6 FeatureManager设计树中的文件来</p>
+<p>1.5.7 清除</p>
+<h1 id="2曲面入门"><a href="#2曲面入门" class="headerlink" title="2曲面入门"></a>2曲面入门</h1><h2 id="2-1-实体-曲面相似处"><a href="#2-1-实体-曲面相似处" class="headerlink" title="2.1 实体-曲面相似处"></a>2.1 实体-曲面相似处</h2><p>实体建模与曲面建模的相似处 </p>
+<h2 id="2-2-基本曲面建模"><a href="#2-2-基本曲面建模" class="headerlink" title="2.2 基本曲面建模"></a>2.2 基本曲面建模</h2><h3 id="【拉伸曲面】"><a href="#【拉伸曲面】" class="headerlink" title="【拉伸曲面】"></a>【拉伸曲面】</h3><img src="教程-曲面/2-1拉伸曲面.png"/>
+
+<h3 id="【旋转曲面】"><a href="#【旋转曲面】" class="headerlink" title="【旋转曲面】"></a>【旋转曲面】</h3><img src="教程-曲面/2-2旋转曲面.png"/>
+
+<h3 id="【扫描曲面】"><a href="#【扫描曲面】" class="headerlink" title="【扫描曲面】"></a>【扫描曲面】</h3><img src="教程-曲面/2-3扫描曲面.png"/>
+
+<h3 id="【拉伸曲面】-1"><a href="#【拉伸曲面】-1" class="headerlink" title="【拉伸曲面】"></a>【拉伸曲面】</h3><img src="教程-曲面/2-4拉伸曲面.png"/>
+
+<h3 id="【剪裁曲面】"><a href="#【剪裁曲面】" class="headerlink" title="【剪裁曲面】"></a>【剪裁曲面】</h3><img src="教程-曲面/2-5剪裁曲面.png"/>
+
+<h3 id="【加厚】"><a href="#【加厚】" class="headerlink" title="【加厚】"></a>【加厚】</h3><img src="教程-曲面/2-8曲面加厚.png"/>
+
+<h3 id="【延展曲面】"><a href="#【延展曲面】" class="headerlink" title="【延展曲面】"></a>【延展曲面】</h3><p>注意不是延伸曲面</p>
+<img src="教程-曲面/2-9延展曲面.png"/>
+
+<h3 id="【使用曲面】"><a href="#【使用曲面】" class="headerlink" title="【使用曲面】"></a>【使用曲面】</h3><p>【插入-切除-使用曲面】</p>
+<img src="教程-曲面/2-10曲面切除.png"/>
+
+<h1 id="3实体-曲面混合建模"><a href="#3实体-曲面混合建模" class="headerlink" title="3实体-曲面混合建模"></a>3实体-曲面混合建模</h1><p>实体-曲面混合建模</p>
+<h2 id="3-1-混合建模"><a href="#3-1-混合建模" class="headerlink" title="3.1 混合建模"></a>3.1 混合建模</h2><h2 id="3-2-使用曲面编辑实体"><a href="#3-2-使用曲面编辑实体" class="headerlink" title="3.2 使用曲面编辑实体"></a>3.2 使用曲面编辑实体</h2><p>方法1：利用曲面作为【拉伸实体】的“成型到面”的结束条件。</p>
+<img src="教程-曲面/3成型到面.png"/>
+
+<p>方法2：利用【插入-切除-使用曲面】可以切除曲面表面轮廓效果。</p>
+<img src="教程-曲面/3使用曲面.png"/>
+
+<p>方法3：利用【替换面】可以将实体表面延伸移至曲面位置，并贴合曲面表面形状。</p>
+<img src="教程-曲面/3替换面.png"/>
+
+<h2 id="3-3-实体与曲面间的相互转换"><a href="#3-3-实体与曲面间的相互转换" class="headerlink" title="3.3 实体与曲面间的相互转换"></a>3.3 实体与曲面间的相互转换</h2><p>使用【删除面】的“删除”方式，可以将实体模型转成开环的曲面实体。</p>
+<img src="教程-曲面/3删除面.png"/>
+
+<p>利用【剪裁曲面】可以将剪裁形成的封闭曲面，创建实体转换成零件实体模型。</p>
+<img src="教程-曲面/3剪裁曲面.png"/>
+
+<p>当然，利用【缝合曲面】创建实体，也可以将封闭的曲面实体缝合转成零件实体。</p>
+<img src="教程-曲面/3缝合曲面.png"/>
+
+
+
+<h2 id="3-5-将曲面作为构造几何体"><a href="#3-5-将曲面作为构造几何体" class="headerlink" title="3.5 将曲面作为构造几何体"></a>3.5 将曲面作为构造几何体</h2><p>【旋转曲面】</p>
+<img src="教程-曲面/3-5旋转曲面.png"/>
+
+<p>【扫描曲面】</p>
+<img src="教程-曲面/3-5扫描曲面.png"/>
+
+<p>【交叉曲线】</p>
+<p>选择两曲面后，点击【工具-草图工具-交叉曲线】获得两曲面之间交叉的曲线段（这会使用3D草图作为交叉曲线的载体对象）。</p>
+<img src="教程-曲面/3-5交叉曲线.png"/>
+
+<p>【特征扫描】+【圆周阵列】或者如下造型</p>
+<h2 id="3-6-替代剪裁、缝合与加厚"><a href="#3-6-替代剪裁、缝合与加厚" class="headerlink" title="3.6 替代剪裁、缝合与加厚"></a>3.6 替代剪裁、缝合与加厚</h2><p>【相交】</p>
+<img src="教程-曲面/3-6相交.png"/>
+
+<h2 id="3-7-面的复制"><a href="#3-7-面的复制" class="headerlink" title="3.7 面的复制"></a>3.7 面的复制</h2><p>从现有曲面上【复制面】获得用于剪裁的面，利用复制的面做【剪裁曲面】修建模型的形状。</p>
+<img src="教程-曲面/3-6复制面.png"/>
+
+<h1 id="4修补与编辑"><a href="#4修补与编辑" class="headerlink" title="4修补与编辑"></a>4修补与编辑</h1><h2 id="4-1-输人数据"><a href="#4-1-输人数据" class="headerlink" title="4.1 输人数据"></a>4.1 输人数据</h2><p>4.1.1 输人数据的类型</p>
+<p>4.1.2 输人数据出错的原因</p>
+<p>4.1.3 数据出错引发的问题</p>
+<img src="教程-曲面/4输入诊断.png"/>
+
+<p>4.1.4 修补模型</p>
+<p>4.1.5 操作流程</p>
+<p>4.1.6 处理流程</p>
+<p>4.1.7FeatureWorks</p>
+<h2 id="4-2-修补与编辑"><a href="#4-2-修补与编辑" class="headerlink" title="4.2 修补与编辑"></a>4.2 修补与编辑</h2><p>4.2.1 删除面的选项</p>
+<img src="教程-曲面/4删除面.png"/>
+
+<p>4.2.2 修补缺口</p>
+<p>4.2.3 一致性通知</p>
+<p>4.2.4其他策略</p>
+<p>4.2.5编辑输人的零件</p>
+<h1 id="5高级曲面建模"><a href="#5高级曲面建模" class="headerlink" title="5高级曲面建模"></a>5高级曲面建模</h1><h2 id="5-1-操作流程"><a href="#5-1-操作流程" class="headerlink" title="5.1 操作流程"></a>5.1 操作流程</h2><img src="教程-曲面/5-1曲面图片.png"/>
+
+
+
+<img src="教程-曲面/5-2拉伸曲面.png"/>
+
+
+
+<img src="教程-曲面/5-3裁剪曲面.png"/>
+
+<h2 id="5-2-直纹曲面"><a href="#5-2-直纹曲面" class="headerlink" title="5.2 直纹曲面"></a>5.2 直纹曲面</h2><img src="教程-曲面/5-4直纹曲面.png"/>
+
+<h2 id="5-3-放样曲面"><a href="#5-3-放样曲面" class="headerlink" title="5.3 放样曲面"></a>5.3 放样曲面</h2><p>放样曲面</p>
+<img src="教程-曲面/5-5放样曲面.png"/>
+
+<p>5.3.1 添加放样截面</p>
+<img src="教程-曲面/5-5添加放样截面.png"/>
+
+<img src="教程-曲面/5-6扫描曲面.png"/>
+
+<p>5.3.2非主流方式</p>
+<h2 id="5-4零件下半部分的建模"><a href="#5-4零件下半部分的建模" class="headerlink" title="5.4零件下半部分的建模"></a>5.4零件下半部分的建模</h2><p>5.4.1 曲面填充前的准备</p>
+<p>5.2.2一致性通知</p>
+<p>5.4.3 误差分析</p>
+<p>5.4.4 缝隙控制</p>
+<h2 id="5-5-结论"><a href="#5-5-结论" class="headerlink" title="5.5 结论"></a>5.5 结论</h2><p>【平面曲面】</p>
+<img src="教程-曲面/5-7平面曲面.png"/>
+
+<p>【缝合曲面】</p>
+<img src="教程-曲面/5-8缝合曲面.png"/>
+
+<p>【镜像】</p>
+<img src="教程-曲面/5-9镜像曲面.png"/>
+
+<h2 id="5-6-设计更改"><a href="#5-6-设计更改" class="headerlink" title="5.6 设计更改"></a>5.6 设计更改</h2><p>5.6 动态修改特征</p>
+<p>5.6.1 动态修改特征</p>
+<p>5.6.2替换面</p>
+<h1 id="6接合与修补"><a href="#6接合与修补" class="headerlink" title="6接合与修补"></a>6接合与修补</h1><h2 id="6-1-复杂的接合"><a href="#6-1-复杂的接合" class="headerlink" title="6.1 复杂的接合"></a>6.1 复杂的接合</h2><p>6.1.1 操作流程</p>
+<p>6.1.2 分割剪裁边界</p>
+<p>6.1.3 偏差累积影响</p>
+<p>6.1.4 镜像作用</p>
+<p>6.1.5 隐藏&#x2F;显示实体</p>
+<p>6.1.6 剪裁管件“Bottom Bracket”</p>
+<p>6.1.7 包覆特征</p>
+<h2 id="6-2-光滑修补"><a href="#6-2-光滑修补" class="headerlink" title="6.2 光滑修补"></a>6.2 光滑修补</h2><p>6.2.1 三个可选方法</p>
+<p>6.2.2 边界曲面</p>
+<p>6.2.3曲率梳.</p>
+<h2 id="6-3自由形特征"><a href="#6-3自由形特征" class="headerlink" title="6.3自由形特征"></a>6.3自由形特征</h2><p>6.3.1 网格方向</p>
+<p>6.3.2 使用三重轴移动控制点</p>
+<p>6.3.3 移动控制点</p>
+<p>6.3.4 撤销更改</p>
+<p>6.3.5 边界条件</p>
+<h2 id="6-4-边角融合"><a href="#6-4-边角融合" class="headerlink" title="6.4 边角融合"></a>6.4 边角融合</h2><p>6.4.1 操作流程</p>
+<p>6.4.2 可选方法</p>
+<p>6.4.3 曲面上的样条曲线</p>
+<h1 id="7主模型技术"><a href="#7主模型技术" class="headerlink" title="7主模型技术"></a>7主模型技术</h1><h2 id="7-1-关于主模型的介绍"><a href="#7-1-关于主模型的介绍" class="headerlink" title="7.1 关于主模型的介绍"></a>7.1 关于主模型的介绍</h2><p>7.1.1 传递曲线数据</p>
+<p>7.1.2 推动与牵引类型的作用</p>
+<p>7.1.3 命名实体</p>
+<p>7.1.4 列举父级配置</p>
+<p>7.1.5 分割特征</p>
+<p>7.1.6 建议总结</p>
+<h2 id="7-2-曲面主模型技术"><a href="#7-2-曲面主模型技术" class="headerlink" title="7.2 曲面主模型技术"></a>7.2 曲面主模型技术</h2><h2 id="7-3-实体主模型的应用"><a href="#7-3-实体主模型的应用" class="headerlink" title="7.3 实体主模型的应用"></a>7.3 实体主模型的应用</h2><p>7.3.1 分割零件</p>
+<p>7.3.2 按键区建模</p>
+<p>7.3.3塑料零部件专有特征</p>
+<p>7.3.4装配凸台 </p>
+<p>7.3.5接缝 </p>
+<p>7.3.6弹管扣凹槽</p>
+<p>7.3.7 保存实体并生成装配体</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="曲面展平"><a href="#曲面展平" class="headerlink" title="曲面展平"></a>曲面展平</h2><p> “曲面展平”功能仅适用于 SOLIDWORKS® Premium。</p>
+<img src="教程-曲面/特征/曲面展平.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="C-学习笔记"><a href="#C-学习笔记" class="headerlink" title="C# 学习笔记"></a>C# 学习笔记</h1><span id="more"></span>
+
+<h2 id="C-基本结构"><a href="#C-基本结构" class="headerlink" title="C#基本结构"></a>C#基本结构</h2><p>程序的执行从 Main 方法开始。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> system <span class="comment">//System 命名空间</span></span><br><span class="line"><span class="keyword">namespace</span> 项目名</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">class</span> 类名</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="built_in">int</span> 变量名 <span class="comment">//字段，用于声明变量</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params"><span class="built_in">string</span>[] args</span>) <span class="comment">//主函数（也可称为方法）</span></span></span><br><span class="line">    	&#123;</span><br><span class="line">    	Console.WriteLine(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    	Console.ReadKey();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h2><h3 id="1、标识符："><a href="#1、标识符：" class="headerlink" title="1、标识符："></a>1、标识符：</h3><p>是用来识别类、变量、函数或任何其它用户定义的项目。标识符不能是关键字。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">test</span> <span class="comment">//test 是标识符.类</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">add</span>（） <span class="comment">//add 是标识符.函数</span></span><br><span class="line">		&#123;</span><br><span class="line">		<span class="built_in">int</span> a=<span class="number">0</span> <span class="comment">//a 是标识符.变量</span></span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、关键字："><a href="#2、关键字：" class="headerlink" title="2、关键字："></a>2、关键字：</h3><p>C# 编译器预定义的保留字。这些关键字不能用作标识符。关键字注释参考：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/">说明手册</a></p>
+<h3 id="3、数据类型："><a href="#3、数据类型：" class="headerlink" title="3、数据类型："></a>3、数据类型：</h3><p>值类型变量：</p>
+<p>可以直接分配给一个值，属于在栈中开辟一个内存空间并存入值。常用值类型如下:</p>
+<blockquote>
+<p>bool 布尔值 True 或 False<br>char 16 位 Unicode 字符<br>double 64 位双精度浮点型<br>float 32 位单精度浮点型<br>int 32 位有符号整数类型</p>
+</blockquote>
+<p>引用类型：</p>
+<p>不包含存储在变量中的实际数据，而是存入对变量堆中位置的的引用。</p>
+<blockquote>
+<p>1、引用类型.对象（Object）类型<br>object obj;<br>obj &#x3D; 100;<br>2、引用类型.动态（Dynamic）类型<br>dynamic &amp;&lt;&amp;variable_name&amp;&gt;&amp; &#x3D; value;<br>dynamic d &#x3D; 20;<br>3、引用类型.字符串（String）类型<br>String str &#x3D; “runoob.com”;</p>
+</blockquote>
+<h2 id="命名空间："><a href="#命名空间：" class="headerlink" title="命名空间："></a>命名空间：</h2><p>namespace 命名空间（有点类似C的库）</p>
+<h2 id="类："><a href="#类：" class="headerlink" title="类："></a>类：</h2><p>public class person &#x2F;&#x2F;例如人类，</p>
+<p>类语法：</p>
+<p>类成员：字段（存数据private只能在当前类中访问）；属性（保护字段）；方法；构造函数（初始化）</p>
+<p>属性结构：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">int</span> X </span><br><span class="line">&#123;</span><br><span class="line"> <span class="keyword">get</span>&#123;<span class="keyword">return</span> a&#125;</span><br><span class="line"> <span class="keyword">set</span>&#123;a=<span class="keyword">value</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用当前对象内容：this.X：或this.int a</p>
+<p>新建对象：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">person Leon=<span class="keyword">new</span> person（） <span class="comment">//例如我（littleboy）这个人类的对象</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常见常-变量"><a href="#常见常-变量" class="headerlink" title="常见常&#x2F;变量"></a>常见常&#x2F;变量</h2><p>常量：</p>
+<p>const int a</p>
+<p>枚举：</p>
+<p>[public] enum a { 内容1内容2 } </p>
+<p>a X &#x3D; a . 内容1</p>
+<p>结构：</p>
+<p>[public] struct 结构名 { public string _内容1 ; public int _内容2 } </p>
+<p>结构名 X X._内容1 ; X._内容2</p>
+<p>数组：</p>
+<p>存储相同类型的变量，区别于结构（存储不同类型的变量）</p>
+<p>值类型：</p>
+<p>int、 double、char、bool、decimal、enum、struct。是栈类型：可以被赋值改变而释放（重用）内存</p>
+<p>引用类型：</p>
+<p>string、数组、自定义类、集合、object、接口。是堆类型，字符串（特殊）不可变性，被赋值改变是选择新开辟内存，并在栈中重新指向。不释放内存，卡由GC处理。</p>
+<h2 id="类型转换："><a href="#类型转换：" class="headerlink" title="类型转换："></a>类型转换：</h2><p>1、double a &#x3D; 3.14；int b &#x3D; （int）a  &#x2F;&#x2F; 数字转数字</p>
+<p>2、int a &#x3D; 3；double b &#x3D; a      &#x2F;&#x2F; 数字转数字</p>
+<p>3、double a &#x3D; convert. todouble(str);  &#x2F;&#x2F; 字符串转数字，</p>
+<p>封箱&#x2F;拆箱：</p>
+<p>封箱：是把值类型转换为引用类型（System.Object），或者转换为值类型实现的接口类型。</p>
+<p>拆箱：是将引用类型转换为值类型。</p>
+<h2 id="运算符："><a href="#运算符：" class="headerlink" title="运算符："></a>运算符：</h2><p>++，–        （一元运算符）优先，且运算完返回变量。 </p>
+<p>+，-，*，&#x2F;，%    （二元运算符）</p>
+<p>+&#x3D;，-&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;  （二元运算符）缩写写法</p>
+<p>（举例：）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a++</span><br><span class="line">a+b</span><br><span class="line">a+=b</span><br></pre></td></tr></table></figure>
+
+<h2 id="逻辑符："><a href="#逻辑符：" class="headerlink" title="逻辑符："></a>逻辑符：</h2><p>&amp;&amp;（且），需要同时满足；</p>
+<p>||（或），需要满足其中一项；</p>
+<p>！（非），对结果取反</p>
+<p>逻辑符可以<strong>混搭</strong>和<strong>累加</strong>使用</p>
+<h2 id="常见语句结构："><a href="#常见语句结构：" class="headerlink" title="常见语句结构："></a>常见语句结构：</h2><p>1、 判断</p>
+<p>if结构及延伸if结构（网站查）</p>
+<p>switch 定值判断</p>
+<p>2、 循环</p>
+<p>for（，，）</p>
+<p>foreach（ var item of array[] ）</p>
+<p>while（1）；需要有结束条件，不然就是死循环</p>
+<p>do-while 先执行一遍do</p>
+<p>3、 循环结构特殊判断：</p>
+<p>break</p>
+<p>Continue</p>
+<p>4、 异常提醒：</p>
+<p>try { 需要检查异常的语句 } catch { 提供提示语句，例如：console.writeline（“有错误，请检查”）}</p>
+<h2 id="三个参数："><a href="#三个参数：" class="headerlink" title="三个参数："></a>三个参数：</h2><p>1、 <strong>out****：</strong></p>
+<p>用于一个方法返回多个类型的值，</p>
+<p>public static void 方法名（int[] a , out int b , out string c）</p>
+<p>2、 <strong>ref****：</strong></p>
+<p>将参数代入方法，并且可以返回值。</p>
+<p>[public] static 返回值类型 方法名（ref [参数列表]）</p>
+<p>方法名(ref [参数列表] )</p>
+<p>3、 <strong>params****：</strong></p>
+<p>多用于数组的添加和减少</p>
+<p>[public] static 返回值类型 方法名（params [参数列表]） 方法名（ 无需跟格式 ）</p>
+<h2 id="方法的重载："><a href="#方法的重载：" class="headerlink" title="方法的重载："></a>方法的重载：</h2><p>同名不同类型，用一个名字的方法并列编写，只是参数不同。</p>
+<h2 id="方法的递归："><a href="#方法的递归：" class="headerlink" title="方法的递归："></a>方法的递归：</h2><p>方法调用自己方法，</p>
+<h2 id="构造函数："><a href="#构造函数：" class="headerlink" title="构造函数："></a>构造函数：</h2><p>方便对象初始化</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pubilc 类名（<span class="built_in">int</span> a,<span class="built_in">char</span> b,<span class="built_in">string</span> c）</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">this</span>.X1=a；</span><br><span class="line">  <span class="keyword">this</span>.X2=b；</span><br><span class="line">  <span class="keyword">this</span>.X3=c；</span><br><span class="line">&#125;</span><br><span class="line">person Leon=<span class="keyword">new</span> person（a，b，c）</span><br></pre></td></tr></table></figure>
+
+<h2 id="析构函数："><a href="#析构函数：" class="headerlink" title="析构函数："></a>析构函数：</h2><p>~类名（）&#x2F;&#x2F;当程序结束时 析构函数才执行。可用于释放资源，减少内存。</p>
+<h2 id="封装："><a href="#封装：" class="headerlink" title="封装："></a>封装：</h2><p>被定义为”把一个或多个项目封闭在一个物理的或者逻辑的包中”。在面向对象程序设计方法论中，封装是为了防止对实现细节的访问。C#中的访问修饰符：（能修饰类的修饰符只有两个：public、internal）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>：公开</span><br><span class="line"><span class="keyword">private</span>：私有，本类使用（默认）</span><br><span class="line"><span class="keyword">protected</span>：保护，本类+子类使用</span><br><span class="line"><span class="keyword">internal</span>：只能在当前项目使用</span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">internal</span>：访问限于当前程序集或派生自包含类的类型</span><br></pre></td></tr></table></figure>
+
+<p>（来自“菜鸟教程”高赞比喻）</p>
+<p>比如说：一个人A为父类，他的儿子B，妻子C，私生子D（注：D不在他家里）</p>
+<p>如果我们给A的事情增加修饰符：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>事件，地球人都知道，全公开</span><br><span class="line"><span class="keyword">protected</span>事件，A，B，D知道（A和他的所有儿子知道，妻子C不知道）</span><br><span class="line"><span class="keyword">private</span>事件，只有A知道（隐私？心事？）</span><br><span class="line"><span class="keyword">internal</span>事件，A，B，C知道（A家里人都知道，私生子D不知道）</span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">internal</span>事件，A，B，C，D都知道,其它人不知道</span><br></pre></td></tr></table></figure>
+
+<h2 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h2><p>public 子类：父类</p>
+<p>子类不调用父类的构造函数，但会默认调用父类的无参构造函数，</p>
+<p>解决方法：1、父类写无参构造函数；2、用base（a，b，c）继承</p>
+<h2 id="多态："><a href="#多态：" class="headerlink" title="多态："></a>多态：</h2><p>让一个对象能表现多种状态（存在子类多态情况使用，表达子类不太的方法）</p>
+<p>3个方法：</p>
+<p>1、虚方法：“public virtual void 函数名（）”将父类方法标记为虚方法加virtual，子类加override。作用是对象是谁就用谁的方法。</p>
+<p>2、抽象类：“public abstract void 函数名（）”当父类不知道如何实现方法时，可做为抽象类，函数写成抽象函数（是没有函数体的，没有大括号“{}”。所以函数不执行）。</p>
+<p>3、接口：</p>
+<h2 id="集合："><a href="#集合：" class="headerlink" title="集合："></a>集合：</h2><p>ArrayList，用于泛型集合（长度可变）</p>
+<p>HashList，键值对集合</p>
+<p>dictionary ，字典集合</p>
+<p>list 泛型：list<int> a&#x3D; new list<int>()</p>
+<h2 id="文件处理类，"><a href="#文件处理类，" class="headerlink" title="文件处理类，"></a>文件处理类，</h2><p>Path 路径</p>
+<p>Filestream文件流？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">using（filestream a=new filestream（@路径））</span><br><span class="line">streamread&amp;streamwriter（对象）读取&amp;写入</span><br><span class="line">streamwriter a=new streamwriter（@“路径”）; a（写入内容）</span><br></pre></td></tr></table></figure>
+
+<h2 id="序列化-反序列化-serializable-："><a href="#序列化-反序列化-serializable-：" class="headerlink" title="序列化&amp;反序列化[serializable]："></a>序列化&amp;反序列化[serializable]：</h2><p>对象&lt;——&gt;二进制转换</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span>（filestream a=<span class="keyword">new</span> filestream（@路径））</span><br><span class="line">Binaryformatter a=<span class="keyword">new</span> binaryformatter（）；</span><br><span class="line">a.serialize()<span class="comment">//开始序列化对象</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span>（filestream a=<span class="keyword">new</span> filestream（@路径））</span><br><span class="line">Binaryformatter a=<span class="keyword">new</span> binaryformatter（）；</span><br><span class="line">a.deserialize()<span class="comment">//开始反序列化对象</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="部分类-密封类："><a href="#部分类-密封类：" class="headerlink" title="部分类&#x2F;密封类："></a>部分类&#x2F;密封类：</h2><p>部分类：public partial class 类名 {} 用于多人同写一个类，避免重名</p>
+<p>密封类：public sealed class 类名 {} 用于避免被继承，但可以继承别人的类</p>
+<h2 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">public interface Iable</span>]，使用继承方式接口。</span><br><span class="line">&#123;</span><br><span class="line">​     成员；</span><br><span class="line">​     <span class="function"><span class="keyword">void</span> <span class="title">F</span>()</span>;<span class="comment">//接口中的成员默认不允许添加访问修饰符，默认是public，区别主函数。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接口特点：&#x2F;&#x2F;不能实例化&#x2F;&#x2F; 不允许写具体方法体函数&#x2F;&#x2F;自动属性</p>
+<p>显示实现接口：</p>
+<h1 id="其他知识点"><a href="#其他知识点" class="headerlink" title="其他知识点"></a>其他知识点</h1><h2 id="COM"><a href="#COM" class="headerlink" title="COM"></a>COM</h2><p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/win32/com/com-technical-overview">COM 技术概述 - Win32 apps | Microsoft Learn</a></p>
+<p>\1.     ref，需单独初始赋值</p>
+<p>\2.     数组长度定义需新建对象：int[ ] x &#x3D; new int[ 100]</p>
+<p>\3.     静态类可以直接 类.方法名（）；</p>
+<p>\4.     \是转意符，@取消本行的\转意符作用）</p>
+<p>&#x2F;&#x2F;去除指定字符后的内容</p>
+<p>string Name2 &#x3D; “PART1 2022-41”; </p>
+<p>Debug.WriteLine(Name2.Substring(0,Name2.LastIndexOf(‘-‘)));</p>
+<p>返回：PART1 2022</p>
+<h2 id="算法使用"><a href="#算法使用" class="headerlink" title="算法使用"></a>算法使用</h2><p>栈： </p>
+<p>队列： </p>
+<p>哈希表： </p>
+<p>字典树： </p>
+<p>LRU： </p>
+<p>排序： </p>
+<p>计算几何: </p>
+<p>深度优先搜索（穷举）： </p>
+<p>贪心：</p>
+<h2 id="默认快捷键："><a href="#默认快捷键：" class="headerlink" title="默认快捷键："></a>默认快捷键：</h2><p>CTRL+k,c 注释选中行</p>
+<p>CTRL+k,u 取消对选中行的注释</p>
+<p>CTRL + SHIFT + B：生成解决方案</p>
+<p>CTRL + F7 ：生成编译</p>
+<p>CTRL + SHIFT + O：打开项目</p>
+<p>CTRL + SHIFT + C：显示类视图窗口</p>
+<p>F1 ：帮助</p>
+<p>F4 ：显示属性窗口</p>
+<p>F5：开始调试，遇到断电停止</p>
+<p>F9：设一个断点</p>
+<p>F10：执行下一个函数</p>
+<p>F11：执行下一个语句</p>
+<p>F12 ：转到定义</p>
+<p>CTRL + F5：运行不调试</p>
+<p>Shift+F11就会执行到当前函数末尾</p>
+<p>F5就会执行到下一个断点</p>
+<p>SHIFT + F4：显示项目属性窗口</p>
+<p>CTRL + SHIFT + E：显示资源视图</p>
+<p>CTRL + F12：转到声明</p>
+<p>CTRL + ALT + J：对象浏览</p>
+<p>CTRL + ALT + F1：帮助目录</p>
+<p>CTRL + F1 ：动态帮助</p>
+<p>SHIFT + F1：当前窗口帮助</p>
+<p>CTRL + ALT + F3：帮助-搜索</p>
+<p>SHIFT + ALT + ENTER：全屏显示</p>
+<p>CTRL + -：向后定位</p>
+<p>CTRL + SHIFT + -：向前定位</p>
+<p>CTRL + PAGE DOWN：光标定位到窗口上方</p>
+<p>CTRL + PAGE UP：光标定位到窗口下方</p>
+<p>CTRL + F6 ：</p>
+<p>CTRL + TAB：下一个文档窗口</p>
+<p>CTRL + SHIFT + F6 ：</p>
+<p>CTRL + SHIFT + TAB：上一个文档窗口</p>
+<p>ALT + F6：下一个面板窗口</p>
+<p>CTRL + K, CTRL + L：取消remark</p>
+<p>CTRL + K, CTRL + C：注释选择的代码</p>
+<p>CTRL + K, CTRL + U：取消对选择代码的注释</p>
+<p>CTRL + M, CTRL + O：折叠代码定义</p>
+<p>CTRL + M, CTRL + L：展开代码定义</p>
+<p>CTRL + DELETE：删除至词尾</p>
+<p>CTRL + BACKSPACE：删除至词头</p>
+<p>SHIFT + TAB：取消制表符</p>
+<p>CTRL + U：转小写</p>
+<p>CTRL + SHIFT + U：转大写</p>
+<p>CTRL + SHIFT + END：选择至文档末尾</p>
+<p>CTRL + SHIFT + HOME：选择至文档末尾开始</p>
+<p>SHIFT + END：选择至行尾</p>
+<p>SHIFT + HOME：选择至行开始处</p>
+<p>SHIFT + ALT + END：垂直选择到最后尾</p>
+<p>SHIFT + ALT + HOME：垂直选择到最前面</p>
+<p>CTRL + A：全选 CTRL + W：选择当前单词</p>
+<p>CTRL + SHIFT + PAGE UP：选择至本页前面</p>
+<p>CTRL + SHIFT + PAGE DOWN：选择至本页后面</p>
+<p>CTRL + END：文档定位到最后</p>
+<p>CTRL + HOME：文档定位到最前</p>
+<p>CTRL + G：转到…</p>
+<p>CTRL + K, CTRL + P：上一个标签</p>
+<p>CTRL + K, CTRL + N：下一个标签</p>
+<p>ALT + F10：调试-ApplyCodeChanges</p>
+<p>CTRL + ALT+ Break：停止调试</p>
+<p>CTRL + SHIFT + F9 ：取消所有断点</p>
+<p>CTRL + F9：允许中断</p>
+<p>CTRL + SHIFT + F5：调试-重新开始</p>
+<p>CTRL + J：列出成员</p>
+<p>CTRL + PAGE DOWN：下一个视图</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

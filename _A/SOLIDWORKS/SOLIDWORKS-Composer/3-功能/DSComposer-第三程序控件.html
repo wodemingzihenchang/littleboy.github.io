@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 14:12:18</span>
+</div>
+
+<div id="article"><h1 id="DSComposer-第三程序控件"><a href="#DSComposer-第三程序控件" class="headerlink" title="DSComposer-第三程序控件"></a>DSComposer-第三程序控件</h1><p>说明介绍 SOLIDWORKS Composer 在第三程序控件的操作。</p>
+<span id="more"></span>
+
+<p>原生的 Composer 程序可以导出类似 smg，exe，视频等格式文件，但是作为宣传展示资料时还是比较单一。那么我们会考虑将导出的展示文件放置到 office 等办公软件，搭配其他说明内容一起展示。下面我将介绍如何在 office 软件上使用 Composer 控件。</p>
+<h2 id="注册控件"><a href="#注册控件" class="headerlink" title="注册控件"></a>注册控件</h2><p>方法 1：自动注册</p>
+<p>找到安装包位置：“<install_dir>\bin\RegisterAll.bat”<br>Bat 文件作用是根据安装的 Composer 版本，注册 32 或 64 位版本的 ComposerPlayerActiveX.ocx。</p>
+<img src="DSComposer-第三程序控件/1.png">
+
+<p>方法 2：手动注册</p>
+<p>1、打开一个命令提示符，在运行;输入 cmd 并按 Enter 键。</p>
+<img src="DSComposer-第三程序控件/2.png">
+
+<p>2、在命令提示符中输入 regsvr32 将 dll 或 ocx 文件从 Windows 资源管理器中拖放到命令提示符中，然后按 enter 键注册 dll 或 ocx 文件。<br>（注意，如果您以管理员模式启动命令提示符，则可能无法拖放 dll&#x2F;ocx;在这种情况下，您需要手动输入文件的完整路径）</p>
+<img src="DSComposer-第三程序控件/3.png">
+
+<p>（office 文档内的控件使用“composerplayeractivex.ocx”文件）</p>
+<h2 id="使用控件："><a href="#使用控件：" class="headerlink" title="使用控件："></a>使用控件：</h2><h2 id="office"><a href="#office" class="headerlink" title="office"></a>office</h2><p>在 office 等软件上开启使用“其他控件”功能，如果菜单栏无“其他控件”则可在【软件选项-自定义功能区】添加“其他控件”到菜单栏。</p>
+<img src="DSComposer-第三程序控件/4.png">
+
+<img src="DSComposer-第三程序控件/5.png">
+
+<p>在菜单栏点开“其他控件”功能，选择“composer Player ActiveX”在文档中拖拽出控件框。这就是 Composer Player 显示文件的地方。</p>
+<h3 id="控件属性"><a href="#控件属性" class="headerlink" title="控件属性"></a>控件属性</h3><p>右键单击控件，然后单击&lt;Composer Player ActiveX 对象&gt;属性。在“Composer Player ActiveX 属性”对话框中：</p>
+<p>1、 在 General 选项卡上，选择 Composer 文件并选择渲染选项。</p>
+<img src="DSComposer-第三程序控件/6.png">
+
+<p>2、在 Layout 选项卡上，选择要显示的工具栏和窗格：</p>
+<img src="DSComposer-第三程序控件/7.png">
+
+<p>3、单击确定。</p>
+<h3 id="编辑控件"><a href="#编辑控件" class="headerlink" title="编辑控件"></a>编辑控件</h3><p>要预览 Composer 文档，右键单击控件，然后单击 Composer Player ActiveX Object &gt; Edit。此时就能用 Composer Player 操作控件内的 smg 文件。</p>
+<h2 id="Winform"><a href="#Winform" class="headerlink" title="Winform"></a>Winform</h2><p>在 winform 界面下，打开工具箱，在工具箱里【添加项】</p>
+<img src="DSComposer-第三程序控件/8.png">
+
+<p>在 COM 组件中找到“Composer Player ActiveX”控件并勾选确认。</p>
+<img src="DSComposer-第三程序控件/9.png">
+
+<p>完成后，Composer 的第三方控件就能在 Winform 程序里被添加使用了。</p>
+<img src="DSComposer-第三程序控件/10.png">
+
+<img src="DSComposer-第三程序控件/11.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="COM-组件无效的错误消息"><a href="#COM-组件无效的错误消息" class="headerlink" title="COM 组件无效的错误消息"></a>COM 组件无效的错误消息</h2><p>当您尝试从 Microsoft® Visual Studio 等程序将参考添加到“composer.exe”文件时，您可能会看到随附图像中的错误。此问题的可能原因是一些注册表实体已损坏。例如，SOLIDWORKS® Composer COM 对象未正确注册或没有访问注册表项的权限。</p>
+<img src="DSComposer-第三程序控件/COM组件无效的错误消息.png">
+
+<p>当您向 SOLIDWORKS Composer.exe添加参考时，Visual Studio 应生成 Interop-DLL，然后将其显示在参考 DLL 列表中。（似乎是2016后的版本就不行了）</p>
+<p>但是，您也可以手动生成此 DLL 并直接参考。请执行以下步骤：</p>
+<p>1.从 Windows“开始”菜单的“Visual Studio”部分中，单击“Visual Studio x64 Win64 命令提示符”。</p>
+<p>2.在命令提示符中键入以下命令：注意：确保指定正确的平台以及“composer.exe”文件的正确路径。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tlbimp &quot;C:\Program Files\Dassault Systemes\CATIAComposer\7.2\Bin\CATIAComposer.exe&quot; /namespace:DSComposer /machine:X64</span><br></pre></td></tr></table></figure>
+
+<p>3.将生成的 DSComposer.dll 移至计算机上的相应目录。在您的项目中，添加此 DLL 的参考</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>如何注册 dll 或 ocx 文件：<br><br><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/help/844592/how-to-register-a-dll-file">https://support.microsoft.com/en-us/help/844592/how-to-register-a-dll-file</a><br>DirectX：<br><br><a target="_blank" rel="noopener" href="http://zhidao.baidu.com/question/869146.html">http://zhidao.baidu.com/question/869146.html</a><br>ActiveX：<br><br><a target="_blank" rel="noopener" href="http://zhidao.baidu.com/question/693568.html">http://zhidao.baidu.com/question/693568.html</a><br>Wpf 操作参考：<br><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_33785972/article/details/92623924.html">https://blog.csdn.net/weixin_33785972/article/details/92623924.html</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

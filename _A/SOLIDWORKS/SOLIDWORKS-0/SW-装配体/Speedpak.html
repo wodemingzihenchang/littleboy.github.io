@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-11 19:12:22</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-Speedpak"><a href="#SOLIDWORKS-Speedpak" class="headerlink" title="SOLIDWORKS Speedpak"></a>SOLIDWORKS Speedpak</h1><h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><p>子装配体的speedpak是属于（派生）配置的一种，选择已配置右键-添加Speedpak；</p>
+<img src="Speedpak\制作.png">
+
+<p><strong>方法1****：</strong>手动选择保留的面，可用于配合选择。</p>
+<img src="Speedpak\制作方法1.png">
+
+<p><strong>方法2****：</strong>快速包括：选择制作成speedpak的零部件</p>
+<img src="Speedpak\制作方法2.png">
+
+<p><strong>选项：</strong></p>
+<p>移除幻影图形：只显示 SpeedPak 配置中活动可用的面、实体、参考几何图形、草图和曲线。 其他所有面和实体则隐藏，这样便进一步减少了内存需求，从而提高了性能。</p>
+<p>添加保存时重建标记：将保存时重建标记 应用到配置。 在下次保存文档时配置将生成其完整数据集。 每次当您保存文档时，都会重建和保存数据。</p>
+<img src="Speedpak\选项.png">
+
+<h2 id="完成speedpak"><a href="#完成speedpak" class="headerlink" title="完成speedpak"></a>完成speedpak</h2><p>判断speedpak完成的依据如下：</p>
+<p>1、 图形有透明虚影；</p>
+<p>2、 配置有speedpak图标</p>
+<p>3、 设计树无特征信息</p>
+<img src="Speedpak\完成speedpak.png">
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用子装配体的speedpak，这里是属于配置的一种，直接切换配置即可。</p>
+<img src="Speedpak\使用speedpak.png">
+
+<h1 id="speedpak内存影响"><a href="#speedpak内存影响" class="headerlink" title="speedpak内存影响"></a>speedpak内存影响</h1><p>特别对于不常编辑的零件或标准件，也可以使用【speedpak】功能，使其设置为不占性能的图像形式，（该功能可使装配体在打开后只显示其图像，保留在视觉上的信息，压缩其模型数据的大部分信息，来减少内存的占用）</p>
+<p>下面是通过Speedpak测试对内存影响，本次测试数据：6000+零部件（独立零件1500个），总装文件大小：95.4MB。全部文件大小：1.07GB</p>
+<h2 id="还原模式"><a href="#还原模式" class="headerlink" title="还原模式"></a>还原模式</h2><p>还原模式下的内存占用，电脑是几乎占满的状态（SW部分的占用约9GB）如图。还原模式下的零部件内存信息会被加载进内存，从而产生过多的内存占用的情况。该情况就可能会提示你“内存不足”或“内存耗尽”的弹窗提示。</p>
+<img src="Speedpak/Speedpak1.png">
+
+<h2 id="单个Speedpak"><a href="#单个Speedpak" class="headerlink" title="单个Speedpak"></a>单个Speedpak</h2><p>对单个部件子装配体做图形Speedpak优化处理，该模式下的特征树列表的零件会被隐藏（不可编辑），只留下视图区域的图像显示。所以这部分的信息几乎不进内容。那么对于内存来说，占用就不会过高（如图从9GB减少至4GB内存占用）</p>
+<img src="Speedpak/Speedpak2.png">
+
+<h2 id="全部Speedpak"><a href="#全部Speedpak" class="headerlink" title="全部Speedpak"></a>全部Speedpak</h2><p>对总装配体的所有部件进行全部Speedpak，此时的总装模型只有图形显示，其子装配体就不能编辑，这个模式下打开文件将变得非常的快（几乎和“大型装配体审阅”有的一拼）。如图的内存占用从9GB减少至2GB，大大减少内存的占用。</p>
+<img src="Speedpak/Speedpak3.png">
+
+<h2 id="Speedpak优点"><a href="#Speedpak优点" class="headerlink" title="Speedpak优点"></a>Speedpak优点</h2><p>1、可以减少内存使用和快速装配体打开加载。<br>2、并且保留了图形后，即使没有零部件文件。切换到Speedpak也能显示模型的图像</p>
+<img src="Speedpak/Speedpak4.png">
+
+<p>这是切换到Speedpak模式下的装配体</p>
+<img src="Speedpak/Speedpak5.png">
+
+<h2 id="Speedpak缺点"><a href="#Speedpak缺点" class="headerlink" title="Speedpak缺点"></a>Speedpak缺点</h2><p>设计信息的优化是优点也是缺点，Speedpak这部分的优化，会造成选择和编辑上的不便。但这点也完全不影响设计内容。你需要按照下述操作即可。编辑和更新Speedpak的方法：对于需要编辑的零部件，我们可以打开需编辑的零部件。在做完编辑后，可在总装使用如下操作更新编辑：</p>
+<p>方法1：【将Speedpak设定到父系】，来恢复部件的可编辑状态（这个命令会将部件内存加载进来）</p>
+<p>方法2：【更新Speedpak子装配体】，这个会保持Speedpak模式，然后把修改后的零件更新到总装里（推荐用这个）</p>
+<img src="Speedpak/Speedpak6.png">
+
+<p>注意：</p>
+<p>“将Speedpak设定到父系”将部件还原后，其内存信息会被加载进内存中。再编辑完成后换成Speedpak模式，其部件的内存信息还会保留。久而久之内存也是会增加上来。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>因此，在条件允许的情况下，我们建议可以是打开零件编辑的方式，再从总装使用“更新Speedpak子装配体”进行编辑修改的更新。</p>
+<p>除此之外，我们还有关于大型装配体优化方案和标准件轻量化的实施经验，需要了解更多，可以联系智诚科技咨询更多内容。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

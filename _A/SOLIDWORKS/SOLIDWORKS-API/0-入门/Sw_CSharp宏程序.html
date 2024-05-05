@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="Sw-CSharp-宏程序"><a href="#Sw-CSharp-宏程序" class="headerlink" title="Sw_CSharp 宏程序"></a>Sw_CSharp 宏程序</h1><p>本文将介绍用 CSharp 编译 dll 宏程序的操作方法。</p>
+<p>注意：dll 宏在 SW2019 后才支持，之前的版本就还是用 swp（VBA格式）</p>
+<h2 id="新建-SW-宏"><a href="#新建-SW-宏" class="headerlink" title="新建 SW 宏"></a>新建 SW 宏</h2><p>打开 SW 在【工具-宏-新建宏】，新建空白的宏程序，保存格式选择.csproj,以下就是 dll 宏的文件结构。其中 Macro.csproj 是C#项目文件，后面会操作在C#新建空白模板来添加使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Macro</span><br><span class="line">	|—— bin</span><br><span class="line">	|—— obj</span><br><span class="line">	|——	Properties</span><br><span class="line">	|—— Resource</span><br><span class="line">	|—— Macro.csproj</span><br></pre></td></tr></table></figure>
+
+<img src="Sw_CSharp宏程序/image5.png">
+
+<h2 id="新建-C-项目"><a href="#新建-C-项目" class="headerlink" title="新建 C#项目"></a>新建 C#项目</h2><p>打开 Visual Studio 工具，创建新项目</p>
+<img src="Sw_CSharp宏程序/image1.png">
+
+<p>新项目选择空白的解决方案，这里只是同个这个空白项目来打开.Csproj 文件，这个文件就是我们 SW 宏的项目文件</p>
+<img src="Sw_CSharp宏程序/image2.png">
+
+<p>解决方案名字默认即可</p>
+<img src="Sw_CSharp宏程序/image3.png">
+
+<h2 id="添加宏到C"><a href="#添加宏到C" class="headerlink" title="添加宏到C#"></a>添加宏到C#</h2><p>创建空白解决方案后，在右侧解决方案资源管理器内【右键解决方案-添加-现有项目】</p>
+<img src="Sw_CSharp宏程序/image4.png">
+
+<p>添加选择我们从 SW 新建保存出来的.csproj 文件</p>
+<img src="Sw_CSharp宏程序/image5.png">
+
+<p>打开后，资源管理器内显示的就是 SW 宏项目的完整结构了。主要是函数内容写在”SolidWorksMacro.cs”里面即可</p>
+<img src="Sw_CSharp宏程序/image6.png">
+
+<p>双击打开”SolidWorksMacro.cs”在 Main()里面就是主函数内容了。</p>
+<img src="Sw_CSharp宏程序/image7.png">
+
+<p>稍微下个程序试试</p>
+<img src="Sw_CSharp宏程序/image8.png">
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="自定义宏命令"><a href="#自定义宏命令" class="headerlink" title="自定义宏命令"></a>自定义宏命令</h2><p>在 SW 软件空白工具栏里【右键&#x3D;自定义】</p>
+<img src="Sw_CSharp宏程序/image9.png">
+
+<p>在自定义窗口中，找到【命令菜单-宏-新建宏按钮】，并将其拖放至工具栏空白处</p>
+<img src="Sw_CSharp宏程序/image10.png">
+
+<p>自定义宏按钮需要我们选择宏程序（.swp 或.dll 格式）</p>
+<img src="Sw_CSharp宏程序/image11.png">
+
+<p>我们浏览找到通过 CSharp 编译生成的 dll 宏程序，因为这里的程序是C#写的dll格式的文件，所需的程序库是外部加载的。你可能需要额外准备好下面两个文件，并将其于宏程序放在同一文件夹内。</p>
+<ul>
+<li>SolidWorks.Interop.sldworks</li>
+<li>SolidWorks.Interop.swconst</li>
+</ul>
+<img src="Sw_CSharp宏程序/image12.png">
+
+<p>自定义宏按钮里的方法默认会自己选择”Main()”函数，当然这里我们也是可以手动输入的。</p>
+<img src="Sw_CSharp宏程序/image13.png">
+
+<p>完成自定义宏按钮后，我们点击它。程序如愿执行弹窗效果。功能可行。</p>
+<img src="Sw_CSharp宏程序/image14.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>Q：自定义宏运行没反应？</p>
+<p>A：有一种情况是外部库SolidWorks.Interop.sldworks.dll没有放一起。</p>
+<p>Q：无指定宏程序？</p>
+<p>A：如果方法名里显示空白则可能会出现”无指定宏程序“的提示，并无法添加宏命令。当然这里我们也是可以手动输入”Main()”函数的。</p>
+<img src="Sw_CSharp宏程序/image13.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

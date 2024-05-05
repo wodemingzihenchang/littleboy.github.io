@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-21 17:01:10</span>
+</div>
+
+<div id="article"><h1 id="模型线条加载慢"><a href="#模型线条加载慢" class="headerlink" title="模型线条加载慢"></a>模型线条加载慢</h1><p>模型线条加载慢，这种情况通常是软件设置勾选【系统选项-性能-OpenGL】导致，一般OpenGL是利用了CUP做显卡显示，这在SW软件里的优化是比较差的。会出现如下的情况：</p>
+<img src="模型线条加载慢/模型线条加载慢.gif" >
+
+
+
+<h2 id="方法-1：关闭OpenGL"><a href="#方法-1：关闭OpenGL" class="headerlink" title="方法 1：关闭OpenGL"></a>方法 1：关闭OpenGL</h2><img src="模型线条加载慢/关闭OpenGL.png">
+
+<h2 id="方法-2：检查显卡启动"><a href="#方法-2：检查显卡启动" class="headerlink" title="方法 2：检查显卡启动"></a>方法 2：检查显卡启动</h2><p>如果不能关闭关闭OpenGL。英伟达的显卡在打开软件时可以选择是：集显打开（错误），还是独显打开（正确），可右键软件程序检查。</p>
+<h2 id="方法-3：检查显卡驱动"><a href="#方法-3：检查显卡驱动" class="headerlink" title="方法 3：检查显卡驱动"></a>方法 3：检查显卡驱动</h2><p>如果不能关闭关闭OpenGL。请检查您电脑的显卡情况是否使用正常。特别是重装系统的电脑因缺少显卡驱动导致“只能打开OpenGL显示模式”。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

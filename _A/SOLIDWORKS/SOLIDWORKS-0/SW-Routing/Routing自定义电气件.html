@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-01 16:52:55</span>
+</div>
+
+<div id="article"><h1 id="Routing电气件"><a href="#Routing电气件" class="headerlink" title="Routing电气件"></a>Routing电气件</h1><h2 id="电气零部件库"><a href="#电气零部件库" class="headerlink" title="电气零部件库"></a>电气零部件库</h2><ul>
+<li>连接器</li>
+</ul>
+<p>接头是连接线路与线路外部设备的特殊零件配件。 接头通常包含设备连接的配合参考。  </p>
+<ul>
+<li>线夹（线槽）</li>
+</ul>
+<p>线夹是有助于按需定位线路的电气线路、管道线路或软管线路的零部件。 线夹可用作参考位置，或在生成线路期间拖至线路中。 这些零部件通常包含设备连接的配合参考。 </p>
+<ul>
+<li>端子接头</li>
+</ul>
+<p>包含电气导管和电气连接点。 线路零部件只含电气导管步路点。 这些零部件通常包含设备连接的配合参考。 </p>
+<ul>
+<li>中接管</li>
+</ul>
+<p><img src="https://content.misumi.com.cn/image/upload/f_auto,t_popover_main/v1/p/jp/product/series/110400318730/110400318730_001.webp" alt="img"></p>
+<ul>
+<li>电气导管</li>
+</ul>
+<p>电气导管是一类结合刚性管筒和电气的步路零件。终端连接器包括电导管和电连接点。内联路由组件只包含电导管路由点。这些组件通常包含设备连接的配套参考。</p>
+<ul>
+<li>柔性电缆接头+带状电缆（线夹）</li>
+</ul>
+<p>带状电缆零部件包括接头、插座和线夹。 这些零部件通常包含设备连接的配合参考。 </p>
+<p><img src="https://pic.pngsucai.com/00/53/01/3f4d21710a042c82.webp" alt="网络电缆带状电缆总线引线PNG图片素材下载_图片编号5301480-PNG素材网"></p>
+<h2 id="电缆电线库"><a href="#电缆电线库" class="headerlink" title="电缆电线库"></a>电缆电线库</h2><ul>
+<li><p>电线</p>
+</li>
+<li><p>电缆</p>
+</li>
+</ul>
+<p>电缆是伴随线路长度至草图末端或电气接头的零件。 与管道和管筒不一样，没有电缆“源”零件；电缆是在线路中生成的，并采用从默认的线路属性或“从&#x2F;到”清单提取的规格。</p>
+<h2 id="电气设计要求"><a href="#电气设计要求" class="headerlink" title="电气设计要求"></a>电气设计要求</h2><p>建议:使用单个cpoint的组件，而不是多个cpoint。单点连接器使布线更容易，因为中间不需要电线线束和每个连接器引脚。多个CPoint连接器所需的额外布线增加程序集的复杂性并影响性能。</p>
+<p>建议:对于单CPoint连接器，将CPoint放在电线或电缆进入或离开连接器，例如在应变缓解装置的末端，如如下图所示。该点也可以从连接器的后方偏移。</p>
+<p>CPoint中有一个额外的内部导线长度属性PropertyManager。设置长度值，使电线足够长，可以连接将CPoint指向最远的引脚</p>
+<p>对于多个CPoint连接器，为每个引脚添加一个CPoint，并使用CPoint原理图引脚ID用于指示CPoint所代表的引脚。自动路由工具可以提供帮助将导线布线到每个连接器引脚。</p>
+<p>建议:为每个连接器添加一个组件引用。当你有在一个设计中有几个相似的连接器，通常给出每个单独的实例是有用的描述性名称。右键单击连接器，选择Component Properties并输入在“组件属性”对话框的“组件引用”中使用唯一的名称。</p>
+<h1 id="Routing自定义-连接器"><a href="#Routing自定义-连接器" class="headerlink" title="Routing自定义-连接器"></a>Routing自定义-连接器</h1><p>前期准备：你需要准备标准件接头模型。打开Routing库管理器，选择零部件向导的类型。使用【Routing Library Manage-电缆电线库向导】进行自定义。</p>
+<img src="Routing库管理器\Routing库管理器.png">
+
+<h2 id="步路功能点"><a href="#步路功能点" class="headerlink" title="步路功能点"></a>步路功能点</h2><p>1、通过旋转点（或圆弧）获取连接点的位置；</p>
+<p>2、选择不同类型的线路会有不同的参数，具体可见：<a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/chinese-simplified/Solidworks/sldpiping/HIDD_DVE_CONNECTION_POINT.htm?rid=145605">手册说明</a>。这里以常见的单线模型做例子。</p>
+<p>3、在“选取电缆”选项，可以选择有“电缆库.xml”定义好的电线匹配。</p>
+<img src="Routing自定义电气件\连接点.png">
+
+<h2 id="步路几何体"><a href="#步路几何体" class="headerlink" title="步路几何体"></a>步路几何体</h2><p>在电线&#x2F;电缆中无需设置；可跳过直接下一步。</p>
+<p>步路几何体适用于线路使用的特殊特征。 特征和尺寸的名称必须与向导指定的名称完全相同。 例如，弯管中的 BendRadius@ElbowArc 确定弯管每个配置的折弯半径。向导显示每个零部件必要及可选的几何体。 </p>
+<h2 id="配合参考"><a href="#配合参考" class="headerlink" title="配合参考"></a>配合参考</h2><p>参考之前零部件【参考几何体-配合参考】使用即可。例如本次模型的接线端子我将以接线头的圆边线作为参考配合边。</p>
+<img src="Routing自定义电气件\参考配合.png">
+
+<h2 id="有效性检查"><a href="#有效性检查" class="headerlink" title="有效性检查"></a>有效性检查</h2><p>此对话框用于了解零件中是否缺少任何必要的项目，例如连接点和线路点。正常情况回提示：“遗失所需项：无 。零件建模已完成。按下一步继续“。</p>
+<h2 id="设计表检查"><a href="#设计表检查" class="headerlink" title="设计表检查"></a>设计表检查</h2><p>您可以使用设计表检查对话框来验证标准和自定义设计表条目。 您可以根据需要添加、编辑或删除列</p>
+<p>电气件似乎也无此项需要，可以跳过。</p>
+<h2 id="零部件属性"><a href="#零部件属性" class="headerlink" title="零部件属性"></a>零部件属性</h2><p>您可以使用零部件属性对话框来查看零部件属性及其值。 </p>
+<p>对于具有多个配置的零件，请使用设计表。</p>
+<h2 id="保存完成"><a href="#保存完成" class="headerlink" title="保存完成"></a>保存完成</h2><p>保存到步路设计库</p>
+<p>保存还能选择“为缆束生成末端接头图例”</p>
+<h1 id="Routing自定义-线夹"><a href="#Routing自定义-线夹" class="headerlink" title="Routing自定义-线夹"></a>Routing自定义-线夹</h1><h1 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h1><h2 id="线夹"><a href="#线夹" class="headerlink" title="线夹"></a>线夹</h2><p>使用草图或轴定义线夹的（Rpoint）。</p>
+<p>步路几何体：</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

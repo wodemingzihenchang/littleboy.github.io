@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-12 22:01:33</span>
+</div>
+
+<div id="article"><h1 id="平面四杆机构设计"><a href="#平面四杆机构设计" class="headerlink" title="平面四杆机构设计"></a>平面四杆机构设计</h1><span id="more"></span>
+
+<h2 id="图解法"><a href="#图解法" class="headerlink" title="图解法"></a>图解法</h2><p>设计的基本思想<br>对于四杆机构来说，当其较链中心位置确定后，各杆的长度也就确定了.用作图法设计四杆机构，就是利用各较链之间相对运动的几何关系，通过作图确定各较链的位置，从而定出各杆的长度。</p>
+<p>四杆机构图解设计的实质：用作图法确定各较链中心的位置的问题</p>
+<h3 id="中垂线原理："><a href="#中垂线原理：" class="headerlink" title="中垂线原理："></a>中垂线原理：</h3><p>连杆的运行时是圆周摆动，通过三点两线的中垂线可以相交得到连杆旋转的圆心。</p>
+<p>例题1：已知活动较链B、C的3个位置，确定固定较链A、D位置。作图依据: A、D分别为B、C所在轨迹圆弧的圆心。</p>
+<img src="平面四杆机构\例题1.png">
+
+<p>作图方法:<br>1）分别作连线B1B2和B2B3 的中垂线b12、b23,其交点即为A的位置;</p>
+<p>2）同理可求D的位置;连接AB1、C1D，即得所求四杆机构AB1CiD。</p>
+<img src="平面四杆机构\例题1解法.png">
+
+<h3 id="机构倒置原理："><a href="#机构倒置原理：" class="headerlink" title="机构倒置原理："></a>机构倒置原理：</h3><p>已知固定较链A、D 位置，确定活动较链B、C 位置机构倒置原理: 若改取机构的原连杆BC为机架，原机架AD为连杆,则A、D就变为活动饺链，而B、C变为固定较链了。</p>
+<img src="平面四杆机构\机构倒置原理.png">
+
+<p>例题2：已知固定较链A、D 位置。设已知A、D 的位置，及连杆上的标线EF 在机构运动过程中，分别占据E1F1、E2F2、E3F3三个位置。现要求确定两活动较链中心B、C的位置。</p>
+<img src="平面四杆机构\例题2.png">
+
+<p>作图方法:<br>1)以EiFi为机架作机构倒置，作出4、D另外两个位置4、D及A”、D”</p>
+<p>2)由4、4、A”三点确定圆弧的圆心Bi点，D、D、D”可求得Ci点</p>
+<p>3)连接AB1、BC及CD，即得所求四杆机构ABiCiD。</p>
+<img src="平面四杆机构\例题2解法1.png">
+
+<img src="平面四杆机构\例题2解法2.png">
+
+
+
+<p>按给定连杆预定N位置设计四杆机构的求解条件</p>
+<p>当N&#x3D;3 时，有唯一解;</p>
+<p>当N&#x3D;2 时，有无穷多解。此时可根据其他条件选定一个解;</p>
+<p>当N&#x3D;4 时，可能有解或无解，若重选B;位置，可能有无穷多解</p>
+<h3 id="反转法原理："><a href="#反转法原理：" class="headerlink" title="反转法原理："></a>反转法原理：</h3><p>取机构原连架杆CD为机架，则连架杆AB变为连杆，进行机构倒置。这样，将原求活动饺链C的位置问题转化为求固定饺链C的问题。这种方法称为反转法或机构反转法</p>
+<img src="平面四杆机构\反转法原理.png">
+
+<p>例题3：已知两连架杆两对对应角位移</p>
+<img src="平面四杆机构\例题3.png">
+
+<p>作图方法:</p>
+<p>1)先由d 定出位置A、D，适当取AB长度及位置AB1，作位置AB2、AB3;</p>
+<p>2)为确定C，采用反转法原理，作连线B2D 及B3D，并分别绕D点反转φ12及-φ13角，可得B2’及B3’;</p>
+<p>3)由B1、B及B;确定C1位置。</p>
+<img src="平面四杆机构\例题3解法.png">
+
+<img src="平面四杆机构\例题3解法说明.png">
+
+<p>当已知两连架杆两对对应角位移时，因杆AB的长度及其初始位置AB为任选，故有无穷多解。</p>
+<h2 id="解析法"><a href="#解析法" class="headerlink" title="解析法"></a>解析法</h2><p>在用解析法设计四杆机构时，首先需建立包含机构各尺度参数和运动变量在内的解析式，然后根据已知的运动变量求机构的尺度参数。</p>
+<p>方法特点 :<br>可借助于计算器或计算机求解，计算精度高，适应于对三个或三个以上位置设计的求解，尤其是对机构进行优化设计和精度分析十分有利。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-PDM类别"><a href="#SOLIDWORKS-PDM类别" class="headerlink" title="SOLIDWORKS-PDM类别"></a>SOLIDWORKS-PDM类别</h1><span id="more"></span>
+
+<h2 id="新建类别"><a href="#新建类别" class="headerlink" title="新建类别"></a>新建类别</h2><p>【PDM管理-右键类别-新类别】，在新建窗口输入“类别名称”和“条件”即可。</p>
+<img src="类别/新建类别.png">
+
+<h2 id="输入条件"><a href="#输入条件" class="headerlink" title="输入条件"></a>输入条件</h2><p>“或”是新建一个或条件集合；“新建”新建条件</p>
+<p>可以按特定路径进行分类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xxx\%	：匹配根目录下名为“administration”的文件夹内的所有文件</span><br><span class="line">%\xxx\%	：匹配文件库内任何路径下名为“documents”的文件夹内的所有文件</span><br><span class="line">%\xxx%	：匹配所有名称以“proj”开头的文件夹内的所有文件</span><br><span class="line">A1 \layout”</span><br></pre></td></tr></table></figure>
+
+<p>可以按特定文件名称或扩展名进行分类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%.pdf	：匹配文件库内的所有“.pdf”文件</span><br><span class="line">%name%	：匹配所有文件名包含有“name”的所有文件，</span><br><span class="line">%\i%.md	：匹配所有以i开头的md文件，</span><br><span class="line"></span><br><span class="line">用文件名后缀归类：【%.sld%】（%是通配符省略）</span><br><span class="line">用文件名前缀来（或文件路径）归类：【%\前缀-%】</span><br></pre></td></tr></table></figure>
+
+<h1 id="条件类型"><a href="#条件类型" class="headerlink" title="条件类型"></a>条件类型</h1><ul>
+<li>对象类型</li>
+</ul>
+<img src="类别/对象类型.png">
+
+<ul>
+<li>修订版</li>
+</ul>
+<img src="类别/修订版类型.png">
+
+<ul>
+<li>变量</li>
+</ul>
+<p>检入时会需要进行类别分类，未按要求归类的文件是检入不进 PDM系统的（如下提示：）</p>
+<img src="类别/不满足流程类型.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

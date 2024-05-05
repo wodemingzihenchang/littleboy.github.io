@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-01 23:57:29</span>
+</div>
+
+<div id="article"><h1 id="如何向-gitHub-仓库更新内容"><a href="#如何向-gitHub-仓库更新内容" class="headerlink" title="如何向 gitHub 仓库更新内容"></a>如何向 gitHub 仓库更新内容</h1><p>首先你需要在 github 上先有一个仓库，通过 git 命令向远程仓库推送更新。如果你已有克隆本地仓库可从 git<br>init 初始化开始</p>
+<h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>1、 git clone<br><a target="_blank" rel="noopener" href="https://github.com//...%EF%BC%8C%E8%BF%99%E4%B8%AA%E8%B7%AF%E5%BE%84%E5%8F%AF%E4%BB%A5%E7%82%B9%E5%87%BB%E8%BF%9B%E5%85%A5%E4%BB%93%E5%BA%93%EF%BC%8C%E5%9C%A8%E4%BB%93%E5%BA%93%E7%9A%84%E8%BF%99%E4%B8%80%E9%83%A8%E5%88%86%E5%A4%8D%E5%88%B6%E5%8D%B3%E5%8F%AF%EF%BC%9A">https://github.com/\...，这个路径可以点击进入仓库，在仓库的这一部分复制即可：</a></p>
+<img src="Git-上传更新-A/image1.png">
+
+<p>2、<br>命令行窗口出现这样的通知就说明克隆成功，同时你的文件夹内会多一个名字为远程仓库名字的文件夹：</p>
+<img src="Git-上传更新-A/image2.png">
+
+<p>3、向文件夹中添加要更新的文件，在命令行中将工作目录切换到克隆到本地的仓库下：</p>
+<p>（操作更新文件中）……</p>
+<h2 id="cd-仓库名"><a href="#cd-仓库名" class="headerlink" title="cd 仓库名"></a>cd 仓库名</h2><p>4、cd 仓库名</p>
+<img src="Git-上传更新-A/image3.png">
+
+<h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><p>5、 使用 git init 进行初始化：</p>
+<img src="Git-上传更新-A/image4.png">
+
+<h2 id="git-add"><a href="#git-add" class="headerlink" title="git add ."></a>git add .</h2><p>6、使用 git add . 放入缓存区：</p>
+<img src="Git-上传更新-A/image5.png">
+
+<h2 id="git-commit-m-‘评论’"><a href="#git-commit-m-‘评论’" class="headerlink" title="git commit -m ‘评论’"></a>git commit -m ‘评论’</h2><p>7、加入完毕后，使用 git commit -m ‘（评论内容）’放入 git 管理器：</p>
+<img src="Git-上传更新-A/image6.png">
+
+<h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2><p>8、最后输入 git push<br>完成推送，刷新网页，仓库目录下会多出你想要上传的文件：</p>
+<img src="Git-上传更新-A/image7.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><img src="Git-上传更新-A/image8.png">
+
+<p>Q：git push 失败？</p>
+<p>A：有修改 README.MD 文件，需要先 git.pull 在操作上传。</p>
+<p>Q：使用 ssh 提交代码却提示：DeployKey does not support push code fatal: Could not read from remote repository</p>
+<p>A：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46253682/article/details/125897811">https://blog.csdn.net/weixin_46253682/article/details/125897811</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

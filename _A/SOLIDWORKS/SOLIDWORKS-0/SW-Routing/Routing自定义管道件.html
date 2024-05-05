@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-01 16:52:55</span>
+</div>
+
+<div id="article"><h1 id="Routing自定义管道件"><a href="#Routing自定义管道件" class="headerlink" title="Routing自定义管道件"></a>Routing自定义管道件</h1><p>管道组件由一个或多个管道配件组成，如法兰、三通和减速器。一个3D草图和管道零件。3D草图包含直线、点和圆弧(圆角)。当创建管道组件时，Routing应用程序将其添加到当前组件中。</p>
+<h2 id="管道零部件："><a href="#管道零部件：" class="headerlink" title="管道零部件："></a>管道零部件：</h2><p>管道路线使用基于线几何的刚性管道。除了管道，还有许多不同类型的组件可以与管道一起使用来构建。如阀门或过滤器。您可以创建以部件形式连接到管道的设备。但是，您应该考虑到连接到管道。例如，管道，你可能会使用法兰连接管道路线的组合泵，过滤器及阀门设备。</p>
+<p>典型的管道路线是由不同长度的<strong>管道</strong>路线通过<strong>接头</strong>连接而成</p>
+<ul>
+<li>弯管</li>
+<li>转接管</li>
+<li>三通&amp;四通</li>
+<li>法兰</li>
+<li>阀门</li>
+<li>过滤器</li>
+<li>垫片</li>
+<li>变径管</li>
+</ul>
+<p>标准型接头<br>逆止型接头<br>压力显示型接头<br>调速接头<br>铜接头<br>开关<br>不锈钢接头<br>插管式接头<br>柱塞&#x2F;连接管<br>极小型接头<br>迷你型接头</p>
+<h2 id="管道设计要求"><a href="#管道设计要求" class="headerlink" title="管道设计要求"></a>管道设计要求</h2><p>建议:使用单个cpoint的组件，而不是多个cpoint。单点连接器使布线更容易，因为中间不需要电线线束和每个连接器引脚。多个CPoint连接器所需的额外布线增加程序集的复杂性并影响性能。</p>
+<p>建议:对于单CPoint连接器，将CPoint放在电线或电缆进入或离开连接器，例如在应变缓解装置的末端，如如下图所示。该点也可以从连接器的后方偏移。</p>
+<p>CPoint中有一个额外的内部导线长度属性PropertyManager。设置长度值，使电线足够长，可以连接将CPoint指向最远的引脚</p>
+<p>对于多个CPoint连接器，为每个引脚添加一个CPoint，并使用CPoint原理图引脚ID用于指示CPoint所代表的引脚。自动管道工具可以提供帮助将导线布线到每个连接器引脚。</p>
+<p>建议:为每个连接器添加一个组件引用。当你有在一个设计中有几个相似的连接器，通常给出每个单独的实例是有用的描述性名称。右键单击连接器，选择Component Properties并输入在“组件属性”对话框的“组件引用”中使用唯一的名称。</p>
+<h1 id="Routing自定义-法兰"><a href="#Routing自定义-法兰" class="headerlink" title="Routing自定义-法兰"></a>Routing自定义-法兰</h1><p>前期准备：你需要准备标准件接头模型。打开Routing库管理器，选择零部件向导的类型。使用【Routing Library Manage-电缆电线库向导】进行自定义。</p>
+<img src="Routing库管理器\Routing库管理器.png">
+
+<h2 id="步路功能点"><a href="#步路功能点" class="headerlink" title="步路功能点"></a>步路功能点</h2><p>1、通过旋转点（或圆弧）获取连接点的位置；</p>
+<h2 id="步路几何体"><a href="#步路几何体" class="headerlink" title="步路几何体"></a>步路几何体</h2><p>在电线&#x2F;电缆中无需设置；可跳过直接下一步。</p>
+<p>步路几何体适用于线路使用的特殊特征。 特征和尺寸的名称必须与向导指定的名称完全相同。 例如，弯管中的 BendRadius@ElbowArc 确定弯管每个配置的折弯半径。向导显示每个零部件必要及可选的几何体。 </p>
+<h2 id="配合参考"><a href="#配合参考" class="headerlink" title="配合参考"></a>配合参考</h2><p>参考之前零部件【参考几何体-配合参考】使用即可。例如本次模型的接线端子我将以接线头的圆边线作为参考配合边。</p>
+<h2 id="有效性检查"><a href="#有效性检查" class="headerlink" title="有效性检查"></a>有效性检查</h2><p>此对话框用于了解零件中是否缺少任何必要的项目，例如连接点和线路点。正常情况回提示：“遗失所需项：无 。零件建模已完成。按下一步继续“。</p>
+<h2 id="设计表检查"><a href="#设计表检查" class="headerlink" title="设计表检查"></a>设计表检查</h2><p>您可以使用设计表检查对话框来验证标准和自定义设计表条目。 您可以根据需要添加、编辑或删除列</p>
+<p>电气件似乎也无此项需要，可以跳过。</p>
+<h2 id="零部件属性"><a href="#零部件属性" class="headerlink" title="零部件属性"></a>零部件属性</h2><p>您可以使用零部件属性对话框来查看零部件属性及其值。 </p>
+<p>对于具有多个配置的零件，请使用设计表。</p>
+<h2 id="保存完成"><a href="#保存完成" class="headerlink" title="保存完成"></a>保存完成</h2><p>保存到步路设计库</p>
+<p>保存还能选择“为缆束生成末端接头图例”</p>
+<h1 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h1><h2 id="线夹"><a href="#线夹" class="headerlink" title="线夹"></a>线夹</h2><p>使用草图或轴定义线夹的（Rpoint）。</p>
+<p>步路几何体：</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

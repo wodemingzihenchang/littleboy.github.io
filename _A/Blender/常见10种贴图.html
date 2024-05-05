@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-12 19:31:18</span>
+</div>
+
+<div id="article"><h1 id="常见贴图"><a href="#常见贴图" class="headerlink" title="常见贴图"></a>常见贴图</h1><span id="more"></span>
+
+<h2 id="颜色（Diffuse）"><a href="#颜色（Diffuse）" class="headerlink" title="颜色（Diffuse）"></a>颜色（Diffuse）</h2><p>主要决定了纹理的“颜色”。在金属纹理中，它决定了材料反射的颜色。</p>
+<h2 id="法线（Normal）"><a href="#法线（Normal）" class="headerlink" title="法线（Normal）"></a>法线（Normal）</h2><img src="常见10种贴图\1.png">
+
+<p>法线贴图提供纹理深度。它使用复杂的计算模拟光线与物质表面相互作用的方式，以创建较小的凸起和凹痕。法线贴图不会更改你的基本几何图形。</p>
+<h2 id="粗糙度-Roughness"><a href="#粗糙度-Roughness" class="headerlink" title="粗糙度(Roughness)"></a>粗糙度(Roughness)</h2><img src="常见10种贴图\2.png">
+
+<p>表面的粗糙度决定了它的粗糙度或光滑度。它们决定了光线在模型表面上的分布方式。粗糙的表面比光滑的表面在更多的方向上散射光线，导致更模糊而不是更清晰的反射。</p>
+<h2 id="高光-Specula"><a href="#高光-Specula" class="headerlink" title="高光(Specula)"></a>高光(Specula)</h2><img src="常见10种贴图\4.png">
+
+<p>用来表现物体对光照反应的材质。当光照到塑料，布料，金属上时，所展现出来的高光部分和高光表现是不一样的。通过高光贴图上的颜色值来表现高光的强度，值越大表示高光反射越强。</p>
+<h2 id="透明度（Opacity）"><a href="#透明度（Opacity）" class="headerlink" title="透明度（Opacity）"></a>透明度（Opacity）</h2><img src="常见10种贴图\6.png">
+
+<p>可以使用不透明度贴图使材质区域透明。如果你正在建造玻璃或低聚树枝或贴花，这一点非常有用。它可以用于树木或贴花，如上图所示。你可以在单个多边形平面上构造一堆完整的叶子，并使用不透明度贴图使多边形的多余消失。然后可以对这些多边形进行分层，以创建需要很少处理能力的逼真的树。</p>
+<p>灰度不透明度贴图可用。白色是完全不透明的，而黑色是完全透明的。它们之间不同程度的半透明性由灰色的色调表示。0.0 是不透明的，而 1.0 是透明的。</p>
+<h2 id="自发光贴图-Emissive"><a href="#自发光贴图-Emissive" class="headerlink" title="自发光贴图(Emissive)"></a>自发光贴图(Emissive)</h2><p>这些贴图会使材质的某些元素看起来会散发出自己的光，从而可以在黑暗的地方看到它们。自发光有利于照亮小型 LED 或创建独特的条形照明效果。但是，如果应用太多，场景中的细节将被完全冲刷掉，场景将失去其活力。这些是完整的 RGB贴图。它们类似于反照率贴图，但它们用于光线。虽然自发光贴图可用于照亮整个场景，但它比添加传统照明要复杂得多。</p>
+<h1 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h1><p>游戏资源中常见的贴图类型</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/260973533">https://zhuanlan.zhihu.com/p/260973533</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

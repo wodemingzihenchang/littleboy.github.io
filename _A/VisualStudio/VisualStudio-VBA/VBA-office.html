@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-02 15:49:01</span>
+</div>
+
+<div id="article"><h1 id="VBA-office程序例子"><a href="#VBA-office程序例子" class="headerlink" title="VBA-office程序例子"></a>VBA-office程序例子</h1><h2 id="Word批量转pdf"><a href="#Word批量转pdf" class="headerlink" title="Word批量转pdf"></a>Word批量转pdf</h2><p>新建文本文件txt，写入如下内容并保存成后缀为（.vbs格式）文件。当然你也可以直接点击<a href="VBA-office/word转pdf.zip">zip下载链接</a>直接下载vbs文件。</p>
+<p>使用时，将word文件拖动到“.vbs文件”即可，等待转换程序完成。</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&#x27;Convert .doc or .docx to .pdf files via Send To menu</span></span><br><span class="line"><span class="keyword">Set</span> fso = CreateObject(<span class="string">&quot;Scripting.FileSystemObject&quot;</span>)</span><br><span class="line"><span class="keyword">For</span> i= <span class="number">0</span> <span class="keyword">To</span> WScript.Arguments.Count -<span class="number">1</span></span><br><span class="line">   docPath = WScript.Arguments(i)</span><br><span class="line">   docPath = fso.GetAbsolutePathName(docPath)</span><br><span class="line">   <span class="keyword">If</span> LCase(Right(docPath, <span class="number">4</span>)) = <span class="string">&quot;.doc&quot;</span> <span class="built_in">Or</span> LCase(Right(docPath, <span class="number">5</span>)) = <span class="string">&quot;.docx&quot;</span> <span class="keyword">Then</span></span><br><span class="line">      <span class="keyword">Set</span> objWord = CreateObject(<span class="string">&quot;Word.Application&quot;</span>)</span><br><span class="line">      pdfPath = fso.GetParentFolderName(docPath) &amp; <span class="string">&quot;\&quot;</span> &amp; _</span><br><span class="line">    fso.GetBaseName(docpath) &amp; <span class="string">&quot;.pdf&quot;</span></span><br><span class="line">      objWord.Visible = <span class="literal">False</span></span><br><span class="line">      <span class="keyword">Set</span> objDoc = objWord.documents.open(docPath)</span><br><span class="line">      objDoc.saveas pdfPath, <span class="number">17</span></span><br><span class="line">      objDoc.Close</span><br><span class="line">      objWord.Quit   </span><br><span class="line">   <span class="keyword">End</span> <span class="keyword">If</span>   </span><br><span class="line"><span class="keyword">Next</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="虚拟打印机-VBA批量打印"><a href="#虚拟打印机-VBA批量打印" class="headerlink" title="虚拟打印机+VBA批量打印"></a>虚拟打印机+VBA批量打印</h2><p>这个方法的原理就是，通过虚拟机将word打印成pdf格式，再用vba这个工具将这个过程<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E6%89%B9%E9%87%8F%E5%8C%96&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:2267517664%7D">批量化</a>。</p>
+<p>VBA的代码，如下：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 批量打印WORD文档()</span><br><span class="line">     <span class="keyword">Dim</span> fileToOpen, GetOpenFilename, App, iFile</span><br><span class="line">     fileToOpen = Application.GetOpenFilename(filefilter:=<span class="string">&quot;Word文档(*.do*),*.do*&quot;</span>, FilterIndex:=<span class="number">4</span>, Title:=<span class="string">&quot;请选择要处理的文档(可多选)&quot;</span>, MultiSelect:=<span class="literal">True</span>)</span><br><span class="line">     <span class="keyword">If</span> <span class="built_in">Not</span> IsArray(fileToOpen) <span class="keyword">Then</span></span><br><span class="line">         MsgBox <span class="string">&quot;你没有选择文件&quot;</span>, vbOKOnly, <span class="string">&quot;提示&quot;</span>: <span class="keyword">Exit</span> <span class="keyword">Sub</span></span><br><span class="line">     <span class="keyword">Else</span></span><br><span class="line">         <span class="keyword">Set</span> App = CreateObject(<span class="string">&quot;Word.Application&quot;</span>)</span><br><span class="line">         <span class="keyword">For</span> <span class="keyword">Each</span> iFile <span class="keyword">In</span> fileToOpen</span><br><span class="line">             <span class="keyword">Set</span> WrdDoc = App.Documents.Open(iFile)</span><br><span class="line">             App.Documents(WrdDoc).PrintOut</span><br><span class="line">             App.Documents(WrdDoc).Close <span class="literal">False</span></span><br><span class="line">             T = T + <span class="number">1</span></span><br><span class="line">         <span class="keyword">Next</span></span><br><span class="line">     <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">     MsgBox <span class="string">&quot;操作完成！！&quot;</span> &amp; vbCrLf &amp; <span class="string">&quot;打印了 &quot;</span> &amp; T &amp; <span class="string">&quot; 个文件。&quot;</span>, vbOKOnly, <span class="string">&quot;提示&quot;</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

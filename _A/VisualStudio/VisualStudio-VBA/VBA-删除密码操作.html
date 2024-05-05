@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-08-03 02:27:40</span>
+</div>
+
+<div id="article"><h1 id="VBA-删除密码操作"><a href="#VBA-删除密码操作" class="headerlink" title="VBA-删除密码操作"></a>VBA-删除密码操作</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>1、VBA 工程文件（带密码）：这里我用 SW 宏程序（.swp）举例；</p>
+<p>2、16 进制编辑器：这里我用 notepad++（需要安装 HEX 插件查看器）；</p>
+<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>0、 如果已经可以查看 16 进制（HEX）的朋友们，就可以跳过这一步，直接看步骤 1。</p>
+<p>0-1、打开 notepad++，找到【插件-插件管理】</p>
+<img src="VBA-删除密码操作/image1.png">
+
+<p>0-2、找到并勾选“HEX-Editor”，进行安装</p>
+<img src="VBA-删除密码操作/image2.png">
+
+<p>1、 swp 文件【右键】-【notepad++编辑】</p>
+<img src="VBA-删除密码操作/image3.png">
+
+<p>2、 打开后你可能会看到一堆不易阅读的内容，此时就需要使用插件转成 16 进制的编辑；</p>
+<img src="VBA-删除密码操作/image4.png">
+
+<p>3、 这是转 16 进制后的效果；</p>
+<img src="VBA-删除密码操作/image5.png">
+
+<p>4、 然后使用【Ctrl+F】，查找到 DPB 内容；（注意：16 进制下的搜索默认是按 16 进制的内容来，这意味着我们只能搜索“0~F”16 个字符的内容）</p>
+<img src="VBA-删除密码操作/image6.png">
+
+<p>5、 点击“Find Next”搜索下一个 DPB，</p>
+<img src="VBA-删除密码操作/image7.png">
+
+<p>6、 将“DPB”改成“DPx”（这里可能需要注意大小写），16 进制修改是按顺序修改的，会要求鼠标光标停留在“DPB”的“B”前面（下图 1），然后输入“x”。此时 B 就会被替换成 x 了，鼠标光标也会前进到 x 后面（下图 2）。</p>
+<img src="VBA-删除密码操作/image8.png">
+
+<p>7、 完成后，保存修改的 swp 文件并关闭 notepad++编辑器。</p>
+<h2 id="打开宏"><a href="#打开宏" class="headerlink" title="打开宏"></a>打开宏</h2><p>8、 打开 SW 程序，在【工具-宏-编辑】</p>
+<img src="VBA-删除密码操作/image9.png">
+
+<p>9、 找到刚才编辑修改的 swp 文件，并打开编辑。</p>
+<img src="VBA-删除密码操作/image10.png">
+
+<p>10、 打开时，你可能会遇到如下提示：请选择“是”继续加载工程。</p>
+<img src="VBA-删除密码操作/image11.png">
+
+<p>11、 你可能还会遇到多个弹窗提示“未知的错误（40230）”，我们全部都点“确定”即可。</p>
+<img src="VBA-删除密码操作/image12.png">
+
+<p>12、 点完所有弹窗后，我们就能进入到 VBA 界面了。</p>
+<img src="VBA-删除密码操作/image13.png">
+
+<p>13、 不过还没完，这个时候查看内容也还是会弹窗提示“未知的错误（40230）”，我们需要重新给工程文件设置新密码。【工具-工程属性-保护】设置新密码。</p>
+<img src="VBA-删除密码操作/image14.png">
+
+<p>14、 然后再去点击模块里的代码内容，就能查看了。以上就是修改 VBA 工程文件忘记密码的全部操作。</p>
+<img src="VBA-删除密码操作/image15.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="HCL许可证服务器指南"><a href="#HCL许可证服务器指南" class="headerlink" title="HCL许可证服务器指南"></a>HCL许可证服务器指南</h1><span id="more"></span>
+
+<h1 id="获得许可文件"><a href="#获得许可文件" class="headerlink" title="获得许可文件"></a>获得许可文件</h1><h2 id="获得服务器信息"><a href="#获得服务器信息" class="headerlink" title="获得服务器信息"></a>获得服务器信息</h2><p>生成浮动许可证所需的信息。Glovius浮动许可证基于许可证服务器的机器地址。许可服务器网络名称也是必需的。按照以下步骤获取“机器地址”。打开命令提示符CMD，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /all&gt;hostinfo.txt</span><br></pre></td></tr></table></figure>
+
+<p>‘hostinfo.txt’包含生成license所需的信息。将此文件连同您的订单信息发送至<a href="mailto:&#115;&#x61;&#108;&#x65;&#x73;&#x40;&#103;&#x6c;&#x6f;&#x76;&#x69;&#117;&#x73;&#46;&#99;&#x6f;&#x6d;">&#115;&#x61;&#108;&#x65;&#x73;&#x40;&#103;&#x6c;&#x6f;&#x76;&#x69;&#117;&#x73;&#46;&#99;&#x6f;&#x6d;</a>或<a href="mailto:&#x67;&#x6c;&#x6f;&#x76;&#x69;&#x75;&#115;&#x2e;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x40;&#104;&#x63;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#x6c;&#x6f;&#x76;&#x69;&#x75;&#115;&#x2e;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x40;&#104;&#x63;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>。浮动许可文件将在2个工作日内通过电子邮件发送给您。</p>
+<h2 id="生成许可文件"><a href="#生成许可文件" class="headerlink" title="生成许可文件"></a>生成许可文件</h2><p>获得浮动许可文件后，在记事本中打开并保存成后缀是.lic的格式文件。许可证文件的内容如下所示:（注意：当用记事本保存文件时，请确保在“另存为类型”框中选择“所有文件”，这样就不会自动添加.txt扩展名）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">SERVER server-name 00823F752B89 27019 </span><br><span class="line">VENDOR gssl </span><br><span class="line">FEATURE glv_viewer_pro gssl 20070100 permanent 2 START=08-Jun-2014  </span><br><span class="line">TS_OK SIGN=&quot;8253 AA6F 7A51 69BC 4EE1 30F7 08CD EEC2 2892 8FD8  </span><br><span class="line">2001 7FCE 3B82 B930 4688 B46A AF32 B4BE 43E8 04C6 21BD&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 注释 #</span><br><span class="line"># server-name：表示实际的服务器名称。第四个领域，</span><br><span class="line"># 27019：端口号。默认端口号27000。根据购买的产品可能会有所不同。</span><br><span class="line"># VENDOR gssl：</span><br><span class="line"># FEATURE：</span><br><span class="line"># TS_OK SIGN：</span><br><span class="line"># 注释 #</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装服务器"><a href="#安装服务器" class="headerlink" title="安装服务器"></a>安装服务器</h1><h2 id="安装服务器-1"><a href="#安装服务器-1" class="headerlink" title="安装服务器"></a>安装服务器</h2><p>下载并运行Geometric License Server安装文件。License Server download to host the license:<br> <a target="_blank" rel="noopener" href="https://glovius.blob.core.windows.net/installers/Support_material/HCLLicenseServer.exe">https://glovius.blob.core.windows.net/installers/Support_material/HCLLicenseServer.exe</a></p>
+<p>安装许可服务器工具指南。Instruction Guide to host the license on the server:<br> <a target="_blank" rel="noopener" href="https://glovius.blob.core.windows.net/installers/Support_material/Floating_License_Configuration.pdf">https://glovius.blob.core.windows.net/installers/Support_material/Floating_License_Configuration.pdf</a></p>
+<p>（安装下载链接过期失效或需要新版本程序，你可以联系‘<a href="mailto:&#x65;&#x64;&#114;&#97;&#x77;&#x69;&#x6e;&#103;&#115;&#46;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#64;&#x68;&#x63;&#108;&#46;&#99;&#111;&#x6d;">&#x65;&#x64;&#114;&#97;&#x77;&#x69;&#x6e;&#103;&#115;&#46;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#64;&#x68;&#x63;&#108;&#46;&#99;&#111;&#x6d;</a>‘）</p>
+<p>安装步骤如下：</p>
+<img src="HCL许可证服务器指南/安装服务器/0.png">
+
+<p>单击“下一步”继续，</p>
+<img src="HCL许可证服务器指南/安装服务器/1.png">
+
+<p>选择安装HCL License Server的安装目录（当然默认C盘路径也行）</p>
+<img src="HCL许可证服务器指南/安装服务器/2.png">
+
+<p>选择许可文件，单击“下一步”。（安装时需要license文件。如果还没有收到许可证文件，可使用空许可证文件代替）</p>
+<img src="HCL许可证服务器指南/安装服务器/3.png">
+
+<p>点击“安装”等待完成安装</p>
+<img src="HCL许可证服务器指南/安装服务器/4.png">
+
+<p>完成</p>
+<img src="HCL许可证服务器指南/安装服务器/5.png">
+
+
+
+<h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>从【开始菜单 &gt;程序&gt;”中运行lmtools.exe实用程序Geometric License证服务器&gt; lmtools】检查“配置使用”中的“服务&#x2F;许可文件”选项卡上的LMTOOLS对话框中是否存在FLEXlm服务几何服务”选项。</p>
+<img src="HCL许可证服务器指南/配置服务器/0配置服务器.png">
+
+<p><strong>1、单击配置服务</strong></p>
+<p>在“服务名称”下拉列表中，选择要用于管理许可证的服务几何。如果不存在服务名称，请输入需要管理license的服务名称（名称可以自己定义）。</p>
+<p>注:如果您有一个以上的软件供应商我们浏览到许可证管理器守护进程(lmgrd.exe)的位置。默认位置为“C:\Program Files\Geometric License Server\bin”文件夹。</p>
+<ul>
+<li>lmgrd：上面注释的位置下lmgrd.exe文件</li>
+<li>license：（★重点）浏览到浮动许可证文件的位置。</li>
+<li>log：任意log文本，输入调试日志文件的路径和文件名。</li>
+</ul>
+<img src="HCL许可证服务器指南/配置服务器/1配置服务.png">
+
+<p>选择“使用服务”。如果要在系统启动时自动启动lmgrd.exe，请选择“开机启动服务”。</p>
+<p>单击“Save Service”将新配置保存在步骤4中创建的服务名称下。</p>
+<p><strong>2、单击“开始&#x2F;停止&#x2F;重读”页签</strong></p>
+<img src="HCL许可证服务器指南/配置服务器/2开始服务.png">
+
+<p>单击“启动服务器”，启动license服务器。消息“服务器”在“LMTOOLS”对话框底部显示“正在启动”。许可证服务器通常会在10到30秒内启动。为确保license管理器已正确启动，请在启动服务器后等待30秒，然后单击LMTOOLS的“服务器状态”页签，</p>
+<p><strong>3、单击“执行状态查询”</strong></p>
+<p>内容包括10秒返回结果。滚动到结果的底部，寻找类似于下面的一行:功能使用信息:用户总数为1个和被使用许可数量</p>
+<img src="HCL许可证服务器指南/配置服务器/3查询服务.png">
+
+
+
+<h1 id="安装客户端"><a href="#安装客户端" class="headerlink" title="安装客户端"></a>安装客户端</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1、管理员启动安装程序，<a target="_blank" rel="noopener" href="https://edrawings.geometricglobal.com/products/edrawings-for-proengineer-and-creo/download-links/">【程序下载】</a>及<a target="_blank" rel="noopener" href="https://edrawings.geometricglobal.com/products/edrawings-for-proengineer-and-creo/release-notes/">【版本说明】</a></p>
+<img src="HCL许可证服务器指南/安装客户端/1.png">
+
+<p>2</p>
+<img src="HCL许可证服务器指南/安装客户端/2.png">
+
+<p>3选择包括publisher工具</p>
+<img src="HCL许可证服务器指南/安装客户端/3.png">
+
+<p>4安装程序会自动找到proe程序</p>
+<img src="HCL许可证服务器指南/安装客户端/4.png">
+
+<img src="HCL许可证服务器指南/安装客户端/5.png">
+
+<img src="HCL许可证服务器指南/安装客户端/6.png">
+
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><img src="HCL许可证服务器指南/安装客户端/edrawing license configuration.png">
+
+<h1 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h1><h2 id="旧设备停用"><a href="#旧设备停用" class="headerlink" title="旧设备停用"></a>旧设备停用</h2><p>选择开始&gt;项目Geometric&#x2F;HCL License Server&gt;打开“LMTOOLS”窗口。</p>
+<p>在“服务&#x2F;许可文件”页签中，选择“配置使用服务”选项，显示服务。“FLEXlm服务几何”将被列出。选择“FLEXlm Service Geometric”，并确保选中“LMTOOLS忽略许可证文件路径环境变量”。如果您为eDrawings 服务指定了不同的名称，请选择相应的名称。</p>
+<p>单击“启动&#x2F;停止&#x2F;重读”页签，选择“停止服务器”，停止服务器。</p>
+<img src="HCL许可证服务器指南/配置服务器/2开始服务.png">
+
+<h2 id="获得新许可"><a href="#获得新许可" class="headerlink" title="获得新许可"></a>获得新许可</h2><p>从旧服务器拿到的许可文件.lic、新服务器的名称、MAC地址发到‘<a href="mailto:&#x65;&#x64;&#114;&#97;&#119;&#105;&#110;&#x67;&#115;&#46;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x40;&#104;&#x63;&#x6c;&#46;&#99;&#x6f;&#109;">&#x65;&#x64;&#114;&#97;&#119;&#105;&#110;&#x67;&#115;&#46;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x40;&#104;&#x63;&#x6c;&#46;&#99;&#x6f;&#109;</a>‘原厂支持邮箱，支持邮箱将回复新的许可文件</p>
+<img src="HCL许可证服务器指南/获得新许可.png">
+
+
+
+<h2 id="新设备激活"><a href="#新设备激活" class="headerlink" title="新设备激活"></a>新设备激活</h2><p>在新设备中安装服务器，并打开。选择开始菜单》Geometric&#x2F;HCL License Server》打开“LMTOOLS”窗口。</p>
+<img src="HCL许可证服务器指南/配置服务器/0配置服务器.png">
+
+<p>单击“配置服务”选项卡，从“服务名称”下拉列表中选择要用于管理许可证的FLEXlm Service Geometric服务。浏览到新许可证文件的位置并选择许可证。单击Save Service保存新配置。（注意:如果有多个软件供应商使用FLEXlm进行许可证管理，则此下拉列表可能有多个选项。）</p>
+<img src="HCL许可证服务器指南/配置服务器/1配置服务.png">
+
+<p>单击Save Service保存新配置。单击“开始&#x2F;停止&#x2F;重读”页签。启动服务</p>
+<img src="HCL许可证服务器指南/配置服务器/2开始服务.png">
+
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://edrawings.geometricglobal.com/">(geometricglobal.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://products.geometricglobal.com/downloads/Glovius/Floating_License_Configuration.pdf">Floating License (geometricglobal.com)</a></p>
+<p>[ug服务器许可证(LMTOOLS)配置_ug许可证设置-CSDN博客](<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_70164415/article/details/133029176#:~:text=A">https://blog.csdn.net/m0_70164415/article/details/133029176#:~:text=A</a> 通过开始–程序–ug NX–NX 许可证工具—lmtools， B,直接打开ug的安装目录，找到许可证文件， 第二 点击 config service 进入lmtools配置选项)</p>
+<p><a target="_blank" rel="noopener" href="https://glovius.blob.core.windows.net/installers/Support_material/Floating_License_Configuration.pdf">Floating_License_Configuration.pdf (windows.net)</a><a target="_blank" rel="noopener" href="https://products.geometricglobal.com/downloads/Glovius/Floating_License_Configuration.pdf">https://products.geometricglobal.com/downloads/Glovius/Floating_License_Configuration.pdf</a>)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://knowledge.autodesk.com/zh-hans/search-result/caas/sfdcarticles/sfdcarticles/How-to-switch-to-a-new-license-server.html">如何切换到新许可服务器</a></li>
+<li><a target="_blank" rel="noopener" href="http://upandready.typepad.com/up_and_ready/2011/11/quick-start-setting-up-a-license-server.html">在 Windows 上设置许可服务器</a></li>
+<li><a target="_blank" rel="noopener" href="http://upandready.typepad.com/up_and_ready/2012/01/quick-start-setting-up-a-license-server-on-mac.html">在 Mac 上设置许可服务器</a></li>
+<li><a target="_blank" rel="noopener" href="http://upandready.typepad.com/up_and_ready/2012/07/quick-start-setting-up-a-licensing-server-on-linux.html">在 Linux 上设置许可服务器</a></li>
+</ul>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>有官方错误资料的手册的<a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_18607183/article/details/51319104">FLEXnet Licensing Error Codes_flexnet licensing error:-2,40025-CSDN博客</a></p>
+<p>错误:10061 “WinSock: Connection refused”。要纠正这个问题，您需要参考以下步骤。以下是在服务器机器上执行的步骤。</p>
+<p>\1. 纠正服务配置中的任何错误，然后单击“保存服务”。</p>
+<p>\2. 打开Services。并找到license服务。</p>
+<p>\3. 右键单击许可证服务名称并选择Properties。</p>
+<p>\4. 进入“登录”页签，确保已选择“本地系统”帐户，如下图所示。</p>
+<p>\5. 重新启动license服务。</p>
+<p>\6. 返回到LMTOOLS中的Server Status选项卡，并单击Perform Status Enquiry以验证许可证现在是否可用。</p>
+<h2 id="迁移："><a href="#迁移：" class="headerlink" title="迁移："></a>迁移：</h2><p>本文概述了安装 Network License Manager (LMTOOLS) 并将其移植到新服务器所需的过程。</p>
+<p>解决方案：</p>
+<ol>
+<li>在新许可服务器上安装 LMTOOLS。 请查看以下步骤：</li>
+</ol>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://knowledge.autodesk.com/zh-hans/customer-service/network-license-administration/install-and-configure-network-license/windows/install-the-network-license-manager-windows">在 Windows 上安装 Network License Manager</a></li>
+<li><a target="_blank" rel="noopener" href="https://knowledge.autodesk.com/zh-hans/customer-service/network-license-administration/install-and-configure-network-license/mac-os/install-the-network-license-manager-mac-os-x-server">在 Mac OS X 上安装 Network License Manager</a></li>
+<li><a target="_blank" rel="noopener" href="https://knowledge.autodesk.com/zh-hans/customer-service/network-license-administration/install-and-configure-network-license/linux/install-the-network-license-manager-linux-server">在 Linux 上安装 Network License Manager</a></li>
+</ul>
+<ol>
+<li><p>为 Autodesk 产品生成新许可文件。</p>
+<p>注意：</p>
+<p>这些许可文件硬编码为计算机的 MAC 地址和主机名，不能从一个系统移动到另一个系统。</p>
+<ul>
+<li>请参见：<a target="_blank" rel="noopener" href="https://www.autodesk.com.cn/support/download-install/admins/network-licenses/obtain-and-install-a-license-file">在 Autodesk Account 中生成网络许可文件 - 网络管理员</a></li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://knowledge.autodesk.com/zh-hans/customer-service/network-license-administration/install-and-configure-network-license">配置 LMTOOLS</a> 以使用新许可文件。</p>
+</li>
+<li><p>更新客户端计算机，并确保现有安装指向新服务器。</p>
+<ul>
+<li><p>请参见：</p>
+<p>常规许可：Windows 注册表项中的 ADSKFLEX_LICENSE_FILE 环境变量位置</p>
+<p>。</p>
+<ul>
+<li>右键单击“我的电脑”图标。</li>
+<li>单击“高级”选项卡。</li>
+<li>单击“环境变量”。</li>
+<li>在“系统变量”窗口中，单击“新建”。</li>
+<li>在“变量名”字段中，输入 ADSKFLEX_LICENSE_FILE</li>
+<li>在“变量值”字段中，输入 @HOSTNAMEOFNEWSERVER</li>
+<li>单击“确定”。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>或者，可以修改位于 C:\Program Files\Autodesk\（对于 Autodesk 2016 产品及先前版本）和 C:\ProgramData\Autodesk\CLM\LGS*&lt;产品密钥&gt;*_2017.0.0.F（对于 Autodesk 2017 产品和更高版本）的 <em>licpath.lic</em> 文件，使其指向新许可服务器。对于 macOS 和其他软件版本，请参考：<a target="_blank" rel="noopener" href="https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Where-is-the-LICPATH-LIC-file-for-2017-products.html">2017 和 2019 版本的 LICPATH.LIC 文件在哪里？</a></p>
+</li>
+<li><p>停用旧的许可服务器。</p>
+</li>
+</ol>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

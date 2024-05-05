@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-06-18 23:08:31</span>
+</div>
+
+<div id="article"><p>尺寸链：“机器装配”或“零件加工”过程中，由相互连接的尺寸形成封闭的尺寸组，称为尺寸链。</p>
+<span id="more"></span>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>在产品设计时，对每个零部件的公差分布，需要用到尺寸链计算，通过尺寸链计算来将公差根据过程能力、制造水平、零部件匹配要求等合理的分布公差，以制造出客户满意的产品。</p>
+<p>假设一个场景：如下图，要求你验证L∑是否符合要求时，你会怎么测得L∑尺寸？这里有个不可测量的客观因素存在，当装配体组装完毕时，装配尺寸L∑此时处于箱体内，拆开装配L∑又消失。怎么验证L∑的尺寸及工程范围就需要利用到【尺寸链计算】方法。<br><img src="尺寸链计算\齿轮箱内尺寸.png"></p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在尺寸链中,各个链环的性质不同,误差的相互影响也不同,所以将组成尺寸链的所有环分为封闭环和组成环<br>尺寸链的特征:尺寸链几何图形是封闭的;构成这个封闭图形的各尺寸误差集中体现在某一尺寸上。</p>
+<ul>
+<li>封闭环：其他环间接形成的最终环</li>
+<li>组成环（增环）：实际尺寸增大(或减小),相应的使得封闭环实际尺寸也增大(或减小)。通常计算中用“+”表示。  </li>
+<li>组成环（减环）：实际尺寸增大(或减小),相应的使得封闭环实际尺寸也减小(或增大)。通常计算中用“-“表示。</li>
+<li>组成环（补偿）可以通过改变其大小或位置，使封闭环达到规定的要求</li>
+</ul>
+<h3 id="尺寸链绘制"><a href="#尺寸链绘制" class="headerlink" title="尺寸链绘制"></a>尺寸链绘制</h3><p>将获得的环绘制出封闭的尺寸链，以用于确定增减环和计算</p>
+<p>1.分析确定增环及减环</p>
+<p>①显函数式法：AN&#x3D;A2-A1+A3+A4-A5,等式右边系数正者为增环,负者为减环。故A2、A3、A4为增环,A1、A5为减环,根据增减环定义很容易证明其正确性。</p>
+<p>等式右边任一系数为正的环,其数值增大(或减小)封闭环N随着增大(或减小);任一系数为负的环其数值增大(或减小)N随着减小(或增大)。<br><img src="尺寸链计算\增减环判断2.png"></p>
+<p>②回路法：在尺寸链简图上,先在封闭环的尺寸线)画箭头→”,然后,沿通过尺寸线和尺寸界线方向环绕尺寸链回路画箭头。</p>
+<p>凡是回路方向与封闭环相同的组成环尺寸,则在其尺寸线下面画→”或写-”表示减环;组成环尺寸与封闭环相反(向左)的,则在其尺寸线下而画←”或写+”表示增环。</p>
+<p>如图2所示,N为封闭环,A1、A2、A3为组成环。用上述方法可以迅速判别出A2、A3为增环,A1为减环。<br><img src="尺寸链计算\增减环判断1.png"></p>
+<p>③观察串并法：与封闭环串联的尺寸是减环,与封闭环共基线的并联尺寸是增环。串联的组成环性质相同;共基线并联的组成环性质相反。</p>
+<p>举例：如图1所示,N为封闭环,其余各尺寸为组成环。A5与N串联是减环,A4与N共基线并联为增环,A3与A4串联为增环,A1与A3共基线并联为减环,A2与A5共基线并联为增环。<br><img src="尺寸链计算\增减环判断2.png"></p>
+<h3 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h3><p><button  type="button" onclick="elementDisplay('jzf')" >极值法</button></p>
+<div id="jzf" style=display:none>
+假定所有组成环的尺寸都达到极限公差的情况,计算累加结果。 
+这种方法又叫极大极小值解法。它是按误差综合后的两个最不利情况，即各增环皆为最大极限尺寸而各减环皆为最小极限尺寸的情况；以及各增环皆为最小极限尺寸而备减环皆为最大极限尺寸的情况，来计算封闭环极限尺寸的方法   
+适用场景：一般用于3环以下的尺寸链。当组成环环数较多时，用这种方法就不合适，因这时各组成环公差将很小，加工很不经济；对非线性的装配计算结果不够精确。  
+<img src="尺寸链计算\极值法.jpg">
+</div>
+
+
+<p><button  type="button" onclick="elementDisplay('tjf')" >统计法</button></p>
+<div id="tjf"  style=display:none >
+设定相关的组成环达到一定的制程能力水平的情况下,计算累加结果。
+（统计法依据正态分布的6σ，99.73%概率，让公差要求落到6σ内）
+优点：计算简单；考虑了数据分布的情况。  
+缺点：对非线性的装配计算结果不够精确；不能考虑中间值的偏移。
+</div>
+
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><img src="尺寸链计算\尺寸链计算例1.png">
+
+<p>——————我是分割线——————<br>前面是使用常规的极值计算方法，下面利用SOLIDWORKS的Tolanalyst工具辅助计算。可在SOLIDWORKS技巧<br><a href="../SOLIDWORKS 技巧/SOLIDWORKS功能-Tolanalyst.html">SOLIDWORKS功能-Tolanalyst查看<br>（<a href="#">#操作视频</a>）。 </p>
+<!---------------------------------->
+<script  type="text/javascript">
+function elementDisplay(id){
+    var obj=document.getElementById(id);
+    obj.style.display = obj.style.display == 'none' ? 'block' : 'none';
+}</script></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

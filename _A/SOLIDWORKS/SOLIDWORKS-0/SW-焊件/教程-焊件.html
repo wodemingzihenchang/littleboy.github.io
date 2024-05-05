@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-焊件教程"><a href="#SOLIDWORKS-焊件教程" class="headerlink" title="SOLIDWORKS 焊件教程"></a>SOLIDWORKS 焊件教程</h1><p>焊件是由多个焊接在一起的零件组成。从实际设计角度讲，工程师会将其处理成装配体配合的方式设计，</p>
+<p>但从SOLIDWORKS的归类来讲，焊件是属于“多实体零件”的一种。使用多实体可以方便地控制多个焊件，并且在文件参考上也统一在单一的零件文件上。</p>
+<img src="教程-焊件\1焊件概述.png">
+
+<span id="more"></span>
+
+<h1 id="1焊件"><a href="#1焊件" class="headerlink" title="1焊件"></a>1焊件</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>【焊件】是零件的第一个特征，标识着你已进到零件焊件的模式，你将可以使用</p>
+<ul>
+<li>焊件命令</li>
+<li>多实体文件夹将变成“切割清单”</li>
+<li>默认配置将分成&lt;按加工&gt;和&lt;按焊接&gt;两种</li>
+<li>后续新建的特征将取消【合并结果】</li>
+<li>可以将指派给焊接特征的自定义属性扩展到所有的切割清单项目</li>
+</ul>
+<img src="教程-焊件\1焊件特征.png">
+
+<p>默认【选项-文档属性-焊件】是勾选“生成派生配置”选项。在使用【焊件】特征时，文件会在将当前配置改名成默认&lt;按加工&gt;及其派生配置&lt;按焊接&gt;两种。</p>
+<img src="教程-焊件\1焊件配置选项.png">
+
+<p>结构构件通常是指型材钢材或铝材管筒、管道、梁、槽等。其实现原理是利用【结构构件】所选的草图轮廓文件sldlfp,通过草图线段类似扫描的方式生成型材焊件实体。</p>
+<img src="教程-焊件\1结构构件型材.png">
+
+<!-- 从SOLIDWORKS内容中下载焊件 -->
+
+<h2 id="【结构构件】"><a href="#【结构构件】" class="headerlink" title="【结构构件】"></a>【结构构件】</h2><p>1、 在焊件零件中添加或编辑结构构件<br><br>a) 选择-标准：这里的选择来源于我们制作的“焊件轮廓”标准件设计库；（其本质是一个草图轮廓的文件）<br><br>b) 选择-组：选择焊接结构件的组别（同组的线段需为“连续”线段或“平行”线段）<br><br>c) 设定-路线线段：是选择生成焊件结构的线段。在选择完每段后，你还可以设置构件的边角处理，决定与其他构件的拐弯搭接方式。<br><br>d) 设定-找出轮廓：设置轮廓在 3D 草图线段更改其穿透点。默认穿透点为草图原点。<br></p>
+<img src="教程-焊件\1结构构件.png">
+
+<p>（完成效果）</p>
+<img src="教程-焊件\1焊件组.png">
+
+
+
+<p><strong>边角处理</strong></p>
+<p>边角处理选项只在一个组的线段相交于一个端点时可用。边角类型有：</p>
+<ul>
+<li><p>终端斜接</p>
+</li>
+<li><p>终端对接</p>
+</li>
+<li><p>圆弧段：合并圆弧段时可见</p>
+</li>
+<li><p>焊接缝隙</p>
+<img src="教程-焊件\1边角处理类型.png"></li>
+</ul>
+<p>上面是整个组的对接边角处理，SW也能对单独”个别边角处理“。可用点击草图连接端点，获得边角处理弹窗。</p>
+<img src="教程-焊件\1边角处理.png">
+
+<p><strong>位置设定</strong></p>
+<ul>
+<li><p>1、镜像轮廓：允许翻转一个轮廓，</p>
+</li>
+<li><p>2、对齐：允许轮廓某条边对齐或呈角度位置</p>
+</li>
+<li><p>3、找出轮廓：设定布局草图上轮廓的交点，类似于扫描的”穿透点“。</p>
+</li>
+</ul>
+<img src="教程-焊件\1找出轮廓.png">
+
+<h2 id="【剪裁-延伸】"><a href="#【剪裁-延伸】" class="headerlink" title="【剪裁&#x2F;延伸】"></a>【剪裁&#x2F;延伸】</h2><p>当焊件结构构件的同一特征里，构件会自动剪裁。如果是不同轮廓的构件，可能就需要手动对构件进行剪裁。</p>
+<p>前裁&#x2F;延伸选项</p>
+<ul>
+<li><strong>允许延伸</strong>：在剪裁的同时也延伸到剪裁边界；</li>
+</ul>
+<img src="教程-焊件\1剪裁延伸.png">
+
+<ul>
+<li><strong>前裁阶序</strong>：修改【结构构件】种组与组之间的相互交叉的剪裁方法。</li>
+</ul>
+<img src="教程-焊件\1剪裁阶序.png">
+
+
+
+<h2 id="【顶端盖】"><a href="#【顶端盖】" class="headerlink" title="【顶端盖】"></a>【顶端盖】</h2><p>1、 一般为空心型材封盖的特征<br><br>a) 参数：选择是型材端面，以及顶端盖的方向&amp;厚度；<br><br>b) 等距：设置顶端盖大小同型材端面截面大小的设置；<br><br>c) 边角处理：倒&#x2F;圆角处理<br></p>
+<img src="教程-焊件\1顶端盖.png">
+
+<h2 id="【角撑板】"><a href="#【角撑板】" class="headerlink" title="【角撑板】"></a>【角撑板】</h2><p>1、 增强焊件夹角间结构的部分，下为角撑板操作窗口。<br><br>a) 支撑面：需放置角撑板的相交面；<br><br>b) 轮廓：现有“三角形”和“多边形”轮廓<br><br>c) 位置：决定位于支撑板位置的参数<br></p>
+<img src="教程-焊件\1角撑板.png">
+
+<h2 id="板和孔"><a href="#板和孔" class="headerlink" title="板和孔"></a>板和孔</h2><p>添加板和孔。结构构件通常是焊件模型的主要特征，不过除焊件外，焊件零件也是可用进行【拉伸】【异形孔】、【镜像】等特征操作的。</p>
+<img src="教程-焊件\1常规特征.png">
+
+<p>备注：多实体零件的优缺</p>
+<p><strong>优：</strong>零件类型结构相比装配体的规范性、性能化。</p>
+<p><strong>缺：</strong>多实体移动不如装配体灵活，实体出图是和焊件图纸绑定。</p>
+<h1 id="2使用焊件"><a href="#2使用焊件" class="headerlink" title="2使用焊件"></a>2使用焊件</h1><h2 id="切割清单"><a href="#切割清单" class="headerlink" title="切割清单"></a>切割清单</h2><p>切割清单项目类似我们多实体的材料明细表</p>
+<img src="教程-焊件\2切割清单文件夹.png">
+
+<p>切割清单项目默认是按序列命名，该名称有两种操作方法：</p>
+<ul>
+<li><p>手动</p>
+</li>
+<li><p>自动【选项-文档属性-根据说明属性值重新命名切割清单文件夹】</p>
+</li>
+</ul>
+<p><strong>属性</strong></p>
+<p>切割清单属性对话框</p>
+<ul>
+<li>清单摘要：以清单为单位查看每份清单里的属性设定</li>
+<li>属性摘要：以属性为单位查看每份清单里的设定</li>
+<li>切割清单表格</li>
+</ul>
+<img src="教程-焊件\2切割清单属性.png">
+
+<p>结构构件属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">长度</span><br><span class="line">&quot;LENGTH@@@Cut-List-Item1@01-（切割清单）Conveyor Frame_L2.SLDPRT&quot;</span><br><span class="line">角度1</span><br><span class="line">&quot;ANGLE1@@@Cut-List-Item1@01-（切割清单）Conveyor Frame_L2.SLDPRT&quot;</span><br><span class="line">角度2</span><br><span class="line">&quot;ANGLE2@@@Cut-List-Item1@01-（切割清单）Conveyor Frame_L2.SLDPRT&quot;</span><br><span class="line">材质</span><br><span class="line">&quot;SW-Material@@@Cut-List-Item1@01-（切割清单）Conveyor Frame_L2.SLDPRT&quot;</span><br><span class="line">数量</span><br><span class="line">&quot;QUANTITY@@@Cut-List-Item1@01-（切割清单）Conveyor Frame_L2.SLDPRT&quot;</span><br><span class="line">总长度</span><br><span class="line">&quot;TOTAL LENGTH@@@Cut-List-Item1@01-（切割清单）Conveyor Frame_L2.SLDPRT&quot;</span><br><span class="line">说明</span><br><span class="line">80 x 80 x 6.3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="焊件边界框"><a href="#焊件边界框" class="headerlink" title="焊件边界框"></a>焊件边界框</h2><p>焊件中的边界框会自动根据实体生成3D草图的包围框。包围边界框的尺寸会自动写到切割清单项目属性里。</p>
+<img src="教程-焊件\2创建边界框.png">
+
+<h2 id="生成切割清单"><a href="#生成切割清单" class="headerlink" title="生成切割清单"></a>生成切割清单</h2><ul>
+<li><p>【自动生成切割清单】允许系统将实体分组形成切割清单项目</p>
+</li>
+<li><p>【自动更新清单项目】</p>
+</li>
+<li><p>手动管理切割清单项目</p>
+</li>
+</ul>
+<img src="教程-焊件\2生成切割清单.png">
+
+<h2 id="创建子焊件"><a href="#创建子焊件" class="headerlink" title="创建子焊件"></a>创建子焊件</h2><p>有时需要将大型焊件为了运输便利，通常会分解成多个小组件。这部分的小组件就是子焊件。</p>
+<p>子焊件自带切割清单项目</p>
+<h2 id="创建自定义轮廊"><a href="#创建自定义轮廊" class="headerlink" title="创建自定义轮廊"></a>创建自定义轮廊</h2><ul>
+<li><strong>结构构件轮廓的定义</strong></li>
+</ul>
+<p>结构构件是一个2D的封闭轮廓草图，格式为.sldlfp。这是一种设计库文件的格式，对应的草图的图标也和普通零件草图图标不一样。</p>
+<img src="教程-焊件\2结构构件轮廓的定义.png">
+
+<ul>
+<li><strong>焊件轮廓文件夹结构</strong></li>
+</ul>
+<p>保存时，需要根据【选项-系统选项-文件位置】“焊件轮廓”的设定路径，放置到该路径下才能被软件读取并使用。一般默认应该是在软件安装位置：具体参考下面链接</p>
+<p>除了“焊件轮廓”外，与焊件相关的文件设定还有</p>
+<ul>
+<li>焊件切割清单模板</li>
+<li>焊件属性文件weldmentproperties.txt，控制了清单属性的名称</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\SOLIDWORKS\SOLIDWORKS Corp\SOLIDWORKS\lang\chinese-simplified\weldment profiles</span><br></pre></td></tr></table></figure>
+
+<img src="教程-焊件\2焊件轮廓文件位置.png">
+
+<p>轮廓文件对焊件的使用分类和放置层级也有要求，下面是两种不同的焊件轮廓的管理方法：</p>
+<ul>
+<li>单配置</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">weldment profiles</span><br><span class="line">	|__标准</span><br><span class="line">		|__类型</span><br><span class="line">			|__轮廓.sldlfp</span><br></pre></td></tr></table></figure>
+
+<img src="教程-焊件\2焊件轮廓文件夹结构2.png">
+
+<ul>
+<li>多配置</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">weldment profiles</span><br><span class="line">	|__标准</span><br><span class="line">		|__轮廓.sldlfp</span><br><span class="line">			|__轮廓.sldlfp_配置</span><br></pre></td></tr></table></figure>
+
+<img src="教程-焊件\2焊件轮廓文件夹结构1.png">
+
+<p>轮廓属性</p>
+<p>定义材料</p>
+<p><strong>补充：</strong>使用装配体的情况</p>
+<p>上述使用的是多实体的建模方式，这个过程和装配体是类似的。那么这里就有个小疑问：多实体的焊件与装配体的区别在那里呢，为什么用焊件多实体？</p>
+<ul>
+<li>多实体内的零件不用材料明细表；</li>
+<li>实体零件不用移动；</li>
+<li>考虑企业零件编码归类时；</li>
+</ul>
+<h1 id="3焊件的配置与详图"><a href="#3焊件的配置与详图" class="headerlink" title="3焊件的配置与详图"></a>3焊件的配置与详图</h1><h2 id="焊件配置"><a href="#焊件配置" class="headerlink" title="焊件配置"></a>焊件配置</h2><p>派生配置：在父配置做出更改时会自动传递到派生配置，如果派生配置激活时，更改不会自动在父配置显示；</p>
+<p>按焊接配置，代表了装配后续加工的特征将被压缩</p>
+<p>切割清单属性默认将代表&lt;按焊接&gt;配置</p>
+<p>工程图视图可用选择配置</p>
+<p>加工特征，多实体焊件可用以多实体方式进行【拉伸切除】的操作，需要留意的是切除的特征范围选择。</p>
+<h2 id="工程图视图"><a href="#工程图视图" class="headerlink" title="工程图视图"></a>工程图视图</h2><p>焊件作为多实体零件，零件的工程图需要针对不同的实体对象进行展示时，可用利用如下两方法：</p>
+<ul>
+<li><strong>选择实体</strong></li>
+</ul>
+<p>选择工程视图的实体</p>
+<img src="教程-焊件\3选择实体.png">
+
+<p>软件自动切换到焊件模型，按提示选择实体，这里尽量选择源实体而不是阵列或镜像的实体。</p>
+<img src="教程-焊件\3选择实体2.png">
+
+<p>使用【注解-模型项目】对实体特征尺寸进行显示，不过这里注意不能选镜像件，因为镜像不带尺寸数据。</p>
+<img src="教程-焊件\3选择实体模型项目.png">
+
+<ul>
+<li><strong>使用显示状态</strong></li>
+</ul>
+<p>孤立实体显示，作为显示状态保存，用【标准视图】选择显示状态导入</p>
+<h2 id="相对视图"><a href="#相对视图" class="headerlink" title="相对视图"></a>相对视图</h2><p>在菜单栏【插入-工程图视图-相对于模型（相对视图）】</p>
+<img src="教程-焊件\3相对视图.png">
+
+
+
+<img src="教程-焊件\3相对视图2.png">
+
+
+
+<img src="教程-焊件\3相对视图3.png">
+
+
+
+<img src="教程-焊件\3相对视图4.png">
+
+
+
+<h2 id="切割清单表格"><a href="#切割清单表格" class="headerlink" title="切割清单表格"></a>切割清单表格</h2><p>创建焊件内零部件的清单，类比于装配体的材料明细表。</p>
+<p>切割清单的序号可用于【注解-自动序号的参考】</p>
+<img src="教程-焊件\3切割清单表格.png">
+
+
+
+<h2 id="焊缝"><a href="#焊缝" class="headerlink" title="焊缝"></a>焊缝</h2><p>1、 描述焊件结构焊接的工艺情况。一般会包括在 3D 模型上的“焊缝 3D”、“焊缝文件夹”、“焊缝注解”等。</p>
+<img src="教程-焊件\3焊缝特征.png">
+
+<p>2、 焊缝操作窗口：</p>
+<img src="教程-焊件\3焊缝特征2.png">
+
+<p>a) 焊件路径：定义本次焊缝设置的对象，可以在一次操作定义多个焊件路径；<br><br>b) 焊件几何体&#x2F;焊件路径：是焊件位置选择不同方式；<br></p>
+<img src="教程-焊件\3焊件路径.png">
+
+<p>c) 从&#x2F;到长度：设置需要焊接长度（焊缝通过起点和焊接长度定义）<br><br>d) 断续焊件：顾名思义<br></p>
+<img src="教程-焊件\3断续焊件.png">
+
+<h2 id="焊接符号"><a href="#焊接符号" class="headerlink" title="焊接符号"></a>焊接符号</h2><p>1、焊接符号</p>
+<p>2、毛虫</p>
+<img src="教程-焊件\3毛虫.png">
+
+
+
+<h2 id="焊接表"><a href="#焊接表" class="headerlink" title="焊接表"></a>焊接表</h2><img src="教程-焊件\3焊接表.png">
+
+
+
+<h1 id="4弯曲结构构件"><a href="#4弯曲结构构件" class="headerlink" title="4弯曲结构构件"></a>4弯曲结构构件</h1><p>使用弯曲结构构件，</p>
+<img src="教程-焊件\1焊件概述.png">
+
+<h2 id="3D草图"><a href="#3D草图" class="headerlink" title="3D草图"></a>3D草图</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>布置焊件结构的草图，草图将用来做焊件型材的结构参考。可以利用【结构构件】选择草图线条生成焊件组。</p>
+<img src="教程-焊件\4三维草图.png">
+
+<p>使用参考基准面</p>
+<p>空间控标</p>
+<p>•帮助追踪空间方向（如图是追踪了ZX面的空间控标）。可用“Tab”键切换空间面</p>
+<img src="教程-焊件\4空间控标.png">
+
+<p>几何关系</p>
+<p>•相比2D，3D的几何关系有所变化，水平竖直的关系被替换成【沿X】、【沿Y】、【沿Z】方向。</p>
+<img src="教程-焊件\4几何关系.png">
+
+
+
+<p>创建3D草图基准面</p>
+<p>•在3D草图中创建一个与2D草图操作的活动基准面</p>
+<img src="教程-焊件\4创建3D草图基准面.png">
+
+
+
+<p>显示状态控制</p>
+<p>合并圆弧段实体</p>
+<h2 id="创建弯曲构件"><a href="#创建弯曲构件" class="headerlink" title="创建弯曲构件"></a>创建弯曲构件</h2><img src="教程-焊件\4三维草图.png">
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-06-18 22:12:59</span>
+</div>
+
+<div id="article"><h1 id="工程图字体问题"><a href="#工程图字体问题" class="headerlink" title="工程图字体问题"></a>工程图字体问题</h1><p>SW 工程图转其他图纸格式后，出现字体或尺寸大小不一致的问题</p>
+<span id="more"></span>
+
+<h1 id="字体导出DWG问题"><a href="#字体导出DWG问题" class="headerlink" title="字体导出DWG问题"></a>字体导出DWG问题</h1><p>出现字体或大小不一致的问题</p>
+<h2 id="方法1：设置TrueType"><a href="#方法1：设置TrueType" class="headerlink" title="方法1：设置TrueType"></a>方法1：设置TrueType</h2><p>【选项-系统选项-导出DXF&#x2F;DWG】 的字体选项处选择【TrueType】，然后再工程图另存为*.dwg 格式即可。</p>
+<img src="字体问题/工程图字体问题.png">
+
+<p>3.回到导出界面，单击【保存】。打开检查图纸字体样式和大小。</p>
+<h2 id="方法2：drawfrontmap"><a href="#方法2：drawfrontmap" class="headerlink" title="方法2：drawfrontmap"></a>方法2：drawfrontmap</h2><p>找到 SOLIDWOKRS 安装目录下的“drawfrontmap.txt”文件，使用记事本程序打开。（一般是：C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\data\drawfrontmap.txt”)</p>
+<img src="字体问题/drawfrontmap.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用方法：在文本末尾添加一行</span><br><span class="line">CAD字体格式（空格）SW字体格式（空格）SW到CAD缩放的比例</span><br><span class="line">例如：汉仪长仿宋体 汉仪长仿宋体 1.0（注意空格隔开）</span><br></pre></td></tr></table></figure>
+
+<p>保存drawfrontmap文件后。重新在 SOLIDWORKS 中另存为 DWG 格式，选择【选项】，选择【TrueType】，单击【保存】即可</p>
+<h2 id="方法3：待确认"><a href="#方法3：待确认" class="headerlink" title="方法3：待确认"></a>方法3：待确认</h2><p>此时可将SOLIDWORKS另存DWG，并选择truetype字体格式导出即可实现预期宽度调整。下面是关于ttfontratiomap的内容说明：</p>
+<img src="字体问题/ttfontratiomap.png">
+
+<p>Ｑ：已知SPR1214251：[系统 Win10 20H2:TTF type Chinese font scale mapping is notworking when there is a setting in ttfontratiomap.txt。系统 Win10 20H2当ttfontratiomap.txt中有设置时，type Chinese字体比例映射不工作。</p>
+<p>A：绕行办法:即将ttfontratiomap.txt文件备份到其它位置，添加要导出字体的调整比例如”汉仪长仿宋体;0.88”，再另存txt文件为ANSI编码格式。将ttfontratiomap.txt文件放回原位置，</p>
+<h1 id="字体导出PDF问题"><a href="#字体导出PDF问题" class="headerlink" title="字体导出PDF问题"></a>字体导出PDF问题</h1><p>使用Arial字体做PDF导出时，PDF文件出现乱码。</p>
+<p>A1：Arial 在使用中文字体的兼容性比较差。可以安装Arial UNIcode或Arial UNIcode MS</p>
+<p>A2：可以尝试用打印方式，选择“Microsoft To PDF的打印机打印。</p>
+<p>A3：在【系统选项-导出-PDF】默认设置是勾选“嵌入字体”选项的。如果出现乱码的问题，请检查该选项是否取消勾选了。</p>
+<p><img src="http://www.sipworks.com.cn/upload/202104/06/202104061146590826.png" alt="img"></p>
+<h1 id="字体导出eDrawing问题"><a href="#字体导出eDrawing问题" class="headerlink" title="字体导出eDrawing问题"></a>字体导出eDrawing问题</h1><p>工程图常用中文字体注释用eDrawings打开时字体显示异常</p>
+<p>A：确认字体兼容问题来处理。eDrawings一系列的常用中文字体问题已经由研发确认为是eDrawings API对非英文字符支持有限导致</p>
+<h1 id="工程图字体模糊"><a href="#工程图字体模糊" class="headerlink" title="工程图字体模糊"></a>工程图字体模糊</h1><p>在低版本工程图转高版本文字显示模糊</p>
+<p>方法：在【系统选项-性能】关闭增强图形性能即可，功能对抗锯齿有优化功能，字体的锐度被削弱导致模糊</p>
+<img src="字体问题/工程图字体模糊1.png" >
+
+<p>这个个版本及打开关闭增强图形性能的测试结果：</p>
+<img src="字体问题/工程图字体模糊2.png" >
+
+<h1 id="该字体不可用"><a href="#该字体不可用" class="headerlink" title="该字体不可用"></a>该字体不可用</h1><p>可以考虑安装字体或将【工程图模板】使用其他字体保存更新</p>
+<img src="字体问题/该字体不可用/image-20240403161800356.png" >
+
+<p>待确认</p>
+<img src="字体问题/该字体不可用/image-20240403161735167.png" >
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

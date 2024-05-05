@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-18 17:40:43</span>
+</div>
+
+<div id="article"><h1 id="冯诺依曼架构"><a href="#冯诺依曼架构" class="headerlink" title="冯诺依曼架构"></a>冯诺依曼架构</h1><span id="more"></span>
+
+<h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><p>利用率</p>
+<p>速度</p>
+<h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>进程：是操作系统进行资源分配的最小单位。通常打开一个程序就是一个进程</p>
+<p>线程：是cpu调度和分配的基本单位。进程可能有多个子任务，比如聊天工具要接受消息，发送消息，这些子任务就是线程。</p>
+<pre class="mermaid">graph LR
+进程-->线程1
+进程-->线程2
+进程-->线程3</pre>
+
+
+
+
+
+
+
+<p>句柄</p>
+<p>核心</p>
+<p>CPU中包含的物理内核（核心）个数，比如多核CPU，单核CPU（古老的CPU）。这个多核或者单核已经集成在CPU内部了</p>
+<p>一个核心只能同时执行一个线程</p>
+<p>缓存</p>
+<h3 id="串行，并发与并行"><a href="#串行，并发与并行" class="headerlink" title="串行，并发与并行"></a>串行，并发与并行</h3><p>串行<br>多个任务，执行时一个执行完再执行另一个。</p>
+<p>比喻：吃完饭再看视频。</p>
+<p>并发<br>多个线程在单个核心运行，同一时间一个线程运行，系统不停切换线程，看起来像同时运行，实际上是线程不停切换。</p>
+<p>比喻： 一会跑去厨房吃饭，一会跑去客厅看视频。</p>
+<p>并行<br>每个线程分配给独立的核心，线程同时运行。</p>
+<p>比喻：一边吃饭一边看视频。<br>———————————————</p>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><h2 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h2><p>WI-Fi</p>
+<p>以太网</p>
+<p>GPU</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

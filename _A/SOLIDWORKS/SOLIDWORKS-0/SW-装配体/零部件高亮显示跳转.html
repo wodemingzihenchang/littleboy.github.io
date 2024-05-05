@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-21 17:11:19</span>
+</div>
+
+<div id="article"><h1 id="零部件高亮显示跳转"><a href="#零部件高亮显示跳转" class="headerlink" title="零部件高亮显示跳转"></a>零部件高亮显示跳转</h1><p>在打开大型装配体模型时，应数量比较多导致我们在寻找零件时会比较麻烦。因此，本文章将给大家介绍几种快速查找定位零件的方法。</p>
+<h2 id="1选择模型高亮名称"><a href="#1选择模型高亮名称" class="headerlink" title="1选择模型高亮名称"></a>1选择模型高亮名称</h2><p>默认情况下在选择零件模型时，对应的设计树名称也会高亮。</p>
+<img src="零部件高亮显示跳转/选择模型高亮名称.png">
+
+<p>但是有时我们的零部件如果在子装配体内的话，选择模型却不会跳转到对应零件进行高亮显示。则需要去检查【系统选项-featuremanage-滚动显示所选项目】是否勾选。</p>
+<img src="零部件高亮显示跳转\滚动显示所选项目.png">
+
+<p>如果还是没有高亮跳转，那你所选的特征对象可能在设计树是被隐藏的，可以右键总装【树显示-显示特征】。</p>
+<img src="零部件高亮显示跳转\查看特征.png">
+
+<h2 id="2通过名称查找模型"><a href="#2通过名称查找模型" class="headerlink" title="2通过名称查找模型"></a>2通过名称查找模型</h2><p>选择设计树内模型的名称时，模型默认会高亮显示，但是有些零件可能位于装配体内部因被遮挡导致看不到（判断不了位置）。</p>
+<p>可以用【系统选项-显示-图形视区中动态高亮显示】和【FeatureManager-动态高亮显示】，这个模型需要排除在“大型装配体设置”模式下使用。</p>
+<img src="零部件高亮显示跳转\图形视区中动态高亮显示.png">
+
+<img src="零部件高亮显示跳转\动态高亮显示.png">
+
+<p>演示效果：</p>
+<img src="零部件高亮显示跳转\动态高亮显示.gif">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

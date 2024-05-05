@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="Sw-统计选择数量（V1-0）"><a href="#Sw-统计选择数量（V1-0）" class="headerlink" title="Sw_统计选择数量（V1.0）"></a>Sw_统计选择数量（V1.0）</h1><p>实现在装配体选择部分零件进行数量的统计功能</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>为什么会有这个需求呢：是因为有小伙伴需要统计一部分类型零件的数量</p>
+<p>（如果是导出材料明细表然后再 Excel 统计就比较麻烦）</p>
+<img src="Sw_统计选择数量/image1.png">
+
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> \<span class="doctag">&lt;summary\&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 统计零件</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> \<span class="doctag">&lt;/summary\&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">GetSelectedMember</span>()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (swDoc != <span class="literal">null</span>)</span><br><span class="line">&#123;</span><br><span class="line">SelectionMgr swSelMgr = swDoc.SelectionManager; <span class="comment">//选择管理器对象</span></span><br><span class="line"><span class="comment">//获取 SOLIDWORKS 主框架。</span></span><br><span class="line">Frame swFrame = swApp.Frame();</span><br><span class="line"><span class="comment">//在状态栏左侧的主状态栏区域中显示文本字符串。</span></span><br><span class="line"><span class="comment">//GetSelectedObjectCount2(-1)方法为获取被选择对象的数量,-1 表示所有对象</span></span><br><span class="line">swFrame.SetStatusBarText(\<span class="string">&quot;选择了 \&quot; +</span></span><br><span class="line"><span class="string">swSelMgr.GetSelectedObjectCount2(-1) + \&quot; 个零部件\&quot;);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">else</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">MessageBox.Show(\&quot;请打开装配体\&quot;);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1、【右键工具栏-自定义-宏-自定义宏命令】拖放到工具栏，并添加宏程序文件。（具体操作可参考往期内容《Sw_CSharp 宏程序-A》）</p>
+<p>2、打开装配体并选择零件，我这里是选择了电箱的标准件，并对标准件数量进行统计</p>
+<p>3、点击该命令，弹窗显示零件数量。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

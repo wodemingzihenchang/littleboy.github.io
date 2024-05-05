@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-求解器"><a href="#Simulation-求解器" class="headerlink" title="Simulation-求解器"></a>Simulation-求解器</h1><span id="more"></span>
+
+<p>SOLIDWORKS Simulation 为用户提供了四种求解器选项，它们是：FFEPlus、Intel Direct Sparse、Direct Sparse和Large Problem Direct Sparse。在设置仿真时，许多用户对哪种求解器最适合他们的算例以及求解器之间的差异有疑问。为了以最有效的方式生成和运行仿真，了解不同的求解器的作用以及的何时来应用它们是非常有必要的。这篇文章将介绍solidworks仿真的特点。</p>
+<p>SOIDWORKS自动求解器选择<br>SOLIDWORKS自动选项默认情况下选择使用FFEPlus，除非在算例中满足某些条件，此条件指定使用Direct Sparse。</p>
+<p>求解器切换的可能原因是：</p>
+<p>1.大位移选项打开<br>2.使用远程负载或连接器<br>3.存在大量接触单元<br>4.圆周对称</p>
+<p>如果算例超过大约2百万个自由度，则求解器将再次更改为Large Problem Direct Sparse. 新用户在不熟悉SOLIDWORKS仿真环境前，建议使用自动求解器选项。随着您的技能发展和算例变得更加复杂时，则可能需要选择手动使用哪个求解器。</p>
+<p>首先让我们研究一下不同的求解器的区别：<br>求解器的类型</p>
+<p>▌  FFEPlus 求解器：</p>
+<p>FFFEPlus求解器是大多数情况下推荐的求解器，它具有高效的内存使用和较短的求解时间。FFEPlus的工作原理是先假设一个解算值，然后评估存在的误差，SOLIDWORKS使用新的解算值来减少误差并重复这些过程，直到误差足够小。这种方法在自由度规模较大的算例上特别有效，随着自由度数量的增加而变得更加有效。</p>
+<p>值得注意的是，FFEPlus有一些局限性。如果两个组件之间的刚度差异很大，或者温度和压力是从另一个算例中导入的，则可能会失败。FFEPlus 并不总是最有效的求解器;如果使用接触相互作用、虚拟壁、连接器或软弹簧，那么FFE plus可能会遇到困难。在这些情况下，选择Direct Sparse求解器可能是最佳选择。</p>
+<p>▌  Direct Sparse 求解器：</p>
+<p>Direct Sparse求解器有几种类型，它们都使用类似的方法来获取计算结果。相较于FFEPlus迭代计算求解， Direct Sparse直接求解F&#x3D;Kx 方程。Direct Sparse求解器通常在中小型问题中最准确，并且在算例中使用接触相互作用、刚度高度不同的材料或连接器时，与FFEPlus相比具有稳定性优势。</p>
+<p>但是，Direct Sparse求解器在内存使用的效率低于 FFEPlus; 这个问题在大规模算例中变得尤为明显。如果是相同的自由度，通常需要十倍的内存，这意味着使用Direct Sparse求解器时建议最小内存是16G，推荐使用32G或是更高。这种低效率的副作用是：当涉及到更大的问题时，直接求解器的使用受到限制，当达到 1.5 到 4 百万的自由度规模时，直接求解器可能会求解失败，需要简化算例或更改为Large Problem Direct Sparce或FFEPlus 求解器。</p>
+<p>▌  Intel Direct Sparse 和 Large Problem Direct Sparse：</p>
+<p>这两种求解器可以缓解Direct Sparse求解器的的一些问题。</p>
+<p>第一个是Intel Direct Sparse，允许求解器更有效地使用内存，这可以防止求解器故障，但可能需要更长的时间。<br>Intel Direct Sparse还尽可能使用改进的多核处理来减少计算时间。</p>
+<p>第二个是Large Problem Direct Sparce，它通过最大限度地提高内存效率来工作，这是专门针对超过一百万自由度的算例而做出的优化。</p>
+<p>希望这篇文章能帮助您更多的地了解SOLIDWORKS Simulation求解器的类型以及何时选择适合的求解器。</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

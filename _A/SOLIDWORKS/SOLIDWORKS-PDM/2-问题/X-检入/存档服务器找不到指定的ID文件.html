@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="存档服务器找不到指定的ID文件"><a href="#存档服务器找不到指定的ID文件" class="headerlink" title="存档服务器找不到指定的ID文件"></a>存档服务器找不到指定的ID文件</h1><p>PDM 的后端有许多工具可用于对库中的错误进行故障诊断。如果遇到“存档服务器找不到具有指定 ID 的文件”或“访问存档服务器上的文件时出错”错误消息，这可能是由许多不同的来源引起的，因此此修复程序可能不适用于所有情况。</p>
+<p>在对库进行更改期间发生错误时，可能会发生此特定情况。更改，例如修改安装、添加保管库、对服务器的更改或使用 SQL 数据库的新程序。</p>
+<p>无论是什么原因导致了错误，当尝试检查库中的文件时，都会弹出以下错误消息：</p>
+<ul>
+<li>“存档服务器找不到具有指定 ID 的文件”</li>
+</ul>
+<img src="存档服务器找不到指定的ID文件\存档服务器找不到指定的ID文件.png">
+
+<img src="存档服务器找不到指定的ID文件\装载插件时出错.png">
+
+<p>或者，当尝试将文件从本地驱动器添加到保管库并收到此错误</p>
+<ul>
+<li>“访问存档服务器上的文件时出错”</li>
+</ul>
+<img src="存档服务器找不到指定的ID文件\访问存档服务器上的文件时出错.png">
+
+<h2 id="方法1检查存档位置"><a href="#方法1检查存档位置" class="headerlink" title="方法1检查存档位置"></a>方法1检查存档位置</h2><p>打开【菜单&#x2F;程序-SOLIDWORKS PDM-存档服务器配置】工具。</p>
+<img src="存档服务器找不到指定的ID文件\打开存档服务器.png">
+
+<p>导航到“存档”文件夹，然后找到导致错误的库。右键单击保管库，然后选择“属性”。在属性窗口中，有关于库存档位置路径的信息。</p>
+<img src="存档服务器找不到指定的ID文件\存档属性.png">
+
+<p>匹配存档工具中给出的路径，这应该可以修复错误。从 Windows 文件夹刷新PDM库，然后从“存档服务器”工具重新启动服务器。</p>
+<p>测试更改：尝试将新文件上传到保管库并检入。检查存档服务器引用路径是否已恢复。</p>
+<h2 id="方法2检查日志"><a href="#方法2检查日志" class="headerlink" title="方法2检查日志"></a>方法2检查日志</h2><p>您可以从“SOLIDWORKS PDM 管理&gt;日志文件“中访问有关这些错误的更多信息。可以收集有关例如服务器名称、数据库、错误模块等。</p>
+<img src="..\2-问题\0-PDM问题方法\错误日志.png">
+
+
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

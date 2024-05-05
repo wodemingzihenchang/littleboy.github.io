@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-30 15:19:21</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-PDM性能测试"><a href="#SOLIDWORKS-PDM性能测试" class="headerlink" title="SOLIDWORKS-PDM性能测试"></a>SOLIDWORKS-PDM性能测试</h1><span id="more"></span>
+
+
+
+<img src="PDM性能测试\性能改善流程.png">
+
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><pre class="mermaid">graph LR
+PDM_report-->B1-->B2</pre>
+
+
+
+<p>PDM report：查看SOL服务器 &#x2F; PDM库配置，查看PDM性能&#x2F;PDM使用历史数据</p>
+<p>SW Log Parser：分析SOL服务器默认扩展事件system_health 中的死锁及等待事务</p>
+<p>SOL studio：修改SOL服务器配置设置SOL服务器维护排程|设置扩展事件</p>
+<p>SQL：收集SOL服务器跟踪，用于分析短时间内可重现的性能问题</p>
+<p>Windows 系统性能检测：收集系统性能数据，用于分析服务器硬件瓶颈及SOL优化方向</p>
+<p>processexplorer收集应用进程：收集应用程序进程数据，用于分析客户端登录慢问题</p>
+<h2 id="硬件检测工具："><a href="#硬件检测工具：" class="headerlink" title="硬件检测工具："></a>硬件检测工具：</h2><p><a target="_blank" rel="noopener" href="https://www.atto.com/disk-benchmark/">ATTO Disk Benchmark</a>：测量硬盘读写速度</p>
+<p><a target="_blank" rel="noopener" href="https://www.pingplotter.com/products/free.html">PingPlotter</a>：：测量客户端到服务器之间每个节点的网络延迟及稳定性</p>
+<p><a target="_blank" rel="noopener" href="https://iperf.fr/iperf-download.php">iPerf3</a>：测量客户端到服务器之间的带宽</p>
+<p><a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">Wireshark</a>：网络抓包工具，用于分析VPN或者其他网络相关的性能问题</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="软件升级"><a href="#软件升级" class="headerlink" title="软件升级"></a>软件升级</h3><h3 id="SQL调优"><a href="#SQL调优" class="headerlink" title="SQL调优"></a>SQL调优</h3><p>业余时间索引重组</p>
+<p>并行的开销阈值</p>
+<h3 id="PDM配置调优"><a href="#PDM配置调优" class="headerlink" title="PDM配置调优"></a>PDM配置调优</h3><h3 id="硬件升级"><a href="#硬件升级" class="headerlink" title="硬件升级"></a>硬件升级</h3><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h2><p>掌握管理当地缓存的方法：当用户获取文件库中的一个文件时,文件的副本将会被加载到本地视图中.从计算机资源以及性能方面考虑,用户应该管理当地缓存并将不需要的文件从本地清理.</p>
+<p>•移除本地副本</p>
+<p>•清理当地缓存</p>
+<img src="PDM性能测试和优化/缓存.png">
+
+<h2 id="检入慢-缓存影响"><a href="#检入慢-缓存影响" class="headerlink" title="检入慢-缓存影响"></a>检入慢-缓存影响</h2><p>原理：</p>
+<p>检入检出和变更状态在PDM运行逻辑就是将SQL表内的相关列值信息做更新，在多个表内插入或新建新版本的所有记录和列值，然后将所有新产生的新版本物理文件上传到存档服务器内的0-F目录内，并更新对应的index.xml文件。</p>
+<p>在某些情况下，如果所处理的库包含许多本地缓存和检出的文件夹和文件，即使检入单个文档，也可能需要很长时间才会显示“检入”对话框。通常，仅当用户以特定用户身份登录到特定计算机上的库时，才会出现这些情况。</p>
+<p>要核实的一点是：SOLIDWORKS® Professional PDM 应用程序如何在检入期间定义父工程图的处理。默认情况下，检入操作将扫描所有缓存的文件夹，以便将可能的父工程图纳入检入。检入非 SOLIDWORKS 文件时，也可能会发生该问题。根据客户端计算机上当前缓存文件夹的结构，此扫描可能会增加大量开销，导致在出现“检入”对话框之前长时间延迟。</p>
+<p>要验证设置：</p>
+<p>在 SOLIDWORKS PDM 管理工具中，右键单击“用户”，然后单击“设置”。<br>在“检入”部分中，停用“在整个库中查找工程图”选项，然后重试检入。</p>
+<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="SQL数据库的事务日期清理"><a href="#SQL数据库的事务日期清理" class="headerlink" title="SQL数据库的事务日期清理"></a>SQL数据库的事务日期清理</h2><p>ldf(分离&#x2F;附加)</p>
+<p><img src="PDM%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%92%8C%E4%BC%98%E5%8C%96/image-20240403153027814.png" alt="image-20240403153027814"></p>
+<p>附加</p>
+<p><img src="PDM%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%92%8C%E4%BC%98%E5%8C%96/image-20240403153325078.png" alt="image-20240403153325078"></p>
+<h2 id="存档服务器根目录0-F迁移"><a href="#存档服务器根目录0-F迁移" class="headerlink" title="存档服务器根目录0-F迁移"></a>存档服务器根目录0-F迁移</h2><p>停止存档服务移动</p>
+<p>0-F存档库中需要更换路径的文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\&lt;库名&gt;\ArchiveTable\</span><br></pre></td></tr></table></figure>
+
+<p>修改ArchiveTable的16个键值路径</p>
+<p>启动存档服务</p>
+<h2 id="冷存储不需要的文件版本"><a href="#冷存储不需要的文件版本" class="headerlink" title="冷存储不需要的文件版本"></a>冷存储不需要的文件版本</h2><p>删除版本</p>
+<p>移动版本</p>
+<p>重启存档服务器服务</p>
+<p>保留版本数</p>
+<p>保留修订版</p>
+<p>避免在工作时间内运行计划</p>
+<h2 id="删除文件库中的空目录和无用文件数据"><a href="#删除文件库中的空目录和无用文件数据" class="headerlink" title="删除文件库中的空目录和无用文件数据"></a>删除文件库中的空目录和无用文件数据</h2><p>删除文件库中的空目录和无用文件数据</p>
+<ul>
+<li>减少SQL数据库中的Documents&#x2F;Projects和其它关联表的数据量</li>
+</ul>
+<h2 id="适当减少多余重复的流程通知"><a href="#适当减少多余重复的流程通知" class="headerlink" title="适当减少多余重复的流程通知"></a>适当减少多余重复的流程通知</h2><p>适当减少多余重复的流程通知</p>
+<ul>
+<li>组&#x2F;用户<em>文件夹</em>通知</li>
+<li>GroupProjectNotification</li>
+<li>UserProjectNotification</li>
+</ul>
+<h2 id="销毁已删除文件和文件夹"><a href="#销毁已删除文件和文件夹" class="headerlink" title="销毁已删除文件和文件夹"></a>销毁已删除文件和文件夹</h2><p>销毁已删除文件和文件夹</p>
+<ul>
+<li>勾选包括子文件夹</li>
+<li>遍历查询SQL数据库</li>
+<li>务必在下班时间操作</li>
+</ul>
+<p><img src="PDM%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%92%8C%E4%BC%98%E5%8C%96/image-20240403154324604.png" alt="image-20240403154324604"></p>
+<h2 id="清理服务彻底移除掉已销毁数据"><a href="#清理服务彻底移除掉已销毁数据" class="headerlink" title="清理服务彻底移除掉已销毁数据"></a>清理服务彻底移除掉已销毁数据</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

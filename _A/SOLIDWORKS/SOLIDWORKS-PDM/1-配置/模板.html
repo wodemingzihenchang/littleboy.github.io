@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-PDM模板"><a href="#SOLIDWORKS-PDM模板" class="headerlink" title="SOLIDWORKS-PDM模板"></a>SOLIDWORKS-PDM模板</h1><span id="more"></span>
+
+<h2 id="模板名称："><a href="#模板名称：" class="headerlink" title="模板名称："></a>模板名称：</h2><p>输入模板名称</p>
+<img src="模板/image049.png">
+
+<h2 id="执行为："><a href="#执行为：" class="headerlink" title="执行为："></a>执行为：</h2><p>选择运行模板时使用哪位用户的权限。</p>
+<img src="模板/image051.png">
+
+<h2 id="模板卡："><a href="#模板卡：" class="headerlink" title="模板卡："></a>模板卡：</h2><p>可设置在用户运行模板时，显示用于输入模板变量信息。模板卡可包含各种卡控件，如复选框、编辑字段和列表。用户输入的值供模板用于指定文件夹名称和文件名称。<a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/IDD_VARIABLES.htm">变量类型：</a></p>
+<img src="模板/image053.png">
+
+<h2 id="文件和文件夹："><a href="#文件和文件夹：" class="headerlink" title="文件和文件夹："></a>文件和文件夹：</h2><p>用于定义模板生成的文件夹（左侧）和文件（右侧）。文件夹的生成会从根目录开始，同名文件夹会合并。模板里的预设变量，可以通过“%模板变量名%”来关联。</p>
+<img src="模板/image055.png">
+
+<h3 id="文件夹属性："><a href="#文件夹属性：" class="headerlink" title="文件夹属性："></a>文件夹属性：</h3><ul>
+<li>权限</li>
+</ul>
+<img src="模板/文件夹属性.png">
+
+<ul>
+<li>变量</li>
+</ul>
+<p>文件夹的属性变量，将搭配”项目模板卡“的输入变量的方式，写入到文件夹卡里。另外模板文件夹的命名可以利用通配符连接模板变量的方式，自动命名模板文件夹。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">路径变量</span><br><span class="line">D:\PDM\文件夹1\...</span><br><span class="line">(注意这里的“D:\PDM\”根目录是固定的不能被修改)</span><br><span class="line">模板变量</span><br><span class="line">%t_Created_Date% %t_Project_Number%%t_Project_Name%</span><br><span class="line">将以变量：&lt;日期 项目号 项目名&gt;命名文件夹 </span><br></pre></td></tr></table></figure>
+
+<p>复制变量：可为文件夹数据卡填写变量值，这里的值是来自新建模板时的模板卡填写的输入</p>
+<img src="模板/文件夹属性变量.png">
+
+<h2 id="新文件："><a href="#新文件：" class="headerlink" title="新文件："></a>新文件：</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/IDD_EDIT_FILE.htm">帮助说明</a>。这里的数据卡，需要有对应扩展名格式的“文件数据卡”才行，反正生成文件显示文件数据卡会显示“无数据卡可用”。</p>
+<img src="模板/编辑模板文件.png">
+
+<h2 id="图标："><a href="#图标：" class="headerlink" title="图标："></a>图标：</h2><p>指派模板图标</p>
+<img src="模板/image059.png">
+
+<h2 id="用户和组："><a href="#用户和组：" class="headerlink" title="用户和组："></a>用户和组：</h2><p>选取能够使用模板的用户和用户组。</p>
+<img src="模板/image061.png">
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

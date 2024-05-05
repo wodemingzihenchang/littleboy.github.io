@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-08-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="hexo-常见问题"><a href="#hexo-常见问题" class="headerlink" title="hexo 常见问题"></a>hexo 常见问题</h1><span id="more"></span>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-theme-&lt;themename&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="command-not-found"><a href="#command-not-found" class="headerlink" title="command not found"></a>command not found</h2><p>这个命令是随同NodeJS一起安装的包管理工具，重新在输入命令安装hexo：命令： npm install hexo-cli -g</p>
+<h2 id="图片链接乱码"><a href="#图片链接乱码" class="headerlink" title="图片链接乱码"></a>图片链接乱码</h2><p>使用 hexo 写博客时，在文章里面插入图片，最后 hexo g 的时候总会在图片前面插一个.io<br>update link as:–&gt;&#x2F;.io&#x2F;&#x2F;06&#x2F;01&#x2F;vim&#x2F;1561905818946.png</p>
+<p>A：是 hexo-asset-image 这个插件的 bug,hexo 版本 3.0 以上获取网站 url 的方式与 3.0 以下有些不同。照着文章修改 hexo.js 的 index.js 就行，或者直接卸载 hexo-asset-image</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo uninstall hexo-asset-image</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="提交主题到官网收录"><a href="#提交主题到官网收录" class="headerlink" title="提交主题到官网收录"></a>提交主题到官网收录</h2><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/smileyan9/article/details/124368376">https://blog.csdn.net/smileyan9/article/details/124368376</a></p>
+<p>5.2.1 提交方法<br>hexo.io 官网的源码地址是：<a target="_blank" rel="noopener" href="https://github.com/hexojs/site">https://github.com/hexojs/site</a> 为了提交自己的主题，需要更新这个源码，但是很明显我们没有权限直接修改。所以</p>
+<p>Fork <a target="_blank" rel="noopener" href="https://github.com/hexojs/site">https://github.com/hexojs/site</a> 到自己的仓库。</p>
+<p>修改 Fork 过来的 site ，编辑其中的 source&#x2F;_data&#x2F;themes.yml 文件 ，在后面添加自己的主题信息：</p>
+<p>这个猫咪照片是百度上找的，主要目的也是为了吸引别人注意。</p>
+<p>git add&#x2F;commit&#x2F;push 到自己fork的仓库中，然后提交 pull request。可以理解为合并的请求，提交以后会进入一个自动的审核过程，并且也有提示自己需要关注的问题。 </p>
+<p>等待有权限的 hexo-site 管理人员看到，然后进行合并操作。可能需要一些时间（我总共等待不超过两天）。</p>
+<p>最后就可以在 hexo 主题网站上搜索自己的主题名字，看看是否能查到了。</p>
+<h1 id="hexo自定义主页"><a href="#hexo自定义主页" class="headerlink" title="hexo自定义主页"></a>hexo自定义主页</h1><p>无文件时</p>
+<p>自定义文件时</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source/index.md</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">GitHub - Yue-plus&#x2F;hexo-theme-arknights: 明日方舟罗德岛阵营的 Hexo 主题，支持数学公式、Valine&amp;Gitalk&amp;Waline评论系统、Mermaid图表</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

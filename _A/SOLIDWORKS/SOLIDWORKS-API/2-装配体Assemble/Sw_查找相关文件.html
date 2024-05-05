@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="查找相关文件"><a href="#查找相关文件" class="headerlink" title="查找相关文件"></a>查找相关文件</h1><p>查找相关文件(参考引用)</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><img src="Sw_查找相关文件\功能简介1.png">
+
+<img src="Sw_查找相关文件\功能简介2.png">
+
+<p>在Solidworks2020的API中，我们可以通过文档扩展对象的方法获得文档的参考引用文件ModelDocExtension::GetDependencies。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModelDocExtension.GetDependencies(Traverseflag, Searchflag, AddReadOnlyInfo, ListBrokenRefs, AppendImportedPaths)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在一些低版本的Solidworks中，可以使用文档对象的相应方法获得参考文件ModelDoc2::GetDependencies2。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModelDoc2.GetDependencies2(Traverseflag, Searchflag, AddReadOnlyInfo)</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码实例："><a href="#代码实例：" class="headerlink" title="代码实例："></a>代码实例：</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">GetDocReference</span>(<span class="params">ModelDoc2 AssemDoc</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="comment">//旧方法</span></span><br><span class="line">      <span class="built_in">object</span>[] ObjFiles1 = AssemDoc.GetDependencies2(<span class="literal">true</span>,<span class="literal">false</span>,<span class="literal">true</span>);</span><br><span class="line">      StringBuilder Sb = <span class="keyword">new</span> StringBuilder(<span class="string">&quot;ModelDoc::GetDependencies2方法:\r\n&quot;</span>);</span><br><span class="line">      <span class="keyword">foreach</span> (<span class="built_in">object</span> of <span class="keyword">in</span> ObjFiles1)</span><br><span class="line">      &#123;</span><br><span class="line">           Sb.Append(of.ToString().Trim() + <span class="string">&quot;\r\n&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      System.Windows.MessageBox.Show(Sb.ToString().Trim());</span><br><span class="line">      </span><br><span class="line">      <span class="comment">//新方法</span></span><br><span class="line">      ModelDocExtension AssemDocEx = AssemDoc.Extension;</span><br><span class="line">      <span class="built_in">object</span>[] ObjFiles2 = AssemDocEx.GetDependencies(<span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">      Sb = <span class="keyword">new</span> StringBuilder(<span class="string">&quot;ModelDocExtension::GetDependencies方法:\r\n&quot;</span>);</span><br><span class="line">      <span class="keyword">foreach</span> (<span class="built_in">object</span> of <span class="keyword">in</span> ObjFiles2)</span><br><span class="line">      &#123;</span><br><span class="line">           Sb.Append(of.ToString().Trim() + <span class="string">&quot;\r\n&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      System.Windows.MessageBox.Show(Sb.ToString().Trim());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="实例效果："><a href="#实例效果：" class="headerlink" title="实例效果："></a>实例效果：</h2><p>因为我上面代码做了字符串拆分，所以数组的内容可能有所不同。</p>
+<p>ModelDoc2::GetDependencies2旧方法会输出：[0]是名称，[1]路径，[]往复循环</p>
+<p>ModelDocExtension::GetDependencies新方法会输出：[0]是名称，[1]路径，[2]是否读写，[]往复循环（如下图：）</p>
+<img src="Sw_查找相关文件\实例解读.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

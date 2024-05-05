@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="忘记密码操作"><a href="#忘记密码操作" class="headerlink" title="忘记密码操作"></a>忘记密码操作</h1><p>获取服务器用户名或密码不正确</p>
+<h2 id="用户忘记密码"><a href="#用户忘记密码" class="headerlink" title="用户忘记密码"></a>用户忘记密码</h2><p>用户忘记密码：管理员(admin)可以直接修改用户的密码的。在“PDM管理”找到该用户账号双击，在设定密码改即可。</p>
+<img src ="忘记密码\设定密码.png">
+
+<h2 id="管理员忘记密码"><a href="#管理员忘记密码" class="headerlink" title="管理员忘记密码"></a>管理员忘记密码</h2><p>管理员忘记密码：参考<a target="_blank" rel="noopener" href="https://www.ict.com.cn/article/20/29.html">https://www.ict.com.cn/article/20/29.html</a></p>
+<p>\1.  此例子中，我们假设忘记PDM库“123”的密码。首先，以具有本地管理员权限的Windows用户身份登录存档服务器配置，此为先决条件，确保登录成功后，进行下一步。</p>
+<img src ="忘记密码\忘记密码1.png">
+
+<p>\2.  Win+R输入regedit进入注册表，依次选择进入下面的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer</span><br></pre></td></tr></table></figure>
+
+<p>如下图所示，首先删除红框1位置的admin数值（删除名为“Admin”的整个键值）。</p>
+<img src ="忘记密码\忘记密码2.png">
+
+<p>\3. 回到存档服务器，选择“工具”→“默认设置”→单击“管理员用户”部分中的“密码”按钮。当前密码为空，输入新密码，点击确定</p>
+<img src ="忘记密码\忘记密码3.png">
+
+<p>\4. 回到注册表编辑器，刷新一下，此时有了新的admin项和admin的数值，复制这里的数值。然后点击vaults-123- ConisioUsers，双击修改其admin的数值，删除旧值，粘贴刚刚复制的值，点击确定。</p>
+<img src ="忘记密码\忘记密码4.png">
+
+<img src ="忘记密码\忘记密码5.png">
+
+<p>\5. 好了，此时可以用新密码登录了</p>
+<img src ="忘记密码\忘记密码6.png">
+
+<p><strong>二、原理及说明</strong></p>
+<p>\1. 原理：此方法是先删除注册表内的管理员默认密码，然后通过存档服务器配置生成新的默认密码，然后通过复制的方式，将此密码赋给特定的库——“123”，操作完之后，默认密码和库“123”的密码均为新密码，而另外的库则密码不变。</p>
+<p>\2. 默认密码意为在特定库ConisioUsers文件夹中无admin项时，密码则为默认密码，当有admin项以及值的时候，则密码不为默认。</p>
+<p>\3. 密码重置后，各位管理员请牢记新密码，及时做好记录。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

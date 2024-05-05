@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="Sw-图号名称分离工具（V1-0）"><a href="#Sw-图号名称分离工具（V1-0）" class="headerlink" title="Sw 图号名称分离工具（V1.0）"></a>Sw 图号名称分离工具（V1.0）</h1><p>我们设计文件通常会以”12345+零部件名称”的图号+名称的形式，并且我们希望此文件名的图号和名称能以单独的属性填入，如图</p>
+<img src="Sw_图号名称分离工具-A/图号名称分离.png">
+
+<span id="more"></span>
+
+<p>利用方程式实现图号名称自动分离，需要用到方程式作为属性代码的变量，属性项里填入操作的代码。实现对文件名分离。步骤如下：</p>
+<h2 id="1填入代码属性"><a href="#1填入代码属性" class="headerlink" title="1填入代码属性"></a>1填入代码属性</h2><p>点击文件-属性，在属性栏增加这 4 项</p>
+<img src="Sw_图号名称分离工具-A/填入代码属性.png">
+
+<p>在图号代码和名称代码数值里填入如下内容，需区分零件和装配体的格式。</p>
+<p><strong>1-1 零件</strong></p>
+<p>零件图号代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;图号&quot;,Left(Part.GetTitle,InStr(Part.GetTitle,&quot; &quot;)))</span><br></pre></td></tr></table></figure>
+
+<p>零件名称代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part.Extension.CustomPropertyManager(&quot;&quot;).Set(“名称”,Trim(Replace(Right(Part.GetTitle,Len(Part.GetTitle)-InStr(Part.GetTitle,&quot; &quot;)),&quot;.SLDPRT&quot;,&quot; &quot;)))</span><br></pre></td></tr></table></figure>
+
+<p><strong>1-2 装配体代码</strong></p>
+<p>装配体图号代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assembly.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;图号&quot;,Left(Assembly.GetTitle,InStr(Assembly.GetTitle,&quot; &quot;)))</span><br></pre></td></tr></table></figure>
+
+<p>装配体名称代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assembly.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;名称&quot;,Trim(Replace(Right(Assembly.GetTitle,Len(Assembly.GetTitle)-InStr(Assembly.GetTitle,&quot; &quot;)),&quot;.SLDASM&quot;,&quot;&quot;)))</span><br></pre></td></tr></table></figure>
+
+<h2 id="2填入方程式变量"><a href="#2填入方程式变量" class="headerlink" title="2填入方程式变量"></a>2填入方程式变量</h2><p>点击【工具-方程式】，按照图片内容增加 2 条方程式（引号为英文状态双引号）</p>
+<img src="Sw_图号名称分离工具-A/填入方程式.png">
+
+<h1 id="问题点："><a href="#问题点：" class="headerlink" title="问题点："></a>问题点：</h1><p>Q3：对于已经画好的半成品或是外来图，加上利用方程式代号名称分离比较繁琐</p>
+<p>A3：可以考虑用方程式宏进行修改</p>
+<p>Q4：每次打开，不管你改没改文件，都会弹出保存对话框，打印图纸也提示保存。并且在外面修改的名称需要打开文件保存属性修改才能生效</p>
+<img src="Sw_图号名称分离工具-A/image6.png">
+
+<p>针对 Q4 问题做了如下测试：</p>
+<ol>
+<li><p>在 SW 改名不打开 SW 文件，属性无更新，需打开文件保存生效；</p>
+</li>
+<li><p>在 SW 软件内改名，属性更新，保存生效；</p>
+</li>
+<li><p>装配体打包零件改名，属性无更新，打开装配体（保存所有）或零件保存后生效；</p>
+</li>
+</ol>
+<p>期间出现”参考文件提示”选择确定</p>
+<img src="Sw_图号名称分离工具-A/image7.png">
+
+<h1 id="属性代码："><a href="#属性代码：" class="headerlink" title="属性代码："></a>属性代码：</h1><h2 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h2><p>图号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;图号&quot;,Rtrim(Left(Part.GetTitle,InStr(Part.GetTitle,&quot; &quot;))))</span><br></pre></td></tr></table></figure>
+
+<p>名称</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Part.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;名称&quot;,Trim(Replace(Right(Part.GetTitle,Len(Part.GetTitle)-InStr(Part.GetTitle,&quot; &quot;)),&quot;.SLDPRT&quot;,&quot; &quot;)))</span><br></pre></td></tr></table></figure>
+
+<h2 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h2><p>图号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assembly.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;图号&quot;,Left(Assembly.GetTitle,InStr(Assembly.GetTitle,&quot; &quot;)))</span><br></pre></td></tr></table></figure>
+
+<p>名称</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assembly.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;名称&quot;,Trim(Replace(Right(Assembly.GetTitle,Len(Assembly.GetTitle)-InStr(Assembly.GetTitle,&quot; &quot;)),&quot;.SLDASM&quot;,&quot;&quot;)))</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置特定"><a href="#配置特定" class="headerlink" title="配置特定"></a>配置特定</h2><p>以上是识别到自定义属性的代码。若需要按当前配置录入到配置特定的属性。则有如下区别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">将自定义属性的变量“”</span><br><span class="line">Part.Extension.CustomPropertyManager(&quot;&quot;)</span><br><span class="line">改成“Part.GetActiveConfiguration.name”</span><br><span class="line">Part.Extension.CustomPropertyManager(&quot;Part.GetActiveConfiguration.name&quot;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这里也发现通过其他代码实现的例子，记录下。但这个代码有个问题：文件扩展名需要显示出来，否则名称会分离错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assembly.Extension.CustomPropertyManager(&quot;&quot;).Set(&quot;名称&quot;, Left( Right(Assembly.GetTitle,Len(Assembly.GetTitle)-InStr(Assembly.GetTitle,&quot; &quot;) ) ,Len( Right(Assembly.GetTitle,Len(Assembly.GetTitle)-InStr(Assembly.GetTitle,&quot; &quot;) ) ) -7 ) )</span><br></pre></td></tr></table></figure>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

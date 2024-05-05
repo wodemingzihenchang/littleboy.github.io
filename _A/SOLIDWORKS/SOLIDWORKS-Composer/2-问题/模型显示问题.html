@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-24 16:38:32</span>
+</div>
+
+<div id="article"><h1 id="模型显示问题"><a href="#模型显示问题" class="headerlink" title="模型显示问题"></a>模型显示问题</h1><p>模型显示问题</p>
+<span id="more"></span>
+
+<h2 id="模型显示问题-1"><a href="#模型显示问题-1" class="headerlink" title="模型显示问题"></a>模型显示问题</h2><p>不显示可能是：</p>
+<p>1、找到角色对象勾选启用，看是否有显示</p>
+<p>2、零件透明度属性为0</p>
+<p>3、装配体模式下的透明的属性为0</p>
+<h2 id="模型缺少问题"><a href="#模型缺少问题" class="headerlink" title="模型缺少问题"></a>模型缺少问题</h2><p>1、导出时，装配体是轻化的状态或压缩；</p>
+<p>2、模型是曲面，导出时未勾选“导出自由面”；</p>
+<img src="模型显示问题\smg导出自由面.png">
+
+<h1 id="导出说明："><a href="#导出说明：" class="headerlink" title="导出说明："></a>导出说明：</h1><p>SOLIDWORKS：携带SW的BOM、封套、外观、贴图、爆炸视图、PMI等信息导出</p>
+<h2 id="设计树显示问题"><a href="#设计树显示问题" class="headerlink" title="设计树显示问题"></a>设计树显示问题</h2><p>是否勾选“合并到每个零件角色”区别，将影响设计树零件结构，以及鼠标悬停时的工具提示显示内容。如发生“合并到每个零件角色”无效果时，可以尝试修复当前版本的SW或是SWC程序。</p>
+<img src="模型显示问题\合并到每个零件角色.png">
+
+<h2 id="注解显示问题"><a href="#注解显示问题" class="headerlink" title="注解显示问题"></a>注解显示问题</h2><p>导出默认SW多实体零件时，在Composer里的工具提示显示的是特征实体名字，而非（非零件名称），</p>
+<p><img src="%E6%A8%A1%E5%9E%8B%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%5Cimage-20231114112652947.png" alt="image-20231114112652947"></p>
+<h2 id="水印显示问题"><a href="#水印显示问题" class="headerlink" title="水印显示问题"></a>水印显示问题</h2><p>要从 Composer 试用文件中移除水印：使用许可安装的 Composer 打开文件并保存文件。 关闭并重新打开文件。水印将从视口中移除。  </p>
+<p>注意：水印仍将显示在“视图”选项卡的视图预览中，因为它们是在首次创建视图时捕获的视口图像。要从视图预览中移除水印，请激活并更新每个视图或单击“重新绘制视图”按钮</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

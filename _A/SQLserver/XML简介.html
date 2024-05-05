@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="XML：可扩展标记语言（eXtensible-Markup-Language）"><a href="#XML：可扩展标记语言（eXtensible-Markup-Language）" class="headerlink" title="XML：可扩展标记语言（eXtensible Markup Language）"></a>XML：可扩展标记语言（eXtensible Markup Language）</h1><h2 id="XML-实例"><a href="#XML-实例" class="headerlink" title="XML 实例"></a>XML 实例</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--  声明：版本和编码  --&gt;</span></span><br><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--  根元素标签：只能有一个  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">子元素名</span> <span class="attr">属性名1</span>=<span class="string">”属性值1”（空格）属性名2</span>=<span class="string">”属性值2”</span>&gt;</span>子元素<span class="tag">&lt;/<span class="name">元素名</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span> <span class="attr">lang</span>=<span class="string">”ch”</span>&gt;</span>林家小弟<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://www.runoob.com<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">&lt;/root &gt;</span><br></pre></td></tr></table></figure>
+
+<p>XML 实例关系图：</p>
+<img src="XML简介/image1.png">
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">book</span> <span class="attr">category</span>=<span class="string">””</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">”CN”</span>&gt;</span>Harry Potter&lt;/title &gt;</span><br><span class="line">		<span class="tag">&lt;<span class="name">author</span>&gt;</span>J K.Rowing<span class="tag">&lt;/<span class="name">author</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">year</span>&gt;</span>2005<span class="tag">&lt;/<span class="name">year</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="XML-语法规则"><a href="#XML-语法规则" class="headerlink" title="XML 语法规则"></a>XML 语法规则</h2><p>XML 文档必须有根元素</p>
+<p>XML 元素都必须有一个关闭标签</p>
+<p>XML 标签对大小写敏感</p>
+<p>XML<br>必须正确嵌套（例如：**&lt;b&gt;&lt;i&gt;<strong>错</strong>&lt;&#x2F;b&gt;&lt;&#x2F;i&gt;<strong>，</strong>&lt;b&gt;&lt;i&gt;<strong>对</strong>&lt;&#x2F;i&gt;&lt;&#x2F;b&gt;**）</p>
+<p>XML 属性值必须加引号（例如：&lt;note date&#x3D;&quot;12&#x2F;11&#x2F;2007&quot;&gt;）</p>
+<p>XML 特殊字符（如下表）：</p>
+<table>
+<thead>
+<tr>
+<th>md 字符</th>
+<th>显示字符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;lt</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>&amp;gt</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>&amp;amp</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>&amp;apos</td>
+<td>&#39;</td>
+</tr>
+<tr>
+<td>&amp;quot</td>
+<td>&quot;</td>
+</tr>
+</tbody></table>
+<p>XML 中的注释：&lt;!-- 注释格式 --&gt;</p>
+<p>XML 中空格会被保留（而 HTML 会把多个连续的空格字符裁减（合并）为一个）</p>
+<p>XML 以 LF 存储换行（一般 Windows 的换行：回车符（CR）和换行符（LF））</p>
+<p>XML 命名规则：</p>
+<p>XML 元素必须遵循以下命名规则：</p>
+<p>&gt;名称可以含字母、数字以及其他的字符</p>
+<p>&gt;名称不能以数字或者标点符号开始</p>
+<p>&gt;名称不能以字符”xml”(或者 XML、Xml) 开始</p>
+<p>&gt;名称不能包含空格</p>
+<p>&gt;可使用任何名称，没有保留的字词。</p>
+<h2 id="System-Xml-示例"><a href="#System-Xml-示例" class="headerlink" title="System.Xml 示例"></a>System.Xml 示例</h2><h3 id="获得-XML-对象"><a href="#获得-XML-对象" class="headerlink" title="获得 XML 对象"></a>获得 XML 对象</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获得xml文件对象，</span></span><br><span class="line">XmlDocument  doc = <span class="keyword">new</span>  XmlDocument();</span><br><span class="line">doc.Load(<span class="string">@&quot;C:\WINDOWS\Temp\XMLfile.xml);</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取xml文件根元素+子元素列表</span></span><br><span class="line">XmlElement element_root = doc.DocumentElement;</span><br><span class="line">XmlNodeList node_lists = element_root.GetElementsByTagName(Element_name);</span><br></pre></td></tr></table></figure>
+
+<h3 id="读"><a href="#读" class="headerlink" title="读"></a>读</h3><p>读取元素指定的属性值</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历元素列表</span></span><br><span class="line"><span class="keyword">foreach</span> (XmlElement element <span class="keyword">in</span> node_lists)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//元素名+元素值</span></span><br><span class="line">Console.WriteLine(element.Name + element.Value);</span><br><span class="line"><span class="comment">//属性值</span></span><br><span class="line">Console.WriteLine(element.GetAttribute(\<span class="string">&quot;name\&quot;));</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><p>举例增加指定元素和属性</p>
+<h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><p>举例删除指定元素</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历元素列表</span></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = node_lists.Count - <span class="number">1</span>; i \&gt;= <span class="number">0</span>; i\--)</span><br><span class="line">&#123;</span><br><span class="line">node_lists\[i\].ParentNode.RemoveChild(node_lists\[i\]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="改"><a href="#改" class="headerlink" title="改"></a>改</h3><h1 id="Q-A："><a href="#Q-A：" class="headerlink" title="Q&amp;A："></a>Q&amp;A：</h1><h2 id="未声明的前缀"><a href="#未声明的前缀" class="headerlink" title="未声明的前缀"></a>未声明的前缀</h2><p>A：声明是用来区分元素（例如：&lt;sldcolorswatch:Optical&#x2F;&gt;,里面的冒号前缀是作为声明，未声明前缀就是 sldcolorswatch）</p>
+<h2 id="数据读XML失败"><a href="#数据读XML失败" class="headerlink" title="数据读XML失败"></a>数据读XML失败</h2><p>解答：可能是本机系统.netFramework底层的XML解析器工作异常，导致所有的XML文件无法解析，比如标准件库无法打开，属性卡无法存储设置等。</p>
+<p>修复方法：在开始菜单中找到运行，输入CMD，打开命令窗口，分两次输入下面的命令按回车：<br>regsvr32 msxml3.dll<br>regsvr32 msxml4.dll<br>成功后会有相应的提示的。建议再重启一下PC，检查系统更新。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

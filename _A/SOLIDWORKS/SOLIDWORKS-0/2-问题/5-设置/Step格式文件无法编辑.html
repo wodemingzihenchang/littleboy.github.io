@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-09 23:45:56</span>
+</div>
+
+<div id="article"><h1 id="Step格式文件无法编辑"><a href="#Step格式文件无法编辑" class="headerlink" title="Step格式文件无法编辑"></a>Step格式文件无法编辑</h1><p>为什么打开 STEP 格式，保存到本地了还是没办法编辑。图中显示的零件的图标是开启了”3D interconnect”功能，是为了关联原格式（step）的设计信息，修改需要在原格式文件进行（在SW里是不能进行修改）。</p>
+<img src="Step格式文件无法编辑/image1.png" >
+
+<h2 id="方法-1：断开链接"><a href="#方法-1：断开链接" class="headerlink" title="方法 1：断开链接"></a>方法 1：断开链接</h2><p>你可以右键设计树需要编辑的零件，有个【解散特征】的选项。（解散特征是不可逆的）</p>
+<img src="Step格式文件无法编辑/image2.png" >
+
+<h2 id="方法-2：系统选项设置"><a href="#方法-2：系统选项设置" class="headerlink" title="方法 2：系统选项设置"></a>方法 2：系统选项设置</h2><p>或者是关闭【系统选项-导入-3D interconnect】功能，再打开 Step，使不关联原格式的设计信息，自己独立一份实体模型。</p>
+<img src="Step格式文件无法编辑/image3.png" >
+
+<h2 id="3Dinterconnect-功能介绍"><a href="#3Dinterconnect-功能介绍" class="headerlink" title="3Dinterconnect 功能介绍"></a>3Dinterconnect 功能介绍</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

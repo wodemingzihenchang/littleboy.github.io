@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 11:12:35</span>
+</div>
+
+<div id="article"><h1 id="PDM自动登录"><a href="#PDM自动登录" class="headerlink" title="PDM自动登录"></a>PDM自动登录</h1><span id="more"></span>
+
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>对特定电脑客户端的登录设置，可以在【PDM管理-本地设置-设置】里操作</p>
+<p>1、库选择要修改的库。若要使库列出，您必须设置本地视图。</p>
+<p>2、勾选“为此库使用自动登录”(“使用服务器默认值”项，是使用存档服务器上定义的默认登录。此选项只针对配置为使用 <strong>Windows 登录</strong>的库)</p>
+<p>3、输入登录账号密码即可完成</p>
+<img src="PDM自动登录/本地设置登录.png">
+
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>如果是想让库中所有用户自动登录，可以在SOLIDWORKS PDM存档服务器上进行设置（这个操作只有在用户设置为Windows域用户登录时才有效）</p>
+<p>首先，登录到存档服务器上，通过开始 &gt; SOLIDWORKS PDM &gt; 存档服务器配置。如果存档配置工具已经在服务器上运行了，就需要从系统托盘中打开，如下图所示</p>
+<img src="PDM自动登录/存档服务器打开.png">
+
+<p>在Archive Server配置工具中，转到“工具”&gt;“默认设置”。选择登录界面选项卡，在默认登录类型下选择Windows登录，然后选中“自动登录”。点击确定，所有设置为服务器默认值的客户端将使用其Windows登录设置自动登录。</p>
+<img src="PDM自动登录/存档服务器登录.png">
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/r_settings_auto_login.htm">https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/r_settings_auto_login.htm</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

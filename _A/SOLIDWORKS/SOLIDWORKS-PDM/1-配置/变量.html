@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-PDM变量"><a href="#SOLIDWORKS-PDM变量" class="headerlink" title="SOLIDWORKS-PDM变量"></a>SOLIDWORKS-PDM变量</h1><span id="more"></span>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/Admin/c_variables_top.htm?id=853b4ebc788349da9e7b0b850c84b849#Pg0">变量帮助说明</a></p>
+<img src="变量/变量.png">
+
+<h2 id="新增变量"><a href="#新增变量" class="headerlink" title="新增变量"></a>新增变量</h2><p>1、</p>
+<p>属性：</p>
+<p> 新变量：新变量编辑在右侧“所选变量”，类型如图（一般可用文本类型）<strong>变量映射</strong></p>
+<h2 id="变量属性"><a href="#变量属性" class="headerlink" title="变量属性"></a>变量属性</h2><p>编辑变量</p>
+<img src="变量/编辑变量.png">
+
+<p>1-4 记载：变量修改记录</p>
+<img src="变量/记载.png">
+
+
+
+<p>2-2 移除属性：需要断开属性引用，</p>
+<img src="变量/移除变量.png">
+
+
+
+<ul>
+<li><strong>无版本（自由版本）</strong></li>
+</ul>
+<p>可以在重新检入时更新文件的变量，无需检出文件并升级文件的版本。这能够更新随时间更改的变量，例如成本，同时文件本身不会发生变化。此外，可以更改变量，即使文件处于没有权限检出的状态。</p>
+<p>如果更新了已检出文件的自由版本变量或者通过工作流程流转操作，则文件会产生新的版本。</p>
+<ul>
+<li><strong>必有值</strong></li>
+</ul>
+<p>勾选后，检人或者更新数据卡时，该变量不能为<strong>“空”</strong>。如果已经有空属性的文件，则该选项不能被勾选，需要转移或在添加文件到库前，先勾选必有值选项。</p>
+<img src="变量/必有值.png">
+
+<ul>
+<li><strong>独特值</strong></li>
+</ul>
+<p>当在变量属性内勾选“独特值”时，当更新或检入文件时，如果数据卡内引用了该变量，则会弹出一个警告信息提示，如图4-30 所示。<br>如果复制一个数据卡内包括独特值变量的文件，则会强行清除目标文件内的变量值，</p>
+<img src="变量/独特值.png">
+
+<h2 id="变量映射"><a href="#变量映射" class="headerlink" title="变量映射"></a>变量映射</h2><p>如图2：在“属性(A)”里，显示所选变量的属性&#x2F;元数据属性映射内容。通过【新属性】和【移除属性】进行增减操作。</p>
+<img src="变量/编辑变量.png">
+
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/Admin/c_mapping_to_file_properties.htm">变量映射格式</a>需要关联“特定格式文件”的块名称，以及其属性名称。大致说明如下：</p>
+<p><strong>块名称</strong>：包含属性&#x2F;元数据（即属性）的文件部分。这个是有格式要求的，可见帮助手册。</p>
+<p><strong>属性名称</strong>：标识特定块中包含属性值的部分。</p>
+<p><strong>文件扩展名</strong>：输入支持块&#x2F;属性映射的文件扩展名。扩展名之间用逗号分隔。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

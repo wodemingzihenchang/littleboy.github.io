@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-10 16:42:07</span>
+</div>
+
+<div id="article"><h1 id="PDM重命名库名称"><a href="#PDM重命名库名称" class="headerlink" title="PDM重命名库名称"></a>PDM重命名库名称</h1><h2 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h2><p>1、确保用户已将文件检入PDM库种；</p>
+<p>2、确保用户暂时停止使用PDM库；</p>
+<p>3、操作需要涉及数据库修改，强烈建议你对SQL server的PDM数据库进行备份。#备份方法参考</p>
+<h2 id="1、更新Projects表"><a href="#1、更新Projects表" class="headerlink" title="1、更新Projects表"></a>1、更新Projects表</h2><p>在更新Projects之前，您需要将表中触发器禁用，以对SQL Express edition版本为例：<br>1.1. 打开SQL Server Management Studio，并且以管理员身份（sa）登录；<br>1.2. 展开【数据库】——找到需要重命名的数据库（SOLIDWORKS PDM）——【表】——dbo.Projects——触发器，右键，对“OnUpdateProjectTrigger”触发器进行禁用</p>
+<p>确保禁用后的触发器图标如下图所示（带有×图标）</p>
+<p>1.3. 禁用触发器后，您需要打开dbo,Projects表，选择Projects表，右键，选择“编辑前200行”</p>
+<p>1.4. 更新第一行的Name列信息（ProjectID&#x3D;1），将库名称改为新命名名称（NEW SOLIDWORKS PDM）</p>
+<img src="PDM重命名库名称/image-20240410171445270.png">
+
+<p>1.5. 修改Projects表中信息后，启动“OnUpdateProjectTrigger”触发器</p>
+<h2 id="2、更新ArchiveServers和SystemInfo表"><a href="#2、更新ArchiveServers和SystemInfo表" class="headerlink" title="2、更新ArchiveServers和SystemInfo表"></a>2、更新ArchiveServers和SystemInfo表</h2><p>2.1. 找到dbo.ArchiveServers表，右键，选择“编辑前200行”</p>
+<p>2.2. 更新所有可用行的VaultName名称为新库名称（NEW SOLIDWORKS PDM）</p>
+<img src="PDM重命名库名称/image-20240410173511505.png">
+
+<p>2.3. 找到dbo.SystemInfo表，右键，选择“编辑前200行”，更新VaultName列为新库名称</p>
+<img src="PDM重命名库名称/image-20240410173622209.png">
+
+
+
+<h2 id="3、更新ConisioMasterDb数据库"><a href="#3、更新ConisioMasterDb数据库" class="headerlink" title="3、更新ConisioMasterDb数据库"></a>3、更新ConisioMasterDb数据库</h2><p>3.1. 浏览ConisioMasterDb数据库——展开【表】——右键dbo.FileVaults表——选择“编辑前200行”</p>
+<p>3.2. 更新VaultName为新库名称</p>
+<img src="PDM重命名库名称/image-20240410173726296.png">
+
+<h2 id="4、更新存档服务"><a href="#4、更新存档服务" class="headerlink" title="4、更新存档服务"></a>4、更新存档服务</h2><p>注意：若存在复制存档，需要在每个复制存档服务器重复这些操作</p>
+<p>4.1. 停止存档服务器服务</p>
+<img src="PDM重命名库名称/image-20240410173940722.png">
+
+<p>4.2. 打开存档服务器注册表（win+R开始——输入regedit），浏览至</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorksEnterprise\ArchiveServer\Vaults\&lt;库名称&gt;\ArchiveTable</span><br></pre></td></tr></table></figure>
+
+<p>，修改存档路径名称：</p>
+<img src="PDM重命名库名称/image-20240410174256635.png">
+
+<p>4.3. 打开存档服务器存档文件路径，修改存档文件夹为新库名称</p>
+<img src="PDM重命名库名称/image-20240410174413434.png">
+
+<p>4.4. 在注册表中，右键修改重命名注册表键，修改为新库名称</p>
+<p>注册表键路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorksEnterprise\ArchiveServer\Vaults\&lt;库名称&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="PDM重命名库名称/image-20240410174541703.png">
+
+
+
+<p>4.5. 浏览以下注册键，更新新库名称到“Vaults”值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Computers\&lt;local&gt;\Archives</span><br></pre></td></tr></table></figure>
+
+<img src="PDM重命名库名称/image-20240410174732062.png">
+
+<img src="PDM重命名库名称/image-20240410212114225.png">
+
+<p>4.6.开启存档服务器服务</p>
+<img src="PDM重命名库名称/image-20240410174815452.png">
+
+<h2 id="5、重启数据库服务器服务"><a href="#5、重启数据库服务器服务" class="headerlink" title="5、重启数据库服务器服务"></a>5、重启数据库服务器服务</h2><img src="PDM重命名库名称/image-20240410174850966.png">
+
+<h2 id="6、删除客户端旧库名称本地视图信息，重新生成新视图"><a href="#6、删除客户端旧库名称本地视图信息，重新生成新视图" class="headerlink" title="6、删除客户端旧库名称本地视图信息，重新生成新视图"></a>6、删除客户端旧库名称本地视图信息，重新生成新视图</h2><p>注意：删除本地视图时若PDM正在运行中，清先退出登录PDM<br>6.1. 删除本地视图，若过程中需重启客户端，请重启客户端</p>
+<img src="PDM重命名库名称/image-20240410175020274.png">
+
+<p>如果有提示登录，并且无法登录的情况。直接确定忽略他</p>
+<img src="PDM重命名库名称/image-20240410175034800.png">
+
+
+
+<img src="PDM重命名库名称/image-20240410175123098.png">
+
+
+
+<img src="PDM重命名库名称/image-20240410175200411.png">
+
+
+
+
+
+<p>6.2. 打开注册表，浏览并删除啊如下注册键：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\ConisioAdmin </span><br></pre></td></tr></table></figure>
+
+<img src="PDM重命名库名称/image-202404101755589691.png">
+
+<img src="PDM重命名库名称/image-20240410175615028.png">
+
+<p>6.3. 通过【视图设置】，生成新视图，</p>
+<img src="PDM重命名库名称/image-20240410175858436.png">
+
+<p>6.4. 重启客户端，确保客户端没有与旧名称库进行连接<br>6.5.  您现在应该能够登录并使用改名后的文件库。请确保尝试检索现有文件的不同版本，并添加一些新文件，以确保重命名成功。<br>注意：如果重新命名文件库之后，登录或处理文件出现问题，请验证上述步骤中所有数据库及注册表是否更新，寻找拼写错误，检查存档服务器日志，确认是否有任何与重命名的文件库报错日志。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

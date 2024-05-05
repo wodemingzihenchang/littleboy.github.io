@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation简介"><a href="#Simulation简介" class="headerlink" title="Simulation简介"></a>Simulation简介</h1><p>有限元分析（FEA）：使用有限元分析来计算零件和装配体在内部和外部载荷下的应力和位移。</p>
+<span id="more"></span>
+
+<p>产品矩阵<a target="_blank" rel="noopener" href="https://help.solidworks.com/2024/chinese-simplified/Solidworks/cworks/IDH_HELP_STUDYNAME.htm?rid=42000">算例</a></p>
+<img src="Simulation-简介/image-20240405141817416.png">
+
+<h2 id="静力学分析"><a href="#静力学分析" class="headerlink" title="静力学分析"></a>静力学分析</h2><p>在有限元分析中，要确保静态分析，除了载荷静态之外，有一个非常重要的因素:整个结构所有的部件都必须保证静态，不能存在可能发生的运动趋势。</p>
+<p>刚体运动：案例：轴扭矩受力分析；</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1a6421G7tS/?spm_id_from=trigger_reload&vd_source=61426b94de87e3e2baee96fc2f5b14f2">高工经验分享：5分钟教会你轴类零件的静应力分析！_哔哩哔哩_bilibili</a></p>
+<h2 id="疲劳分析"><a href="#疲劳分析" class="headerlink" title="疲劳分析"></a>疲劳分析</h2><p>通过检查重复或随机负载循环来预测组件疲劳失效。</p>
+<h2 id="热分析"><a href="#热分析" class="headerlink" title="热分析"></a>热分析</h2><p>计算组件内部和组件之间的温度和传热。</p>
+<p>与Flow Simulation功能相似（优先选Flow），热分析简化了对流系数的描述，简化了流体流动和分布的情况用对流系数简化了。</p>
+<h2 id="线性应力分析"><a href="#线性应力分析" class="headerlink" title="线性应力分析"></a>线性应力分析</h2><p>计算零件和装配体因内部和外部载荷而产生的应力和变形，以在设计时验证产品性能和安全性。</p>
+<h2 id="非线性分析"><a href="#非线性分析" class="headerlink" title="非线性分析"></a>非线性分析</h2><p>分析一般载荷和材料条件下几何形状的应力和变形。</p>
+<p>动态：<a target="_blank" rel="noopener" href="https://www.zhihu.com/zvideo/1456644407877906432">非线性仿真丨SOLIDWORKS Simulation冲压成型工艺仿真分析方法 - 知乎 (zhihu.com)</a></p>
+<h2 id="振动分析"><a href="#振动分析" class="headerlink" title="振动分析"></a>振动分析</h2><p>检查振动或不稳定模式如何缩短设备寿命以消除故障。</p>
+<h2 id="频率分析"><a href="#频率分析" class="headerlink" title="频率分析"></a>频率分析</h2><p>确定边界条件并确保自然振动模式远离环境强迫频率。</p>
+<h2 id="动态分析"><a href="#动态分析" class="headerlink" title="动态分析"></a>动态分析</h2><p>确定时变荷载对设计结构响应的影响。</p>
+<p>与motion区别：动态包含motion+变形体的振动仿真。motion只能是刚体表现</p>
+<h2 id="结构优化"><a href="#结构优化" class="headerlink" title="结构优化"></a>结构优化</h2><p>优化设计以满足定义的强度重量比、频率或刚度性能。</p>
+<h2 id="屈曲分析"><a href="#屈曲分析" class="headerlink" title="屈曲分析"></a>屈曲分析</h2><p>研究有和没有环境载荷的设计的屈曲强度，以确保其满足产品对强度、性能和安全性的要求。</p>
+<h2 id="跌落测试"><a href="#跌落测试" class="headerlink" title="跌落测试"></a>跌落测试</h2><p>11</p>
+<h2 id="压力容器算例"><a href="#压力容器算例" class="headerlink" title="压力容器算例"></a>压力容器算例</h2><p>11</p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>基础知识<br>高等数学 线性代数 概率统计 材料力学<br>数学理论<br>有限单元法 差分法 张量分析 数值方法<br>力学理论<br>流体力学 热力学 弹性力学 断裂力学<br>设计理论<br>机械设计 机械原理产品 设计理论 行业标准</p>
+<h1 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h1><h2 id="强度"><a href="#强度" class="headerlink" title="强度"></a>强度</h2><p>四大强度理论：</p>
+<p>第一强度理论:</p>
+<p>最大拉应力准则基本观点:材料中的最大拉应力到达材料的正断拉力时，即产生脆性断裂适用范围:铸铁，工具钢，工业陶瓷等多数脆性材</p>
+<p>第三强度理论:最大剪应力准则</p>
+<p>基本观点:材料中的最大剪应力到达该材料的剪切抗力时，即产生塑性屈服。适用范围:低碳钢、铜、软铝等塑性较好材料。</p>
+<p>第四强度理论:形状改变比能准则</p>
+<p>基本观点:材料中形状改变比能到达该材料的临界值时，即产生塑性屈服。适用范围:它既突出了最大主应力对塑性屈服的作用，又适当考虑了其它两个主应力的影响，它与塑性较好材料的试验结果比第三强度理论符合得更好。</p>
+<h2 id="应力"><a href="#应力" class="headerlink" title="应力"></a>应力</h2><p>[应力 - 2021 - SOLIDWORKS 帮助](<a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/solidworks/cosmosxpresshelp/c_Stress.htm#:~:text=SX%E3%80%81SY">https://help.solidworks.com/2021/chinese-simplified/solidworks/cosmosxpresshelp/c_Stress.htm#:~:text=SX、SY</a> 以及 SZ 称为正应力。 TXY、….、TZY 称为剪应力。 剪应力的关系如以下方程式所示：TXY %3D,TYX、TXZ %3D TZX 和 TYZ %3D TZY。 因此某点的应力状态要通过六个分量来完整定义。)</p>
+<p>应力集中</p>
+<p>应力集中是设计汇程师在设计产品过程中不可避免的问题。指受力构件由于外界因素或自身因素几何形状、外形尺寸发生突变而引起局部范围内应力著增大现象。多出现于尖角、孔洞、缺口、沟槽以及有刚性约束处及其邻域。</p>
+<p>应力奇异性</p>
+<p>受力体由于几何关系，在求解应力函数的时候出现的应力无穷大。根据弹性理论，在尖角处的应力是无穷大;由于离散化误差，有限元模型并不会产生无穷大的应力结果，而会形成本例中随着网格的细化，得出的应力值大幅度增加的现象。应力奇异是数学算法问题。应力奇异点一般出现在刚性约束和尖角处。注意:应力集中和应力奇异不是必须显示红色。</p>
+<h2 id="位移"><a href="#位移" class="headerlink" title="位移"></a>位移</h2><p>挠度（刚度）</p>
+<h2 id="应变"><a href="#应变" class="headerlink" title="应变"></a>应变</h2><h2 id="应力应变曲线"><a href="#应力应变曲线" class="headerlink" title="应力应变曲线"></a>应力应变曲线</h2><img src="https://pic4.zhimg.com/80/v2-8bcca18ee4eaa1aa8177e818020b1de7_720w.webp">
+
+
+
+<h3 id="1弹性阶段（Elastic）"><a href="#1弹性阶段（Elastic）" class="headerlink" title="1弹性阶段（Elastic）"></a>1弹性阶段<strong>（Elastic）</strong></h3><p>弹性模量(杨氏模量)：几乎所有的材料都会有弹性阶段，弹性阶段的特点：施加的应力与应变成正比，这个比值也就是之前所说的弹性模量</p>
+<p>同样站在等体积的砖块和海绵上，海绵的变形肯定比砖块要大，这个差异就是抗变形能力。相同的应力条件下，应变越小，则抗变形能力越强。这样的抗变形能力，我们称之为模量。模量的单位和应力一致，为帕斯卡&#x2F;兆帕&#x2F;G帕。模量分为很多种，最常用的就是杨氏模量，由托马斯·杨在1807年提出</p>
+<h3 id="2屈服阶段（Yield）"><a href="#2屈服阶段（Yield）" class="headerlink" title="2屈服阶段（Yield）"></a>2屈服阶段（Yield）</h3><p>一般来说，屈服阶段只会出现在韧性金属材料中。达到了某个应力值，应变会有一个明显的小平台阶段，意味着在此时材料开始发生永久性的变形，并且这种变形在不受力之后也无法回复到最初的形态。</p>
+<p>在弹性阶段过后没有后续的屈服，直接脆断。我们称这种性质为脆性材料。如铸铁、钻石、</p>
+<h3 id="3强化阶段（Strengthening）"><a href="#3强化阶段（Strengthening）" class="headerlink" title="3强化阶段（Strengthening）"></a>3强化阶段（Strengthening）</h3><h3 id="4颈缩阶段DE"><a href="#4颈缩阶段DE" class="headerlink" title="4颈缩阶段DE"></a>4颈缩阶段DE</h3><h3 id="4失效阶段（Failure）"><a href="#4失效阶段（Failure）" class="headerlink" title="4失效阶段（Failure）"></a>4失效阶段（Failure）</h3><h2 id="剪切应力"><a href="#剪切应力" class="headerlink" title="剪切应力"></a>剪切应力</h2><p>说明：</p>
+<p>计算公式：</p>
+<p>例子：</p>
+<img src="Simulation-简介/image-20240405121714675.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">剪切应力=作用扭力 (F)/作用面积（A）</span><br><span class="line">作用扭力 (F)=转矩 (T)/作用半径 (R)</span><br><span class="line">作用面积（A）=宽度*长度</span><br><span class="line"></span><br><span class="line">=8187.5</span><br></pre></td></tr></table></figure>
+
+<img src="Simulation-简介/image-20240405121753856.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用扭力 (F)=转矩 (T)/作用半径 (R)/平均到8个螺丝</span><br><span class="line">F=45/0.15/2/8=75</span><br><span class="line"></span><br><span class="line">作用面积（A）=宽度*长度</span><br><span class="line">A=(26/2)^2*3.1415/1000000=0.000531</span><br><span class="line"></span><br><span class="line">剪切应力=作用扭力 (F)/作用面积（A）</span><br><span class="line">F/A=141,242.93</span><br></pre></td></tr></table></figure>
+
+<img src="Simulation-简介/image-20240405132204126.png">
+
+<p>58.333&#x2F;0.00049085</p>
+<h1 id="耦合"><a href="#耦合" class="headerlink" title="耦合"></a>耦合</h1><p>耦合分析是指在有限元分析的过程中考虑了两种或者多种工程学科(物理场)的交叉作用和相互影响(耦合)，根据分析的结合顺序分为单向耦合和双向耦合两种</p>
+<img src="Simulation-简介/image-20240320172305522.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="单元阶数和自适应"><a href="#单元阶数和自适应" class="headerlink" title="单元阶数和自适应"></a>单元阶数和自适应</h2><p>实体单元类型：</p>
+<img src="Simulation-简介/image-20240319180322088.png">
+
+<p>自适应网格:通过电脑自动计算控制网格精度的网格技术。是手动网格控制的一种平替方法，（手动细化网格是优优先）</p>
+<ul>
+<li><p>H方法（优先）采用简单的形状函数，阶数不变，通过增加节点和单元数量提高计算精度。</p>
+</li>
+<li><p>P方法采用比较复杂的形状函数，即通过增加节点增加单元阶数，而单元数量不变提高计算精度。</p>
+</li>
+</ul>
+<img src="Simulation-简介/image-20240319180539260.png">
+
+<h2 id="大位移考虑“大位移功能”"><a href="#大位移考虑“大位移功能”" class="headerlink" title="大位移考虑“大位移功能”"></a>大位移考虑“大位移功能”</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

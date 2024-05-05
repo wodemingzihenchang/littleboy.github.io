@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 10:42:25</span>
+</div>
+
+<div id="article"><h1 id="更新参考引用"><a href="#更新参考引用" class="headerlink" title="更新参考引用"></a>更新参考引用</h1><p>在进行数据导入系统时，有时会发生数据丢失关联关系，这是就需要进行装配关系替换，也就是[更新参考引用]。</p>
+<span id="more"></span>
+
+<p>数据关联关系丢失会出现如下提示：</p>
+<img src="更新参考引用\1.png">
+
+<h2 id="数据的导入"><a href="#数据的导入" class="headerlink" title="数据的导入"></a>数据的导入</h2><p>通过复制粘贴或者拖拽的方式将产品数据放入PDM系统中</p>
+<p>此时导入的数据中肯定会存在机加件以及外购件，在检入数据时会出现如图的提示，说明库中存在同名文件（跟库中之前检入的外购件重复，或跟其他人员检入的数据重复），点击[关闭]按钮先忽略</p>
+<img src="更新参考引用\2.png">
+
+<p>将导入的产品数据进行检入，重名的数据检入不了系统，此时选中这些不能检入的数据，进行删除。</p>
+<h2 id="数据重装重建"><a href="#数据重装重建" class="headerlink" title="数据重装重建"></a>数据重装重建</h2><p>检出此路径下所有模型，打开路径下的总装配体进行重装，重建模型，保存模型。</p>
+<img src="更新参考引用\3.png">
+
+<h2 id="更新参考引用-1"><a href="#更新参考引用-1" class="headerlink" title="更新参考引用"></a>更新参考引用</h2><p>关闭SolidWorks&gt;点击PDM工具下的[更新参考引用]选项，</p>
+<img src="更新参考引用\4.png">
+
+<p>可以看到文件提示“在solidworks PDM 之外”,对于缺失文件，警告区会显示[文件未找到]</p>
+<img src="更新参考引用\5.png">
+
+<p>此时点击未找到的文件&gt;点击[搜索]图标，在库内进行搜索</p>
+<img src="更新参考引用\6.png">
+
+<p>对于搜索出来的文件，可进行更新，建立新的关联关系：</p>
+<img src="更新参考引用\7.png">
+
+<p>再次点击更新和确认</p>
+<img src="更新参考引用\8.png">
+
+<p>对于进行此操作还未搜索出来的文件，说明此数据不在PDM库，需要将丢失的数据放进PDM，再次更新参考引用</p>
+<img src="更新参考引用\9.png">
+
+<p>更新完成后，所有关联关系都已关联。此时，当前装配体文件就能借用到PDM已有的物料数据了</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

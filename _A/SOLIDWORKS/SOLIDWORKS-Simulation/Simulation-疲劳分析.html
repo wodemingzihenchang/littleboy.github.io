@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-19 10:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-疲劳分析"><a href="#Simulation-疲劳分析" class="headerlink" title="Simulation-疲劳分析"></a>Simulation-疲劳分析</h1><p>疲劳破坏是指结构在远低于材料强度极限甚至屈服极限的交变应力作用下发生破坏的现象。材料在循环应力和应变作用下，在一处或几处逐渐产生局部永久性累积损伤，经一定循环次数产生裂纹或突然发生完全断裂的过程</p>
+<h2 id="静应力分析"><a href="#静应力分析" class="headerlink" title="静应力分析"></a>静应力分析</h2><p>疲劳分析前你需要对疲劳添加下的静态受力进行分析，这里有两个目的：</p>
+<p>1、确定静态下的模型未发生屈服失效；</p>
+<p>2、为疲劳分析提供静态工况下的受力条件；</p>
+<img src="Simulation-疲劳分析/image-20240419091103122.png">
+
+
+
+<h2 id="新建疲劳分析"><a href="#新建疲劳分析" class="headerlink" title="新建疲劳分析"></a>新建疲劳分析</h2><img src="Simulation-疲劳分析/image-20240419091216947.png">
+
+<h2 id="添加事件"><a href="#添加事件" class="headerlink" title="添加事件"></a>添加事件</h2><p>添加前面的静应力分析算例作为事件，并数值循环次数和类型，</p>
+<img src="Simulation-疲劳分析/image-20240419091230664.png">
+
+<p>本次的循环类型是描述：按压受力的情况，即受力时最大值，不受力时基于0。</p>
+<img src="Simulation-疲劳分析/image-20240419085627585.png">
+
+
+
+<h2 id="材料SN曲线"><a href="#材料SN曲线" class="headerlink" title="材料SN曲线"></a>材料SN曲线</h2><p>应用材料的疲劳SN曲线，描述金属材料在循环承受交变应力和失效循环周次之间的关系曲线，用以表征材料抵抗交变应力的能力，SN 曲线只用于疲劳算例。</p>
+<p>注意此应力为应力幅，非结构分析中的应力。此应力幅称为一定循环作用次数N的极限应力，也称为条件疲劳极限，以横坐标为作用次数N、纵坐标为应力幅，绘成曲线，则称为材料的S-N曲线，S-N曲线通常绘制于双对数坐标系下</p>
+<img src="Simulation-疲劳分析/image-20240419091359211.png">
+
+<img src="Simulation-疲劳分析/image-20240419085913154.png">
+
+<h2 id="运行算例"><a href="#运行算例" class="headerlink" title="运行算例"></a>运行算例</h2><p>出现断裂的位置：</p>
+<img src="Simulation-疲劳分析/image-20240419092423281.png">
+
+<p>出现断裂的次数：</p>
+<img src="Simulation-疲劳分析/image-20240419092631407.png">
+
+
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="循环类型"><a href="#循环类型" class="headerlink" title="循环类型"></a>循环类型</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2023/chinese-simplified/Solidworks/cworks/IDH_HELP_FATIGUE_ADD_EVENT.htm?rid=42938">帮助</a></p>
+<ul>
+<li>完全反转：-最大值——+最大值</li>
+<li>基于0：0——最大值</li>
+<li>加载比率：</li>
+<li>查找周期峰值</li>
+</ul>
+<h2 id="循环次数确定"><a href="#循环次数确定" class="headerlink" title="循环次数确定"></a>循环次数确定</h2><p>如果结果的损坏百分比100%位置不明显。可以减小循环次数，放大百分比范围</p>
+<img src="Simulation-疲劳分析/image-20240419092859058.png">
+
+<h2 id="算例错误"><a href="#算例错误" class="headerlink" title="算例错误"></a>算例错误</h2><p>疲劳分析前需要先计算【静态应力分析】作为事件算例</p>
+<img src="Simulation-疲劳分析/微信截图_20240419085203.png">
+
+<p>疲劳分析前需要先计算【静态应力分析】确保在应力强度屈服内</p>
+<img src="Simulation-疲劳分析/image-20240419090028508.png">
+
+<p>疲劳分析时，负载应足够大确保能造成疲劳破坏。</p>
+<img src="Simulation-疲劳分析/image-20240422192439014.png">
+
+
+
+<h2 id="算例属性"><a href="#算例属性" class="headerlink" title="算例属性"></a>算例属性</h2><p>“计算交替应力的手段”对疲劳“结果”的影响。这里计算手段对应的是4个强度理论？</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

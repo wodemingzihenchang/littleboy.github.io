@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 12:17:02</span>
+</div>
+
+<div id="article"><h1 id="1Routing管道教程"><a href="#1Routing管道教程" class="headerlink" title="1Routing管道教程"></a>1Routing管道教程</h1><p>Routing 应用程序是 SOLIDWORKS Premium 软件的一个插件。 您可以使用 Routing  生成特殊类型的子装配体，以在零部件之间创建管道、管筒、电力电缆或管线的路径。</p>
+<p>前期知识点：3D 草图、装配体（从上至下的设计和配合）、设计库、配置（设计表）</p>
+<h2 id="线路部件组成："><a href="#线路部件组成：" class="headerlink" title="线路部件组成："></a>线路部件组成：</h2><ul>
+<li><p><strong>零部件</strong>：即配件和接头，包括法兰、T 形接头、电气接头和线夹。大多数配件和接头必须有至少一个连接点 (CPoint)，指明步路段的起始位置或终止位置。</p>
+</li>
+<li><p><strong>线路零件</strong>：包括管道、管筒、电线、电缆和管线。 </p>
+</li>
+<li><p><strong>线路特征</strong>：包含线路路径中心线的 3D 草图。</p>
+</li>
+</ul>
+<h2 id="线路类型："><a href="#线路类型：" class="headerlink" title="线路类型："></a>线路类型：</h2><ul>
+<li>管道设计 </li>
+<li>软管设计 <ul>
+<li>个管道和管筒零件可以具有不同尺寸和属性的配置。 例如，具有某直径的管道可以具有不同长度和厚度的多个配置。 连接点 (CPoint) 可能会指定具有此直径的管道，但是 Routing 应用程序允许您选择其它配置。</li>
+</ul>
+</li>
+<li>用户定义 - 矩形和圆形横断面</li>
+</ul>
+<p>管道步路特点</p>
+<ul>
+<li>管道路线（Pipe）不同于电气、电气导管和软管（Tube）</li>
+<li>在草图中有一条线的地方，创建一个管道。</li>
+<li>哪里有一个弧，一个肘或弯曲被创建。</li>
+</ul>
+<h2 id="设计库"><a href="#设计库" class="headerlink" title="设计库"></a>设计库</h2><p>线路零件的默认存放位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2018\design library\routing</span><br></pre></td></tr></table></figure>
+
+<p>如果ProgramData文件夹找不到，可能是默认被隐藏了。可以在【文件夹选项-查看-显示隐藏文件、文件夹】显示</p>
+<h2 id="库管理器"><a href="#库管理器" class="headerlink" title="库管理器"></a>库管理器</h2><p>文件位置和设定：</p>
+<h2 id="步路设置"><a href="#步路设置" class="headerlink" title="步路设置"></a>步路设置</h2><p>勾选在接头&#x2F;连接器落差处自动步路</p>
+<p>勾选始终为线路使用默认文档模板；</p>
+<p>取消外部保存线路装配体；</p>
+<p>勾选中心线尺寸；</p>
+<p>为了方便选择布线对象，可以设置下面选项：</p>
+<p>【颜色】：勾选当在装配体中编辑零件时使用指定的颜色</p>
+<p>【显示&#x2F;选择】：关联中编辑的装配体透明度：不透明装配体</p>
+<p>【装配体】：当激活大型装配体时，取消隐藏所有基准面、基准轴、曲线、注解等</p>
+<h2 id="功能原理："><a href="#功能原理：" class="headerlink" title="功能原理："></a>功能原理：</h2><p>通过对Routing零部件进行定义“连接点(CPoint)”。表示路由段(管道、管筒或电线)开始或结束。然后通过使用【自动布路】3D草图来定义路径的中心线来创建路线。</p>
+<p>管道、管筒必须有一个路由点(RPoint)，您可以使用它来定位在路由草图中位于交叉点或端点的组件。</p>
+<h1 id="10管筒线路"><a href="#10管筒线路" class="headerlink" title="10管筒线路"></a>10管筒线路</h1><p>管筒线路概述  管通和管筒零部件  使用柔性管筒自动步路  使用正交管筒自动步路  折弯和样条曲线错误  创建管筒工程图  </p>
+<p>10【管道线路】硬管的设计<br>    1、添加接头-》接头属性-》添加其他接头-》自动布线<br>    2、规划路径添加中间夹，管路过长添加吊架零件<br>    3、（自动步路-》沿几何体生成等距的步路）</p>
+<h1 id="11管筒步路零部件"><a href="#11管筒步路零部件" class="headerlink" title="11管筒步路零部件"></a>11管筒步路零部件</h1><p>步路库零件  创建步路库零件  管筒零部件  复制步路零部件  零部件类型  配件零部件  Routing 功能点</p>
+<p>11【管道配件】可放置在布线任一点或指定点。<br>    1、添加三通管，tab键改方向<br>    2、添加阀门，shift+方向键改方向（默认15度增量，在选项-步路可设置）<br>    3、使用覆盖层，用于包住管道保护保温等作用。</p>
+<h1 id="12-管筒线路"><a href="#12-管筒线路" class="headerlink" title="12 管筒线路"></a>12 管筒线路</h1><p>12【管筒线路】tubing，可以是硬管也可以是软管，气管的步路<br>    1、【自动步路】<br>    2、右键步路零件-》输出管道&#x2F;管筒数据-》输出按钮-》保存或预览<br>    3、【封套】用封套做一个用于零件运动、操作空间的几何体积来检测干涉，<br>    4、右键-》线路端属性，单独修改单段的线路属性</p>
+<h1 id="13更改管道和管筒"><a href="#13更改管道和管筒" class="headerlink" title="13更改管道和管筒"></a>13更改管道和管筒</h1><ul>
+<li><p>P28第13章 更改管道和管筒（2）</p>
+</li>
+<li><p>P29第13章 更改管道和管筒（3）</p>
+</li>
+<li><p>P30第13章 更改管道和管筒（4）</p>
+</li>
+</ul>
+<h1 id="13更改管道和管筒-1"><a href="#13更改管道和管筒-1" class="headerlink" title="13更改管道和管筒"></a>13更改管道和管筒</h1><p>​	1、【编辑线路】-更改线路直径<br>​	2、未使用三通链接时，需右键-》穿透，避免干涉<br>​	3、【短管】两个法兰间的管道端<br>​	4、复制已有管道<br>​	5、中间接头-》右键移动配件-》达到调整步路目的（类似线夹）</p>
+<h1 id="14"><a href="#14" class="headerlink" title="14"></a>14</h1><h1 id="15使用P-ID文件"><a href="#15使用P-ID文件" class="headerlink" title="15使用P&amp;ID文件"></a>15使用P&amp;ID文件</h1><p>导入P和ID文件</p>
+<p>与电气路由类似，您可以通过导入Piping对管道或管道路由进行建模</p>
+<p>仪表图(P&amp;ID)数据文件。</p>
+<p>P&amp;ID文件定义了组成设计的组件，并描述了如何</p>
+<ul>
+<li><p>P32第15章 使用P&amp;ID文件（2）</p>
+</li>
+<li><p>P33第15章 使用P&amp;ID文件（3）</p>
+</li>
+</ul>
+<h2 id="使用From-To列表"><a href="#使用From-To列表" class="headerlink" title="使用From-To列表"></a>使用From-To列表</h2><p>从到列表是使用Solidworks路由的最有效方式。使用From-To</p>
+<p>列表中，大部分设计过程是自动化的，错误减少了。</p>
+<p>如果您没有电气原理图包，或者没有电气原理图包</p>
+<p>适合Solidworks的界面，您仍然可以使用From-To List。您可以使用Excel来</p>
+<p>创建列表或使用From-To - list向导。您也可以编写一个转换器来转换</p>
+<p>从其他原理图包输出到SolidWorks格式。</p>
+<p>From-To列表包含:</p>
+<ul>
+<li>连接</li>
+<li>连接器部件名称</li>
+<li>连接器引用名称</li>
+<li>PIN ID</li>
+<li>有线数据</li>
+</ul>
+<p>从from - to List获取数据消除了手动输入数据的需要，简化了</p>
+<h1 id="16"><a href="#16" class="headerlink" title="16"></a>16</h1><p>电子管道、电缆槽和HVAC线路</p>
+<h1 id="17管道垫木"><a href="#17管道垫木" class="headerlink" title="17管道垫木"></a>17管道垫木</h1><ul>
+<li>P36第17章 管道垫木（2）</li>
+</ul>
+<h1 id="18SOLIDWORKS内容"><a href="#18SOLIDWORKS内容" class="headerlink" title="18SOLIDWORKS内容"></a>18SOLIDWORKS内容</h1><p>  云端内容，可网络</p>
+<p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/media/solidworks-2023-routing">SOLIDWORKS 2023 - Routing | 新功能</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

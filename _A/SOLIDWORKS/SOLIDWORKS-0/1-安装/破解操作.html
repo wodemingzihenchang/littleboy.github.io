@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-09 22:05:02</span>
+</div>
+
+<div id="article"><h1 id="破解操作"><a href="#破解操作" class="headerlink" title="破解操作"></a>破解操作</h1><p>2018 版本之后的破解方法是用网络版模式的破解，操作上有区别与之前的方式。</p>
+<h2 id="破解前准备："><a href="#破解前准备：" class="headerlink" title="破解前准备："></a>破解前准备：</h2><h3 id="环境检查"><a href="#环境检查" class="headerlink" title="环境检查"></a>环境检查</h3><p>安装前，请关闭 Windows 外网、防火墙或电源线插头。检查.net Framework 3.5 和 4.0 是否已经安装。</p>
+<p>如果未安装，请转到【控制面板】-【程序和功能】-【启用或关闭 Windows 功能】勾选.NET Framework 3.5(包括 2.0)</p>
+<img src="破解操作/image1.png">
+
+<h3 id="SW20-版注意"><a href="#SW20-版注意" class="headerlink" title="SW20 版注意"></a>SW20 版注意</h3><p>如果存在 SolidWorks_Flexnet_Server 请从 SW2020 SSQ 版本中卸载!</p>
+<p>要做到这一点，运行管理员 SolidWorks_Flexnet_Server\server_remove.bat 并等待”SolidWorks Flexnet Server”服务被删除</p>
+<img src="破解操作/image2.png">
+
+<p>然后从计算机中删除 SolidWorks_Flexnet_Server 文件夹。（一般文件夹会在 C 盘）</p>
+<img src="破解操作/image3.png">
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="注册序列号"><a href="#注册序列号" class="headerlink" title="注册序列号"></a>注册序列号</h3><p>1. “sw2022_network_serials_licensing 运行。并确认添加信息到 Windows 注册表</p>
+<img src="破解操作/image4.png">
+
+<h3 id="破解服务器"><a href="#破解服务器" class="headerlink" title="破解服务器"></a>破解服务器</h3><p>2. 将文件夹”SolidWorks_Flexnet_Server”拷贝到 C:目录下，</p>
+<img src="破解操作/image5.png">
+
+<p>以管理员身份运行”SolidWorks_Flexnet_Server\server_install.bat”并等待新的服务，安装并启动”SolidWorks Flexnet Server”</p>
+<img src="破解操作/image6.png">
+
+<h3 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h3><p>（这一步可以参考：#软件安装操作）</p>
+<p>3.安装 SolidWorks 不要安装 SolidNetwork 许可证服务器(SNL)!当被问及许可证服务器定义输入:25734@localhost</p>
+<p>3.1 如果弹出”系统检查警告”窗口，请忽略它(单击”下一步”继续)。</p>
+<p>3.2 如果出现”SolidWorks 序列号未在激活数据库中找到”的警告出现，忽略它(单击 OK 继续)</p>
+<p>3.3 如果不显示要安装的软件产品的完整列表， 点击”选择不同的包”并勾选选项”选择不包含在此包装中的产品”</p>
+<p>3.4 选择需要安装的软件产品</p>
+<p>3.5 如果”安装管理器无法确定当前订阅。过期日期。您是否要重新激活您的许可证以更新此信息?”出现时，按 No，然后在”Do you want Do it later?”提示中按 Yes。</p>
+<h2 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h2><p>4. 安装结束后，覆盖原始 SolidWorks 程序文件夹中的破解文件。要从”Program Files\SOLIDWORKS Corp”中替换的文件夹(默认设置):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\eDrawings</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS CAM</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Composer</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Electrical</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Explorer</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Flow Simulation</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Inspection</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Manage Client</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS PCB</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS PDM</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Plastics</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Visualize</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Visualize Boost</span><br></pre></td></tr></table></figure>
+
+<p>要从&quot;Program Files (x86)&quot;中替换的文件夹(默认设置):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\\Program Files (x86)\\SOLIDWORKS PDM</span><br></pre></td></tr></table></figure>
+
+<p>5. “SolidSQUADLoaderEnabler 运行。并确认添加信息进入 Windows 注册表</p>
+<p>6. 重启电脑!</p>
+<p>7. 运行 SolidWorks -帮助-SolidNetWork 许可证管理器许可订单。使用”上移”和”下移”按钮来定位高级产品，同一名称高于专业和标准产品，点击”应用”保存设置。单击”确定”关闭 SolidNetWork 许可证管理器</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h2><p>由于 SW2019 网络许可破解使用了与之前(SW2010-2018)不同的序列号版本。</p>
+<p>那么如果您将 SW2021 与 SW2010-2018 安装在同一台计算机上，则需要:对于 SW2017-2018，通过运行相应的 SSQ 的 SW2017-2018 Activator 来重新激活它们，选择合适的软件版本，点击”激活许可证”</p>
+<p>对于 SW2010-2016，则替换原来的 SolidWorks2010-2016 程序文件夹(如果存在)中的破解文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\eDrawings</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS CAM</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Composer</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Electrical</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Explorer</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Flow Simulation</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Inspection</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Manage Client</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS PCB</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS PDM</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Plastics</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Visualize</span><br><span class="line">C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS Visualize Boost</span><br></pre></td></tr></table></figure>
+
+<p>要从&quot;Program Files (x86)&quot;中替换的文件夹(默认设置):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\\Program Files (x86)\\SOLIDWORKS PDM</span><br></pre></td></tr></table></figure>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

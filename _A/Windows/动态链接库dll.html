@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:13</span>
+</div>
+
+<div id="article"><h1 id="动态链接库dll"><a href="#动态链接库dll" class="headerlink" title="动态链接库dll"></a>动态链接库dll</h1><h2 id="注册dll"><a href="#注册dll" class="headerlink" title="注册dll"></a>注册dll</h2><ol>
+<li>以管理员身份打开 Windows 命令提示符。</li>
+</ol>
+<img src="动态链接库dll\cmd.png" >
+
+<ol start="2">
+<li>将正常文件复制到 C:\Windows\System32</li>
+<li>用管理员启动 cmd，使用 regsvr32 注册.dll 文件。（如果dll注册文件不在C:\Windows\System32位置，则需执行 【cd】 命令跳转到在文件所在位置，再使用 regsvr32 注册.dll 文件）</li>
+</ol>
+<img src="动态链接库dll\regsvr32.png" >
+
+
+
+<h2 id="卸载dll"><a href="#卸载dll" class="headerlink" title="卸载dll"></a>卸载dll</h2><p> 1.以管理员身份打开 Windows 命令提示符。<br> 2.在命令提示符中输入：cd [DLL 路径]<br> 3.接着输入：regsvr32 nameofdll.dll -u。<br></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="XXX-dll文件报错"><a href="#XXX-dll文件报错" class="headerlink" title="XXX.dll文件报错"></a>XXX.dll文件报错</h2><p>XXX.dll 文件报错，无法载入 dll 文件</p>
+<img src="动态链接库dll\无法载入dll文件.png" >
+
+<p>原因：一般会是 dll 注册问题，或是文件丢失或是被病毒杀毒损坏等。将.dll 文件找回，并放置在正常位置即可。如下：</p>
+<ul>
+<li>exe 所在目录</li>
+<li>windows 系统目录</li>
+<li>windows 目录</li>
+<li>当前目录</li>
+<li>PATH 指定的目录</li>
+</ul>
+<p>操作参考：<a href="【安装】-安装问题.html#修复SW  ">【安装】-安装问题</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

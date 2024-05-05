@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-14 00:34:17</span>
+</div>
+
+<div id="article"><h1 id="局域网"><a href="#局域网" class="headerlink" title="局域网"></a>局域网</h1><p>局域网（Local Area Network, LAN），又称内网，是指在某一区域内由多台计算机互联成的计算机组。</p>
+<p>局域网可以实现文件管理、应用软件共享、打印机共享、扫描仪共享、工作组内的日程安排、电子邮件和传真通信服务等功能。局域网严格意义上是封闭型的。它可以由办公室内几台甚至上千台计算机组成。</p>
+<p>局域网上的资源需要管理，“域”和“工作组”还有“家庭组”就是不同的网络资源管理模式。那么有何区别呢？</p>
+<span id="more"></span>
+
+<h2 id="域"><a href="#域" class="headerlink" title="域"></a>域</h2><h3 id="创建域服务"><a href="#创建域服务" class="headerlink" title="创建域服务"></a>创建域服务</h3><h3 id="添加客户端"><a href="#添加客户端" class="headerlink" title="添加客户端"></a>添加客户端</h3><p>DNS</p>
+<h3 id="添加域用户"><a href="#添加域用户" class="headerlink" title="添加域用户"></a>添加域用户</h3><h3 id="域策略设置"><a href="#域策略设置" class="headerlink" title="域策略设置"></a>域策略设置</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1MY411Y7zm/?p=12&spm_id_from=pageDriver&vd_source=61426b94de87e3e2baee96fc2f5b14f2">12-域策略之—通过域策略将文件添加白名单_哔哩哔哩_bilibili</a></p>
+<ul>
+<li>文件文件夹</li>
+<li>壁纸设置</li>
+<li>桌面根目录的重定向</li>
+<li>部署共享打印机</li>
+<li>部署共享网络驱动器</li>
+<li>部署软件（不推荐因为只能推送msi软件，无法推送exe，而且安装程序一般需要人为操作）</li>
+<li>域策略限制软件使用</li>
+<li>域策略添加白名单</li>
+<li>域策略添加本地可信任站点（网站）</li>
+<li>域策略禁止修改IP地址</li>
+<li>域策略禁止USB移动存储设备</li>
+<li>域策略的用户组</li>
+<li>域环境共享文件夹容量配额（云盘容量），格式限制</li>
+<li></li>
+</ul>
+<p><img src="%E5%B1%80%E5%9F%9F%E7%BD%91/image-20240218165239983.png" alt="image-20240218165239983"></p>
+<p>域是由网络上的用户和计算机组成的一个逻辑组或逻辑集合。域中所有的对象都存储在活动目录下。一个网络可以建立一个或多个域，每个域都是一个安全界限，这意味着各种权限的设置不能跨越不同的域。简单地说，一个域就是一系列的用户帐户、<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90&spm=1001.2101.3001.7020">访问权限</a>和其他各种资源的集合。</p>
+<p>在Windows　Server2003的每一个域中都至少有一台<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%9F%9F%E6%8E%A7%E5%88%B6%E5%99%A8&spm=1001.2101.3001.7020">域控制器</a>(Domain　Controller，DC)充当域的管理者，维护属于本域 的Active　Directory对象。域构成了Active　Directory树状结构的主干。Active　Directory可以被看成是一个 或多个域组成的集合体，是域中最基本也是最重要的部分。当Active　Directory是由一个域组成的时候，Active　Directory和域 的规模是一样的。</p>
+<p>与工作组的“松散会员制”有所不同，“域”是一个相对严格的组织。“域”指的是服务器控制网络上的计算机能否加入的计算机组合。</p>
+<p>实行严格的管理对网络安全是非常必要的。在对等网模式下，任何一台电脑只要接入网络，就可以访问共享资源，如共享ISDN上网等。尽管对等网络上的共享文件可以加访问密码，但是非常容易被破解。在由Windows 9x构成的对等网中，数据是非常不安全的。</p>
+<p>在“域”模式下，至少有一台服务器负责每一台联入网络的电脑和用户的验证工作，相当于一个单位的门卫一样，称为“域控制器（Domain Controller，简写为DC）”。“域控制器”中包含了由这个域的账户、密码、属于这个域的计算机等信息构成的数据库。当电脑联入网络时，域控制器首先要鉴别这台电脑是否是属于这个域的，用户使用的登录账号是否存在、密码是否正确。如果以上信息不正确，域控制器就拒绝这个用户从这台电脑登录。不能登录，用户就不能访问服务器上有权限保护的资源，只能以对等网用户的方式访问Windows共享出来的资源，这样就一定程度上保护了网络上的资源。</p>
+<p>一般情况下，域控制器集成了DNS服务，可以解析域内的计算机名称（基于TCP&#x2F;IP），解决了工作组环境不同网段计算机不能使用计算机名互访的问题。</p>
+<p>想把一台电脑加入域，仅仅使它和服务器在“网上邻居”能够相互看到是远远不够的，必须要由网络管理员进行把这台电脑加入域的相关操作。</p>
+<h2 id="工作组"><a href="#工作组" class="headerlink" title="工作组"></a>工作组</h2><p>在一个网络内，可能有成百上千台电脑，如果这些电脑不进行分组，都列在“网上邻居”内，可想而知会有多么乱。为了解决这一问题，早在Windows 9x&#x2F;NT&#x2F;2008就引用了“工作组”这个概念，将不同的电脑一般按功能分别列入不同的组中，如财务部的电脑都列入“财务部”工作组中，人事部的电脑都列入“人事部”工作组中。你要访问某个部门的资源，就在“网上邻居”里找到那个部门的工作组名，双击就可以看到那个部门的电脑了。</p>
+<p>那么怎么加入工作组呢？其实很简单，你只需要右击你的Windows桌面上的“网上邻居”，在弹出的菜单出选择“属性”，点击“标识”，在“计算机名”一栏中添入你想好的名字，在“工作组”一栏中添入你想加入的工作组名称。</p>
+<p>如果你输入的工作组名称以前没有，那么相当于新建一个工作组，当然只有你的电脑在里面。计算机名和工作组的长度不能超过15个英文字符，可以输入汉字，但是不能超过7个。“计算机说明”是附加信息，不填也可以，但是最好填上一些这台电脑主人的信息，如“技术部主管”等。单击[确定]按钮后，Windows 提示需要重新启动，按要求重新启动之后，再进入“网上邻居”，就可以看到你所在工作组的成员了。</p>
+<p>一般来说，同一个工作组内部成员相互交换信息的频率最高，所以你一进入“网上邻居”，首先看到的是你所在工作组的成员。如果要访问其他工作组的成员，需要双击“整个网络”，就会看到网络上所有的工作组，双击工作组名称，就会看到里面的成员。</p>
+<p>你也可以退出某个工作组，只要将工作组名称改动即可。不过这样在网上别人照样可以访问你的共享资源，只不过换了一个工作组而已。你可以随便加入同一网络上的任何工作组，也可以离开一个工作组。“工作组”就像一个自由加入和退出的俱乐部一样，它本身的作用仅仅是提供一个“房间”，以方便网上计算机共享资源的浏览。</p>
+<p><strong>2.域与工作组的区别</strong></p>
+<p>在工作组模式的网络中，各服务器都是独立的，而且各服务器中的帐户和资源也是各自进行管理的。所以，管理员需要为每台服务器建立帐户，在管理时也需要分别登录各服务器完成管理工作。授权用户访问不同的服务器时，也需要分别登录。</p>
+<p>在域模式的网络中，服务器可以集中进行管理，域中的帐户和资源也是集中管理的。所以，管理员登录到服务器后就可以管理整个域并可以访问所有共享资源。在 域模式的网络中，需要一个对帐户和资源进行统一管理的机制，这个机制就是活动目录(Active　Directory)。域中所有的帐户和共享资源都需要 在活动目录中进行登记，用户可以利用活动目录查找和使用这些资源。基于域模式的网络可大大减轻管理的复杂度和工作量，通常用于结构较复杂的网络。</p>
+<h2 id="家庭组"><a href="#家庭组" class="headerlink" title="家庭组"></a>家庭组</h2><h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p><strong>域、工作组和家庭组的区别(官方解释)</strong></p>
+<p>在工作组中：</p>
+<p>所有的计算机都是对等的，没有计算机可以控制另一台计算机。</p>
+<p>每台计算机都具有一组用户帐户。若要登录到工作组中的任何计算机，您必须具有该计算机上的帐户。</p>
+<p>通常情况下，计算机的数量不超过二十台。</p>
+<p>工作组不受密码保护。</p>
+<p>所有的计算机必须在同一本地网络或子网中。</p>
+<p>在家庭组中：</p>
+<p>家庭网络中的计算机必须属于某个工作组，但它们也可以属于某个家庭组。使用家庭组，可轻松与家庭网络中的其他人共享图片、音乐、视频、文档和打印机。</p>
+<p>家庭组受密码保护，但在将计算机添加到家庭组时，只需要键入一次密码即可。</p>
+<p>在域中：</p>
+<p>有一台或多台计算机为服务器。网络管理员使用服务器控制域中所有计算机的安全和权限。这使得更容易进行更改，因为更改会自动应用到所有的计算机。域用户在每次访问域时必须提供密码或其他凭据。</p>
+<p>如果具有域上的用户帐户，您就可以登录到域中的任何计算机，而无需具有该计算机上的帐户。</p>
+<p>由于网络管理员经常要确保计算机之间的一致性，所以，您也许只能对计算机的设置进行有限制地更改。</p>
+<p>一个域中可以有几千台计算机。</p>
+<p>计算机可以位于不同的本地网络中。</p>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="Ping测试"><a href="#Ping测试" class="headerlink" title="Ping测试"></a>Ping测试</h2><p>测试网络连接或中断</p>
+<p>一种方法是使用写入文本文件的 PING 测试。在测试的持续时间内，您可以运行此测试一段时间以测试连接性。按 CTRL-C 可终止测试。</p>
+<p>ping &lt;机器名称&gt; -t -l 1000 &gt;&gt; c:\pingtest.txt</p>
+<p>注意：</p>
+<ul>
+<li>&lt;机器名称&gt; 或 IP 地址，尤其是在 DNS 未正常运行时。</li>
+<li>1000 为数据包大小。这个数据包非常大，如果 PING 测试影响网络性能，可以将其减小。</li>
+<li>&gt; &gt; 是表示附加到以下文件的开关。使用单括号 &gt; 表示覆盖文件。</li>
+<li>C:\pingtest.txt 是创建的将包含 PING 结果的文件。</li>
+</ul>
+<h2 id="Telnet-测试"><a href="#Telnet-测试" class="headerlink" title="Telnet 测试"></a>Telnet 测试</h2><p>1）在客户端启动命令行(Win+R运行&gt; cmd 然后敲回车)<br><br>2）键入 “telnet server_name port_number” (例如：telnet 192.168.1.1 25734)然后回车。<br><br>3）如果屏幕出现一个闪动的下划线，那么端口是畅通的。<br><br>4）如果成功会显示服务器名字和IP地址。<br><br>5）如果Telnet失败，则说明服务器和客户端在25734和25735端口上通信存在问题的。<br></p>
+<p>5）如果Telnet失败，还需确定服务器上的服务程序是否已开启运行。未开启服务的端口也是空的连接不上的<br></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h3 id="3-域控制器"><a href="#3-域控制器" class="headerlink" title="3.域控制器"></a>3.域控制器</h3><p>域控制器(Domain　Controller，DC)是一台安装并运行Active　Directory的服务器，它包含Active　 Directory数据库的可写副本，参与Active　Directory复制并控制对网络资源的访问。在域中，域控制器统一管理帐户数据库、所有的用 户登录、资源访问认证及其管理任务。一个域可以有一个或多个域控制器，各域控制器间地位平等，管理员可以在任一台域控制器上更新域中的信息，更新的信息会 自动传递到网络中的其他域控制器中。</p>
+<h3 id="4-成员服务器"><a href="#4-成员服务器" class="headerlink" title="4.成员服务器"></a>4.成员服务器</h3><p>成员服务器是一台运行Windows Server2003 的服务器，它是域中的成员，但不是域控制器。成员服务器不执行用户身份验证，也不存储安全策略信息，这些工作由域控制器完成，这样，可以让成员服务器有更 高的处理能力来处理网络中的其他服务。在域结构的网络中，身份验证与服务是分开的，这样可以提高服务器的效率。</p>
+<h3 id="5-独立服务器"><a href="#5-独立服务器" class="headerlink" title="5.独立服务器"></a>5.独立服务器</h3><p>独立服务器是一台运行Windows　Server2003但不参与域的服务器。独立服务器只有其自身的用户数据库，并由服务器自身处理登录请求。独立服务器不提供对域帐户的访问权限，该服务器通常于工作组模式下运行。</p>
+<h3 id="6-活动目录和域控制器的关系"><a href="#6-活动目录和域控制器的关系" class="headerlink" title="6.活动目录和域控制器的关系"></a>6.活动目录和域控制器的关系</h3><p>如果网络规模较大，这时我们就会考虑把网络中对象，比如计算机、用户帐户、组帐户、打印机、共享文件夹进行分类后存放在一个数据库中，并做好检索信息， 以利于查找、管理和使用这些对象(资源)。这个有层次结构的数据库，就是活动目录数据库，简称AD库。我们把存放有活动目录数据库的计算机称为域控制器。</p>
+<p>在Windows　Server2003中，域建立在Active　Directory中，是作为Active　Directory的一个对象来使用和管理的。域的范围也被扩大到了整个网络。</p>
+<h1 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h1><p>防火墙是一种网络安全设备，通常位于网络边界，用于隔离不同安全级别的网络，保护一个网络免受来自另一个网络的攻击和入侵。这种“隔离”不是一刀切，是有控制地隔离，允许合法流量通过防火墙，禁止非法流量通过防火墙。</p>
+<img src="局域网\防火墙.png">
+
+<p>前文提到防火墙用于隔离不同安全级别的网络，那么防火墙如何识别不同网络呢？答案就是安全区域（Security Zone）。防火墙的安全区域按照安全级别的不同从1到100划分安全级别，数字越大表示安全级别越高。<strong>防火墙缺省存在trust、dmz、untrust和local四个安全区域，</strong></p>
+<img src="https://download.huawei.com/mdl/image/download?uuid=79403be424c94302b556b43146d83ab2">
+
+<p>安全策略</p>
+<p>前文提到防火墙通过规则控制流量，这个规则在防火墙上被称为“安全策略”。安全策略是防火墙产品的一个基本概念和核心功能，防火墙通过安全策略来提供安全管控能力。</p>
+<p><img src="https://download.huawei.com/mdl/image/download?uuid=b32868465025438c82e3ffefcb2a9cf8" alt="img"></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>MAC查ip</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/huxyc/article/details/122545829">查看局域网所有MAC地址_查看局域网内所有设备mac地址-CSDN博客</a></p>
+<h3 id="网络共享无显示"><a href="#网络共享无显示" class="headerlink" title="网络共享无显示"></a>网络共享无显示</h3><p> 看了好多教程都没用，最后是用下面的方法解决的。</p>
+<ol>
+<li>控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;找到 smb 1.x 。勾选确认。</li>
+<li>Win+R搜索“services.msc”，找到function discovery resource publication服务设为自动、开启。</li>
+<li>重启电脑</li>
+</ol>
+<h3 id="找不到网络路径"><a href="#找不到网络路径" class="headerlink" title="找不到网络路径"></a>找不到网络路径</h3><p>电脑出现“你不能访问此共享文件夹，因为你组织的安全策略阻止未经身份验证的来宾访问。”怎么办？</p>
+<h3 id="账号注销登录"><a href="#账号注销登录" class="headerlink" title="账号注销登录"></a>账号注销登录</h3><p>同一台共享服务器，不同用户有不同的权限，如果想切换不同用户测试访问权限，需要注销或者重启电脑后，再次访问共享才能重新输入新的用户名和密码，会比较麻烦。因此需要通过CMD去快速断开连接</p>
+<p>1、查询网络共享</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use</span><br></pre></td></tr></table></figure>
+
+<p>2、连接网络共享</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \192.168.1.100 &quot;password&quot; /user:&quot;username&quot;</span><br></pre></td></tr></table></figure>
+
+<p>3、断开指定网络共享连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\192.168.1.100 /del</span><br></pre></td></tr></table></figure>
+
+<p>4、断开所有网络共享连接再次访问就要去输入用户和密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use * /del</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="文件保存慢"><a href="#文件保存慢" class="headerlink" title="文件保存慢"></a>文件保存慢</h3><p>Windows® 会自动创建和配置网络连接，以支持基本的网络协议。可能需要手动更改网络连接配置。</p>
+<p>要在 Windows 10 系统上配置网络适配器，请执行以下步骤：</p>
+<p>1.按 Windows 键，然后单击“设置”。<br>2.单击“网络和互联网”。<br>3.单击“以太网”。<br>4.单击“更改适配器选项”。<br>5.右键单击要配置的连接 &gt;“属性”。<br>6.在“连接属性”中，单击“配置”。<br>7.单击“高级”选项卡。您可以在此处指定各种影响适配器操作的设备特定参数。<br>8.在属性列表中，选择“速度和双工”。确保工作站至少拥有 100 Mbps 的以太网连接。</p>
+<p>在某些情况下，将“速度和双工”值更改为“100 Mbps 全双工”的最大值有助于提高性能。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

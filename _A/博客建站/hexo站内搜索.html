@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-08-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="hexo站内搜索功能"><a href="#hexo站内搜索功能" class="headerlink" title="hexo站内搜索功能"></a>hexo站内搜索功能</h1><p>给大家介绍一款用于Hexo博客站内搜索文章的插件hexo-generator-search，通过此插件，我们可以根据关键字搜索Hexo博客内的任何文章。下面是插件的安装以及使用操作。</p>
+<span id="more"></span>
+
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先通过以下npm命令安装一个hexo-generator-search</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<p>安装插件后，在“hexo g”生成渲染文件时，会产生一份“search.xml”文件。该文件内会记录文章（post）的文本内容，那么你就可以在xml里搜索内容并展示出来。</p>
+<h2 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h2><p>1、搜索框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;site_search&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;local-search-input&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q&quot;</span> <span class="attr">results</span>=<span class="string">&quot;0&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;Search&quot;</span> <span class="attr">class</span>=<span class="string">&quot;st-search-input st-default-search-input form-control&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;local-search-result&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、搜索js程序</p>
+<p>在文章内引入search.js程序。默认可以在layout.ejs文件引入，在所有文章生效。</p>
+<p>​    &lt;%- js(‘js&#x2F;search.js’) %&gt;</p>
+<p>在文件内引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;/js/search.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、程序加到搜索框上</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;      </span><br><span class="line">     <span class="keyword">var</span> search_path = <span class="string">&quot;search.xml&quot;</span>;</span><br><span class="line">	 <span class="keyword">if</span> (search_path.<span class="property">length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">	 	search_path = <span class="string">&quot;search.xml&quot;</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">var</span> path = <span class="string">&#x27;/&#x27;</span> + search_path;</span><br><span class="line">     <span class="title function_">searchFunc</span>(path, <span class="string">&#x27;local-search-input&#x27;</span>, <span class="string">&#x27;local-search-result&#x27;</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项，search顶格放否则可能没效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: true</span><br><span class="line">  template: ./search.xml</span><br></pre></td></tr></table></figure>
+
+<h2 id="效果实现："><a href="#效果实现：" class="headerlink" title="效果实现："></a>效果实现：</h2><p>重新运行Hexo博客。效果如下图，我们可以根据关键字搜索文章。关键字会有底色高亮显示，点击标题是网站链接跳转。</p>
+<img src="hexo站内搜索\image-20231023145742471.png">
+
+<h1 id="额外内容："><a href="#额外内容：" class="headerlink" title="额外内容："></a>额外内容：</h1><h2 id="搜索框CSS"><a href="#搜索框CSS" class="headerlink" title="搜索框CSS"></a>搜索框CSS</h2><p>搜索框样式CSS，随便抄一个网上的搜索框样式贴过来即可。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-id">#local-search-input</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">55px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">94%</span>;</span><br><span class="line">    <span class="attribute">outline</span>: none;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">3%</span> <span class="number">0</span> <span class="number">3%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索高亮CSS"><a href="#搜索高亮CSS" class="headerlink" title="搜索高亮CSS"></a>搜索高亮CSS</h2><p>搜索关键字底色高亮CSS，在class（search-keyword）里写背景颜色的css样式即可。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-class">.search-keyword</span> &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#c5afd9</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>Q：生成的search文件为空或在“hexo g”生成时失败，提示“no such file or directory, open search.xml”</p>
+<p>A：“hexo g”生成渲染文件时，需要当前位置下有“search.xml”的文件模板，内容大致如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">search</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml">  &#123;% if posts %&#125;</span></span><br><span class="line"><span class="language-xml">  &#123;% for post in posts.toArray() %&#125;</span></span><br><span class="line"><span class="language-xml">    &#123;% if post.indexing == undefined or post.indexing %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">entry</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123; post.title &#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;&#123;&#123; (url + post.path) | uriencode &#125;&#125;&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>&#123;&#123; (url + post.path) | uriencode &#125;&#125;<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;% if content %&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">content</span> <span class="attr">type</span>=<span class="string">&quot;html&quot;</span>&gt;</span>&lt;![CDATA[&#123;&#123; post.content | noControlChars | safe &#125;&#125;]]&gt;<span class="tag">&lt;/<span class="name">content</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">      &#123;% if post.categories and post.categories.length&gt;0 %&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">categories</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;% for cate in post.categories.toArray() %&#125;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">category</span>&gt;</span> &#123;&#123; cate.name &#125;&#125; <span class="tag">&lt;/<span class="name">category</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;% endfor %&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">categories</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">      &#123;% if post.tags and post.tags.length&gt;0 %&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">tags</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &#123;% for tag in post.tags.toArray() %&#125;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">tag</span>&gt;</span> &#123;&#123; tag.name &#125;&#125; <span class="tag">&lt;/<span class="name">tag</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &#123;% endfor %&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">tags</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">entry</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">    &#123;% endfor %&#125;</span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">  &#123;% if pages %&#125;</span></span><br><span class="line"><span class="language-xml">    &#123;% for page in pages.toArray() %&#125;</span></span><br><span class="line"><span class="language-xml">    &#123;% if post.indexing == undefined or post.indexing %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">entry</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123; page.title &#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;&#123;&#123; (url + page.path) | uriencode &#125;&#125;&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>&#123;&#123; (url + page.path) | uriencode &#125;&#125;<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;% if content %&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">content</span> <span class="attr">type</span>=<span class="string">&quot;html&quot;</span>&gt;</span>&lt;![CDATA[&#123;&#123; page.content | noControlChars | safe &#125;&#125;]]&gt;<span class="tag">&lt;/<span class="name">content</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">entry</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml">    &#123;% endfor %&#125;</span></span><br><span class="line"><span class="language-xml">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">search</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

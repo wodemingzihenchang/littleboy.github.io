@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 10:22:22</span>
+</div>
+
+<div id="article"><h1 id="PDM客户端安装"><a href="#PDM客户端安装" class="headerlink" title="PDM客户端安装"></a>PDM客户端安装</h1><p>摘要：本文详细介绍了SOLIDWORKS PDM &amp; Manage的两种升级方式，以及客户端的升级和插件的更新。</p>
+<span id="more"></span>
+
+<h2 id="PDM文件升级"><a href="#PDM文件升级" class="headerlink" title="PDM文件升级"></a>PDM文件升级</h2><p>进到SWPDMServer\Upgrade文件夹中。右键“upgrade.exe”，选择以管理员身份运行。</p>
+<img src="PDM客户端升级/客户端安装.png">
+
+<p>点击确定，以继续升级。</p>
+<img src="PDM客户端升级/客户端安装2.png">
+
+<p>点击下一步，以继续升级。</p>
+<img src="PDM客户端升级/客户端安装3.png">
+
+<p>选择或输入SQL数据库的名称（下图名称为举例说明），下一步。如果出现许可协议请点击接受，以继续升级。</p>
+<img src="PDM客户端升级/客户端安装4.png">
+
+<p>8、在弹出的界面中输入SQL的用户名和密码，并点击登录。</p>
+<img src="PDM客户端升级/客户端安装5.png">
+
+<p>选择需要升级的PDM文件库，并点击下一步。</p>
+<img src="PDM客户端升级/客户端安装6.png">
+
+<p>点击下一步，等待升级完成。</p>
+<img src="PDM客户端升级/客户端安装7.png">
+
+<p>点击完成，以退出升级向导。</p>
+<img src="PDM客户端升级/客户端安装8.png">
+
+
+
+<p>——到这里PDM客户端的升级就介绍了，下面是manage的升级——</p>
+<hr>
+<h1 id="升级Manage-Client"><a href="#升级Manage-Client" class="headerlink" title="升级Manage Client"></a>升级Manage Client</h1><p>在安装包中找到“SWManageClient”文件夹，并双击打开。</p>
+<p>右键“setup.exe”，选择以管理员身份运行。</p>
+<p>点击是，以继续安装。</p>
+<p>点击下一步，以继续安装。</p>
+<p>等待安装完成，点击完成，以退出安装向导。</p>
+<p>重新激活软件</p>
+<p>打开SOLIDWORKS License Manager Server ，点击激活。</p>
+<h2 id="插件升级"><a href="#插件升级" class="headerlink" title="插件升级"></a>插件升级</h2><p>在PDM的安装路径下找到“Convert_gb.cex”，并拖入到PDM管理中。</p>
+<p>将插件“SWTaskAddin”拖入到库中插件处。</p>
+<p>3、点击全部是，进行替换。</p>
+<p>4、选择到“swm.swpdm”插件，右键移除。</p>
+<p>右键插件，选择“新插件”。</p>
+<p>在Manage Client的安装路径下找到“epdm.interop.epdm.dll”、“swm.swpdm.dll”两个插件，并打开。</p>
+<p>点击确定。</p>
+<p>点击确定，以继续安装插件。</p>
+<p>若PDM文件库中出现SOLIDWORKS Manage选项卡，则插件安装成功。</p>
+<h2 id="Manage中PDM库同步"><a href="#Manage中PDM库同步" class="headerlink" title="Manage中PDM库同步"></a>Manage中PDM库同步</h2><p>在升级完成初次登录到Manage时，会提示数据库的更新，点击确定。</p>
+<p>登录到Manage后，右键PDM库，单击管理。</p>
+<p>点击“启用同步并获取PDM对象”。</p>
+<p>点击“同步”，等待完成后，点击关闭。</p>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/561350185">SOLIDWORKS PDM&amp;Manage升级SOP——客户端篇</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

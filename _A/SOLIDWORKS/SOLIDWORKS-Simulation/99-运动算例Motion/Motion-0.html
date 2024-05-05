@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-27 14:21:22</span>
+</div>
+
+<div id="article"><h1 id="Motion"><a href="#Motion" class="headerlink" title="Motion"></a>Motion</h1><p>运动算例类型：</p>
+<ul>
+<li>动画</li>
+</ul>
+<p>可使用动画来动态模拟装配体的运动。</p>
+<ul>
+<li>基本运动</li>
+</ul>
+<p>基本运动在计算运动时考虑到质量、马达、弹簧、接触以及引力，可基于物理模拟动画。</p>
+<ul>
+<li>Motion</li>
+</ul>
+<p>上精确模拟和分析运动单元的效果（包括力、弹簧、阻尼以及摩擦）。 运动分析使用计算能力强大的动力求解器，在计算中考虑到材料属性和质量及惯性。绘制模拟图例结果。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/solidworks/motionstudies/r_cats_subcats_motion_results.htm">Motion 分析结果的类别</a></p>
+<h2 id="马达力-力矩"><a href="#马达力-力矩" class="headerlink" title="马达力&#x2F;力矩"></a>马达力&#x2F;力矩</h2><h2 id="反作用力-力矩"><a href="#反作用力-力矩" class="headerlink" title="反作用力&#x2F;力矩"></a>反作用力&#x2F;力矩</h2><h2 id="摩擦力-力矩"><a href="#摩擦力-力矩" class="headerlink" title="摩擦力&#x2F;力矩"></a>摩擦力&#x2F;力矩</h2><p>斜面摩擦力模拟</p>
+<p>注意：两个部件之间需要正压力（好像斜向的力也不行），不然摩擦力就会为零。</p>
+<h2 id="接触力"><a href="#接触力" class="headerlink" title="接触力"></a>接触力</h2><p>摩擦力的正压力</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="运动设计库"><a href="#运动设计库" class="headerlink" title="运动设计库"></a>运动设计库</h2><p>如果您有常用的弹簧、马达或力，则可以将它们添加到设计库中，以便在其他设计中轻松拖放重用。</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><ol>
+<li>材料摩擦系数设置不正确：您需要检查您设置的材料的摩擦系数是否正确。在材料属性中，摩擦系数应该设置为两个表面之间的摩擦系数，而不是一个单独的表面的摩擦系数。如果您不确定摩擦系数的值，可以查找参考文献或尝试使用实验数据进行设置。</li>
+<li>模型设置不正确：您需要确保您的模型设置正确。首先，您需要确认小板是否能够在大板上滑动。如果小板与大板之间存在空隙，则摩擦力将为零。其次，您需要确保线性马达施加足够的牵引力，使小板保持在大板上运动。如果牵引力不够强，小板将会停止滑动。</li>
+<li>模拟参数设置不正确：您需要检查您设置的模拟参数是否正确。例如，您需要确认摩擦力是否被启用。如果摩擦力没有被启用，模拟结果将不会包含摩擦力的影响。</li>
+</ol>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-19 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-二维平面问题"><a href="#Simulation-二维平面问题" class="headerlink" title="Simulation-二维平面问题"></a>Simulation-二维平面问题</h1><p>分析实例:薄板曲面接触<br>问题描述:如下图所示，薄板相互挤压，一侧压力值为100N，考察结构应力<br>材料:合金钢</p>
+<img src="Simulation-二维平面问题/image-20240319171808256.png">
+
+<span id="more"></span>
+
+<p>【材料】材料:合金钢</p>
+<p>【连结】删除零部件接触，添加“相触面组”，  </p>
+<img src="Simulation-二维平面问题/image-20240319171922772.png">
+
+
+
+<p>【夹具】</p>
+<p>【外部载荷】</p>
+<p>【网格】默认网格</p>
+<p>【运行】</p>
+<h2 id="2D简化"><a href="#2D简化" class="headerlink" title="2D简化"></a>2D简化</h2><p>注意：2D简化有区别于壳单元，</p>
+<img src="Simulation-二维平面问题/image-20240319172602656.png">
+
+
+
+<p>【连结】相触面组</p>
+<img src="Simulation-二维平面问题/image-20240319172711906.png">
+
+<p>【夹具】对称</p>
+<img src="Simulation-二维平面问题/image-20240319172746507.png">
+
+
+
+
+<img src="Simulation-二维平面问题/image-20240319172815973.png">
+
+
+
+<p>【外部载荷】</p>
+<img src="Simulation-二维平面问题/image-20240319172834345.png">
+
+<p>【网格】</p>
+<p>【运行】</p>
+<p>计算上存在奇异点</p>
+<h1 id="赫兹接触"><a href="#赫兹接触" class="headerlink" title="赫兹接触"></a>赫兹接触</h1><p>赫兹公式：两弹性体接触的解析：（两圆柱面相切接触、两球面的点接触）</p>
+<p>分析实例:直齿轮(实际为了计算将齿轮减薄)问题描述:小齿轮为主动轮，大齿轮为从动轮，主动轮输入逆时针方向2000N载荷的等效扭矩，从动轮固定，利用Simulation求解齿轮的应力和位移，并对分析结果进行解释。<br>材料:合金钢</p>
+<img src="Simulation-二维平面问题/image-20240319173319404.png">
+
+
+
+<p>【模型处理】</p>
+<p>1、接触面【分割面】获得接触区域的小面，方便网格细化；</p>
+<p>2、接触吗需要相切（不应出现间隙和干涉）</p>
+<p>【连结】</p>
+<p>【夹具】</p>
+<p>【夹具】</p>
+<p>【外部载荷】</p>
+<p>【网格】</p>
+<p>【结果】</p>
+<img src="Simulation-二维平面问题/image-20240320154104357.png">
+
+<h2 id="2D简化-1"><a href="#2D简化-1" class="headerlink" title="2D简化"></a>2D简化</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

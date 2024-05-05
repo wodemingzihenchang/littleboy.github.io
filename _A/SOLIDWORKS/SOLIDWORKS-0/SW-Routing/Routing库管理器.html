@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-01 16:59:40</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-Routing库管理器"><a href="#SOLIDWORKS-Routing库管理器" class="headerlink" title="SOLIDWORKS Routing库管理器"></a>SOLIDWORKS Routing库管理器</h1><img src="Routing库管理器\/Routing库管理器.png">
+
+<p>【Routing Library Manage-电缆电线库向导】打开现有库，Routing Library Manager 包含以下项目： </p>
+<h1 id="Routing-零部件向导"><a href="#Routing-零部件向导" class="headerlink" title="Routing 零部件向导"></a>Routing 零部件向导</h1><p>准备用于 Routing 的零件。可以使用现有的零件或生成新零件，然后使用向导准备零件。</p>
+<h1 id="电缆电线向导"><a href="#电缆电线向导" class="headerlink" title="电缆电线向导"></a>电缆电线向导</h1><p>定义电缆电线属性（如大小、颜色和说明）的 .xml 文件。所以电气类型可将电气属性指派给线路。</p>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>用于生成新的库、以 Excel 格式输入库或打开现有的库。</p>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>当现在以Excel创建时，会进入设置页。遵循设置提示的“列名称对应”来导入Excel表即可。</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/Chinese-Simplified/SolidWorks/sldpiping/t_creating_cable_wire_excel.htm">创建电缆电线、零部件或覆盖层 Excel 文件 - 2018 - SOLIDWORKS 帮助</a></p>
+<h2 id="现有库"><a href="#现有库" class="headerlink" title="现有库"></a>现有库</h2><img src="Routing库管理器\电缆电线库.png">
+
+<p>在XML文件是这样表示的</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">CableLibrary</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.solidworks.com/cablelibrary&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">cable</span> <span class="attr">ID</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">cable</span> <span class="attr">ID</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="comment">&lt;!-- 电缆库 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">wire</span> <span class="attr">ID</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">wire</span> <span class="attr">ID</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="comment">&lt;!-- 电线库 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">RibbonCable</span> <span class="attr">ID</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">RibbonCable</span> <span class="attr">ID</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="comment">&lt;!-- 带电缆库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">CableLibrary</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="零部件库向导"><a href="#零部件库向导" class="headerlink" title="零部件库向导"></a>零部件库向导</h1><h2 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h2><p>修改Routing零部件的属性。这些零部件在第一步Routing零部件向导里创建时就会保存在此XML文件内。</p>
+<h2 id="设置-1"><a href="#设置-1" class="headerlink" title="设置"></a>设置</h2><p>当现在以Excel创建时，会进入设置页。遵循设置提示的“列名称对应”来导入Excel表即可。</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/Chinese-Simplified/SolidWorks/sldpiping/t_creating_cable_wire_excel.htm">创建电缆电线、零部件或覆盖层 Excel 文件 - 2018 - SOLIDWORKS 帮助</a></p>
+<h2 id="现有库-1"><a href="#现有库-1" class="headerlink" title="现有库"></a>现有库</h2><p>零部件库涉及到两个xml库文件：</p>
+<p>1、零部件库</p>
+<p>2、互连和附件库</p>
+<h1 id="覆盖层库向导"><a href="#覆盖层库向导" class="headerlink" title="覆盖层库向导"></a>覆盖层库向导</h1><h2 id="创建-2"><a href="#创建-2" class="headerlink" title="创建"></a>创建</h2><p>用于生成新的库、以 Excel 格式输入库或打开现有的库。 覆盖层库为定义覆盖层属性（如厚度、包装和形状）的 .xml 文件。 </p>
+<h2 id="设置-2"><a href="#设置-2" class="headerlink" title="设置"></a>设置</h2><p>当现在以Excel创建时，会进入设置页。遵循设置提示的“列名称对应”来导入Excel表即可。</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/Chinese-Simplified/SolidWorks/sldpiping/t_creating_cable_wire_excel.htm">创建电缆电线、零部件或覆盖层 Excel 文件 - 2018 - SOLIDWORKS 帮助</a></p>
+<h2 id="现有库-2"><a href="#现有库-2" class="headerlink" title="现有库"></a>现有库</h2><p>覆盖层库向导涉及到两个xml库文件：</p>
+<p>1、管道、管筒和主干</p>
+<p>2、电气</p>
+<h1 id="标记方案管理器"><a href="#标记方案管理器" class="headerlink" title="标记方案管理器"></a>标记方案管理器</h1><p>P&amp;ID 标签是一个字符串序列，为管道、设备或其它接头提供子标签值，例如大小或面积。 您可以使用标记方案管理器来定义管道、设备或其它接头的标记方案，以指定子标签在标签中的显示顺序。此功能在 SOLIDWORKSConnected 中不可用。</p>
+<p>标记方案仅适用于从 P&amp;ID 数据生成的 Routing 装配体。对电气布线似乎也不起作用。</p>
+<h1 id="文件位置和设置"><a href="#文件位置和设置" class="headerlink" title="文件位置和设置"></a>文件位置和设置</h1><h2 id="步路库"><a href="#步路库" class="headerlink" title="步路库"></a>步路库</h2><p>设置 Routing 步路零部件的位置和选项。步路库默认位置是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2018\design library\routing</span><br></pre></td></tr></table></figure>
+
+<p>步路模板：用于新线路装配体的 Routing 模板。 其本质是装配体.asmdot模板。可以指定不同的制图标准、尺寸、单位和其他属性</p>
+<h2 id="管道-管筒-主干"><a href="#管道-管筒-主干" class="headerlink" title="管道&#x2F;管筒&#x2F;主干"></a>管道&#x2F;管筒&#x2F;主干</h2><p>​	标准管筒：标准管筒指定 Excel 文件。<br>​	覆盖层库：管道和管筒覆盖层材料指定 .xml 文件。<br>​	标记方案库：标记方案.xml 文件，</p>
+<h2 id="电气电缆"><a href="#电气电缆" class="headerlink" title="电气电缆"></a>电气电缆</h2><p>​	电缆电线库：电缆&#x2F;电线库指定 .xml 文件。<br>​	零部件库：零部件库指定 .xml 文件。<br>​	标准电缆：标准电缆指定 Excel 文件。<br>​	覆盖层库：电线和电缆的覆盖层材料指定 .xml 文件。 </p>
+<h2 id="设置-3"><a href="#设置-3" class="headerlink" title="设置"></a>设置</h2><p>单位设置</p>
+<p>设定保存与恢复</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

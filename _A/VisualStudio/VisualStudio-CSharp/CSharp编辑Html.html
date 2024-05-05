@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="CSharp编辑Html"><a href="#CSharp编辑Html" class="headerlink" title="CSharp编辑Html"></a>CSharp编辑Html</h1><span id="more"></span>
+
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>程序的执行从 Main 方法开始。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此代码示例演示如何创建 HTML 文档。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个空的 HTML 文档</span></span><br><span class="line"><span class="keyword">var</span> document = <span class="keyword">new</span> HTMLDocument();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加标题</span></span><br><span class="line"><span class="comment">// 1.创建一个标题元素</span></span><br><span class="line"><span class="keyword">var</span> h2 = (HTMLHeadingElement)document.CreateElement(<span class="string">&quot;h2&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.创建一个文本元素</span></span><br><span class="line"><span class="keyword">var</span> text = document.CreateTextNode(<span class="string">&quot;This is Sample Heading!&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.在标题中添加文本元素</span></span><br><span class="line">h2.AppendChild(text);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. 添加标题 to the document</span></span><br><span class="line">document.Body.AppendChild(h2);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加段落</span></span><br><span class="line"><span class="comment">// 1.创建段落元素</span></span><br><span class="line"><span class="keyword">var</span> p = (HTMLParagraphElement)document.CreateElement(<span class="string">&quot;p&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.设置自定义属性</span></span><br><span class="line">p.SetAttribute(<span class="string">&quot;id&quot;</span>, <span class="string">&quot;first-paragraph&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.创建文本节点</span></span><br><span class="line"><span class="keyword">var</span> paraText = document.CreateTextNode(<span class="string">&quot;This is first paragraph. &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.给段落添加文字</span></span><br><span class="line">p.AppendChild(paraText);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5.将段落附加到文件正文 </span></span><br><span class="line">document.Body.AppendChild(p);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加有序列表</span></span><br><span class="line"><span class="comment">// 创建段落元素</span></span><br><span class="line"><span class="keyword">var</span> list = (HTMLOListElement)document.CreateElement(<span class="string">&quot;ol&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加第 1 项</span></span><br><span class="line"><span class="keyword">var</span> item1 = (HTMLLIElement)document.CreateElement(<span class="string">&quot;li&quot;</span>);</span><br><span class="line">item1.AppendChild(document.CreateTextNode(<span class="string">&quot;First list item.&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加第 2 项</span></span><br><span class="line"><span class="keyword">var</span> item2 = (HTMLLIElement)document.CreateElement(<span class="string">&quot;li&quot;</span>);</span><br><span class="line">item2.AppendChild(document.CreateTextNode(<span class="string">&quot;Second list item.&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 li 项添加到列表中</span></span><br><span class="line">list.AppendChild(item1);</span><br><span class="line">list.AppendChild(item2);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将列表附加到文档正文 </span></span><br><span class="line">document.Body.AppendChild(list);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将 HTML 文档保存到文件 </span></span><br><span class="line">document.Save(<span class="string">@&quot;C:\Files\html\create-new-document.html&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此代码示例演示如何读取 HTML 文件</span></span><br><span class="line"><span class="comment">// 准备文档保存的输出路径</span></span><br><span class="line"><span class="built_in">string</span> documentPath = <span class="string">@&quot;C:\Files\html\create-new-document.html&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载 HTML 文件</span></span><br><span class="line"><span class="keyword">var</span> document = <span class="keyword">new</span> HTMLDocument(documentPath);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将文档内容写入输出流</span></span><br><span class="line">Console.WriteLine(document.DocumentElement.OuterHTML);</span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.aspose.com/zh/html/create-read-edit-html-files-in-csharp/">C# 读取 HTML 文件 | C# 创建 HTML 文件 |编辑 HTML 文件 C# (aspose.com)</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

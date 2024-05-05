@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="官方插件SDK使用"><a href="#官方插件SDK使用" class="headerlink" title="官方插件SDK使用"></a>官方插件SDK使用</h1><p>SOLIDWORKS 提供一种官方的插件方案，你需要先安装SOLIDWORKS API SDK来获得“swcsharpaddin”插件模板：</p>
+<!--morn-->
+
+<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><p>1、打开 Microsoft Visual Studio .NET。单击“新建&gt;项目&gt;文件”。</p>
+<p>2、在“新建项目”对话框的左侧面板中，选择：<br>Visual C#，滚动到中间面板的末尾，然后选择“SwCSharpaddin 加载项模板”。<br>Visual Basic，滚动到中间面板的末尾，然后 选择“SwVBAddin 加载项模板”。</p>
+<img src="Sw_官方插件SDK使用\image-20231014153054508.png">
+
+<p>3、修改“名称”、“位置”、“解决方案”和“解决方案名称”字段。单击“确定”。</p>
+<img src="Sw_官方插件SDK使用\image-20231014153146995.png">
+
+<p>4、打开“解决方案资源管理器”。双击 Swaddin.* 将其打开。</p>
+<img src="Sw_官方插件SDK使用\image-20231014153405261.png">
+
+<h2 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h2><p>Guid：为插件生成后注册到注册表的项，由系统自动生成。<br>Description：为插件的描述信息<br>Title：为插件的名称。</p>
+<img src="Sw_官方插件SDK使用\image-20231014152706996.png">
+
+<img src="Sw_官方插件SDK使用\image-20231014154250032.png">
+
+<h2 id="工具栏定义"><a href="#工具栏定义" class="headerlink" title="工具栏定义"></a>工具栏定义</h2><p>ICommandManager Interface Members（工具栏管理器对象）</p>
+<p>ICommandGroup Interface Members（工具栏）</p>
+<img src="Sw_官方插件SDK使用\image-20231014154434996.png">
+
+<h3 id="创建工具栏"><a href="#创建工具栏" class="headerlink" title="创建工具栏"></a>创建工具栏</h3><p>CreateCommandGroup2 Method (ICommandManager)<br>在命令管理器中创建新的命令组。</p>
+<h3 id="工具栏分栏"><a href="#工具栏分栏" class="headerlink" title="工具栏分栏"></a>工具栏分栏</h3><p>CommandTabs Method (ICommandManager)<br>获取指定文档类型的所有外接程序命令管理器选项卡。</p>
+<h3 id="添加命令"><a href="#添加命令" class="headerlink" title="添加命令"></a>添加命令</h3><p>AddCommandItem2 Method (ICommandGroup)<br>将组合菜单项和工具栏项添加到命令组。</p>
+<h3 id="下拉框"><a href="#下拉框" class="headerlink" title="下拉框"></a>下拉框</h3><p>CreateFlyoutGroup2 Method (ICommandManager)<br>在命令管理器和上下文相关菜单中创建新的浮出控件。</p>
+<h2 id="属性框定义"><a href="#属性框定义" class="headerlink" title="属性框定义"></a>属性框定义</h2><p>xxx<br>AddItemToThirdPartyPopupMenu2 Method (ISldWorks)<br>将菜单项添加到 SOLIDWORKS 附加模块中的弹出（快捷方式）菜单中。</p>
+<img src="Sw_官方插件SDK使用\image-20231014154601194.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="SolidWorksTools-引用"><a href="#SolidWorksTools-引用" class="headerlink" title="SolidWorksTools 引用"></a>SolidWorksTools 引用</h2><p>SOLIDWORKS API SDK在安装位置<install_dir>中安装了 SolidWorksTools.dll。</p>
+<p>这模板将此 DLL 添加到外接程序项目的引用列表中。这 DLL 必须与外接程序应用程序一起重新分发。</p>
+<p>目前，此 DLL 包含 SOLIDWORKS 位图处理程序类、BitmapHandler、 它基于 SOLIDWORKS CommandManager。使用 Microsoft Visual Studio .NET Object Browser 或 Intellisense 查看其成员。</p>
+<h2 id="手动添加C-模板："><a href="#手动添加C-模板：" class="headerlink" title="手动添加C#模板："></a>手动添加C#模板：</h2><p>把swcsharpaddin.zip放到对应的C#模板目录下即可</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

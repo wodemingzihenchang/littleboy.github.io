@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-06-22 11:12:59</span>
+</div>
+
+<div id="article"><h1 id="程序启动慢"><a href="#程序启动慢" class="headerlink" title="程序启动慢"></a>程序启动慢</h1><p>solidworks启动慢的原因&amp;可能出现的问题：一般打开SOLIDWORKS会经历这几个过程：  </p>
+<blockquote>
+<ol>
+<li>加载注册表</li>
+<li>验证许可证</li>
+<li>加载用户界面零部件</li>
+<li>初始化VBA引擎</li>
+<li>加载任务窗格</li>
+<li>初始化.NET 环境</li>
+<li>启动SOLIDWORKS</li>
+<li>正在加载插件</li>
+</ol>
+</blockquote>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>我们可以先留意下在哪个过程中用的时间最多，然后对应下面的解决方案进行优化：</p>
+<h2 id="1、加载注册表"><a href="#1、加载注册表" class="headerlink" title="1、加载注册表"></a>1、加载注册表</h2><p>赋予管理员权限，或者以管理员的账户登录系统</p>
+<h2 id="2、验证许可证"><a href="#2、验证许可证" class="headerlink" title="2、验证许可证"></a>2、验证许可证</h2><p>单机&amp;网络：对“C:\ProgramData\FLEXnet”这个文件夹重命名(需要重新激活软件)</p>
+<p>网络版：还可以可对比借出和联网速度差异。同时使用无线和有线网络可能对验证许可证的速度有影响。</p>
+<p>方法： </p>
+<p>删掉C:\ProgramData\FLEXnet文件夹的几个文件。由于ProgramData这个文件夹默认是隐藏的，所以我们要把文件隐藏属性打开，方法如下：</p>
+<p>　　1、打开“我的电脑”，然后点击顶部的【查看】-【选项】：</p>
+<p>　　2、打开文件夹选项后，点击查看-找到显示隐藏的文件、文件夹和驱动器，并选中。并且把“隐藏受保护的系统文件”前边的对勾去掉</p>
+<p>　　3、找到C:\ProgramData\FLEXnet文件夹，将下面的图示文件sw_D_三个文件删除，或者剪切到别的地方备份，如果不行好在粘回来(推荐)。现在试试打开SolidWorks的速度正常了没。</p>
+<h2 id="3、初始化-NET环境"><a href="#3、初始化-NET环境" class="headerlink" title="3、初始化.NET环境"></a>3、初始化.NET环境</h2><p>将安装文件夹中“PreReqs“文件夹中的必备组件重新安装,如“SOLIDWORKS 2018 SP02\PreReqs”对比重新安装没有效果。</p>
+<h2 id="4、加载插件"><a href="#4、加载插件" class="headerlink" title="4、加载插件"></a>4、加载插件</h2><p>打开SOLIDWORKS后，可在插件窗口查看哪个插件加载时间过长，可暂时去除勾选，在需要使用时再加载插件，对于不必要的插件可以取消启动勾选。</p>
+<img src="SOLIDWORKS启动问题/image-20240301094113781.png" >
+
+<h1 id="文件打开慢"><a href="#文件打开慢" class="headerlink" title="文件打开慢"></a>文件打开慢</h1><iframe src="https://www.edrawmax.cn/online/share.html?code=97e5f6d6957f11eea622dbd80885ff13"></iframe>
+
+<p>当【系统选项-文件位置-参考文件夹】设置过多导致。打开装配体时，软件去多路径下寻找参考影响打开时间。 </p>
+<p>方法：取消【系统选项-文件位置-参考文件夹】无用路径设置即可。</p>
+<h2 id="影响因素："><a href="#影响因素：" class="headerlink" title="影响因素："></a>影响因素：</h2><p>打开零件大小</p>
+<p>打开零件数量</p>
+<p>配置：</p>
+<h2 id="“打开进度指示器”"><a href="#“打开进度指示器”" class="headerlink" title="“打开进度指示器”"></a>“打开进度指示器”</h2><p>工具可用于识别在文件打开期间花费最多时间的操作。</p>
+<p>装配体打开信息：<br>• “打开零部件”操作是驱动器的读&#x2F;写速度缓慢，或者网盘连接缓慢。<br>• “更新装配体”操作是<br>• “已用时间”<br>• “上次打开时间”</p>
+<img src="SOLIDWORKS启动问题/image-20240408103356875.png" >
+
+<p>工程图打开信息：<br>• “加载零部件”操作是驱动器的读&#x2F;写速度缓慢，或者网盘连接缓慢<br>• “更新工程图”操作是<br>• “更新图形”操作是<br>• “已用时间”<br>• 工程图中的“上次打开时间”。</p>
+<img src="SOLIDWORKS启动问题/image-20240408103443323.png" >
+
+<h2 id="“性能评估”"><a href="#“性能评估”" class="headerlink" title="“性能评估”"></a>“性能评估”</h2><p>工具检查装配体和工程图的性能，然后显示多个统计数据和建议以提高性能。在某些情况下，您可以允许该软件对您的装配体或工程图进行更改以提高性能。“性能评估”工具位于“工具”&gt;“评估”&gt;“性能评估”中。</p>
+<h2 id="“装配体可视化”"><a href="#“装配体可视化”" class="headerlink" title="“装配体可视化”"></a>“装配体可视化”</h2><p>工具验证图形问题。例如，在“打开进度指示器”（请参阅 B 部分）显示“更新图形”操作花费了打开装配体所用的大部分时间后，您可以将该工具用作调查的辅助步骤。“装配体可视化”工具位于“工具”&gt;“评估”&gt;“装配体可视化”中。</p>
+<p>激活“装配体可视化”后，您可以通过包括在 SOLIDWORKS 图形区域中显示零部件所需的“图形-三角形”和“三角形图形总数”参数对装配体可视化列表进行排序。这些参数随着图像质量的提高而增加，这会随着三角形数量的增加而影响性能。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-12 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="机械配合"><a href="#机械配合" class="headerlink" title="机械配合"></a>机械配合</h1><h2 id="凸轮"><a href="#凸轮" class="headerlink" title="凸轮"></a>凸轮</h2><p>!<img src="机械配合/凸轮.png"></p>
+<h2 id="槽口"><a href="#槽口" class="headerlink" title="槽口"></a>槽口</h2><h2 id="铰链"><a href="#铰链" class="headerlink" title="铰链"></a>铰链</h2><h2 id="齿轮"><a href="#齿轮" class="headerlink" title="齿轮"></a>齿轮</h2><p>齿轮的配合选择，一般需要选择齿轮的分度圆。应该分度圆会自动算出两齿轮的传动比（即角速度比，满足转动时齿轮能啮合正确）</p>
+<img src="机械配合/齿轮配合动画1.png">
+
+<p>不过有些模型是没有显示分度圆的（似乎大部分情况是没的），此时则可以选择两齿轮自身的轴孔半径。这时的半径比率就可能不对。需要手动修改配合比率满足转动时齿轮能啮合正确</p>
+<img src="机械配合/齿轮配合动画1.png">
+
+<p>效果展示</p>
+<img src="机械配合/齿轮配合动画.gif">
+
+<p>再者还有一种情况，就是做【齿轮】配合时，如果两齿轮已经存在干涉情况。那配合后的动作也是一直会干涉。（齿轮配合并无对齐功能，这是联动功能而已。所以一开始错了，联动的动作也会一起错）</p>
+<img src="机械配合/修改齿轮干涉1.png">
+
+<p>这时你可以通过“压缩配合”或“配合前”先对齐，消除干涉问题。</p>
+<img src="机械配合/修改齿轮干涉2.png">
+
+
+
+<h2 id="齿条"><a href="#齿条" class="headerlink" title="齿条"></a>齿条</h2><h2 id="螺旋"><a href="#螺旋" class="headerlink" title="螺旋"></a>螺旋</h2><h2 id="万向节"><a href="#万向节" class="headerlink" title="万向节"></a>万向节</h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

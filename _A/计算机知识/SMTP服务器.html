@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-02 14:45:51</span>
+</div>
+
+<div id="article"><h1 id="SMTP服务器"><a href="#SMTP服务器" class="headerlink" title="SMTP服务器"></a>SMTP服务器</h1><span id="more"></span>
+
+<h2 id="服务器连接"><a href="#服务器连接" class="headerlink" title="服务器连接"></a>服务器连接</h2><p>1.要打开命令行，开始 -&gt; 运行，在打开框中键入 cmd，然后单击确定。</p>
+<p>2.使用以下格式的远程登录命令，您可启动远程登录会话。确保在每行后按 ENTER 键：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet servername portnumbe //例如:telnet mailserver.mycompany.com 25</span><br></pre></td></tr></table></figure>
+
+<p>3.如果命令有效，您可能会从 SMTP 服务器收到与以下类似的响应：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">220 mailserver.mycompany.com Microsoft Exchange Internet Mail Connector</span><br></pre></td></tr></table></figure>
+
+<p>有关如何继续测试，请参阅 Microsoft 知识库文章 153119 中的详细信息。</p>
+<p>请注意，如果使用命令提示符使用左上角的闪烁光标清除屏幕，这也表明远程登录命令已连接 SMTP 服务器，并且该端口可访问。</p>
+<p>4.如果服务器没有响应，远程登录将失败并显示如下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">连接至...无法在端口 25 上打开与主机的链接：连接失败</span><br></pre></td></tr></table></figure>
+
+<p>对 SMTP 服务器通信被阻止的原因进行疑难解答 - 最有可能是因为防火墙阻止了端口访问。</p>
+<h1 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h1><h2 id="响应服务器553"><a href="#响应服务器553" class="headerlink" title="响应服务器553"></a>响应服务器553</h2><p>Outlook或者Foxmail收信时提示：553 Authentication is required</p>
+<p>客户端未选择发件服务器需要身份验证，设置调整如下：</p>
+<p>Outlook客户端在电子邮件设置中进行修改</p>
+<img src="SMTP服务器/outlook响应服务器553.png">
+
+<p>Foxmail客户端在服务器设置中修改</p>
+<img src="SMTP服务器/Foxmail响应服务器553.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

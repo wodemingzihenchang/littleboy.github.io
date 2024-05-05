@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-09 22:38:33</span>
+</div>
+
+<div id="article"><h1 id="工程图视图空白"><a href="#工程图视图空白" class="headerlink" title="工程图视图空白"></a>工程图视图空白</h1><p>参考的零部件模型已从发生移动，导致工程图参考丢失，因此它以空白视图打开。</p>
+<img src="工程图视图空白/工程图视图空白.png">
+
+<p>如果在将模型保存到新位置时图形处于打开状态，则不会出现此问题…图形的参照将更新。就像在 Windows 中使用右键单击 SOLIDWORKS &gt; 移动模型一样 &gt; 移动 &gt; 更新。</p>
+<span id="more"></span>
+
+<h2 id="方法1：打开参考替换"><a href="#方法1：打开参考替换" class="headerlink" title="方法1：打开参考替换"></a>方法1：打开参考替换</h2><p>选择“文件”&gt;“打开”。找到打开对话框下的【参考】按钮，双击旧模型的路径，来浏览到模型的新位置(替换后，模型名字会变绿)</p>
+<img src="工程图视图空白/工程图视图空白方法.png">
+
+<p>然后打开工程图，此时模型可能会出现尺寸悬空的情况，我们可以忽略。在后续修改即可。</p>
+<h2 id="方法2：替换模型"><a href="#方法2：替换模型" class="headerlink" title="方法2：替换模型"></a>方法2：替换模型</h2><p>在打开工程图界面里，右键丢失参考的空白视图【替换模型】，浏览到新位置下的模型进行替换参考即可。</p>
+<img src="工程图视图空白/工程图视图空白方法2.png">
+
+<h2 id="方法3：显示视图"><a href="#方法3：显示视图" class="headerlink" title="方法3：显示视图"></a>方法3：显示视图</h2><p>替换完成，并且可以从工程图打开零件，但是模型显示还是空白。可以将模型【显示】恢复</p>
+<img src="工程图视图空白/显示视图.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

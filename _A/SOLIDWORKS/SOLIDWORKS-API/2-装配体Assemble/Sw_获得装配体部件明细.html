@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-08-13 01:12:18</span>
+</div>
+
+<div id="article"><h1 id="Sw-获得装配体部件明细（V1-0）"><a href="#Sw-获得装配体部件明细（V1-0）" class="headerlink" title="Sw 获得装配体部件明细（V1.0）"></a>Sw 获得装配体部件明细（V1.0）</h1><h2 id="需求说明："><a href="#需求说明：" class="headerlink" title="需求说明："></a>需求说明：</h2><p>SOLIDWORKS 的材料明细表截至目前是有”仅顶层”、”仅零件”、”缩进”三种类型。其效果简介如下：</p>
+<img src="Sw_获得装配体部件明细/image1.png">
+
+<p>通常我们常用的是”仅零件”类型的材料明细表，用以统计零件单位的清单目录。但是，如果需要统计总装的部件汇总时就比较麻烦。</p>
+<p>需要注意的是”缩进”是按层级给部件按成套的数量统计的，可以留意上图”2 部件子装”，我们从实际的数量中发现总数是 4，但是在缩进的材料明细表里数量是 2*2（由上一级的数量按乘法计算得）。再举个例子：”仅零件”下零件的总数是 9，但缩进的数据从单行看的话就是 5，明显不对。需要乘以上一级的套数才是实际数量。</p>
+<img src="Sw_获得装配体部件明细/image2.png">
+
+<p>因此，我们希望寻求一种解决方法：将”仅装配体（部件）”做为类型的材料明细表的统计方法。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>在该方法中，我们利用对总装里部件的”循环查找”+<br>“部件判断”的方式筛选出仅为子装配体部分。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">GetAllcomponents</span>(<span class="params">ISwDMDocument swDoc, List&lt;<span class="built_in">string</span>&gt; strList</span>)<span class="comment">//Debug</span></span></span><br><span class="line">       &#123;</span><br><span class="line">           ISwDMConfigurationMgr2 configmgr_asm = (ISwDMConfigurationMgr2)swDoc.ConfigurationManager;</span><br><span class="line">           ISwDMConfiguration2 config_asm = (ISwDMConfiguration2)configmgr_asm.GetConfigurationByName(configmgr_asm.GetActiveConfigurationName()); ;</span><br><span class="line">           <span class="built_in">object</span>[] objs = config_asm.GetComponents();</span><br><span class="line"></span><br><span class="line">           <span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> objs)</span><br><span class="line">           &#123;</span><br><span class="line">               SwDMComponent10 component = (SwDMComponent10)item;</span><br><span class="line">               <span class="keyword">if</span> ((<span class="built_in">int</span>)component.DocumentType == <span class="number">2</span>&amp;&amp; !(component.IsSuppressed()))</span><br><span class="line">               &#123;<span class="comment">//判断是类型2：装配体</span></span><br><span class="line">                   GetAllcomponents(component.GetDocument(<span class="literal">true</span>, <span class="keyword">out</span> _), strList);<span class="comment">//递归</span></span><br><span class="line">                   strList.Add(component.Name);</span><br><span class="line"></span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过用 List&lt;string&gt;统计和去重复的部件对象名，这一步可以获得总装里各部件的数量情况。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="built_in">string</span>&gt; strList = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"><span class="keyword">var</span> dic = strList.GroupBy(x =&gt; x).ToDictionary(g =&gt; g.Key, g =&gt; g.Count());</span><br><span class="line"><span class="built_in">int</span> Row_i2 = <span class="number">0</span>; <span class="keyword">foreach</span> (KeyValuePair&lt;<span class="built_in">string</span>, <span class="built_in">int</span>&gt; temp <span class="keyword">in</span> dic)</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;&#123;0&#125;,&#123;1&#125;&quot;</span>, temp.Key, temp.Value);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>材料明细表内容用属性方法获得，其功能类似之前的”Sw_属性编辑工具”</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1、打开工具程序</p>
+<img src="Sw_获得装配体部件明细/image3.png">
+
+<p>2、选择总装配体文件。注意文件是需要可读（非只读）的状态，并且不要在 SW 软件打开（被占用）。</p>
+<img src="Sw_获得装配体部件明细/image4.png">
+
+<p>3、勾选需要显示在材料明细表里的属性内容</p>
+<img src="Sw_获得装配体部件明细/image5.png">
+
+<p>4、选完属性后，点击按钮 2 获取内容</p>
+<img src="Sw_获得装配体部件明细/image6.png">
+
+<p>5、保存 Excel 表</p>
+<img src="Sw_获得装配体部件明细/image7.png">
+
+<p>6、以下是 Excel 软件打开的内容，我们可以对比文章开头的清单数量。可以发现数量正确，”仅装配体（部件）”的材料明细表导出效果完成。</p>
+<img src="Sw_获得装配体部件明细/image8.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-08-03 23:35:01</span>
+</div>
+
+<div id="article"><span id="more"></span>
+
+<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><p>规格表是以 Excel 表格的形式设置规格，规格不能同名、厚度不能重复（原则就是规格不能重复）。规格表默认位置：</p>
+<blockquote>
+<p>【C:\Program Files\SolidWorks 2022\SOLIDWORKS\lang\chinese-simplified\Sheet Metal Gauge Tables】</p>
+</blockquote>
+<img src="钣金规格表/image1.png">
+
+<p>规格表内容设置规则是：</p>
+<ol>
+<li>折弯类型：可以选择不同的计算方式</li>
+<li>单位：默认可以设置毫米 mm</li>
+<li>规格内容：在该厚度下，某个半径和角度对于下的规格值</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>【钣金】钣金零件的首个特征文件夹，里面会放我们钣金参数内容和规格表信息（如下：）。规格表一般是按原有表格格式进行复制添加和修改。</p>
+<p>【钣金】使用&#x2F;编辑特征时，可以选择”规格表”，选择后钣金参数会有所变化。且规格内容来自表格定制的内容</p>
+<img src="钣金规格表/image2.png">
+
+<h2 id="钣金计算方法"><a href="#钣金计算方法" class="headerlink" title="钣金计算方法"></a>钣金计算方法</h2><p>下面使用一折弯边演示此三种钣金展开的计算方法。其展开长度不一是因为折弯位置发生了形变（等我找找材料变形图），那么不同的计算方法就是对该变形位置的实际展开的长度计算。</p>
+<p>讲究的是变形位置存在一段不变的中性层，该层不管是展开还是折弯，它都是一样的。</p>
+<img src="钣金规格表/image3.png">
+
+<h3 id="K-因子："><a href="#K-因子：" class="headerlink" title="K 因子："></a>K 因子：</h3><p>这里就是用 K 因子是描述中性层的位置。K 因子：中性面距内折面&#x2F;厚度，即 t&#x2F;T 随便说明下，中性层是变化的，不同厚度和半径中性层的位置也会变化的。</p>
+<p>模型钣金展开长度：100+100+5.46&#x3D;205.46</p>
+<img src="钣金规格表/image4.png">
+
+<h3 id="折弯系数："><a href="#折弯系数：" class="headerlink" title="折弯系数："></a>折弯系数：</h3><p>去除折弯半径的部分，直接使用折弯系数的数值代表该折弯半径的中性层，即固定边+折弯系数即为展开长度。</p>
+<p>模型钣金展开长度：100+100+10&#x3D;210mm</p>
+<img src="钣金规格表/image5.png">
+
+<h3 id="折弯扣除："><a href="#折弯扣除：" class="headerlink" title="折弯扣除："></a>折弯扣除：</h3><p>草图包含折弯半径的部分，直接使用折弯扣除的数值代表该处重复多余的长度。</p>
+<p>模型钣金展开长度：100+100-10&#x3D;190mm</p>
+<img src="钣金规格表/image6.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

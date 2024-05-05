@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-09-10 23:23:39</span>
+</div>
+
+<div id="article"><h1 id="F-常见错误信息"><a href="#F-常见错误信息" class="headerlink" title="F-常见错误信息"></a>F-常见错误信息</h1><p>错误信息以及在生成 SOLIDWORKS 草图和模型时可能解决错误的方法。</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/Chinese-Simplified/solidworks/sldworks/c_Error_Messages_Overview.htm">https://help.solidworks.com/2022/Chinese-Simplified/solidworks/sldworks/c_Error_Messages_Overview.htm</a></p>
+<h1 id="打开问题"><a href="#打开问题" class="headerlink" title="打开问题"></a>打开问题</h1><h2 id="无法图形注册表文件"><a href="#无法图形注册表文件" class="headerlink" title="无法图形注册表文件"></a>无法图形注册表文件</h2><p>无法在文件夹中找到图形注册表文件</p>
+<h2 id="无法找到文件"><a href="#无法找到文件" class="headerlink" title="无法找到文件"></a>无法找到文件</h2><p>文件移动或改名导致的装配体“丢失参考”的问题，可以手动【浏览文件】来加载需要的文件，或是暂时【压缩此零部件】的方式打开装配体。</p>
+<p><img src="0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/%E6%97%A0%E6%B3%95%E6%89%BE%E5%88%B0%E6%96%87%E4%BB%B6.png" alt="无法找到文件"></p>
+<h2 id="Window-正在配置"><a href="#Window-正在配置" class="headerlink" title="Window:正在配置"></a>Window:正在配置</h2><p>打开SW程序，弹窗：Window:正在配置S0LIIORKS2018 SP05，清稍等</p>
+<img src="0常见问题方法/Window正在配置.png">
+
+<p>方法：</p>
+<p>1、首先选择SOLIDWORKS的快捷方式鼠标右键选择属性可以看到SOLIDWORKS的安装目录。<br>2、进入SOLIDWORKS的安装目录，查找到sldProcMon.exe这个文件，将其删除。<br>3、找到SLDWORKS.exe选中它然后鼠标右键选择“发送到”-“桌面快捷方式”并删除原有的快捷方式图标。<br>4、点击新的SOLIDWORKS快捷方式重新启动。</p>
+<h2 id="这个操作只对当前安装的产品有效"><a href="#这个操作只对当前安装的产品有效" class="headerlink" title="这个操作只对当前安装的产品有效"></a>这个操作只对当前安装的产品有效</h2><p>出现在多版本使用时的问题，当我的启动操作使用了旧版本（卸载）的程序启动时，则会提示我们，当前“这个操作只对当前安装的产品有效”。</p>
+<p>方法：</p>
+<p>右键SW文件，选择打开方式，修改设置默认打开方式。（注意，这里需要去浏览到对应的版本文件夹下，的swShellFileLauncher.exe文件进行打开）</p>
+<h2 id="版本尚未被适当地授权"><a href="#版本尚未被适当地授权" class="headerlink" title="版本尚未被适当地授权"></a>版本尚未被适当地授权</h2><p>F-版本尚未被适当地授权，请联系您的供应商 (A100,68)</p>
+<img src="0常见问题方法/版本尚未被适当地授权.png">
+
+<h2 id="F-VBE6EXT-OLB-不能被加载"><a href="#F-VBE6EXT-OLB-不能被加载" class="headerlink" title="F-VBE6EXT.OLB 不能被加载"></a>F-VBE6EXT.OLB 不能被加载</h2><img src="0常见问题方法/VBE6EXT.OLB不能被加载.png">
+
+<h2 id="重建"><a href="#重建" class="headerlink" title="重建"></a>重建</h2><img src="0常见问题方法/重建.png">
+
+<h2 id="打开可用于-xxx-的摘要"><a href="#打开可用于-xxx-的摘要" class="headerlink" title="打开可用于 xxx 的摘要"></a>打开可用于 xxx 的摘要</h2><img src="0常见问题方法/打开可用于xxx的摘要.png">
+
+
+
+<h2 id="链接的系列零件设计表"><a href="#链接的系列零件设计表" class="headerlink" title="链接的系列零件设计表"></a>链接的系列零件设计表</h2><img src="0常见问题方法/链接的系列零件设计表.png">
+
+<h2 id="F-找不到标准数据库"><a href="#F-找不到标准数据库" class="headerlink" title="F-找不到标准数据库"></a>F-找不到标准数据库</h2><p>顾名思义，就是没有.sldedb 的文件，你可能需要去复制正常使用 Toolbox 的文件夹来使用，或者修复一下 SW。</p>
+<p>（D:\Program Files\SolidWorks 2022\SOLIDWORKS Data\lang\english）</p>
+<img src="0常见问题方法/找不到标注数据库.png">
+
+<p>A：【系统选项-异形孔向导】Toolbox文件夹路径需要有数据库swbrowser内容。</p>
+<img src="0常见问题方法/数据库swbrowser遗失.png">
+
+<h2 id="F-模板无效"><a href="#F-模板无效" class="headerlink" title="F-模板无效"></a>F-模板无效</h2><img src="0常见问题方法/默认模板无效.png">
+
+<h2 id="F-不匹配的内部-ID"><a href="#F-不匹配的内部-ID" class="headerlink" title="F-不匹配的内部 ID"></a>F-不匹配的内部 ID</h2><p>所参考的文档具有不匹配的内部 ID。此提示通常在文件夹界面下，你用其他同名新文件替换原文件时出现。</p>
+<ol>
+<li><p>让我浏览原文件：如果原文件丢失则会以压缩方式打开；</p>
+</li>
+<li><p>仍使用该文件：使用新的同名文件替换打开；</p>
+</li>
+<li><p>为此文件打开：压缩问题文件打开</p>
+</li>
+</ol>
+<img src="0常见问题方法/所参考的文档具有不匹配的内部ID.png">
+
+<h2 id="同名打开"><a href="#同名打开" class="headerlink" title="同名打开"></a>同名打开</h2><p>在软件如果已经打开了同名的文件时，则会出现下面的提示。同名打开会以软件当前的文件加载</p>
+<p>（那么你可能需要注意的是：使用到该同名零件的装配体会出现文件参考改变的情况）</p>
+<img src="0常见问题方法/同名打开.png">
+
+<h2 id="F-打开崩溃问题排查"><a href="#F-打开崩溃问题排查" class="headerlink" title="F-打开崩溃问题排查"></a>F-打开崩溃问题排查</h2><p>问题 1：【装配体】- 打开崩溃问题排查</p>
+<img src="0常见问题方法/在打开文件时遇到错误.png">
+
+<h2 id="特征识别"><a href="#特征识别" class="headerlink" title="特征识别"></a>特征识别</h2><p>featureWork 的操作</p>
+<img src="0常见问题方法/特征识别.png">
+
+<h2 id="F-包含退回状态零件"><a href="#F-包含退回状态零件" class="headerlink" title="F-包含退回状态零件"></a>F-包含退回状态零件</h2><p>该文档包含有以退回状态保存的零件 xxx。您想将之往前推进吗</p>
+<img src="0常见问题方法/该文档包含有以退回状态保存的零件.png">
+
+<h2 id="F-高版本属性卡"><a href="#F-高版本属性卡" class="headerlink" title="F-高版本属性卡"></a>F-高版本属性卡</h2><p>The template file being opened is created in a newer version of Propety TabBuilder. All the new features may not be supported.</p>
+<img src="0常见问题方法/newer version of Propety TabBuilder.png">
+
+<h2 id="F-打开外部参考的零件"><a href="#F-打开外部参考的零件" class="headerlink" title="F-打开外部参考的零件"></a>F-打开外部参考的零件</h2><img src="0常见问题方法/外部参考在智能零部件中禁用.png">
+
+<img src="0常见问题方法/打开外部参考的零件.png">
+
+
+
+<h2 id="重命名文档"><a href="#重命名文档" class="headerlink" title="重命名文档"></a>重命名文档</h2><p>该提示出现在软件内重命名后保存时提示，提示主要是该零件改名后的参考问题。默认只在当前文件生效参考，其他未打开的文件将因改名而丢失参考引用。</p>
+<p>你可能需要在下面**”更新使用参考的位置处”**搜索与改名零部件相关的文件位置</p>
+<img src="0常见问题方法/重命名文档.png">
+
+<h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><h2 id="折弯系数表无效"><a href="#折弯系数表无效" class="headerlink" title="折弯系数表无效"></a>折弯系数表无效</h2><p>折弯系数表无效。是钣金规格表有问题，已知在使用【材料-钣金-规格表】时，在修改镜像的材质（且材质的规格表不一致）时出现。</p>
+<img src="0常见问题方法/折弯系数表无效.png">
+
+<h2 id="F-材质不能编辑"><a href="#F-材质不能编辑" class="headerlink" title="F-材质不能编辑"></a>F-材质不能编辑</h2><p>在此材料更改之前，组件的总质量被覆盖。这种新材料的密度不会影响部件的质量。</p>
+<img src="0常见问题方法//在此材料更改之前，组件的总质量被覆盖。这种新材料的密度不会影响部件的质量.png">
+
+<h2 id="F-xml-声明无效"><a href="#F-xml-声明无效" class="headerlink" title="F-xml 声明无效"></a>F-xml 声明无效</h2><p>材质库文件的元素在高低SW版本问题</p>
+<img src="0常见问题方法/xml声明无效.png">
+
+<h2 id="F-材质库意外元素"><a href="#F-材质库意外元素" class="headerlink" title="F-材质库意外元素"></a>F-材质库意外元素</h2><p>元素 sheetmetalOption 为意外元素。是 2019 新功能材料增加”钣金属性”的问题，此时低版本的文件不会启用 2019 后的材质库文件。</p>
+<p>需要删除高版本的 sheetmetalOption 元素才能使用（不过比较麻烦，所以自己开发了个修改工具）。</p>
+<img src="0常见问题方法/元素sheetmetalOption为意外元素.png">
+
+<h2 id="F-升级螺纹线"><a href="#F-升级螺纹线" class="headerlink" title="F-升级螺纹线"></a>F-升级螺纹线</h2><p>升级螺纹线（包括 2018 之前为旧，2019 之后有升级螺纹线功能）</p>
+<img src="0常见问题方法/升级螺纹线.png">
+
+<h1 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h1><h2 id="配合问题"><a href="#配合问题" class="headerlink" title="配合问题"></a>配合问题</h2><p>此配合的某个实体或参考特征已经被压缩、无效或已不再存在。</p>
+<p><img src="0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/image-20240228120343006.png" alt="image-20240228120343006"></p>
+<h2 id="F-无法定位该零部件"><a href="#F-无法定位该零部件" class="headerlink" title="F-无法定位该零部件"></a>F-无法定位该零部件</h2><img src="0常见问题方法/无法定位该零部件.png">
+
+
+
+<h2 id="打包位置有文件同名"><a href="#打包位置有文件同名" class="headerlink" title="打包位置有文件同名"></a>打包位置有文件同名</h2><img src="0常见问题方法/打包位置有文件同名.png">
+
+
+
+<h2 id="F-生成有冲突的前后关系"><a href="#F-生成有冲突的前后关系" class="headerlink" title="F-生成有冲突的前后关系"></a>F-生成有冲突的前后关系</h2><img src="装配体\生成有冲突的前后关系\1.png" >
+
+<h2 id="外部参考在智能零部件中禁用"><a href="#外部参考在智能零部件中禁用" class="headerlink" title="外部参考在智能零部件中禁用"></a>外部参考在智能零部件中禁用</h2><img src="0常见问题方法/外部参考在智能零部件中禁用.png">
+
+<h2 id="参考将自动断开"><a href="#参考将自动断开" class="headerlink" title="参考将自动断开"></a>参考将自动断开</h2><p>您的选择为已外部参考;由于当前设定，参考将自动断开</p>
+<p>方法：</p>
+<p>似乎是哪里【系统选项】设定问题，可以尝试恢复默认设置看看（有点怀疑【系统选项-外部参考】问题）</p>
+<img src="0常见问题方法/参考将自动断开.png">
+
+<h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><h2 id="服务器出现意外情况"><a href="#服务器出现意外情况" class="headerlink" title="服务器出现意外情况"></a>服务器出现意外情况</h2><img src="0常见问题方法\服务器出现意外情况.png">
+
+<p>方法1：参考</p>
+<p>另存为Excel时，服务器出现意外情况。多数可能于当前office版本于SW等程序的版本兼容问题。</p>
+<p>例如安装高版本office后装低版本，会有影响。建议是尝试修复office（或卸载重装）</p>
+<p>方法2：待确认</p>
+<p>原因：Excel的com加载项启用影响。在【文件-选项-加载项-管理com加载项】-转到-取消可用加载项的勾选。<br>取消或删除下图中不存在的加载项。重复问题操作验证。</p>
+<p><img src="0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%96%B9%E6%B3%95/image-20240313093349928.png" alt="image-20240313093349928"></p>
+<h2 id="F-找不到calloutformat"><a href="#F-找不到calloutformat" class="headerlink" title="F-找不到calloutformat"></a>F-找不到calloutformat</h2><img src="工程图\找不到calloutformat\找不到calloutformat.png">
+
+<h2 id="终点合并设置为更小"><a href="#终点合并设置为更小" class="headerlink" title="终点合并设置为更小"></a>终点合并设置为更小</h2><img src="0常见问题方法\终点合并设置为0.00001或更小.PNG">
+
+<h2 id="F-符号库文件缺失"><a href="#F-符号库文件缺失" class="headerlink" title="F-符号库文件缺失"></a>F-符号库文件缺失</h2><img src="工程图\符号图库文件缺失\符号图库文件缺失.png">
+
+<h2 id="不能替换相同视图"><a href="#不能替换相同视图" class="headerlink" title="不能替换相同视图"></a>不能替换相同视图</h2><p>工程图视图引用相同模型并且不会被替换</p>
+<img src="0常见问题方法/工程图视图引用相同模型并且不会被替换.png">
+
+<h2 id="该工程图可能需要更新"><a href="#该工程图可能需要更新" class="headerlink" title="该工程图可能需要更新"></a>该工程图可能需要更新</h2><p>当你编辑零部件修改后，工程图没有打开同步做保存时会出现。（因为出详图是打开工程图最后一次保存的，装配体有改动就会有如下弹窗提示）</p>
+<img src="0常见问题方法/该工程图可能需要更新.png">
+
+<h2 id="字体缺失"><a href="#字体缺失" class="headerlink" title="字体缺失"></a>字体缺失</h2><p>工程图另存PDF时出现，Arial Unicode M5字体缺失 ，保存失败。</p>
+<p>A：可以尝试用打印方式，选择“Microsoft To PDF的打印机打印。</p>
+<p>A2：安装缺少的字体；</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="出现3D数据解析错误"><a href="#出现3D数据解析错误" class="headerlink" title="出现3D数据解析错误"></a>出现3D数据解析错误</h2><p>3DPDF问题，配置文件损坏使用以下方法之一： 生成新配置文件</p>
+<p>关闭Adobe Acrobat Pro版本并重命名以下文件夹：</p>
+<ul>
+<li><em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>DC</em></em><em>到</em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>DC_OLD</em>**</li>
+<li>如果可见，请将<em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>20XX</em></em><em>更改为</em>C:\Users\UserName\AppData\Local\Adobe\Acrobat*<em>20XX_OLD</em>**</li>
+</ul>
+<p>重新打开三维PDF文件以查看</p>
+<img src="0常见问题方法\出现3D数据解析错误.png">
+
+<h2 id="所选模板中已有实体存在"><a href="#所选模板中已有实体存在" class="headerlink" title="所选模板中已有实体存在"></a>所选模板中已有实体存在</h2><img src="0常见问题方法/所选模板中已有实体存在.png">
+
+<h2 id="无法运行SW2016"><a href="#无法运行SW2016" class="headerlink" title="无法运行SW2016"></a>无法运行SW2016</h2><p>“To perform a new user reset, please run RnDTools\SWNewUserReset.exe.SolidWorks will now exit”。我如何修复此问题？</p>
+<p>要解决此问题，请执行以下步骤：</p>
+<p>1.在计算机上，打开注册表编辑器。<br>a.单击“开始”按钮 &gt; 键入“regedit”&gt; 按下“Enter”。</p>
+<p>2.找到以下注册表项：</p>
+<p>HKEY_LOCAL_MACHINE\Software\SolidWorks\General</p>
+<p>3。右键单击以选择“INITIALIZE_ALL_SETTINGS”&gt; 单击“修改”。</p>
+<p>4.将“Value data”设置为“0”。</p>
+<p>5.单击“确定”，然后退出注册表编辑器。</p>
+<p>6.打开 SOLIDWORKS® 应用程序。</p>
+<h2 id="不相容样条曲线"><a href="#不相容样条曲线" class="headerlink" title="不相容样条曲线"></a>不相容样条曲线</h2><img src="0常见问题方法/不相容样条曲线.png">
+
+<h2 id="不支持的曲线类型"><a href="#不支持的曲线类型" class="headerlink" title="不支持的曲线类型"></a>不支持的曲线类型</h2><img src="0常见问题方法/不支持的曲线类型.png">
+
+<h2 id="OpenClipboard-失败"><a href="#OpenClipboard-失败" class="headerlink" title="OpenClipboard 失败"></a>OpenClipboard 失败</h2><p>装配体插入零部件时提示：OpenClipboard 失败</p>
+<img src="0常见问题方法/OpenClipboard失败.png">
+
+<p>当我将组件插入装配体时，为什么会看到”OpenClipboard Failed”错误?</p>
+<p>此消息通常表示计算机上缺乏资源。请查阅以下资料:</p>
+<p>1. 确保%temp%文件夹中有足够的空闲空间。</p>
+<p>2. 确保%temp%文件夹具有适当的权限。</p>
+<p>3. 请确保系统驱动器有足够的空闲磁盘空间。</p>
+<p>此外，重新启动计算机也可能有助于解决此问题。</p>
+<p>为什么从设计库插入零件时出现”OpenClipboard Failed”错误?</p>
+<p>此错误通常表明存在资源问题。尝试以下方法来解决这个问题:</p>
+<p>1. 收到错误后，重新启动计算机。</p>
+<p>2. 确认有足够的可用硬盘空间。</p>
+<p>3. 删除%temp%位置中的文件。</p>
+<h2 id="F-库无效"><a href="#F-库无效" class="headerlink" title="F-库无效"></a>F-库无效</h2><p>SOLIDWORKS Document Manage 库无效</p>
+<img src="0常见问题方法/SOLIDWORKS Document Manage库无效.png">
+
+<h2 id="找不到-xxx-dll"><a href="#找不到-xxx-dll" class="headerlink" title="找不到 xxx.dll"></a>找不到 xxx.dll</h2><img src="0常见问题方法/找不到xxx.dll.png">
+
+<h1 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h1><h2 id="F-内存不足"><a href="#F-内存不足" class="headerlink" title="F-内存不足"></a>F-内存不足</h2><p>SOLIDWORKS 资源监控器”检测 “内存使用”限制超过 78% 时，将显示一系列警告。</p>
+<img src="0常见问题方法/检查您的系统.png">
+
+<h2 id="内存耗尽"><a href="#内存耗尽" class="headerlink" title="内存耗尽"></a>内存耗尽</h2><img src="0常见问题方法/内存耗尽.png">
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/tag/solidworks-error/">SOLIDWORKS Error Archives (javelin-tech.com)</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

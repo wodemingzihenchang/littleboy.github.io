@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-16 10:44:20</span>
+</div>
+
+<div id="article"><h1 id="PDM调研和配置"><a href="#PDM调研和配置" class="headerlink" title="PDM调研和配置"></a>PDM调研和配置</h1><h1 id="安装测试环境"><a href="#安装测试环境" class="headerlink" title="安装测试环境"></a>安装测试环境</h1><p>安装PDM服务器，许可服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Q&amp;A：</span><br><span class="line">了解硬件及网络环境（服务器、客户机）</span><br><span class="line">了解网络拓扑结构（有无子网、域，提供网络拓扑图）</span><br><span class="line">了解软件如何部署（部门、节点）</span><br></pre></td></tr></table></figure>
+
+<h1 id="调研资料准备"><a href="#调研资料准备" class="headerlink" title="调研资料准备"></a>调研资料准备</h1><p>需求调研及分析，根据调研结果梳理配置需求</p>
+<h2 id="部门组成"><a href="#部门组成" class="headerlink" title="部门组成"></a>部门组成</h2><p>企业的组织结构图（以书面形式提供）</p>
+<p>企业产品数据流程图（以书面形式提供）</p>
+<p>项目涉及部门、人员、职责（以书面形式提供）</p>
+<h2 id="产品特点"><a href="#产品特点" class="headerlink" title="产品特点"></a>产品特点</h2><pre class="mermaid">graph LR
+总装01-->
+部件02-->新制件03
+部件02-->企标件04
+部件02-->标准件05</pre>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Q&amp;A：</span><br><span class="line">Q1、产品，零部件是如何分类的原则？</span><br><span class="line">Q2、一个产品中标准件，通用件，外构件，自制件各占的比例是多少(大致比例即可)？</span><br><span class="line">Q3、企业的产品设计软件有哪些？分别用来设计何种零件？</span><br><span class="line">Q4、产品设计人员常用的零件属性参数有哪些？</span><br><span class="line">Q5、企业以往是怎么样管理系列化的产品数据的？</span><br></pre></td></tr></table></figure>
+
+<h2 id="设计清单"><a href="#设计清单" class="headerlink" title="设计清单"></a>设计清单</h2><pre class="mermaid">graph LR
+新制BOM-->生产部门</pre>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Q&amp;A：</span><br><span class="line">Q1设计部门一般会输出哪些报表，会包含什么信息（需提供清单模板或样例）？</span><br><span class="line">Q2清单的数据信息是否从图纸生成，或者有手动书写部分？</span><br><span class="line">Q3设计报表是以怎样的形式发放给其他部门（电子还是纸介质）？</span><br><span class="line">Q4其他部门怎样利用报表数据？是否需要重新填写？</span><br></pre></td></tr></table></figure>
+
+<pre class="mermaid">graph LR
+变更BOM-->生产部门</pre>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Q&amp;A：</span><br><span class="line">Q1设计部门一般如何生成变更报表（ECN）？</span><br><span class="line">Q2变更流程？</span><br><span class="line">Q3对原先新制的BOM清单的处理？</span><br><span class="line"></span><br><span class="line">对于需要变更的工程，给出变更通知单的格式（提供纸质样例或电子版）</span><br><span class="line">Q1企业怎样对产品的更改进行管理？更改通知单有几种形式？</span><br><span class="line">Q2 变更申请单和变更通知单中需要包含哪些信息？</span><br><span class="line">Q3更改图纸的发放方式（由谁发放、发放对象、采取何种途径）</span><br></pre></td></tr></table></figure>
+
+<h1 id="实施方案"><a href="#实施方案" class="headerlink" title="实施方案"></a>实施方案</h1><p>制定实施方案——》</p>
+<p>实施方案确定——》</p>
+<p>系统配置实施。其中快速实施的方案内容就包括：</p>
+<h2 id="文件夹结构"><a href="#文件夹结构" class="headerlink" title="文件夹结构"></a>文件夹结构</h2><p>【模板】文件夹架构，制定PDM文件库的主要架构分为：</p>
+<p>【模板项目卡】创建文件时的属性填写卡片</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">PDM</span><br><span class="line">|——物料库</span><br><span class="line">	|——外购标准件</span><br><span class="line">	|——企业标准件</span><br><span class="line">|——知识库</span><br><span class="line">	|——SOLIDWORKS模板</span><br><span class="line">	|——产品手册</span><br><span class="line">|——项目库</span><br><span class="line">	|——年份</span><br><span class="line">		|——项目号</span><br><span class="line">			|——01售前资料</span><br><span class="line">			|——02结构件</span><br><span class="line">			|——03电气件</span><br><span class="line">			|——04物料清单</span><br><span class="line">			|——05售后资料</span><br><span class="line">|——......</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件属性卡"><a href="#文件属性卡" class="headerlink" title="文件属性卡"></a>文件属性卡</h2><p>【变量】和【数据卡】</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">文件自定义属性：</span><br><span class="line">|——物料</span><br><span class="line">|——名称</span><br><span class="line">|——材料</span><br><span class="line">|——重量</span><br><span class="line">|——版本</span><br><span class="line">|——备注</span><br><span class="line"></span><br><span class="line">审批属性：//审批信息在流程【变换】里可以设置“操作-设定变量”，来实现审批信息的写入</span><br><span class="line">|——创建人</span><br><span class="line">|——创建日期</span><br><span class="line">|——设计人</span><br><span class="line">|——设计日期</span><br><span class="line">|——审批人</span><br><span class="line">|——审批日期</span><br><span class="line"></span><br><span class="line">文件状态：//这里有个区别，就是零件是通用的，项目信息可能用在总装会好些（或装配体部件）</span><br><span class="line">|——客户名</span><br><span class="line">|——项目号</span><br><span class="line">|——项目名</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="文件数据卡"><a href="#文件数据卡" class="headerlink" title="文件数据卡"></a>文件数据卡</h2><p>文档属性主要体现在PDM系统里的各种不同的卡片中，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">数据卡类型：//收集和显示文件属性的数据卡片</span><br><span class="line">|——模板卡</span><br><span class="line">	|——新建模板</span><br><span class="line">	|——新建清单</span><br><span class="line">|——搜索卡</span><br><span class="line">	|——......</span><br><span class="line">|——条目卡</span><br><span class="line">	|——......</span><br><span class="line">|——文件夹卡</span><br><span class="line">	|——项目文件夹</span><br><span class="line">|——文件卡</span><br><span class="line">	|——SW文件卡</span><br></pre></td></tr></table></figure>
+
+<p>文件和PDM库的属性映射对照：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>变量</th>
+<th>属性</th>
+<th>映射</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.sldprt</td>
+<td></td>
+<td>名称、材质、重量、数量</td>
+<td>从SW搭配PDM</td>
+</tr>
+<tr>
+<td>.sldasm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>.slddrw</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="材料明细表"><a href="#材料明细表" class="headerlink" title="材料明细表"></a>材料明细表</h2><p>材料明细表里的列属性，需要在【数据卡】里有设置才会在BOM表里显示内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">BOM列属性：//材料明细表里的列属性</span><br><span class="line">|——图号</span><br><span class="line">|——名称</span><br><span class="line">|——材料</span><br><span class="line">|——重量</span><br><span class="line">|——数量</span><br><span class="line">|——备注</span><br></pre></td></tr></table></figure>
+
+<h2 id="签审流程"><a href="#签审流程" class="headerlink" title="签审流程"></a>签审流程</h2><p>【流程】制定文件在PDM库里的状态流程，简单的设计审批流如下图：</p>
+<ul>
+<li>设计流程：</li>
+</ul>
+<pre class="mermaid">graph LR
+1(设计)-->2{校对Y/N}--yes-->3((发布))--升版-->1(设计)
+2{校对Y/N}--no-->1(设计)</pre>
+
+
+<ul>
+<li>临时变更流程：</li>
+</ul>
+<pre class="mermaid">graph LR
+1(xx)-->2((xx))</pre>
+
+
+
+<h2 id="文件类别"><a href="#文件类别" class="headerlink" title="文件类别"></a>文件类别</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">类别：</span><br><span class="line">|——-//默认</span><br><span class="line">|——设计资料</span><br><span class="line">|——......</span><br></pre></td></tr></table></figure>
+
+<p>Ø <strong>各类图文档的编码规则</strong>， <strong>文件版本命名及规则</strong></p>
+<p>企业对图纸的版本怎样进行控制管理？版本号怎样进行标识？</p>
+<p>Ø <strong>在图纸中是否存在一张图纸描述多个零部件的情况？</strong></p>
+<h1 id="系统试运行"><a href="#系统试运行" class="headerlink" title="系统试运行"></a>系统试运行</h1><p>编写用户手册，管理员手册</p>
+<p>演示系统操作使用，系统培训用户&#x2F;管理员培训</p>
+<p>PDM系统试运行</p>
+<h1 id="项目验收"><a href="#项目验收" class="headerlink" title="项目验收"></a>项目验收</h1><p>PDM快速实施内容确认</p>
+<p>双方确认功能验收，</p>
+<p>系统上线验收</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

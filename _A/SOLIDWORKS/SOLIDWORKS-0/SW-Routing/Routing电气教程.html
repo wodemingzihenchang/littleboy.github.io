@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-19 12:17:02</span>
+</div>
+
+<div id="article"><h1 id="1Routing入门指南"><a href="#1Routing入门指南" class="headerlink" title="1Routing入门指南"></a>1Routing入门指南</h1><p>Routing 应用程序是 SOLIDWORKS Premium 软件的一个插件。 您可以使用 Routing  生成特殊类型的子装配体，以在零部件之间创建管道、管筒、电力电缆或管线的路径。</p>
+<p>前期知识点：3D 草图、装配体（从上至下的设计和配合）、设计库、配置（设计表）</p>
+<h2 id="线路部件组成："><a href="#线路部件组成：" class="headerlink" title="线路部件组成："></a>线路部件组成：</h2><ul>
+<li><p><strong>零部件</strong>：即配件和接头，包括法兰、T 形接头、电气接头和线夹。大多数配件和接头必须有至少一个连接点 (CPoint)，指明步路段的起始位置或终止位置。</p>
+</li>
+<li><p><strong>线路零件</strong>：包括管道、管筒、电线、电缆和管线。 </p>
+</li>
+<li><p><strong>线路特征</strong>：包含线路路径中心线的 3D 草图。</p>
+</li>
+</ul>
+<h2 id="线路类型："><a href="#线路类型：" class="headerlink" title="线路类型："></a>线路类型：</h2><ul>
+<li><p>管道设计 </p>
+</li>
+<li><p>软管设计 </p>
+<p>​	个管道和管筒零件可以具有不同尺寸和属性的配置。 例如，具有某直径的管道可以具有不同长度和厚度的多个配置。 连接点 (CPoint) 可能会指定具有此直径的管道，但是 Routing 应用程序允许您选择其它配置。</p>
+</li>
+<li><p>电气（电线和电缆）、电缆槽、管道和主干 </p>
+<p>​	线路、标准电缆和带状电缆。这些零件可以具有许多参数，包括外部直径、芯线尺寸、颜色和最小折弯半径。</p>
+</li>
+<li><p>电气导管 </p>
+</li>
+<li><p>带状电缆和柔性电缆 </p>
+</li>
+<li><p>用户定义 - 矩形和圆形横断面</p>
+</li>
+</ul>
+<h2 id="设计库"><a href="#设计库" class="headerlink" title="设计库"></a>设计库</h2><p>线路零件的默认存放位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2018\design library\routing</span><br></pre></td></tr></table></figure>
+
+<p>如果ProgramData文件夹找不到，可能是默认被隐藏了。可以在【文件夹选项-查看-显示隐藏文件、文件夹】显示</p>
+<h2 id="库管理器"><a href="#库管理器" class="headerlink" title="库管理器"></a>库管理器</h2><p>文件位置和设定：Routing默认的库文件路径的设定。</p>
+<ul>
+<li>【覆盖层】选择用于包住管道保护保温等作用，在选择的线条外围添加一层覆盖层实体</li>
+</ul>
+<p>参考文件夹路径：用于统一管理库文件的外部文件路径参考链接，保证Routing零部件都优先使用【系统选项-文件位置-参考文件夹】内零部件。</p>
+<h2 id="步路设置"><a href="#步路设置" class="headerlink" title="步路设置"></a>步路设置</h2><p>【系统选项-步路】设置。这些设置用于设置所有常规，管道，管道和电气的行为</p>
+<p>按课程需要我们做如下设置操作：</p>
+<ul>
+<li>勾选在接头&#x2F;连接器落差处自动步路；</li>
+<li>勾选始终为线路使用默认文档模板；</li>
+<li>取消外部保存线路装配体；</li>
+<li>勾选中心线尺寸；</li>
+</ul>
+<p>为了方便选择布线对象，可以设置下面选项：</p>
+<ul>
+<li>【颜色】：勾选当在装配体中编辑零件时使用指定的颜色</li>
+<li>【显示&#x2F;选择】：关联中编辑的装配体透明度：不透明装配体</li>
+<li>【装配体】：当激活大型装配体时，取消隐藏所有基准面、基准轴、曲线、注解等</li>
+</ul>
+<h2 id="功能原理"><a href="#功能原理" class="headerlink" title="功能原理"></a>功能原理</h2><p>通过对Routing零部件进行定义“连接点(CPoint)”。表示路由段(管道、管筒或电线)开始或结束。然后通过使用【自动布路】3D草图来定义路径的中心线来创建路线。</p>
+<p>管道、管筒必须有一个路由点(RPoint)，您可以使用它来定位在路由草图中位于交叉点或端点的组件。</p>
+<h1 id="2基本电力线路"><a href="#2基本电力线路" class="headerlink" title="2基本电力线路"></a>2基本电力线路</h1><h2 id="通过拖-放开始"><a href="#通过拖-放开始" class="headerlink" title="通过拖&#x2F;放开始"></a>通过拖&#x2F;放开始</h2><p>启用设计库，开始拖放电气零件来布线；一般操作：</p>
+<ul>
+<li>拖放电气零部件到装配体做配合，线路属性自动弹窗（默认不用设置，直接确定）</li>
+</ul>
+<p>&lt;img src&#x3D;”Routing电气教程\2插入电气部件.png””&gt;</p>
+<ul>
+<li>出现自动步路，选择端头Cpoint连接点进行连接，自动生成线路草图（现在只是路径没有电线属性）。</li>
+</ul>
+<img src="Routing电气教程\2插入电气部件2.png">
+
+<h2 id="电气特性"><a href="#电气特性" class="headerlink" title="电气特性"></a>电气特性</h2><ul>
+<li>【右键路径-电气特性】查看线路属性，此时电气特性是空白的，只是单纯的布线（不带电气属性）</li>
+<li>【编辑电线】添加电线命令，设置线路属性。电线的数据是来自RLM库里“电缆电线库”</li>
+</ul>
+<img src="Routing电气教程\2编辑电线.png">
+
+<p>【编辑电线】选择电线分配路径部件（设置后会影响线路的直径，从到清单也有电线信息）。</p>
+<img src="Routing电气教程\2选择路径.png">
+
+<ul>
+<li>【编辑电线】从-到参数设置，例如：风扇3线分别在管道1,2,3。</li>
+</ul>
+<img src="Routing电气教程\2分配电缆管脚.png">
+
+<ul>
+<li>【右键-电气特性】查看完成后的线路电气信息（左：添加电线前，右：添加电线后）。</li>
+</ul>
+<img src="Routing电气教程\2电气特性.png">
+
+<p>电气特性属性和RLM的“电缆电线库”的对应关系</p>
+<img src="Routing电气教程\2电气特性属性.png">
+
+<p>其他补充：</p>
+<p>1、调整样条曲线可以修改线路，因为线路本质是3D草图里的样条曲线驱动的扫描件。</p>
+<p>2、线路部件是以虚拟件保存在装配体中的，和前面设置的“保存外部零件有关”。虚拟件保存外部还会有保存线路部件和部件加零件的两种方式。</p>
+<h1 id="3线路线夹"><a href="#3线路线夹" class="headerlink" title="3线路线夹"></a>3线路线夹</h1><h2 id="线夹使用"><a href="#线夹使用" class="headerlink" title="线夹使用"></a>线夹使用</h2><p>在【自动步路】当前选择里，除了选择接头零件外，可以通过额外选择线夹来约束布线的走向。（完成布线后，还需【编辑电线】分配“blue，red，white”三线。）</p>
+<img src="Routing电气教程\3线夹.png">
+
+<h2 id="新增线夹"><a href="#新增线夹" class="headerlink" title="新增线夹"></a>新增线夹</h2><p>设置：【系统选项-步路】勾选在线夹落差处自动步路。在编辑线路时新增线夹会自动生成步路。拖放线夹时，按住鼠标左键到配合处，通过Shift+方向键可以改变线夹方向。</p>
+<img src="Routing电气教程\3新增线夹.png">
+
+<h2 id="修改线夹"><a href="#修改线夹" class="headerlink" title="修改线夹"></a>修改线夹</h2><p>对于需要后续修改的线路部件，我们可以通过菜单栏【电气-编辑线路】进人编辑状态或是选择步路零件【右键-编辑线路】</p>
+<p>添加线夹，非草图编辑状态下可添加线夹到线路</p>
+<p>旋转线夹，非草图编辑状态下可拖放和旋转线夹。【电气-旋转线夹】来修改步路过线夹后的角度。</p>
+<p>增加线夹约束，你需要继续进入【自动步路】“重新步路样条曲线”来约束步路过线夹的连接点。</p>
+<img src="Routing电气教程\3新增线夹2.png">
+
+<p>补充知识：</p>
+<p>1、【编辑电线】修改步路线路直径后，线夹可以根据直径配置自动切换到对应配置大小；</p>
+<h2 id="线夹脱钩"><a href="#线夹脱钩" class="headerlink" title="线夹脱钩"></a>线夹脱钩</h2><p>删除线夹时，我们需要判断步路连接点是否与当前需要删除的线夹有关系。</p>
+<p>黑色线夹的连接线，在删除时会影响布线路径的完整性，我们需要用【电气-从线夹脱钩】断开线夹连接关系</p>
+<img src="Routing电气教程\3删除线夹.png">
+
+<h2 id="分割布线"><a href="#分割布线" class="headerlink" title="分割布线"></a>分割布线</h2><p>【电气-分割线路】在已有的线路草图上点击生成分割点（jp4）。</p>
+<img src="Routing电气教程\3分割线路.png">
+
+<p>【电气-添加中接管】可以选择上面分割线路的点作为中接位置。（默认的中接管有多个配置，教程选择的是6mm的配置）</p>
+<p>中接管有定义好的连接点，可以参与【自动布线】的使用。</p>
+<img src="Routing电气教程\3添加中接管.png">
+
+<h1 id="4电力线路零部件"><a href="#4电力线路零部件" class="headerlink" title="4电力线路零部件"></a>4电力线路零部件</h1><p>用于自定义routing布路用的电气零部件。</p>
+<h2 id="接头自定义"><a href="#接头自定义" class="headerlink" title="接头自定义"></a>接头自定义</h2><p>【开始菜单-SOLIDWORKS 工具-Routing库管理器】零部件向导可以创建Routing零部件。接头定义包括如下：</p>
+<p>1、选择类型：电气-接头</p>
+<p>2、功能点：添加1个或多个的连接功能点，会自动切换到SW界面并开启连接点的设置属性，</p>
+<img src="Routing电气教程\4接头功能点.png">
+
+<p>3、配合参考：参考之前的装配体课程做法即可。</p>
+<img src="Routing电气教程\4接头配合参考.png">
+
+<p>4、有效性检查：检查是否有遗漏项，如有将限制Routing零部件的创建。</p>
+<p>5、设计表检查：针对系列零件可以考虑用这个设计表，做系列配置是规定（例如前面的“线夹”我们就有多种配置可选）</p>
+<p>6、零部件属性：按需填写属性到零部件文件属性里，这里可以按照如下内容填入：</p>
+<ul>
+<li>PartNo：FC20</li>
+<li>Description：母接头20AWG</li>
+<li>Comment：快速端了连接</li>
+<li>Material：镀锡铜</li>
+<li>Manufacturer：SOLIDWORKS</li>
+</ul>
+<p>7、保存零部件：保存建议默认保存到</p>
+<h2 id="线夹自定义"><a href="#线夹自定义" class="headerlink" title="线夹自定义"></a>线夹自定义</h2><p>1、选择类型：电气-线夹</p>
+<p>2、功能点：线夹的功能点是可选项，可以跳过设置</p>
+<p>3、步路几何体：线夹轴和旋转轴</p>
+<img src="Routing电气教程\4步路几何体.png">
+
+<p>4、配合参考：参考之前的装配体课程做法即可。</p>
+<img src="Routing电气教程\4线夹配合参考.png">
+
+<p>5、有效性检查：检查是否有遗漏项，如有将限制Routing零部件的创建。</p>
+<p>6、设计表检查：“线夹”配置有设计表时，可以在RLM【打开设计表】。注意：filersketch草图（过滤器草图）是一个特殊的约束草图，名称据说是固定的。包括草图尺寸的名称也需要按照下图显示来命名。</p>
+<img src="Routing电气教程\4线夹设计表草图.png">
+
+<p>7、零部件属性：按需填写属性到零部件文件属性里，这里可以按照如下内容填入：</p>
+<p>8、保存零部件：保存建议默认保存到</p>
+<h2 id="接头使用示例"><a href="#接头使用示例" class="headerlink" title="接头使用示例"></a>接头使用示例</h2><p>选择线路连接点→自动步路→编辑电线</p>
+<img src="Routing电气教程\4接头使用示例.png">
+
+
+
+<h2 id="线夹使用示例"><a href="#线夹使用示例" class="headerlink" title="线夹使用示例"></a>线夹使用示例</h2><p>选择线路连接点→自动步路→编辑电线</p>
+<p>线夹配置大小自动切换：白色单线，线夹配置为3.2mm；蓝红白3线，配置自动切换到4.8,mm。</p>
+<img src="Routing电气教程\4线夹使用示例.png">
+
+
+
+<h1 id="5标准线缆和重用线路"><a href="#5标准线缆和重用线路" class="headerlink" title="5标准线缆和重用线路"></a>5标准线缆和重用线路</h1><p>生成标准电缆和管筒库，其信息存储在 Excel 电子表格中。用以快速生成常用标准电缆；</p>
+<h2 id="自定义电缆库"><a href="#自定义电缆库" class="headerlink" title="自定义电缆库"></a>自定义电缆库</h2><p>【RLM-文件位置和设定-标准电缆.xlx】定义了如下几个要素：有利于你快速的重用电缆。</p>
+<img src="Routing电气教程\5标准电缆模板位置.png">
+
+<p>标准电缆.xlx文件里包括如下需定义的电缆内容：</p>
+<ul>
+<li><p>电缆名（Part number）+线路类型（Route Type）+说明（Description）：</p>
+</li>
+<li><p>从（From Ref）：零部件（From Part File）+零部件配置（Config）</p>
+</li>
+<li><p>到（To Ref）：零部件（To Part File）+零部件配置（Config）</p>
+</li>
+<li><p>线长（Length）+线径（Diameter)+最小折弯半径（)</p>
+</li>
+</ul>
+<img src="Routing电气教程\5标准电缆要素.png">
+
+<p>注意：使用自定义步路库，会影响其他人打开你图纸的正确性。你需要确保大家在使用同一个标准文件位置的文件。</p>
+<img src="Routing电气教程\5自定义步路库，会影响其他人打开你图纸的正确性.png">
+
+<h2 id="使用标准电缆"><a href="#使用标准电缆" class="headerlink" title="使用标准电缆"></a>使用标准电缆</h2><p>1、【电气-标准电缆】选择电缆库里的可用电缆和参数后确定（例如图中选择的：GND14-16电缆）</p>
+<img src="Routing电气教程\5使用标准电缆.png">
+
+<p>2、【插入零部件】会依次提示并手动选择插入的接头位置（如图接头Con1和接头Con2）</p>
+<p>3、【自动步路】标准电缆这里的自动步路是自动生成，我们直接确认跳过即可。</p>
+<img src="Routing电气教程\5电缆库使用.png">
+
+<p>补充：</p>
+<p>1、线长已预先定义好标准长度；</p>
+<p>2、编辑线长，检查线长的尺寸是否变化</p>
+<h2 id="插入标准电缆"><a href="#插入标准电缆" class="headerlink" title="插入标准电缆"></a>插入标准电缆</h2><p>当接头零件有变化，但是整体的电线不变时。可以在【电气-标准电缆】“从接头”和“到接头”修改零件文件</p>
+<img src="Routing电气教程\5插入标准电缆.png">
+
+<p>如果线缆变化，也可以修改标准电线【编辑电线-替换电线】</p>
+<img src="Routing电气教程\5插入替换电线.png">
+
+
+
+<h2 id="创建标准电缆"><a href="#创建标准电缆" class="headerlink" title="创建标准电缆"></a>创建标准电缆</h2><img src="Routing电气教程\5添加新电缆.png">
+
+<p>在添加新电缆操作界面里，填入的内容其实与excel表里面的是一样的格式。（如下图：）</p>
+<img src="Routing电气教程\5添加新电缆2.png">
+
+<p>创建完成后，在可用电缆处会新增一列数据，并且在Excel中也会新增数据（下图可用电缆：150mm铲性电缆）。</p>
+<img src="Routing电气教程\5插入电缆.png">
+
+
+
+<h2 id="重用线路"><a href="#重用线路" class="headerlink" title="重用线路"></a>重用线路</h2><p>重用线路可以使用现有线路创建多个相同或不同长度的线路，重用线路的设计树图标有区别与普通线路图标</p>
+<img src="Routing电气教程\5重用线路.png">
+
+
+
+<img src="Routing电气教程\5重用线路部件插入.png">
+
+<p>重用线路分离：重用的线路，需要修改长度参数。可以在重用时，取消“保持步路长度”选项。让软件自动取长修复线路长度。</p>
+<p>如果已经“保持步路长度”，需在线路草图编辑模式下，【右键草图-取消固定长度】的选项。</p>
+<img src="Routing电气教程\5重用线路并分离.png">
+
+<p>重用不同长度的线路时，可能会出现重建错误情况。或是需要分离重用标志，则可以在总装模式下，在设计树线路部件【右键-分离线路】</p>
+<h1 id="6电气数据输入"><a href="#6电气数据输入" class="headerlink" title="6电气数据输入"></a>6电气数据输入</h1><p>在前面定义的标准电缆是不带“电气特性”的。因此本章需要了解电气电缆库向导的设置使用。</p>
+<p>用Excel管理规划放置接头的零件，Excel有清单文件、零部件、电缆电线文件；“从-到”清单是使用 SOLIDWORKS Routing 的最高效方法。 </p>
+<p>通过“从-到”清单获取数据既省去了手动输入电线数据的需求，又简化了设计生成过程，还减少了错误。</p>
+<h2 id="零部件库"><a href="#零部件库" class="headerlink" title="零部件库"></a>零部件库</h2><p>生成新的库方式，创建接头库（Connectors Library）。零部件库从-到”清单包含：</p>
+<p>SOLIDWORKS 文档从设计库里找“socket-6pinmindin.sldprt”，“db9 male.sldprt  ”</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>名称</th>
+<th>SOLIDWORKS 文档</th>
+<th>配置</th>
+<th>说明</th>
+<th>Pins List</th>
+<th>接线头</th>
+<th>零部件外径</th>
+<th>大小（规格）</th>
+<th>Pins_Plugs</th>
+<th>Pins_Seals</th>
+<th>Pins_Miscell</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>插座</td>
+<td>socket-6pinmindin.sldprt</td>
+<td>默认</td>
+<td>接头</td>
+<td>1,2,3,4,5,6</td>
+<td>复位</td>
+<td>Unset</td>
+<td>0</td>
+<td>复位</td>
+<td>复位</td>
+<td>复位</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DB9</td>
+<td>db9 male.sldprt</td>
+<td>默认</td>
+<td>接头</td>
+<td>1,2,3,4,5,6,7,8,9</td>
+<td>复位</td>
+<td>Unset</td>
+<td>0</td>
+<td>复位</td>
+<td>复位</td>
+<td>复位</td>
+</tr>
+</tbody></table>
+<img src="Routing电气教程\6零部件库.png">
+
+<h2 id="电缆电线库"><a href="#电缆电线库" class="headerlink" title="电缆电线库"></a>电缆电线库</h2><p>以Excel格式输入库方式，创建电缆电线库</p>
+<img src="Routing电气教程\6电线电缆库.png">
+
+<p>课程内的Wires.xlsx电缆库内的电线颜色都是黑色，这是不合理的。我们需要按需修改下颜色。通过双击颜色进入调色板进行选择编辑。</p>
+<img src="Routing电气教程\6电线电缆库2.png">
+
+
+
+<p>完成编辑后，RLM会提示我们是否替换原.xlsx文件，我们选择“否”。另存为“练习用.xml”文件</p>
+<h2 id="手动设置库"><a href="#手动设置库" class="headerlink" title="手动设置库"></a>手动设置库</h2><p>如作为模板库，你可以将前面自定义的“电缆电线库”和“零部件库”添加到【RLM-文件设定位置】</p>
+<p>在solid works软件使用【工具-布路-电气-“从-到”清单】，会出现如下弹出。</p>
+<img src="Routing电气教程\6从到清单1.png">
+
+<p>在【RLM-文件位置和设定】设置电气电缆<strong>零部件库</strong>和<strong>电线电缆库</strong>。或是在此处的“从-到”清单里进行设置。</p>
+<img src="Routing电气教程\6从到清单2.png">
+
+<p>在从到清单界面设置如下内容，保存完成操作。</p>
+<img src="Routing电气教程\6从到清单3.png">
+
+
+
+<p>放置清单内设置的J1，J2，J3的参考部件。【自动步路-引导线】，选择布线草图，将引导线转换到线路。</p>
+<p>从到清单生成的电线，其【线路右键-电气特性】查看是具有电气属性的电线信息的。</p>
+<img src="Routing电气教程/6放置参考零部件.png">
+
+<p>重新布路，步路引导线。【自动布路-重新布路】重新调整走线，经过线夹，如图。</p>
+<img src="Routing电气教程\6重新布线.png">
+
+<h2 id="Excel重用库"><a href="#Excel重用库" class="headerlink" title="Excel重用库"></a>Excel重用库</h2><img src="Routing电气教程\6Excel重用库.png">
+
+
+
+<img src="Routing电气教程\6Excel重用库2.png">
+
+
+
+<h1 id="7电气原理图"><a href="#7电气原理图" class="headerlink" title="7电气原理图"></a>7电气原理图</h1><h2 id="线路平展"><a href="#线路平展" class="headerlink" title="线路平展"></a>线路平展</h2><p>电气平展图一般会包括如下几种工程图明细：注意虚拟件是不能被展平的。</p>
+<ul>
+<li>电力材料表：</li>
+<li>切割清单</li>
+<li>接头表格：<a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/solidworks/sldpiping/t_connector_table_templates.htm">生成自定义接头表格模板 - 2021 - SOLIDWORKS 帮助</a></li>
+<li>自动零件序号</li>
+<li>其他材料材料表信息</li>
+</ul>
+<p>!<img src="Routing电气教程\7电气平展图.png"></p>
+<h2 id="注解平展"><a href="#注解平展" class="headerlink" title="注解平展"></a>注解平展</h2><p>制作类型-》选择平展属性-》（编辑平展样式）-》选择输出到工程图的属性</p>
+<img src="Routing电气教程/7注解平展.png">
+
+<p>展平平铺的样式如果不合理想，可以打开展开的线路部件，【右键-编辑展开的线路】编辑，操作和草图类似</p>
+<img src="Routing电气教程/7注解平展编辑.png">
+
+<h2 id="制造平展"><a href="#制造平展" class="headerlink" title="制造平展"></a>制造平展</h2><p>空间3D草图的展开，这有区别与“注解”展开的方式。将展开线路调整进到模壳板范围内？</p>
+<img src="Routing电气教程/7制造平展.png">
+
+<p>注解平展的线路长度是不按按真实比例（图面好看），制造平展的线路长度比是按真实比例（图面真实）。</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/solidworks/sldpiping/HIDD_DVE_ROUTING_BOM_TABLE.htm">Routing 电气表 PropertyManager - 2021 - SOLIDWORKS 帮助</a></p>
+<ul>
+<li><strong>电气材料明细表</strong>。 列出了零部件，包括装配体所包含的接头和电线。</li>
+<li><strong>切割清单</strong>。 列出了装配体中电线的切割长度和其它属性。</li>
+<li><strong>接头表</strong>。 列出了所选接头的针脚和相关电线。接头表格：<a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/solidworks/sldpiping/t_connector_table_templates.htm">生成自定义接头表格模板</a></li>
+</ul>
+<img src="Routing电气教程/7表格.png">
+
+<p>接头表的行数会根据RLM零部件库文件里的设置决定</p>
+<img src="Routing电气教程/7接头表阵脚设置.png">
+
+<p>如果是3pin的阵脚，则接头表的行会表成3行：</p>
+<img src="Routing电气教程/7接头表.png">
+
+
+
+<h1 id="8柔性电缆"><a href="#8柔性电缆" class="headerlink" title="8柔性电缆"></a>8柔性电缆</h1><h2 id="柔性电缆概述"><a href="#柔性电缆概述" class="headerlink" title="柔性电缆概述"></a>柔性电缆概述</h2><p>【柔性电缆】是排线，同电线类似，只是在‘自动步路’内的选项不同，且有过度的调整点</p>
+<h2 id="柔性电缆线路"><a href="#柔性电缆线路" class="headerlink" title="柔性电缆线路"></a>柔性电缆线路</h2><p>打开装配体</p>
+<p>插入步路库flex connector零部件→【自动步路】（这里和之前的自动步路界面有所不同了）→柔性电缆的布线草图有白色的控制点，可以类似样条曲线的调整方式修改。</p>
+<p>柔性电缆的线路也是可以通过【自动步路】的选择，使其经过线夹。</p>
+<h1 id="9电气导管"><a href="#9电气导管" class="headerlink" title="9电气导管"></a>9电气导管</h1><h2 id="电气导管概述"><a href="#电气导管概述" class="headerlink" title="电气导管概述"></a>电气导管概述</h2><p>电线的保护管</p>
+<img src="Routing电气教程\9电气导管.png">
+
+<h2 id="自动电气导管"><a href="#自动电气导管" class="headerlink" title="自动电气导管"></a>自动电气导管</h2><p>插入电气导管接头</p>
+<img src="Routing电气教程\9插入电气导管接头.png">
+
+<img src="Routing电气教程\9电气导管接头.png">
+
+
+
+
+
+<p>电气导管线路属性：“使用软管”决定了是刚性直管还是柔性软管</p>
+<p><strong>自动步路中的正交线路</strong></p>
+<p>电气导管自动步路，刚性直管可以选择自动步路里的正交线路方案。</p>
+<p>&lt;图&gt;</p>
+<p><strong>插入接头零部件</strong></p>
+<p>把导管里的电路【自动步路】接到接头零件上。编辑电线电缆：应用电气属性</p>
+<img src="Routing电气教程\9插入接头零部件.png">
+
+<p><strong>工程图电气数据</strong></p>
+<p>1、步路工程视图【右键-电气表-电气材料明细表】</p>
+<p>2、步路工程视图【右键-电气表-切割清单】</p>
+<p>3、自动零件序号</p>
+<h2 id="手动草图步路"><a href="#手动草图步路" class="headerlink" title="手动草图步路"></a>手动草图步路</h2><p>插入电气导管接头</p>
+<p>电气导管线路属性</p>
+<img src="Routing电气教程\9手动导管线路属性.png">
+
+<p>电气导管自动步路，编辑拖动线路，使用【草图剪裁实体】修剪使线路相连接。</p>
+<img src="Routing电气教程\9手动修改导管草图.png">
+
+<p>手动插入弯头零部件</p>
+<img src="Routing电气教程\9手动添加弯头.png">
+
+<p>手动插入连接器零部件。</p>
+<img src="Routing电气教程\9手动添加连接器.png">
+
+
+
+<h2 id="创建电气软管"><a href="#创建电气软管" class="headerlink" title="创建电气软管"></a>创建电气软管</h2><p>操作一致，区别在于插入Routing部件后【线路属性】选择“使用软管”选项即可。</p>
+<img src="Routing电气教程\9电气导管.png">
+
+<h1 id="工具栏-电气"><a href="#工具栏-电气" class="headerlink" title="工具栏-电气"></a>工具栏-电气</h1><p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/media/solidworks-2023-routing">SOLIDWORKS 2023 - Routing | 新功能</a></p>
+<img src="Routing电气教程\电气工具栏.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

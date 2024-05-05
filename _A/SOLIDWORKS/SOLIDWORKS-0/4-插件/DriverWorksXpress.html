@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:11</span>
+</div>
+
+<div id="article"><h1 id="DriverWorksXpress"><a href="#DriverWorksXpress" class="headerlink" title="DriverWorksXpress"></a>DriverWorksXpress</h1><p>使用 DriveWorksXpress 实现参数化设计，只进行一次设计工作，识别出关键变量和其相互关系并设计表单来收集所需数据。通过指定新模型的特征和变量参数，软件自动生成新模型。</p>
+<span id="more"></span>
+
+<h2 id="启动功能"><a href="#启动功能" class="headerlink" title="启动功能"></a>启动功能</h2><p>首次启动 Xpress 工具需要用到 Xpress 产品代码（如何申请方法可联系你们经销商或是其他方法处理） </p>
+<img src="DriverWorksXpress\driverwork xpress.png">
+
+<img src="DriverWorksXpress\xpress代码.png">
+
+<h3 id="申请方法"><a href="#申请方法" class="headerlink" title="申请方法"></a>申请方法</h3><p>1、进入网站： <a target="_blank" rel="noopener" href="https://my.solidworks.com/xpress%E3%80%82">https://my.solidworks.com/xpress。</a> 并登陆你的账户后（无账号需注册），进入如下界面：<br><img src="DriverWorksXpress\Xpress代码申请1.png"></p>
+<p>2、填入你的序列号及对应版本的 Xpress 产品（注意：不同版本序列号是不同，不能混用），填入后获取我的代码，得到如下信息：<br><img src="DriverWorksXpress\Xpress代码申请2.png"></p>
+<h2 id="生成数据库"><a href="#生成数据库" class="headerlink" title="生成数据库"></a>生成数据库</h2><p>具菜单会出现在任务窗口（软件的右侧位置）。选择【生成&#x2F;更改数据库】开始制作你的参数化模型。新创建命名为 xxx.mdb 的新数据库。数据库会保留模型、尺寸&amp;特征、属性、工程图、表格&amp;布局、规则定制的数据信息。<br><img src="DriverWorksXpress\driverwork xpress2.png"></p>
+<h3 id="捕捉模型信息"><a href="#捕捉模型信息" class="headerlink" title="捕捉模型信息"></a>捕捉模型信息</h3><p>1、捕获的模型：准备预先设计好的模型，模型要求需要完善设计参考的逻辑，以便实现参数化。【浏览新模型】打开附件的“龙门架”模型。（<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1wwS4vkpKgrtUXCFELRVyOQ?pwd=tjx8">附件链接&amp;提取码：tjx8</a>）<br><img src="DriverWorksXpress\driverwork 选择模型信息.png"></p>
+<img src="DriverWorksXpress\driverwork 选择模型信息2.png">
+
+<p>2、捕获的装配体结构：选择需要参与参数化的零部件。<br><img src="DriverWorksXpress\捕获的装配体结构.png"></p>
+<p>3、尺寸和特征：进入装配体或零部件，选择需要参与参数化的尺寸或特征。（小技巧：可以双击特征显示特征尺寸进行捕捉，再双击捕捉对象。<br><img src="DriverWorksXpress\driverwork 选择模型信息4.png"></p>
+<p>4、自定义属性：选择需要参数化的属性对象，达到对属性数值进行赋值的效果。<br><img src="DriverWorksXpress\driverwork 选择模型信息5.png"></p>
+<p>5、工程图和配置：单击浏览到装配体工程图文件，将其添加到数据库内，以便同步生成对应参数的图纸。（当部件存在配置时，如“横梁”（有三个配置）时，在【工程图和配置】中选择【请允许我生成规则以切换配置】来定义基于配置的模型变量。<br><img src="DriverWorksXpress\工程图.png"></p>
+<h3 id="生成表格"><a href="#生成表格" class="headerlink" title="生成表格"></a>生成表格</h3><p>表格选项，会设置参数化的输入面板（小技巧：设计&#x2F;Test 按钮可用切换预览实际效果）。<br><img src="DriverWorksXpress\生成表格4.png"><br>选项类型：文本框，数字文本框，下拉项，增量按钮，复选框；(不同类型的设置方式不同，建议自行尝试)<br><img src="DriverWorksXpress\生成表格1.png"></p>
+<h3 id="创建规则"><a href="#创建规则" class="headerlink" title="创建规则"></a>创建规则</h3><p>规则选项，会显示需要约束规则的类型及数量（这与你前面选择的需要参数化的对象有关）。可以依次勾选右侧编辑复选框，进入【编辑规则】。<br><img src="DriverWorksXpress\创建规则.png"></p>
+<p>规则的目的是通过变量赋值传值的方式实现参数化赋值，常用规则的表达式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">逻辑式if：=IF( 安全工作载荷 =&quot;500kg&quot;  , 200 , 250 )；</span><br><span class="line">数学表达式：=( 打开高度 / 10) +100;</span><br><span class="line">字符输入型：=项目号 &amp; &quot;宽-&quot; &amp; 打开宽度 &amp; 安全工作载荷 &amp; &quot;安全工作载荷&quot;</span><br><span class="line">解压缩表达式：=IF( 打开宽度 &gt;3000  , &quot;解除压缩&quot; , &quot;压缩&quot; )；</span><br></pre></td></tr></table></figure>
+
+<p><img src="DriverWorksXpress\创建规则if.png"><br></p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>【运行】按钮，显示【生成表格】选项中设置的面板样式。填入参数的数据后，按【创建】后会根据填入的参数进行生成新的模型数据。（如图的模型高度已变矮，且加强内边角被压缩）<br><img src="DriverWorksXpress\运行2.png"><br></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

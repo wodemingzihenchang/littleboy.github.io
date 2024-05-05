@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:11</span>
+</div>
+
+<div id="article"><h1 id="CAD映射文件"><a href="#CAD映射文件" class="headerlink" title="CAD映射文件"></a>CAD映射文件</h1><span id="more"></span>
+
+<p>您可在将工程图保存为 .dxf 或 .dwg 文件时映射 SOLIDWORKS 工程图实体和颜色以在目标文件中配置这些实体和颜色</p>
+<p>默认情况下SW定义的图层会自动另存到DWG&#x2F;DXF文件的图纸中并生效。但如果您对SW里的对象（例如几何体、注释等）需要统一做关联映射时，则可有考虑CAD映射文件。</p>
+<h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2><ol>
+<li>从 SOLIDWORKS 工程图单击 <strong>文件</strong> &gt; <strong>另存为</strong> ，然后选择 .dwg 或 .dxf 作文文件类型。</li>
+<li>单击<strong>选项</strong>。</li>
+<li>勾选<strong>激活</strong>，然后清除 <strong>在每次保存时不显示映射关系</strong>。点击确定选项设置，点击保存</li>
+</ol>
+<img src="CAD映射文件/image-20240407094420357.png">
+
+<p>空映射文件路径下保存，会出现 <strong>SOLIDWORKS 到 DXF&#x2F;DWG</strong> 。列表里展示的即是自定义映射的对照</p>
+<p>例如：</p>
+<p>定义图层：是对即将保存成DWG&#x2F;DXF文件的图层定义</p>
+<p>映射实体：1列是“定义图层”里的的内容，4列是SW实体对象</p>
+<img src="CAD映射文件/image-20240407094917063.png">
+
+<p>设置的映射表格，建议可有【保存映射文件】留作模板使用。单击确定保存DWG文件。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="保存映射文件"><a href="#保存映射文件" class="headerlink" title="保存映射文件"></a><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/SolidWorks/slddxf/t_map_entities_on_export_to_dwg.htm">保存映射文件</a></h2></div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

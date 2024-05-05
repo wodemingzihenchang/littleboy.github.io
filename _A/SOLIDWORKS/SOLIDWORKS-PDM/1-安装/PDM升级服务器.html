@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="../../../css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-19 10:22:12</span>
+</div>
+
+<div id="article"><h1 id="PDM-服务器安装"><a href="#PDM-服务器安装" class="headerlink" title="PDM 服务器安装"></a>PDM 服务器安装</h1><!-- SOLIDWORKS产品数据管理 (PDM) 解决方案可帮助您控制设计数据，并且从本质上改进您的团队就产品开发进行管理和协作的方式。使用 SOLIDWORKS PDM Professional，您的团队能够：1. 安全地存储和索引设计数据以实现快速检索；2. 打消关于版本控制和数据丢失的顾虑；3. 与多个地点的组织内外部的人员就设计进行分享和协作；4创建电子化工作流程以便规范、管理和优化开发、文档审批和工程变更流程。-->
+
+<p>摘要：本文详细介绍了SOLIDWORKS PDM &amp; Manage服务端的两种升级方式，以及客户端的升级和插件的更新。</p>
+<span id="more"></span>
+
+<h2 id="1-1升级许可服务器"><a href="#1-1升级许可服务器" class="headerlink" title="1.1升级许可服务器"></a>1.1升级许可服务器</h2><p>1、在安装包中找到“swlicmgr”文件夹，并双击打开。升级许可服务器License Manager Server</p>
+<p>2、右键“setup.exe”，选择以管理员身份运行。</p>
+<p>3、点击下一步。</p>
+<p>4、继续点击下一步。</p>
+<p>5、点击安装并等待。</p>
+<p>6、等待安装完成，点击完成，以退出安装程序。<!--卸载旧PDM--></p>
+<h2 id="1-2升级PDM服务器"><a href="#1-2升级PDM服务器" class="headerlink" title="1.2升级PDM服务器"></a>1.2升级PDM服务器</h2><p>在SWPDMServer安装包中找到“setup.exe”，右键选择以管理员身份运行。 </p>
+<img src="PDM服务器升级/image-20231207102351034.png">
+
+<p> 点击下一步继续。</p>
+<img src="PDM服务器升级/image-20231207102402531.png">
+
+<p>在升级时，你可能会遇到检查到旧版本的提示问题，PDM只能保留一个版本所以高版本会从低版本升级覆盖。（不过似乎没什么影响）</p>
+<img src="PDM服务器升级/image-20231207102408277.png">
+
+<p>勾选“我接受该许可证协议中的条款”，并点击下一步。</p>
+<img src="PDM服务器升级/image-20231207102415052.png">
+
+<p>点击下一步，以继续安装。</p>
+<img src="PDM服务器升级/image-20231207102419620.png">
+
+<p>点击下一步，以继续安装。</p>
+<img src="PDM服务器升级/image-20231207102425751.png">
+
+<p>勾选上想要安装的服务器服务（此处如不勾选PDM客户端，后续须在SWPDMServer中修改安装以添加），并点击下一步。</p>
+<img src="PDM服务器升级/image-20231207102430175.png">
+
+<img src="PDM服务器升级/image-20231207102437247.png">
+
+<img src="PDM服务器升级/image-20231207102441976.png">
+
+<p>输入SQL数据库名称（下图只是做个举例），以及登录名称和密码，并点击下一步。</p>
+<img src="PDM服务器升级/image-20231207102447112.png">
+
+<p>点击安装并等待。</p>
+<img src="PDM服务器升级/image-20231207102451405.png">
+
+<img src="PDM服务器升级/image-20231207102456590.png">
+
+<p>勾选“自动关闭并试图重新启动应用程序”，点击确定。（关闭资源管理器时，电脑可能会黑屏。这是正常现象。）</p>
+<img src="PDM服务器升级/image-20231207102500879.png">
+
+<p>等待安装完成，点击完成，以退出安装程序。</p>
+<img src="PDM服务器升级/image-20231207102504792.png">
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="1-3升级Manage-Server"><a href="#1-3升级Manage-Server" class="headerlink" title="1.3升级Manage Server"></a>1.3升级Manage Server</h2><p>\1.   在安装包中找到“SWManageServer”文件夹，并双击打开。 </p>
+<p>\1.   右键“setup.exe”，选择以管理员身份运行。 </p>
+<p>\1.   点击下一步，以继续安装。 </p>
+<p>\1.   点击下一步，以继续安装。 </p>
+<p>\1.   点击安装并等待。 </p>
+<p>\1.   等待安装完成，点击完成，以退出安装程序。</p>
+<h2 id="通过向导安装"><a href="#通过向导安装" class="headerlink" title="通过向导安装"></a>通过向导安装</h2><p>在安装包中找到“setup.exe”安装程序，并右键以管理员身份运行。点击确定以继续安装。勾选上以下三个服务器组件，并点击下一步。</p>
+<img src="PDM服务器升级/image-20231207102512301.png">
+
+<p>勾选上“不，我想继续安装SOLIDWORKS”，并点击下一步。</p>
+<p>点击更改，以完善信息。</p>
+<p>\1.   在ManageServer的更改中填写好相关信息，并点击返回到摘要。</p>
+<p>\1.   在PDM服务器的更改中，勾选上需安装的组件（此处如不勾选PDM客户端，后续须在SWPDMServer中修改安装以添加），以及数据库名称，并点击返回到摘要。</p>
+<p>\1.   勾选上“我接受SOLIDWORKS条款”，并单击安装。</p>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/551716084">SOLIDWORKS PDM&amp;Manage升级SOP——服务器篇 - 知乎 (zhihu.com)</a></p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="../../../lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="../../../lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="../../../lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="../../../js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
