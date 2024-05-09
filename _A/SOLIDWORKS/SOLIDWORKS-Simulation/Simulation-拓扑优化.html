@@ -46,29 +46,29 @@
 <div id="article"><h1 id="Simulation-拓扑优化"><a href="#Simulation-拓扑优化" class="headerlink" title="Simulation-拓扑优化"></a>Simulation-拓扑优化</h1><span id="more"></span>
 
 <p>拓扑分析(topology optimization)是一种非参数优化，根据给定的负载情况、约束条件和性能指标，重新分配材料寻求新的材料布局满足给定优化目标下的设计迭代，比如在满足一定安全系数的情况下，优化设计，减轻材料重量。</p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323110721389.png" alt="image-20240323110721389"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323110721389.png" alt="image-20240323110721389"></p>
 <p>连续体拓扑优化方法主要有【均匀化方法】、【变密度法】、【渐进结构优化法(ES0)】、【水平集方法MMV】等，目前Solidworks Simulation中采用变密度法进行优化处理。</p>
 <h2 id="分析实例-带孔矩形板"><a href="#分析实例-带孔矩形板" class="headerlink" title="分析实例:带孔矩形板"></a>分析实例:带孔矩形板</h2><p>问题描述:带孔矩形板安装孔位置确定，边界条件如下图所示，为保证强度，要求优化好结构三个孔位置壁厚大于2m，拓扑后的结构保持现在的结构对称关系，变形量小于0.1mm，安全系数大于1.2，通过拓扑优化完成设计。</p>
 <p>材料:合金钢</p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323111343536.png" alt="image-20240323111343536"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323111343536.png" alt="image-20240323111343536"></p>
 <p>分析前确认用【静应力分析】确认有优化的空间。</p>
-<h2 id="优化步骤"><a href="#优化步骤" class="headerlink" title="优化步骤"></a>优化步骤</h2><h3 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h3><p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112203515.png" alt="image-20240323112203515"></p>
+<h2 id="优化步骤"><a href="#优化步骤" class="headerlink" title="优化步骤"></a>优化步骤</h2><h3 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h3><p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112203515.png" alt="image-20240323112203515"></p>
 <h3 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h3><p>约束</p>
 <p>载荷</p>
 <p>材料</p>
 <h3 id="优化设置"><a href="#优化设置" class="headerlink" title="优化设置"></a>优化设置</h3><p>目标</p>
 <p>约束</p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112529867.png" alt="image-20240323112529867"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112529867.png" alt="image-20240323112529867"></p>
 <h3 id="制造条件"><a href="#制造条件" class="headerlink" title="制造条件"></a>制造条件</h3><p>对称</p>
 <p>保留区域</p>
 <p>厚度控制</p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112600371.png" alt="image-20240323112600371"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112600371.png" alt="image-20240323112600371"></p>
 <p>【运行】</p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323113345871.png" alt="image-20240323113345871"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323113345871.png" alt="image-20240323113345871"></p>
 <p>导出光顺网格</p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323113513062.png" alt="image-20240323113513062"></p>
-<p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323113427956.png" alt="image-20240323113427956"></p>
-<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p><img src="Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112901558.png" alt="image-20240323112901558"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323113513062.png" alt="image-20240323113513062"></p>
+<p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323113427956.png" alt="image-20240323113427956"></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p><img src="/Simulation-%E6%8B%93%E6%89%91%E4%BC%98%E5%8C%96/image-20240323112901558.png" alt="image-20240323112901558"></p>
 </div>
  		<!-- 引入正文 -->
     </div>	

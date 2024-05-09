@@ -68,34 +68,34 @@
 <li>从安装介质重新安装归档服务器。请注意使用与使用的完全相同的版本重新安装之前。</li>
 <li>在安装过程中，您很可能会被要求提供默认的存档服务器设置(取决于丢失了多少注册表值)。尽可能多地填写“原始”设置。“根文件夹”指的是包含现有文件库存档的文件夹(依次为包含文件存档文件夹0-F)。</li>
 </ol>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104909329.png" alt="image-20240315104909329"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104909329.png" alt="image-20240315104909329"></p>
 <p>输入与前面使用的相同的Admin用户密码(注意，这将“重置”Admin将此服务器上的密码设置为新值)</p>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104917293.png" alt="image-20240315104917293"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104917293.png" alt="image-20240315104917293"></p>
 <p>确保输入具有访问文件库数据库权限的SQL用户(通常为“sa”用户)</p>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104940050.png" alt="image-20240315104940050"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104940050.png" alt="image-20240315104940050"></p>
 <p>选择与前面使用的相同的默认登录类型</p>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104959530.png" alt="image-20240315104959530"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315104959530.png" alt="image-20240315104959530"></p>
 <p>4、归档服务器现在应该可以再次运行了。但是，文件库信息是最重要的可能还没找到，无法进入保险库。如果以下注册表项不包含文件保险库名称密钥，保险库将无法访问:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults</span><br></pre></td></tr></table></figure>
 
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105108315.png" alt="image-20240315105108315"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105108315.png" alt="image-20240315105108315"></p>
 <h2 id="步骤2恢复注册表值。"><a href="#步骤2恢复注册表值。" class="headerlink" title="步骤2恢复注册表值。"></a>步骤2恢复注册表值。</h2><p>如果您有归档服务器设置的备份(由归档服务器配置创建的backup.dat)，在重新安装此服务器之前，使用该文件进行还原，然后重新启动存档服务器服务。库现在应该又可以运作了。</p>
 <p>如果没有来自此服务器的备份，并且由于备份库已被复制，则可以备份该备份库设置，并按照下面所述的方式使用它。</p>
 <p>请注意，如果这个重新安装的存档服务器有未复制的库(仅存在于此服务器上)，那么您应该按照KB解决方案S-019248中的说明为这些库重新创建注册表项</p>
 <ol>
 <li>在其中一台复制的服务器上，打开归档服务器配置工具并选择Tools, Backup设置。</li>
 </ol>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105211559-17104711503251.png" alt="image-20240315105211559"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105211559-17104711503251.png" alt="image-20240315105211559"></p>
 <p>选择“包括选定的保险库”，然后选择要恢复设置的复制保险库。选择一个备份位置，备份文件的密码，然后按“启动备份”。注意，在修复恢复的服务器后，请确保在服务器上设置原始备份设置。</p>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105312828.png" alt="image-20240315105312828"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315105312828.png" alt="image-20240315105312828"></p>
 <p>将backup.dat文件复制到重新安装的归档服务器。在重新安装的归档服务器上，打开归档服务器配置工具，选择“Tools, Backup”设置。按“加载备份”，选择拷贝的backup.dat文件。</p>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121057818.png" alt="image-20240315121057818"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121057818.png" alt="image-20240315121057818"></p>
 <p>复制保管库的注册表设置现在应该已经恢复。</p>
-<p><img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121103723.png" alt="image-20240315121103723"></p>
+<p><img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121103723.png" alt="image-20240315121103723"></p>
 <p>由于在其上创建设置备份的服务器可能具有不同的存档位置您必须验证以下密钥下的归档文件夹的路径是否有效重新安装的服务器:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks </span><br><span class="line">Enterprise\ArchiveServer\Vaults\[Vaultname]\ArchiveTable</span><br></pre></td></tr></table></figure>
 
-<p>  <img src="%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121150591.png" alt="image-20240315121150591"></p>
+<p>  <img src="/%E5%AD%98%E6%A1%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E5%AE%9A%E6%81%A2%E5%A4%8D/image-20240315121150591.png" alt="image-20240315121150591"></p>
 <p>重新启动每个复制服务器上的存档服务器服务。复制的保险库现在应该是再次运行。如果保险库仍然无法访问，则提供故障排除提示:</p>
 <ul>
 <li>查看存档服务器日志，查找与保险库和通信有关的错误。</li>

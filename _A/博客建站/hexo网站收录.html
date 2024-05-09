@@ -59,7 +59,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 1               # 提交最新的多少个链接</span><br><span class="line">  host: www.itrhx.com    # 在百度站长平台中添加的域名</span><br><span class="line">  token: your_token      # 秘钥</span><br><span class="line">  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
 
 <p>其中的 token 可以在【链接提交】-【自动提交】-【主动推送】下面看到，接口调用地址最后面 token&#x3D;xxxxx 即为你的 token</p>
-<p><img src="hexo%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/image-20231122161139989.png" alt="image-20231122161139989"></p>
+<p><img src="/hexo%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/image-20231122161139989.png" alt="image-20231122161139989"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: https://gitee.com/littleboy97/littleboy97.git</span><br><span class="line">  branch: main</span><br><span class="line">- type: baidu_url_submitter # 这是新加的主动推送 </span><br></pre></td></tr></table></figure>
 
 
