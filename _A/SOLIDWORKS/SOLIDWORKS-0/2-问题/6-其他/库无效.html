@@ -2,13 +2,13 @@
 <html><head>
     <title>littleboy97学习笔记</title><meta charset="utf-8">
     
-<link rel="stylesheet" href="../../../css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 <!-- 引入配置文件 -->
     
-<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 <!-- 字体图片库 -->
     
-<link rel="stylesheet" href="../../../lib/highlight/styles/atom-one-dark.css">
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
 <!-- 代码高亮库 -->
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
@@ -49,14 +49,18 @@
 <p>如果位于 C:\Program Files\CommonFiles\SolidWorks Shared 的“SwDocumentMgr.dll”文件的版本不正确，则可能出现此错误。将计算机上出现此问题的版本和没有出现此问题的版本进行比较。<br>要查找版本，右键单击此文件，选择“属性”，然后转到版本选项卡。</p>
 <span id="more"></span>
 
-<h2 id="方法1：安装修复"><a href="#方法1：安装修复" class="headerlink" title="方法1：安装修复"></a>方法1：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p>
-<h2 id="方法2：手动注册"><a href="#方法2：手动注册" class="headerlink" title="方法2：手动注册"></a>方法2：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p>
+<h2 id="方法1安装SDK"><a href="#方法1安装SDK" class="headerlink" title="方法1安装SDK"></a>方法1安装SDK</h2><img src="库无效/image-20240506111452190.png">
+
+
+
+<h2 id="方法2：安装修复"><a href="#方法2：安装修复" class="headerlink" title="方法2：安装修复"></a>方法2：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p>
+<h2 id="方法3：手动注册"><a href="#方法3：手动注册" class="headerlink" title="方法3：手动注册"></a>方法3：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure>
 
 <p> 1.以管理员身份打开 Windows 命令提示符。</p>
 <p> 2.在命令提示符中输入：cd [DLL 路径]</p>
 <p> 3.接着输入：regsvr32 sldshellutils14u.dll</p>
-<h2 id="方法2：设置"><a href="#方法2：设置" class="headerlink" title="方法2：设置"></a>方法2：设置</h2><p>恢复文件关联</p>
+<h2 id="方法4：设置"><a href="#方法4：设置" class="headerlink" title="方法4：设置"></a>方法4：设置</h2><p>恢复文件关联</p>
 <!-- 方法 1：
 
 如果版本不同，则将现有文件重命名为：old_SwDocumentMgr.dll。接着从计算机将没有此问题的版本复制到有问题的计算机，然后重试。
@@ -107,16 +111,16 @@ SOLIDWORKS® 开发团队一直在与 Microsoft® 努力合作，以便在 SOLID
  		<!-- 引入正文 -->
     </div>	
     
-<script src="../../../lib/highlight/highlight.pack.js"></script>
+<script src="/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
     
-<script src="../../../lib/jquery-3.4.1.min.js"></script>
+<script src="/lib/jquery-3.4.1.min.js"></script>
 	<!-- 引入 jquery -->
     
-<script src="../../../lib/jquery.pjax.js"></script>
+<script src="/lib/jquery.pjax.js"></script>
 		<!-- 引入 pjax -->
     
-<script src="../../../js/main.js"></script>
+<script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
