@@ -20,7 +20,7 @@ $(document).ready(function () {
 // 显示隐藏侧边栏
 function switchTreeOrIndex(){
 	$("#search-icon").on("click", function(e){		
-	var x =document.getElementById("aside2")
+	var x =document.getElementById("aside")
 	{x.style.display="none"}
 	var x2 =document.getElementById("content")
 	x2.style.paddingLeft="0px"
@@ -28,7 +28,7 @@ function switchTreeOrIndex(){
 }
 function switchTreeOrIndex2(){
 	$("#asideshow").on("click", function(e){	
-		var x =document.getElementById("aside2")
+		var x =document.getElementById("aside")
 		{x.style.display="block"}
 		var x2 =document.getElementById("content")
 		x2.style.paddingLeft="300px"
