@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-19 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-梁单元"><a href="#Simulation-梁单元" class="headerlink" title="Simulation-梁单元"></a>Simulation-梁单元</h1><h1 id="梁单元"><a href="#梁单元" class="headerlink" title="梁单元"></a>梁单元</h1><img src="Simulation-壳单元/image-20240319153845638.png">
+
+<img src="Simulation-壳单元/image-20240319154039415.png">
+
+
+
+<img src="Simulation-壳单元/image-20240319154223466.png">
+
+
+
+<img src="Simulation-壳单元/image-20240319154331337.png">
+
+
+
+<img src="Simulation-壳单元/image-20240319154408644.png">
+
+<h1 id="简支梁"><a href="#简支梁" class="headerlink" title="简支梁"></a>简支梁</h1><h1 id="实体单元模拟梁单元"><a href="#实体单元模拟梁单元" class="headerlink" title="实体单元模拟梁单元"></a>实体单元模拟梁单元</h1><p>需要要借助【远程载荷&#x2F;质量】来模拟梁单元约束的“节点”</p>
+<img src="Simulation-壳单元/image-20240319160322143.png">
+
+
+
+<h1 id="分析实例-车架"><a href="#分析实例-车架" class="headerlink" title="分析实例:车架"></a>分析实例:车架</h1><p>问题描述:对车架底部铰约束，并在图中指定梁上各自施加竖直向下1000N载荷，考察结构变形及应力情况材料:6063-T6</p>
+<img src="Simulation-壳单元/image-20240319160409865.png">
+
+<p>【新建算例】</p>
+<p>焊接件格式会自动按“梁单元”处理。</p>
+<p>如果有短的梁单元可能会提示“不能当作梁单元处理”，这里可以选择忽略。</p>
+<p>如果有不能生成梁单元的实体，可能会是微小片体，不具备梁的基本截面形状，这里可以选择删除处理。</p>
+<img src="Simulation-壳单元/image-20240319160554515.png">
+
+<p>梁单元【编辑定义】</p>
+<p>需要选择“杆单元”或“梁单元”，多数情况下“横梁”类型的梁单元会用的多些，“绗架”类型的杆单元少些。</p>
+<p>在【编辑定义】里，可以定义横梁的方向和两端的连接方式（刚性焊接、滑动、手动自由度）</p>
+<p>【连结】零部件接触可以删除，因为前面梁单元【编辑定义】里，已经定义了横梁间的接触情况。</p>
+<img src="Simulation-壳单元/image-20240319162316411.png">
+
+<p>【夹具】</p>
+<img src="Simulation-壳单元/image-20240319162245823.png">
+
+<p>【外部载荷】</p>
+<img src="Simulation-壳单元/image-20240319162443650.png">
+
+<p>【网格】-应用网格控制</p>
+<p>方式1：按单个梁单元上有几个单元格控制网格；</p>
+<p>方式2：按网格大小在梁单元上控制（建议优先这种方式）</p>
+<img src="Simulation-壳单元/image-20240319162711992.png">
+
+<p>【后处理】</p>
+<p>【编辑接点】隐藏</p>
+<img src="Simulation-壳单元/image-20240319163151633.png">
+
+<img src="Simulation-壳单元/image-20240319163230685.png">
+
+<p>应力</p>
+<p>梁单元和实体单元有所区别；</p>
+<p>位移</p>
+<h1 id="绗架和横梁分析"><a href="#绗架和横梁分析" class="headerlink" title="绗架和横梁分析"></a>绗架和横梁分析</h1><p>打开模型”Beam frame2.sldpr”。它代表一台起重设备。</p>
+<p>材料: 普通碳钢 (E&#x3D;2.1+e11,Nu&#x3D;0.28)</p>
+<p>夹具: 点”A”和“B”被固定</p>
+<p>网格: 实体1为一根缆绳，处理为桁架单元。实体2和3本身就是横梁，处理为横梁单元，扭转常数&#x3D;27800mm^4最大抗剪应力的距离&#x3D;11.5mm,抗剪因子&#x3D;1.</p>
+<p>戴荷(所有方向均为-Y):横梁3: 3050N；横梁2: 750N；点C: 270N；重力加速度: 9.81m&#x2F;s</p>
+<img src="Simulation-梁单元/image-20240412145039819.png">
+
+
+
+<p>Q1：模型上最大的URES位移是多少mm</p>
+<img src="Simulation-梁单元/image-20240412145904980.png">
+
+<p>Q2：将横梁2的最高轴向和折弯应力多少(单位:MPa，保留两位小数)。</p>
+<img src="Simulation-梁单元/image-20240412150653749.png">
+
+<p>135.804</p>
+<p>Q3：将桁架1的拉伸应力多少(单位:MPa，保留两位小数)</p>
+<img src="Simulation-梁单元/image-20240412150517781.png">
+
+<p>114.165Mpa</p>
+<p>Q4：横梁2的扭转应力是多大?(填写绝对值，单位MPa，保留两位小数）</p>
+<img src="Simulation-梁单元/image-20240412150813030.png">
+
+<p>33.507</p>
+<p>Q5：横梁2的最大弯矩是多少?(填写绝对值，单位N*m，保留两位小数）</p>
+<img src="Simulation-梁单元/image-20240412151119245.png">
+
+<p>7373.406</p>
+<p>Q6：B点的合力反力矩是多少?(单位N*m，保留两位小数）</p>
+<img src="Simulation-梁单元/image-20240412151243272.png">
+
+<p>2292N*m</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="弯曲梁单元"><a href="#弯曲梁单元" class="headerlink" title="弯曲梁单元"></a>弯曲梁单元</h2><p>对于弯曲梁单元，软件会将其处理成多端。</p>
+<img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/kty1450460513412.image">
+
+<h2 id="锥形梁单元"><a href="#锥形梁单元" class="headerlink" title="锥形梁单元"></a>锥形梁单元</h2><img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/eqj1450460506588.image">
+
+<img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/blc1450460507134.image">
+
+<img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/nno1450460507691.image">
+
+<h2 id="力矩方向"><a href="#力矩方向" class="headerlink" title="力矩方向"></a>力矩方向</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/HIDD_HELP_BEAM_BENDING_MOMENT.htm">横梁图表</a>。一个两端固定的横梁沿本地方向 1 承受均匀分布载荷的示例。软件将绘制方向 1 上的抗剪图解和关于方向 2 的力矩图。但是这里为什么是方向2？</p>
+<img src="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/nip1479423760652.image">
+
+<img src="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/nxq1479424104013.image">
+
+<img src="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/ebw1479424199042.image">
+
+
+
+<img src="Simulation-梁单元/image-20240405121942634.png">
+
+<img src="Simulation-梁单元/image-20240405121956565.png">
+
+
+
+<p>使用相同的分析设置。将横梁2的最高轴向和折弯应力记为X(单位:MPa，保蹈网位小数）将衍架1的拉伸应力记为Y(单位: MPa，保当两位小数)</p>
+<p>使用相同的分析设置。横梁2的扭转应为是多大?(填写绝对值。单位MPa。保翼两位小数)</p>
+<p>横梁2的最大弯矩是多少?(填写绝对值。单位Nm，保翼两位小数</p>
+<p>B点的合力反力矩是多少?(单位Nm，保翼两位小教)</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

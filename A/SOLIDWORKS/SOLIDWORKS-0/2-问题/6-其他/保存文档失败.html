@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-11-02 16:28:19</span>
+</div>
+
+<div id="article"><h1 id="保存文档失败"><a href="#保存文档失败" class="headerlink" title="保存文档失败"></a>保存文档失败</h1><img src="保存文档失败\1.png" >
+
+<span id="more"></span>
+
+
+
+<h2 id="RX事件检查"><a href="#RX事件检查" class="headerlink" title="RX事件检查"></a>RX事件检查</h2><p>从Rx文件中识别“未能保存文档”错误。错误将作为多个UNC提供者(MUP)源事件记录在系统事件日志中。此类事件的细节示例包括:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;Delayed Write Failed&#125; Windows® was unable to save all the data for the file ; the data has been lost. This error may be caused by a failure of your computer hardware or network connection. Please try to save this file elsewhere.</span><br><span class="line"></span><br><span class="line">&#123;Delayed Write Failed&#125;Windows®无法保存文件的所有数据;数据丢失。此错误可能是由计算机硬件或网络连接失败引起的。请尝试在其他地方保存此文件。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;Delayed Write Failed&#125; Windows was unable to save all the data for the file ; the data has been lost. This error was returned by the server on which the file exists. Please try to save this file elsewhere.</span><br><span class="line"></span><br><span class="line">&#123;Delayed Write Failed&#125;Windows无法保存文件的所有数据;数据丢失。存在该文件的服务器返回此错误。请尝试在其他地方保存此文件。</span><br></pre></td></tr></table></figure>
+
+<p>通常，这些事件标识网络位置，并且根据记录，网络连接或服务器可能是问题的根源。如果在客户端计算机的系统事件日志中发现这些事件之一，请联系IT代表寻求帮助。</p>
+<h2 id="排除原因"><a href="#排除原因" class="headerlink" title="排除原因"></a>排除原因</h2><p>“保存失败”错误信息排查。以下是一些已知的情况，它们应该有助于缩小问题的范围：</p>
+<ol>
+<li><p>检查<a target="_blank" rel="noopener" href="https://help.solidworks.com/2015/chinese-simplified/SolidWorks/sldworks/c_SOLIDWORKS_Journal_File.htm">SOLIDWORKS日志文件</a>文件的位置;它应该存在于本地驱动器而不是网络驱动器上。</p>
+</li>
+<li><p>在【工具-&gt;选项→系统选项-&gt;备份&#x2F;恢复】，将“每次保存自动恢复信息”选项从“x”更改到更高的值。此外，将每个文档的备份数量减少到1。如果备份文件位置与原始文件相同，请将其更改为本地驱动器上的其他位置。</p>
+</li>
+<li><p>插件也可能会导致问题。禁用所有插件并重新测试问题，或者关闭SolidWorks删除以下注册表项的内容，然后重新测试问题:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\软件SolidWorks\AddInsStartup</span><br><span class="line">HKEY_LOCAL_MACHINE\软件SolidWorks\外接程序</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SolidWorks 200X\AddIns</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查问题是否只发生在SolidWorks文件上。假设文件位于网络位置，以不同的用户创建一个非solidworks文档，并将其保存在相同的网络位置。</p>
+</li>
+<li><p>确定是否有其他进程正在访问该文件。在存放文件的机器上，我们进入【控制面板→系统与维护→管理工具→计算机管理→系统工具→共享文件夹→打开文件】，并注意指向正在保存的文件的打开会话。如果有多个，则意味着有另一个进程使用该文件。如果是这种情况，可以考虑另存为操作。</p>
+</li>
+<li><p>将文件移动到本地驱动器上，并尝试以不同的用户(例如本地管理员)登录。验证是否与网盘权限使用问题。</p>
+</li>
+<li><p>创建一个新的用户配置文件并登录，然后查看该文件是否可以同时保存在网络驱动器和本地驱动器上。</p>
+</li>
+<li><p>如果安装了Windows桌面搜索程序，请在保存文件时确保没有对文件进行索引，因为这可能会中断保存过程。可暂时卸载Windows桌面搜索，看看是否可以隔离原因。</p>
+</li>
+<li><p>如果系统上安装并运行了任何防病毒或防间谍软件，请尝试暂时禁用它们，看看问题是否仍然存在。</p>
+</li>
+</ol>
+<h1 id="保存Step失败-："><a href="#保存Step失败-：" class="headerlink" title="保存Step失败 ："></a>保存Step失败 ：</h1><p>在使用step类零件保存时出现，文件被其他程序占用时，保存失败</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>如果项目包含特殊字符或特定字符串，则会出现此错误。</p>
+<p>中间格式(如STEP文件)包含未知字符或定义组装环境中组件名称的路径。</p>
+<p>对于STEP格式的文件，建议使用文本编辑器打开该文件，搜索文本“PRODUCT_DEFINITION”(不带引号)，并替换该字符串。</p>
+<p>例如，STEP文件中的以下字符串:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\#7281180=PRODUCT_DEFINITION(“Presse/X/模型”、“Presse/X/模型”,#7282479,#7281179);</span><br></pre></td></tr></table></figure>
+
+<p>注意，字符串包含文本’&#x2F;X&#x2F;‘。必须使用空格和标准字符(如“X”)替换该文本，如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\#7281180=PRODUCT_DEFINITION(&#x27;PresseX模型&#x27;，&#x27;PresseX模型&#x27;，#7282479，#7281179);</span><br></pre></td></tr></table></figure>
+
+<p>其他类似的情况也会影响保存文件的过程。</p>
+<!--  1． 关闭所有不相关的和非必需的程序和文档 
+    把它们全部关闭，可能您开打了很多应用程序和文档，而使用了大量的内存以至于内存信息交换的通道被阻塞。关闭后再尝试保存Solidworks文档，如果没有效果，请试第二步 
+    2． 尝试保存工程图 
+    有时候出现这个问题是因为没有正确的重建造成的，如果您同时工作在3D建模和2D工程图，尝试切换到工程图部分，保存和关闭工程图，你会得到“你想重建模型吗？”的提示，点击是的后，看看还有没有效。 
+    3． 新建或切换到另外的配置 
+    如还没效果，再请尝试新建戒切换到另外的配置，有可能其中一个配置的一部分信息还没有读入内存。同样的方法，您可以试试压缩特征戒零部件然后解压它们，再保存。 
+    4． 删除和再重新建立一个配置 
+    如上述没有效果，我会切换另外配置，删除我上一个编辑的配置，而然后点击Undo（退回）看看能不能还原先前状态，然后再保存。很多时候，这样做都有效。如还没有效果，可能就要删除和再重新建立一个配置，做尝试了。 
+    5． 寻找参考文件，并复制它 
+    在您将要放弃和重新开始没保存前的工作，您可以最后再做一次尝试。这一步可以使您能从要重新开始没保存前的工作中解救出来。您可以试试点击下拉菜单：
+
+文件.查找相关文件。这个命令将读入全部参考文件，然后点击复制文件，在Solidworks2007及以上版本，将会到打包命令的界面。这时候有时会出现提示您重建模型的对话框，那么这可能表明这些参考文件造成的问题，检查和打开这些文件，按Ctrl+Q强制重生，并保存。检查完后，回到原来界面尝试保存看是否有效。一般这步都对这个问题比较有效。
+
+  -->
+
+<h1 id="保存操作失败"><a href="#保存操作失败" class="headerlink" title="保存操作失败"></a>保存操作失败</h1><p>保存操作失败，因为文档集(要保存的文档和它引用的任何文档)内项目的重命名与只读状态之间存在冲突。</p>
+<p>  <img src="/%E4%BF%9D%E5%AD%98%E6%96%87%E6%A1%A3%E5%A4%B1%E8%B4%A5/%E4%BF%9D%E5%AD%98%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%B4%A5%EF%BC%8C.png" alt="保存操作失败，"></p>
+<h1 id="大型装配体保存失败"><a href="#大型装配体保存失败" class="headerlink" title="大型装配体保存失败"></a>大型装配体保存失败</h1><h2 id="方法1大型设计审阅"><a href="#方法1大型设计审阅" class="headerlink" title="方法1大型设计审阅"></a>方法1大型设计审阅</h2><p>1、新建空白装配体文件，并保存关闭；</p>
+<p>2、使用编辑模式的【大型设计审阅】打开刚才的空白装配体；</p>
+<p>3、在装配体使用【插入零部件】将部件加载到装配体内，并做好配合</p>
+<p>4、保存操作即可</p>
+<h2 id="方法2Speedpak"><a href="#方法2Speedpak" class="headerlink" title="方法2Speedpak"></a>方法2Speedpak</h2><p>1、打开部件装配体</p>
+<p>2、在装配体配置中【右键-创建Speedpak】，并选择保留的几何对象（可以是实体、面等），以便后续做配合选择使用。没有保留的部分，将保留视觉效果并不能被选择。</p>
+<p>3、打开总装配体文件，操作【插入零部件】将前面的Speedpak部件插入总装文件中进行配合操作</p>
+<p>4、保存操作即可</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

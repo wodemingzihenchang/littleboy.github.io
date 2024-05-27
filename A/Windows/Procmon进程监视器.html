@@ -45,9 +45,12 @@
 
 <div id="article"><h1 id="Procmon进程监视器"><a href="#Procmon进程监视器" class="headerlink" title="Procmon进程监视器"></a>Procmon进程监视器</h1><p>Process Monitor是微软推荐的一款系统监视工具。能够帮助使用者对系统中的任何文件、注册表操做进行监视和记录。经过注册表和文件读写的变化，有效帮助诊断系统故障或发现恶意软件、病毒及木马。</p>
 <p>它整合了旧的Sysinternals工具、Filemon与Regmon，其中Filemon专门用来监视系统中的任何文件操做过程，Regmon用来监视注册表的读写操做过程。</p>
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sysinternals/downloads/procmon#GeneratedCaptionsTabForHeroSec">进程监视器 - Sysinternals | Microsoft Learn</a>下载</p>
 <h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><img src="Procmon进程监视器/image-20240422095423003.png">
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">图标功能：</span><br><span class="line">|--打开</span><br><span class="line">|--保存：保存记录文件</span><br><span class="line">|--捕获</span><br><span class="line">|--自动滚动</span><br><span class="line">|--清空</span><br><span class="line">————</span><br><span class="line">|--筛选</span><br><span class="line">|--高亮</span><br><span class="line">|--从窗口包含进程</span><br><span class="line">————</span><br><span class="line">|--进程树</span><br><span class="line">————</span><br><span class="line">|--事件属性</span><br><span class="line">|--查找</span><br><span class="line">|--跳转到对象</span><br><span class="line">————</span><br><span class="line">|--注册表</span><br><span class="line">|--文件系统</span><br><span class="line">|--网络</span><br><span class="line">|--进程</span><br><span class="line">|--性能分析</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">图标功能：</span><br><span class="line">|--打开：打开PML文件</span><br><span class="line">|--保存：可导出为PML文件供后台分析</span><br><span class="line">|--捕获：开始收集记录</span><br><span class="line">|--自动滚动：</span><br><span class="line">|--清空：</span><br><span class="line">————</span><br><span class="line">|--筛选：使用筛选过滤出需要排查的进程</span><br><span class="line">|--高亮</span><br><span class="line">|--从窗口包含进程</span><br><span class="line">————</span><br><span class="line">|--进程树：一个程序不只是自身功能的运作，他可能还会去调用其他程序的功能来协助完成一整套的操作流程。因此我们可以从【进程树】中查看，</span><br><span class="line">————</span><br><span class="line">|--事件属性</span><br><span class="line">|--查找</span><br><span class="line">|--跳转到对象</span><br><span class="line">————</span><br><span class="line">|--注册表</span><br><span class="line">|--文件系统</span><br><span class="line">|--网络</span><br><span class="line">|--进程</span><br><span class="line">|--性能分析</span><br></pre></td></tr></table></figure>
+
+
 
 
 
@@ -73,6 +76,11 @@
 
 
 <img src="Procmon进程监视器/image-20240422100144252.png">
+
+<h1 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h1><p>SysInspector:监控的是某一时刻的系统状态，而ProcessMonitor可以监控一段时间的进程行为</p>
+<p>Sysmon:相比之下，ProcessMonitor监控的进程事件更丰富、更全面，故导出文件也大得多</p>
+<p>ProcessExplorer:相当于简化版，只能持续査看进程，没法将一段时间的进程行为录制下来，但可结束进程</p>
+<p>Wireshark:抓包工具，侧重数据流，但无法提供进程信息</p>
 </div>
  		<!-- 引入正文 -->
     </div>	

@@ -43,187 +43,297 @@
     <span id="post-date">2024-05-09 12:19:51</span>
 </div>
 
-<div id="article"><h1 id="Electrical-3D教程"><a href="#Electrical-3D教程" class="headerlink" title="Electrical-3D教程"></a>Electrical-3D教程</h1><p><a target="_blank" rel="noopener" href="https://swelectrical-help.solidworks.com/dl/swe/CHM/2022/ZH/HelpOnLine/Index.htm#EWINSBPTUNKNOWN.htm">SOLIDWORKS Electrical帮助说明</a></p>
-<h1 id="1概述及界面介绍"><a href="#1概述及界面介绍" class="headerlink" title="1概述及界面介绍"></a>1概述及界面介绍</h1><p>SW启动插件</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506155128429.png" alt="image-20240506155128429"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506155148179.png" alt="image-20240506155148179"></p>
-<h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506163652204.png" alt="image-20240506163652204"></p>
-<p>装配体的概念</p>
-<p>结构</p>
-<p>电气属性</p>
-<p>工程位置</p>
-<h2 id="创建电气装配体"><a href="#创建电气装配体" class="headerlink" title="创建电气装配体"></a>创建电气装配体</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506160107773.png" alt="image-20240506160107773"></p>
-<p>打开工程</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506160335676.png" alt="image-20240506160335676"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161013729.png" alt="image-20240506161013729"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161629488.png" alt="image-20240506161629488"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161725417-17149834456471-17149834459742.png" alt="image-20240506161725417"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161820319.png" alt="image-20240506161820319"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161845849.png" alt="image-20240506161845849"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161920282-17149835605773.png" alt="image-20240506161920282"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506161938194.png" alt="image-20240506161938194"></p>
-<p>打开 SOLIDWORKS 文件</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506162024315.png" alt="image-20240506162024315"></p>
-<p>创建电气布线用的装配体</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506162637493.png" alt="image-20240506162637493"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506162734710.png" alt="image-20240506162734710"></p>
-<h2 id="打开电气装配体"><a href="#打开电气装配体" class="headerlink" title="打开电气装配体"></a>打开电气装配体</h2><p>打开SW并打开SWE 3D插件</p>
-<p>打开工程</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506163118032.png" alt="image-20240506163118032"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506163250528.png" alt="image-20240506163250528"></p>
-<p>打开装配体</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506163500366.png" alt="image-20240506163500366"></p>
-<p>预览原理图</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506163411924.png" alt="image-20240506163411924"></p>
-<h1 id="2机柜、线槽和导轨"><a href="#2机柜、线槽和导轨" class="headerlink" title="2机柜、线槽和导轨"></a>2机柜、线槽和导轨</h1><p>概述,设计流程</p>
+<div id="article"><h1 id="Electrical-3D教程"><a href="#Electrical-3D教程" class="headerlink" title="Electrical-3D教程"></a>Electrical-3D教程</h1><p>SOLIDWORKS Electrical 3D 是对 SOLIDWORKS 的补充插件工具，用于创建 3D 机柜布局和<strong>电线</strong>、<strong>电缆</strong>、<strong>线束</strong>布线。如果要使用这些功能，必须首先安装 SOLIDWORKS 的 Premium 版本。</p>
+<h1 id="1概述及界面介绍"><a href="#1概述及界面介绍" class="headerlink" title="1概述及界面介绍"></a>1概述及界面介绍</h1><h2 id="打开插件"><a href="#打开插件" class="headerlink" title="打开插件"></a>打开插件</h2><p>Electrical 3D作为插件工具，你需要先启动该插件。</p>
+<img src="Electrical-3D教程/1/image-20240514113938698.png">
+
+<h2 id="创建装配体"><a href="#创建装配体" class="headerlink" title="创建装配体"></a>创建装配体</h2><p>布线用的装配体结构如下：一般会包括4个部分。</p>
 <pre class="mermaid">graph LR
-插入机柜-->插入导轨-->插入线槽-->配合参考-->修改线槽导轨长度</pre>
+装配体-->结构部件
+装配体-->电气零件-->需要连接点属性等
+装配体-->电线电缆部件或草图
+装配体-->布线路径草图</pre>
 
-<h2 id="添加机柜"><a href="#添加机柜" class="headerlink" title="添加机柜"></a>添加机柜</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506164813726-17149854272441.png" alt="image-20240506164813726"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506164915845.png" alt="image-20240506164915845"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506165006186.png" alt="image-20240506165006186"></p>
-<h2 id="添加导轨"><a href="#添加导轨" class="headerlink" title="添加导轨"></a>添加导轨</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506165141939.png" alt="image-20240506165141939"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506165226205.png" alt="image-20240506165226205"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506165322040.png" alt="image-20240506165322040"></p>
-<h2 id="添加线槽"><a href="#添加线槽" class="headerlink" title="添加线槽"></a>添加线槽</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506165524992.png" alt="image-20240506165524992"></p>
-<h2 id="配合定位"><a href="#配合定位" class="headerlink" title="配合定位"></a>配合定位</h2><h2 id="修改长度"><a href="#修改长度" class="headerlink" title="修改长度"></a>修改长度</h2><p>修改导轨线槽长度，注意：导轨线槽是由专门的类型定义的，即“长度”这项是有专门属性控制的。</p>
-<h1 id="3智能零件"><a href="#3智能零件" class="headerlink" title="3智能零件"></a>3智能零件</h1><p>概述</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506173102701.png" alt="image-20240506173102701"></p>
-<h2 id="设计流程"><a href="#设计流程" class="headerlink" title="设计流程"></a>设计流程</h2><pre class="mermaid">graph LR
-打开零件-->打开电气向导-->创建连接点-->创建配合参考-->定义面-->完成</pre>
+<p>启动插件后，在SW软件的右侧会有“电气工程图文件”的窗口。通过此处，外面可以打开SW Electrical2D里的工程文件。</p>
+<img src="Electrical-3D教程/1/image-20240510162950712.png">
 
-<h2 id="打开零件"><a href="#打开零件" class="headerlink" title="打开零件"></a>打开零件</h2><h2 id="电气零件向导"><a href="#电气零件向导" class="headerlink" title="电气零件向导"></a>电气零件向导</h2><h2 id="创建连接点"><a href="#创建连接点" class="headerlink" title="创建连接点"></a>创建连接点</h2><p>选择“来自制造商零件的连接点”类型创建，在SWE设备型号里选择预期的“回路”和“端子”即可（举例选“3极断路器”），这里选3回路6端子的设备型号。</p>
+<p>在Electrical 3D插件里，需要通过右键工程【处理-SOLIDWORKS装配体】来创建用于布线的装配体文件，每个工程位置都会代表一个装配体</p>
+<img src="Electrical-3D教程/1/创建装配体1.png">
+
+<img src="Electrical-3D教程/1/创建装配体2.png">
+
+<p>创建后，在设计树内会出现3个SW装配体图标，打开我们新建的装配体文件“Cabinet”。</p>
+<img src="Electrical-3D教程/1/创建装配体3.png">
+
+
+
+<p>补充说明：在处理创建布线装配体界面中，也可以选择链接装配体文件作为布线用。当然这个装配体文件的位置就是本身存在的已有位置，如果是按默认不选择，则是以空白装配体存放在“Project&#x2F;&#x2F;&lt;项目号&#x2F;&gt;&#x2F;SOLIDWORKS&#x2F;”内。</p>
+<img src="Electrical-3D教程/1/创建装配体4.png">
+
+<p>补充说明2：你还可以在SW Electrical 2D原理图内进行创建布线装配体操作，这和在原理图程序内操作是一样的</p>
+<img src="Electrical-3D教程/1/image-20240506162637493.png">
+
+
+
+<h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><img src="Electrical-3D教程/1/界面介绍.png">
+
+<p>在操作布线过程中，我们也可以预览原理图去观察布线的连接情况，和3D布线做比较。</p>
+<img src="Electrical-3D教程/1/image-20240506163411924.png">
+
+<h1 id="2机柜、线槽和导轨"><a href="#2机柜、线槽和导轨" class="headerlink" title="2机柜、线槽和导轨"></a>2机柜、线槽和导轨</h1><pre class="mermaid">graph LR
+设计流程-->插入机柜-->插入导轨-->插入线槽-->配合定位-->修改线槽导轨长度</pre>
+
+<p>机柜、线槽、导轨等非连接的零部件添加方式有2种：</p>
+<ul>
+<li>在SW Electrical 2D内添加（本次课程的方式）</li>
+</ul>
+<img src="Electrical-3D教程/2/添加机柜零部件.png">
+
+<ul>
+<li>在SW 装配体内添加，这部分是由结构设计负责操作。</li>
+</ul>
+<img src="Electrical-3D教程/2/添加机柜零部件2.png">
+
+<h2 id="添加机柜"><a href="#添加机柜" class="headerlink" title="添加机柜"></a>添加机柜</h2><p>可以在设备列表里右键机柜设备【插入来自文件】的方式，添加自定义的机柜。添加后列表文件会勾选表示已有模型在装配体内</p>
+<img src="Electrical-3D教程/2/添加机柜.png">
+
+<h2 id="添加导轨"><a href="#添加导轨" class="headerlink" title="添加导轨"></a>添加导轨</h2><p>可以在设备列表里右键导轨设备【插入水平导轨】的方式插入。将鼠标移至合适位置点击放置即可。因为有【配合参考】，导轨自动吸附在机柜面上。</p>
+<img src="Electrical-3D教程/2/添加导轨.png">
+
+
+<h2 id="添加线槽"><a href="#添加线槽" class="headerlink" title="添加线槽"></a>添加线槽</h2><img src="Electrical-3D教程/2/添加线槽.png">
+
+<h2 id="配合定位"><a href="#配合定位" class="headerlink" title="配合定位"></a>配合定位</h2><p>目前添加进装配体的线槽导轨是自由状态的，我们可以利用【装配体-配合】命令，将其对齐进行定位。</p>
+<h2 id="修改长度"><a href="#修改长度" class="headerlink" title="修改长度"></a>修改长度</h2><p>修改导轨线槽长度，注意：导轨线槽是由专门的类型定义的，即“长度”这项是有专门属性控制的。</p>
+<img src="Electrical-3D教程/2/修改长度.png">
+
+<h1 id="3电气零件制作"><a href="#3电气零件制作" class="headerlink" title="3电气零件制作"></a>3电气零件制作</h1><pre class="mermaid">graph LR
+设计流程-->打开零件-->打开电气向导-->创建连接点-->创建配合参考-->定义面-->完成</pre>
+
+<p>电气2D向电气3D转型，3D模型的电气属性定义，无疑是起到关键的“桥梁”作用。即如果在3D模型上体现2D原理图信息。本章将会通过【电气设备向导】工具，来制作电气零件。</p>
+<img src="Electrical-3D教程/3/电气零件概述.png">
+
+<h2 id="电气零件向导"><a href="#电气零件向导" class="headerlink" title="电气零件向导"></a>电气零件向导</h2><img src="Electrical-3D教程/3/image-20240510114111536.png">
+
+<h2 id="创建连接点"><a href="#创建连接点" class="headerlink" title="创建连接点"></a>创建连接点</h2><p>选择“来自制造商零件的连接点”类型创建，在SWE设备型号里选择预期的“回路”和“端子”即可（举例选“3极断路器”），这里选3回路6端子的设备型号。</p>
+<img src="Electrical-3D教程/3/image-20240510174030871.png">
+
+<img src="Electrical-3D教程/3/image-20240510174045666.png">
+
+<p>选择连接点类型以【来自制造商零件的连接点】的方式来创建连接点。</p>
+<img src="Electrical-3D教程/3/image-20240510174116668.png">
+
+<p>【来自制造商零件的连接点】需要选择对应设备型号的回路和端子。不用具体型号，只需要回路数量和端子数量对的上即可。</p>
+<img src="Electrical-3D教程/3/image-20240510174411256.png">
+
+
+
+<img src="Electrical-3D教程/3/image-20240510175346478.png">
+
+
+
+<img src="Electrical-3D教程/3/image-20240510175427863.png">
+
+
+
+<img src="Electrical-3D教程/3/image-20240510175600381.png">
+
+<p>如果绘制出错了，可有回到RLM电气设备向导里，进行编辑修改</p>
+<img src="Electrical-3D教程/3/image-20240510180123218.png">
+
+
+
 <p>点击模型位置，创建草图及其连接点</p>
-<h2 id="创建配合参考"><a href="#创建配合参考" class="headerlink" title="创建配合参考"></a>创建配合参考</h2><h2 id="定义面"><a href="#定义面" class="headerlink" title="定义面"></a>定义面</h2><p>完成</p>
-<h1 id="4插入设备"><a href="#4插入设备" class="headerlink" title="4插入设备"></a>4插入设备</h1><p>概述</p>
-<p>设计流程</p>
-<h2 id="插入设备"><a href="#插入设备" class="headerlink" title="插入设备"></a>插入设备</h2><p>插入:设备型号已关联对应模型<br>插入自文件:插入自定义的模型<br>关联:关联现有装配体的零件或者子装配体</p>
-<p><strong>导轨设备</strong></p>
-<p>原先课程3做好的【配合参考】，会在我们插入设备时，自动配合导轨。</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506180330638.png" alt="image-20240506180330638"></p>
-<p><strong>门板设备</strong></p>
-<p>开孔设备的【智能零部件】特征使用。</p>
+<img src="Electrical-3D教程/3/image-20240510180221010.png">
+
+
+
+<h2 id="创建配合参考"><a href="#创建配合参考" class="headerlink" title="创建配合参考"></a>创建配合参考</h2><img src="Electrical-3D教程/3/image-20240510180346332.png">
+
+<p>在“对于轨迹”的配合参考里，选择设备在导轨里的顶部面和导轨正面即可。配合参考的面会被用于识别导轨零件上的配合参考面。这样就能达到预定义配合的效果。</p>
+<img src="Electrical-3D教程/3/image-20240510180549948.png">
+
+<p>完成零件的配合参考面后，在电气向导里“参考配合”就会多出一条名叫“TREWRAIL”的配合特征，即完成该操作。</p>
+<img src="Electrical-3D教程/3/image-20240510180606010.png">
+
+<h2 id="创建定义面"><a href="#创建定义面" class="headerlink" title="创建定义面"></a>创建定义面</h2><p>该向导选项让您可以选择设备的曲面，以便将其定位在安装中。单击与四个可停靠面板区域对应的设备平面。定义面将有助于设备的定位【对齐设备】。在第4章<a href="#%E5%AF%B9%E9%BD%90%E8%AE%BE%E5%A4%87">#对齐设备</a>内有演示说明。</p>
+<img src="Electrical-3D教程/3/image-20240510180724726.png">
+
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>此对话框用于了解零件中是否缺少任何必要的项目，例如连接点和线路点</p>
+<img src="Electrical-3D教程/3/image-20240510180940165.png">
+
+<p>保存制作的零件（是可选操作）：完成后的零件，可有由此对话框用于保存零部件到步路库中，当然了，你后续手动复制到步路库也是可有的。</p>
+<h1 id="4插入设备"><a href="#4插入设备" class="headerlink" title="4插入设备"></a>4插入设备</h1><p>插入设备由多种方式：本次课程则以插入的方式进行演示。这个方式还有个前提，就是在原理图Electrical程序【设备型号管理器-设备属性-3D零件】需要设置关联模型路径。</p>
+<ul>
+<li><strong>插入</strong>:设备型号已关联对应模型</li>
+<li><strong>插入自文件</strong>:插入自定义的模型</li>
+<li><strong>关联</strong>:关联现有装配体的零件或者子装配体</li>
+</ul>
+<img src="Electrical-3D教程/4/关联3D零件.png">
+
+<h2 id="导轨设备"><a href="#导轨设备" class="headerlink" title="导轨设备"></a>导轨设备</h2><p>原先课程3做好的【配合参考】，会在我们插入设备时，自动配合导轨。</p>
+<img src="Electrical-3D教程/4/导轨设备.png">
+
+
+
+<h2 id="门板设备"><a href="#门板设备" class="headerlink" title="门板设备"></a>门板设备</h2><p>开孔设备的【智能零部件】特征使用。</p>
 <ul>
 <li>有【智能零部件】设备会自动开孔并对齐；</li>
 <li>无【智能零部件】设备需要手动同轴心配合，</li>
 </ul>
-<p><strong>端子排</strong></p>
-<p>对齐设备</p>
-<p>对齐除了能排列设备间距外，还能绑定选择设备间距（即拖动对齐设备时，其他设备会同步被拖动）</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506181002408.png" alt="image-20240506181002408"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506181030521.png" alt="image-20240506181030521"></p>
-<h1 id="5电线布线"><a href="#5电线布线" class="headerlink" title="5电线布线"></a>5电线布线</h1><p>单线布线</p>
+<img src="Electrical-3D教程/4/门板设备.png">
+
+
+
+<h2 id="端子排"><a href="#端子排" class="headerlink" title="端子排"></a>端子排</h2><p>右键设备端子排【插入端子】，将插入的端子放置到导轨上。因为有配合参考的关系，端子会自动吸附到导轨上进行配合。</p>
+<img src="Electrical-3D教程/4/端子排1.png">
+
+<p>放置完成后，软件会自动进入端子排插入的命令，此处会让你定义端子排方向以及间距。我们按默认设置插入端子排即可。</p>
+<img src="Electrical-3D教程/4/端子排2.png">
+
+<p>确认插入端子排后，模型会自动添加剩下的端子并排列对齐，并且设备树里的设备选项也会勾选，表示已添加到装配体内了。</p>
+<img src="Electrical-3D教程/4/端子排3.png">
+
+<h2 id="对齐设备"><a href="#对齐设备" class="headerlink" title="对齐设备"></a>对齐设备</h2><p>对齐除了能排列设备间距外，还能绑定选择设备间距（即拖动对齐设备时，其他设备会同步被拖动）</p>
+<img src="Electrical-3D教程/4/对齐设备.png">
+
+<h1 id="5电线布线"><a href="#5电线布线" class="headerlink" title="5电线布线"></a>5电线布线</h1><h2 id="布线路径"><a href="#布线路径" class="headerlink" title="布线路径"></a>布线路径</h2><p>当没有线槽或布线路径时，自动布线的走向会以最短的距离布线（大概率会不符合现场情况）.因此我们需要绘制布线连路径来约束和引导布线走向。</p>
+<img src="Electrical-3D教程/5/布线路径.png">
+
+<p>创建布线路径。可以通过【创建草图】或使用现有的草图进行【转换草图】的方式，获得布线路径。默认会是黄色的颜色标识，你也可以手动修改。</p>
+<p>回想下第2章我们的线槽，作为标准件的线槽模型，他是预先已经绘制了一段线槽内的线段草图（也就是“转换草图”方式做布线路径使用）。即这里我们只需要在离设备连接点比较远的位置绘制布线路径即可，如图：</p>
+<img src="Electrical-3D教程/5/布线路径2.png">
+
+<p>使用了布线路径的样子布线规范有条理。</p>
+<img src="Electrical-3D教程/5/布线路径3.png">
+
 <h2 id="线路类型"><a href="#线路类型" class="headerlink" title="线路类型"></a>线路类型</h2><ul>
 <li>SOLIDWORKS Route：带线径的实体线，生成效果好</li>
 <li>3D草图线：不带线径的草图线，生成速度快</li>
 </ul>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506181627879.png" alt="image-20240506181627879"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506184757373.png" alt="image-20240506184757373"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506184516505.png" alt="image-20240506184516505"></p>
-<h2 id="布线设置（参数）"><a href="#布线设置（参数）" class="headerlink" title="布线设置（参数）"></a>布线设置（参数）</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240506181509803.png" alt="image-20240506181509803"></p>
-<p>两个布线路径之间的距离<br>连接点到第一个布线路径之间的距离<br>线路中电缆&#x2F;电线的间距</p>
-<h2 id="布线路径"><a href="#布线路径" class="headerlink" title="布线路径"></a>布线路径</h2><p>当没有线槽或布线路径时，自动布线的走向会以最短的距离布线（大概率会不符合现场情况），</p>
-<p>创建布线路径</p>
-<p>可以通过“创建草图”或使用现有的草图进行“转换草图”的方式，获得布线路径。默认会是黄色的颜色标识，你也可以手动修改。</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/clip_image002.jpg" alt="img"></p>
-<p>左图是使用了布线路径的样子布线规范有条理，右图是未按布线路径进行布线的样子。</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/clip_image003.png" alt="img"></p>
-<h1 id="6电缆布线"><a href="#6电缆布线" class="headerlink" title="6电缆布线"></a>6电缆布线</h1><p>概述</p>
-<h2 id="设计流程-1"><a href="#设计流程-1" class="headerlink" title="设计流程"></a>设计流程</h2><p>打开柜外布线，关联零部件</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509163910654.png" alt="image-20240509163910654"></p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509164043884.png" alt="image-20240509164043884"></p>
-<p>现在是关联好外部接线的设备了，下一步需要在总装里把本章的设备L2和第4章的控制箱设备L1加载在一起。</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509164806734.png" alt="image-20240509164806734"></p>
-<h2 id="插入电缆接头"><a href="#插入电缆接头" class="headerlink" title="插入电缆接头"></a>插入电缆接头</h2><p>用于辅助对接电缆线和端子排单线（作为中间辅助工作）</p>
-<p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509173611098.png" alt="image-20240509173611098"></p>
-<h2 id="设置电缆起点终点"><a href="#设置电缆起点终点" class="headerlink" title="设置电缆起点终点"></a>设置电缆起点终点</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509173322458.png" alt="image-20240509173322458"></p>
-<h2 id="绘制电缆"><a href="#绘制电缆" class="headerlink" title="绘制电缆"></a>绘制电缆</h2><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509173238619.png" alt="image-20240509173238619"></p>
-<h1 id="7布线错误分析"><a href="#7布线错误分析" class="headerlink" title="7布线错误分析"></a>7布线错误分析</h1><p>设计流程</p>
-<p>设计规则检查</p>
-<h2 id="未分配设备型号"><a href="#未分配设备型号" class="headerlink" title="未分配设备型号"></a>未分配设备型号</h2><h2 id="缺少电气连接点"><a href="#缺少电气连接点" class="headerlink" title="缺少电气连接点"></a>缺少电气连接点</h2><h2 id="不正确的布线类型"><a href="#不正确的布线类型" class="headerlink" title="不正确的布线类型"></a>不正确的布线类型</h2><h2 id="没有有效布线路径"><a href="#没有有效布线路径" class="headerlink" title="没有有效布线路径"></a>没有有效布线路径</h2><h1 id="8线束设计"><a href="#8线束设计" class="headerlink" title="8线束设计"></a>8线束设计</h1><p>概述</p>
-<h2 id="设计流程-2"><a href="#设计流程-2" class="headerlink" title="设计流程"></a>设计流程</h2><h2 id="创建线束"><a href="#创建线束" class="headerlink" title="创建线束"></a>创建线束</h2><h2 id="线束布线"><a href="#线束布线" class="headerlink" title="线束布线"></a>线束布线</h2><h2 id="平展线路"><a href="#平展线路" class="headerlink" title="平展线路"></a>平展线路</h2><h2 id="生成线束"><a href="#生成线束" class="headerlink" title="生成线束"></a>生成线束</h2><h1 id="报表"><a href="#报表" class="headerlink" title="报表"></a>报表</h1><p><img src="/Electrical-3D%E6%95%99%E7%A8%8B/image-20240509175153054.png" alt="image-20240509175153054"></p>
-<h2 id="按线类型的电线清单"><a href="#按线类型的电线清单" class="headerlink" title="按线类型的电线清单"></a>按线类型的电线清单</h2><h2 id="电缆清单"><a href="#电缆清单" class="headerlink" title="电缆清单"></a>电缆清单</h2><hr>
-<h1 id="12机柜"><a href="#12机柜" class="headerlink" title="12机柜"></a>12机柜</h1><p>12.1 添加机柜</p>
-<p>12.2 设计流程</p>
-<p>12.3 解压缩工程</p>
-<p>12.3.1 在SOLIDWORKS 中打开已有的工程</p>
-<p>12.3.2 电气工程文件</p>
-<p><img src="/Electrical%E6%95%99%E7%A8%8B/%E5%88%9B%E5%BB%BA%E8%A3%85%E9%85%8D%E4%BD%93%E6%96%87%E4%BB%B6.png" alt="创建装配体文件"></p>
-<p>12.4 SOLIDWORKS机柜布局</p>
-<p>12.4.1 从浏览器中打开SOLIDWORKS文件</p>
-<p>12.4.2 向浏览器中添加槽和轨道</p>
-<p>12.5 插人零部件</p>
-<p>12.6 插人轨道</p>
-<p>12.6.1配合参考</p>
-<p>12.6.2 更改轨道或尴长度</p>
-<p>12.7 插入槽</p>
-<p>13在机柜中插入零部件</p>
-<p>13.1 插人电气零件</p>
-<p>13.2 设计流程</p>
-<p>13.3 转换为由气零件</p>
-<p>13.3.1 由气零件向导</p>
-<p>13.3.2 定义面</p>
-<p>13.3.3创建配合参考</p>
-<p>13.3.4创建连接点</p>
-<p>13.3.5手动添加零部件配合</p>
-<p>13.4 插入端子排</p>
-<p>练习在机柜中插入电气设备</p>
-<p>14门设备</p>
-<p>14.1 添加门设备</p>
-<p>14.2设计流程</p>
-<p>14.3 添加智能零部件</p>
-<p>14.3.1 搜索设备描述</p>
-<p>14.3.2 定位设备</p>
-<p>14.4 插人智能特征</p>
-<p>15将对2D的更改转换到3D中</p>
-<p>15.1将对2D的更改转换到3D 中的慨术</p>
-<p>15.2在SOLIDWORKS Electrical 2D</p>
-<p>15.3装配体的变更</p>
-<p>15.4转移更改</p>
-<h1 id="16自动布线"><a href="#16自动布线" class="headerlink" title="16自动布线"></a>16自动布线</h1><p>16.1 自动布线概述</p>
-<p>16.2设计流程</p>
-<p>16.3布线路径</p>
-<p>16.4 自动布线选项</p>
-<p>16.4.1 3D草图布线</p>
-<p>16.4.2布线参数</p>
-<p>16.4.3电线草图</p>
-<p>16.4.4SOLIDWORKS Route</p>
-<p>16.4.5电线避让</p>
-<h1 id="17绘制电缆"><a href="#17绘制电缆" class="headerlink" title="17绘制电缆"></a>17绘制电缆</h1><p>17.1 绘制电缆概述</p>
-<p>17.2设计流程</p>
-<p>17.3 插人零部件</p>
-<p>17.4 关联设备</p>
-<p>17.5添加电缆密封接头</p>
-<p>17.6设置电缆起点&#x2F;终点绘制电缆</p>
-<p>17.7绘制电缆</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>布线方框图</p>
-<p>03原理图</p>
-<p>其他</p>
-<p> 以下命令在 SOLIDWORKS® Electrical Standard Edition 软件中处于非活动状态：</p>
+<img src="Electrical-3D教程/5/线路类型.png">
+
+
+
+<h2 id="布线设置"><a href="#布线设置" class="headerlink" title="布线设置"></a>布线设置</h2><p>参数设置连接点和布线路径的识别参数：</p>
 <ul>
-<li>链接到 PDM 配置 </li>
-<li>已连接用户 </li>
-<li>ERP 数据库连接</li>
-<li>导入 DWG 文件</li>
-<li>导入数据 </li>
-<li>导出到 Excel </li>
-<li>从 Excel 导入 </li>
-<li>Excel 自动化 </li>
-<li>插入 PLC</li>
-<li>连接标签 </li>
-<li>显示&#x2F;隐藏等电位标签 </li>
-<li>显示&#x2F;隐藏线标签</li>
-<li>插入连接器</li>
-<li>插入印刷电路板 </li>
-<li>报告配置管理器</li>
-<li>替换数据 </li>
-<li>拍摄快照</li>
-<li>快照管理 </li>
-<li>SOLIDWORKS 装配体</li>
-<li>线束</li>
-<li>PLC</li>
-<li>输入&#x2F;输出</li>
+<li>两个布线路径之间的距离</li>
+<li>连接点到第一个布线路径之间的距离</li>
+<li>线路中电缆&#x2F;电线的间距</li>
 </ul>
+<img src="Electrical-3D教程/5/布线设置.png">
+
+<h1 id="6电缆布线"><a href="#6电缆布线" class="headerlink" title="6电缆布线"></a>6电缆布线</h1><p>打开柜外布线装配体“EW_PUMP_TANK_PANEL_SUPPORT”，</p>
+<img src="Electrical-3D教程/6/关联设备.png">
+
+<h2 id="关联零部件"><a href="#关联零部件" class="headerlink" title="关联零部件"></a>关联零部件</h2><p>在原本的装配体内，如果已经有设备模型，则可以选择【关联】的方式，让模型和原理图的设备关联使用</p>
+<img src="Electrical-3D教程/6/关联零部件.png">
+
+<p>现在是关联好外部接线的设备了。打开总装文件“Pump Uint”将柜内“Cabinet”（设备L1）和柜外“Pump Building”（设备L2）放到总装配体文件内。</p>
+<img src="Electrical-3D教程/6/打开总装柜内柜外设备.png">
+
+<h2 id="插入电缆接头"><a href="#插入电缆接头" class="headerlink" title="插入电缆接头"></a>插入电缆接头</h2><p>插入电缆接头“Cable_gland_14.SLDPRT”，用于辅助对接电缆线和端子排单线（作为中间辅助工作）。关键是电缆接头里有电缆连接点“EwCable”，</p>
+<img src="Electrical-3D教程/6/插入电缆接头.png">
+
+<p>设置电缆起点终点该模型具有3条电缆线W1、W2、W3。我们需要去设置带有“EwCable”的起点终点设备（本次模型对应的是W1：电缆接头和电机；W2，3对应的是电缆接头和传感器）。</p>
+<img src="Electrical-3D教程/6/设置电缆起点终点.png">
+
+<p>补充说明：其中我们需要留意的是电缆的“源设备连接点”和“终点设备连接点”。这是从电缆连接点“EwCable”接出去的下一个目标，即“EwCable”——&gt;“Cpoint 0_0”。</p>
+<h2 id="绘制电缆"><a href="#绘制电缆" class="headerlink" title="绘制电缆"></a>绘制电缆</h2><img src="Electrical-3D教程/6/绘制电缆.png">
+
+
+<h1 id="7布线错误分析"><a href="#7布线错误分析" class="headerlink" title="7布线错误分析"></a>7布线错误分析</h1><p>完成电线、电缆或线束布线过程后，布线分析对话框将列出所有错误或警告。单击 […] 可帮助您纠正错误。请参阅错误和警告列表上的可预览项。下面列举出常见项，其他的可见官方帮助进行检查。</p>
+<img src="Electrical-3D教程/7/布线错误分析.png">
+
+<p><strong>未分配设备型号：</strong>设备树中所有未插入或未与SOLIDWORKS 3D 零件&#x2F;装配体相关联的设备型号。解决方法： 插入或关联设备型号。</p>
+<p><strong>缺少电气连接点：</strong>电气零件的定义与 3D 零件的定义不匹配。SOLIDWORKS 零件中缺少连接点。解决方法：通过设备向导向 3D 零件添加缺少的设备连接点。</p>
+<p><strong>不正确的布线类型：</strong>如果插入至 3D 零件的非电气设备连接点与设备型号中的电气设备连接点定义相匹配，则会出现此情况。解决方法：编辑零件并更改设备连接点布线类型。</p>
+<p><strong>没有有效布线路径：</strong>电线或电缆不存在路径；或已定义 SOLIDWORKS 从&#x2F;到零件，但自动布线功能无法找到有效路径；或避让设置阻止使用有效路径。解决方法：通过预览查看三色草图并识别缺少的路径零件。</p>
+<h1 id="8线束设计"><a href="#8线束设计" class="headerlink" title="8线束设计"></a>8线束设计</h1><p>电线的识别点是“Cpoint 0_0”连接点；电缆的识别点是“EwCable”连接点；线束的识别点是带电线连接点或电缆连接点的连接器零件。我们下面从原理图软件来创建线束并使用它。</p>
+<h2 id="插入连接器"><a href="#插入连接器" class="headerlink" title="插入连接器"></a>插入连接器</h2><p>先创建一份用于绘制线束的原理图纸，并修改图纸的说明属性为“线束原理图”。</p>
+<img src="Electrical-3D教程/8/image-20240513094821138.png">
+
+<p>在【原理图-插入连接器】创建用于线束识别的连接器符号。本次我们选择的是8pin的连接器型号。</p>
+<img src="Electrical-3D教程/8/image-20240513095053888.png">
+
+<p>符号属性默认</p>
+<img src="Electrical-3D教程/8/image-20240513095139204.png">
+
+<p>在插入动态连接器界面下选择“具有引脚符号的动态连接器”。</p>
+<img src="Electrical-3D教程/8/image-20240513095234183.png">
+
+<p>通过鼠标左键点击放置连接器符号到图纸任意位置。即完成连接器插入操作。</p>
+<img src="Electrical-3D教程/8/image-20240513095442467.png">
+
+<p>利用相同的操作将2个4pin的连接器也插入到图纸中，为连电线做准备</p>
+<img src="Electrical-3D教程/8/image-20240513095634895.png">
+
+<h2 id="生成线束"><a href="#生成线束" class="headerlink" title="生成线束"></a>生成线束</h2><p>在【原理图-绘制单线类型】选择4条单线,连接2个4pin连接器到8pin上.</p>
+<img src="Electrical-3D教程/8/image-20240513095759347.png">
+
+<p> 框选连接器和电线,右键连接器[从线束田间&#x2F;删除],来生成线束.</p>
+<img src="Electrical-3D教程/8/image-20240513100119373.png">
+
+
+
+<img src="Electrical-3D教程/8/image-20240513100156478.png">
+
+<p>选择[新建线束]</p>
+<img src="Electrical-3D教程/8/image-20240513100305360.png">
+
+<p>见新建好的线束H1添加到刚刚的连接器原理图里.</p>
+<img src="Electrical-3D教程/8/image-20240513100401088.png">
+
+<p>完成添加后,退出[从线束添加&#x2F;删除]</p>
+<img src="Electrical-3D教程/8/image-20240513100458688.png">
+
+<p>查看线束</p>
+<img src="Electrical-3D教程/8/image-20240513100705305.png">
+
+<h2 id="线束布线"><a href="#线束布线" class="headerlink" title="线束布线"></a>线束布线</h2><p>创建一个新位置来单独演示我们的[线束布线]</p>
+<img src="Electrical-3D教程/8/image-20240513100738454.png">
+
+<img src="Electrical-3D教程/8/image-20240513100918710.png">
+
+<p>设备-修改连接器设备的位置，到刚才新建的“线束1”位置。</p>
+<img src="Electrical-3D教程/8/image-20240513100946083.png">
+
+<img src="Electrical-3D教程/8/image-20240513101044449.png">
+
+<p>完成后，可以看到位置L3，已经有了3个连接器的设备</p>
+<img src="Electrical-3D教程/8/image-20240513101114393.png">
+
+<p>创建3D布线用的装配体</p>
+<img src="Electrical-3D教程/8/image-20240513101312654.png">
+
+<p>根据前面课程内容,打开”线束1”位置的装配体,并添加带有4pin和8pin的连接器进行设备[关联].然后绘制布线路径.</p>
+<img src="Electrical-3D教程/8/image-20240513110506880.png">
+
+<p>最后进行[绘制线束]布线,</p>
+<img src="Electrical-3D教程/8/image-20240513110617246.png">
+
+<h2 id="平展线路"><a href="#平展线路" class="headerlink" title="平展线路"></a>平展线路</h2><p>这里原本是可以展开的很漂亮的,但是我的不知咋回事展开比较难看就先不写了.你们可以看我的Routing笔记里的<a href="#">#平展线路</a>那一章内容.</p>
+<h2 id="线束工程图"><a href="#线束工程图" class="headerlink" title="线束工程图"></a>线束工程图</h2><p>可以看我的Routing笔记里的<a href="#">#线束工程图</a>那一章内容.</p>
+<h1 id="报表"><a href="#报表" class="headerlink" title="报表"></a>报表</h1><p>可在菜单栏【工具-SOLIDWORKS Electrical-工程-报表】打开“报表管理器”。也可以在electrical插件窗口，右键工程打开（如图）。</p>
+<img src="Electrical-3D教程/9/打开报表.png">
+
+<p>报表管理器会显示”按线类型的电线清单”和”电缆清单”等.</p>
+<img src="Electrical-3D教程/9/报表管理器.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q%A"></a>Q%A</h1><img src="Electrical-3D教程/8/image-20240513103638867.png">
+
+
+
+<img src="Electrical-3D教程/8/image-20240513105343400.png">
+
+
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://swelectrical-help.solidworks.com/dl/swe/CHM/2022/ZH/HelpOnLine/Index.htm#EWINSBPTUNKNOWN.htm">SOLIDWORKS Electrical帮助说明</a></p>
+<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><p>尽管 SOLIDWORKS Electrical 3D 中的大多数可用功能旨在创建  3D 布局和布线，但仍可以编辑端子排等工程数据、管理报表等。这些命令在 SOLIDWORKS  Electrical 工具栏和 SOLIDWORKS  Electrical 下拉菜单中分组。</p>
+<img src="Electrical-3D教程/0/工具栏.png">
+
+
+
 </div>
  		<!-- 引入正文 -->
     </div>	

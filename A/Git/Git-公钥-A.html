@@ -44,7 +44,7 @@
 </div>
 
 <div id="article"><h1 id="Git-公钥"><a href="#Git-公钥" class="headerlink" title="Git-公钥"></a>Git-公钥</h1><p>首先，你的电脑上需要下载安装 Git 工具，链接<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
-<p>Git 本机 ssh<br>公钥类似于 Git 仓库的通行证。没有公钥上次时需要每次都输入账号和密码</p>
+<p>Git 本机 ssh 公钥类似于 Git 仓库的通行证。没有公钥上次时需要每次都输入账号和密码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;lxxxxdy&quot;  *#码云用户名*</span><br><span class="line">git config --global user.email &quot;xxx83@qq.com&quot;   *#邮箱*</span><br></pre></td></tr></table></figure>
 
 
@@ -57,9 +57,8 @@
 <p>直接回车到底即可，完成后输入以下指令即可查看，如果不是默认地址请自行更改下面的命令。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 
-<p>此时，在你的本地就已经生成了公钥。</p>
-<p>一般在：C:\Users\Administrator.ssh 文件夹下 id_rsa.pub 文件</p>
-<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p>1、第一步查看 git 的 ssh 公钥是否存在，win+S 键打开搜索框，输入”Git<br>Bash”并打开</p>
+<p>此时，在你的本地就已经生成了公钥。一般在：C:\Users\Administrator.ssh 文件夹下 id_rsa.pub 文件</p>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p>1、第一步查看 git 的 ssh 公钥是否存在，win+S 键打开搜索框，输入”Git Bash”并打开</p>
 <p>2、然后在 Git Bash 输入以下命名查看是否有密钥：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh（回车）</span><br><span class="line">ls（回车）</span><br><span class="line">cat ~/.ssh/id_rsa.pub（回车）</span><br></pre></td></tr></table></figure>
 

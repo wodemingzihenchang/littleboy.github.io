@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-教程4对称和自平衡"><a href="#Simulation-教程4对称和自平衡" class="headerlink" title="Simulation-教程4对称和自平衡"></a>Simulation-教程4对称和自平衡</h1><span id="more"></span>
+
+
+
+<h2 id="分析实例-容器"><a href="#分析实例-容器" class="headerlink" title="分析实例:容器"></a>分析实例:容器</h2><p>问题描述:容器放置在桌子上，内部溶液距离杯口10mm，求杯子底部径向扩<br>张量。杯子材料:ABS液体材质:水</p>
+<p><img src="/Simulation-%E6%95%99%E7%A8%8B/3/image-20240311164337766.png" alt="image-20240311164337766"></p>
+<p>4.1 冷缩配合零件</p>
+<p>4.2实例分析:冷缩配合</p>
+<p>4.2.1 项日描述</p>
+<h2 id="对称"><a href="#对称" class="headerlink" title="对称"></a>对称</h2><p>【夹具-高级-对称】</p>
+<h2 id="虚拟臂"><a href="#虚拟臂" class="headerlink" title="虚拟臂"></a>虚拟臂</h2><p>【相触面组-虚拟臂】</p>
+<p><img src="/Simulation-%E6%95%99%E7%A8%8B/3/image-20240311170415848.png" alt="image-20240311170415848"></p>
+<h2 id="轴对称"><a href="#轴对称" class="headerlink" title="轴对称"></a>轴对称</h2><p> 【新建算例-2D简化静应力】</p>
+<p>4.2.3关键步骤</p>
+<p>4.2.4 特征消隐.</p>
+<p>4.2.5刚体模式</p>
+<p>4.2.6 冷缩配合接触条件</p>
+<p>4.2.7 在局部坐标系中图解显示结果</p>
+<p>4.2.8 定义圆柱坐标系</p>
+<p>4.2.9 保存所有图解</p>
+<p>4.2.10 “什么错”特征</p>
+<p>4.3 带软弹簧的分析</p>
+<p>4.3.19软弹簧</p>
+<p>4.3.2 惯性倒除</p>
+<p>4.4 总结</p>
+<h2 id="均布载荷"><a href="#均布载荷" class="headerlink" title="均布载荷"></a>均布载荷</h2><p>分析实例:桌面放置物体<br>问题描述:考察桌子正中间放置一个质量为44.6kg的长方体，考察桌子的变形情况。材料:合金钢</p>
+<p><img src="/Simulation-%E6%95%99%E7%A8%8B/3/image-20240311174416387.png" alt="image-20240311174416387"></p>
+<p>材料参数对计算结果影响</p>
+<p>弹性模量<br>泊松比<br>密度<br>屈服强度<br>最大位移<br>最大应力<br>安全系数</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

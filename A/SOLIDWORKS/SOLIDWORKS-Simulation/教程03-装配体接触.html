@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-装配体接触"><a href="#Simulation-装配体接触" class="headerlink" title="Simulation-装配体接触"></a>Simulation-装配体接触</h1><p>前面几章的分析是在零件单实体的情况下进行的，那如果是多实体或是装配体情况下。我们就可能会需要考虑零件和零件之间的接触影响，因此本章将带大家来看一个“带接触”的装配体分析案例。</p>
+<span id="more"></span>
+
+<!-- 分析案例：支架
+问题描述:支架两端通过地脚螺栓固定在地面上，零件凹孔面承受2000N的法向推力，求解支架的应力和位移。材料:AISI304-->
+
+<p>分析案例：虎钳</p>
+<p>材料:合金钢。接触缝隙分析。分别将225N的“挤压”力作用在钳臂的末端，平板短边两侧固定。求解模型，并查看位移和应力分布情况。</p>
+<p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240308153842247.png" alt="image-20240308153842247"></p>
+<p>装配体分析中的关键步骤如下:</p>
+<p>1)应用材料:可以一次性对所有装配体添加材料，也可以分别添加。<br>2)添加夹具:和零件中添加夹具的方法一样，用以约束模型的运动。<br>3)施加零部件接触条件:在没有特别指明局部接触条件的情况下，零部件接触条件用来指明零件或子装配体是如何接触到一起的，或如何相互作用的。<br>4)应用局部接触条件:局部接触条件会取代零部件接触条件。<br>5)应用网格控制:应力集中或应力变化剧烈的几何区域，需要对网格进行细化操作<br>6)划分网格。<br>7)运行分析。<br>8)分析结果:判断结果是否足够精确，或进一步细化网格是否必要。</p>
+<h2 id="零部件接触"><a href="#零部件接触" class="headerlink" title="零部件接触"></a>零部件接触</h2><h3 id="全局接触"><a href="#全局接触" class="headerlink" title="全局接触"></a>全局接触</h3><p>虎钳零部件接触：使用全局接触的虎钳分析</p>
+<p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240308163128970.png" alt="image-20240308163128970"></p>
+<table>
+<thead>
+<tr>
+<th>接触类型</th>
+<th>适用条件和范围</th>
+<th>图示</th>
+<th>算法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无穿透</td>
+<td>防止两实体产生干涉运算耗时。适用于静态算例、掉落测试算例、非线性算例</td>
+<td><img src="教程03-装配体接触/无穿透.png"></td>
+<td>罚函数法</td>
+</tr>
+<tr>
+<td>接合</td>
+<td>粘合两实体，适用于所有需要网格化的算例类型。</td>
+<td><img src="教程03-装配体接触/接合.png"></td>
+<td>约束方程&#x2F;节点耦合</td>
+</tr>
+<tr>
+<td>允许贯穿</td>
+<td>允许载荷在零件之间产生干涉，适用于静态算例、非线性算例频率算例、扭曲算例及掉落测试算例。</td>
+<td><img src="教程03-装配体接触/允许贯穿.png"></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="接触面组"><a href="#接触面组" class="headerlink" title="接触面组"></a>接触面组</h3><p>手动设置接触面组（2022后改名为”本地交互“）</p>
+<img src="教程03-装配体接触/相触面组.png">
+
+
+
+
+
+<h2 id="添加夹具和载荷"><a href="#添加夹具和载荷" class="headerlink" title="添加夹具和载荷"></a>添加夹具和载荷</h2><p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240308153842247.png" alt="image-20240308153842247"></p>
+<h2 id="观察装配体结果"><a href="#观察装配体结果" class="headerlink" title="观察装配体结果"></a>观察装配体结果</h2><p>本次希望了解，模型是否有超过设计许用应力138MPa的应力存在，为了判断von mises是否超过最大值，可更改图解选项（如下图）。</p>
+<p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240308154549678.png" alt="image-20240308154549678"></p>
+<p>对于装配体来说，有些零部件可能被遮挡或是无需显示在图面上，则可以利用【图解定义-高级选项-仅显示选定实体上的图解】。</p>
+<p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240308154839864.png" alt="image-20240308154839864"></p>
+<p>手柄接触</p>
+<p>所需的力</p>
+<p>使用局部接触的虎钳分析</p>
+<h1 id="局部接触"><a href="#局部接触" class="headerlink" title="局部接触"></a>局部接触</h1><p>局部接触类型。无穿透局部接触条件</p>
+<p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240308162313476.png" alt="image-20240308162313476"></p>
+<p>正确设置接触</p>
+<p><img src="/%E6%95%99%E7%A8%8B03-%E8%A3%85%E9%85%8D%E4%BD%93%E6%8E%A5%E8%A7%A6/image-20240522144224993.png" alt="image-20240522144224993"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本章中，我们对带有多种接触条件的一个简单虎钳装配体进行了分析。为简化几何体，我们压缩了平板零件，它可以通过对钳头加载固定几何体的夹具来替代。</p>
+<p>分析完成后，我们发现最大Von Mises 应力为93MPa。这个应力低于指定的设计强度138MPa。为了确保应力结果，应当细化网格来保证应力是收敛的。</p>
+<p>此外，产生的最大位移为0.393mm，使用这个结果来更改加载的载荷，以研究当载荷大到手柄接触到一起时发生的状况。接触条件可以分为两种不同的类别:【零部件接触】和【局部接触（相触面组）】。本章对两种类型的接触都进行了介绍。局部接触优先于所有零部件接触，而所有用户定义的零部件接触又优于顶层装配体层级的零部件接触(本质上表现为针对整个装配体的全局接触条件)。</p>
+<p>当零部件接触应用到零件或装配体的初始接触面时，局部条件可以允许存在间隙和初始的分离。本章还介绍了各种类型的接触属性和选项，即【接合】、【允许贯通】、【无穿透】、【冷缩配合】和【虚拟壁】。我们采用了线性准则(输入和输出线性相关)来放大载荷，以达到夹紧钳的目的。最后考察了线性材料分析的局限性，并介绍了接触应力。</p>
+<p>提问：</p>
+<p>Q1全局接触的条件类型？</p>
+<p>Q2局部接触的条件类型？</p>
+<p>Q3练习双环装配体</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

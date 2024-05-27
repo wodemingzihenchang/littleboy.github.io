@@ -66,6 +66,22 @@
 <img src="插件和任务/任务列表.png">
 
 <h1 id="dispatch"><a href="#dispatch" class="headerlink" title="dispatch"></a>dispatch</h1><p><a target="_blank" rel="noopener" href="https://littleboy97.gitee.io/_A/SOLIDWORKS-PDM/3-%E6%8A%80%E5%B7%A7/PDM%E6%8F%92%E4%BB%B6dispatch.html">PDM插件dispatch</a></p>
+<h1 id="SWTaskAdd"><a href="#SWTaskAdd" class="headerlink" title="SWTaskAdd"></a>SWTaskAdd</h1><p>为确保插件（如 SOLIDWORKS Task 插件）的最新版本正在运行，您必须手动升级插件。</p>
+<p>将文件保管库升级到新的 Service Pack 或版本时，现有的 加载项不会自动更新。这是为了防止 覆盖自定义项的加载项。</p>
+<p>例如，您可能已自定义由 SOLIDWORKS 任务插件。您可以继续使用自定义任务，而不升级。 但是，您将无法使用新的任务功能，并且可能会遇到问题 启动任务并处理升级的 SOLIDWORKS 文件。</p>
+<p>自 升级 这 任务 手动地 复制 .cex 文件 那 包含 SWTaskAdd-in、 转换 设计检查器和打印 任务。 这 位置 之 .cex 文件取决于 安装 之 客户端。如果安装客户端 通过 在 InstallShield 向导中，将 .cex 文件复制到 C：\Program Files\SOLIDWORKS PDM\Default Data\ 文件夹。 如果安装 客户 通过 SOLIDWORKS 安装管理程序，将 .cex 文件复制到 C：\Program Files\SOLIDWORKS Corp\Default Data\ 文件夹。您导入 这些文件中的一个或多个，用于更新 SWTaskAdd-in 及其任务 支持。</p>
+<p>内容</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_determining_current_versions_EPDM_SWTaskAddin.htm">确定 SOLIDWORKS PDM 和 SOLIDWORKS Task 插件的当前版本</a></p>
+<p>为确保您拥有 SOLIDWORKS Task 插件的最新更新，SOLIDWORKS PDM Professional 版本和 SWTaskAddin 版本应相同。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_performing_SWTaskAddin_upgrade.htm">执行 SWTaskAddin 升级（仅限 SOLIDWORKS PDM Professional）</a></p>
+<p>如果 SWTaskAddin 的版本低于 SOLIDWORKS PDM Professional 的版本，您可以通过导入 .cex 文件来升级 SWTaskAddin。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_upgrading_tasks.htm">升级任务</a></p>
+<p>升级 SWTaskAddin 后，可以导入最新版本的“转换”、“打印”和“设计检查器”任务。</p>
+</li>
+</ul>
 </div>
  		<!-- 引入正文 -->
     </div>	

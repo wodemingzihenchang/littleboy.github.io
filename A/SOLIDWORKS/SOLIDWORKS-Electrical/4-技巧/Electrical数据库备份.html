@@ -46,14 +46,23 @@
 <div id="article"><h1 id="Electrical数据库备份"><a href="#Electrical数据库备份" class="headerlink" title="Electrical数据库备份"></a>Electrical数据库备份</h1><h2 id="数据库备份"><a href="#数据库备份" class="headerlink" title="数据库备份"></a>数据库备份</h2><p>SQL server</p>
 <h2 id="备份类型"><a href="#备份类型" class="headerlink" title="备份类型"></a>备份类型</h2><p>符号管理器<br>图框管理器<br>安装图管理器<br>宏管理器<br>电缆型号管理器 设备型号管理器</p>
 <p><img src="/Electrical%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD/image-20240509121955557.png" alt="image-20240509121955557"></p>
-<h2 id="文档备份"><a href="#文档备份" class="headerlink" title="文档备份"></a>文档备份</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS Electrical</span><br></pre></td></tr></table></figure>
-
-
-
-
-
 <p>压缩备份</p>
 <p>解压缩还原</p>
+<h1 id="协作服务器网络配置"><a href="#协作服务器网络配置" class="headerlink" title="协作服务器网络配置"></a>协作服务器网络配置</h1><p>在 SOLIDWORKS® Electrical Schematic 应用程序中，如何配置数据库名称和实例以使用 IP 地址来避免 DNS 服务器？</p>
+<p><strong>方法</strong></p>
+<p>要在 SOLIDWORKS® Electrical、SQL 服务器和 DNS 服务器之间的协作服务器之间进行通信时节省时间并避免不必要的网络通信，请执行以下步骤：</p>
+<p>1.在 SOLIDWORKS Electrical 中，转至“工具”&gt;“应用程序设置”&gt;“协作服务器”。<br>2.将 “地址”（服务器名称）替换为 IP 地址。请参见随附的图像“S-078403_Collaborative_server.jpg”。<br>3.单击“数据库”选项卡。<br>4.对于“服务器名称”，将 SQL Server 和实例的名称替换为服务器的 IP 地址和 SQL 使用的 TCP 端口号。使用逗号作为分隔符。例如，“127.0.0.1,1466”。请参见随附的图像“S-078403-Databases.jpg”。<br>5.单击“确定”并重新启动应用程序。</p>
+<p>要确定 SQL 使用的 TCP 端口，请执行以下步骤：</p>
+<p>1.打开 Windows® “计算机管理”应用程序。<br>2.展开“SQL Server 配置管理器”。<br>3.展开“SQL Server 网络配置”。<br>4.单击“[SQL 实例] 的协议”。<br>5.在详细信息窗格中，双击“TCP&#x2F;IP”。<br>6.在“IP 地址”选项卡上，向下滚动以查看“IPALL”组中的“TCP 端口”。</p>
+<h2 id="文档备份"><a href="#文档备份" class="headerlink" title="文档备份"></a>文档备份</h2><p>默认在安装位置中会有如下内容，这些内容包括了：正在数据库协同处理的工程文件、符号库设备库等物理文件。对这些文件的备份十分重要，因为在卸载时，可能会因为你选择清除数据而被删除。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS Electrical</span><br></pre></td></tr></table></figure>
+
+<p>内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">BidXlsTemplate</span><br><span class="line">Block：符号</span><br><span class="line">BOMTemplate</span><br><span class="line">DatabaseTemplate</span><br><span class="line">DrawingStyle</span><br><span class="line">epdm_bom</span><br><span class="line">ErpDatabase</span><br><span class="line">Glossary</span><br><span class="line">Macros</span><br><span class="line">Palette：</span><br><span class="line">Plot Styles</span><br><span class="line">Projects</span><br><span class="line">ProjectTemplate：示例工程文件</span><br><span class="line">SOLIDWORKS：3D零件</span><br><span class="line">TEMP</span><br><span class="line">TitleBlock：图框</span><br><span class="line">XlsAutomation</span><br><span class="line">XmlConfig</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/%E5%8D%8F%E4%BD%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/image-20240510183059677.png" alt="image-20240510183059677"></p>
 </div>
  		<!-- 引入正文 -->
     </div>	

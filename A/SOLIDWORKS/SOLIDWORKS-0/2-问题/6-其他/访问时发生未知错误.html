@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-10 17:36:39</span>
+</div>
+
+<div id="article"><h1 id="访问时发生未知错误"><a href="#访问时发生未知错误" class="headerlink" title="访问时发生未知错误"></a>访问时发生未知错误</h1><h2 id="情况1"><a href="#情况1" class="headerlink" title="情况1"></a>情况1</h2><p>在 SOLIDWORKS® 软件中删除零部件之后，如何解决错误“访问….时发生未知错误”？</p>
+<p>ANSWER	<br>在某些特定情况下，当装配体中的数据损坏或未正确对齐时，您可能会看到此消息。</p>
+<p>恢复原始行为的一种可能方法如下所示：</p>
+<p>1.转到“文件”&gt;“打开”。<br>2.选择装配体 &gt; 将“配置”字段更改为“ &lt;高级&gt; ”。<br>3.单击“打开”。<br>4.在“配置文档”对话框中，激活“仅显示装配体结构的新配置”选项 &gt; 键入名称 &gt;“确定”。装配体将打开，并且所有零部件均处于抑制状态。<br>5.使用其他名称保存装配体。<br>6.使用新配置打开新命名的装配体。<br>7.删除零部件，然后单击“全部保存”。<br>8.重新打开装配体并删除新配置。<br>9.保存项目。</p>
+<p>另一个建议是更改配置顺序，如下所示：</p>
+<p>1.打开“ConfigurationManager”。<br>2.将“树顺序”选项更改为“数字”。<br>3.右键单击配置 &gt;“重建所有配置”。<br>4.保存项目。</p>
+<h2 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h2><p>删除特定零部件之后保存装配体时，如何解决错误“访问时发生未知错误”？<br>ANSWER	<br>该装配体可能包含损坏的“镜向零部件”特征。要修复此类装配体，您必须识别并删除损坏的“镜向零部件”特征。有时需要删除多个甚至所有镜向特征。</p>
+<p>如果在删除所有“镜向零部件”阵列后问题仍然可以重现，则请尝试以下工作流程：</p>
+<p>1.创建新的装配体。<br>2.将有问题的装配体作为子装配体插入并将其解散。<br>3.删除所有需要的零部件并尝试保存文件。这应该可以解决问题。</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>A.症状<br>在运行仿真时，出现以下错误且分析失败。“在访问 [驱动器盘符]:[Path]*.GEN 时发生未知错误”</p>
+<p>C.原因</p>
+<p>如果 SOLIDWORKS 文件或结果文件夹位于网络位置（网络文件夹）上，则会出现此情况。<br>与 SOLIDWORKS® 相比，如果文件存储在网络位置，SOLIDWORKS Simulation 必须进行大量数据处理并可能导致输出延迟或类似错误。<br>因此建议将 SOLIDWORKS Simulation 限制为仅用于本地计算机上的文件。</p>
+<p>C.解决方案</p>
+<p>1.检查文件是否位于网络驱动器上。如果是这种情况，请将它们移至本地驱动器上的文件夹。<br>2.在算例的“属性”中检查结果文件夹位置。如果该文件夹位于网络驱动器上，请将其更改为本地计算机上的文件夹。在运行之前，您必须验证所有已定义算例的结果文件夹位置。<br>3.再次运行算例。</p>
+<p>这可避免因网络问题而引起的错误。</p>
+<p>注意：较小的模型在通过网络驱动器运行时也许会正常工作，但在使用较大的模型时更有可能会出现问题。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

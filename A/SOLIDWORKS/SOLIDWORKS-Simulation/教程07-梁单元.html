@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-16 13:38:27</span>
+</div>
+
+<div id="article"><h1 id="Simulation-教程7梁单元"><a href="#Simulation-教程7梁单元" class="headerlink" title="Simulation-教程7梁单元"></a>Simulation-教程7梁单元</h1><p>梁单元<a target="_blank" rel="noopener" href="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/c_beams_trusses_overview.htm?id=c0e779b42c5e4f1c9036634c08b94cd6#Pg0">横梁和桁架</a></p>
+<p>横梁结点<br> 每个横梁的端点有6个自由度，对这6个自由度进行约束及释放能够代表各式各样的连接情形。<br>o 刚性：所有自由度都约束于接合处。把所有力和力矩从横梁单元传递到接合上。<br>o 铰链：端点可自由旋转，不转移任何力矩到接合处<br>o 滑动：端点可自由平移，不转移任何力到接合处<br>o 手动：生成一个用户定义的连接类型</p>
+<span id="more"></span>
+
+<p><img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/gvw1450460512826.image" alt="img"></p>
+<h2 id="创建梁单元"><a href="#创建梁单元" class="headerlink" title="创建梁单元"></a>创建梁单元</h2><p>焊接件格式会自动按“梁单元”处理。</p>
+<p>如果有短的梁单元可能会提示“不能当作梁单元处理”，这里可以选择忽略。</p>
+<p>如果有不能生成梁单元的实体，可能会是微小片体，不具备梁的基本截面形状，这里可以选择删除处理。</p>
+<img src="教程07-梁单元/image-20240319154039415-17163415487471.png">
+
+
+
+<h2 id="夹具约束"><a href="#夹具约束" class="headerlink" title="夹具约束"></a>夹具约束</h2><img src="教程07-梁单元/image-20240319154223466-17163415487482.png">
+
+<h2 id="外部载荷"><a href="#外部载荷" class="headerlink" title="外部载荷"></a>外部载荷</h2><img src="教程07-梁单元/image-20240319154331337-17163415487483.png">
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>横梁应力<br> 均匀轴应力 &#x3D; P&#x2F;A<br> 均匀抗剪应力 &#x3D; V&#x2F;A<br> 折弯动量 M 产生了随与中性轴之间的垂直距离 y 线性变化的轴应力。<br> 折弯应力 (y) &#x3D; My&#x2F;I<br>o 其中 I 是指中性轴的惯性矩。</p>
+<p><img src="/%E6%95%99%E7%A8%8B07-%E6%A2%81%E5%8D%95%E5%85%83/image-20240517141253877.png" alt="image-20240517141253877"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>结构构件又薄又长，所以采用了横梁单元。这样极大地简化了分析，并缩短了计算求解时间。</p>
+<p>模型准备包含横梁单元及接点定义步骤，这两步都是在 SolidWorks Simulation中自动完成的。这些自动生成的接点有时需要进行手工编辑，在本章练习了这种手工编辑步骤。</p>
+<p>如果任意生成的两个接点的距离相对其他接点太近，则可以合并它们。因为横梁单元在每个末端拥有6个自由度，存在多种横梁单元的连接类型。我们通常会在全局坐标系下显示这些位移分量(或自由度)。然而，在任何其他坐标系下也可以显示自由度。</p>
+<p>相比壳单元的节点而言，由于实体单元的节点没有旋转自由度，尝试连接壳和实体单元会沿公共边产生一个预计之外的合叶。</p>
+<p>为了对这个分析下最后的结论，有必要查看连接处的应力。由于横梁与壳体和实体之间连接的限制，软件无法在界面处得到准确的结果。运行只使用实体单元的模型，估计会更好地研究这些位置的应力。</p>
+<h1 id="典型梁结构"><a href="#典型梁结构" class="headerlink" title="典型梁结构"></a>典型梁结构</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/HIDD_HELP_BEAM_BENDING_MOMENT.htm">横梁图表</a></p>
+<h2 id="固定支梁结构"><a href="#固定支梁结构" class="headerlink" title="固定支梁结构"></a>固定支梁结构</h2><p>条件</p>
+<p>$$<br>公式：\omega_c&#x3D;5ql^4&#x2F;384EI<br>$$</p>
+<p>理论</p>
+<h2 id="简支梁结构"><a href="#简支梁结构" class="headerlink" title="简支梁结构"></a>简支梁结构</h2><h2 id="悬臂梁结构"><a href="#悬臂梁结构" class="headerlink" title="悬臂梁结构"></a>悬臂梁结构</h2><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>需要要借助【远程载荷&#x2F;质量】来模拟梁单元约束的“节点”</p>
+<img src="教程07-梁单元/image-20240319160322143.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="弯曲梁单元"><a href="#弯曲梁单元" class="headerlink" title="弯曲梁单元"></a>弯曲梁单元</h2><p>对于弯曲梁单元，软件会将其处理成多端。</p>
+<img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/kty1450460513412.image">
+
+<h2 id="锥形梁单元"><a href="#锥形梁单元" class="headerlink" title="锥形梁单元"></a>锥形梁单元</h2><img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/eqj1450460506588.image">
+
+<img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/blc1450460507134.image">
+
+<img src="https://help.solidworks.com/2019/chinese-simplified/SolidWorks/cworks/nno1450460507691.image">
+
+<h2 id="力矩方向"><a href="#力矩方向" class="headerlink" title="力矩方向"></a>力矩方向</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/HIDD_HELP_BEAM_BENDING_MOMENT.htm">横梁图表</a>。一个两端固定的横梁沿本地方向 1 承受均匀分布载荷的示例。软件将绘制方向 1 上的抗剪图解和关于方向 2 的力矩图。但是这里为什么是方向2？</p>
+<img src="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/nip1479423760652.image">
+
+<img src="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/nxq1479424104013.image">
+
+<img src="https://help.solidworks.com/2020/Chinese-simplified/SolidWorks/cworks/ebw1479424199042.image">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

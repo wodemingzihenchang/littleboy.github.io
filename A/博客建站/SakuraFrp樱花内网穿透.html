@@ -46,14 +46,13 @@
 <div id="article"><h1 id="SakuraFrp内网穿透"><a href="#SakuraFrp内网穿透" class="headerlink" title="SakuraFrp内网穿透"></a>SakuraFrp内网穿透</h1><p>SakuraFrp是免费的内网穿透服务。SakuraFrp是由KasuganoSora开发、维护的一个共享内网穿透管理平台，长期提供免费的内网穿透服务</p>
 <p><strong>内网穿透</strong></p>
 <p>穿后台、建网站、做调试、开游戏……解决没有公网 IP 的难题</p>
-<h2 id="IP访问"><a href="#IP访问" class="headerlink" title="IP访问"></a>IP访问</h2><p>新建隧道选择穿透的节点和隧道类型</p>
+<h1 id="IP访问"><a href="#IP访问" class="headerlink" title="IP访问"></a>IP访问</h1><h2 id="新建TCP隧道"><a href="#新建TCP隧道" class="headerlink" title="新建TCP隧道"></a>新建TCP隧道</h2><p>新建隧道选择穿透的节点和隧道类型</p>
 <img src="SakuraFrp樱花内网穿透/image-20240421121643047.png">
 
 <img src="SakuraFrp樱花内网穿透/image-20240421132740132.png">
 
-<p>查看日志</p>
-<h2 id="域名访问"><a href="#域名访问" class="headerlink" title="域名访问"></a>域名访问</h2><p>新建隧道</p>
-<img src="SakuraFrp樱花内网穿透/image-20240421121643047.png">
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p>查看日志，在日志里会显示Frp服务器转发的IP地址，这个就是可以通过公网访问的地址。到这一步我们就是成功了。</p>
+<h1 id="域名访问"><a href="#域名访问" class="headerlink" title="域名访问"></a>域名访问</h1><h2 id="新建HTTP隧道"><a href="#新建HTTP隧道" class="headerlink" title="新建HTTP隧道"></a>新建HTTP隧道</h2><img src="SakuraFrp樱花内网穿透/image-20240421121643047.png">
 
 <img src="SakuraFrp樱花内网穿透/image-20240421121734640.png">
 
@@ -63,14 +62,22 @@
 <p>访问你的<a target="_blank" rel="noopener" href="https://www.natfrp.com/tunnel/">隧道列表</a>，参考隧道节点</p>
 <img src="SakuraFrp樱花内网穿透/image-20240421115726058.png">
 
-<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>服务商域名解析（这里以阿里云为例：）</p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>服务商域名解析（这里以阿里云为例：）</p>
 <img src="SakuraFrp樱花内网穿透/image-20240421115237919.png">
 
+<p>我们需要对域名进行解析，添加记录。</p>
 <img src="SakuraFrp樱花内网穿透/image-20240421115323566.png">
 
+<p>记录内容的填写可能各有不同，这里以CNAME类型为例（将域名指向另一个域名的方式）：</p>
+<ul>
+<li>记录类型：CNAME</li>
+<li>主机记录：@</li>
+<li>记录值：内网穿透隧道节点（服务器域名或IP）</li>
+<li>TTL：默认即可</li>
+</ul>
 <img src="SakuraFrp樱花内网穿透/image-20240421115609260.png">
 
-<p>服务商域名解析后，在樱花</p>
+<p>服务商域名解析后，在樱花隧道重启服务。</p>
 <img src="SakuraFrp樱花内网穿透/image-20240421132849954.png">
 
 <p>查看日志</p>

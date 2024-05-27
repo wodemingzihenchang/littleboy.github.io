@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-19 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-参数优化"><a href="#Simulation-参数优化" class="headerlink" title="Simulation-参数优化"></a>Simulation-参数优化</h1><p>（设计洞察）优化是在一定条件下寻求使目标最大(小)的决策方案。优化是工程技术，经济管理，科学研究，社会生活中经常遇到的问题。</p>
+<span id="more"></span>
+
+<p>优化分析由三个参数组成:变量，约束和目标。</p>
+<p>目标(Obj):也称为优化准则或优化目标，根据目标的数量可分为单目标优化和多目标优化。<br>变量(DV):也称为设计变量，定义模型可以改变的尺寸。<br>约束(SV):也称为状态变量，定义应力，挠度等的合理变化范围。</p>
+<pre class="mermaid">graph LR
+参数化建模-->求解-->后处理-->设置变量及目标-->参数优化
+参数优化-->非最优解--返回-->设置变量及目标
+参数优化-->最优解</pre>
+
+<h1 id="分析实例-压榨机"><a href="#分析实例-压榨机" class="headerlink" title="分析实例:压榨机"></a>分析实例:压榨机</h1><p>问题描述:设计压榨机，修改部分设计尺寸以满足结构在20000N推力作用下，结构质量最轻，约束条件如下：<br>1.Von Mises应力的大小不得超过100Mpa;<br>2.最大挠度不超过1mm。<br>材料:参照课程模型</p>
+<h2 id="参数化建模"><a href="#参数化建模" class="headerlink" title="参数化建模"></a>参数化建模</h2><img src="Simulation-参数优化/image-20240321093829387.png">
+
+<h2 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h2><p>【新建算例】</p>
+<img src="Simulation-参数优化/image-20240321094020733.png">
+
+<p>【夹具】</p>
+<img src="Simulation-参数优化/image-20240321094056502.png">
+
+<p>【外部载荷】</p>
+<img src="Simulation-参数优化/image-20240321094119460.png">
+
+<p>【结果】</p>
+<p>检查应力云图和网格情况，优化网格精度。</p>
+<h2 id="设置变量及目标"><a href="#设置变量及目标" class="headerlink" title="设置变量及目标"></a>设置变量及目标</h2><img src="Simulation-参数优化/image-20240321094406503.png">
+
+<p>【变量】</p>
+<p>获取尺寸变量</p>
+<img src="Simulation-参数优化/image-20240321094620614.png">
+
+<p>以步长设置变量增量</p>
+<img src="Simulation-参数优化/image-20240321094721657.png">
+
+<p>【约束】&amp;【目标】</p>
+<img src="Simulation-参数优化/image-20240321134814082.png">
+
+<p>运行结果</p>
+<h1 id="利用范围变量优化"><a href="#利用范围变量优化" class="headerlink" title="利用范围变量优化"></a>利用范围变量优化</h1><p>响应曲面设计方法是利用合理的试验设计方法并通过实验得到一定数据，采用多元二次回归方程来拟合因素与响应值之间的函数关系，通过对回归方程的分析来寻求最优参数，解决多变量问题的一种统计方法。</p>
+<p>常用的方法有中心组合设计(CCD)、Box-Benhnken(BBD)</p>
+<h2 id="范围设置"><a href="#范围设置" class="headerlink" title="范围设置"></a>范围设置</h2><p>【参数-范围】</p>
+<img src="Simulation-参数优化/image-20240321135239099.png">
+
+<p>【运行】</p>
+<p>结果</p>
+<p>根据结果可以进一步设置变量范围，继续优化优化</p>
+<h1 id="Simulation-子模型"><a href="#Simulation-子模型" class="headerlink" title="Simulation-子模型"></a>Simulation-子模型</h1><p>子模型是得到模型局部区域中更加精确解的有限单元技术。子模型能够准确运行的前提是父模型的变形结果是准确的。有限元分析的结果求解顺序:位移-应变-应力。</p>
+<img src="Simulation-参数优化/image-20240323104255929.png">
+
+<img src="Simulation-参数优化/image-20240323104448942.png">
+
+
+<img src="Simulation-参数优化/image-20240323104828368.png">
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

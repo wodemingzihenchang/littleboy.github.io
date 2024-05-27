@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-16 09:01:32</span>
+</div>
+
+<div id="article"><h1 id="Simulation-教程8混合网格"><a href="#Simulation-教程8混合网格" class="headerlink" title="Simulation-教程8混合网格"></a>Simulation-教程8混合网格</h1><p>很多时候我们的模型会存在不同的薄厚实体，此时就会需要我们用“实体单元”和“壳单元”进行划分网格。我们会采用【Simulation混合网格划分功能】来创建不同的单元类型，以保证混合网格的兼容性。</p>
+<p>不兼容网格会使实体单元和壳单元完全分离，全局接合在壳单元和实体单元接触面是不起作用。为了连接两者，必须恰当地定义沿着接触面边界上的局部接触条件。</p>
+<p>混合网格划分支持：静态、频率、扭曲、热力、线性和非线性算例。</p>
+<h1 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h1><p>材料：低碳合金钢SA515</p>
+<p>夹具：容器垂直向下并用4个定向接头支撑着，容器允许在直径方向自由膨胀。</p>
+<p>载荷：容器在温度为700°F的最大工作压力为165psi，在本章除压力外不考虑其他载荷。</p>
+<img src="教程08-混合网格-壳和实体/image-20240517140541759.png">
+
+<p>分析装配体</p>
+<h2 id="壳体定义"><a href="#壳体定义" class="headerlink" title="壳体定义"></a>壳体定义</h2><img src="教程08-混合网格-壳和实体/image-20240516135749501.png">
+
+<img src="教程08-混合网格-壳和实体/image-20240516140035487.png">
+
+
+
+
+
+<h2 id="局部接触条件"><a href="#局部接触条件" class="headerlink" title="局部接触条件"></a>局部接触条件</h2><p>有间隙的实体之间必须用局部【接合】的相触面组来确保连接。</p>
+<p>1、壳体面于壳体面接合</p>
+<p>面面接合接触的两个壳单元始终是不兼容的，须定义局部【接合】。有个例外，是两壳体共享分割线的区域，此处接合是有效的。</p>
+<img src="教程08-混合网格-壳和实体/image-20240517114517072.png">
+
+<p>2、壳体边于壳体面接合</p>
+<p>只要在源壳体边与目标壳体面上的分割线一致，全局兼接合约束保接融面上的节点合并在一起。当这个位置是不规范的，也就是在目标面上没有分割线存在或在源边和目标面之间存在间瞭时，必须用局部【接合】接触进行定义。</p>
+<img src="教程08-混合网格-壳和实体/image-20240517113420725.png">
+
+<p>3、壳体与实体接合</p>
+<p>模型中存在的主要接触发生在壳体和实体之间。按照惯例，此时需要设置局部【接合】的接触。同时,【组1】必须是壳体的面或边,【组2】必须是实体零部件上的面。</p>
+<img src="教程08-混合网格-壳和实体/image-20240517114655697.png">
+
+
+
+<h2 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h2><p>快捷菜单:右键单击【网格】文件央并选择【失败诊断】</p>
+<img src="教程08-混合网格-壳和实体/image-20240517135317576.png">
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> – 壳和壳、壳和实体不兼容网格的波节沿着结合接触面不会合并在一起，而是会产生间隙，定义局部的结合接触是必要的。</p>
+<p> – 壳与实体结合时通常选择壳的面或边线作为【组1】，实体的面作为【组2】</p>
+<p> – 在模型中非常小的特征，或相当复杂特征都可能导致网格划分问题。需应用适当的网格控制是必须的</p>
+<!-- 多种壳和壳对实体结合，在接触面必须要结合。由于这个特性，使得在不同零件之间产生壳体模型间隙。因为生成的不兼容网格的波节沿着结合接触面不会合并在一起，所以更正确的约束是通过增加约束方程来确保结合。故为完全地连接在接触面及有间隙接触面上的混合网格，定义局部的结合接触是必要的。 -->
+
+
+
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
