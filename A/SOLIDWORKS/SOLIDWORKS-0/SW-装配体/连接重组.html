@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+
+<!-- 侧边目录栏 -->
+<div id="tree">
+
+</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav><!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-27 15:09:48</span>
+</div>
+
+<div id="article"><h1 id="连接重组"><a href="#连接重组" class="headerlink" title="连接重组"></a>连接重组</h1><p>在零件模式下，多实体我们可以通过【组合-添加】的方式，将多个实体进行合并处理。但是在装配体中是没有【组合】的操作的，取而代之的是【连接重组】。</p>
+<h2 id="模型准备"><a href="#模型准备" class="headerlink" title="模型准备"></a>模型准备</h2><p>在装配体中，您可以将两个或更多的零件连接重组以生成一个新零件。连接重组操作会移除伸入彼此空间的曲面，并且将零件实体合并为一个单一实体。</p>
+<p>因此，你需要有多零件的装配体模型</p>
+<p><img src="http://littleboy97.cn/A/SOLIDWORKS/SOLIDWORKS-0/SW-%E9%9B%B6%E4%BB%B6/%E6%95%99%E7%A8%8B-%E7%89%B9%E5%BE%81/%E8%BF%9E%E6%8E%A5%E9%87%8D%E7%BB%84.png" alt="img"></p>
+<p>将零件放置在装配体中。 零件可以接触其他零件或伸入其他零件之中</p>
+<p>新建空白零件，单击<strong>插入</strong> &gt; <strong>零部件</strong> &gt; <strong>新零件</strong>。并进入编辑模式；</p>
+<h2 id="使用特征"><a href="#使用特征" class="headerlink" title="使用特征"></a>使用特征</h2><p>单击<strong>插入</strong> &gt; <strong>特征</strong> &gt; <strong>连接重组</strong>。在连接重组命令框内选择合并的零部件。</p>
+<p><img src="/%E8%BF%9E%E6%8E%A5%E9%87%8D%E7%BB%84/image-20240527153201916.png" alt="image-20240527153201916"></p>
+<p>在连接重组前，我们需要注意零件和零件之间不能发生相互交叉的情况，如果零件相互交叉，那么对于交叉重合部位，重组后只能保留公共的部分，类似于布尔运算中的合并。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>详细参考：<a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/solidworks/sldworks/t_Creating_a_Joined_Part.htm">帮助</a>。在使用【连接重组】前，有一点需要注意的，就是需要在装配体模型下编辑零件，才能激活该功能。</p>
+</div>
+ 		<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
