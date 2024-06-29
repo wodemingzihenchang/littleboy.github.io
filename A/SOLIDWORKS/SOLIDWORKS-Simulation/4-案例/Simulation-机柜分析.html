@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,13 +36,14 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-19 17:18:29</span>
 </div>
 
 <div id="article"><h1 id="Simulation-机柜分析"><a href="#Simulation-机柜分析" class="headerlink" title="Simulation-机柜分析"></a>Simulation-机柜分析</h1><p>分析实例:机柜<br>问题描述:在柜体顶部指定横梁部位分别施加垂直向下的4450N载荷，并在指定焊接点位置施加垂直向下的4450N载荷，考察结构的应力及变形情况。材料:AISI304</p>
+<p>柜子模型如图10-50所示。其材料为【铝合金】&#x2F;【5052H32】，承载着4450N(1000Ib)的力，并在两个转角处的两个横梁上作用着两个4450N(1000Ib)的载荷，如图10-51所示。为了简化模型，分析中没有计入其他载荷和质量(例如搁板载荷等)。柜子底部沿着基座通过螺栓固定到地面。</p>
 <p><img src="/Simulation-%E6%9C%BA%E6%9F%9C%E5%88%86%E6%9E%90/image-20240319163637325.png" alt="image-20240319163637325"></p>
 <span id="more"></span>
 
@@ -66,7 +66,7 @@
 <p>混合单元的【连结】问题，可能会出现“壳单元”和“梁单元”间的焊接不足问题。</p>
 <p>排查方法：将“壳单元”部分排查在分析之外，排除法检查。</p>
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

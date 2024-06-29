@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-06-04 13:46:36</span>
+</div>
+
+<div id="article"><h1 id="重建数据卡表索引"><a href="#重建数据卡表索引" class="headerlink" title="重建数据卡表索引"></a>重建数据卡表索引</h1><p>使用SOLIDWORKS®PDM Professional，在Microsoft®SQL Server®中使用维护计划重建文件库数据库中的表索引的最佳过程是什么?</p>
+<p>SOLIDWORKS®PDM文件库数据库中的许多表都包含索引，以确保在各种数据库操作执行查找时有效地找到数据。每当对底层数据执行插入、更新或删除操作时，Microsoft®SQL Server®自动维护这些索引。随着时间的推移，在存储库中执行大量文件操作，各种数据库表索引变得分散。例如，在升级之后，可能有许多记录进行了修改，或者在执行迁移之后，添加了许多新记录。这类似于硬盘驱动器变成碎片的方式。您可以通过运行维护计划来更新和刷新索引，以重新构建或重组索引。如果索引非常分散，则该操作可以通过搜索、浏览和文件库中的其他操作提高总体性能。</p>
+<p>为了提高整体性能，最好每月至少重新构建文件库数据库索引并更新统计信息一次。对于较大的数据库和较多的活动，更频繁的重建(例如每周一次)可能是有益的。随附的文档解释了如何使用Microsoft SQL Management Studio创建维护计划，以安排索引的重建。</p>
+<p>请注意，SOLIDWORKS PDM Standard数据库使用的Microsoft SQL Express版本不支持维护计划。有关如何在SQL Express中重建索引的信息，请参见QA00000121565。</p>
+<p>重要的是:</p>
+<p>未经SOLIDWORKS技术支持的同意，任何时候都不应该在SOLIDWORKS PDM数据库中手动创建自定义索引。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

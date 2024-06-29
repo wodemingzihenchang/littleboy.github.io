@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-06-09 14:46:26</span>
+</div>
+
+<div id="article"><h1 id="hexo在群晖部署"><a href="#hexo在群晖部署" class="headerlink" title="hexo在群晖部署"></a>hexo在群晖部署</h1><p>在群晖Synology系统种，可以通过应用程序【Docker】进行hexo镜像创建，把博客部署在Docker上。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>启动docker映像</p>
+<p>生成容器</p>
+<p>内容文件位置修改</p>
+<p>查看日志</p>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p>localhost:4000</p>
+<h2 id="admin设置"><a href="#admin设置" class="headerlink" title="admin设置"></a>admin设置</h2><p>如果你是要把 hexo-admin 映射到公网使用，一定要设置密码，否则就变成谁都可以编辑了。这需要在 _config.yml 文件中添加以下参数</p>
+<p>打开 hexo-admin 界面，点击导航的 settings 选项，点击 Setup authentification here</p>
+<p><img src="/hexo%E5%9C%A8%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2/image-20240609205025275.png" alt="image-20240609205025275"></p>
+<p>依次输入 Username、Password 和 Secret，往下拉，找到生成的代码，</p>
+<p><img src="/hexo%E5%9C%A8%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2/image-20240609205251779.png" alt="image-20240609205251779"></p>
+<p>复制到 _config.yml 文件中，然后重启 hexo。</p>
+<p><img src="/hexo%E5%9C%A8%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2/image-20240609205402398.png" alt="image-20240609205402398"></p>
+<p><img src="/hexo%E5%9C%A8%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2/image-20240609205522940.png" alt="image-20240609205522940"></p>
+<p>再打开 hexo-admin 就需要登录了</p>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>终端机的使用</p>
+<p><img src="/hexo%E5%9C%A8%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2/image-20240609204857024.png" alt="image-20240609204857024"></p>
+<h1 id="文章工作流"><a href="#文章工作流" class="headerlink" title="文章工作流"></a>文章工作流</h1><h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><h2 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h2><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>1、<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/az39o2xp/">【HEXO专辑】1：在群晖上部署快速简洁且高效的博客框架HEXO_NAS存储_什么值得买 (smzdm.com)</a></p>
+<p>2、<a target="_blank" rel="noopener" href="https://laosu.tech/2021/05/07/%E5%9C%A8%E7%BE%A4%E6%99%96%E4%B8%8A%E5%A4%8D%E5%88%BB%E5%85%AC%E7%BD%91%E7%9A%84Hexo/">在群晖上复刻公网的Hexo | 老苏的blog (laosu.tech)</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

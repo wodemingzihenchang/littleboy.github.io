@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,7 +36,7 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-04-27 17:18:29</span>
@@ -47,28 +46,39 @@
 <p>本章我们将利用【自适应网格】方法来自动自动细化网格（h自适应）或自动增加网格阶数（p自适应），以达到更加精确的结果。</p>
 <span id="more"></span>
 
-<p>新建静应力分析算例，根据前面所学知识，设置如下分析条件。</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520163041119.png" alt="image-20240520163041119"></p>
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>新建静应力分析算例，根据前面所学知识，设置如下分析条件。</p>
+<img src="教程13-自适应网格/image-20240520163041119.png">
+
 <h2 id="标准网格"><a href="#标准网格" class="headerlink" title="标准网格"></a>标准网格</h2><p>利用默认网格计算结果</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520163211897.png" alt="image-20240520163211897"></p>
+<img src="教程13-自适应网格/image-20240520163211897.png">
+
 <h2 id="h-自适应"><a href="#h-自适应" class="headerlink" title="h-自适应"></a>h-自适应</h2><p>在仿真设计树的算例【右键-属性-自适应】自适应方法选择“h-自适应”。</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520163849861.png" alt="image-20240520163849861"></p>
+<img src="教程13-自适应网格/image-20240520163849861.png">
+
 <p>h自适应方法里，可以设置“目标精度”即，最后两次结果比大于98%，则完成h自适应的最终结果。</p>
 <p>或者是按照“最大循环次数”进行每次的循环（当5次循环结束后，可能还可以继续【运行】再一个5次循环，直到98%的目标精度才停止）。</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520163918241.png" alt="image-20240520163918241"></p>
+<img src="教程13-自适应网格/image-20240520163918241.png">
+
 <p>运行，循环计算结果</p>
 <p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/h%E8%87%AA%E9%80%82%E5%BA%94.gif" alt="h自适应"></p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520163252683.png" alt="image-20240520163252683"></p>
+<img src="教程13-自适应网格/image-20240520163252683.png">
+
 <h2 id="p-自适应"><a href="#p-自适应" class="headerlink" title="p-自适应"></a>p-自适应</h2><p>在仿真设计树的算例【右键-属性-自适应】自适应方法选择“p-自适应”。</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520163849861.png" alt="image-20240520163849861"></p>
+<img src="教程13-自适应网格/image-20240520163849861.png">
+
 <p>p自适应方法不同于h自适应（细化网格的方式求解），p自适应是通过增加单元格的阶数进行求解。而对照h自适应方法，这里的结束条件也是按结果比，和手动设置的阶数数量。</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520164948554.png" alt="image-20240520164948554"></p>
+<img src="教程13-自适应网格/image-20240520164948554.png">
+
+
+
 <p>修改网格设置</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520165051047.png" alt="image-20240520165051047"></p>
+<img src="教程13-自适应网格/image-20240520165051047.png">
+
 <p>运行</p>
-<p><img src="/%E6%95%99%E7%A8%8B13-%E8%87%AA%E9%80%82%E5%BA%94%E7%BD%91%E6%A0%BC/image-20240520164008996.png" alt="image-20240520164008996"></p>
+<img src="教程13-自适应网格/image-20240520164008996.png">
+
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

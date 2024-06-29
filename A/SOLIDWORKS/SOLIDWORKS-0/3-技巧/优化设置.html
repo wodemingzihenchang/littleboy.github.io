@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,7 +36,7 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-13 16:00:11</span>
@@ -112,7 +111,9 @@ Windows Registry Editor Version 5.00
 <p>“将Speedpak设定到父系”将部件还原后，其内存信息会被加载进内存中。再编辑完成后换成Speedpak模式，其部件的内存信息还会保留。久而久之内存也是会增加上来。</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>因此，在条件允许的情况下，我们建议可以是打开零件编辑的方式，再从总装使用“更新Speedpak子装配体”进行编辑修改的更新。</p>
 <p>除此之外，我们还有关于大型装配体优化方案和标准件轻量化的实施经验，需要了解更多，可以联系智诚科技咨询更多内容。</p>
-<h2 id="方法-5：装配体装零件"><a href="#方法-5：装配体装零件" class="headerlink" title="方法 5：装配体装零件"></a>方法 5：装配体装零件</h2><h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><p>影响因素多来自于图形线条数量和图形信息的加载。</p>
+<h2 id="方法-5：装配体装零件"><a href="#方法-5：装配体装零件" class="headerlink" title="方法 5：装配体装零件"></a>方法 5：装配体装零件</h2><p><img src="/%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/image-20240626103127594-17193691527631.png" alt="image-20240626103127594"></p>
+<p><img src="/%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/image-20240626103238519.png" alt="image-20240626103238519"></p>
+<h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><p>影响因素多来自于图形线条数量和图形信息的加载。</p>
 <!--
 
 部分 SOLIDWORKS 系统选项设置可以通过注册表进行部署：（记得将201x更改为您的实际 SOLIDWORKS 版本号）
@@ -120,7 +121,7 @@ Windows Registry Editor Version 5.00
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 201X\Performance]</span><br><span class="line"></span><br><span class="line">&quot;Transparency Quality&quot;=dword:00000000</span><br><span class="line">&quot;Verify On Rebuild&quot;=dword:00000000</span><br><span class="line">&quot;Target Frame Rate&quot;=dword:00000013</span><br><span class="line">&quot;Mate Animation Speed&quot;=&quot;0&quot;</span><br><span class="line">&quot;Show Preview While Loading&quot;=dword:00000000</span><br><span class="line">&quot;Smart Mate Sensitivity&quot;=&quot;0.5&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 201X\General]</span><br><span class="line"></span><br><span class="line">&quot;View Animation Speed&quot;=0</span><br><span class="line">&quot;Transition show hide component&quot;=0</span><br><span class="line">&quot;Transition isolate component&quot;=0</span><br><span class="line">&quot;View Selector Animation Speed&quot;=0</span><br><span class="line">&quot;Show Latest News feeds In task pane&quot;=dword:00000000</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SolidWorks 201X\Edges]</span><br><span class="line"></span><br><span class="line">&quot;Show Anti Alias Shaded Edges&quot;=dword:00000000</span><br><span class="line">&quot;Show Fullscene Anti Alias&quot;=dword:00000000</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SolidWorks 201X\SW Event Log]</span><br><span class="line"></span><br><span class="line">&quot;Send Feedback Enabled&quot;=dword:00000001</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 201X\Colors]</span><br><span class="line"></span><br><span class="line">&quot;Viewport Background&quot;=&quot;13813955&quot;</span><br><span class="line">&quot;Top Gradient Color&quot;=&quot;13813955&quot;</span><br><span class="line">&quot;Bottom Gradient Color&quot;=&quot;13813955&quot;</span><br><span class="line">&quot;Drawings, Background&quot;=&quot;13813955&quot;</span><br></pre></td></tr></table></figure>
 <p>–&gt;</p>
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

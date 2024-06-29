@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,7 +36,7 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-04-02 15:49:01</span>
@@ -54,7 +53,7 @@
 <figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 批量打印WORD文档()</span><br><span class="line">     <span class="keyword">Dim</span> fileToOpen, GetOpenFilename, App, iFile</span><br><span class="line">     fileToOpen = Application.GetOpenFilename(filefilter:=<span class="string">&quot;Word文档(*.do*),*.do*&quot;</span>, FilterIndex:=<span class="number">4</span>, Title:=<span class="string">&quot;请选择要处理的文档(可多选)&quot;</span>, MultiSelect:=<span class="literal">True</span>)</span><br><span class="line">     <span class="keyword">If</span> <span class="built_in">Not</span> IsArray(fileToOpen) <span class="keyword">Then</span></span><br><span class="line">         MsgBox <span class="string">&quot;你没有选择文件&quot;</span>, vbOKOnly, <span class="string">&quot;提示&quot;</span>: <span class="keyword">Exit</span> <span class="keyword">Sub</span></span><br><span class="line">     <span class="keyword">Else</span></span><br><span class="line">         <span class="keyword">Set</span> App = CreateObject(<span class="string">&quot;Word.Application&quot;</span>)</span><br><span class="line">         <span class="keyword">For</span> <span class="keyword">Each</span> iFile <span class="keyword">In</span> fileToOpen</span><br><span class="line">             <span class="keyword">Set</span> WrdDoc = App.Documents.Open(iFile)</span><br><span class="line">             App.Documents(WrdDoc).PrintOut</span><br><span class="line">             App.Documents(WrdDoc).Close <span class="literal">False</span></span><br><span class="line">             T = T + <span class="number">1</span></span><br><span class="line">         <span class="keyword">Next</span></span><br><span class="line">     <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">     MsgBox <span class="string">&quot;操作完成！！&quot;</span> &amp; vbCrLf &amp; <span class="string">&quot;打印了 &quot;</span> &amp; T &amp; <span class="string">&quot; 个文件。&quot;</span>, vbOKOnly, <span class="string">&quot;提示&quot;</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
 
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

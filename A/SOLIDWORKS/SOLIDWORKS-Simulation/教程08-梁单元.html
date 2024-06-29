@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-19 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-梁单元"><a href="#Simulation-梁单元" class="headerlink" title="Simulation-梁单元"></a>Simulation-梁单元</h1><h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2><p>打开Conveyor Frame.SLDPRT模型，新建静应力算例</p>
+<img src="教程01-分析流程/新建算例.png">
+
+<p>梁单元里有个说法是【长细比】。指梁单元通常用于表现细长的零部件。为了让横梁获得可接受的结果，横梁的长度应该为横截面最大尺寸的 10倍。软件会自动检查这个比率，当横梁的长细比小于10时用户将会得到警告提示，如图10-33所示，</p>
+<img src="教程08-梁单元/image-20240604103813024.png">
+
+<p>编辑横梁定义</p>
+<img src="教程08-梁单元/image-20240604110746405.png">
+
+
+
+<h2 id="结点组"><a href="#结点组" class="headerlink" title="结点组"></a>结点组</h2><p>结点组是横梁单元里，两端点的表现。出现在结构构件的自由端和两个或更多结构构件的交叉处。 </p>
+<!-- 右击【结点组-编辑】。右击结点，可查看和修改结点，点击构件可进行添加与删除 -->
+
+<ul>
+<li>粉红色 <img src="https://help.solidworks.com/2018/chinese-simplified/Solidworks/cworks/uib1450460521003.image" alt="img"> 高亮显示两个或多个结构构件相交处的接点，</li>
+<li>浅绿色 <img src="https://help.solidworks.com/2018/chinese-simplified/Solidworks/cworks/pea1450460521522.image" alt="img"> 高亮显示结构构件在其自由端的接点。</li>
+</ul>
+<p><img src="https://help.solidworks.com/2018/chinese-simplified/Solidworks/cworks/fla1450460521999.image" alt="img"></p>
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><p>对所有横梁单元应用【普通碳钢】；</p>
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><img src="教程08-梁单元/image-20240604112645041.png">
+
+<img src="教程08-梁单元/image-20240604112722587.png">
+
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><img src="教程08-梁单元/image-20240604113118994.png">
+
+<img src="教程08-梁单元/image-20240604113518131.png">
+
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>按默认设置生成网格，这里需要留意的是：梁单元的网格是做了简化处理，即会以圆形轮廓简化梁单元界面（不影响计算结果）。</p>
+<img src="教程08-梁单元/image-20240604105525127.png">
+
+<p>当然你也可以通过右键【网格-渲染横梁轮廓】，来显示原本的梁截面形状。</p>
+<img src="教程08-梁单元/image-20240603181344063.png">
+
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>架顶部连接的部分。注意，有焊接缺陷的部分绕接合处有转动，而其他焊件保持互相垂直，并且整体结构有所变形。这说明带有焊接缺陷的连接并没有真正传递力矩。结果显示如图</p>
+<img src="教程08-梁单元/image-20240604114049381.png">
+
+
+
+<h3 id="轴应力"><a href="#轴应力" class="headerlink" title="轴应力"></a>轴应力</h3><p>轴应力图解说明，由法向(轴)力产生的法向应力分量沿横梁单元截面均匀分布。可以观测到最大值为13.4MPa(1.94ksi).如图</p>
+<img src="教程08-梁单元/image-20240604114521235.png">
+
+
+
+<h3 id="折弯"><a href="#折弯" class="headerlink" title="折弯"></a>折弯</h3><p>通过这些图解可以得到由折弯力矩引起的法向应力分量的最大值和最小值(极点位置)。这里可以观测到一个相当大的数值(相比轴应力图解而言)-569MPa(负号表示压缩应力)。</p>
+<p>截面受到的法向总应力等于轴和折弯分量的总和，即【最高轴向和折弯】的应力图解。</p>
+<p>方向1折弯</p>
+<img src="教程08-梁单元/image-20240604114540100.png">
+
+<p>方向2折弯</p>
+<img src="教程08-梁单元/image-20240604114556511.png">
+
+
+
+<h3 id="上界轴向和折弯"><a href="#上界轴向和折弯" class="headerlink" title="上界轴向和折弯"></a>上界轴向和折弯</h3><p>图解增添了轴及方向1折弯的法向应力，显示了横梁截面法向应力的极值。可以发现，最大法向应力1836MPa明显超出材料Plain Carbon Steel 的屈服强度220.6MPa(32ksi)，如图所示。</p>
+<img src="教程08-梁单元/image-20240604114813179.png">
+
+
+
+<h3 id="横梁图解"><a href="#横梁图解" class="headerlink" title="横梁图解"></a>横梁图解</h3><p>可以观察到在单元方向1上力矩是线性变化的，注意在有缺陷的接头位置的力矩为0。相应最大的负值力矩为-3850N·m沿着单元方向1传递到地面。</p>
+<img src="教程08-梁单元/image-20240604115139057.png">
+
+<h3 id="列举横梁应力"><a href="#列举横梁应力" class="headerlink" title="列举横梁应力"></a>列举横梁应力</h3><p>在【列举应力】对话窗口完全列举了所有横梁单元的最大(最小)法向和切应力。</p>
+<img src="教程08-梁单元/image-20240604115404135.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

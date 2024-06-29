@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,43 +36,59 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2023-10-27 17:18:29</span>
 </div>
 
-<div id="article"><h1 id="Simulation-教程4对称和自平衡"><a href="#Simulation-教程4对称和自平衡" class="headerlink" title="Simulation-教程4对称和自平衡"></a>Simulation-教程4对称和自平衡</h1><span id="more"></span>
-
-
-
-<h2 id="分析实例-容器"><a href="#分析实例-容器" class="headerlink" title="分析实例:容器"></a>分析实例:容器</h2><p>问题描述:容器放置在桌子上，内部溶液距离杯口10mm，求杯子底部径向扩<br>张量。杯子材料:ABS液体材质:水</p>
-<p><img src="/Simulation-%E6%95%99%E7%A8%8B/3/image-20240311164337766.png" alt="image-20240311164337766"></p>
-<p>4.1 冷缩配合零件</p>
-<p>4.2实例分析:冷缩配合</p>
-<p>4.2.1 项日描述</p>
-<h2 id="对称"><a href="#对称" class="headerlink" title="对称"></a>对称</h2><p>【夹具-高级-对称】</p>
+<div id="article"><h1 id="Simulation-教程4对称"><a href="#Simulation-教程4对称" class="headerlink" title="Simulation-教程4对称"></a>Simulation-教程4对称</h1><span id="more"></span>
+<p>有一轮缘承受轮毂过盈配合的压力作用。本例的目的是求出这两者中的如下应力:</p>
+<p>von Mises 应力。<br>Hoop 应力。<br>接触应力。</p>
+<p>分析中的几个关键步骤如下:<br>1)对称:判断模型是否对称，可以使用模型的一部分来进行分析。<br>2)压缩特征:压缩那些对分析没有影响的特征。<br>3)使模型稳定:消除刚体运动。<br>4)定义接触:因为零件之间存在过盈配合，因此必须定义冷缩配合作为接触方式。<br>5)图解显示结果:将采用冷缩配合分析，放弃笛卡尔坐标而在圆柱坐标系下显示结果</p>
+<h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2><p>打开wheel assembly装配体，其零部件材料已经是在零件材质里定义好了</p>
+<h2 id="接触"><a href="#接触" class="headerlink" title="接触"></a>接触</h2><p>这里需要注意下干涉处理，划分网格时存在干涉则会提示你进行检查。本次案例里的孔轴配合是“过盈配合”，所以我们选择<strong>“否”</strong>，使用【连结-相触面组】里的<strong>“冷缩类型”</strong>来处理干涉问题。</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240601195259349.png" alt="image-20240601195259349"></p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240601195540016.png" alt="image-20240601195540016"></p>
+<p>所以需要在【划分网格】前，对接触进行编辑：右键【连结-相触面组】，在接触条件中可以选择【冷缩配合】</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240601195941615.png" alt="image-20240601195941615"></p>
+<h2 id="对称"><a href="#对称" class="headerlink" title="对称"></a>对称</h2><p>右键【夹具-高级夹具-对称】</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/%E5%AF%B9%E7%A7%B0.png" alt="image-20240601200040683"></p>
+<p>这里需要留意：当只有对称时，模型在空间中会类似太空的悬浮状态。此时的运行计算会提示缺少约束。因此我们还需避免模型微小移动。这里提供两种方法处理：</p>
+<p>方法1：使用软弹簧，消除刚体模式</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240601200617045.png" alt="image-20240601200617045"></p>
+<p>方法2：右键【夹具-高级夹具-使用参考几何体】，在刚体移动位置设置成0。</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240601200803492.png" alt="image-20240601200803492"></p>
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><p>在没有外力施加到模型的情况下，冷缩配合也将在零件中产生应力。这些零件在起初都存在过盈配合。</p>
+<h2 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h2><p>在【网格参数】下选择【基于曲率的网格】，按默认设置生成网格。</p>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>应力&amp;位移</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/%E5%BA%94%E5%8A%9B%E4%BD%8D%E7%A7%BB.png" alt="image-20240601201315077"></p>
+<p>显示对称结果</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/%E6%98%BE%E7%A4%BA%E5%AF%B9%E7%A7%B0%E7%BB%93%E6%9E%9C.png" alt="image-20240601201404447"></p>
+<p>修改坐标系，定义圆柱坐标系。在局部坐标系中图解显示结果。</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E7%B3%BB.png" alt="image-20240601201424522"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>在分析中，仅仅当接触条件为【冷缩配合】时，装配零部件间才允许存在干涉。</p>
+<p>想要更好地查看【冷缩配合】条件下的分析结果，最好变形比例设为1:1。使用爆炸视图观察在接触面上的结果，如图4-21所示。对于轴对称部分的结果，最好采用圆柱坐标系显示。</p>
+<p>除了von Mises应力，上述这些观察到的结论可专门应用于应力分量。作为一个标量值，vonMises应力不受所选择的参考坐标系的影响。</p>
+<p>为避免刚体运动，模型必须在轴向保持稳定。最直接的方法是在每一模型的顶点施加轴向约束。还可以通过【使用软弹簧使模型稳定】选项(即使用一层软弹簧围绕该模型)来提供一个无约束方向上的最小刚度。</p>
+<p>.</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="4-3带软弹簧"><a href="#4-3带软弹簧" class="headerlink" title="4.3带软弹簧"></a>4.3带软弹簧</h2><p>本章前面部分介绍了阻止沿装配体轴向的刚体运动的方案，至少rim和hub上的一顶点必须施加轴向约束。如果没有这些约束，装配体沿轴向将只有零刚度。</p>
+<p>现在将提出两个别的方案，来阻止没有两个顶点约束的模型的刚体运动。它们是使用【软弹簧】或【惯性卸除】</p>
+<h2 id="4-3-1-软弹簧"><a href="#4-3-1-软弹簧" class="headerlink" title="4.3.1 软弹簧"></a>4.3.1 软弹簧</h2><p>这里不希望模型由于某些外部载荷的作用而沿轴向摆动。本例中冷缩配合接触条件的所有载荷都是平衡的。然而有限元方法并不认可这个事实，一个小的精度问题、数值错误或网格的不对称都会使模型在轴向产生不可控的刚体运动。所有这样的情况都可以通过软弹簧选项来稳定。</p>
+<p>当该选项激活时，模型被带刚度的弹簧包围，弹簧的刚度相对于模型的刚度可以忽略不计(见图4-17)。有限元模型被稳定下来，所有的刚体运动被约束。</p>
+<p>只要模型是自平衡的，或外部载荷的净值很小以至于软弹簧能够抵消时，上面的过程就是有效的。</p>
+<h2 id="4-3-2-惯性倒除"><a href="#4-3-2-惯性倒除" class="headerlink" title="4.3.2 惯性倒除"></a>4.3.2 惯性倒除</h2><p>另一种避免刚体运动的方法称为惯性卸除。该选项不像使用软弹簧中通过添加人造刚度来抵消不平衡载荷，而是添加人造平衡载荷来消除沿着无约束方向的载荷。</p>
+<p>在重力、离心力或某些热力载荷已定义时，该选项不应当用作稳定分析的目的。</p>
+<p>在本章例子中，【使用软弹簧使模型稳定】和【使用惯性卸除】选项都可以使用。</p>
+<p>在仿真树算例【右键-属性】，在选项中，激活【使用软弹簧使模型稳定】选项，并选择【Direct sparse】解算器，然后点击确定。运行分析</p>
 <h2 id="虚拟臂"><a href="#虚拟臂" class="headerlink" title="虚拟臂"></a>虚拟臂</h2><p>【相触面组-虚拟臂】</p>
-<p><img src="/Simulation-%E6%95%99%E7%A8%8B/3/image-20240311170415848.png" alt="image-20240311170415848"></p>
-<h2 id="轴对称"><a href="#轴对称" class="headerlink" title="轴对称"></a>轴对称</h2><p> 【新建算例-2D简化静应力】</p>
-<p>4.2.3关键步骤</p>
-<p>4.2.4 特征消隐.</p>
-<p>4.2.5刚体模式</p>
-<p>4.2.6 冷缩配合接触条件</p>
-<p>4.2.7 在局部坐标系中图解显示结果</p>
-<p>4.2.8 定义圆柱坐标系</p>
-<p>4.2.9 保存所有图解</p>
-<p>4.2.10 “什么错”特征</p>
-<p>4.3 带软弹簧的分析</p>
-<p>4.3.19软弹簧</p>
-<p>4.3.2 惯性倒除</p>
-<p>4.4 总结</p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240311170415848.png" alt="image-20240311170415848"></p>
 <h2 id="均布载荷"><a href="#均布载荷" class="headerlink" title="均布载荷"></a>均布载荷</h2><p>分析实例:桌面放置物体<br>问题描述:考察桌子正中间放置一个质量为44.6kg的长方体，考察桌子的变形情况。材料:合金钢</p>
-<p><img src="/Simulation-%E6%95%99%E7%A8%8B/3/image-20240311174416387.png" alt="image-20240311174416387"></p>
+<p><img src="/%E6%95%99%E7%A8%8B04-%E5%AF%B9%E7%A7%B0%E5%92%8C%E8%87%AA%E5%B9%B3%E8%A1%A1/image-20240311174416387.png" alt="image-20240311174416387"></p>
 <p>材料参数对计算结果影响</p>
 <p>弹性模量<br>泊松比<br>密度<br>屈服强度<br>最大位移<br>最大应力<br>安全系数</p>
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

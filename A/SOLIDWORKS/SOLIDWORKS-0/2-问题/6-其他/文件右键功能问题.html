@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,7 +36,7 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-13 16:00:11</span>
@@ -50,7 +49,11 @@
 <h2 id="方法-1：选项设置"><a href="#方法-1：选项设置" class="headerlink" title="方法 1：选项设置"></a>方法 1：选项设置</h2><p>右键单击并以管理员身份运行 SOLIDWORKS。转到“常规”选项卡，然后单击“<strong>恢复文件关联</strong>”</p>
 <p>在 <strong>SOLIDWORKS 2019 及更早版本</strong>中，恢复文件关联”按钮位于“文件资源管理器”选项卡下。</p>
 <p>在 <strong>SOLIDWORKS 2020 及更高版本</strong>中，恢复文件关联位于常规选项卡下。</p>
-<p><img src="/%E6%96%87%E4%BB%B6%E5%8F%B3%E9%94%AE%E5%8A%9F%E8%83%BD%E9%97%AE%E9%A2%98/%E9%80%89%E9%A1%B9%E8%AE%BE%E7%BD%AE.png" alt="image-20240307170856670"></p>
+<img src="文件右键功能问题/选项设置.png">
+
+<h2 id="方法-2：启动程序"><a href="#方法-2：启动程序" class="headerlink" title="方法 2：启动程序"></a>方法 2：启动程序</h2><p>检查是否是“SOLIDWORKS Launcher”为默认打开程序。其他启动程序是没有右键功能的</p>
+<img src="文件右键功能问题/启动程序.png">
+
 <h2 id="方法-2：安装修复"><a href="#方法-2：安装修复" class="headerlink" title="方法 2：安装修复"></a>方法 2：安装修复</h2><p>修复您的 SOLIDWORKS 安装。</p>
 <h2 id="方法-3：手动注册"><a href="#方法-3：手动注册" class="headerlink" title="方法 3：手动注册"></a>方法 3：手动注册</h2><p>如果“C:\Program Files\Common Files\SOLIDWORKS Shared”文件夹中缺少文件或其版本不正确，则会出现此情况。可以重新注册以下 DLL 文件：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure>
@@ -59,7 +62,7 @@
 <p> 2.在命令提示符中输入：cd [DLL 路径]</p>
 <p> 3.接着输入：regsvr32 sldshellutils14u.dll</p>
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

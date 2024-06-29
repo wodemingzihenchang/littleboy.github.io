@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,84 +36,130 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-19 17:18:29</span>
 </div>
 
-<div id="article"><h1 id="Simulation-教程7薄件分析"><a href="#Simulation-教程7薄件分析" class="headerlink" title="Simulation-教程7薄件分析"></a>Simulation-教程7薄件分析</h1><p>本章的带轮算例向用户介绍了壳单元，并使用户熟悉了壳单元的属性，比如壳单元厚度和方向，还介绍了使用中面的壳网格建模技术，并用来创建有限元模型。</p>
-<p>实体单元：计算速度慢；结果精度高；</p>
-<p>壳体单元：计算速度慢；结果精度高；</p>
+<div id="article"><h1 id="Simulation-壳单元"><a href="#Simulation-壳单元" class="headerlink" title="Simulation-壳单元"></a>Simulation-壳单元</h1><p>本章的带轮算例向用户介绍了壳单元，并使用户熟悉了壳单元的属性，比如壳单元厚度和方向，还介绍了使用中面的壳网格建模技术，并用来创建有限元模型。</p>
+<ul>
+<li>实体单元：计算速度慢；结果精度高；</li>
+<li>壳体单元：计算速度慢；结果精度高；</li>
+</ul>
 <!-- 在SOLIDWORKS中会要求创建一个零偏移的曲面。薄壁物体的中面、曲面的外表面以及曲面的内表面三者之间的差别非常小。如果差别比较显著的话，壳单元则会显得不合适而会重新考虑使用实体单元(例如，零件太短粗而不适合壳单元)。读者必须完成练习7-2，验证一下对于厚度很小的结构而言，这两种方法产生的结果是差不多的 -->
 
 <span id="more"></span>
 
-<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110128667.png" alt="image-20240430110128667"></p>
+<h1 id="实体分析"><a href="#实体分析" class="headerlink" title="实体分析"></a>实体分析</h1><h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><img src="教程07-薄件分析/image-20240430110128667.png">
+
 <p>模型里有无关曲面，会影响实体网格划分，我们先将其“不包括在分析中”。</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111402459.png" alt="image-20240430111402459"></p>
-<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110204743.png" alt="image-20240430110204743"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110342077.png" alt="image-20240430110342077"></p>
+<img src="教程07-薄件分析/image-20240430111402459.png">
+
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><img src="教程07-薄件分析/image-20240430110342077.png">
+
+
+
 <p>对称夹具</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110456519.png" alt="image-20240430110456519"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110619374.png" alt="image-20240430110619374"></p>
-<h2 id="外部载荷"><a href="#外部载荷" class="headerlink" title="外部载荷"></a>外部载荷</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111038229.png" alt="image-20240430111038229"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111223916.png" alt="image-20240430111223916"></p>
-<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111246155.png" alt="image-20240430111246155"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111324136.png" alt="image-20240430111324136"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111425845.png" alt="image-20240430111425845"></p>
-<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430112106243.png" alt="image-20240430112106243"></p>
+<img src="教程07-薄件分析/image-20240430110619374.png">
+
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><img src="教程07-薄件分析/image-20240430111223916.png">
+
+
+
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><img src="教程07-薄件分析/image-20240430111425845.png">
+
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><img src="教程07-薄件分析/运行.png">
+
 <p>厚度方向上只有一个单元，而高品质网格需要至少两层单元</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430112406266.png" alt="image-20240430112406266"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430112129864.png" alt="image-20240430112129864"></p>
-<h1 id="细化网格"><a href="#细化网格" class="headerlink" title="细化网格"></a>细化网格</h1><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430112749030.png" alt="image-20240430112749030"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430112908840.png" alt="image-20240430112908840"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430113151604.png" alt="image-20240430113151604"></p>
-<h2 id="运行-1"><a href="#运行-1" class="headerlink" title="运行"></a>运行</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430113507275.png" alt="image-20240430113507275"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430113455917.png" alt="image-20240430113455917"></p>
-<h1 id="壳单元"><a href="#壳单元" class="headerlink" title="壳单元"></a>壳单元</h1><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430113656196.png" alt="image-20240430113656196"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430115001105.png" alt="image-20240430115001105"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430115052007.png" alt="image-20240430115052007"></p>
-<h2 id="新建算例-1"><a href="#新建算例-1" class="headerlink" title="新建算例"></a>新建算例</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430115757120.png" alt="image-20240430115757120"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430115838360.png" alt="image-20240430115838360"></p>
-<h2 id="定义壳单元"><a href="#定义壳单元" class="headerlink" title="定义壳单元"></a>定义壳单元</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430120027318.png" alt="image-20240430120027318"></p>
-<p>细壳</p>
-<p>粗壳</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430120235464.png" alt="image-20240430120235464"></p>
-<h2 id="夹具-1"><a href="#夹具-1" class="headerlink" title="夹具"></a>夹具</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110204743.png" alt="image-20240430110204743"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110342077.png" alt="image-20240430110342077"></p>
+<img src="教程07-薄件分析/image-20240430112406266.png">
+
+<h1 id="细化网格"><a href="#细化网格" class="headerlink" title="细化网格"></a>细化网格</h1><p>在前面章节里，我们知道通过细化网格可以准确计算结果，但是代价是计算时长的增加。我们可以尝试复制一个新算例，将网格进行细化来验证应力结果。</p>
+<h2 id="复制算例"><a href="#复制算例" class="headerlink" title="复制算例"></a>复制算例</h2><img src="教程07-薄件分析/image-20240430112749030.png">
+
+<h2 id="细化网格-1"><a href="#细化网格-1" class="headerlink" title="细化网格"></a>细化网格</h2><img src="教程07-薄件分析/image-20240430112908840.png">
+
+<h2 id="运行-1"><a href="#运行-1" class="headerlink" title="运行"></a>运行</h2><p>计算结果变化不大，说明前面的结果也是可以参考的。</p>
+<img src="教程07-薄件分析/image-20240430113507275.png">
+
+<h1 id="壳单元"><a href="#壳单元" class="headerlink" title="壳单元"></a>壳单元</h1><p>细化网格是一种处理计算准确性的方法，不过计算时长会增加。而对于这类薄片模型，我们其实还可以使用Simulation里的”壳单元“进行分析。该方法可以优化相同大小网格划分的计算时长。</p>
+<h2 id="中面特征"><a href="#中面特征" class="headerlink" title="中面特征"></a>中面特征</h2><p>在用”壳单元“分析前，我们先在薄片实体上制作【中面】特征。这个中面可以用来作为”壳单元“的选择。</p>
+<img src="教程07-薄件分析/中面.png">
+
+<p>特征会在模型实体中间生成曲面，该曲面后续可以使用作壳单元的选择对象使用。</p>
+<img src="教程07-薄件分析/image-20240430115052007.png">
+
+<h2 id="新建算例-1"><a href="#新建算例-1" class="headerlink" title="新建算例"></a>新建算例</h2><img src="教程07-薄件分析/image-20240430115757120.png">
+
+<p>把实体”不包括在分析中“</p>
+<img src="教程07-薄件分析/image-20240430115838360.png">
+
+<h2 id="定义壳单元"><a href="#定义壳单元" class="headerlink" title="定义壳单元"></a>定义壳单元</h2><p>右键中面曲面【编辑定义】</p>
+<img src="教程07-薄件分析/image-20240430120027318.png">
+
+<p>定义壳单元的类型、厚度、方向，在模型里你也可以看到预览的效果。</p>
+<img src="教程07-薄件分析/image-20240430120235464.png">
+
+<h2 id="夹具-1"><a href="#夹具-1" class="headerlink" title="夹具"></a>夹具</h2><img src="教程07-薄件分析/image-20240430110342077.png">
+
+
+
 <p>对称夹具</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430110456519.png" alt="image-20240430110456519"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430135940311.png" alt="image-20240430135940311"></p>
-<h2 id="外部载荷-1"><a href="#外部载荷-1" class="headerlink" title="外部载荷"></a>外部载荷</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111038229.png" alt="image-20240430111038229"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430111223916.png" alt="image-20240430135631036"></p>
-<h2 id="网格-1"><a href="#网格-1" class="headerlink" title="网格"></a>网格</h2><p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430133646250.png" alt="image-20240430133646250"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430133709806.png" alt="image-20240430133709806"></p>
+<p>曲面侧边是边线，直接选择边线进行对称识别即可。</p>
+<img src="教程07-薄件分析/image-20240430135940311.png">
+
+<h2 id="载荷-1"><a href="#载荷-1" class="headerlink" title="载荷"></a>载荷</h2><img src="教程07-薄件分析/image-20240430111223916.png">
+
+
+
+
+
+<h2 id="网格-1"><a href="#网格-1" class="headerlink" title="网格"></a>网格</h2><img src="教程07-薄件分析/image-20240430133646250.png">
+
 <p>其他网格按默认即可，点击【创建网格】，选择【网格参考-基于曲率的网格】保持默认设置并创建高品质网格。</p>
 <p>壳单元的网格是带有颜色区分的：保证里外颜色均匀，是进行正确后处理的前提条件</p>
 <ul>
 <li>壳体底面是橙色；</li>
 <li>壳体顶面是灰色；</li>
 </ul>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430133754155.png" alt="image-20240430133754155"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430134241351.png" alt="image-20240430134241351"></p>
-<p>更改网格方向，壳单元对齐（本例中，模型已是正常对齐的状态，这一步可以跳过）</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430134506307.png" alt="image-20240430134506307"></p>
-<p>显示壳体厚度</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430135103591.png" alt="image-20240430135103591"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430135138608.png" alt="image-20240430135138608"></p>
+<img src="教程07-薄件分析/image-20240430133754155.png">
+
+<p>壳单元网格划分的内外面颜色，可在【工具-Simulation选项-系统选项-普通】里“网格颜色”设置。</p>
+<img src="教程07-薄件分析/image-20240430134241351.png">
+
+<p>若出现另外面（法向）方向不适合，可以右键【网格-反转壳体单元】更改网格方向，壳单元对齐（本例中，模型已是正常对齐的状态，这一步可以跳过）</p>
+<img src="教程07-薄件分析/image-20240430134506307.png">
+
+<p>如果你需要查看薄片模型从实际厚度效果，你可以右键【网格-在3D中渲染抽壳厚度】显示壳体厚度</p>
+<img src="教程07-薄件分析/image-20240430135138608.png">
+
 <h2 id="运行-2"><a href="#运行-2" class="headerlink" title="运行"></a>运行</h2><p>壳体上部</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430140141437.png" alt="image-20240430140141437"></p>
+<img src="教程07-薄件分析/image-20240430140141437.png">
+
 <p>壳体下部（靠下）</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430140251182.png" alt="image-20240430140251182"></p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430140524289.png" alt="image-20240430140524289"></p>
+<img src="教程07-薄件分析/image-20240430140251182.png">
+
+
+
+<img src="教程07-薄件分析/image-20240430140524289.png">
+
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>创建壳单元需要有曲面作为选择，当然，钣金特征也可以自动划分为壳网格。</p>
+<p>着重讲解了网格是否够用的概念，并对壳单元和实体单元模型作了比较。如果实体网格足够精细，那么实体网格产生的结果精度比壳单元产生的要稍高一些。然而，这也可能会导致难以处理的求解规模的提升。</p>
 <p>实体单元结果</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430113455917.png" alt="image-20240430113455917"></p>
+<img src="教程07-薄件分析/image-20240430113507275.png">
+
 <p>壳单元结果</p>
-<p><img src="/%E6%95%99%E7%A8%8B07-%E8%96%84%E4%BB%B6%E5%88%86%E6%9E%90/image-20240430140524289.png" alt="image-20240430140524289"></p>
+<img src="教程07-薄件分析/image-20240430140524289.png">
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="壳单元类型"><a href="#壳单元类型" class="headerlink" title="壳单元类型"></a>壳单元类型</h2><p>细壳</p>
+<p>粗壳</p>
+<h2 id="壳单元应力类型"><a href="#壳单元应力类型" class="headerlink" title="壳单元应力类型"></a>壳单元应力类型</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/chinese-simplified/Solidworks/cworks/HIDD_HELP_STRESSPLOTTYPE.htm?rid=42161">#</a></p>
+<p>上视：顶面总应力（折弯与膜片）。对于复合壳体，上指复合选项下层数内选定层的顶面。 </p>
+<p>下：底面总应力（折弯与膜片）。对于复合壳体，下指复合选项下面层数中选定层的底面。</p>
+<p>膜片：膜片应力分量</p>
+<p>折弯：折弯应力分量</p>
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

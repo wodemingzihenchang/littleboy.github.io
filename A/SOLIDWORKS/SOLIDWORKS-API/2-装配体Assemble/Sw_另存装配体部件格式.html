@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,7 +36,7 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-03-13 16:00:12</span>
@@ -50,7 +49,7 @@
 <h2 id="代码实例："><a href="#代码实例：" class="headerlink" title="代码实例："></a>代码实例：</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Transferformat</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//获得全部零部件对象参考引用(路径)</span></span><br><span class="line">    <span class="built_in">string</span>[] objs2 = swApp.ActiveDoc.GetDependencies2(<span class="literal">true</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">    <span class="comment">//循环打开零部件,转格式，</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; (objs2.Length) / <span class="number">2</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="built_in">string</span> item = objs2[<span class="number">1</span> + <span class="number">2</span> * i]; Console.WriteLine(item);</span><br><span class="line">    ModelDoc2 swDoc_Drw = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">    <span class="comment">//打开图纸</span></span><br><span class="line">    swDoc_Drw = swApp.OpenDoc((item.Substring(<span class="number">0</span>, item.Length - <span class="number">6</span>) + <span class="string">&quot;SLDDRW&quot;</span>), <span class="number">3</span>);</span><br><span class="line">    <span class="comment">//另存格式</span></span><br><span class="line">    <span class="built_in">string</span> swDWGName = item.Substring(<span class="number">0</span>, item.Length - <span class="number">6</span>) + <span class="string">&quot;DWG&quot;</span>;</span><br><span class="line">    swDoc_Drw.SaveAs3(swDWGName, (<span class="built_in">int</span>)swSaveAsVersion_e.swSaveAsCurrentVersion, (<span class="built_in">int</span>)swSaveAsOptions_e.swSaveAsOptions_Silent); </span><br><span class="line">    <span class="comment">//关闭图纸</span></span><br><span class="line">    swApp.CloseDoc((item.Substring(<span class="number">0</span>, item.Length - <span class="number">6</span>) + <span class="string">&quot;SLDDRW&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (Exception)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine (<span class="string">&quot;XXX&quot;</span>);</span><br><span class="line">    <span class="comment">//throw;零部件无图纸的情况</span></span><br><span class="line">&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="实例效果："><a href="#实例效果：" class="headerlink" title="实例效果："></a>实例效果：</h2></div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-06-01 16:31:10</span>
+</div>
+
+<div id="article"><h1 id="恢复文件参考"><a href="#恢复文件参考" class="headerlink" title="恢复文件参考"></a>恢复文件参考</h1><p>当我们无意中移动文件位置时，会造成装配体内的零部件参考路径找不到，从而造成文件丢失（<strong>无法找到文件</strong>的情况）</p>
+<img src="恢复文件参考/无法找到文件.png">
+
+<h2 id="手动恢复"><a href="#手动恢复" class="headerlink" title="手动恢复"></a>手动恢复</h2><p>当然，你可以手动【浏览文件】到已知移动的位置来加载需要的文件，或是暂时【压缩此零部件】的方式打开装配体。</p>
+<p>但是这个方法需要我们能清楚找到文件被移动到了何处。有一点的操作局限性。</p>
+<h2 id="自动查找"><a href="#自动查找" class="headerlink" title="自动查找"></a>自动查找</h2><p>自动查找的方法，需要我们在【系统选项-文件位置-参考的文件】里添加搜索的路径，那么该路径下的同名文件将被加载到装配体。并通过报存可以恢复参考。</p>
+<img src="恢复文件参考/image-20240601165112820.png">
+
+<p>不过默认情况下该方法只能是查找自身文件夹内的文件（而不会继续往“子文件夹”内查找，这个是为了性能考虑）。因此，我们还需在【系统选项-外部参考】勾选<strong>“包括子文件夹”</strong>选项。</p>
+<img src="恢复文件参考/image-20240601165504503.png">
+
+<p>如下，当打开丢失模型的装配体时，因为有“参考的文件”及其“子文件夹”设置，软件将会去设置中查找并关联参考进装配体。此时我们点击保存装配体就能恢复文件的参考。</p>
+<img src="恢复文件参考/image-20240601165848388.png">
+
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p>保存后的装配体是已经更新了零部件的参考关系了，那就可以将【系统选项-文件位置-参考的文件】设置路径去除。并免其他装配体同名参考问题出现。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

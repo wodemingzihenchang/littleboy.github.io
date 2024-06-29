@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,15 +36,22 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2024-04-01 18:41:51</span>
 </div>
 
-<div id="article"><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建本地视图时提示：已附加</p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>常发生于不正确删除本地视图后，再次创建本地视图，注册表有残留。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>客户端按win + r 键，输入regedit，打开注册表。定位到以下路径删除对应库名的文件夹（两处只存在一个，对应之前创建的时候选择“只为我自己”&#x2F;“为该计算机上的所有用户”）</p>
+<div id="article"><h1 id="PDM添加本地视图失败"><a href="#PDM添加本地视图失败" class="headerlink" title="PDM添加本地视图失败"></a>PDM添加本地视图失败</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建本地视图时提示：已附加：遗失信息</p>
+<p>原因：常发生于不正确删除本地视图后，再次创建本地视图，注册表有残留。通过修改注册表残留信息可以解决该类问题。</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>1、客户端按win + r 键，输入regedit，打开注册表。</p>
+<p>2、定位到以下路径删除对应库名的文件夹（路径位置和我们创建时选择的用户使用有关）</p>
+<img src="本地视图失败/image-20240625172231804.png">
+
+<ul>
+<li>创建时选“否”时，在注册表HKEY_CURRENT_USER里找</li>
+<li>创建时选“是”时，在注册表HKEY_LOCAL_MACHINE里找</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\&lt;库名&gt;】</span><br></pre></td></tr></table></figure>
 
 <img src="本地视图失败/image-20240401184248866.png">
@@ -54,8 +60,29 @@
 
 
 
-<img src="本地视图失败/image-20240401184309722.png"></div>
- 		<!-- 引入正文 -->
+<img src="本地视图失败/image-20240401184309722.png">
+
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>有可能在修改电脑硬盘区分时，导致电脑记录本地视图的PDM注册表内容和分区后的硬盘位置对不上。也会导致添加【本地视图】失败。还可能提示：无法打开文件夹“C:\PDM,”未找到指定的文件。</p>
+<img src="本地视图失败/image-20240625172313938.png">
+
+<p>并且在修改和卸载后安装，都无法解决该问题（和清除注册表）。</p>
+<p>1、因此，我们可以找到如下注册表位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_USERS\S-1-5-21-2915376384-8857077-3146512209-1001\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise</span><br></pre></td></tr></table></figure>
+
+<img src="本地视图失败/image-20240625135102083.png">
+
+<p>2、将“PDMWorks Enterprise”项重命名，</p>
+<img src="本地视图失败/image-20240625135141328.png">
+
+<p>1、 在“任务管理器”中，退出SOLIDWORKS PDM程序</p>
+<img src="本地视图失败/clip_image001.png">
+
+<p>2、 在“任务管理器”中，重启Windows Explore资源管理器程序，</p>
+<img src="本地视图失败/clip_image002.png">
+
+<p>3、 再重复创建【本地视图】的操作</p>
+<img src="本地视图失败/clip_image003.png"></div>
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

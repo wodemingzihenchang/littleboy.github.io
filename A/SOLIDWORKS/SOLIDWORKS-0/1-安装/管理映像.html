@@ -15,11 +15,10 @@
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
-
 <!-- 侧边目录栏 -->
 <div id="tree">
-
-</div><div id="toc"></div></aside><!-- 引入侧边栏-->
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
         <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
@@ -37,48 +36,134 @@
     <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
     <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
     <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
-</div></nav><!-- 引入导航 -->
+</div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: littleboy</span>
     <span id="post-date">2022-06-18 22:12:51</span>
 </div>
 
-<div id="article"><h1 id="SOLIDWORKS管理映像"><a href="#SOLIDWORKS管理映像" class="headerlink" title="SOLIDWORKS管理映像"></a>SOLIDWORKS管理映像</h1><p>如果要在多台计算机上安装 SOLIDWORKS，您可以创建管理映像，然后将应用程序调用到其他计算机上。</p>
-<h2 id="制作映像"><a href="#制作映像" class="headerlink" title="制作映像"></a>制作映像</h2><p>管理映像使用“SOLIDWORKS 安装管理器”来创建，该工具还可用于安装所有 SOLIDWORKS 产品。如果管理映像已存在，则可将其用作新映像的基础。这样您就不用重复一些设置步骤了</p>
-<p>制作好的管理映像文件夹包含：</p>
+<div id="article"><h1 id="SOLIDWORKS管理映像"><a href="#SOLIDWORKS管理映像" class="headerlink" title="SOLIDWORKS管理映像"></a>SOLIDWORKS管理映像</h1><p>如果要在多台计算机上安装 SOLIDWORKS，您可以创建管理映像，然后将应用程序调用到其他计算机上。管理映像必须位于共享文件夹中</p>
+<h2 id="制作映像"><a href="#制作映像" class="headerlink" title="制作映像"></a>制作映像</h2><!-- 管理映像使用“SOLIDWORKS 安装管理器”来创建，该工具还可用于安装所有 SOLIDWORKS 产品。如果管理映像已存在，则可将其用作新映像的基础。这样您就不用重复一些设置步骤了 -->
+
+<p>如果要在多台计算机上安装 SOLIDWORKS，您可以创建管理映像，然后将应用程序调用到其他计算机上。</p>
+<h3 id="选择安装映像"><a href="#选择安装映像" class="headerlink" title="选择安装映像"></a>选择安装映像</h3><p>启动 SOLIDWORKS 安装管理器。在欢迎页面，选择创建管理映像，然后选择以下选项之一：</p>
+<ul>
+<li><p>使用默认设定生成新映像（默认）</p>
+</li>
+<li><p>使用现有映像的设定和文件生成新映像</p>
+</li>
+</ul>
+<p>使用为您站点的现有管理映像指定的配置设定生成映像。 单击 浏览，为现有管理映像指定安装目录。</p>
+<img src="管理映像/image-20240603152847004.png">
+
+<h3 id="输入序列号"><a href="#输入序列号" class="headerlink" title="输入序列号"></a>输入序列号</h3><img src="管理映像/image-20240603152948651.png">
+
+<h3 id="映像内容设置"><a href="#映像内容设置" class="headerlink" title="映像内容设置"></a>映像内容设置</h3><p>单击更改以修改产品或默认选项，其中包括：</p>
+<ul>
+<li>管理映像位置</li>
+<li>管理映像类型</li>
+</ul>
+<img src="管理映像/image-20240603153045324.png">
+
+<p>产品选择这里我们按需选择即可，产品的内容也和我们前面输入的序列号有关。例如：只填SOLIDWORKS序列号，则只会有SOLIDWORKS本体产品可选。</p>
+<img src="管理映像/image-20240603153109881.png">
+
+<p><strong>注意：</strong>管理映像必须位于共享文件夹中，这里可以设置成用户可以访问到的服务器位置。</p>
+<img src="管理映像/image-20240603153137204.png">
+
+<h3 id="生成管理映像"><a href="#生成管理映像" class="headerlink" title="生成管理映像"></a>生成管理映像</h3><p>接受许可协议，然后单击现在生成。</p>
+<img src="管理映像/image-20240603153241141.png">
+
+<p>单击自定义映像，在管理映像选项编辑器中打开和显示设置。至此，你已完成SOLIDWORKS安装管理映像的创建，下面将介绍改安装映像的设置使用操作。</p>
+<img src="管理映像/image-20240603153315867.png">
+
+<h3 id="管理映像内容"><a href="#管理映像内容" class="headerlink" title="管理映像内容"></a>管理映像内容</h3><p>制作好的管理映像文件夹包含：</p>
 <img src="管理映像/image-20240327184902688.png">
 
+<!-- Administrative lmage Option Editor(管理映像选项编辑器)用于自定义和部署映像。您可以通过“安装管理器”中的Finish(完成)页面来运行此工具，或者从Admin(管理映像)文件夹中手动运行。 -->
 
 
-<p>Administrative lmage 0ption Editor(管理映像选项编辑器)用于自定义和部署映像。您可以通过“安装管理器”中的Finish(完成)页面来运行此工具，或者从Admin(管理映像)文件夹中手动运行。</p>
-<p>设置按全局设置、组设置和机器设置的层次进行应用。</p>
-<p>Administrative lmage Option Editor(管理映像选项编辑器)还提供了两种部署方法。</p>
-<ul>
-<li><p>手动部署：指定的用户将收到电子邮件</p>
-</li>
-<li><p>自动部署：使用 Windows 任务计划程序为选定的机器创建计划安装任务。</p>
-</li>
-</ul>
-<p>每次启动程序时，管理映像安装都会检查服务器上的映像是否有更新。<br>映像与安装之间的链接可用于自动执行更新。这意味着您应该将映像保留在服务器上。<br>升级到主要版本时，建议的方法是创建一个新映像，然后重新部署安装。</p>
-<p>如果在执行管理映像安装时出现问题，则可以使用日志文件来进行调查。<br>用户必须拥有管理映像文件夹内的64bit\logs 文件夹的读&#x2F;写权限。<br>日志分为两种类型:WindowsInstaler日志(包含相关产品名称)和安装管理器(IM)日志(名称为ErrorLogs)只有在 Administrativelmage Option Editor(管理映像选项编辑器)中选定Createadiagnostic logduring eachinstallation(在每次安装期间创建诊断日志)选项时，才能将WindowsInstaller 日志复制到管理映像文件夹中。只要权限允许，安装管理器日志在安装失败时始终会制。</p>
-<h2 id="使用映像"><a href="#使用映像" class="headerlink" title="使用映像"></a>使用映像</h2><p>建组</p>
-<p>设置安装信息</p>
-<p>Administrative lmage Option Editor(管理映像选项编辑器)还提供了两种部署方法。</p>
-<ul>
-<li><p>手动部署：指定的用户将收到电子邮件</p>
-</li>
-<li><p>自动部署：使用 Windows 任务计划程序为选定的机器创建计划安装任务。</p>
-</li>
-</ul>
+
+<h2 id="使用映像"><a href="#使用映像" class="headerlink" title="使用映像"></a>使用映像</h2><p>通过打开管理映像内“sldAdminOptionEditor.exe”这个程序内，进行编辑分组和安装设置和部署的操作。</p>
+<h3 id="建组设置"><a href="#建组设置" class="headerlink" title="建组设置"></a>建组设置</h3><p>管理映像通过对网络内的设备（或IP地址）进行用户端添加，每个设备或组都可以有自己的设置，设置会按“机器设置”&gt;“组设置”&gt;“全局设置”的层次进行应用。</p>
+<p>设置安装信息，包括：序列号、客户端安装选项、管理选项、要安装的软件、Toolbox&#x2F;异型孔向导选项等。。。</p>
 <img src="管理映像/image-20240327184940249.png">
+
+<p>新建组</p>
+<img src="管理映像/image-20240604091928979.png">
+
+<p>添加用户</p>
+<img src="管理映像/image-20240604092140440.png">
+
+<p>Administrative lmage Option Editor(管理映像选项编辑器)还提供了两种部署方法。</p>
+<h3 id="手动部署"><a href="#手动部署" class="headerlink" title="手动部署"></a>手动部署</h3><p>指定的用户将收到电子邮件，在邮件里会有管理映像的文件夹位置。并会提示你打开“StartSWInstall.hta”安装程序，当然，这个安装程序也是全自动安装的。</p>
+<img src="管理映像/image-20240603191246260.png">
+
+<p>邮件内容：单击该连接 &lt;file:&#x2F;&#x2F;\192.168.72.1\SOLIDWORKS 2018 SP05 Admin\StartSWInstall.hta&gt; 开始在您的计算机上安装 SOLIDWORKS 2018 SP5.0。用户点击安装会更新安装状态（如下图）</p>
+<img src="管理映像/image-20240603164226223.png">
+
+<h3 id="自动部署"><a href="#自动部署" class="headerlink" title="自动部署"></a>自动部署</h3><p>使用 Windows 任务计划程序为选定的机器创建计划安装任务。</p>
+<p>1、选择部署的用户（或组）；</p>
+<p>2、在客户端证书里输入域管理员账号密码。</p>
+<p>3、点击部署，管理映像会将任务发送客户端电脑的【Windows任务计划程序内】</p>
+<img src="管理映像/image-20240603191413724.png">
+
+<p>部署是否成功：在客户端机器上，右键单击“计算机”&gt;“管理”&gt; 选择“任务计划程序”&gt;“任务计划程序库”。如果已成功计划安装，名为“Install SOLIDWORKS 20XX”的事件将被添加到列表中。</p>
+<img src="管理映像/image-20240603225736364.png">
+
+<h1 id="设置管理员工具"><a href="#设置管理员工具" class="headerlink" title="设置管理员工具"></a>设置管理员工具</h1><h2 id="创建设置文件"><a href="#创建设置文件" class="headerlink" title="创建设置文件"></a>创建设置文件</h2><p>在部署或升级 SOLIDWORKS 软件时，为防止用户更改那些选项，您可以使用“设置管理员工具”来设置可应用的系统选项。 尽管向导仍然可用于复制设置，此工具将替换“复制设置向导”来部署设置。</p>
+<p>使用“设置管理员工具”有三个步骤：</p>
+<p>创建管理映像以访问该工具。</p>
+<img src="管理映像/image-20240603165400065.png">
+
+<p>使用“设置管理员”生成 *.sldsettings 文件，其中包括您选定的 SOLIDWORKS 选项。</p>
+<img src="管理映像/image-20240603165247526.png">
+
+<img src="管理映像/image-20240603165417969.png">
+
+<p>点击保存，我们会获得一份“设置文件swsetting”，这个文件能管理统一用户SW的【系统选项】设定。</p>
+<img src="管理映像/image-20240603165643937.png">
+
+<h2 id="使用设置文件"><a href="#使用设置文件" class="headerlink" title="使用设置文件"></a>使用设置文件</h2><p>在 SOLIDWORKS 安装中包含 *.sldsettings 文件。注意：这里的文件也必须是在可以访问到的服务器网盘位置。</p>
+<img src="管理映像/image-20240603165914272.png">
+
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="关于升级"><a href="#关于升级" class="headerlink" title="关于升级"></a>关于升级</h2><p>每次启动程序时，管理映像安装都会检查服务器上的映像是否有更新。</p>
+<p>映像与安装之间的链接可用于自动执行更新。这意味着您应该将映像保留在服务器上。</p>
+<p>升级到主要版本时，建议的方法是创建一个新映像，然后重新部署安装。</p>
+<h2 id="映像注意事项"><a href="#映像注意事项" class="headerlink" title="映像注意事项"></a>映像注意事项</h2><p>您可从网络上的任何计算机安装管理映像，包括客户端计算机。</p>
+<ul>
+<li><p>管理映像必须位于共享文件夹中。</p>
+</li>
+<li><p>如果您包括所有产品，则管理映像磁盘空间可占用 7GB 或更多。</p>
+</li>
+<li><p>如果在升级管理映像时更新共享名称，则在应用程序下次启动时客户端会自动升级。 有关详细信息，请参阅 <a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/Installation/install_guide/t_upgrading_admin_image.htm">升级管理映像</a>。</p>
+</li>
+<li><p>部署管理映像时，映像路径必须少于 58 个字符。</p>
+</li>
+<li><p>要求客户端在其计算机上具有管理员特权。 如果客户端没有足够的权限，客户端可以作为不同用户运行安装。 当个人用户在计算机上没有本地管理权限（安装 SOLIDWORKS 产品所需的权限）时，此选项非常有用。</p>
+<p>请参阅 <a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/Installation/install_guide/c_deploy_install.htm">从选项编辑器调用安装</a>。 其中介绍了客户端没有足够的权限时安装映像的备选方法。</p>
+</li>
+<li><p>如果启用 Windows 记录或如果您使用“管理图像选项编辑器”中的状态功能，您必须具备此文件夹的读&#x2F;写权限： {管理映像目录}\x64\Logs。</p>
+</li>
+<li><p>用户必须拥有管理映像文件夹内的64bit\logs 文件夹的读&#x2F;写权限。</p>
+</li>
+</ul>
+<h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2><p>如果在执行管理映像安装时出现问题，则可以使用日志文件来进行调查。日志分为两种类型：</p>
+<ul>
+<li>WindowsInstaler日志(包含相关产品名称)</li>
+<li>安装管理器(IM)日志(名称为ErrorLogs)</li>
+</ul>
+<p>只有在 Administrativelmage Option Editor(管理映像选项编辑器)中选定Createadiagnostic logduring eachinstallation(在每次安装期间创建诊断日志)选项时，才能将WindowsInstaller 日志复制到管理映像文件夹中。</p>
+<img src="管理映像/image-20240603175128729.png">
 
 
 
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>帮助手册：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\&lt;Users name&gt;\AppData\Roaming\SOLIDWORKS\Installation Manager Data\2018\lang\chinese-simplified\install_guide.chm</span><br></pre></td></tr></table></figure>
 
+<img src="管理映像/image-20240603151440643.png">
 </div>
- 		<!-- 引入正文 -->
+ 			<!-- 引入正文 -->
     </div>	
     
 <script src="/lib/highlight/highlight.pack.js"></script>

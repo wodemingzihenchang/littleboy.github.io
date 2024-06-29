@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-05-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="双环接触拉力模拟"><a href="#双环接触拉力模拟" class="headerlink" title="双环接触拉力模拟"></a>双环接触拉力模拟</h1><p>在U形支架的平板施加3.5MPa的压力载荷。卡住大圆环的平板被固定约束。环外侧的作用力使每个环都承受接触压力。</p>
+<span id="more"></span>
+
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><img src="双环接触拉力模拟/image-20240529185346863.png">
+
+<p>打开双环装配体模型，并新建静应力算例。</p>
+<p>材料：在仿真树内的零件实体添加【AISI 020】材料</p>
+<img src="双环接触拉力模拟/image-20240529185505552.png">
+
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><p>固定几何体</p>
+<img src="双环接触拉力模拟/image-20240529185846268.png">
+
+<p>参考几何体：让模型只沿受力方向移动</p>
+<img src="双环接触拉力模拟/image-20240529190301708.png">
+
+
+
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><img src="双环接触拉力模拟/image-20240529190435740.png">
+
+<h2 id="接触"><a href="#接触" class="headerlink" title="接触"></a>接触</h2><img src="双环接触拉力模拟/image-20240529190608439.png">
+
+<p>右键单击【连结】并选择【相触面组】在【相触面组】中，选择【无穿透】作为接触类型</p>
+<img src="双环接触拉力模拟/image-20240529190737782.png">
+
+<h2 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h2><p>局部网格控制</p>
+<img src="双环接触拉力模拟/image-20240529190902040.png">
+
+<p>在【网格参数】下选择【基于曲率的网络】按默认网格设置划分即可。</p>
+<img src="双环接触拉力模拟/image-20240529191037817.png">
+
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>应力</p>
+<img src="双环接触拉力模拟/image-20240529191245752.png">
+
+<p>位移</p>
+<img src="双环接触拉力模拟/image-20240529191306017.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
