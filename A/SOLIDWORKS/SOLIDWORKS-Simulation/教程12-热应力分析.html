@@ -45,25 +45,63 @@
 <div id="article"><h1 id="Simulation-热应力分析"><a href="#Simulation-热应力分析" class="headerlink" title="Simulation-热应力分析"></a>Simulation-热应力分析</h1><p>由于材料的热膨胀系数各不相同，双层金属带在加热和冷却时会产生内应力。本章将计算双层金属带在加热和冷却过程中，零件的应力及变形结果。</p>
 <h1 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h1><p>由于铝和镍的热膨胀系数不同，双层金属带会在温度改变时发生形变。在这个实例中，假定在室温下应力为零。</p>
 <p>双层金属带模型如图12-1所示。在室温25℃(77下)下，由铝带和镍带粘合在一起的双层金属带在没有任何约束的情况下加热到280℃(536F)。</p>
-<p>分析目的<br>了解双金属带的变形，并找出粘合层所需的最小应力强度。</p>
-<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602164438470.png" alt="image-20240602164438470"></p>
-<p>材料</p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602164621928.png" alt="image-20240602164621928"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602164739939.png" alt="image-20240602164739939"></p>
+<p>分析目的：了解双金属带的变形，并找出粘合层所需的最小应力强度。</p>
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><img src="教程12-热应力分析/image-20240602164438470.png">
+
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><h3 id="铝"><a href="#铝" class="headerlink" title="铝"></a>铝</h3><img src="教程12-热应力分析/image-20240602164621928.png">
+
 <p>设置“表格和曲线”</p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602165716255.png" alt="image-20240602165716255"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602165309637.png" alt="image-20240602165309637"></p>
-<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170109657.png" alt="image-20240602170109657"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170159792.png" alt="image-20240602170159792"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170245896.png" alt="image-20240602170245896"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170310754.png" alt="image-20240602170310754"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170343319.png" alt="image-20240602170343319"></p>
-<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170416931.png" alt="image-20240602170416931"></p>
-<h2 id="添加传感器"><a href="#添加传感器" class="headerlink" title="添加传感器"></a>添加传感器</h2><p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170718930.png" alt="image-20240602170718930"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170808832.png" alt="image-20240602170808832"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602170902734-17173193430721-17173193433302.png" alt="image-20240602170902734"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602171113837.png" alt="image-20240602171113837"></p>
-<p><img src="/%E6%95%99%E7%A8%8B12-%E7%83%AD%E5%BA%94%E5%8A%9B%E5%88%86%E6%9E%90/image-20240602171433421.png" alt="image-20240602171433421"></p>
+<img src="教程12-热应力分析/image-20240602165716255.png">
+
+<img src="教程12-热应力分析/image-20240602165309637.png">
+
+<h3 id="镍"><a href="#镍" class="headerlink" title="镍"></a>镍</h3><p>和编辑铝材料的方法一样，复制SW自带的材料【其他金属-镍】到自定义材料内编辑，</p>
+<img src="教程12-热应力分析/image-20240710161340150.png">
+
+<p>选择粘贴后的镍材料，在“表格和曲线”中，选择“X弹性模量与温度”关系的表格，按图中参数填入</p>
+<img src="教程12-热应力分析/image-20240710161805914.png">
+
+<img src="教程12-热应力分析/image-20240710161909788.png">
+
+
+
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><p>本次分析不需要设置夹具，是模型自身受热变形的结果，</p>
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><img src="教程12-热应力分析/image-20240602170109657.png">
+
+<img src="教程12-热应力分析/image-20240602170159792.png">
+
+
+
+<img src="教程12-热应力分析/image-20240602170245896.png">
+
+
+
+<img src="教程12-热应力分析/image-20240602170310754.png">
+
+
+
+<img src="教程12-热应力分析/image-20240602170343319.png">
+
+
+
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>按默认设置生成网格</p>
+<img src="教程12-热应力分析/image-20240710164147830.png">
+
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><img src="教程12-热应力分析/image-20240602170416931.png">
+
+
+
+<h1 id="添加传感器"><a href="#添加传感器" class="headerlink" title="添加传感器"></a>添加传感器</h1><img src="教程12-热应力分析/image-20240602170718930.png">
+
+<img src="教程12-热应力分析/image-20240602170808832.png">
+
+<img src="教程12-热应力分析/image-20240602170902734.png">
+
+
+
+<img src="教程12-热应力分析/image-20240602171113837.png">
+
+<img src="教程12-热应力分析/image-20240602171433421.png">
 </div>
  			<!-- 引入正文 -->
     </div>	

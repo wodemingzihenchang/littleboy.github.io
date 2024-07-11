@@ -44,7 +44,7 @@
 
 <div id="article"><h1 id="Simulation-设计算例"><a href="#Simulation-设计算例" class="headerlink" title="Simulation-设计算例"></a>Simulation-设计算例</h1><p>在日常设计过程中，往往是用–系列的数值来试验，然后确定-个最优的数值，当这个时候，如果每个案例确定一个数值的话，就需要做很多案例，这样就很麻烦，</p>
 <p>SolidWorksSimulaton提供了一个很方便的功能解决上述的问题，就是【设计算例】功能，通过连接某一组数值，自动计算这组数值的分析结果，降低重复性工作的次数，以方便设计人员对最优数据的选择并且节省时间。</p>
-<p>步骤:</p>
+<p><strong>步骤:</strong></p>
 <p>1、指定参数(设计变量):载荷、几何特征、材料常数等</p>
 <p>2、建立带情形数值的设计情形</p>
 <p>设计情形的结果:</p>
@@ -55,20 +55,46 @@
 <p>在平滑路面上以恒定加速度行驶(185N Vertiacl.60N Lateral)</p>
 <p>在颠簸路面上行驶(385N Vertiacl,72N Lateral)</p>
 <p>在平滑路面上行驶，然后爬斜坡(900NVertiacl,115NLateral)</p>
-<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><h2 id="连结"><a href="#连结" class="headerlink" title="连结"></a>连结</h2><p>在本次案例模型里，已事先定义好了销钉连结和弹簧效果。</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606093930398.png" alt="image-20240606093930398"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606094048047.png" alt="image-20240606094048047"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606094120193.png" alt="image-20240606094120193"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606094148229.png" alt="image-20240606094148229"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606094214248.png" alt="image-20240606094214248"></p>
-<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606095314831.png" alt="image-20240606095314831"></p>
-<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606100236377.png" alt="image-20240606100236377"></p>
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>•打开装配体“suspension.sldasm” </p>
+<p>•指定材料：合金钢 </p>
+<p>•定义夹具：固定铰链</p>
+<h2 id="连结"><a href="#连结" class="headerlink" title="连结"></a>连结</h2><p>在本次案例模型里，已事先定义好了销钉连结和弹簧效果。</p>
+<img src="教程11-设计情形/image-20240606093930398.png">
+
+<p>1、销钉连结</p>
+<img src="教程11-设计情形/image-20240606094048047.png">
+
+<p>2、销钉连结</p>
+<img src="教程11-设计情形/image-20240606094120193.png">
+
+<p>3、导柱销钉连结</p>
+<img src="教程11-设计情形/image-20240606094148229.png">
+
+<p>4、弹簧连结</p>
+<img src="教程11-设计情形/image-20240606094214248.png">
+
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><img src="教程11-设计情形/image-20240606095314831.png">
+
+
+
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><img src="教程11-设计情形/image-20240606100236377.png">
+
+
+
 <h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>本算例已设定好网格控制，直接选择【生成网格】，确定即可。</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606100420476.png" alt="image-20240606100420476"></p>
+<img src="教程11-设计情形/image-20240606100420476.png">
+
+
+
 <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>运行算例，运行过程会出现有大位移的提示，我们选择“否”进行计算。</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606100804829.png" alt="image-20240606100804829"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606100912025.png" alt="image-20240606100912025"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606191458054.png" alt="image-20240606191458054"></p>
+<img src="教程11-设计情形/image-20240606100804829.png">
+
+<img src="教程11-设计情形/image-20240606100912025.png">
+
+<img src="教程11-设计情形/image-20240606191458054.png">
+
+
+
 <h1 id="设计算例-载荷"><a href="#设计算例-载荷" class="headerlink" title="设计算例-载荷"></a>设计算例-载荷</h1><p>变更<strong>【仿真条件变量】</strong>的方法，进行设计算例。本次是设计算例需要计算4种工况：</p>
 <ul>
 <li>汽车静止(垂直-225N.水平0N)</li>
@@ -76,35 +102,60 @@
 <li>在颠簸路面上行驶(垂直385N,水平72N)</li>
 <li>在平滑路面上行驶，然后爬斜坡(垂直900N,水平115N)</li>
 </ul>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606100236377.png" alt="image-20240606100236377"></p>
-<h2 id="载荷链接变量"><a href="#载荷链接变量" class="headerlink" title="载荷链接变量"></a>载荷链接变量</h2><p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606194825990.png" alt="image-20240606194825990"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606194843781.png" alt="image-20240606194843781"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606194935830.png" alt="image-20240606194935830"></p>
+<img src="教程11-设计情形/image-20240606100236377.png">
+
+<h2 id="载荷链接变量"><a href="#载荷链接变量" class="headerlink" title="载荷链接变量"></a>载荷链接变量</h2><img src="教程11-设计情形/image-20240606194825990.png">
+
+<img src="教程11-设计情形/image-20240606194843781.png">
+
+<img src="教程11-设计情形/image-20240606194935830.png">
+
+
+
 <h2 id="变量视图"><a href="#变量视图" class="headerlink" title="变量视图"></a>变量视图</h2><p>变量</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606134332021.png" alt="image-20240606134332021"></p>
+<img src="教程11-设计情形/image-20240606134332021.png">
+
 <p>约束</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240624172845831.png" alt="image-20240624172845831"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606134105855.png" alt="image-20240606134105855"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606134215188.png" alt="image-20240606134215188"></p>
+<p>设计算例的约束里，可以通过添加“传感器”监视软件分析过程中结果变量数值。</p>
+<img src="教程11-设计情形/image-20240710153938513.png">
+
+<img src="教程11-设计情形/image-20240606134105855.png">
+
+<img src="教程11-设计情形/image-20240606134215188.png">
+
+<img src="教程11-设计情形/image-20240624172845831.png">
+
 <h2 id="表格视图"><a href="#表格视图" class="headerlink" title="表格视图"></a>表格视图</h2><p>在表格视图里显示了由变量组合的16种分析条件，但本次我们只算如下几种即可；（这里忽略，直接下一步【运行】）即可。</p>
 <p>1、Vertical：-225N；Lateral：0N</p>
 <p>2、Vertical：185N；Lateral：60N</p>
 <p>3、Vertical：385N；Lateral：72N</p>
 <p>4、Vertical：900N；Lateral：115N</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240624173201251.png" alt="image-20240624173201251"></p>
-<h2 id="结果视图"><a href="#结果视图" class="headerlink" title="结果视图"></a>结果视图</h2><p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606164320049.png" alt="image-20240606164320049"></p>
+<p>因为我们没有设置设计算例的【目标】，因此在运行前，先取消“优化”勾选项。这样我们才能进行【运行】算例操作</p>
+<p>要执行优化，您选择将变量定义为范围或目标，则程序会自动激活优化设计算例。 在多数情况下，都是使用变量视图选项卡来设置优化设计算例的参数。</p>
+<img src="教程11-设计情形/image-20240624173201251.png">
+
+<h2 id="结果视图"><a href="#结果视图" class="headerlink" title="结果视图"></a>结果视图</h2><img src="教程11-设计情形/image-20240606164320049.png">
+
 <h1 id="设计算例-尺寸"><a href="#设计算例-尺寸" class="headerlink" title="设计算例-尺寸"></a>设计算例-尺寸</h1><p>变更<strong>【模型尺寸变量】</strong>的方法，进行设计算例</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606170724540.png" alt="image-20240606170724540"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606170743706.png" alt="image-20240606170743706"></p>
+<img src="教程11-设计情形/image-20240606170724540.png">
+
+<img src="教程11-设计情形/image-20240606170743706.png">
+
 <h2 id="变量视图-1"><a href="#变量视图-1" class="headerlink" title="变量视图"></a>变量视图</h2><p>点击此处添加变量</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606193048704.png" alt="image-20240606193048704"></p>
+<img src="教程11-设计情形/image-20240606193048704.png">
+
 <p>在参考编辑窗口里添加变量</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606171032397.png" alt="image-20240606171032397"></p>
-<h2 id="结果视图-1"><a href="#结果视图-1" class="headerlink" title="结果视图"></a>结果视图</h2><p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606193020658.png" alt="image-20240606193020658"></p>
+<img src="教程11-设计情形/image-20240606171032397.png">
+
+<h2 id="结果视图-1"><a href="#结果视图-1" class="headerlink" title="结果视图"></a>结果视图</h2><img src="教程11-设计情形/image-20240606193020658.png">
+
 <p>查看结果变化趋势</p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606174124699.png" alt="image-20240606174124699"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606174211276.png" alt="image-20240606174211276"></p>
-<p><img src="/%E6%95%99%E7%A8%8B11-%E8%AE%BE%E8%AE%A1%E6%83%85%E5%BD%A2/image-20240606191259755.png" alt="image-20240606191259755"></p>
+<img src="教程11-设计情形/image-20240606174124699.png">
+
+<img src="教程11-设计情形/image-20240606174211276.png">
+
+<img src="教程11-设计情形/image-20240606191259755.png">
+
 <p>在模型中，当摆臂的厚度为4mm时，应力低于材料的屈服强度。这是保证材料不受永久损坏所需的最小厚度。</p>
 </div>
  			<!-- 引入正文 -->

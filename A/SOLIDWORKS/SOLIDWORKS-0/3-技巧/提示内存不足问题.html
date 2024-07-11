@@ -101,6 +101,24 @@
 
 <p>如果一切都正常，那可以关闭 SOLIDWORKS Resource Monitor 的所有通知</p>
 <img src="提示内存不足问题/image-20240513115730933-17155726512911.png">
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个错误信息不一定真的是客户的实际物理内存完全不够了，出现内存耗尽的可能原因常见的有：</p>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><ol>
+<li>客户硬件确实有问题。例如出现了内存泄漏。</li>
+</ol>
+<h2 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h2><ol>
+<li>客户设备上可用内存空间有限，在开启一些大型装配体或者文件，或者使用相对需要占用较多内存的命令，例如进行仿真分析等，出现内存耗尽，请和客户确认，是否他们仅在开启文件的时候出现内存耗尽的错误。</li>
+</ol>
+<h2 id="特定文件"><a href="#特定文件" class="headerlink" title="特定文件"></a>特定文件</h2><ol>
+<li>客户的部分文件有问题，打开文件，显示内存耗尽，这个也同样要客户确认，内存耗尽，是否就是打开一些特定文件，或者包含有一些文件的装配体，就会出现。</li>
+</ol>
+<p><strong>新建文件检查：</strong>硬件和文件都没有问题，随机打开一个新建文件，部分电脑打开图纸，就会显示内存耗尽，这是之前的已知问题，和客户登录账号有特定字符或者空格有关，<!-- 详细可以参考QA00000264216解决方案也有，是因为windows的临时文件夹有空格或者没有短名称 --></p>
+<h2 id="Toolbox"><a href="#Toolbox" class="headerlink" title="Toolbox"></a>Toolbox</h2><ol>
+<li>有一部分客户端上toolbox有问题，开启的SOLIDWORKS Toolbox Utilities情况下，会有内存耗尽的错误，请帮客户确认，是否客户是在有开启toolbox的情况下，出现的内存耗尽错误。</li>
+</ol>
+<h2 id="PDM"><a href="#PDM" class="headerlink" title="PDM"></a>PDM</h2><ol>
+<li>还有部分客户端是由于文件在PDM中存储，开启PDM add-in的时候，打开部分特定文件会出现内存耗尽或者系统可用资源低的错误。</li>
+</ol>
 </div>
  			<!-- 引入正文 -->
     </div>	

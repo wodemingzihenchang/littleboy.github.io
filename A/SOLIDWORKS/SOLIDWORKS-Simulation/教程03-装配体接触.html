@@ -43,18 +43,23 @@
 </div>
 
 <div id="article"><h1 id="Simulation-装配体接触"><a href="#Simulation-装配体接触" class="headerlink" title="Simulation-装配体接触"></a>Simulation-装配体接触</h1><p>前面几章的分析是在零件单实体的情况下进行的，那如果是多实体或是装配体情况下。我们就可能会需要考虑零件和零件之间的接触影响，因此本章将带大家来看一个“带接触”的装配体分析案例。</p>
+<p><strong>为何需要接触分析</strong></p>
+<p>1、装配体的配合不会转移到的接触定义中。因此从分析的角度来看，装配体的零件一开始都是分离的，悬浮的，这会造成“大位移”结果出现。</p>
+<p>2、接触条件允许零组件之间相互作用更真实，避免仿真的和“干涉”出现；</p>
+<p>3、在两个相似的刚度值零件之间，使用接触相互作用是较好的， 而不是以负载&#x2F;拘束条件方式作用于零件上 </p>
 <span id="more"></span>
 
-<!-- 分析案例：支架
-问题描述:支架两端通过地脚螺栓固定在地面上，零件凹孔面承受2000N的法向推力，求解支架的应力和位移。材料:AISI304-->
-
-<p>分析案例：虎钳</p>
-<p>材料:合金钢。分别将225N的“挤压”力作用在钳臂的末端，平板短边两侧固定。求解模型，并查看位移和应力分布情况。</p>
-<img src="教程03-装配体接触/image-20240308153842247.png">
-
-<p>装配体分析中的关键步骤如下:</p>
-<p>1)应用材料:可以一次性对所有装配体添加材料，也可以分别添加。<br>2)添加夹具:和零件中添加夹具的方法一样，用以约束模型的运动。<br>3)施加零部件接触条件:在没有特别指明局部接触条件的情况下，零部件接触条件用来指明零件或子装配体是如何接触到一起的，或如何相互作用的。<br>4)应用局部接触条件:局部接触条件会取代零部件接触条件。<br>5)应用网格控制:应力集中或应力变化剧烈的几何区域，需要对网格进行细化操作<br>6)划分网格。<br>7)运行分析。<br>8)分析结果:判断结果是否足够精确，或进一步细化网格是否必要。</p>
-<h1 id="接合接触"><a href="#接合接触" class="headerlink" title="接合接触"></a>接合接触</h1><h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>打开虎钳模型，并新建静应力算例。</p>
+<p>装配体分析中的关键步骤：</p>
+<p>1)应用材料:可以一次性对所有装配体添加材料，也可以分别添加。</p>
+<p>2)添加夹具:和零件一样</p>
+<p>3)添加接触:</p>
+<p>零部件接触：在没有特别指明局部接触条件的情况下，零部件接触条件用来指明零件或子装配体是如何接触到一起的，或如何相互作用的。</p>
+<p>局部接触条件:局部接触条件会取代零部件接触条件。</p>
+<p>4)应用网格控制:</p>
+<p>5)划分网格。</p>
+<p>6)运行分析。</p>
+<h1 id="接合接触"><a href="#接合接触" class="headerlink" title="接合接触"></a>接合接触</h1><p>分析案例：虎钳。材料:合金钢。分别将225N的“挤压”力作用在钳臂的末端，平板短边两侧固定。求解模型，并查看位移和应力分布情况。</p>
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>打开虎钳模型，并新建静应力算例。</p>
 <p>材料：在仿真树内的零件实体添加【普通碳钢】材料</p>
 <h2 id="夹具和载荷"><a href="#夹具和载荷" class="headerlink" title="夹具和载荷"></a>夹具和载荷</h2><img src="教程03-装配体接触/image-20240308153842247.png">
 
@@ -62,6 +67,7 @@
 <p>为了允许模型因加载而产生变形时钳臂有相对的移动，应该设定默认的【零部件接触】条件为【接合】。</p>
 <img src="教程03-装配体接触/接合接触.png">
 
+<p>接合：</p>
 <img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/yyo1450460961235.image">
 
 <p>必须保证所有零件和子装配体之间新增零部件的接触没有冲突，它们将覆盖顶层装配体的零部件接触。如果检测到有冲突，将会显示一条警告消息。</p>
@@ -73,6 +79,10 @@
 <h2 id="零部件接触-1"><a href="#零部件接触-1" class="headerlink" title="零部件接触"></a>零部件接触</h2><p>设置【零部件接触】条件为【无穿透】。</p>
 <img src="教程03-装配体接触/无穿透接触.png">
 
+<p>无穿透：</p>
+<iframe title="" src="about:blank" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe>
+
+<p><img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/vxd1450460963415.image" alt="img"></p>
 <h2 id="运行结果-1"><a href="#运行结果-1" class="headerlink" title="运行结果"></a>运行结果</h2><p>本次希望了解，模型是否有超过设计许用应力138MPa的应力存在，为了判断von mises是否超过最大值，可更改图解选项（如下图）。</p>
 <img src="教程03-装配体接触/image-20240308154549678.png">
 
@@ -95,8 +105,7 @@
 <p>【局部接触】优先于【所有零部件接触】优于【顶层装配体层级的零部件接触】</p>
 <p>当零部件接触应用到零件或装配体的初始接触面时，局部条件可以允许存在间隙和初始的分离。</p>
 <p>本章还介绍了各种类型的接触属性和选项，即【接合】、【允许贯通】、【无穿透】、【冷缩配合】和【虚拟壁】。我们采用了线性准则(输入和输出线性相关)来放大载荷，以达到夹紧钳的目的。最后考察了线性材料分析的局限性，并介绍了接触应力。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>Q1全局接触的条件类型？</p>
-<table>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="Q1全局接触类型"><a href="#Q1全局接触类型" class="headerlink" title="Q1全局接触类型"></a>Q1全局接触类型</h2><table>
 <thead>
 <tr>
 <th>接触类型</th>
@@ -124,8 +133,18 @@
 <td></td>
 </tr>
 </tbody></table>
-<p>Q2局部接触的条件类型？</p>
-<table>
+<p>接合：</p>
+<img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/yyo1450460961235.image">
+
+<p>允许贯穿：</p>
+<iframe title="" src="about:blank" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe>
+
+<p><img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/cry1450460962779.image" alt="img"></p>
+<p>无穿透：</p>
+<iframe title="" src="about:blank" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe>
+
+<p><img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/vxd1450460963415.image" alt="img"></p>
+<h2 id="Q2局部接触类型"><a href="#Q2局部接触类型" class="headerlink" title="Q2局部接触类型"></a>Q2局部接触类型</h2><table>
 <thead>
 <tr>
 <th>局部类型</th>
