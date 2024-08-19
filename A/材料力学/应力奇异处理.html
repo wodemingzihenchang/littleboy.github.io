@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="应力奇异"><a href="#应力奇异" class="headerlink" title="应力奇异"></a>应力奇异</h1><span id="more"></span>
+
+<h1 id="应力奇异判断"><a href="#应力奇异判断" class="headerlink" title="应力奇异判断"></a>应力奇异判断</h1><p>根据弹性理论在结构内部尖角处，或说非光滑连续处的应力是无限大。在使用有限元求解过程中，</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>单元网格越细化，越会引起计算应力无限增大，而且不再收敛；</p>
+<p>网格稀疏不均匀时，网格离散误差也大小不一；</p>
+<p>添加在节点上的集中载荷与施加在与该节点相连的单元上的均布载荷相当的话，这些节点就会成为应力奇异点；</p>
+<p>离散约束点导致非零反力的出现，就像在一个节点上施加一个集中力，这时约束点也就成为应力奇异点。但实际中，当考虑应力奇异点的区域时，这些假设都是错误的，只要该点受载荷，就一定有位移；</p>
+<p>锐利的拐角处。如果模型中存在尖角（直角），那么网格的细分会改变尖角处的应力计算值，值不收敛。实际中该情况并不绝对存在。</p>
+<p>在有限元计算分析实践中发现，应力奇异的区域应力集中系数较高，理论上是无限大，应力集中度会很高，应力衰减明显。因此在分析中，首先需要关注的是结构上那些不光滑连续的区域；其次，对不连续区域的邻域进行划分，并在网格细化，寻找网格无关解的过程，比较确认不同区域计算值的收敛程度。当不连续区域邻域内的解已趋于收敛，且满足误差要求，但不连续区域的解始终差异较大时，就可以确认该区域出现了应力奇异。</p>
+<h1 id="应力奇异处理"><a href="#应力奇异处理" class="headerlink" title="应力奇异处理"></a>应力奇异处理</h1><p>在遇到应力奇异时，可以考虑采用以下方法进行处理：</p>
+<h2 id="细化模型"><a href="#细化模型" class="headerlink" title="细化模型"></a>细化模型</h2><p>主要是在模型中添加细节特征（如倒角、过渡面等），再重新计算或者采用子模型法进行分析。</p>
+<h2 id="外插值法或路径法"><a href="#外插值法或路径法" class="headerlink" title="外插值法或路径法"></a>外插值法或路径法</h2><p>假设应力奇异在该区域没有发生用来推断奇异点的应力值，可使用应力集中系数来计算真实应力。</p>
+<h2 id="局部细化网格"><a href="#局部细化网格" class="headerlink" title="局部细化网格"></a>局部细化网格</h2><p>在几何尖角处，应力解梯度大的区域网格应细分，其他远离的位置可以粗划。如果远离奇异点的解是收敛的，则粗糙网格也会较为准确的估计这部分的解，但对于接近奇异点的解是不可靠的。</p>
+<h2 id="网格模型转化"><a href="#网格模型转化" class="headerlink" title="网格模型转化"></a>网格模型转化</h2><p>将模型转化为可借用理论公式计算的形式，并根据设计手册查找该模型结构及尺寸的应力集中系数来预测真实应力。 </p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12079135/">材料力学笔记之——应力集中与应力奇异 - 哔哩哔哩 (bilibili.com)</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

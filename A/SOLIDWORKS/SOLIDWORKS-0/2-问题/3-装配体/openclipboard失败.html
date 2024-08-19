@@ -49,7 +49,7 @@
 <h2 id="方法-3："><a href="#方法-3：" class="headerlink" title="方法 3："></a>方法 3：</h2><p>1.开始菜单打开设置页面</p>
 <p>2.进入系统设置</p>
 <p>3.选择剪切板，若清除按钮未置灰，则说明剪切板中有内容，点击清除则清除剪切板内容成功。</p>
-<img src="插入零部件提示openclipboard失败/image1.png" >
+<img src="openclipboard失败/image1.png" >
 
 <h2 id="方法-4："><a href="#方法-4：" class="headerlink" title="方法 4："></a>方法 4：</h2><!-- 参考 S-01516 -->
 
@@ -74,6 +74,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

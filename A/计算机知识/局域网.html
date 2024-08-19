@@ -123,14 +123,7 @@
 <p>安全策略</p>
 <p>前文提到防火墙通过规则控制流量，这个规则在防火墙上被称为“安全策略”。安全策略是防火墙产品的一个基本概念和核心功能，防火墙通过安全策略来提供安全管控能力。</p>
 <p><img src="https://download.huawei.com/mdl/image/download?uuid=b32868465025438c82e3ffefcb2a9cf8" alt="img"></p>
-<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="MAC查ip"><a href="#MAC查ip" class="headerlink" title="MAC查ip"></a>MAC查ip</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/huxyc/article/details/122545829">查看局域网所有MAC地址_查看局域网内所有设备mac地址-CSDN博客</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arp -a</span><br><span class="line">获得IP和MAC地址</span><br></pre></td></tr></table></figure>
-
-<p><img src="/%E5%B1%80%E5%9F%9F%E7%BD%91/image-20240506102206859.png" alt="image-20240506102206859"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tracert 192.168.3.31</span><br><span class="line">获得IP对应的电脑名</span><br></pre></td></tr></table></figure>
-
-<p><img src="/%E5%B1%80%E5%9F%9F%E7%BD%91/image-20240506102247414.png" alt="image-20240506102247414"></p>
-<h3 id="网络共享无显示"><a href="#网络共享无显示" class="headerlink" title="网络共享无显示"></a>网络共享无显示</h3><p> 看了好多教程都没用，最后是用下面的方法解决的。</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h3 id="网络共享无显示"><a href="#网络共享无显示" class="headerlink" title="网络共享无显示"></a>网络共享无显示</h3><p> 看了好多教程都没用，最后是用下面的方法解决的。</p>
 <ol>
 <li>控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;找到 smb 1.x 。勾选确认。</li>
 <li>Win+R搜索“services.msc”，找到function discovery resource publication服务设为自动、开启。</li>
@@ -171,6 +164,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

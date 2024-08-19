@@ -249,6 +249,15 @@ a.如果“登录”选项卡下的“使用默认 SQL 登录”选项处于活�
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

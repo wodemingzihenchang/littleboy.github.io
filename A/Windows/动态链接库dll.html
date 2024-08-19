@@ -49,13 +49,20 @@
 
 <ol start="2">
 <li>将正常文件复制到 C:\Windows\System32</li>
-<li>用管理员启动 cmd，使用 regsvr32 注册.dll 文件。（如果dll注册文件不在C:\Windows\System32位置，则需执行 【cd】 命令跳转到在文件所在位置，再使用 regsvr32 注册.dll 文件）</li>
+<li>用管理员启动 cmd，使用 regsvr32 注册.dll 文件。</li>
 </ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">regsvr32 xxx.dll</span><br></pre></td></tr></table></figure>
+
 <img src="动态链接库dll\regsvr32.png" >
 
+<p>（注意：如果dll注册文件不在C:\Windows\System32位置，则需执行 【cd】 命令跳转到在文件所在位置，再使用 regsvr32 注册.dll 文件）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D：</span><br><span class="line">cd D:\XXXXX</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="卸载dll"><a href="#卸载dll" class="headerlink" title="卸载dll"></a>卸载dll</h2><p> 1.以管理员身份打开 Windows 命令提示符。<br> 2.在命令提示符中输入：cd [DLL 路径]<br> 3.接着输入：regsvr32 nameofdll.dll -u。<br></p>
+
+
+
+<h2 id="卸载dll"><a href="#卸载dll" class="headerlink" title="卸载dll"></a>卸载dll</h2><p> 1.以管理员身份打开 Windows 命令提示符。<br> 2.在命令提示符中输入：cd [DLL 路径]<br> 3.接着输入：regsvr32 xxx.dll -u。<br></p>
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="XXX-dll文件报错"><a href="#XXX-dll文件报错" class="headerlink" title="XXX.dll文件报错"></a>XXX.dll文件报错</h2><p>XXX.dll 文件报错，无法载入 dll 文件</p>
 <img src="动态链接库dll\无法载入dll文件.png" >
 
@@ -83,6 +90,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

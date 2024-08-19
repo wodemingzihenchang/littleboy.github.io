@@ -46,7 +46,14 @@
 <span id="more"></span>
 
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a target="_blank" rel="noopener" href="https://support.hawkridgesys.com/hc/en-us/articles/4406902886541-How-To-Install-SOLIDWORKS-Visualize-Boost-2022">How To Install SOLIDWORKS Visualize Boost</a></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><a target="_blank" rel="noopener" href="https://support.hawkridgesys.com/hc/en-us/articles/4406902935437-How-To-Configure-SOLIDWORKS-Visualize-Boost-2022">How To Configure SOLIDWORKS Visualize Boost</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>要安装和设置 Visualize Boost：</p>
+<ol>
+<li>使用 SOLIDWORKS 安装管理程序在可通过网络访问的一台或多台机器上安装 Boost。</li>
+<li>在每台 Boost 机器上执行以下操作：<br>a. 启动 SOLIDWORKS Visualize Boost 2025。<br>b. 转至文件 &gt; 设置。<br>c. 对于一台机器，选择协调程序，使其成为协调节点。取消勾选所有其他 Boost 节点的协调程序复选框。<br>d. 对于非协调程序的 Boost 节点，输入协调程序 IP 地址。<br>e. 单击应用。</li>
+<li>在 SOLIDWORKS Visualize 中，转到工具 &gt; 选项 &gt; Boost，然后输入协调程序 IP 地址。</li>
+<li>单击连接。<br>连接后，您可以在渲染向导&#x2F;质量页面中选择 Boost 渲染器，以启动分布在网络的渲染。</li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><a target="_blank" rel="noopener" href="https://support.hawkridgesys.com/hc/en-us/articles/4406902935437-How-To-Configure-SOLIDWORKS-Visualize-Boost-2022">How To Configure SOLIDWORKS Visualize Boost</a></p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1></div>
  			<!-- 引入正文 -->
     </div>	
@@ -62,6 +69,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

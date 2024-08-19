@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-08-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="hexo在Centos建站"><a href="#hexo在Centos建站" class="headerlink" title="hexo在Centos建站"></a>hexo在Centos建站</h1><p>给大家介绍一款用于Centos建站Hexo博客方法，</p>
+<span id="more"></span>
+
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
+
+<p>检查安装是否成功，可以输入如下：&#x2F;&#x2F; 查看版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br></pre></td></tr></table></figure>
+
+<p>安装正常会输出当前git的版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git version 1.8.3.1</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure>
+
+<p>检查安装是否成功，可以输入如下：&#x2F;&#x2F; 查看版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+<p>安装正常会输出当前git的版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v6.14.2</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="配置启动hexo"><a href="#配置启动hexo" class="headerlink" title="配置启动hexo"></a>配置启动hexo</h2><p>初始化创建用户，-m选项表示生成用户主目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -m wenli</span><br></pre></td></tr></table></figure>
+
+<p>添加密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd xxxxx</span><br></pre></td></tr></table></figure>
+
+
+<p>切换用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su xxxxx</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<p>创建站点文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir xxxxx</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd xxxxx</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init xxxx</span><br></pre></td></tr></table></figure>
+
+
+
+<p>生成静态文件，开启本地服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 切换到文件夹</span><br><span class="line">cd xxxx</span><br><span class="line">// 生成博客文件</span><br><span class="line">hexo generate</span><br><span class="line">// 输出</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
+
+<p>&#x2F;&#x2F; 输出<br>INFO Start processing<br>INFO Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>. Press Ctrl+C to stop.</p>
+<p>5.安装Nginx服务<br>&#x2F;&#x2F; 安装</p>
+<h1 id="yum-install-nginx-y"><a href="#yum-install-nginx-y" class="headerlink" title="yum install nginx -y"></a>yum install nginx -y</h1><p>&#x2F;&#x2F;配置server<br>#vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</p>
+<p>http块的server部分root后值修改为&#x2F;home&#x2F;wenli&#x2F;Codes&#x2F;blog&#x2F;public<br>&#x2F;&#x2F; 启动</p>
+<h1 id="systemctl-start-nginx-service"><a href="#systemctl-start-nginx-service" class="headerlink" title="systemctl start nginx.service"></a>systemctl start nginx.service</h1><p>此时再次访问你的IP地址，若显示上文的hexo初次运行的样子，则说明配置成功。</p>
+<p>注：可能会报403错误，原因是nginx没有权限访问public文件夹，修改方法有两种：<br>1.修改public文件夹的权限，修改为777（即任何人可读可写可执行），不推荐<br>2.修改nginx.conf中的user（在第5行），改为可以访问public文件夹的用户，如root。<br>我这里修改为wenli，我的腾讯云公有IP为：123.207.251.121，直接访问IP即可。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -47,7 +47,7 @@
 
 <img src="文件夹预览图不显示\image-20231012171244241.png" >
 
-<h2 id="方法-1：检查设置"><a href="#方法-1：检查设置" class="headerlink" title="方法 1：检查设置"></a>方法 1：检查设置</h2><p>1.首先确保 Windows 文件夹选项设置，显示的是缩略图而不是图标。所以，不勾选“始终显示图标，从不显示缩略图”，win7 和 win10 的选项位置略有不同，下图是 win7 的截图。</p>
+<h2 id="方法1：检查设置"><a href="#方法1：检查设置" class="headerlink" title="方法1：检查设置"></a>方法1：检查设置</h2><p>1.首先确保 Windows 文件夹选项设置，显示的是缩略图而不是图标。所以，不勾选“始终显示图标，从不显示缩略图”，win7 和 win10 的选项位置略有不同，下图是 win7 的截图。</p>
 <img src="文件夹预览图不显示\image2.jpeg" >
 
 <p>2.检查 windows 的性能选项，找到视觉效果标签栏，勾选“显示缩略图，而不是显示图标”：</p>
@@ -56,19 +56,11 @@
 <p>3.当 Windows 设定完成后，若还是不显示缩略图，需检查 SOLIDWORKS 系统选项</p>
 <img src="文件夹预览图不显示\image4.jpeg" >
 
-<h2 id="方法-2：修复安装"><a href="#方法-2：修复安装" class="headerlink" title="方法 2：修复安装"></a>方法 2：修复安装</h2><p>选项若都没有问题，可再检查 SOLIDWORKS 的文档是否是旧版本，例如电脑上先安装高版本再安装低版本SW，那会有可能导致缩略图不显示的问题(如图部分文件显示)。</p>
+<h2 id="方法2：修复安装"><a href="#方法2：修复安装" class="headerlink" title="方法2：修复安装"></a>方法2：修复安装</h2><p>选项若都没有问题，可再检查 SOLIDWORKS 的文档是否是旧版本，例如电脑上先安装高版本再安装低版本SW，那会有可能导致缩略图不显示的问题(如图部分文件显示)。</p>
 <p>此时需要用高版本修复安装，修复时注意关闭杀毒软件并且有管理员权限。</p>
 <img src="文件夹预览图不显示\image-20231012170615178.png" >
 
-<h2 id="方法-3：手动注册-dll"><a href="#方法-3：手动注册-dll" class="headerlink" title="方法 3：手动注册 dll"></a>方法 3：手动注册 dll</h2><p>（不大建议的方法：是手动把预览图的动态链接库进行注册使用，遇到高低版本时也是没用的）</p>
-<p>手动注册 dll 文件。在安装目录中找到 sldwinshellextu.dll 和 sldthumbnailprovider.dll。通常文件的路径如下：X 代表安装盘：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X:\ProgramFiles\CommonFiles\SolidWorksShared\sldwinshellextu.dll</span><br><span class="line">X:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll</span><br></pre></td></tr></table></figure>
-
-<p>然后拷贝到 c:\windows\system32 文件夹中。</p>
-<p>在 windows 的搜索工具里输入 CMD，输入或复制如下命令，按回车，等待注册结束后即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for %1 in (%windir%\system32\*.dll) do regsvr32.exe /s %1</span><br></pre></td></tr></table></figure>
-
-<h1 id="文件启动异常"><a href="#文件启动异常" class="headerlink" title="文件启动异常"></a>文件启动异常</h1><h2 id="选择SWLauncher启动方法："><a href="#选择SWLauncher启动方法：" class="headerlink" title="选择SWLauncher启动方法："></a>选择SWLauncher启动方法：</h2><p>文件的预览和文件类型图标是由swshellLauncher.exe程序作用。因此，如果SW文件的启动方式被修改了那么。文件的图标以及预览图也会异常。如图</p>
+<h2 id="方法3：选择默认启动"><a href="#方法3：选择默认启动" class="headerlink" title="方法3：选择默认启动"></a>方法3：选择默认启动</h2><p>SWLauncher启动方法：文件的预览和文件类型图标是由swshellLauncher.exe程序作用。因此，如果SW文件的启动方式被修改了那么。文件的图标以及预览图也会异常。如图</p>
 <img src="文件夹预览图不显示\文件启动异常1.png" >
 
 <p>方法：则需要SW文件【右键-打开方式-选择其他应用】修改默认启动程序。</p>
@@ -80,6 +72,43 @@
 <li>选择你想要设置的默认程序，然后选择该应用。 你还可以在 Microsoft Store 中获取新的应用。 必须先安装应用，然后才可以将其设置为默认应用。 <img src="https://support.content.office.net/zh-cn/media/5a39720d-1114-4c9f-9d53-e5b8553d847d.jpg" alt="替换文本"></li>
 <li>你可能希望你的.pdf、电子邮件或音乐使用 Microsoft 提供的应用自动打开。 按文件类型选择默认应用。 向下滚动并选择 **”按文件类型选择默认应用”**。</li>
 </ol>
+<h2 id="方法4：手动注册-dll"><a href="#方法4：手动注册-dll" class="headerlink" title="方法4：手动注册 dll"></a>方法4：手动注册 dll</h2><p>（不大建议的方法：是手动把预览图的动态链接库进行注册使用，遇到高低版本时也是没用的）</p>
+<p>手动注册 dll 文件。在安装目录中找到 sldwinshellextu.dll 和 sldthumbnailprovider.dll。通常文件的路径如下：X 代表安装盘：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X:\ProgramFiles\CommonFiles\SolidWorks Shared\sldwinshellextu.dll</span><br><span class="line">X:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll</span><br></pre></td></tr></table></figure>
+
+<p>然后拷贝到 c:\windows\system32 文件夹中。</p>
+<p>在 windows 的搜索工具里输入 CMD，输入或复制如下命令，按回车，等待注册结束后即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for %1 in (%windir%\system32\*.dll) do regsvr32.exe /s %1</span><br></pre></td></tr></table></figure>
+
+
+
+<p>备注：</p>
+<p>2021及以前版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">regsvr32 -u&quot;C:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll&quot;</span><br><span class="line">regsvr32 &quot;C:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>2022及以后版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">regsvr32 -u&quot;C:\Program Files\Common Files\SOLIDWORKS Shared\sldthumbnailprovider.dll&quot;</span><br><span class="line">regsvr32 &quot;C:\Program Files\Common Files\SOLIDWORKS Shared\sldthumbnailprovider.dll&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>PS: 如同时安装有2021和2022，那么可以尝试可直接用2022中的文件操作即可。</p>
+<h2 id="注册表"><a href="#注册表" class="headerlink" title="注册表"></a>注册表</h2><p>三、文件关联</p>
+<ol>
+<li>缩略图在文件图标和预览面板中均不可见</li>
+</ol>
+<p>以admin权限启动SOLIDWORKS</p>
+<p>工具-选项-系统选项-文件探索器- 恢复文件关联</p>
+<p>多版本SOLIDWORKS在同台机器上， 请指定默认程序为SOLIDWORKS Launcher</p>
+<p>重命名下面注册表， 修复SOLIDWORKS:</p>
+<p>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts.sldasm</p>
+<p>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts.sldprt</p>
+<p>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts.slddrw</p>
+<p>HKEY_CLASSES_ROOT\SldPart.Document</p>
+<p>HKEY_CLASSES_ROOT\SldAssem.Document</p>
+<p>HKEY_CLASSES_ROOT\SldDraw.Document</p>
+<p>HKEY_CLASSES_ROOT.sldprt</p>
+<p>HKEY_CLASSES_ROOT.sldasm</p>
+<p>HKEY_CLASSES_ROOT.slddrw</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -95,6 +124,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-08-18 14:58:26</span>
+</div>
+
+<div id="article"><h1 id="插件提取失败"><a href="#插件提取失败" class="headerlink" title="插件提取失败"></a>插件提取失败</h1><p>插件提取失败，没有注册类，COM DLL注册失败</p>
+<p><img src="/%E6%8F%92%E4%BB%B6%E6%8F%90%E5%8F%96%E5%A4%B1%E8%B4%A5/image-20240819112925304.png" alt="image-20240819112925304"></p>
+<p>原因：客户端在每次登录时候对比本地和服务器上的插件版本是否一致，</p>
+<p>如果插件版本不一样则从服务器下载插件压缩包CAF文件到本地，然后解压缩成DLL文件后进行注册，此时其中一个步骤有异常会造成插件注册失败。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>确认是否特定&#x2F;所有用户问题&#x2F;插件自身问题？把插件移除后重新加载一次。</p>
+<p>特定电脑问题更换Windows登录账号后再测试。</p>
+<p>检查.Net Framework的版本3.5&#x2F;2.5及4.5以上是否齐全，移除重装.Net Framework，报错“注册类”问题与.Net有关。</p>
+<p>检查VC++ 2008&#x2F;2010&#x2F;2012&#x2F;2013&#x2F;2015-2019 x64和x86等版本是否齐全。</p>
+<p>排查是否有加密&#x2F;杀毒软件已经安装使用，通过更改加密策略来测试排查问题。</p>
+<h2 id="方法手动注册"><a href="#方法手动注册" class="headerlink" title="方法手动注册"></a>方法手动注册</h2><p>手动注册插件（用本机超级管理员Administrator登录后）：</p>
+<p>进入到PDM安装目录，如C:\Program Files\SOLIDWORKS PDM\</p>
+<p>打开cmd命令窗口，并使用cd命令进入如上目录</p>
+<p>输入 REGSVR32 EdmInterface.dll 命令进行手动注册DLL文件</p>
+<p>重新加载客户端插件：</p>
+<p>关闭所有程序，退出PDM程序（任务栏的蓝莓图标）</p>
+<p>打开任务管理器结束Explorer.exe进程，然后重新开启。</p>
+<p>浏览到插件路径，如C:\Users[用户名]\AppData\Local\SolidWorks\SolidWorks PDM\Plugins[库名]</p>
+<p>找到已加载的插件文件夹，例如{C52D573B-057B-4CB3-A357-4FE531251826}，全部删除。</p>
+<p>再打开一个资源管理器Explorer并登录库，此时插件应该自动下载到上述文件夹了，刷新查看是否加载完毕。</p>
+<p>按照第3步，在cmd中手动方式为这些DLL文件重新注册一下。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

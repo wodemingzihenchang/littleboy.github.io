@@ -58,17 +58,22 @@
 <p>3、在正常电脑找到步骤2文件夹的repository，在问题电脑进行替换</p>
 <p>4、服务启动“windows management instrumentation”服务 </p>
 <p>5、重新开机 测试问题是否得到解决。 </p>
-<p><a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102606392-1931698885.png">https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102606392-1931698885.png</a>)</p>
+<img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102606392-1931698885.png">
+
+
+
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>该类问题主要还是Windows® Management Instrumentation导致，如果以上方法都不行的话请再参考链接中的方法尝试修复： <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yinghualuowu/p/11002198.html">https://www.cnblogs.com/yinghualuowu/p/11002198.html</a> </p>
 <p>先看看WMI有没有问题。ctrl + R 运行 wmimgmt.msc，然后右键-&gt;属性</p>
-<p><img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102512205-220349256.png" alt="img"></p>
+<img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102512205-220349256.png">
+
 <p>如下，说明WMI正常。那有问题的长什么样子？？不是下面的图片就是出问题了。比如出现xxxx the error “invalid class”（无效类）</p>
-<p><img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102606392-1931698885.png" alt="img"></p>
+<img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102606392-1931698885.png">
+
 <p>首先cmd ，运行 net stop winmgmt</p>
 <p>看命令也知道，这个是停止服务用的，它会停止一系列服务（其它一些服务可能依赖 WMI，也会提示会被停止）。万一WMI说它停不掉呢？去服务，直接停掉！（也许是先暂停再停止）</p>
-<p><a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102639217-1299204830.png"><img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102639217-1299204830.png" alt="img"></a></p>
+<p><img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102639217-1299204830.png">](<a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102639217-1299204830.png%22%3E">https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102639217-1299204830.png&quot;&gt;</a></p>
 <p>全部停掉之后，我们去C:\Windows\System32\wbem，把repository给重命名了。</p>
-<p><a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102737922-1968428611.png"><img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102737922-1968428611.png" alt="img"></a></p>
+<p><img src="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102737922-1968428611.png">](<a target="_blank" rel="noopener" href="https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102737922-1968428611.png%22%3E">https://img2018.cnblogs.com/blog/843428/201906/843428-20190611102737922-1968428611.png&quot;&gt;</a></p>
 <p>重启~~~~~</p>
 <p>再次运行 net stop winmgmt</p>
 <p>最后运行 winmgmt &#x2F;resetRepository</p>
@@ -89,6 +94,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

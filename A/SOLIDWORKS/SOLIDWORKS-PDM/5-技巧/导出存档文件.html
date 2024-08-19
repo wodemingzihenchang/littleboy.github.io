@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-07-19 10:42:25</span>
+</div>
+
+<div id="article"><h1 id="导出存档文件"><a href="#导出存档文件" class="headerlink" title="导出存档文件"></a>导出存档文件</h1><p>导出PDM库中的存档文件，相当于是“下载”库中文件，然后“断开”和库的索引关联。而下载和断开，在本文介绍中是PDM的【获取最新版本】和【删除本地视图】两操作步骤。</p>
+<span id="more"></span>
+
+<h2 id="获取最新版本"><a href="#获取最新版本" class="headerlink" title="获取最新版本"></a>获取最新版本</h2><img src="导出存档文件/image-20240724135050349.png">
+
+<p>首先登录到PDM本地视图文件夹中，建议是使用“admin”等有权限的PDM账号。选择需要导出存档文件（或文件夹），使用【操作-获取最新版本】</p>
+<img src="导出存档文件/image-20240724140743932.png">
+
+<p>获取会展示文件列表，供我们选择文件下载最新版本。这里只需Ctrl+A全选，再勾选获取即可。</p>
+<img src="导出存档文件/image-20240724140839846.png">
+
+<p>获取过程也相当于是下载过程。因此会需要一定的时间等待；</p>
+<img src="导出存档文件/image-20240724141802164.png">
+
+<h2 id="删除本地视图"><a href="#删除本地视图" class="headerlink" title="删除本地视图"></a>删除本地视图</h2><img src="导出存档文件/image-20240724134723427.png">
+
+<p>选择将文件库视图的本地内容保留为普通文件和文件夹。</p>
+<img src="导出存档文件/image-20240724134748324.png">
+
+<p>删除过程可能会需要填写PDM身份验证，建议是用“admin”PDM账号登录处理。</p>
+<img src="导出存档文件/image-20240724135050349.png">
+
+<p>（可能会遇到）有XX文件检出到此视图您仍想将之删除吗？这将产生影响是：被检出的文件无法获得到本地文件夹中</p>
+<img src="导出存档文件/image-20240724134827095.png">
+
+<p>如果有权限的话，可以将检出文件进行检入操作。建议是用“admin”PDM账号登录处理，这可以确保有足够权限处理部分“被检出的文件”回到PDM库中。</p>
+<img src="导出存档文件/image-20240724135401215.png">
+
+<p>完成【删除本地视图】操作后，PDM本地视图将变化图标成文件夹图标，也就是本地文件状态</p>
+<img src="导出存档文件/image-20240724135645024.png">
+
+<img src="导出存档文件/image-20240724142310541.png">
+
+
+
+<h1 id="数据源文件"><a href="#数据源文件" class="headerlink" title="数据源文件"></a>数据源文件</h1><h2 id="存档文件夹"><a href="#存档文件夹" class="headerlink" title="存档文件夹"></a>存档文件夹</h2><p>PDM源文件（物理文件），会存放在存档服务器的如下路径中。不管这里面的文件是通过编码保管，SQLserver做索引查找的。因此不易人为查找和使用。需要搭配SQL数据库</p>
+<img src="导出存档文件/image-20240724141542178.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

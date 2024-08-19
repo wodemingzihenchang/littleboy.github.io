@@ -59,8 +59,14 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Common Files\SOLIDWORKS Shared\sldshellutils14u.dll</span><br></pre></td></tr></table></figure>
 
 <p> 1.以管理员身份打开 Windows 命令提示符。</p>
+<img src="文件右键功能问题/image-20240716121209459.png">
+
 <p> 2.在命令提示符中输入：cd [DLL 路径]</p>
+<img src="文件右键功能问题/image-20240716121252386.png">
+
 <p> 3.接着输入：regsvr32 sldshellutils14u.dll</p>
+<img src="文件右键功能问题/image-20240716121327554.png">
+
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -76,6 +82,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

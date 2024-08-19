@@ -71,6 +71,8 @@
 
 <p>这里需要留意：当只有对称时，模型在空间中会类似太空的悬浮状态。此时的运行计算会提示缺少约束。因此我们还需避免模型微小移动。这里提供两种方法处理：</p>
 <p>方法1：使用软弹簧，消除刚体模式</p>
+<img src="教程04-对称和自平衡/image-20240729143218965.png">
+
 <img src="教程04-对称和自平衡/image-20240601200617045.png">
 
 <p>方法2：右键【夹具-高级夹具-使用参考几何体】，在刚体移动位置设置成0。</p>
@@ -104,10 +106,10 @@
 <p>在本章例子中，【使用软弹簧使模型稳定】和【使用惯性卸除】选项都可以使用。</p>
 <p>在仿真树算例【右键-属性】，在选项中，激活【使用软弹簧使模型稳定】选项，并选择【Direct sparse】解算器，然后点击确定。运行分析</p>
 <h2 id="虚拟臂"><a href="#虚拟臂" class="headerlink" title="虚拟臂"></a>虚拟臂</h2><p>【相触面组-虚拟臂】</p>
-<img src="教程04-对称和自平衡//image-20240311170415848.png">
+<img src="教程04-对称和自平衡/新建文件夹/image-20240311170415848.png">
 
 <h2 id="均布载荷"><a href="#均布载荷" class="headerlink" title="均布载荷"></a>均布载荷</h2><p>分析实例:桌面放置物体<br>问题描述:考察桌子正中间放置一个质量为44.6kg的长方体，考察桌子的变形情况。材料:合金钢</p>
-<img src="教程04-对称和自平衡//image-20240311174416387.png">
+<img src="教程04-对称和自平衡/新建文件夹/image-20240311174416387.png">
 
 
 
@@ -128,6 +130,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

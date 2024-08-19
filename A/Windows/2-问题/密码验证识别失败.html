@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-18 17:40:43</span>
+</div>
+
+<div id="article"><h1 id="密码验证识别失败"><a href="#密码验证识别失败" class="headerlink" title="密码验证识别失败"></a>密码验证识别失败</h1><p>安装SQL数据库相关程序时，密码验证识别不符合策略要求</p>
+<img src="密码验证识别失败/image-20240719153831053.png">
+
+<p>在启用码软件安装过程中显示以下错误消息：</p>
+<p><strong>密码验证失败。密码不符合 Windows 策略要求，因为它太短</strong></p>
+<p>在所有版本的 Windows 中，当启用密码最大长度的密码策略时，都会出现此问题。若要成功安装，请通过在“运行”框中运行 <code>secpol.msc</code> 或从命令提示符运行来禁用此策略。</p>
+<img src="密码验证识别失败/image-20240719154228947.png">
+
+<p>然后，将显示“本地安全策略”窗口，如下所示。</p>
+<img src="密码验证识别失败/image-20240719154149505.png">
+
+<p>单击“帐户策略”-“&gt;密码策略”，然后将最大密码长度设置为零（请参阅下面的屏幕截图）。</p>
+<img src="密码验证识别失败/image-20240719154247928.png">
+
+
+
+<h1 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h1><p>已知的相关安装程序有：</p>
+<h2 id="electrical"><a href="#electrical" class="headerlink" title="electrical"></a>electrical</h2><p>可有在安装程序的密码里，修改密码长度。</p>
+<img src="密码验证识别失败/image-20240719154441826.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

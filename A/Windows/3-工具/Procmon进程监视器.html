@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-04-22 09:39:32</span>
+</div>
+
+<div id="article"><h1 id="Procmon进程监视器"><a href="#Procmon进程监视器" class="headerlink" title="Procmon进程监视器"></a>Procmon进程监视器</h1><p>Process Monitor是微软推荐的一款系统监视工具。能够帮助使用者对系统中的任何文件、注册表操做进行监视和记录。经过注册表和文件读写的变化，有效帮助诊断系统故障或发现恶意软件、病毒及木马。</p>
+<p>它整合了旧的Sysinternals工具、Filemon与Regmon，其中Filemon专门用来监视系统中的任何文件操做过程，Regmon用来监视注册表的读写操做过程。</p>
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sysinternals/downloads/procmon#GeneratedCaptionsTabForHeroSec">进程监视器 - Sysinternals | Microsoft Learn</a>下载</p>
+<h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><img src="Procmon进程监视器/image-20240422095423003.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">图标功能：</span><br><span class="line">|--打开：打开PML文件</span><br><span class="line">|--保存：可导出为PML文件供后台分析</span><br><span class="line">|--捕获：开始收集记录</span><br><span class="line">|--自动滚动：</span><br><span class="line">|--清空：</span><br><span class="line">————</span><br><span class="line">|--筛选：使用筛选过滤出需要排查的进程</span><br><span class="line">|--高亮</span><br><span class="line">|--从窗口包含进程</span><br><span class="line">————</span><br><span class="line">|--进程树：一个程序不只是自身功能的运作，他可能还会去调用其他程序的功能来协助完成一整套的操作流程。因此我们可以从【进程树】中查看，</span><br><span class="line">————</span><br><span class="line">|--事件属性</span><br><span class="line">|--查找</span><br><span class="line">|--跳转到对象</span><br><span class="line">————</span><br><span class="line">|--注册表</span><br><span class="line">|--文件系统</span><br><span class="line">|--网络</span><br><span class="line">|--进程</span><br><span class="line">|--性能分析</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>运行Process Monitor建议使用管理员模式，当你启动Process Monitor后，它就开始监听三类操做，包括：文件系统、注册表、进程。</p>
+<h3 id="注册表"><a href="#注册表" class="headerlink" title="注册表"></a>注册表</h3><p>Process Monitor记录全部的注册表操做并显示使用常见的注册表根键缩写来显示注册表路径（如HEKY_LOCAL_MACHINE 缩写为HKLM）。想在列表中清除注册表的操做，在Process Monitor工具栏上反选“注册表”按钮，再次按下能够增长对注册表的监听。</p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>Process Monitor显示全部的Windows文件系统活动，包括本地磁盘和远程文件系统。它会自动探测到新的文件系统设备并监听它们。全部的系统路径都会被显示为相对于在用户会话中的一个文件系统操做的执行。想在列表中清除文件系统的操做，在Process Monitor工具栏上反选“文件系统”按钮，再按下能够增长对文件系统的监听。</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>Process Monitor使用“Windows事件跟踪(ETW)”来跟踪并记录TCP和UDP活动。每一个网络操做包括源地址和目标地址，还有发送和接受到的一些数量的数据，但不包括真实的数据。想在列表中清除网络的操做，在Process Monitor工具栏上反选“网络”按钮，再次按下能够增长对网络的监听。</p>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>在Process Monitor的进程&#x2F;线程监听子系统中，它将跟踪全部进程&#x2F;线程的建立和退出操做，包括DLL和设备驱动程序的加载操做。想在列表中清除进程的操做，在Process Monitor工具栏上反选“进程”按钮，再次按下能够增长对进程的监听。</p>
+<h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>这个事件类能够在“选项”菜单中启用。当处于“启用”状态，Process Monitor扫描系统中全部活动的线程并为每一个线程生成一个性能分析事件，记录了内核模式和用户模式的CPU时间消耗，还有许多在上个性能分析事件后已被线程执行的环境开关。</p>
+<h1 id="监控时长"><a href="#监控时长" class="headerlink" title="监控时长"></a>监控时长</h1><img src="Procmon进程监视器/image-20240422113353766.png">
+
+
+
+<img src="Procmon进程监视器/image-20240422113501585.png">
+
+
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>列内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<img src="Procmon进程监视器/image-20240422100144252.png">
+
+<h1 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h1><p>SysInspector:监控的是某一时刻的系统状态，而ProcessMonitor可以监控一段时间的进程行为</p>
+<p>Sysmon:相比之下，ProcessMonitor监控的进程事件更丰富、更全面，故导出文件也大得多</p>
+<p>ProcessExplorer:相当于简化版，只能持续査看进程，没法将一段时间的进程行为录制下来，但可结束进程</p>
+<p>Wireshark:抓包工具，侧重数据流，但无法提供进程信息</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

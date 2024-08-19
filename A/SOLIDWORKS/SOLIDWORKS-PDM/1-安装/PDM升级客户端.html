@@ -51,7 +51,7 @@
 <p>点击确定，以继续升级。</p>
 <img src="PDM客户端升级/客户端安装2.png">
 
-<p>点击下一步，以继续升级。</p>
+<p>在开始升级前，可以检查如下图片提示是否完成，点击下一步，以继续升级。</p>
 <img src="PDM客户端升级/客户端安装3.png">
 
 <p>选择或输入SQL数据库的名称（下图名称为举例说明），下一步。如果出现许可协议请点击接受，以继续升级。</p>
@@ -110,6 +110,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

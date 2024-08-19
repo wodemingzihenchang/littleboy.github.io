@@ -84,7 +84,8 @@
 <img src="教程09-混合网格1/image-20240602155359287.png">
 
 <h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>按默认网格划分时会出现如下失败提示：可以按照提示，选择【网格失败诊断】，或是在仿真树右键【网格-失败诊断】</p>
-<p><img src="/%E6%95%99%E7%A8%8B09-%E6%B7%B7%E5%90%88%E7%BD%91%E6%A0%BC1/image-20240710103713569.png" alt="image-20240710103713569"></p>
+<img src="教程09-混合网格1/image-20240710103713569.png">
+
 <p>在提示处我们会发现是其中一零件的结构尺寸问题，对于这里，我们可以用前面学过的【网格-应用局部网格控制】的方式，调小如图选择面的最小网格尺寸。</p>
 <img src="教程09-混合网格1/image-20240517135317576.png">
 
@@ -118,6 +119,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->

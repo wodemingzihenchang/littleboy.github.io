@@ -200,6 +200,10 @@
 <img src="Electrical-3D教程/5/布线路径.png">
 
 <p>创建布线路径。可以通过【创建草图】或使用现有的草图进行【转换草图】的方式，获得布线路径。默认会是黄色的颜色标识，你也可以手动修改。</p>
+<img src="Electrical-3D教程/image-20240718164612329.png">
+
+<img src="Electrical-3D教程/image-20240718164706619.png">
+
 <p>回想下第2章我们的线槽，作为标准件的线槽模型，他是预先已经绘制了一段线槽内的线段草图（也就是“转换草图”方式做布线路径使用）。即这里我们只需要在离设备连接点比较远的位置绘制布线路径即可，如图：</p>
 <img src="Electrical-3D教程/5/布线路径2.png">
 
@@ -348,6 +352,15 @@
     
 <script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
 	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
