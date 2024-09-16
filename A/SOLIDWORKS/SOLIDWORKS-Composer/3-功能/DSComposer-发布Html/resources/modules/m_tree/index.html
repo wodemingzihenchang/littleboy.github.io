@@ -1,0 +1,27 @@
+<html>
+
+<script type="text/javascript" src="resources/modules/m_tree/js/tree_function.js"></script>
+<link type="text/css" href="resources/modules/m_tree/css/tree_style.css" rel="Stylesheet" />
+
+
+<script type="text/javascript">
+
+Build_assembly_tree("","","")
+
+document.getElementById('assembly_tree').innerHTML=assembly_tree;
+//var element=$('.scroll-pane').jScrollPane({showArrows:true,horizontalGutter: 10});
+//var api = element.data('jsp');
+					
+
+
+</script>
+
+
+<body>
+<div id="root"><img src="resources/modules/m_tree/img/root.png" title="root" height="15" width="15"> <span id="p-root">Root</span>  </div>
+
+<div id="assembly_tree"></div>
+</body>
+
+</html>
+

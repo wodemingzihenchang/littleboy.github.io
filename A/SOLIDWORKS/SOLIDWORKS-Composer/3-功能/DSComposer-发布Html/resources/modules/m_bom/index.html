@@ -1,0 +1,54 @@
+<html>
+
+<script type="text/javascript" src="resources/modules/m_bom/js/BOM_function.js"></script>
+<link type="text/css" href="resources\modules\m_bom\css\bom_style.css" rel="Stylesheet" />
+
+
+<script type="text/javascript">
+init_BOM()
+</script>
+
+<script type="text/javascript">
+$(function() {
+/*******************Dialog*********************/
+$("#meta_dialog").dialog({
+	bgiframe: true,	resizable: false,height:401,width:300,draggable: false,autoOpen: false,modal: true, overlay: {backgroundColor: '#000',opacity: 0.5},
+  close: function() {
+  document.getElementById("3D").style.background=""
+  myObject.style.visibility = "visible"
+  },	
+  buttons: {
+		'OK': function() {
+		$(this).dialog('close');
+      Build_Bom('yes');
+      document.getElementById("3D").style.background=""
+      myObject.style.display="block"	
+			
+		},
+		'Cancel': function() {
+			$(this).dialog('close');
+			  document.getElementById("3D").style.background=""
+        myObject.style.display="block"
+		}
+	}
+});
+})
+
+</script>
+
+<h3>BOM TABLE</h3>
+
+<body>
+<div id="BOM_Table_div">
+</div>
+
+<div id="meta_dialog" title="Configure Columns" style="display:hidden;">
+  <div id="meta_table" style="overflow:auto;height:300px;"></div>
+</div>
+
+</body>
+
+</html>
+
+
+

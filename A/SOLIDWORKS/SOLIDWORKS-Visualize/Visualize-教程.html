@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="教程-Visualize"><a href="#教程-Visualize" class="headerlink" title="教程-Visualize"></a>教程-Visualize</h1><span id="more"></span>
+
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h1><h2 id="设计流程"><a href="#设计流程" class="headerlink" title="设计流程"></a>设计流程</h2><h2 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h2><img src="Visualize-教程\1导入.png">
+
+<p>几何图形：要导入几何体<br>2、外观：要导入与模型一起保存的材料。<br>3、动画：使用 SOLIDWORKS Visualize 插件，导入动画和运动算例。<br>4、相机：默认情况下，如有可能导入源文件中的所有相机。<br>5、布景：导入与模型一起保存的环境、背板和照明。<br>6、贴图：导入与模型一起存储的贴图。</p>
+<p>更多详细信息可查阅Visualize手册：<a target="_blank" rel="noopener" href="http://help.solidworks.com/2020/chinese-simplified/visualize/r_import_settings_dialog_box.htm">http://help.solidworks.com/2020/chinese-simplified/visualize/r_import_settings_dialog_box.htm</a></p>
+<p>SW&amp;SWV关联：</p>
+<p>SW外观（.p2m）：——》SWV 反照率</p>
+<p>SW贴图（.p2d）：——》SWV 贴图</p>
+<p>SW布景光源相机：</p>
+<h2 id="用户界面"><a href="#用户界面" class="headerlink" title="用户界面"></a>用户界面</h2><img src="Visualize-教程\1界面.png">
+
+<p>下拉菜单</p>
+<p>工具栏</p>
+<p>视窗</p>
+<p>调色板</p>
+<ul>
+<li>模型</li>
+<li>外观</li>
+<li>布景</li>
+<li>相机</li>
+<li>文件库</li>
+</ul>
+<p>用户储存预定义的模型、项目、外观、相机和布景<br>文件库的某些项目是与SOLIDWORKS Visualize一起预定义的</p>
+<p>如果存在有效订阅，则可以从云库下载其他项目</p>
+<p>前导显示</p>
+<h2 id="渲染器"><a href="#渲染器" class="headerlink" title="渲染器"></a>渲染器</h2><img src="Visualize-教程\1渲染器.png">
+
+<p>渲染器选择：三种渲染模式，包括【预览】、【快】和【精确】<br>【预览】    模式可实现高性能、交互式、无噪声的渲染，适合在初始设置渲染或创建动画时使用。此渲染模式提供最不真实的照片效果<br>【快】    模式可实现视觉上精确的射线跟踪，以实现快速的品质渲染此渲染模式是预览模式和精确模式之间的中间模式<br>【精确】    模式可实现科学精确的路径追踪，实现最精确的渲染它将无线渲染并产生最高品质的照片效果完全封闭的内部空间和具有复杂光线行为的布景最好在精确模式下查看此模式提供最逼真的照片效果</p>
+<p><strong>降噪器</strong></p>
+<p>降噪器基于计算机学习的后处理技术，在【快】和【精确】模式下提高渲染质量。</p>
+<p>注意：<br>降噪器仅适用于支持的图形显卡和驱动程序，要使用降噪器，必须具备以下硬件：<br>支持CUDA9.0的NVIDIA显卡（Kepler架构或更新版本）<br>至少4GB的显卡内存</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>分辨率：</p>
+<p>•【大小】指成像的照片的最终尺寸大小。</p>
+<p>•【分辨率】图像细节的精细程度是分辨率来控制的，图像的分辨率指图像中存储的信息量，图像分辨率决定了图像输出的质量，图像的像素越多，画质就越清晰。</p>
+<p>渲染通道：<br>【渲染模式-时间限制】： 将在达到您输入的时间限制后停止渲染，无论质量多少。<br>【渲染模式-质量】： 将在达到您输入的渲染通道数量后停止渲染，无论用时多少。<br>【渲染通道】部分用于定义射线通过模型发送的次数（更多数量的渲染通道将捕获更准确的漫社光线）。</p>
+<h1 id="2-外观"><a href="#2-外观" class="headerlink" title="2 外观"></a>2 外观</h1><h2 id="SW插件"><a href="#SW插件" class="headerlink" title="SW插件"></a>SW插件</h2><p>SOLIDWORKS Visualize插件提供了四个命令<br>①简单导出：<br>使用【外观】模式的零件分组将其导入 Visualize<br>②高级导出：<br>使用【自动】模式的零件分组和勾选【监控文件】将其导入Visualize 。（Visualize Pro还允许上传运动算例）<br>③更新：<br>导出最新版本的活动模型并在 Visualize 中触发更新<br>④高级保存：<br>此选项将模型和关联运动算例的副本保存到指定位置，以后可以将其导入SOLIDWORKS Visualize中</p>
+<h2 id="零件分组"><a href="#零件分组" class="headerlink" title="零件分组"></a>零件分组</h2><p>1.自动：尝试找到最佳组合：图层&#x2F;外观、外观&#x2F;图层、图层和外观<br>2.平展：会将所有内容导入到单个组<br>3.组&#x2F;外观：通常与Autodesk Alias中的wire文件一起使用。这将保留wire文件中的组层次结构，根据外观和颜色将项目细分或分组<br>4.图层：将根据CAD文件中指定的图层组织文件<br>5.外观：将根据CAD文件中指定的外观导入，导入时将忽略所有组合图层<br>6.外观&#x2F;图层：将首先按外观组织文件，然后按图层组织文件<br>7.保留结构：将保留装配体的层次结构，如在CAD文件中一样</p>
+<p>监控文件：允许SOLIDWORKS Visualize监控CAD文件。如果对CAD文件进行了更改，SOLIDWORKS Visualize将更新项目以反映更改。该选项并不适用于所有的【零件分组】</p>
+<p>捕捉到地板：将使模型的最低点到达环境的底部</p>
+<img src="Visualize-教程\2分组.png">
+
+<p>2.5选择工具</p>
+<img src="Visualize-教程\2选择工具.png">
+
+
+
+<p>2.6 对象操作工具</p>
+<img src="Visualize-教程\2操作工具.png">
+
+
+
+<h2 id="分割和合并"><a href="#分割和合并" class="headerlink" title="分割和合并"></a>分割和合并</h2><h2 id="复制和粘贴"><a href="#复制和粘贴" class="headerlink" title="复制和粘贴"></a>复制和粘贴</h2><h2 id="外观类型"><a href="#外观类型" class="headerlink" title="外观类型"></a>外观类型</h2><p>1.各向异性：表示具有定向纹理的材料，例如拉丝金属<br>2.向后散射：表示织物之类的材料<br>3.发射：从外观生成光源时使用<br>4.平展：会忽略光源和阴影的影响，使外观保持恒定的颜色<br>5.通用：是最多样化的，它包含所有外观参数的输入<br>6.玻璃：适用于厚玻璃或薄玻璃<br>7.宝石：类似于玻璃，但参数经过优化，看起来像宝石<br>8.无光泽：最适合用于表示平面涂料外观<br>9.金属：表示具有均匀金属外观的材料<br>10.金属涂料：表示高光彩、高光泽的涂料，例如汽车上可见的涂料<br>11.多层：组合多个外观，并彼此堆叠<br>12.涂料：表示非金属涂料<br>13.塑料：表示塑料质感<br>14.子曲面：表示牛奶、牙齿和石头等物品<br>15.薄膜：表示诸如肥皂泡和具有彩虹色失真的浮油之类的物体</p>
+<h2 id="纹理"><a href="#纹理" class="headerlink" title="纹理"></a>纹理</h2><p>2.11纹理映射</p>
+<p>纹理映射：用于确定2D纹理如何投影到3D零部件上，正确地将纹理映射到零部件上取决于纹理的类型和零部件的形状。</p>
+<p>1.UV：此选项将保留任何UV纹理映射<br>2.框形：此选项会将框中的纹理投影到零件上<br>3.平面：此选项在单个方向上投影纹理<br>4.球形：此选项会将球体中的纹理投影到对象上<br>5.径向：此选项会将纹理以圆形平面投影到对象上<br>6.圆柱形：此选项会将纹理以圆柱形投影到对象上<br>7.透视图：此选项将采用与对象视图相关的方式投影纹理</p>
+<h1 id="3-贴图"><a href="#3-贴图" class="headerlink" title="3 贴图"></a>3 贴图</h1><p>贴图是可以应用于SOLIDWORKS Visualize中模型表面的图像、视频或图像序列，用于表示显示器、贴纸或绘制的区域<br>添加贴图后，它将显示在调色板的【外观】选项卡内，可以通过拖放功能进行应用</p>
+<h2 id="贴图特征"><a href="#贴图特征" class="headerlink" title="贴图特征"></a>贴图特征</h2><p>1.添加贴图：是在SOLIDWORKS Visualize中应用于表面的图像<br>2.调整贴图：的位置和颜色定位贴图，调整尺寸并应用外观<br>3.贴图映射：贴图可以通过映射包覆在更复杂的表面上</p>
+<h2 id="贴图深度"><a href="#贴图深度" class="headerlink" title="贴图深度"></a>贴图深度</h2><h2 id="贴图映射"><a href="#贴图映射" class="headerlink" title="贴图映射"></a>贴图映射</h2><h1 id="4-相机"><a href="#4-相机" class="headerlink" title="4 相机"></a>4 相机</h1><p>1.创建相机：创建一个或多个相机，以提供模型的独特视图。<br>2.定义高宽比例：确定了渲染区域的高度和宽度之间的关系。<br>3.设置相机网格：摄影上经常使用三分法剪裁图像以在视觉上吸引注意。网格叠加可用于定位相机，以便模型遵循三分法规则。<br>4.设置透视和相机方向：SOLIDWORKS Visualize中的相机如传统相机一样，可以移动以获得模型的最佳视角。<br>5.定义景深：景深是一种可以打开或关闭的参数，用于创建深度感并聚焦于模型。<br>6.定义过滤器：用于为图像提供额外的效果，例如晕影和光晕</p>
+<h2 id="相机属性"><a href="#相机属性" class="headerlink" title="相机属性"></a>相机属性</h2><p>高宽比例</p>
+<p>保持在地板上方</p>
+<p>诱视图</p>
+<h2 id="相机方向"><a href="#相机方向" class="headerlink" title="相机方向"></a>相机方向</h2><p>网格叠加</p>
+<h2 id="景深"><a href="#景深" class="headerlink" title="景深"></a>景深</h2><h2 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h2><h1 id="5-布景"><a href="#5-布景" class="headerlink" title="5 布景"></a>5 布景</h1><p>布景用于将环境、背板和光源应用于项目</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>HDR环境</p>
+<p>围绕项目的HDR图像，并影响光源如何照射模型</p>
+<p>日光环境</p>
+<p>用于准确表示特定位置和实际的太阳光</p>
+<h2 id="背板"><a href="#背板" class="headerlink" title="背板"></a>背板</h2><p>保留在模型后面的图像，不会影响光线如何照射模型</p>
+<h2 id="光源"><a href="#光源" class="headerlink" title="光源"></a>光源</h2><p>项目中的光照源，用于从指定位置照亮模型</p>
+<p>1.【区域光源】是发光的形状。区域光源相对于模型定位，即使相机移动，光源也不会移动</p>
+<p>2.【定向光源】用于创建光线平行传播的光源。这可以用于表示远离目标的光源。即使相机移动，光源也不会移动</p>
+<p>3.【聚光源】发出的光线类似于剧院中聚光灯的光线。即使相机移动，光源也不会移动</p>
+<h1 id="6-高效工具"><a href="#6-高效工具" class="headerlink" title="6 高效工具"></a>6 高效工具</h1><h2 id="创建多视窗"><a href="#创建多视窗" class="headerlink" title="创建多视窗"></a>创建多视窗</h2><p>展开多个视图，此过程将自动创建对应相机。</p>
+<h2 id="渲染所有相机"><a href="#渲染所有相机" class="headerlink" title="渲染所有相机"></a>渲染所有相机</h2><p>用于为每个存在的相机创模型的渲染。</p>
+<h2 id="时间限制渲染"><a href="#时间限制渲染" class="headerlink" title="时间限制渲染"></a>时间限制渲染</h2><p>在分配时间内创建最佳渲染的方法。</p>
+<h2 id="创建配置"><a href="#创建配置" class="headerlink" title="创建配置"></a>创建配置</h2><p>在不同外观和布景的单个项目中创建多个实例。</p>
+<p>渲染所有配置：与步骤2命令类似，可为所有存在的配置创建单独的渲染。</p>
+<h2 id="渲染队列"><a href="#渲染队列" class="headerlink" title="渲染队列"></a>渲染队列</h2><p>创建要在某一时间运行的渲染列表，通常是在非高峰时段。</p>
+<h2 id="Visualize-Boost"><a href="#Visualize-Boost" class="headerlink" title="Visualize Boost"></a>Visualize Boost</h2><h1 id="7-动画和分组"><a href="#7-动画和分组" class="headerlink" title="7 动画和分组"></a>7 动画和分组</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h2 id="7-2-组"><a href="#7-2-组" class="headerlink" title="7.2 组"></a>7.2 组</h2><h2 id="7-3-动画"><a href="#7-3-动画" class="headerlink" title="7.3 动画"></a>7.3 动画</h2><p>7.3.1 旋转动画</p>
+<p>7.3.2 动画时间轴和控件</p>
+<img src="Visualize-教程\7时间轴.png">
+
+<p>创建动画后，将显示动画时间轴和控件：</p>
+<p>基本动画控件：控制动画的基本功能，例如【播放】和【暂停】等。</p>
+<p>高级动画控件：控制动画播放速度和帧速率的功能。此外还有一些工具可以操作时间轴。</p>
+<p>动画特性：控制对象随时间移动的方式（双击对应的动画时间轴可显示）</p>
+<img src="Visualize-教程\7关键帧特性.png">
+
+<h2 id="7-4动画输出"><a href="#7-4动画输出" class="headerlink" title="7.4动画输出"></a>7.4动画输出</h2><p>当设置动画后，可以使用动画输出工具将其转换为视频。视频时将单独的图像组合在一起而形成的，因此要创建视频，必须为每帧执行渲染。<br><br>动画选项：用于控制视频的输出，设置格式、帧数等</p>
+<p>渲染选项：用于控制每个渲染帧的设置</p>
+<p>（注意：除了创建的视频外，程序还会输出每帧的静止图像并将其放置在指定的【输出文件夹】）</p>
+<h2 id="7-5运动模糊："><a href="#7-5运动模糊：" class="headerlink" title="7.5运动模糊："></a>7.5运动模糊：</h2><p>是一种在静止图像中显示运动的方法。当照片中的物体在曝光过程中发生移动时就会出现条纹（模糊）</p>
+<p>在SOLIDWORKS Visualize中创建具有运动模糊图像的过程是从动画开始的，然后在【相机】中指定【启用运动模糊】，最后再创建渲染。</p>
+<img src="Visualize-教程\7动态模糊.png">
+
+
+
+<p>7.6关键动画</p>
+<p>关键帧动画是一种零部件可以相对于彼此旋转和平移的动画<br>1、要创建关键帧动画，必须将模型定位在起始位置创建关键帧；<br>2、在时间轴内进一步移动时间，再通过移动零件和组再次定位模型，并创建另一个关键帧；<br>3、播放动画时，随着时间沿时间轴移动，零部件在起始位置和结束位置之间移动。</p>
+<p>自动关键帧<br>【添加关键帧动画】是一种添加关键帧的方法<br>如果【自动关键帧】命令处于激活状态，并且该零部件在时间轴中处于活动状态（即已经创建了该零件的初始关键帧），则在零部件移动后，系统将自动创建关键帧</p>
+<h1 id="8-相机动画"><a href="#8-相机动画" class="headerlink" title="8 相机动画"></a>8 相机动画</h1><p>概述</p>
+<h2 id="定位相机"><a href="#定位相机" class="headerlink" title="定位相机"></a>定位相机</h2><p>可以使用【枢轴】命令操纵相机的位置<br>其工作原理是首先在调色板中选择相机，然后使用【枢轴】命令来定位相机的位置<br>（但无法使用【枢轴】命令旋转相机）</p>
+<h2 id="定位视图"><a href="#定位视图" class="headerlink" title="定位视图"></a>定位视图</h2><p>可以使用【移动】命令操纵相机的方向<br>此命令与【枢轴】命令的工作方式相同，不同之处在于【移动】命令并不是移动相机的位置，而是控制焦点的位置</p>
+<h2 id="相机动画"><a href="#相机动画" class="headerlink" title="相机动画"></a>相机动画</h2><p>创建相机动画类似于创建传统动画</p>
+<img src="Visualize-教程\8相机动画.png">
+
+<p>首先指定初始的关键帧，然后在时间轴内移动时间并重新定位相机，最后将另一个关键帧添加到时间轴。</p>
+<p>当相机在关键帧之间移动时，将使用彩色路径跟踪相机的移动<br>当路径为红色时，表示相机减速移动<br>当路径为绿色时，表示相机加速移动</p>
+<h2 id="关键帧特性"><a href="#关键帧特性" class="headerlink" title="关键帧特性"></a>关键帧特性</h2><img src="Visualize-教程\7关键帧特性.png">
+
+<p>用于控制在时间轴栏通过关键帧时动画中的运动</p>
+<p>时间点：此参数控制关键帧的时间</p>
+<p>过渡：控制通过关键帧时的运动类型。（对于每个关键帧，存在两个过渡。第一个控制进入关键帧的运动，第二个控制从关键帧出来的运动）</p>
+<p>张度：控制所选关键帧的传入（内）和传出（外）运动的曲率</p>
+<p>渐进运动：在动画进入（内）或退出（外）所选关键帧时加快或减慢动画</p>
+<h1 id="9-布景和外观动画"><a href="#9-布景和外观动画" class="headerlink" title="9 布景和外观动画"></a>9 布景和外观动画</h1><p>概述</p>
+<h2 id="布景"><a href="#布景" class="headerlink" title="布景"></a>布景</h2><img src="Visualize-教程\9布景动画.png">
+
+<p>1.创建布景动画：光源、HDR环境和日光环境都可以被设置为动画<br>2.创建外观动画：可以显示颜色、透明度、亮度以及许多其他参数的变化</p>
+<h2 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h2><p>可以设置显示颜色、亮度和透明度的变化。</p>
+<img src="Visualize-教程\9外观动画.png">
+
+<p>创建外观动画的过程与创建其他类型的动画非常相似。在时间轴上的不同点处创建具有特殊属性的外观关键帧。在动画播放时，外观会在关键帧之间插入属性。</p>
+<h1 id="10-替代输出"><a href="#10-替代输出" class="headerlink" title="10 替代输出"></a>10 替代输出</h1><p>概述</p>
+<h2 id="转盘"><a href="#转盘" class="headerlink" title="转盘"></a>转盘</h2><p>提供了一种旋转模型的方法，可以创建独特且有趣的动态视图。</p>
+<p>【输出工具】-【转盘】用于创建模型旋转的完整渲染视频：<br>【输出工具】窗口中有两个选项卡，即【转盘选项】和【渲染选项】<br>【转盘选项】控制视频输出<br>【渲染选项】控制每个渲染帧的设置</p>
+<h2 id="HTML图像"><a href="#HTML图像" class="headerlink" title="HTML图像"></a>HTML图像</h2><p>是一种HTML文件，其汇集了来自模型周围多个相机位置的静态图像。可以在浏览器中单击并拖动模型，以从不同的角度查看模型。可以发布成HTML，在网页做伪3D查看</p>
+<p>1.轨道：定义相机将渲染的横向高度数值；</p>
+<p>2.每轨道图像数：定义将为每个轨道执行的渲染数；</p>
+<p>3.开始角度：定义最低轨道距离“赤道”的角度；</p>
+<p>4.终止角度：定义最高轨道距离“赤道”的角度。</p>
+<h2 id="全景图像"><a href="#全景图像" class="headerlink" title="全景图像"></a>全景图像</h2><p>在感官上，全景视图类似于交互式图像，其输出的也是HTML文件；</p>
+<p>全景视图用于渲染内部；</p>
+<p>全景视图的工作原理是拍摄一个图像立方体（从相同位置拍摄六张图像，相互成90°），然后在浏览器中将这些图像拼接在一起，以在相机周围形成360°全景。</p>
+<h2 id="阳光算例"><a href="#阳光算例" class="headerlink" title="阳光算例"></a>阳光算例</h2><p>是一种光源动画，演示阳光照射的环境在一天中发生的变化；</p>
+<p>为了使用【阳光及其阴影算例】，必须先具有日光环境；</p>
+<p>有关日光环境知识点，可回看（环境-光源知识点）</p>
+<h2 id="360相机"><a href="#360相机" class="headerlink" title="360相机"></a>360相机</h2><ul>
+<li><p>单像</p>
+</li>
+<li><p>双像</p>
+</li>
+<li><p>立体Anaglyph</p>
+<p>360相机用于创建虚拟现实内容的360°的图像和视频，可以将此内容上传到社交媒体网站<br>360图像也可用于虚拟现实的设置中<br>360相机可用于创建HDR环境，以将其用作SOLIDWORKS Visualize中的布景</p>
+</li>
+</ul>
+<p>单像(单声道)<br>单像是一个单一的图像<br>这类图像可以上传到社交媒体网站<br>此种输出类似于传统的360相机</p>
+<p>双像立体(立体声双声道)<br>【双像立体】模式创建两个单独的图像<br>一个用于左眼，另一个用于右眼<br>这些图像专门用于虚拟现实的体验</p>
+<p>立体Anaglyph(立体声电影)<br>【立体Anaglyph】模式使用颜色过滤器<br>红色和青色两种色彩相反的颜色<br>以这两种颜色覆盖两个图像，形成可以立体眼镜查看的3D图像</p>
+<h1 id="11-仿真"><a href="#11-仿真" class="headerlink" title="11 仿真"></a>11 仿真</h1><p>物理仿真</p>
+<h2 id="摇动仿真"><a href="#摇动仿真" class="headerlink" title="摇动仿真"></a>摇动仿真</h2><p>SOLIDWORKS Visualize中的摇动仿真可以随机移动零件，以创造一种无序的真实感。</p>
+<p>要启动摇动仿真，必须先指定：<br>允许移动的零部件——动态<br>保留原地的零部件——静态</p>
+<p>【动态】模拟类型可应用于模型、组或零件<br>将零部件指定为【动态】后，可以使用其他选项来定义动态零部件的几何图形如何对静态零部件和其他动态零部件做出反应<br>定义完成后，动态零部件将在调色板【模型】选项卡中的图标上显示黄色的点</p>
+<p>【静态】模拟类型可应用于模型、组或零件<br>将零部件指定为【静态】后，就可以使用其他可用选项（类似于动态类型），这些选项可定义实体几何图形如何对动态零部件做出反应（因为静态零部件不移动，所以其永远不会与其他静态零部件相交）<br>定义完成后，静态零部件将在调色板【模型】选项卡中的图标上显示绿色的点</p>
+<p>碰撞机几何图形：有两种可用于表示零部件几何图形的模型</p>
+<p>边界框：<br>定义了一种简化模型，其中零部件的形状表示为一个简单的框形<br>此选项不太精确，但在模拟时可以更快地求解出结果</p>
+<p>网格：<br>将零部件的几何图形定义为许多小三角形的集合<br>此选项可以更好地表示几何图形，并将更加精确地计算零部件之间的碰撞<br>但当模拟包含许多网格实体时，求解时间将会增加</p>
+<p>有四种物理属性用于定义接触：</p>
+<p>静态摩擦力：用于计算在实体静止时克服摩擦所需的力。</p>
+<p>动态摩擦力：用于计算在实体运动时克服摩擦所需的力。</p>
+<p>弹性此参数：控制碰撞实体之间传递的能量。</p>
+<p>质量（千克）：定义相关实体的质量。<br>（只能为具有【动态】模拟类型的零部件定义质量）</p>
+<h2 id="车辆仿真"><a href="#车辆仿真" class="headerlink" title="车辆仿真"></a>车辆仿真</h2></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

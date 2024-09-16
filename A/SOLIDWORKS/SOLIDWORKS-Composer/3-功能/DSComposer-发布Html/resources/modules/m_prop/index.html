@@ -1,0 +1,89 @@
+<html>
+
+<script type="text/javascript" src="resources/modules/m_prop/js/prop_function.js"></script>
+<link type="text/css" href="resources/modules/m_prop/css/prop_style.css" rel="Stylesheet" />
+
+<body>
+
+      <div id="dialog_help" style="display:none;" title="Navigation Help">
+            <div id="Help_Icones">
+              <table border="0" cellspacing="0" cellpadding="4">
+                  <tr>
+                    <td><img src="resources/img/mouse_left.gif" /></td><td>Current tool</td>
+                  </tr>
+                  <tr>
+                    <td><img src="resources/img/mouse_left_right.gif" /></td><td>Rotate camera</td>
+                  </tr>
+                  <tr>
+                    <td><img src="resources/img/mouse_middle.gif" /></td><td>Pan mode</td>
+                  </tr>
+                  <tr>
+                    <td><img src="resources/img/mouse_middle_2.gif" /></td><td>Zoom</td>
+                  </tr>
+                  <tr>
+                    <td><img src="resources/img/mouse_left.gif" /></td><td>Directional zoom</td>
+                  </tr>
+                  <tr>
+                    <td><img src="resources/img/escape.gif" /></td><td>Use selection tool</td>
+                  </tr>
+              </table>
+          </div>      
+      </div>
+
+
+      <div id="App_prop" style="display:none;" title="Properties">
+            
+            <div id="Main_3D_window_prop"  class="App_prop_block"><b><u>Main 3D window</u></b></div>
+            
+              <div class="App_prop_lines_container" id="main_backgrd_color">
+                <div class="App_prop_lines">Background color</div>
+                <div id="color_icones" class="App_prop_lines">
+                  <img style="margin-left:5px;" src="resources/img/bckgrd_white.jpg" onclick="JavaScript:bckgrd_color_change('255','255','255');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_black.jpg" onclick="JavaScript:bckgrd_color_change('0','0','0');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_grey.jpg" onclick="JavaScript:bckgrd_color_change('160','160','160');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_salmon.jpg" onclick="JavaScript:bckgrd_color_change('255','207','134');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_red.jpg" onclick="JavaScript:bckgrd_color_change('255','142','150');"/>
+                </div>
+              </div>
+              <div id="PMI_colors_option" style="display:none;" class="App_prop_lines_container">
+                <div class="App_prop_lines">PMI color</div>
+                <div id="color_icones_PMI" class="App_prop_lines">
+                  <img style="margin-left:55px;" src="resources/img/bckgrd_white.jpg" onclick="JavaScript:PMI_color_change('255','255','255');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_black.jpg" onclick="JavaScript:PMI_color_change('0','0','0');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_grey.jpg" onclick="JavaScript:PMI_color_change('160','160','160');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_salmon.jpg" onclick="JavaScript:PMI_color_change('255','207','134');"/>
+                  <img style="margin-left:15px;" src="resources/img/bckgrd_red.jpg" onclick="JavaScript:PMI_color_change('255','102','100');"/>
+                </div>
+              </div>
+              <div class="App_prop_lines_container">
+                <div class="App_prop_lines">Ground</div>
+                <div class="App_prop_lines"><input style="margin-left:73px;" type="checkbox" unchecked id="Ground_box" onclick="Javascript:Ground()"/></div>
+              </div>
+              <div class="App_prop_lines_container">
+                <div class="App_prop_lines">Shadow</div>
+                <div class="App_prop_lines"><input style="margin-left:70px;" type="checkbox" unchecked id="Shadow_box" onclick="Javascript:Shadow()"/></div>
+              </div>
+              <div id="3D_window_prop" class="App_prop_lines_container">
+                <div class="App_prop_lines" style="height:30px;">Transition speed</div>
+                <div class="App_prop_lines" style="margin-left:12px;margin-top:3px;"><input type="text" id="amount1" style="visibility:hidden; border:0; color:#000000; font-weight:bold;width:150px;" value="37"/><div id="slider1" style="margin-top:-20px; background:#E0E0E0"></div></div>
+              </div>
+              
+            <div id="detail_view_prop_container" style="display:none;">
+            
+              <div id="Detail_window_prop" class="App_prop_block"><b><u>Detail view window</u></b></div>
+
+              <div id="detail_view" class="App_prop_lines_container">
+                <div class="App_prop_lines">Show/Hide</div>
+                <div class="App_prop_lines"><input style="margin-left:53px;" type="checkbox" checked id="detail_view_box" onclick="Javascript:Show_Hide_detail_view()"/></div>
+              </div>
+              <div id="detail_window_prop" class="App_prop_lines_container">
+                <div class="App_prop_lines" style="height:30px;">Transition speed</div>
+                <div class="App_prop_lines" style="margin-left:12px;margin-top:3px;"><input type="text" id="amount2" style="visibility:hidden; border:0; color:#000000; font-weight:bold;width:150px;" value="37"/><div id="slider2" style="margin-top:-20px; background:#E0E0E0"></div></div>
+              </div>
+
+            </div>
+      </div>
+	  
+</body>
+
+</html>

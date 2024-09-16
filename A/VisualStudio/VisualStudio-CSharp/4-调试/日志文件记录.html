@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-08-31 13:53:41</span>
+</div>
+
+<div id="article"><h1 id="日志文件记录"><a href="#日志文件记录" class="headerlink" title="日志文件记录"></a>日志文件记录</h1><p>单行错误可以使用提示弹窗进行显示，但是如果是批量或后台运行程序。往往会存在多项的错误出现，因此可以利用日志文本方式，来记录程序运行过程中的报错情况，</p>
+<span id="more"></span>
+
+
+
+<h2 id="新建日志文件："><a href="#新建日志文件：" class="headerlink" title="新建日志文件："></a>新建日志文件：</h2><p>利用“FileStream”类，进行文本文件的新建和内容输入，如下：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Creatlogfile</span>(<span class="params"><span class="built_in">string</span> text</span>)<span class="comment">//新建日志文件</span></span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//清空内容</span></span><br><span class="line">FileStream fs = <span class="keyword">new</span> FileStream(<span class="string">@&quot;C:\Windows\Temp\logfile.txt&quot;</span>, FileMode.OpenOrCreate);</span><br><span class="line">fs.Seek(<span class="number">0</span>, SeekOrigin.Begin);</span><br><span class="line">fs.SetLength(<span class="number">0</span>);</span><br><span class="line">fs.Close();</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加内容</span></span><br><span class="line">StreamWriter sw = <span class="keyword">new</span> StreamWriter(<span class="string">@&quot;C:\Windows\Temp\logfile.txt&quot;</span>, <span class="literal">true</span>, System.Text.Encoding.GetEncoding(<span class="string">&quot;gb2312&quot;</span>));</span><br><span class="line">sw.WriteLine(text);</span><br><span class="line">sw.Flush();</span><br><span class="line">sw.Close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<img src="Sw_属性编辑工具-B/image2.png">
+
+<h2 id="打开日志文件："><a href="#打开日志文件：" class="headerlink" title="打开日志文件："></a>打开日志文件：</h2><p>在程序运行结束后，你可以选择让日志文本进行打开显示，方便用户检查。如下：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Openlogfile</span>()<span class="comment">//打开日志文件</span></span></span><br><span class="line">&#123;</span><br><span class="line">System.Diagnostics.Process.Start( <span class="string">@&quot;C:\Windows\Temp\logfile.txt&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

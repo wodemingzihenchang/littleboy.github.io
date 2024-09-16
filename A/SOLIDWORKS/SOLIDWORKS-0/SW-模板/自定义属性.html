@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-09-09 14:33:58</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS属性"><a href="#SOLIDWORKS属性" class="headerlink" title="SOLIDWORKS属性"></a>SOLIDWORKS属性</h1><span id="more"></span>
+
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>自定义属性：</p>
+<p>配置特定：</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>语法: 属性名@模型||或@@配置||或@@@实体+@ part1.SLDPRT</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">自定义属性@: SW-Mass@part1.SLDPRT</span><br><span class="line">配置特定属性@@: SW-Mass@@DefaultSM-FLAT-PATTERN@ part1.SLDPRT</span><br><span class="line">实体或特征@@@: “SW-Mass@@@TUBE, SQUARE 20 X 20 X 2&lt;3&gt; @part1.SLDPRT</span><br></pre></td></tr></table></figure>
+
+<p>关联类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$PRP:在自定义读取属性</span><br><span class="line">$PRPMODEL:在指定视图里面读取属性</span><br><span class="line">$PRPSMODEL:在指定视图里面读取属性</span><br><span class="line">$PRPSHEET:在指定视图里面读取属性</span><br><span class="line">$PRPVIEW：在指定视图里面读取属性</span><br><span class="line">$PRPWLD:在指定视图里面读取属性</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考模板："><a href="#参考模板：" class="headerlink" title="参考模板："></a>参考模板：</h2><p>若要在绘图中自动插入信息，可以将绘图表或绘图表格式中的注释文本链接到文档属性。有关在注释中添加链接的过程，请参见链接到属性。</p>
+<p>所有SolidWorks文档都有系统定义的属性，包含日期格式的属性依赖于语言和地区。有关详细信息，请参阅计算机上的控制面板设置</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>表达式</th>
+<th>评估的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>重量</td>
+<td>文字</td>
+<td>SW-质量@零件.SLDPRT</td>
+<td>8461.505</td>
+</tr>
+<tr>
+<td>单重</td>
+<td>文字</td>
+<td>SW-Mass@零件.SLDPRT</td>
+<td>8461.505</td>
+</tr>
+<tr>
+<td>质量2</td>
+<td>文字</td>
+<td>SW-质量</td>
+<td>8461.505</td>
+</tr>
+<tr>
+<td>质量</td>
+<td>文字</td>
+<td>SW-Mass</td>
+<td>8461.505</td>
+</tr>
+<tr>
+<td>材质2</td>
+<td>文字</td>
+<td>SW-材质</td>
+<td>普通碳钢</td>
+</tr>
+<tr>
+<td>文件名2</td>
+<td>文字</td>
+<td>$PRP:”SW-文件名称”</td>
+<td>零件-自定义属性</td>
+</tr>
+<tr>
+<td>密度</td>
+<td>文字</td>
+<td>SW-Density</td>
+<td>0.008</td>
+</tr>
+<tr>
+<td>密度2</td>
+<td>文字</td>
+<td>SW-密度</td>
+<td>0.008</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>文字</td>
+<td>SW-Volume</td>
+<td>1084808.3</td>
+</tr>
+<tr>
+<td>体积2</td>
+<td>文字</td>
+<td>SW-体积</td>
+<td>1084808.3</td>
+</tr>
+<tr>
+<td>表面积</td>
+<td>文字</td>
+<td>SW-SurfaceArea</td>
+<td>146646.55</td>
+</tr>
+<tr>
+<td>表面积2</td>
+<td>文字</td>
+<td>SW-表面积</td>
+<td>146646.55</td>
+</tr>
+<tr>
+<td>文件名</td>
+<td>文字</td>
+<td>$PRP:”SW-File Name”</td>
+<td>零件-自定义属性</td>
+</tr>
+<tr>
+<td>材质</td>
+<td>文字</td>
+<td>SW-Material</td>
+<td>普通碳钢</td>
+</tr>
+<tr>
+<td>所在文件夹</td>
+<td>文字</td>
+<td>$PRP:”SW-Folder Name”</td>
+<td>E:\零件-自定义属性\</td>
+</tr>
+<tr>
+<td>当前长日期</td>
+<td>文字</td>
+<td>$PRP:”SW-Short Date”</td>
+<td>2023&#x2F;8&#x2F;23</td>
+</tr>
+<tr>
+<td>当前短日期</td>
+<td>文字</td>
+<td>$PRP:”SW-Long Date”</td>
+<td>2023年8月23日</td>
+</tr>
+<tr>
+<td>激活的配置名称</td>
+<td>文字</td>
+<td>$PRP:”SW-Configuration  Name”</td>
+<td>默认</td>
+</tr>
+<tr>
+<td>作者</td>
+<td>文字</td>
+<td>$PRP:”SW-Author”</td>
+<td>SW-Author</td>
+</tr>
+<tr>
+<td>关键字</td>
+<td>文字</td>
+<td>$PRP:”SW-Keywords”</td>
+<td>SW-Keywords 调用 自定义 配置特定</td>
+</tr>
+<tr>
+<td>备注</td>
+<td>文字</td>
+<td>$PRP:”SW-Comments”</td>
+<td>备注</td>
+</tr>
+<tr>
+<td>标题</td>
+<td>文字</td>
+<td>$PRP:”SW-Title”</td>
+<td>自定义属性配置特定属性大全</td>
+</tr>
+<tr>
+<td>主题</td>
+<td>文字</td>
+<td>$PRP:”SW-Subject”</td>
+<td>文件属性</td>
+</tr>
+<tr>
+<td>创建时间</td>
+<td>文字</td>
+<td>$PRP:”SW-Created Date”</td>
+<td>2011年8月18日 14:54:01</td>
+</tr>
+<tr>
+<td>上次保存时间</td>
+<td>文字</td>
+<td>$PRP:”SW-Last Saved Date”</td>
+<td>2023年8月23日 11:52:58</td>
+</tr>
+<tr>
+<td>创建日期</td>
+<td>文字</td>
+<td>$PRP:”SW-Created Date”</td>
+<td>2011年8月18日 14:54:01</td>
+</tr>
+<tr>
+<td>上次保存者</td>
+<td>文字</td>
+<td>$PRP:”SW-Last Saved By”</td>
+<td>DELL</td>
+</tr>
+<tr>
+<td>自定义属性</td>
+<td>文字</td>
+<td>测试一下</td>
+<td>测试一下</td>
+</tr>
+<tr>
+<td>调用自定义属性</td>
+<td>文字</td>
+<td>$PRP:”自定义属性”</td>
+<td>测试一下</td>
+</tr>
+<tr>
+<td>调用激活配置的自定义属性</td>
+<td>文字</td>
+<td>$PRP:”配置特定属性”</td>
+<td>默认配置</td>
+</tr>
+<tr>
+<td>内置属性名称中英混用举例</td>
+<td>文字</td>
+<td>$PRP:”SW-文件名称(File Name)”</td>
+<td>零件-自定义属性</td>
+</tr>
+<tr>
+<td>内置属性名称英英混用举例</td>
+<td>文字</td>
+<td>$PRP:”SW-File Name(File  Name)”</td>
+<td>零件-自定义属性</td>
+</tr>
+<tr>
+<td>中文零件名称</td>
+<td>文字</td>
+<td>中文</td>
+<td>中文</td>
+</tr>
+<tr>
+<td>英文零件名称</td>
+<td>文字</td>
+<td>English</td>
+<td>English</td>
+</tr>
+<tr>
+<td>中英文名称多行属性</td>
+<td>文字</td>
+<td>$PRP:”中文零件名称” $PRP:”英文零件名称”</td>
+<td>中文 English</td>
+</tr>
+<tr>
+<td>属性合并</td>
+<td>文字</td>
+<td>$PRP:”中文零件名称”+$PRP:”英文零件名称”</td>
+<td>中文+English</td>
+</tr>
+<tr>
+<td>零件尺寸</td>
+<td>文字</td>
+<td>D1@凸台-拉伸1@零件-自定义属性.SLDPRT</td>
+<td>100</td>
+</tr>
+<tr>
+<td>方程式变量</td>
+<td>文字</td>
+<td>SW方程式变量@零件-自定义属性.SLDPRT</td>
+<td>2016</td>
+</tr>
+</tbody></table>
+<p>工程图属性：此外，图纸具有以下系统定义的属性:</p>
+<table>
+<thead>
+<tr>
+<th>当前图纸</th>
+<th>文字</th>
+<th>$PRP:”SW-Current  Sheet”</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>图纸尺寸大小</td>
+<td>文字</td>
+<td>$PRP:”  SW-Sheet Format Size”</td>
+<td></td>
+</tr>
+<tr>
+<td>图纸名称</td>
+<td>文字</td>
+<td>$PRP:”  SW-Sheet Name”</td>
+<td></td>
+</tr>
+<tr>
+<td>图纸比例</td>
+<td>文字</td>
+<td>$PRP:”  SW-Sheet Scale”</td>
+<td></td>
+</tr>
+<tr>
+<td>图纸模板</td>
+<td>文字</td>
+<td>$PRP:”  SW-Template”</td>
+<td></td>
+</tr>
+<tr>
+<td>图纸总数</td>
+<td>文字</td>
+<td>$PRP:”  SW-Total Sheets”</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>您可以将注释链接到图中显示的模型的属性(例如，SW-File Name属性，或者模型文档中用户定义的自定义属性)。</p>
+<p>如果无法找到该属性值，则注释显示ERROR!&lt;变量名&gt;。单击“查看，注释链接错误”，显示或隐藏错误信息。</p>
+<h2 id="属性连接："><a href="#属性连接：" class="headerlink" title="属性连接："></a>属性连接：</h2><p>链接的注释可以包含附加的文本，并且可以包含到多个属性的链接。例如，要显示当前页数和总页数，可以添加以下注释:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHEET $PRP:&quot;SW-Current Sheet&quot; OF $PRP:&quot;SW-Total Sheets&quot; </span><br></pre></td></tr></table></figure>
+
+<p>在sheet中，属性值显示为: SHEET 1 OF 2 (当前视图号of 总图纸数) </p>
+<h1 id="Q-A："><a href="#Q-A：" class="headerlink" title="Q&amp;A："></a>Q&amp;A：</h1><h2 id="获取装配体属性"><a href="#获取装配体属性" class="headerlink" title="获取装配体属性"></a>获取装配体属性</h2><p>Q：是否可以将装配体级别自定义属性链接到零件文件中的自定义属性?</p>
+<p>A：不可以。 但是，可以将装配体级别自定义属性链接到零件文件中的某个尺寸值或质量属性。</p>
+<hr>
+<h2 id="属性同步"><a href="#属性同步" class="headerlink" title="属性同步"></a>属性同步</h2><p>Q属性从零件同步到工程图</p>
+<p>A可以使用宏文件实现</p>
+<hr>
+<h2 id="属性名的优先级"><a href="#属性名的优先级" class="headerlink" title="属性名的优先级"></a>属性名的优先级</h2><p>Q：图纸读取链接“自定义属性”和“配置特定”相同的属性名的优先级</p>
+<p>A：“配置特定”&gt;“自定义属性”，删除配置特定后，转而读取自定义属性。</p>
+<hr>
+<p>Q：在工程图中，为什么即使在每张图纸上的模型不同链接的注释仍会在所有工程图图纸中评估得出相同的值?</p>
+<p>A：当您选择选项“Use custom property values from this sheet on allsheets”时，会发生这种情况。此选项在【“工具”&gt;“选项”“文档属性” &gt;”工程图图纸”&gt;“多图纸自定义属性源”】下提供。</p>
+<p>要从图纸上的模型获取评估的值，请清除选项“Use custom propertyvalues from this sheet on all sheets”的复选框。（OA00000243484）</p>
+<hr>
+<h2 id="指定模型属性"><a href="#指定模型属性" class="headerlink" title="指定模型属性"></a>指定模型属性</h2><p>Q：同一张图纸上不同模型我们可以指定或者使用默认的自定义属性来源</p>
+<p>A：工程图属性修改</p>
+<img src="自定义属性\工程图属性.png">
+
+<img src="自定义属性\工程图属性2.png">
+
+<hr>
+<h2 id="明细表数量不对"><a href="#明细表数量不对" class="headerlink" title="明细表数量不对"></a>明细表数量不对</h2><p>Q材料明细表里的数量显示异常，不算零部件个数</p>
+<p>A检查属性的材料明细表数量的类型选择</p>
+<img src="自定义属性\属性材料明细表数量.png">
+
+<img src="自定义属性\属性材料明细表数量2.png">
+
+<hr>
+<h2 id="Q网盘路径显示"><a href="#Q网盘路径显示" class="headerlink" title="Q网盘路径显示"></a>Q网盘路径显示</h2><p>A网盘位置有显示IP路径或或盘符字母路径的，这与网盘的在本地电脑的接近窗口有关系。</p>
+<ul>
+<li>若显示IP路径则：右键此电脑【添加一个网络位置】</li>
+<li>若显示盘符路径则：右键此电脑【映射网络驱动器】</li>
+</ul>
+<img src="自定义属性\网盘路径显示.png">
+
+<hr>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

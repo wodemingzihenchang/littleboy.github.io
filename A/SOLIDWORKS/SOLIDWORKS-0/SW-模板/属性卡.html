@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-13 16:00:12</span>
+</div>
+
+<div id="article"><h1 id="自定义属性卡"><a href="#自定义属性卡" class="headerlink" title="自定义属性卡"></a>自定义属性卡</h1><p>“属性标签编制程序”是一个独立的实用程序，可用于创建自定义界面，以将属性输入到 SOLIDWORKS 文件中。可以在【开始菜单-SOLIDWORKS 工具-属性标签编制程序】打开编辑程序窗口。</p>
+<span id="more"></span>
+
+<p>属性卡对象层级：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">属性卡</span><br><span class="line">    |——组框</span><br><span class="line">        |——文本框</span><br><span class="line">        |——列举</span><br><span class="line">        |——号数</span><br><span class="line">        |——复选框</span><br><span class="line">        |——圆按钮</span><br><span class="line">    |——列表组</span><br><span class="line">        |——列举</span><br></pre></td></tr></table></figure>
+
+<p>编辑程序界面：</p>
+<img src="属性卡\属性卡界面.png">
+
+<h2 id="组框"><a href="#组框" class="headerlink" title="组框"></a>组框</h2><p>填属性卡的说明信息和属性卡的应用类型（零件、焊件、装配体、工程图）</p>
+<img src="属性卡\属性卡卡头.png">
+
+<h3 id="文本框"><a href="#文本框" class="headerlink" title="文本框"></a>文本框</h3><p>内容可以是文本输入和 SW 属性关联，预定义好的字段属性能关联到SW属性的信息读取（例如这里的材质属性）</p>
+<img src="属性卡\文本框.png">
+
+<h3 id="列举"><a href="#列举" class="headerlink" title="列举"></a>列举</h3><p>内容可以是在软件里填、在 txt 文本文件填、在 Excel 列表里填（感觉量少直接在软件填方便）</p>
+<img src="属性卡\列举.png">
+
+<h3 id="号数"><a href="#号数" class="headerlink" title="号数"></a>号数</h3><p>填数值</p>
+<img src="属性卡\号数.png">
+
+<h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><img src="属性卡\复选框.png">
+
+<h3 id="圆按钮"><a href="#圆按钮" class="headerlink" title="圆按钮"></a>圆按钮</h3><img src="属性卡\圆按钮.png">
+
+<h2 id="列表组"><a href="#列表组" class="headerlink" title="列表组"></a>列表组</h2><h2 id="列举-1"><a href="#列举-1" class="headerlink" title="列举"></a>列举</h2><p>利用 Excel 表格做行列表格的数据，</p>
+<img src="属性卡\列举组.png">
+
+<h1 id="属性卡使用"><a href="#属性卡使用" class="headerlink" title="属性卡使用"></a>属性卡使用</h1><p>属性卡模板读取文件夹位置设置，一般设置如下位置即可：注意是文件夹不是文件；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SOLIDWORKS\SOLIDWORKS 20xx\lang\Chinese-Simplified</span><br></pre></td></tr></table></figure>
+
+<img src="属性卡\属性卡使用1.png">
+
+<img src="属性卡\属性卡文件.png">
+
+<p>属性卡上的属性和文件的“自定义属性”是对应的（注意属性卡默认的属性赋值是在“配置特定”属性，不一定是“自定义属性”）</p>
+<img src="属性卡\属性卡使用2.png">
+
+<h1 id="Q-A："><a href="#Q-A：" class="headerlink" title="Q&amp;A："></a>Q&amp;A：</h1></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

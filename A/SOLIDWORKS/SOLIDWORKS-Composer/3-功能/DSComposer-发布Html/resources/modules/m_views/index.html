@@ -1,0 +1,25 @@
+<html>
+
+<script type="text/javascript" src="resources/modules/m_views/js/View_function.js"></script>
+<link type="text/css" href="resources/modules/m_views/css/views_style.css" rel="Stylesheet" />
+
+
+<script type="text/javascript">
+
+myObject.UseGUID = 0;
+var Views_name=myObject.GetAllConfigurations();
+myObject.UseGUID = 1;
+
+var Views_Id=myObject.GetAllConfigurations();
+
+Build_Views_Pane(Views_name,Views_Id);
+
+</script>
+
+<h3>VIEWS</h3>
+
+<body>
+<div id="View_Zone"></div>
+</body>
+
+</html>

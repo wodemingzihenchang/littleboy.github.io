@@ -72,13 +72,22 @@
 <img src="Sw_属性编辑工具-B/image6.png">
 
 <h2 id="2024-01-18"><a href="#2024-01-18" class="headerlink" title="2024&#x2F;01&#x2F;18"></a>2024&#x2F;01&#x2F;18</h2><p>修复【选择文件】不能获得空属性的文件的问题。原先代码是会跳过没有属性的文件导致获取不到操作对象。</p>
+<h2 id="2024-08-30"><a href="#2024-08-30" class="headerlink" title="2024&#x2F;08&#x2F;30"></a>2024&#x2F;08&#x2F;30</h2><p>增加错误文件的日志记录功能，起因是部分只读和加密文件在导入程序时，会被阻止。原本的是直接程序退出，现在改成将错误填到log日志文本里（并且不会程序退出，而是忽略错误文件继续）</p>
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="Q1：datagridview-不能批量编辑"><a href="#Q1：datagridview-不能批量编辑" class="headerlink" title="Q1：datagridview 不能批量编辑"></a>Q1：datagridview 不能批量编辑</h2><p>A1：只能是通过【打开 Excel】功能，导入已批量编辑好的表格文件；</p>
 <h2 id="Q2：不同属性的文件会覆盖属性名列表头"><a href="#Q2：不同属性的文件会覆盖属性名列表头" class="headerlink" title="Q2：不同属性的文件会覆盖属性名列表头"></a>Q2：不同属性的文件会覆盖属性名列表头</h2><p>A2：在填入属性名列表头前，做不同文件的属性名整理包括：合并不同文件属性名，再排除重复属性名，再重新排列属性名数组。</p>
 <h2 id="Q3：打开文件操作属性"><a href="#Q3：打开文件操作属性" class="headerlink" title="Q3：打开文件操作属性"></a>Q3：打开文件操作属性</h2><p>模板格式的文件（.prtdot.asmdot.drwdot）属性在 SWDocumentManage.dll 是不能操作的，所以需要增加一项打开文件操作属性的程序</p>
 <h2 id="Q4：评估的值不正确"><a href="#Q4：评估的值不正确" class="headerlink" title="Q4：评估的值不正确"></a>Q4：评估的值不正确</h2><p>钣金参数引用时，有时遇到需要<strong>打开</strong>，<strong>保存后</strong>才能读取到最新结果</p>
 <h2 id="Q5：类型转换失败"><a href="#Q5：类型转换失败" class="headerlink" title="Q5：类型转换失败"></a>Q5：类型转换失败</h2><img src="Sw_属性编辑工具-B/类型转换失败.png">
 
-<h2 id="Q6：未注册“Microsoft-ACE-OLEDB-12-0"><a href="#Q6：未注册“Microsoft-ACE-OLEDB-12-0" class="headerlink" title="Q6：未注册“Microsoft.ACE.OLEDB.12.0"></a>Q6：未注册“Microsoft.ACE.OLEDB.12.0</h2><p>是【保存excel】功能的问题，原先支持的excel版本是2003-2007的xls格式，需要在微软下载运行库进行安装注册<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/download/details.aspx?id=13255">Download</a></p>
+<h2 id="未注册Microsoft-ACE-OLEDB-12-0"><a href="#未注册Microsoft-ACE-OLEDB-12-0" class="headerlink" title="未注册Microsoft.ACE.OLEDB.12.0"></a>未注册Microsoft.ACE.OLEDB.12.0</h2><p>是【保存excel】功能的问题，原先支持的excel版本是2003-2007的xls格式，需要在微软下载运行库进行安装注册<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/download/details.aspx?id=13255">Download</a></p>
+<h2 id="未将对象引用设置到对象的实例"><a href="#未将对象引用设置到对象的实例" class="headerlink" title="未将对象引用设置到对象的实例"></a>未将对象引用设置到对象的实例</h2><p>请检查：</p>
+<p>1、文件版本，目前只支持到2023；</p>
+<p>2、文件只读，只读文件是不能被读写的；</p>
+<p>3、文件加密，和2类似读写权限被限制了；</p>
+<img src="Sw_属性编辑工具-B/image-20240828142916196.png">
+
+<h2 id="无法创建-ActiveX"><a href="#无法创建-ActiveX" class="headerlink" title="无法创建 ActiveX"></a>无法创建 ActiveX</h2><p><img src="/Sw_%E5%B1%9E%E6%80%A7%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7-B/image-20240828143141115.png" alt="image-20240828143141115"></p>
+<h2 id="不是有效名称"><a href="#不是有效名称" class="headerlink" title="不是有效名称"></a>不是有效名称</h2><p><img src="/Sw_%E5%B1%9E%E6%80%A7%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7-B/%E4%B8%8D%E6%98%AF%E6%9C%89%E6%95%88%E5%90%8D%E7%A7%B0.png" alt="不是有效名称"></p>
 <!-- 许可
 
 littleboy:

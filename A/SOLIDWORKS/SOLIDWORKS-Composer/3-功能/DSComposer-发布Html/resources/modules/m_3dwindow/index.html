@@ -1,0 +1,118 @@
+<html>
+
+<script type="text/javascript" src="resources/modules/m_3dwindow/js/3dwindow_function.js"></script>
+<link type="text/css" href="resources/modules/m_3dwindow/css/3dwindow_style.css" rel="Stylesheet" />
+
+
+
+<script type="text/javascript">
+    function addEndLoadModel() {
+        addEvent(myObject2, 'EndLoadModel', function (strValue) {
+            $("#draggable_detail_view").draggable({
+                handle: "h5",
+                snap: "#3D",
+                snapMode: "inner",
+				containment: "#3D",
+				scroll: false
+            });
+            $("#draggable_detail_view").bind("dragstart", function (event, ui) {
+                in_work = 1
+				setBackgroundImage(myObject2,"ActiveX2_div");
+            });
+            $("#draggable_detail_view").bind("dragstop", function (event, ui) {
+                in_work = 0
+                document.getElementById("ActiveX2_div").style.background = ""
+                myObject2.style.visibility = "visible";
+            });
+
+            $("#draggable_detail_view").resizable({
+                maxHeight: 500,
+                maxWidth: 500,
+                minHeight: 150,
+                minWidth: 150,
+                handles: 'n, e, s, w, ne, se, sw, nw'
+            });
+
+            $("#draggable_detail_view").bind("resizestart", function (event, ui) {
+                in_work = 1
+                myObject2.style.display = ''
+            });
+            $("#draggable_detail_view").bind("resizestop", function (event, ui) {
+                in_work = 0
+                myObject2.style.display = "block"
+            });
+        });
+
+    }
+
+
+
+
+    function addBeginLoadModel() {
+        addEvent(myObject2, 'BeginLoadModel', function (strValue) {
+
+            $("#dialog_detail_view").position({
+                my: "right bottom",
+                at: "right bottom",
+                offset: "0",
+                of: "#3D"
+            });
+        });
+    }
+
+    function addEndLoadModel2() {
+        addEvent(myObject2, 'EndLoadModel', function (strValue) {
+            Trigger_OnEndLoadModel2();
+        });
+    }
+
+    function registerEvents() {
+        addEndLoadModel2();
+        addEndLoadModel();
+        addBeginLoadModel();
+    }
+</script>
+
+
+<body>
+  <!-- <li class="ui-widget-content ui-corner-tr" id="draggable_detail_view">
+  <h5 class="ui-widget-header" id="detail_view_title">Detail View (Drag/Resize)</h5> -->
+  <div class="draggable ui-widget-content">
+  <li class="ui-widget-content ui-corner-tr" id="draggable_detail_view">
+  <h5 class="ui-widget-header" id="detail_view_title">Detail View (Drag/Resize)</h5>
+
+    <div id="ActiveX2_div" style="width:100%;height:85%;">
+            <!--[if IE]>
+    <object id="_ComposerPlayerActiveX2" height="100%" width="100%" classid="CLSID:410B702D-FCFC-46B7-A954-E876C84AE4C0" codebase="ComposerPlayerActiveX.cab#version=6.4.0.1382">
+           <![endif]-->
+            <![if !IE]>
+        <object id="_ComposerPlayerPlugin2" height="100%" width="100%" type="application/x-composerplayerwebplugin">
+            <![endif]>
+      
+      <param name="RenderGroundShadow" value="0"/>
+      <param name="RenderMode" value="0"/>
+      <param name="CameraPlayMode" value="0"/>
+      <param name="AntiAliasingOnIdle" value="0"/>
+      <param name="GroundGrid" value="1"/>
+      <param name="AutoPlay" value="0"/>
+      <param name="ShowViewBar" value="0"/>
+      <param name="ShowDiapoBar" value="0"/>
+      <param name="ShowMarkerBar" value="0"/>
+      <param name="ShowStandardToolBar" value="0"/>
+      <param name="ShowTimeLineBar" value="0"/>
+      <param name="ShowMain3DToolBar" value="0"/>
+      <param name="ShowCollabToolBar" value="0"/>
+	  <param name="ShowStatusBar" value="0"/>
+      <param name="UseGUID" value="1"/>
+    </object>
+            <script type="text/javascript">
+                myObject2 = getObject2();
+                registerEvents();
+        </script>
+    </div>
+	  </div>
+  </li>
+</body>
+
+</html>
+

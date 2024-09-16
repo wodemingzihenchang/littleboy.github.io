@@ -1,0 +1,62 @@
+<html>
+  <!---------------------->
+  <!--                  -->
+  <!--  top magnet bar  -->
+  <!--                  -->
+  <!---------------------->
+       
+       <!-- ALPHA for IE 6 and 7 -->
+       <!--[if lt IE 7]>
+           <style type="text/css">div, img, .backwhite { behavior: url(resources\lib\iepngfix.htc) }</style>
+        <![endif]-->    
+        
+        
+        
+        
+    <script type="text/javascript">     
+   
+		$(document).ready(function(){  
+			$('head').append('<link rel="stylesheet" type="text/css" href="resources\\lib\\magnetbar\\css\\style_docs.css" />');
+		});
+
+	</script>
+            
+            
+ <body>           
+      <div class="dock" id="dock">        
+                      <div class="dock-container">          
+                        <a class="dock-item" href="#" onClick="JavaScript:showall();" id="showall_command"><img src="resources/img/music.png" alt="Show All" /><span></span></a>            
+                        <a class="dock-item" href="#" onClick="JavaScript:myObject.SetMouseNavigationMode(0);"><img src="resources/img/select.png" alt="Select" /><span></span></a>            
+                        <a class="dock-item" href="#" onClick="JavaScript:myObject.SetMouseNavigationMode(1)"><img src="resources/img/rotate.png" alt="Rotate" /><span></span></a>            
+                        <a class="dock-item" href="#" onClick="JavaScript:myObject.SetMouseNavigationMode(2);"><img src="resources/img/pan.png" alt="Pan" /><span></span></a>            
+                        <a class="dock-item" href="#" onClick="JavaScript:myObject.SetMouseNavigationMode(3);"><img src="resources/img/zoom3.png" alt="Zoom" /><span></span></a>
+                        <a class="dock-item" href="#" onClick="JavaScript:myObject.ZoomFitAll();"><img src="resources/img/zoom2.png" alt="Zoom Fit All" /><span></span></a>
+                        <a class="dock-item" href="#" onClick="JavaScript:call_digger();" id="digger_command"><img src="resources/img/digger.png" alt="Digger" /><span></span></a>
+                        <a class="dock-item" href="#" onClick="window.print();"><img src="resources/img/print.png" alt="Print" /><span></span></a>          
+                      </div>      
+       </div>  
+</body>
+      
+      
+      <!-- scripts for the bar -->
+      <script type="text/javascript" src="resources\lib\magnetbar\interface.js"></script>  
+      <script type="text/javascript">                  
+           $(document).ready(function(){  
+                
+             // magnet bar JQUERY
+              $('#dock').Fisheye(
+        				{
+        					maxWidth: 18,
+        					items: 'a',
+        					itemsText: 'span',
+        					container: '.dock-container',
+        					itemWidth: 50,
+        					proximity: 60,
+        					halign : 'center'
+        				}
+        			);
+        		
+        			
+           });
+       </script>           
+</html>
