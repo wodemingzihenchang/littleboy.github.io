@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-12 11:53:21</span>
+</div>
+
+<div id="article"><h1 id="窗口的刷新方法"><a href="#窗口的刷新方法" class="headerlink" title="窗口的刷新方法"></a>窗口的刷新方法</h1><p>Application.DoEvents()方法</p>
+<span id="more"></span>
+
+<p>因为winform的消息循环是一个线程来处理，那么假如你的某个操作比较耗时，那么消息处理得等你这个耗时操作做完了才能继续，而Application.DoEvents方法就是允许你在耗时操作的内部调用它，而去处理消息队列中的消息。 </p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>首先我们先看看在循环比较大的程序中，它的作用还是不错的，起到了一个实时响应的效果</p>
+<p>用 Application.DoEvents()方法来更新窗口的刷新，显示数字进度条。让For循环里的文本进行更新【1】</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">ProgressBar_Number</span>(<span class="params"><span class="built_in">int</span> i, <span class="built_in">int</span> length</span>)<span class="comment">//数字进度条</span></span></span><br><span class="line">&#123;</span><br><span class="line">    label1.Text=(i + <span class="number">1</span>) + <span class="string">&quot;/&quot;</span> + length; ; </span><br><span class="line">    Application.DoEvents();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="存在问题"><a href="#存在问题" class="headerlink" title="存在问题"></a>存在问题</h2><p>可是DoEvents也带来了效率上的问题，处理同样的一个事件调用了DoEvents后效率降低了好几倍，这也是为什么要慎用的原因了【2】。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>【1】<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/258577605">C# 循环体中如何 更新窗体 （text）控件显示 - 知乎</a></p>
+<p>【2】<a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_23338865/article/details/52596818">c#学习笔记之Application.DoEvents应用_c# application.doevents-CSDN博客</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

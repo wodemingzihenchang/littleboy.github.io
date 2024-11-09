@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="EFD缩放计算"><a href="#EFD缩放计算" class="headerlink" title="EFD缩放计算"></a>EFD缩放计算</h1><p>学习EFD缩放计算求解复杂模型，对局部区域做更精确的计算。这里和SOLIDWORKS Simulation的子模型功能有些类似；</p>
+<p>前面课程3《热分析》，我们已经对模型进行的散热的模拟分析；</p>
+<p>课程6模型对散热器模型做了简化处理（如图），复杂计算部分会交由EFD的模型计算</p>
+<img src="06-EFD缩放计算/image-20241018120937277.png">
+
+<h2 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h2><p>我们先看下复杂模型装配体的分析情况：</p>
+<img src="06-EFD缩放计算/image-20241022165642815.png">
+
+<h1 id="配置1"><a href="#配置1" class="headerlink" title="配置1"></a>配置1</h1><h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>选择配置，</p>
+<img src="06-EFD缩放计算/image-20241024094742367.png">
+
+<p>研究在散热器不同摆放的配置下，散热器的效果</p>
+<img src="06-EFD缩放计算/image-20241024094939072.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024095938001.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024095959216.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024100017897.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024100045853.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024100101442.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024100113267.png">
+
+
+
+<h2 id="计算域"><a href="#计算域" class="headerlink" title="计算域"></a>计算域</h2><p>修改计算域只应用在散热器附近</p>
+<img src="06-EFD缩放计算/image-20241024100454068.png">
+
+<h2 id="调入边界条件"><a href="#调入边界条件" class="headerlink" title="调入边界条件"></a>调入边界条件</h2><p>让我们从原本的仿真结果调入到现在的计算域项目中</p>
+<img src="06-EFD缩放计算/image-20241024100855167.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024101436776.png">
+
+<p>选择“结果文件”，并浏览到本课程的1.fld结果文件，</p>
+<img src="06-EFD缩放计算/image-20241024103642849.png">
+
+<p>选择环境，即导入全部的边界条件</p>
+<img src="06-EFD缩放计算/image-20241024103727459.png">
+
+<p>导入后，刚刚选择的“X轴负方向边界”和“Z轴负方向边界”在模型会有箭头出现。</p>
+<img src="06-EFD缩放计算/image-20241024112421196.png">
+
+<h2 id="固体材料"><a href="#固体材料" class="headerlink" title="固体材料"></a>固体材料</h2><p>散热器材料</p>
+<img src="06-EFD缩放计算/image-20241024112524384.png">
+
+<p>PCB板也在计算域内，也添加下材料</p>
+<img src="06-EFD缩放计算/image-20241024112715314.png">
+
+<h2 id="热源"><a href="#热源" class="headerlink" title="热源"></a>热源</h2><p>添加热源</p>
+<img src="06-EFD缩放计算/image-20241024112950248.png">
+
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>这里设置完成，计算稍等配置2项目一起【批量计算】</p>
+<h1 id="配置2"><a href="#配置2" class="headerlink" title="配置2"></a>配置2</h1><p>针对散热器不同摆放的效果，我们会有配置2进行验证。项目</p>
+<h2 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h2><p>因为边界条件等参数定义基本一致，这里可以使用克隆项目，复制出配置2的仿真</p>
+<img src="06-EFD缩放计算/image-20241024113353613.png">
+
+
+
+<img src="06-EFD缩放计算/image-20241024113426642.png">
+
+<img src="06-EFD缩放计算/image-20241024113454663.png">
+
+
+
+<h1 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h1><img src="06-EFD缩放计算/image-20241024113710079.png">
+
+<img src="06-EFD缩放计算/image-20241024113839550.png">
+
+<h2 id="查看结果-1"><a href="#查看结果-1" class="headerlink" title="查看结果"></a>查看结果</h2><p>切面图</p>
+<img src="06-EFD缩放计算/image-20241024114125706.png">
+
+<h2 id="比较结果"><a href="#比较结果" class="headerlink" title="比较结果"></a>比较结果</h2><img src="06-EFD缩放计算/image-20241024114249740.png">
+
+<img src="06-EFD缩放计算/image-20241024114324897.png">
+
+<p>图像比较</p>
+<img src="06-EFD缩放计算/image-20241024114404776.png">
+
+<p>最值比较</p>
+<img src="06-EFD缩放计算/image-20241024114431923.png">
+
+
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

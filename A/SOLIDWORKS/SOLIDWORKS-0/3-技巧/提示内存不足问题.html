@@ -77,53 +77,27 @@
 
 <p>利用该信息了解和调查管理消耗最多提交内存的进程的必要步骤。您可以尝试结束那些不需要的进程。</p>
 <p>如果进程是基本进程，则调查其占用太多提交内存的原因。</p>
-<p>如果进程不是 SOLIDWORKS<br>进程，且您需要进一步协助，请咨询开发此进程的公司的支持团队。</p>
+<p>如果进程不是 SOLIDWORKS进程，且您需要进一步协助，请咨询开发此进程的公司的支持团队。</p>
 <p>如果您需要计算机上运行的所有进程，并且确定所有进程均按预期运行，那么您可能需要为您的计算机安装更多的物理内存。</p>
-<h2 id="方法3：使用Speedpak"><a href="#方法3：使用Speedpak" class="headerlink" title="方法3：使用Speedpak"></a>方法3：使用Speedpak</h2><p>本次测试数据：6000+零部件（独立零件 1500 个），总装文件大小：95.4MB。全部文件大小：1.07GB</p>
+<h2 id="方法3：使用Speedpak"><a href="#方法3：使用Speedpak" class="headerlink" title="方法3：使用Speedpak"></a>方法3：使用Speedpak</h2><p>本次测试数据：6000+零部件（独立零件 1500 个），总装文件大小：95.4MB。全部文件大小：1.07GB。单纯还原打开需要7.8GB，全部部件Speedpak，如图的内存占用从 9GB 减少至 2GB，大大减少内存的占用。</p>
 <p>关于 Speedpak 的使用方法，可以往期文章或视频。</p>
-<h3 id="还原模式"><a href="#还原模式" class="headerlink" title="还原模式"></a>还原模式</h3><p>还原模式下的内存占用，电脑是几乎占满的状态（15.9&#x2F;16GB）如图。还原模式下的零部件内存信息会被加载进内存，从而产生过多的内存占用的情况。</p>
-<img src="提示内存不足问题/image8.png">
-
-<h3 id="单个-Speedpak"><a href="#单个-Speedpak" class="headerlink" title="单个 Speedpak"></a>单个 Speedpak</h3><p>Speedpak 对子装配体做优化处理，该模式下的零件会被隐藏（不可编辑），所以这部分的信息几乎不进内容。那么对于内存来说，占用就不会过高（如图从 9GB 减少至 4GB 内存占用）</p>
-<img src="提示内存不足问题/image9.png">
-
-<h3 id="全部-Speedpak"><a href="#全部-Speedpak" class="headerlink" title="全部 Speedpak"></a>全部 Speedpak</h3><p>全部 Speedpak，总装配体只有图形显示，其子装配体就不能编辑，这个模式下打开文件将变得非常的快（”似乎和大型装配体审阅”有的一拼）。如图的内存占用从 9GB 减少至 2GB，大大减少内存的占用。</p>
 <img src="提示内存不足问题/image10.png">
 
-<h3 id="编辑和更新-Speedpak"><a href="#编辑和更新-Speedpak" class="headerlink" title="编辑和更新 Speedpak"></a>编辑和更新 Speedpak</h3><p>对于需要编辑的零部件，我们可以打开需编辑的零部件。在做完编辑后，可在总装使用：</p>
-<ol>
-<li><p>将 Speedpak 设定到父系，来恢复部件的可编辑状态（这个命令会将部件内存加载进来）</p>
-</li>
-<li><p>更新 Speedpak 子装配体，这个会保持 Speedpak 模式，然后把修改后的零件更新到总装里（推荐用这个）</p>
-</li>
-</ol>
-<img src="提示内存不足问题/image11.png">
-
-
-
-<p>如果一切都正常，那可以关闭 SOLIDWORKS Resource Monitor 的所有通知</p>
+<h2 id="方法4关闭提示"><a href="#方法4关闭提示" class="headerlink" title="方法4关闭提示"></a>方法4关闭提示</h2><p>如果一切都正常，那可以关闭 SOLIDWORKS Resource Monitor 的所有通知</p>
 <img src="提示内存不足问题/image-20240513115730933-17155726512911.png">
 
+
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个错误信息不一定真的是客户的实际物理内存完全不够了，出现内存耗尽的可能原因常见的有：</p>
 <h2 id="内存耗尽"><a href="#内存耗尽" class="headerlink" title="内存耗尽"></a>内存耗尽</h2><p>内存耗尽</p>
 <img src="提示内存不足问题/image-20240812120902006.png">
 
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个错误信息不一定真的是客户的实际物理内存完全不够了，出现内存耗尽的可能原因常见的有：</p>
-<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><ol>
-<li>客户硬件确实有问题。例如出现了内存泄漏。</li>
-</ol>
-<h2 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h2><ol>
-<li>客户设备上可用内存空间有限，在开启一些大型装配体或者文件，或者使用相对需要占用较多内存的命令，例如进行仿真分析等，出现内存耗尽，请和客户确认，是否他们仅在开启文件的时候出现内存耗尽的错误。</li>
-</ol>
-<h2 id="特定文件"><a href="#特定文件" class="headerlink" title="特定文件"></a>特定文件</h2><ol>
-<li>客户的部分文件有问题，打开文件，显示内存耗尽，这个也同样要客户确认，内存耗尽，是否就是打开一些特定文件，或者包含有一些文件的装配体，就会出现。</li>
-</ol>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>客户硬件确实有问题。例如出现了内存泄漏。</p>
+<h2 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h2><p>客户设备上可用内存空间有限，在开启一些大型装配体或者文件，或者使用相对需要占用较多内存的命令，例如进行仿真分析等，出现内存耗尽，请和客户确认，是否他们仅在开启文件的时候出现内存耗尽的错误。</p>
+<h2 id="特定文件"><a href="#特定文件" class="headerlink" title="特定文件"></a>特定文件</h2><p>客户的部分文件有问题，打开文件，显示内存耗尽，这个也同样要客户确认，内存耗尽，是否就是打开一些特定文件，或者包含有一些文件的装配体，就会出现。</p>
 <p><strong>新建文件检查：</strong>硬件和文件都没有问题，随机打开一个新建文件，部分电脑打开图纸，就会显示内存耗尽，这是之前的已知问题，和客户登录账号有特定字符或者空格有关，<!-- 详细可以参考QA00000264216解决方案也有，是因为windows的临时文件夹有空格或者没有短名称 --></p>
-<h2 id="Toolbox"><a href="#Toolbox" class="headerlink" title="Toolbox"></a>Toolbox</h2><ol>
-<li>有一部分客户端上toolbox有问题，开启的SOLIDWORKS Toolbox Utilities情况下，会有内存耗尽的错误，请帮客户确认，是否客户是在有开启toolbox的情况下，出现的内存耗尽错误。</li>
-</ol>
-<h2 id="PDM"><a href="#PDM" class="headerlink" title="PDM"></a>PDM</h2><ol>
-<li>还有部分客户端是由于文件在PDM中存储，开启PDM add-in的时候，打开部分特定文件会出现内存耗尽或者系统可用资源低的错误。</li>
-</ol>
+<h2 id="Toolbox"><a href="#Toolbox" class="headerlink" title="Toolbox"></a>Toolbox</h2><p>有一部分客户端上toolbox有问题，开启的SOLIDWORKS Toolbox Utilities情况下，会有内存耗尽的错误，请帮客户确认，是否客户是在有开启toolbox的情况下，出现的内存耗尽错误。</p>
+<h2 id="PDM"><a href="#PDM" class="headerlink" title="PDM"></a>PDM</h2><p>还有部分客户端是由于文件在PDM中存储，开启PDM add-in的时候，打开部分特定文件会出现内存耗尽或者系统可用资源低的错误。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

@@ -54,6 +54,17 @@
 <h3 id="1406（S-03256）"><a href="#1406（S-03256）" class="headerlink" title="1406（S-03256）"></a>1406（S-03256）</h3><p>安装程序错误提示“Cannot write to Windows registry” 1406？<br><br>方法：<br>1、原因是注册表的访问被阻止。使用管理员权限启动安装；<br><br>2、如果是管理员权限下，先禁用相关防病毒和防间谍&#x2F;广告软件后再尝试安装。<br></p>
 <h3 id="1603（S-014608）"><a href="#1603（S-014608）" class="headerlink" title="1603（S-014608）"></a>1603（S-014608）</h3><p>PDM 客户端安装失败并回滚，同时显示 Windows® 安装程序错误“MSI 错误代码：1603”？<br><br>方法：<br>1、导致安装失败最可能的原因是目标系统的本地权限不足。<br></p>
 <h3 id="1620（S-070316）"><a href="#1620（S-070316）" class="headerlink" title="1620（S-070316）"></a>1620（S-070316）</h3><p>错误编号“1305”、“1309”、“1311”、“1334”、“1335”、“1620”和“2350”表明安装程序在安装过程中读取一个或多个文件时遇到问题。</p>
+<h3 id="1722（S-079763）"><a href="#1722（S-079763）" class="headerlink" title="1722（S-079763）"></a>1722（S-079763）</h3><p>安装更新的 C++ 软件包：2015-2017-2019 ，然后重试安装。</p>
+<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads">https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads</a></p>
+<p>The “1722” error indicates the failure of a subprogram during the installation process. Common causes of this problem are an incomplete or damaged set of prerequisite installations.</p>
+<p>It is possible to repair the Visual C++ prerequisite components by running the Visual C++ installation files. These files exist in the prerequisites folder under:</p>
+<p>[SOLIDWORKS® installation files directory]\prereqs\</p>
+<p>Subfolders with the name VCRedist* contain the Visual C++ installation files:</p>
+<p>VCRedist10<br>VCRedist11<br>VCRedist12<br>VCRedist16<br>Within each of these folders is a full set of installation files that include the following program files:</p>
+<p>Right-click each of the following program files and then click Run as administrator.<br>vcredist_x86.exe<br>vcredist_x64.exe<br>If prompted, select the Repair option.<br>Another possible reason for the issue is that the access rights of the active user are insufficient. Open the Windows® Registry Editor and verify the permissions in the following registry keys:</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks<br>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks Corporation<br>HKEY_LOCAL_MACHINE\SOFTWARE\Srac<br>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks<br>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks Corporation<br>The Administrators group and the SYSTEM account require full control of these keys. After confirming the correct permissions, try running the installation again to see if the issue persists.</p>
+<p>CAUTION:</p>
+<p>Incorrectly editing the registry can severely damage your operating system. The SOLIDWORKS Technical Support team strongly suggests that you back up the registry data before making any changes to the registry.</p>
 <h3 id="1904（S-01546）"><a href="#1904（S-01546）" class="headerlink" title="1904（S-01546）"></a>1904（S-01546）</h3><p>在安装过程，出现信息“安装错误 1904 模块 C:\Windows\system32\threed32.ocx 无法注册”？<br><br>方法：<br>1、需要安装 XML（扩展标记语言）的最新版本才能解决此安装问题。<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/search.aspx?q=msxml">#下载最新 XML 服务版本</a> <br><br>2、安装以下文件： “msxml.msi” 在安装此版本的 XML 之前卸载 SOLIDWORKS，然后重新安装 SOLIDWORKS。还需要检查以确保尝试安装时未启用防病毒软件。防病毒软件有时会干扰安装。<br></p>
 <h3 id="2350（S-070316）"><a href="#2350（S-070316）" class="headerlink" title="2350（S-070316）"></a>2350（S-070316）</h3><p>错误编号“1305”、“1309”、“1311”、“1334”、“1335”、“1620”和“2350”表明安装程序在安装过程中读取一个或多个文件时遇到问题。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="Windows-Installer"><a href="#Windows-Installer" class="headerlink" title="Windows Installer"></a>Windows Installer</h2><p>原因：一般是由于缺少C++导致的。常见于只安装PDM的电脑，由于没安装设计软件，所以可能会缺少PDM必须的C++组件。<br>解决方法：将SOLIDWORKS安装包中的C++都安装一遍（也可能只安装VCRedist16： Microsoft Visual C++ 2015-2019 Redistributable即可）</p>
@@ -77,16 +88,6 @@
 <li>将第二步的修改还原注册表 UseWUServer，并重启 Windows Update service。<br></li>
 </ol>
 <h2 id="VBA-问题"><a href="#VBA-问题" class="headerlink" title="VBA 问题"></a>VBA 问题</h2><p>原因：因 VBA 版本升级问题，在安装 2021 版后，无法安装 2020 以下版本 <br><br>方法：<br><br>1、卸载新版本的 VBA 7.1。您可以使用附带的脚本来简化这个过程。下载附件“S-078838_uninstall_vba.bat”，以管理员身份运行。<br><br>2、找到最近的 SOLIDWORKS 安装(SOLIDWORKS 2021 SP2 或更高版本)，安装 VBA7.1 组件，文件路径 XXX \SOLIDWORKS 2021 SP0X\PreReqs\VBA <br><br><img src="安装问题\安装卸载VBA.png"><br><br>3、安装完成后，再点击卸载，最后重新安装 2021 SP2 以下版本 SOLIDWORKS<br><br><img src="安装问题\安装卸载VBA2.png"><br></p>
-<h2 id="安装界面异常或空白"><a href="#安装界面异常或空白" class="headerlink" title="安装界面异常或空白"></a>安装界面异常或空白</h2><p>安装界面异常或空白，如下：</p>
-<img src="安装问题\安装界面异常或空白\安装界面空白.png">
-
-<img src="安装问题\安装界面异常或空白\安装界面异常或空白.png">
-
-<p>方法：在【X:\SOLIDWORKS 2024 SP01\sldimllanglenglish\html】设置下这三个html的权限是完全控制状态。</p>
-<img src="安装问题\安装界面异常或空白\安装界面异常或空白方法.png">
-
-<p>情况2：</p>
-<p><img src="/%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A2%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98.png" alt="安装界面显示问题"></p>
 <h2 id="无法连接到IM服务器"><a href="#无法连接到IM服务器" class="headerlink" title="无法连接到IM服务器"></a>无法连接到IM服务器</h2><p>问题：下载安装文件时出现错误“无法连接到 IM 服务器以获取时间戳（Unable to connect to IM server to get timestamp）”的原因是什么？</p>
 <p>答：确保在防火墙上打开端口 80 的 via HTTP，SolidWorks 安装管理程序在更新过程中使用该端口。</p>
 <h2 id="无法找到产品"><a href="#无法找到产品" class="headerlink" title="无法找到产品"></a>无法找到产品</h2><p>无法找到产品的安装程序包。一般发生于电脑环境变化有关时，例如注册表修改可以复现此情况，在打开软件时，会提示 xxx 程序正在配置……。</p>
@@ -103,6 +104,7 @@
 <img src="安装问题/image-20240109092115014.png">
 
 <p>方法：如果您尝试安装 SNL 管理器时，SOLIDWORKS® 在系统上打开，则可能遇到此错误。安装 SNL 管理器前关闭 SOLIDWORKS，以便完成安装</p>
+<h2 id="DVD无法获取"><a href="#DVD无法获取" class="headerlink" title="DVD无法获取"></a>DVD无法获取</h2><p>安装SW2017出现无法安装，提示DVD无法获取，受制于网络权限</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="多孔介质分析"><a href="#多孔介质分析" class="headerlink" title="多孔介质分析"></a>多孔介质分析</h1><p>学习点：</p>
+<p>使用多孔介质选项生成一个流体分析</p>
+<p>通过虚设的实体获得需要的目标值</p>
+<p>定义多孔介质材料</p>
+<p>评价速度分布</p>
+<h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><img src="07-多孔介质分析/image-20241024115833407.png">
+
+
+
+<p>检查模型</p>
+<img src="07-多孔介质分析/image-20241024120259899.png">
+
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
+<img src="01-创建分析项目/向导-创建项目.png">
+
+<p>项目名称</p>
+<img src="01-创建分析项目/向导-项目名称.png">
+
+<p>单位系统</p>
+<img src="01-创建分析项目/向导-单位系统.png">
+
+<p>分析类型</p>
+<img src="01-创建分析项目/向导-分析类型.png">
+
+<p>默认流体类型</p>
+<img src="01-创建分析项目/向导-默认流体.png">
+
+<img src="01-创建分析项目/向导-默认流体2.png">
+
+<p>壁面条件</p>
+<img src="01-创建分析项目/向导-壁面条件.png">
+
+<p>初始条件</p>
+<p>对这个分析来说，我们可以按默认定义进行</p>
+<img src="01-创建分析项目/向导-初始条件.png">
+
+
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>入口</p>
+<img src="07-多孔介质分析/image-20241024121416813.png">
+
+<p>出口</p>
+<img src="07-多孔介质分析/image-20241024121645990.png">
+
+
+
+<h2 id="多孔介质"><a href="#多孔介质" class="headerlink" title="多孔介质"></a>多孔介质</h2><p>考虑到多孔材质对经过流体具有一些“压降”等特性。我们可以在【多孔介质】编辑内，定义其材质的特性</p>
+<img src="07-多孔介质分析/image-20241024122320748.png">
+
+<img src="07-多孔介质分析/image-20241024122153625.png">
+
+<p>多孔介质2</p>
+<img src="07-多孔介质分析/image-20241024122455045.png">
+
+
+
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>为了查看气体从入口进来后，到出口的压力损失和速度情况，我们需要设置下目标进行捕获</p>
+<p>入口</p>
+<img src="07-多孔介质分析/image-20241024122757953.png">
+
+<p>过程</p>
+<img src="07-多孔介质分析/image-20241024123016232.png">
+
+<p>出口</p>
+<img src="07-多孔介质分析/image-20241024123113070.png">
+
+<p>压降：插入方程式目标，把前三个目标做计算</p>
+<img src="07-多孔介质分析/image-20241024123409182.png">
+
+<h2 id="组件控制"><a href="#组件控制" class="headerlink" title="组件控制"></a>组件控制</h2><p>2净化器，我们设置了多孔介质，已经排除在外；</p>
+<p>然后，过程目标使用的实体，需要也取消勾选，排除在计算之外</p>
+<img src="07-多孔介质分析/image-20241024123709074.png">
+
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>切面图</p>
+<img src="07-多孔介质分析/image-20241024140547493.png">
+
+<img src="07-多孔介质分析/image-20241024140644119.png">
+
+<p>流动轨迹</p>
+<img src="07-多孔介质分析/image-20241024140718010.png">
+
+
+
+<h1 id="单向多孔介质"><a href="#单向多孔介质" class="headerlink" title="单向多孔介质"></a>单向多孔介质</h1><p>上述结果，发现流体流动在进入第一个净化器时是不均匀的，</p>
+<img src="07-多孔介质分析/image-20241024140910803.png">
+
+<h2 id="多孔介质-1"><a href="#多孔介质-1" class="headerlink" title="多孔介质"></a>多孔介质</h2><p>修改入口第一个多孔介质，定义单向的多孔介质</p>
+<img src="07-多孔介质分析/image-20241024141758657.png">
+
+<img src="07-多孔介质分析/image-20241024141443422.png">
+
+<h2 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h2><p>设置XY图</p>
+<img src="07-多孔介质分析/image-20241024142810606.png">
+
+<p>查看2个仿真项目的XY图比较</p>
+<img src="07-多孔介质分析/image-20241024142541314.png">
+
+
+
+
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

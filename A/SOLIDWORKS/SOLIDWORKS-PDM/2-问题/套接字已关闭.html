@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-18 14:58:26</span>
+</div>
+
+<div id="article"><h1 id="套接字已关闭"><a href="#套接字已关闭" class="headerlink" title="套接字已关闭"></a>套接字已关闭</h1><p> 如果您之前使用的是库特定管理员，现在转回为使用默认管理员用户，并在登录 PDM 管理工具时出现错误消息“套接字在另一端正常关闭”，则可在以下日志中查看详细信息：</p>
+<p><img src="/%E5%A5%97%E6%8E%A5%E5%AD%97%E5%B7%B2%E5%85%B3%E9%97%AD/image-20241024152220082.png" alt="image-20241024152220082"></p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>这可能是由于注册表中的默认管理员用户已损坏。</p>
+<p>请通过“regedit”命令打开注册表，然后浏览到如下位置检查“Admin”项是否为空值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\ConisioUsers]</span><br></pre></td></tr></table></figure>
+
+<p><img src="/%E5%A5%97%E6%8E%A5%E5%AD%97%E5%B7%B2%E5%85%B3%E9%97%AD/image-20241024153658067.png" alt="image-20241024153658067"></p>
+<p>此问题可以通过重新设置管理员密码来加以解决：</p>
+<p>1.删除注册表中的“Admin”项。</p>
+<p>2.打开“存档服务器配置工具”&gt;“工具”&gt;“默认设置”&gt;“管理员用户”&gt;“密码”。</p>
+<p>3.为默认管理员用户设置新密码。暂时保留“当前密码”为空。</p>
+<p><img src="/%E5%A5%97%E6%8E%A5%E5%AD%97%E5%B7%B2%E5%85%B3%E9%97%AD/image-20241024153953818.png" alt="image-20241024153953818"></p>
+<h1 id="情况1"><a href="#情况1" class="headerlink" title="情况1"></a>情况1</h1><p>Solidworks PDM 的 LDAP 身份验证工作时遇到奇怪的问题。</p>
+<p>我已在 Solidworks PDM Archive Server 应用程序中正确配置了 LDAP。它测试成功，当我转到 Solidworks PDM Administration 应用程序时，我可以从我的 LDAP 服务器中提取用户列表，并基于该列表添加&#x2F;创建新用户。</p>
+<p>但是，当我尝试通过在 Solidworks PDM Administrations 应用程序中打开库来以用户身份登录时，我在登录页面上收到一条错误，指出“The socket was gracefully closed on the other end”。</p>
+<p>如果我转到 Solidworks PDM Administration 中的日志，它显示以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-------------------------------------</span><br><span class="line">Could not read more data from xxx.xxx.xxx.xxx. The socket was closed gracefully on the other end.</span><br><span class="line"></span><br><span class="line">Module: ConisioAdmin.exe</span><br><span class="line"></span><br><span class="line">Function: CFVLogin::SimpleConnectEx&lt;-LoginConnection::mvRecvLoginStruct&lt;-LoginConnection::mvRecvEncrypted&lt;-CryptSocket::mvRead&lt;-CWinSocket::mvRead</span><br><span class="line"></span><br><span class="line">Error Code: E_FVC_SOCKET_CLOSED</span><br><span class="line">--------------------------------------</span><br></pre></td></tr></table></figure>
+
+<h1 id="情况1-1"><a href="#情况1-1" class="headerlink" title="情况1"></a>情况1</h1><p>通过 LAN 连接到同一服务器的 SOLIDWORKS PDM 客户端计算机通常不会看到这些错误。</p>
+<p>即使通过 VPN 或 WAN 连接对存档服务器运行 PING 和 TELNET 命令也能正常工作。</p>
+<h3 id="故障排除提示"><a href="#故障排除提示" class="headerlink" title="故障排除提示"></a>故障排除提示</h3><ul>
+<li>首先，确保客户端计算机和存档服务器运行相同的主要版本。较旧的客户端版本（如 2018）无法与较新的存档服务器版本（如 2019）通信，反之亦然。打开 SOLIDWORKS PDM 管理工具<strong>的帮助</strong>&gt;<strong>关于</strong>信息以验证客户端版本。使用 Archive Server Configuration 工具中的<strong>帮助</strong>&gt;<strong>关于</strong>信息确认存档服务器版本。</li>
+<li>确保客户端计算机可以解析存档服务器主机名并获取正确的 IP 地址（请参阅<a target="_blank" rel="noopener" href="https://support.3ds.com/knowledge-base/?q=docid:QA00000112804">QA00000112804</a>）另请参阅安装指南的“在 WAN 环境中添加存档服务器”部分。</li>
+<li>确保 VPN 或 WAN 设置不会阻止服务器和客户端计算机之间的对等 （P2P） 流量。</li>
+<li>如果存档服务器指定同时与 IPv6 和 IPv4 通信，并且服务器或 WAN&#x2F;VPN 解决方案使用 IPV6，则可能会看到错误。将系统配置为通过 IPv4 进行通信。请参阅 Microsoft 主题“面向高级用户的 Windows 配置 IPv6 指南”。</li>
+<li>如果未复制文件库，请确保注册表不包含旧的复制信息。请参阅 <a target="_blank" rel="noopener" href="https://support.3ds.com/knowledge-base/?q=docid:QA00000117225">QA00000117225</a>。</li>
+</ul>
+<h1 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h1><p>如果复制的 Vault 未设置为使用“Vault 特定”登录类型，则可能会发生此错误，这是 Replicated Environment 中的要求。在这种情况下，客户端日志将显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">如果复制的 Vault 未设置为使用“Vault 特定”登录类型，则可能会发生此错误，这是 Replicated Environment 中的要求。在这种情况下，客户端日志将显示：</span><br><span class="line">---------------------------</span><br><span class="line">Description:</span><br><span class="line">Could not read more data from 10.122.155.185:3030. The socket was closed gracefully on the other end.</span><br><span class="line">Date: 2008-10-04 16:20:51</span><br><span class="line">Module: ConisioAdmin.exe</span><br><span class="line">Function: CFVLogin::AddUser &lt;-LoginConnection::mvRecvLoginStruct &lt;-LoginConnection::mvRecvEncrypted &lt;-CryptSocket::mvRead &lt;-CWinSocket::mvRead</span><br><span class="line">Error code: E_FVC_SOCKET_CLOSED</span><br><span class="line">Error code general description:</span><br><span class="line">The socket was closed gracefully on the other end.</span><br><span class="line">---------------------------</span><br><span class="line"></span><br><span class="line">The archive server log will show:</span><br><span class="line">---------------------------</span><br><span class="line">Description:</span><br><span class="line">Could not replicate new user.</span><br><span class="line">Operation type: Op_AddUser</span><br><span class="line">GUID: b97ba7d5-be4e-498f-a0b1-3f2cf3539ede</span><br><span class="line">Connected to: 10.122.155.185:3763</span><br><span class="line">Date: 2008-10-04 16:20:51</span><br><span class="line">Module: ArchiveServerService</span><br><span class="line">Function: Connection::mhHandleNonFileOp &lt;-Connection::mvHandleAddUser &lt;-LoginConnectionConisio::mvAddUser</span><br><span class="line">Error code: E_FVC_CANT_READ_REGISTRY</span><br><span class="line">Error code general description:</span><br><span class="line">The Archive Server could not find the server location in the Registry.</span><br><span class="line">---------------------------</span><br><span class="line"></span><br><span class="line">To correct this:</span><br><span class="line">1. Run the SOLIDWORKS® PDM Archive Server Configuration tool.</span><br><span class="line">2. Expand the root folder.</span><br><span class="line">3. Right-click on the file vault &gt; ‘Properties’ &gt; ‘Login’ tab.</span><br><span class="line">4. Make sure that the ‘Use default login type’ option is not active and that the appropriate login type is selected.</span><br><span class="line">5. Click ‘OK’ to save the setting.</span><br><span class="line"></span><br><span class="line">If you try to add or modify a user password in a replicated file vault using a SOLIDWORKS PDM login type, and if the login settings are not set up correctly, the error could appear in the administration tool:</span><br><span class="line">---------------------------</span><br><span class="line">Failed to create the user &#x27; &#x27; 的 Archive Server 上。</span><br><span class="line">插座在另一端优雅地关闭。</span><br><span class="line">---------------------------</span><br></pre></td></tr></table></figure>
+
+<p>请注意，如果保险库在错误地设置为“默认登录类型”时创建了现有用户，则这些用户现在可能在管理工具中显示为红色加号图标。要重新创建这些用户登录名，请打开配置文件卡并重置用户密码。刷新用户的节点后，红色加号应该不再显示。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,90 @@
+<Window x:Class="SWVizAPISample.RenderDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:swVizApiSample="clr-namespace:SWVizAPISample"
+        Title="Render with Visualize"
+        Height="370" Width="350"
+        ResizeMode="NoResize"
+        Closing="RenderDialog_OnClosing">
+    <Window.Resources>
+        <swVizApiSample:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"  Content="Output Folder"  />
+        <TextBox Grid.Row="1" Grid.Column="3" HorizontalAlignment="stretch" Text="{Binding OutputFolder}"/>
+        <Button Grid.Row="1" Grid.Column="4"  Content="..." Command="{Binding BrowseCommand}" HorizontalAlignment="stretch" />
+
+        <Label Grid.Row="3" Grid.Column="1"  Content="Select Image Format"/>
+        <ComboBox Grid.Row="3" Grid.Column="3"  HorizontalAlignment="stretch" 
+                  ItemsSource="{Binding ImageFormatOptions}"
+                  SelectedItem="{Binding SelectedImageFormat, Mode=TwoWay}" />
+
+
+        <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"  Content="Job Name"  />
+        <TextBox Grid.Row="5" Grid.Column="3" HorizontalAlignment="stretch" Text="{Binding JobName}"/>
+
+        <CheckBox Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="4" Content="Include Alpha" IsChecked="{Binding IncludeAlpha}"/>
+
+        <Label  Grid.Row="9" Grid.Column="1" Content="Size"  />
+        <TextBox Name="LeftTextBox"  Grid.Row="9" Grid.Column="3" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Width}"/>
+        <Label  Grid.Row="9" Grid.Column="4" Content="X" Margin="5,0,5,0"  />
+        <TextBox Grid.Row="9" Grid.Column="5" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Height}" Width="{Binding ElementName=LeftTextBox,Path=ActualWidth}"/>
+
+        <Label Grid.Row="11" Grid.Column="1" Content="Termination Mode" HorizontalAlignment="stretch"/>
+        <StackPanel Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="4" Orientation="Vertical">
+            <RadioButton Grid.Row="11" Grid.Column="3" x:Name="QualityModeRadioButton" Content="Quality Mode" IsChecked="{Binding QualityMode}"/>
+            <RadioButton Grid.Row="11" Grid.Column="3" x:Name="TimeModeRadioButton" Content="Time Mode" IsChecked="{Binding TimeMode}"/>
+        </StackPanel>        
+        <Label Grid.Row="15" Grid.Column="1" Visibility="{Binding IsChecked, ElementName=QualityModeRadioButton, Converter={StaticResource BooleanToVisibilityConverter}}" Content="Render Passes" HorizontalAlignment="Stretch" />
+        <TextBox Grid.Row="15" Grid.Column="3" Visibility="{Binding IsChecked, ElementName=QualityModeRadioButton, Converter={StaticResource BooleanToVisibilityConverter}}" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding RenderPasses}"/>
+
+        <Label Grid.Row="15" Grid.Column="1" Visibility="{Binding IsChecked, ElementName=TimeModeRadioButton, Converter={StaticResource BooleanToVisibilityConverter}}" Content="Time Limit" HorizontalAlignment="Stretch" />
+        <TextBox Grid.Row="15" Grid.Column="3" Visibility="{Binding IsChecked, ElementName=TimeModeRadioButton, Converter={StaticResource BooleanToVisibilityConverter}}" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding TimeLimit}"/>
+
+        <CheckBox Grid.Row="17" Grid.Column="3" Grid.ColumnSpan="4" Content="Enable Denoiser" HorizontalAlignment="Stretch" IsChecked="{Binding EnableDenoiser}"/>
+
+        <StackPanel Grid.Row="25" Grid.Column="1" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <Button Content="Start Render" Command="{Binding OkCommand}" Margin="5" Padding="4"/>
+            <Button Content="Cancel" Command="{Binding CancelCommand}" Margin="5" Padding="4"/>
+        </StackPanel>
+    </Grid>
+</Window>

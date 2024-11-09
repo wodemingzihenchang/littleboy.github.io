@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="粒子轨迹"><a href="#粒子轨迹" class="headerlink" title="粒子轨迹"></a>粒子轨迹</h1><p>粒子轨迹研究，主要是应用在一些除尘、搅拌设备，查看粒子了设备内的混合运动情况。</p>
+<h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><p>本课程是一种台风发生器。其原理是通过热对流，让热空气上升冷空气下降，通过四周不规则的开口，形成旋转气流。从而形成台风。</p>
+<img src="12-粒子轨迹/image-20241025163105854.png">
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
+<img src="01-创建分析项目/向导-创建项目.png">
+
+<p>项目名称</p>
+<img src="01-创建分析项目/向导-项目名称.png">
+
+<p>单位系统</p>
+<img src="01-创建分析项目/向导-单位系统.png">
+
+<p>分析类型</p>
+<img src="12-粒子轨迹/向导-分析类型.png">
+
+<p>默认流体类型</p>
+<img src="01-创建分析项目/向导-默认流体2.png">
+
+<p>默认固体</p>
+<img src="12-粒子轨迹/向导-默认固体.png">
+
+<p>壁面条件</p>
+<img src="01-创建分析项目/向导-壁面条件.png">
+
+<p>初始条件</p>
+<p>对这个分析来说，我们可以按默认定义进行</p>
+<img src="01-创建分析项目/向导-初始条件.png">
+
+<h2 id="计算域"><a href="#计算域" class="headerlink" title="计算域"></a>计算域</h2><p>默认计算域过大，我们调整下大小</p>
+<img src="12-粒子轨迹/image-20241025163942286.png">
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><h2 id="热源"><a href="#热源" class="headerlink" title="热源"></a>热源</h2><img src="12-粒子轨迹/image-20241025165016655.png">
+
+
+
+<img src="12-粒子轨迹/image-20241025165105064.png">
+
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>全局目标-温度（流体）最大值</p>
+<img src="12-粒子轨迹/image-20241025165221388.png">
+
+<h2 id="组件控制"><a href="#组件控制" class="headerlink" title="组件控制"></a>组件控制</h2><p>这里为了前期定义目标，以及后期查看结果，我们这里有有给实体借用，</p>
+<p>然后当前</p>
+<img src="12-粒子轨迹/image-20241025165455585.png">
+
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>流动轨迹</p>
+<h1 id="粒子研究"><a href="#粒子研究" class="headerlink" title="粒子研究"></a>粒子研究</h1><p>向主流注入物理颗粒</p>
+<h2 id="新建粒子"><a href="#新建粒子" class="headerlink" title="新建粒子"></a>新建粒子</h2><p><img src="/12-%E7%B2%92%E5%AD%90%E8%BD%A8%E8%BF%B9/image-20241026145049811.png" alt="image-20241026145049811"></p>
+<p>粒子注入</p>
+<p><img src="/12-%E7%B2%92%E5%AD%90%E8%BD%A8%E8%BF%B9/image-20241026145830704.png" alt="image-20241026145830704"></p>
+<p>使用粒子研究命令</p>
+<p>查看粒子轨迹结果</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

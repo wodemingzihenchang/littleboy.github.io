@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="空穴现象"><a href="#空穴现象" class="headerlink" title="空穴现象"></a>空穴现象</h1><p>在液压系统中，当流动液体某处的压力低于空气分离压时，原先溶解在液体中的空气就会游离出来，使液体中产生大量气泡，这种现象称为气穴现象。气穴现象使液压装置产生噪声和振动，使金属表面受到腐蚀。</p>
+<p><strong>危害：</strong></p>
+<p>气泡破灭的冲击力，会引起振动和噪音</p>
+<p>会破坏液流的连续性，使流量和压力剧烈波动。</p>
+<p>造成金属表面破坏，从而使金属容易腐蚀。</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
+<img src="01-创建分析项目/向导-创建项目.png">
+
+<p>项目名称</p>
+<img src="01-创建分析项目/向导-项目名称.png">
+
+<p>单位系统</p>
+<img src="01-创建分析项目/向导-单位系统.png">
+
+<p>分析类型</p>
+<img src="01-创建分析项目/向导-分析类型.png">
+
+<p>默认流体类型</p>
+<p>空化：指单位水中溶解气体的比值</p>
+<p><img src="/10-%E7%A9%BA%E7%A9%B4%E7%8E%B0%E8%B1%A1/%E9%BB%98%E8%AE%A4%E6%B5%81%E4%BD%93.png" alt="image-20241024174658236"></p>
+<p>壁面条件</p>
+<img src="01-创建分析项目/向导-壁面条件.png">
+
+<p>初始条件</p>
+<p>对这个分析来说，我们可以按默认定义进行</p>
+<img src="01-创建分析项目/向导-初始条件.png">
+
+<h2 id="计算域"><a href="#计算域" class="headerlink" title="计算域"></a>计算域</h2><p>让Y方向计算域居中，设置±0.01，</p>
+<p><img src="/10-%E7%A9%BA%E7%A9%B4%E7%8E%B0%E8%B1%A1/%E8%AE%A1%E7%AE%97%E5%9F%9F.png" alt="image-20241024180026716"></p>
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>入口</p>
+<p><img src="/10-%E7%A9%BA%E7%A9%B4%E7%8E%B0%E8%B1%A1/image-20241024175250989.png" alt="image-20241024175250989"></p>
+<p>出口</p>
+<p><img src="/10-%E7%A9%BA%E7%A9%B4%E7%8E%B0%E8%B1%A1/image-20241024175413892.png" alt="image-20241024175413892"></p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>通过密度目标来判断是否产生空穴</p>
+<p><img src="/10-%E7%A9%BA%E7%A9%B4%E7%8E%B0%E8%B1%A1/image-20241024180446428.png" alt="image-20241024180446428"></p>
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>细化全局网格</p>
+<p><img src="/10-%E7%A9%BA%E7%A9%B4%E7%8E%B0%E8%B1%A1/image-20241024180243855.png" alt="image-20241024180243855"></p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>切面图：通过颜色发现存在小于水密的的区域（这里就是气液混合的区域），该位置意味着可能产生了气穴空泡的现象。</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>Q切面图最低密度位置，原来不就是空气位置吗？能作为低密度是空穴的判断吗？</p>
+<p>A</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

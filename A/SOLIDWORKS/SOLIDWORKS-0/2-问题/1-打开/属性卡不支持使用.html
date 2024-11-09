@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-08-13 14:38:02</span>
+</div>
+
+<div id="article"><h1 id="高版本属性卡不支持使用"><a href="#高版本属性卡不支持使用" class="headerlink" title="高版本属性卡不支持使用"></a>高版本属性卡不支持使用</h1><p>正在打开的模板文件是在较新版本的属性卡中创建的。可能不支持所有新功能。<br>The template file being opened is created in a newer version of Propety TabBuilder. All the new features may not be supported.</p>
+<img src="属性卡不支持使用/image1.png" >
+
+<h2 id="方法：检查属性卡版本"><a href="#方法：检查属性卡版本" class="headerlink" title="方法：检查属性卡版本"></a>方法：检查属性卡版本</h2><p>问题多出现在多版本的时候，自定义属性文件的高版本不兼容造成。</p>
+<img src="属性卡不支持使用/image2.png" >
+
+<p>我们需要找到【系统选项-文件位置-自定义属性文件】找到高版本属性卡的路径，选择删除即可。（或者换成当前版本的属性卡路径）</p>
+<img src="属性卡不支持使用/image3.png" >
+
+<h1 id="模板正常但弹窗"><a href="#模板正常但弹窗" class="headerlink" title="模板正常但弹窗"></a>模板正常但弹窗</h1><p>在装配体选择零部件时出现，似乎多出现在从高版本转低版本的SW文件（带属性卡的文件）。在激活这些零件时，程序就会弹窗提示。</p>
+<h2 id="方法：修改零件属性卡"><a href="#方法：修改零件属性卡" class="headerlink" title="方法：修改零件属性卡"></a>方法：修改零件属性卡</h2><p>这种问题零件可能占少数，如果有出现的话，我们在零件右侧【任务窗口-属性卡界面，选项，选择新属性卡】 应该就行的</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

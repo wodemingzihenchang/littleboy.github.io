@@ -1,0 +1,52 @@
+<Window x:Class="SWVizAPISample.OutputViewerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Output Viewer" Height="480" Width="450"
+        ResizeMode="NoResize">
+
+    <Grid HorizontalAlignment="Stretch" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Progress Bar with TextBlock -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Progress:" Margin="0,5" />
+        <DockPanel Grid.Row="0" Grid.Column="1" LastChildFill="True" Margin="0,5">
+            <TextBlock DockPanel.Dock="Left" Text="{Binding  ElementName=RenderProgressBar, Path=Value, StringFormat={}{0:0}%}" Margin="0,0,10,0"/>
+            <ProgressBar DockPanel.Dock="Right" Name="RenderProgressBar" Value="{Binding RenderProgress,UpdateSourceTrigger=PropertyChanged,Mode=OneWay}" Minimum="0" Maximum="100" Height="10"/>
+        </DockPanel>
+
+        <!-- Elapsed Time -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Elapsed Time:" Margin="0,5"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding TimeSpan}" Margin="0,5"/>
+
+        <!-- Rendered Frames -->
+        <TextBlock Grid.Row="2" Grid.Column="0"  Text="Rendered Frames:" Margin="0,5"/>
+        <TextBlock Grid.Row="2" Grid.Column="1"  Text="{Binding FramesInfo}" Margin="0,5"/>
+
+        <!-- Image Viewer -->
+        <Image Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Source="{Binding RenderedImage, UpdateSourceTrigger=PropertyChanged,Mode=OneWay}" Stretch="None" Width="400" Height="300"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5">
+
+            <!-- Cancel Button -->
+            <Button Content="Cancel" Command="{Binding CancelCommand}" Width="120" Margin="10, 0" IsEnabled="{Binding RenderCancelled}"/>
+            <!-- Cancel and Save Button -->
+            <Button Content="Cancel and Save" Command="{Binding CancelAndSaveCommand}" Width="120" Margin="10, 0" IsEnabled="{Binding RenderCancelledAndSave}"/>
+            <!-- Close Button -->
+            <Button Content="Close" Command="{Binding CloseDialogCommand}" Width="120" Margin="10, 0" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>

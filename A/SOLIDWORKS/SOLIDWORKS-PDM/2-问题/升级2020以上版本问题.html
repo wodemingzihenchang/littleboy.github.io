@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-21 10:24:39</span>
+</div>
+
+<div id="article"><h1 id="升级2020以上版本问题"><a href="#升级2020以上版本问题" class="headerlink" title="升级2020以上版本问题"></a>升级2020以上版本问题</h1><p>更新或安装 SOLIDWORKS® PDM 客户端 2020 或更高版本后，哪些原因可能会导致客户端登录失败并显示错误“无法访问数据库中的项目”或显示空文件库视图？</p>
+<h2 id="ODBC问题"><a href="#ODBC问题" class="headerlink" title="ODBC问题"></a>ODBC问题</h2><p>如果您安装或升级到 SOLIDWORKS® PDM 客户端版本 2020 或更高版本并且您的系统没有安装“Microsoft ODBC Driver 17 for SQL Server”，则您将无法访问文件库。您可能会遇到以下一个或多个问题：</p>
+<p>• “无法访问数据库中的项目”<br>• 登录提示无法显示，而是出现一个空的本地文件夹。<br>• 启动管理工具失败，并显示“由于未找到 msodbcsql17.dll，代码无法继续执行。重新安装程序可能会修复此问题”<br>• 创建新库失败并出现错误。<br>• 客户端日志可能会显示“未找到数据源名称，且未指定默认驱动程序”。<br>• 客户端日志可能会显示“[ODBC Driver Manager] Driver’s SQLAllocHandle on SQL_HANDLE_ENV failed”</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>要解决此安装问题，或修复“Microsoft ODBC Driver 17 for SQL Server”先决条件。</p>
+<p>您可以从入校文件夹安装该驱动程序，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS安装包\PreReqs\ODBCSQLDriver17\</span><br></pre></td></tr></table></figure>
+
+<p>或从 Microsoft <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17">下载 ODBC Driver for SQL Server - ODBC Driver for SQL Server | Microsoft Learn</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="参数优化分析"><a href="#参数优化分析" class="headerlink" title="参数优化分析"></a>参数优化分析</h1><p>使用参数(优化)算例特征创建分析项目</p>
+<p>使用对称平面创建1&#x2F;4分析模型</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
+<img src="01-创建分析项目/向导-创建项目.png">
+
+<p>项目名称</p>
+<img src="01-创建分析项目/向导-项目名称.png">
+
+<p>单位系统</p>
+<img src="01-创建分析项目/向导-单位系统.png">
+
+<p>分析类型</p>
+<img src="01-创建分析项目/向导-分析类型.png">
+
+<p>默认流体类型</p>
+<img src="01-创建分析项目/向导-默认流体.png">
+
+<img src="01-创建分析项目/向导-默认流体2.png">
+
+<p>壁面条件</p>
+<img src="01-创建分析项目/向导-壁面条件.png">
+
+<p>初始条件</p>
+<p>对这个分析来说，我们可以按默认定义进行</p>
+<img src="01-创建分析项目/向导-初始条件.png">
+
+
+
+<h2 id="计算域"><a href="#计算域" class="headerlink" title="计算域"></a>计算域</h2><img src="09-参数优化分析/image-20241024154838131.png">
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><img src="09-参数优化分析/image-20241024155413545.png">
+
+
+
+<img src="09-参数优化分析/image-20241024155555251.png">
+
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><img src="09-参数优化分析/image-20241024155718562.png">
+
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>目标图</p>
+<img src="09-参数优化分析/image-20241024161829199.png">
+
+
+
+<h1 id="参数研究"><a href="#参数研究" class="headerlink" title="参数研究"></a>参数研究</h1><img src="09-参数优化分析/image-20241024161734727.png">
+
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>添加目标优化，由配合尺寸数值控制</p>
+<img src="09-参数优化分析/image-20241024162119309.png">
+
+<p>修改配合尺寸的最小值</p>
+<img src="09-参数优化分析/image-20241024162307883.png">
+
+<p>设置参数研究的目标</p>
+<img src="09-参数优化分析/image-20241024162403056.png">
+
+<h2 id="标准"><a href="#标准" class="headerlink" title="标准"></a>标准</h2><p>设置目标优化理想值</p>
+<img src="09-参数优化分析/image-20241024162550118.png">
+
+<h2 id="输出参数"><a href="#输出参数" class="headerlink" title="输出参数"></a>输出参数</h2><p>默认</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><img src="09-参数优化分析/image-20241024162648405.png">
+
+<p>在运行后的方案里看各参数过程计算的结果</p>
+<img src="09-参数优化分析/image-20241024165433822.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

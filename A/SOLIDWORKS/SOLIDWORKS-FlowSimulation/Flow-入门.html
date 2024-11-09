@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-流体Flow"><a href="#Simulation-流体Flow" class="headerlink" title="Simulation-流体Flow"></a>Simulation-流体Flow</h1><p>SOLIDWORKS Flow Simulation 是一个计算流体力学 (CFD) 软件，可用来分析各种液流问题。 它计算的数量是由液流引起的压力分布和温度概貌。 以下显示的球阀装配体内液流动的求解过程。 </p>
+<span id="more"></span>
+
+<p>SOLIDWORKS Flow Simulation一款功能强大的计算流体力学 (CFD) 工具，解决方案包括：</p>
+<p>流体分析：计算流体力学 (CFD)：</p>
+<p>热流体分析：计算流体流动和传热作用力，并研究移动的液体或气体对产品性能的影响</p>
+<img src="Flow-入门/功能矩阵图.png">
+
+
+
+<p><strong>打开插件：</strong></p>
+<img src="Flow-入门/clip_image001.png">
+
+<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><img src="Flow-入门/clip_image003.jpg">
+
+<h2 id="模型准备"><a href="#模型准备" class="headerlink" title="模型准备"></a>模型准备</h2><p>若你是分析内部流体仿真，你需要先创建一个封闭的空间区域，通过Flow工具栏的【工具-创建封盖】零件获得</p>
+<img src="Flow-入门/clip_image007.jpg">
+
+<h2 id="向导设置"><a href="#向导设置" class="headerlink" title="向导设置"></a>向导设置</h2><p>设置流体仿真的一些条件，其中包括：“项目名称”、“单位”、“分析类型”、“流体介质”、“壁面条件”、“初始条件”等。</p>
+<h3 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h3><img src="Flow-入门/clip_image009.jpg">
+
+<h3 id="单位系统"><a href="#单位系统" class="headerlink" title="单位系统"></a>单位系统</h3><img src="Flow-入门/clip_image011.jpg">
+
+<h3 id="分析类型"><a href="#分析类型" class="headerlink" title="分析类型"></a>分析类型</h3><img src="Flow-入门/clip_image013.jpg">
+
+<h3 id="流体介质"><a href="#流体介质" class="headerlink" title="流体介质"></a>流体介质</h3><img src="Flow-入门/clip_image015.jpg">
+
+<h3 id="壁面条件"><a href="#壁面条件" class="headerlink" title="壁面条件"></a>壁面条件</h3><img src="Flow-入门/clip_image017.jpg">
+
+<h3 id="初始条件"><a href="#初始条件" class="headerlink" title="初始条件"></a>初始条件</h3><img src="Flow-入门/clip_image019.jpg">
+
+<h2 id="输入数据"><a href="#输入数据" class="headerlink" title="输入数据"></a>输入数据</h2><img src="Flow-入门/clip_image020.png">
+
+<h3 id="计算域："><a href="#计算域：" class="headerlink" title="计算域："></a>计算域：</h3><img src="Flow-入门/clip_image022.jpg">
+
+<h3 id="流体子域"><a href="#流体子域" class="headerlink" title="流体子域"></a>流体子域</h3><p>多流体情况或是由部分区域是其他流体介质时使用，本次项目无效设置。</p>
+<h3 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h3><img src="Flow-入门/clip_image023.png">
+
+<p>入口条件：选择一个内侧的端面作为进口，选择入口速度，设置速度</p>
+<img src="Flow-入门/clip_image024.png">
+
+<img src="Flow-入门/clip_image026.jpg">
+
+
+
+<p>出口条件：选择另一个内侧端面作为出口，出口设置为静压</p>
+<img src="Flow-入门/clip_image027.png">
+
+<img src="Flow-入门/clip_image029.jpg">
+
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>设置需要获得的结果</p>
+<img src="Flow-入门/clip_image030.png">
+
+<p>选择需要分析的参数</p>
+<img src="Flow-入门/clip_image031.png">
+
+<h3 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h3><img src="Flow-入门/clip_image032.png">
+
+<img src="Flow-入门/clip_image034.jpg">
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>设置好“输入数据”后，启用Flow工具栏【运行】命令</p>
+<img src="Flow-入门/clip_image035.png">
+
+<p>运行时你可能会遇到的报警：</p>
+<img src="Flow-入门/clip_image036.png">
+
+<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><img src="Flow-入门/clip_image037.png">
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="进阶学习"><a href="#进阶学习" class="headerlink" title="进阶学习"></a>进阶学习</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS Corp\SOLIDWORKS Flow Simulation\lang\english\Docs</span><br></pre></td></tr></table></figure>
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-09-25 17:33:54</span>
+</div>
+
+<div id="article"><h1 id="批量修改服务器地址"><a href="#批量修改服务器地址" class="headerlink" title="批量修改服务器地址"></a>批量修改服务器地址</h1><p>当 SOLIDWORKS 服务器转移到另一台电脑上后，对应所有客户端的服务器地址都要进行更改</p>
+<h2 id="手动模式"><a href="#手动模式" class="headerlink" title="手动模式"></a>手动模式</h2><p>\1.  点击左下方的开始菜单栏，找到 SOLIDNetWork License Manager</p>
+<img src="批量修改服务器地址/image-20240925173526050.png">
+
+<p>\2.  打开许可服务器管理器，切换到“服务器清单”选项卡 ，删除现有的服务器地址和添加新的服务器地址。</p>
+<img src="批量修改服务器地址/image-20240925173619097.png">
+
+<h2 id="注册表模式"><a href="#注册表模式" class="headerlink" title="注册表模式"></a>注册表模式</h2><p>针对客户端多的客户，如果一个一个的添加，未免显得太慢了。</p>
+<p>我们可以通过上面【手动模式】把修改好的新服务器设置“导出”成注册表文件，运行该文件来设置新服务器名称</p>
+<p>\1.  通过注册表修改服务器，Win+R打开运行命令，输入regedit，打开注册表</p>
+<img src="批量修改服务器地址/image-20240925173755688.png">
+
+<p>找到以下路径：右键选择导出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\FLEXlm License Manager</span><br></pre></td></tr></table></figure>
+
+<img src="批量修改服务器地址/image-20240925173955136.png">
+
+<p>导出后，将会获得一份能设置许可服务器地址的（.reg）格式文件。将其批量发个每一个客户端的工程师，只需要双击该文件导进去，即可修改，节省大量的操作修改。</p>
+<p>如需要：</p>
+<p>你还可以右键编辑.reg格式文件，并修改SW_D_LICENSE_FILE后面相应的值，如25734@IP地址或者电脑名称， 若有多个服务器地址时，使用英文分号进行分隔。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

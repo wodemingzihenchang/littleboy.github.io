@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-11-01 11:11:38</span>
+</div>
+
+<div id="article"><h1 id="eDrawings-另存为Html"><a href="#eDrawings-另存为Html" class="headerlink" title="eDrawings_另存为Html"></a>eDrawings_另存为Html</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">SW_Visualize</span></span><br><span class="line">   &#123;</span><br><span class="line">       <span class="comment">//IVisualizeAddinManager类型转换失败，不知啥问题。。。</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Render</span>(<span class="params">SldWorks swApp</span>)<span class="comment">//导出PDF</span></span></span><br><span class="line">       &#123;</span><br><span class="line">           <span class="comment">//获得Visualize插件对象</span></span><br><span class="line">           IVisualizeAddin testViz = swApp.GetAddInObject(<span class="string">&quot;&#123;2c776b61-cdbf-4a5e-b76c-fde2df860fea&#125;&quot;</span>); </span><br><span class="line">           <span class="comment">//IVisualizeAddin testViz = (IVisualizeAddin)swApp.GetAddInObject(&quot;SolidWorks.Visualize.Implementation.VisualizeAddin.18&quot;);</span></span><br><span class="line">           IVisualizeAddinManager visualizeAddinMgr = testViz.GetAddinManager();</span><br><span class="line"></span><br><span class="line">           <span class="comment">//渲染设置</span></span><br><span class="line">           IRenderOptions vizRenderOptions = visualizeAddinMgr.RenderOptions;</span><br><span class="line">           vizRenderOptions.ImageFormat = ImageFormat_e.JPEG;</span><br><span class="line">           vizRenderOptions.FrameCount = <span class="number">1000</span>;</span><br><span class="line">           vizRenderOptions.Width = <span class="number">800</span>;</span><br><span class="line">           vizRenderOptions.Height = <span class="number">800</span>;</span><br><span class="line">           vizRenderOptions.JobName = <span class="string">&quot;Toaster&quot;</span>;</span><br><span class="line">           vizRenderOptions.OutputFolder = <span class="string">@&quot;E:\SOLIDWORKS Visualize Content\Images&quot;</span>;</span><br><span class="line">           vizRenderOptions.DenoiserEnabled = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">           <span class="comment">//启动渲染</span></span><br><span class="line">           visualizeAddinMgr.Render();</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="效"><a href="#效" class="headerlink" title="效"></a>效</h2><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/English/api/emodelapi/eDrawings.Interop.EModelViewControl~eDrawings.Interop.EModelViewControl.IEModelViewControl~Save.html?verRedirect=1">Save Method (IEModelViewControl) - 2022 - SOLIDWORKS API Help</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

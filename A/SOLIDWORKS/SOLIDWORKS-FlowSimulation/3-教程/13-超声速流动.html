@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="超声速流动"><a href="#超声速流动" class="headerlink" title="超声速流动"></a>超声速流动</h1><p>当流动的速度快于声速时， 就认为流动是超声速的。 在亚声速流动中， 流体会对扰动作出反应，<br>因为压差在扰动处开始发展并向下游传播， 致使来流在扰动的作用下做出反应和变化。 然而在超声速<br>流动中， 这些压差不会在上游发展， 因为流体流动的速度实在太快了。 因此， 下游的扰动不会受到来<br>流影响。 当流体流经扰动区时， 流动属性将发生剧烈变化， 这也是众所周知的激波。</p>
+<h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><img src="13-超声速流动/image-20241026121954972.png">
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
+<img src="01-创建分析项目/向导-创建项目.png">
+
+<p>项目名称</p>
+<img src="01-创建分析项目/向导-项目名称.png">
+
+<p>单位系统</p>
+<img src="01-创建分析项目/向导-单位系统.png">
+
+<p>分析类型</p>
+<img src="01-创建分析项目/向导-分析类型（外部）.png">
+
+<p>默认流体类型，勾选【 高马赫数流动】 复选框</p>
+<img src="13-超声速流动/流体类型.png">
+
+<p>壁面条件</p>
+<img src="01-创建分析项目/向导-壁面条件.png">
+
+<p>初始条件</p>
+<p>对这个分析来说，我们可以按默认定义进行</p>
+<img src="13-超声速流动/向导-初始条件.png">
+
+<h2 id="计算域"><a href="#计算域" class="headerlink" title="计算域"></a>计算域</h2><p>计算域可以压缩为圆锥体的 1 &#x2F; 4， 以降低求解的规模并缩短求解的时间</p>
+<img src="13-超声速流动/image-20241026130533767.png">
+
+
+
+<h2 id="计算控制选项"><a href="#计算控制选项" class="headerlink" title="计算控制选项"></a>计算控制选项</h2><img src="13-超声速流动/image-20241026130645686.png">
+
+<img src="13-超声速流动/image-20241026130734400.png">
+
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><img src="13-超声速流动/image-20241026130814074.png">
+
+
+
+<p>方程式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;GG 力 (X) 1&#125;*4/1.7^2/1.399*2/101325/3.14159*4/0.1^2</span><br></pre></td></tr></table></figure>
+
+<img src="13-超声速流动/image-20241026131043009.png">
+
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><img src="13-超声速流动/image-20241026131550261.png">
+
+<p>目标图</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本章研究了通过圆锥体的超声速流动， 使用了对称的条件来简化分析。 此外， 还使用了自动网格<br>细化技术来确保高质量的结果， 仿真的结果中捕捉到了正激波和斜激波， 最后还使用了切面图进行结果分析。</p>
+<h2 id="激波"><a href="#激波" class="headerlink" title="激波"></a>激波</h2><p>在前面提到过， 当流动属性由于扰动的存在而发生强烈变化时就会出现激波。 可以看到， 在这个<br>例子中出现的激波包含两个部分。 第一， 在垂直于流动的方向存在一个弓形激波， 弓形激波的存在会<br>极大地增加物体的阻力。 第二， 沿着圆锥体的边界可以看到斜激波的传播， 因为流动是沿边界行进的。<br>由于超声速流动突然遇到一个凸角， 将在斜激波之后进一步加速流动的区域看到膨胀波的膨胀扇区（ 通<br>常称为 Prandtl-Meyer 膨胀扇区） ， 还会观察到穿过实体的亚声速尾流区， 如图 13-5 所示</p>
+<img src="13-超声速流动/image-20241026132925498.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

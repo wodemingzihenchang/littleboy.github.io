@@ -1,0 +1,17 @@
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\bin\x64\Debug\SWVizAPISample.dll
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\bin\x64\Debug\SWVizAPISample.pdb
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\bin\x64\Debug\SolidWorks.Visualize.Interfaces.dll
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\bin\x64\Debug\solidworkstools.dll
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample.csproj.AssemblyReference.cache
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\OutputViewer.baml
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\OutputViewer.g.cs
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\RenderDialog.g.cs
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample_MarkupCompile.cache
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample_MarkupCompile.lref
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\RenderDialog.baml
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample.g.resources
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample.csproj.CoreCompileInputs.cache
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample.csproj.CopyComplete
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample.dll
+C:\Users\LeonLin\Desktop\Visualize2025 API\SolidworksVisualizeAPISamplePlugin\SWVizAPISample\obj\x64\Debug\SWVizAPISample.pdb

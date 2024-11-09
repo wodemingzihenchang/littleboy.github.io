@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-17 16:01:37</span>
+</div>
+
+<div id="article"><h1 id="无法连接至数据库"><a href="#无法连接至数据库" class="headerlink" title="无法连接至数据库"></a>无法连接至数据库</h1><p>无法连接至数据库，请检查连接参数</p>
+<img src="无法连接至数据库/无法连接至数据库，请检查连接参数.png">
+
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>电气Electrical软件是通过将项目文件和设计数据存放在服务器数据库使用的，因此您需设置【工具-应用程序设置-协同服务器】和【工具-应用程序设置-数据库】</p>
+<p>因此如果和设置中的服务器访问异常，就会出现“无法连接至数据库”的错误。如果网络中存在访问服务器的连接问题，你可以尝试下面方法检查原因：</p>
+<img src="无法连接至数据库/image-20241108161214654.png">
+
+<img src="无法连接至数据库/image-20241108161452777.png">
+
+<h2 id="方法-连接ping"><a href="#方法-连接ping" class="headerlink" title="方法-连接ping"></a>方法-连接ping</h2><p>确保服务器与客户端在同一局域网中</p>
+<p>打开【开始&#x2F;菜单-window系统-命令提示器】输入命令：ping &lt;IP地址&gt; 检查；</p>
+<img src="无法连接至数据库/image-20241108162135661.png">
+
+<h2 id="方法-防火墙Telnet"><a href="#方法-防火墙Telnet" class="headerlink" title="方法-防火墙Telnet"></a>方法-防火墙Telnet</h2><p>关闭服务器防火墙后，查看客户端是否可正常连接，</p>
+<ul>
+<li>若不可以：应检查网络是否通</li>
+<li>若可以：则为防火墙设置问题。</li>
+</ul>
+<p>防火墙高级面板方式：</p>
+<p>1.进入控制面板-&gt;管理工具-&gt;找到“高级安全Windows防火墙</p>
+<p>2点击入站规则</p>
+<p>3.找到 回显请求-ICMPv4-In (Echo Request -ICMPv4-In)4.右键点击规则点击启用规则(Enable)</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

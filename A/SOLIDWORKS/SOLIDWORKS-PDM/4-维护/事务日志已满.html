@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-21 10:31:26</span>
+</div>
+
+<div id="article"><h1 id="事务日志已满"><a href="#事务日志已满" class="headerlink" title="事务日志已满"></a>事务日志已满</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>客户端日志错误“[SQL Server] The transaction log for database ‘db_name’ is full（[SQL Server] 数据库“db_name”的事务日志已满）”？</p>
+<p>如果 SQL 文件库数据库事务日志被限制扩展，SOLIDWORKS® PDM 数据库升级向导 (upgrade.exe) 可能会失败，并显示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---------------------------</span><br><span class="line">“At least one upgrade failed due to errors.Please note the error message present on</span><br><span class="line">the following page and try to rectify the problem before trying to upgrade the vault again”。</span><br><span class="line">---------------------------</span><br><span class="line"></span><br><span class="line">升级日志说明失败原因不明：</span><br><span class="line">....</span><br><span class="line">- Upgrading data format to 8.4</span><br><span class="line">- Running defragmentation script</span><br><span class="line">- Failed to upgrade:</span><br><span class="line">- 库“vaultname”升级失败！</span><br><span class="line">----</span><br><span class="line">如果在客户端上运行升级，客户端日志（“管理工具”&gt;“本地设置”&gt;“日志文件”）将显示：</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line">SQL-query failed:</span><br><span class="line">[Microsoft][ODBC SQL Server Driver][SQL Server]The transaction log for database &#x27;db_name&#x27; is full.To find out why space in the log cannot be reused, see the log_reuse_wait_desc column in sys.databases</span><br><span class="line">.....</span><br><span class="line">[Microsoft][ODBC SQL Server Driver][SQL Server] 语句已终止。</span><br><span class="line">Module: Upgrade.exe</span><br><span class="line">Function: SpResultSqlDmo::mhGetErrCode</span><br><span class="line">Error code: E_EDM_DATABASE_ACCESS</span><br><span class="line">错误代码一般说明：</span><br><span class="line">无法访问数据库中的项目。</span><br><span class="line">----</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>如果 SQL Server 数据库文件位置耗尽磁盘空间，或数据库或事务日志限制为某个大小，就可能出现此情况。</p>
+<p>数据库升级期间，数据库和事务日志将需要临时空间才能展开（一旦完成，文件通常会在下一次备份期间减小大小，或使用“缩减数据库”选项手动减小大小）</p>
+<p>要检查数据库文件设置，请打开 SQL Management Studio，登录服务器，右键单击数据库，然后选择“属性”。在“文件”对话框中，确保数据库文件不受限制，且文件位置（在路径列中可见）有足够的可用空间，以便扩展文件。默认数据库数据文件自动增长通常设置为“10%，无限制增长”，事务日志文件设置为“10%，限制增长为 2097152 MB”。</p>
+<p>数据库文件增长设置正确后，升级应完成且不出现错误。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhanwuguo8346/article/details/118212095">清除SQLServer数据库日志(ldf文件)的几种方法_log.ldf-CSDN博客</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

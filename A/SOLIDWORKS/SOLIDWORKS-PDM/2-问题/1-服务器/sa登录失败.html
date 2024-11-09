@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-11-03 13:31:03</span>
+</div>
+
+<div id="article"><h1 id="sa登录失败"><a href="#sa登录失败" class="headerlink" title="sa登录失败"></a>sa登录失败</h1><p>通过 SOL Management Studio 登录 SOL Server 时，是什么原因导致出现错误”用户’sa”登录失败。(Microsoft SOL Server，错误:18456)”</p>
+<img src="sa登录失败/image-20241103135850147.png">
+
+<p>这将会影响登录时，出现：无法访问数据库中的项目</p>
+<p>故障排除步骤如下：</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>确保您已在”服务器名称“字段中输入了正确的 SOL服务器实例名称。</p>
+<p>如果是默认 SOL实例，请使用&lt;主机名&gt;\如果是命名实例，则使用&lt;主机名&gt;\&lt;实例名称&gt;。例如“SERVER52\SQL”。</p>
+<img src="sa登录失败/image-20241103134820266.png">
+
+
+
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>如果无法解析主机名，请尝试使用服务器的 IP 地址。</p>
+<h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>确保输入正确的“sa“用户密码。</p>
+<p>如果无法通过”SOLServer 身份验证”进行连接请以本地管理员身份登录到 SOL Server 系统，然后尝试通过“windows 身份验证’登录。</p>
+<img src="sa登录失败/打开SQL管理器.png">
+
+<p>随后，您可以转至“sa“登录的安全设置，然后重置密码，</p>
+<img src="sa登录失败/image-20241103134043036.png">
+
+<p>同时还请确保“sa帐户未被禁用。</p>
+<img src="sa登录失败/image-20241103134104765.png">
+
+<h2 id="方法4"><a href="#方法4" class="headerlink" title="方法4"></a>方法4</h2><p>确保已为 SOL 实例启用 TCP 协议。在 SOL Server 上运行 SOL配置管理器，</p>
+<p>并确认该实例在“SOL Server 服务”下运行。在“SOL Server 网络配置”下验证”TCP&#x2F;IP“是否启用)</p>
+<img src="sa登录失败/image-20241103133938636.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

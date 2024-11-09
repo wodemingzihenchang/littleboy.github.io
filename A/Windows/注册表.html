@@ -51,18 +51,26 @@
 
 <h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="右键菜单命令"><a href="#右键菜单命令" class="headerlink" title="右键菜单命令"></a>右键菜单命令</h3><img src="注册表\右击菜单 (1).png">
 
-<p>【计算机\HKEY_CLASSES_ROOT\Directory\Background\shell】</p>
-<p>项：shell\“自定义名字”<br>——默认值：是显示文本内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【计算机\HKEY_CLASSES_ROOT\Directory\Background\shell】</span><br></pre></td></tr></table></figure>
+
+<p>项：shell\“自定义名字”</p>
+<p>——默认值：是显示文本内容</p>
 <p>——Icon值 ：是图标写程序路径即可</p>
 <img src="注册表\右击菜单 (2).png">
 
-<p>项： command<br>——默认值：程序路径：写程序路径即可”D:\Program Files\Git\cmd\git-gui.exe” “–working-dir” “%v.”</p>
+<p>项： command</p>
+<p>——默认值：程序路径：写程序路径即可”D:\Program Files\Git\cmd\git-gui.exe” “–working-dir” “%v.”</p>
 <img src="注册表\右击菜单 (3).png">
 
-<p>————reg 举例————<br>Windows Registry Editor Version 5.00</p>
-<p>[HKEY_CLASSES_ROOT\Directory\Background\shell\git_shell]<br>@&#x3D;”Git Ba&amp;sh Here”<br>“Icon”&#x3D;”D:\Program Files\Git\git-bash.exe”</p>
-<p>[HKEY_CLASSES_ROOT\Directory\Background\shell\git_shell\command]<br>@&#x3D;”&quot;D:\Program Files\Git\git-bash.exe&quot; &quot;–cd&#x3D;%v.&quot;“</p>
-<h3 id="？文件夹提示有重复名"><a href="#？文件夹提示有重复名" class="headerlink" title="？文件夹提示有重复名"></a>？文件夹提示有重复名</h3><p>HKEY_CURRENT_USER&#x2F;Software&#x2F;Microsoft&#x2F;Windows&#x2F;CurrentVersion&#x2F;Explorer&#x2F;FileExts分别找到.SLDASM和.SLDDRW和slddrt，然后将UserChoice删除。重启电脑</p>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">————reg 举例————</span><br><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\git_shell]</span><br><span class="line">@=&quot;Git Ba&amp;sh Here&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;D:\\Program Files\\Git\\git-bash.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\git_shell\command]</span><br><span class="line">@=&quot;\&quot;D:\\Program Files\\Git\\git-bash.exe\&quot; \&quot;--cd=%v.\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="文件夹提示有重复名"><a href="#文件夹提示有重复名" class="headerlink" title="文件夹提示有重复名"></a>文件夹提示有重复名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts</span><br></pre></td></tr></table></figure>
+
+<p>分别找到.SLDASM和.SLDDRW和slddrt，然后将UserChoice删除。重启电脑</p>
 <h2 id="GUID"><a href="#GUID" class="headerlink" title="GUID"></a>GUID</h2><p>全局唯一标识符（Globally Unique Identifier） 用于标识如注册表项、类及接口标识、数据库、系统目录等对象。主要用于在拥有多个节点、多台计算机的网络或系统中。</p>
 <h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>是一种由算法生成的二进制长度为128位的数字标识符。</p>
 <p> GUID 的格式为“xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”(总数达到了2^1283.4×10^38个)，其中每个 x 是 0-9 或 a-f 范围内的一个4位十六进制数。在理想情况下，是不会生成两个相同的值。随机生成两个相同GUID的可能性非常小，但并不为0。</p>

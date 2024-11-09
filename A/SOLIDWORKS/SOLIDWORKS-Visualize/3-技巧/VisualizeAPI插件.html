@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-11-08 18:34:25</span>
+</div>
+
+<div id="article"><h1 id="VisualizeAPI插件"><a href="#VisualizeAPI插件" class="headerlink" title="VisualizeAPI插件"></a>VisualizeAPI插件</h1><p>使用 SOLIDWORKS Visualize API，您可以创建 SOLIDWORKS 模型的逼真渲染功能。</p>
+<p>您可以通过 SOLIDWORKS Visualize 插件使用此 API，这让您可以直接渲染 SOLIDWORKS 文档或将其转换为 Visualize 项目文件。</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2025/english/api/swvisualizeapi/SolidWorks.Visualize.Interfaces~Solid">IRendererPropertiesStatus 界面 - 2025 - SOLIDWORKS API 帮助</a></p>
+<span id="more"></span>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>下载插件：通过网盘分享的文件：VisualizeAPI插件.zip</p>
+<p>百度云链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1M5DETBswzDGa3YfBpwV_PQ?pwd=gev2">https://pan.baidu.com/s/1M5DETBswzDGa3YfBpwV_PQ?pwd=gev2</a> 提取码: gev2</p>
+<p>托管服务器下载： <a href="VisualizeAPI%E6%8F%92%E4%BB%B6%5CVisualizeAPI%E6%8F%92%E4%BB%B6.zip">VisualizeAPI插件.zip</a> </p>
+<p>在下载后的安装包内，运行“RegisterDebug.bat”，安装插件。</p>
+<img src="VisualizeAPI插件/image-20241105143418561.png">
+
+<p>安装后在SOLIDWORKS插件界面，可以看到有该插件的3个功能。</p>
+<img src="VisualizeAPI插件/image-20241105112344869.png">
+
+<p>在使用前你还需注意：需要打开SOLIDWORKS Visualize插件。不然点了渲染按钮是没有结果输出的。</p>
+<img src="VisualizeAPI插件/image-20241105112440597.png">
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>以Xbox游戏手柄的模型为例，进行功能测试。模型我已用SOLIDWORKS自带的材质进行外观添加了。</p>
+<img src="VisualizeAPI插件/image-20241105112613567.png">
+
+<p>这是打开Realview效果</p>
+<img src="VisualizeAPI插件/image-20241105112632415.png">
+
+<h2 id="简单渲染"><a href="#简单渲染" class="headerlink" title="简单渲染"></a>简单渲染</h2><p>会按默认设置输出“简单渲染.png”的图片</p>
+<img src="VisualizeAPI插件/image-20241105112710139.png">
+
+<p>简单渲染会占用SOLIDWORKS程序的运行、此时你是不能操作SOLIDWORKS软件。这是一个比较麻烦的点，不过使用【高级渲染】的后台渲染可以解决。</p>
+<h2 id="高级渲染"><a href="#高级渲染" class="headerlink" title="高级渲染"></a>高级渲染</h2><p>使用高级渲染，会进入渲染设置界面：大致包括保存的位置和名字、输出的质量和方式等</p>
+<img src="VisualizeAPI插件/image-20241105112948776.png">
+
+<p>开始渲染时，会进入进度条界面、渲染过程效果、渲染时间</p>
+<img src="VisualizeAPI插件/image-20241105113108798.png">
+
+<p>Cancel：取消渲染</p>
+<p>Cancel and Save：取消渲染并将当前渲染保存（未完成的渲染可能会模糊）</p>
+<p>Close：可以后台渲染，此时SOLIDWORKS正常使用</p>
+<p><strong>注意：</strong>在【简单渲染】模式下，SOLIDWORKS软件会挂起卡住，不过【高级渲染】模式下，我们可以在渲染过程界面出来后，选择“Close”转到后台渲染。</p>
+<img src="VisualizeAPI插件/image-20241105123512546.png">
+
+
+
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><p>目前支持的保存格式如图。支持导出成SWV项目文件。也就是SWV能打开的原生文件。</p>
+<img src="VisualizeAPI插件/image-20241105144700998.png">
+
+<h1 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h1><h2 id="代码下载"><a href="#代码下载" class="headerlink" title="代码下载"></a>代码下载</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2025/english/api/swvisualizeapi/SolidWorks.Visualize.Interfaces~SolidWorks.Visualize.Interfaces.IVisualizeAddinManager.html">IVisualizeAddinManager Interface - 2025 - SOLIDWORKS API Help</a></p>
+<h2 id="内容解读"><a href="#内容解读" class="headerlink" title="内容解读"></a>内容解读</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"><span class="keyword">using</span> SolidWorks.Interop.sldworks;</span><br><span class="line"><span class="keyword">using</span> SolidWorks.Interop.swconst;</span><br><span class="line"><span class="keyword">using</span> SolidWorks.Visualize.Interfaces;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Sw_toolkit</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">SW_Visualize</span></span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="keyword">static</span> ISldWorks swApp=(SldWorks) System.Runtime.InteropServices.Marshal.GetActiveObject(<span class="string">&quot;SldWorks.Application.33&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Visualize插件程序ID</span></span><br><span class="line">        <span class="keyword">static</span> <span class="built_in">string</span> VisualizeAddinProgID = <span class="string">&quot;SolidWorks.Visualize.Implementation.VisualizeAddin&quot;</span>;</span><br><span class="line">        <span class="comment">//static string VisualizeAddinProgID = &quot;2c776b61-cdbf-4a5e-b76c-fde2df860fea&quot;;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//IVisualizeAddinManager类型转换失败，不知啥问题。。。</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Render</span>()<span class="comment">//导出PDF</span></span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//获得Visualize插件对象</span></span><br><span class="line">            IVisualizeAddin vizAddin = swApp.GetAddInObject(VisualizeAddinProgID);</span><br><span class="line">            IVisualizeAddin testViz = swApp.GetAddInObject(VisualizeAddinProgID);</span><br><span class="line">            IVisualizeAddinManager visualizeAddinMgr = testViz.GetAddinManager();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//渲染设置</span></span><br><span class="line">            IRenderOptions vizRenderOptions = visualizeAddinMgr.RenderOptions;</span><br><span class="line">            vizRenderOptions.ImageFormat = ImageFormat_e.JPEG;</span><br><span class="line">            vizRenderOptions.FrameCount = <span class="number">1000</span>;</span><br><span class="line">            vizRenderOptions.Width = <span class="number">800</span>;</span><br><span class="line">            vizRenderOptions.Height = <span class="number">800</span>;</span><br><span class="line">            vizRenderOptions.JobName = <span class="string">&quot;Toaster&quot;</span>;</span><br><span class="line">            vizRenderOptions.OutputFolder = <span class="string">@&quot;E:\SOLIDWORKS Visualize Content\Images&quot;</span>;</span><br><span class="line">            vizRenderOptions.DenoiserEnabled = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//启动渲染</span></span><br><span class="line">            visualizeAddinMgr.Render();</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

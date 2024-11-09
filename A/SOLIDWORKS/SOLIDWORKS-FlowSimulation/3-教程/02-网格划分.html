@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="网格划分"><a href="#网格划分" class="headerlink" title="网格划分"></a>网格划分</h1><h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>默认下一步</p>
+<img src="02-网格划分/image-20241015183132514.png">
+
+<p>默认下一步</p>
+<img src="02-网格划分/image-20241015183147455.png">
+
+<p>选择内部分析，默认下一步</p>
+<img src="02-网格划分/image-20241015183201513.png">
+
+<p>双击选择空气做为流动的介质，默认下一步</p>
+<img src="02-网格划分/image-20241015183216277.png">
+
+<p>默认下一步</p>
+<img src="02-网格划分/image-20241015183222254.png">
+
+<p>默认下一步，完成流体项目创建</p>
+<img src="02-网格划分/image-20241015183232160.png">
+
+
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>设置入口环境压力为1个大气压</p>
+<img src="02-网格划分/image-20241015184004056.png">
+
+<p>入口</p>
+<img src="02-网格划分/image-20241016171037325.png">
+
+<p>出口</p>
+<img src="02-网格划分/image-20241015185640158.png">
+
+<h2 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h2><p>基础网格：流体分析在划分默认网格时，回使用基础网格。此时的网格不会区分结果形状，只将计算区域进行等单元的划分。称基础网格</p>
+<img src="02-网格划分/image-20241015185858002.png">
+
+<p>初始网格：通过【运行-网格】只启动网格划分计算</p>
+<img src="02-网格划分/image-20241015191020840.png">
+
+<p>通过设置【结果-切面图】，来查看网格划分情况。</p>
+<img src="02-网格划分/image-20241015191205539.png">
+
+<p>查看网格截面的【切面图】，可以看到，在一些特殊结构位置模型网格回进行默认细化的处理。（这里是按自动的方式生成）</p>
+<img src="02-网格划分/image-20241015191424191.png">
+
+<p>我们还可以控制全局网格精度，进行调整</p>
+<img src="02-网格划分/image-20241016161624549.png">
+
+<h1 id="局部网格"><a href="#局部网格" class="headerlink" title="局部网格"></a>局部网格</h1><p>使用局部初始网格</p>
+<img src="02-网格划分/image-20241016161736290.png">
+
+
+
+<img src="02-网格划分/image-20241016162208208.png">
+
+
+
+<p>单单只对小面进行加密是效果不明显的，</p>
+<img src="02-网格划分/image-20241017120641470.png">
+
+<p>因为周边网格粗糙，过渡到局部细化网格时，大小差距不能大于2。因此，我们需考虑先将一部分计算域网格细化，在其中再进行局部细化</p>
+<img src="02-网格划分/image-20241016162451226.png">
+
+
+
+<h2 id="组件控制"><a href="#组件控制" class="headerlink" title="组件控制"></a>组件控制</h2><p>添加区域的实体，来局部控制该区域的网格细化</p>
+<img src="02-网格划分/image-20241016153735719.png">
+
+<p>插入该实体的【局部网格设置】</p>
+<img src="02-网格划分/image-20241016163033398.png">
+
+<h2 id="控制平面"><a href="#控制平面" class="headerlink" title="控制平面"></a>控制平面</h2><p>然后我们检查入口处的网格情况，发现现在是已经细化，但是网格划分不算对称。</p>
+<p>对于回转体等对象结构，对称的网格回有利于仿真结果的准确。因此，我们需要考虑将网格添加【控制平面】使得，网格从控制平面中心对称划分。</p>
+<img src="02-网格划分/image-20241016165520140.png">
+
+
+
+<p>从【全局网格-手动-控制平面】进入其便捷界面，然后找到Z方向面，输入“0.2143425”m（这个数值是刚好过入口圆柱的中心距离值，实际情况会需要我们提前做好测量得到）。</p>
+<img src="02-网格划分/image-20241016170312092.png">
+
+<h2 id="求解网格"><a href="#求解网格" class="headerlink" title="求解网格"></a>求解网格</h2><p>现在需要细化的位置就是对称的了，</p>
+<img src="02-网格划分/image-20241016170355132.png">
+
+<p>你还可以在【结果-切面图】查看其他方向的网格是否对称，按需要重复其他坐标的操作。</p>
+<img src="02-网格划分/image-20241016170631445.png">
+
+<h1 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h1><h2 id="查看切面图"><a href="#查看切面图" class="headerlink" title="查看切面图"></a>查看切面图</h2><h2 id="查看迹线"><a href="#查看迹线" class="headerlink" title="查看迹线"></a>查看迹线</h2><h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h2 id="网格类型"><a href="#网格类型" class="headerlink" title="网格类型"></a>网格类型</h2><p>根据计算域自动生成的立方体网格，形状是平行和正交于全局坐标系轴线的基准面</p>
+<img src="02-网格划分/image-20241015191346386.png">
+
+<!-- 网格生成阶段：
+
+1、通过创建基础网格可以生成一定数量的网格，之后通过使用控制平面(control planes)可以细化或粗化某一区域的初始网格，以便更好地求解模型中的流动特征。
+
+3、细化特定的网格类型(对各类网格，流体，或固体，部分网格)。
+
+4、细化所获得的网格，以便更好的对鉺砣鈹溙增瑢柯礱扼茫ộ乎长通道进行计算细化基础网格捕捉小的固体特征，或区分物质界面(流体/固体，流体1多孔介质，多孔介质/固体界面或不同固体之间的边界)，曲率(例如:小半径圆周表面等)
+
+。也就是:狭长通道细化
+
+也就是:小的固体特征细化，曲面细化，公差细化。
+
+
+更完美的网格可能需要一定的技术，软件也可以很好的对网格进行划分。
+
+坏网格-坏结果。
+
+太多网格-计算时间更长 -->
+
+<h2 id="手动细化"><a href="#手动细化" class="headerlink" title="手动细化"></a>手动细化</h2><h3 id="细小特征细化"><a href="#细小特征细化" class="headerlink" title="细小特征细化"></a>细小特征细化</h3><p>细小固体特征细化等级&#x3D;1（左）</p>
+<p>已经探测到水平狭长圆柱体，但由于等级较低无法捕捉这一圆柱体。</p>
+<p>细小固体特征细化等级&#x3D;4（右）</p>
+<p>水平圆柱体已经被细化。注意，网格仅仅细化了国柱体所在的区域。</p>
+<img src="02-网格划分/image-20241016175817382.png">
+
+<h3 id="曲面细化"><a href="#曲面细化" class="headerlink" title="曲面细化"></a>曲面细化</h3><p>曲线细化等级&#x3D;0，不细化网格。</p>
+<p>曲面细化等级&#x3D;1，使用部分网格进行细化</p>
+<img src="02-网格划分/image-20241016175932225.png">
+
+<h3 id="公差细化"><a href="#公差细化" class="headerlink" title="公差细化"></a>公差细化</h3><p>公差细化定义网格多边形接近表面的程度制。细化的固体尺寸进行更多的控细化等级设置一个网格细化为多少倍，以满足要求。<br>标准控制网格多边形的精度-表面拟合如果右图中的”h”值大于公差标准，网格会进行细化。</p>
+<img src="02-网格划分/image-20241016180016418.png">
+
+<h3 id="狭长通道细化"><a href="#狭长通道细化" class="headerlink" title="狭长通道细化"></a>狭长通道细化</h3><p>狭长通道网格细化：(Narrow通过使用channels)页你可以在模型的流动通道内定义额外的网格，以便获得更为精确的结果，<br>默认情况下在狭长通道内的网格细化总会进行。</p>
+<img src="02-网格划分/image-20241016180038021.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

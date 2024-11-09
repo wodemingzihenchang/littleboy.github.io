@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-11 17:27:21</span>
+</div>
+
+<div id="article"><h1 id="PDM本地文件导入操作"><a href="#PDM本地文件导入操作" class="headerlink" title="PDM本地文件导入操作"></a>PDM本地文件导入操作</h1><h2 id="添加到库"><a href="#添加到库" class="headerlink" title="添加到库"></a>添加到库</h2><p>将文件添加到PDM库中，按照预定的文件夹结构在相对应的项目文件夹内添加文件即可，有如下2方法：</p>
+<p>方法1：将计算机本地的文件零件图纸存放到对应类型的文件夹内；</p>
+<p><img src="/PDM%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%93%8D%E4%BD%9C/clip_image002.jpg" alt="img"></p>
+<p>方法2：使用SOLIDWROSK新建文件时，使用零件或者图纸模板进行新建，最后保存到库内相对应的项目内即可</p>
+<p><img src="/PDM%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%93%8D%E4%BD%9C/clip_image002-17286382271981.jpg" alt="img"></p>
+<p>PDM里的文件在检出检入时，会有不同的状态：对于现在刚刚复制到库中的文件，一般会是&lt;私有状态&gt;</p>
+<ul>
+<li><p>私有状态：私有状态文件是其他用户添加到库中的文件，但还未检入。</p>
+</li>
+<li><p>检入状态：此文件当前没有被编辑，有权限的用户可以将其检出编辑，打开该状态的文件为“只读”打开。</p>
+</li>
+<li><p>检出状态：当文件被其他用户检出编辑时，其他用户无法同时检出编辑，只能查看复制，但是不能修改保存。</p>
+</li>
+</ul>
+<h2 id="操作-检入"><a href="#操作-检入" class="headerlink" title="操作-检入"></a>操作-检入</h2><p>对于&lt;私有状态&gt;文件，其他电脑是看不到的，你需要进行【操作-检入】，将私有文件，上传到PDM数据库中，此时文件才算正式入库。</p>
+<p><img src="/PDM%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E6%93%8D%E4%BD%9C/clip_image002-17286385220512.jpg" alt="img"></p>
+<img src="PDM本地文件导入操作/检入.png">
+
+<h2 id="操作-检出"><a href="#操作-检出" class="headerlink" title="操作-检出"></a>操作-检出</h2><p>因为&lt;检入状态&gt;的文件是在库中只读的文件，如需对库中文件进行编辑，则需要进行【操作-检出】处理。</p>
+<img src="PDM本地文件导入操作/检出.png">
+
+<h2 id="操作-查看版本"><a href="#操作-查看版本" class="headerlink" title="操作-查看版本"></a>操作-查看版本</h2><p>在检出检入过程中，文件会进行过程版本的记录控制，我们也能在【操作-获取版本】这里，查看到修改的历史版本文件，以及对应修改的评论说明</p>
+<img src="PDM本地文件导入操作/版本.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

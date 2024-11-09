@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-18 14:58:26</span>
+</div>
+
+<div id="article"><h1 id="PDM管理员教程"><a href="#PDM管理员教程" class="headerlink" title="PDM管理员教程"></a>PDM管理员教程</h1><p>SOLIDWORKS产品数据管理 (PDM) 解决方案可帮助您控制设计数据，并且从本质上改进您的团队就产品开发进行管理和协作的方式。使用 SOLIDWORKS PDM Professional，您的团队能够：</p>
+<p>1安全地存储和索引设计数据以实现快速检索；</p>
+<p>2打消关于版本控制和数据丢失的顾虑；</p>
+<p>3与多个地点的组织内外部的人员就设计进行分享和协作；</p>
+<p>4创建电子化工作流程以便规范、管理和优化开发、文档审批和工程变更流程。</p>
+<span id="more"></span>
+
+<h1 id="1安装规划"><a href="#1安装规划" class="headerlink" title="1安装规划"></a>1安装规划</h1><p>1.1 规划 SOLIDWORKS PDMPopfesglonal </p>
+<p>1.2 规划流程</p>
+<ul>
+<li>数据管理规划</li>
+</ul>
+<p>数据类型和元数据</p>
+<p>工作流程</p>
+<p>修订版处理</p>
+<p>用户和组和权限</p>
+<p>文件夹结构</p>
+<p>标准件</p>
+<ul>
+<li>实施规划</li>
+</ul>
+<h2 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h2><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>库管理员</p>
+<ul>
+<li>SOL Server</li>
+<li>数据库</li>
+<li>客户端</li>
+</ul>
+<h1 id="2管理工具"><a href="#2管理工具" class="headerlink" title="2管理工具"></a>2管理工具</h1><p>PDM的设置和实现的效果等配置，都是在管理工具里操作的。管理工具在【开始&#x2F;程序-SOLIDWORKS PDM-管理】打开</p>
+<h2 id="本地设置"><a href="#本地设置" class="headerlink" title="本地设置"></a>本地设置</h2><p>日志文件：记载了客户端中的任何问题信息</p>
+<img src="PDM管理员-教程\2管理工具\本地设置\日志文件.png">
+
+<p>设置</p>
+<img src="PDM管理员-教程\2管理工具\本地设置\本地设置.png">
+
+<p>组策略</p>
+<p>可以在本地系统里修改或添加PDM策略，利用活动目录、压缩存档文件、启动备份带我去等，组策略可以分发到文件库视图。</p>
+<img src="PDM管理员-教程\2管理工具\本地设置\组策略.png">
+
+<h2 id="新建PDM库"><a href="#新建PDM库" class="headerlink" title="新建PDM库"></a>新建PDM库</h2><p>打开【“开始菜单”&gt;“SOLIDWORKS PDM”&gt;“管理”】程序。找到PDM数据库，右键连接。</p>
+<img src="PDM管理员-教程/clip_image002.jpg">
+
+<p>连接时，会要求你进行登录，输入你的【用户名称】和【密码】即可。</p>
+<img src="PDM管理员-教程/image-20241011173539365.png">
+
+<h2 id="生成当地视图"><a href="#生成当地视图" class="headerlink" title="生成当地视图"></a>生成当地视图</h2><p>连接登录后，再【右键-生成当地视图】，并在提示共享库视图，选择”是“：以便该计算机上的其它用户访问</p>
+<img src="PDM管理员-教程/clip_image002-17286392605991.jpg">
+
+<img src="PDM管理员-教程/clip_image002-17286392699432.jpg">
+
+<p>创建快捷方式：打开Windows资源管理器,将PDM库的本地视图拖至桌面创建其快捷方式，或者拖放到快速访问进行固定，方便以后使用PDM</p>
+<img src="PDM管理员-教程/clip_image002-17286393915503.jpg">
+
+<h2 id="设置概述"><a href="#设置概述" class="headerlink" title="设置概述"></a>设置概述</h2><ul>
+<li><!-- 视图设置--></li>
+<li><!-- 程序位置--></li>
+<li>访间控制</li>
+</ul>
+<p>可以从几个不同的位置来进行对数据和操作的访问权限的控制，但是所有这些都与具体用户帐号相关。可以为每个用户单独设定其对文件库内哪些内容拥有只读或读写权限。这些权限需要通过库内的内置规则来设定。在设定这些权限之前，需要首先使用一个具体的用户名登录到管理工具内。可以通过把用户添加到具体的组来管理用户权限，在有很多用户的情况下这是一个非常有效的管理用户权限的方式。组内的所有用户都会继承组的权限。</p>
+<ul>
+<li>元数据</li>
+</ul>
+<p>元数据，有时也可称之为文件属性或者文件特性，是指存放在文件本身内的一些信息，例如元数据可能包含该文件创建者的名字或者是文件的生成日期。<br>可以为每种类型的文件设定不同的元数据格式。</p>
+<ul>
+<li>工作流程</li>
+</ul>
+<p>工作流程是指一个文件在PDM系统内的处理流转过程。一个工作流程代表了校对和审批的过程可以通过添加不同的工作流程，以便让工程图纸文件和办公文档文件或者是图片文件自动分开处理。</p>
+<ul>
+<li>库的维护</li>
+</ul>
+<p>库的维护包含许多不同的功能，包括备份服务器、升级软件、优化SQL服务器、调试和更改库。<br>这些方面的维护应该规划为一个纲要并记录和跟踪。</p>
+<!-- 练习 创建文件库和库视图-->
+
+<h1 id="3用户和组"><a href="#3用户和组" class="headerlink" title="3用户和组"></a>3用户和组</h1><h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>通过添加不同权限的用户来控制对库的访问，用户名在每个库里是唯一的，同个用户可以存在于其他库里。</p>
+<p>在新建用户时，我们还可以从已有用户权限处进行复制设置（标记3）。</p>
+<img src="PDM管理员-教程\3用户和组\新建用户.png">
+
+<h2 id="用户属性"><a href="#用户属性" class="headerlink" title="用户属性"></a>用户属性</h2><p>在用户属性里包括了基本的选项、分组、以及各类操作的权限（例如：管理、文件夹、流程等等）</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/IDD_USER_GROUP_GENERAL.htm">详见帮助说明</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">组：您可以将用户添加到现有的 SOLIDWORKS PDM 组。</span><br><span class="line">管理权限：设置权限来控制用户可执行的管理任务。</span><br><span class="line">文件夹权限:查看和分配文件夹权限。</span><br><span class="line">状态权限：给用户分配访问特定状态文件夹的权限。</span><br><span class="line">变换权限：给用户分配运行特定过渡的权限。</span><br><span class="line">每个文件的权限：选择该用户创建的文件对所有用户可见还是对特定组可见。</span><br><span class="line">搜索卡：设置用户访问库搜索卡的权限。</span><br><span class="line">材料明细表：设置用户访问库材料明细表的权限。</span><br><span class="line">任务：设置用户访问任务的权限。</span><br><span class="line">模板：设置用户访问库模板的权限。</span><br><span class="line">警告：指定阻止检入、检出、更改状态和递增修订版本等操作的条件。</span><br><span class="line">设定密码：可以为用户修改并确认新密码。(如忘记密码见问题文章《忘记密码》操作)</span><br><span class="line">发送邮件：打开 SOLIDWORKS PDM 电子邮件编辑器。</span><br><span class="line">设置：可以自定义 SOLIDWORKS PDM 客户端行为。</span><br></pre></td></tr></table></figure>
+
+<img src="PDM管理员-教程\3用户和组\属性界面.png">
+
+<h2 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h2><p>在设置里包括了我们用户使用客户端时的一些内容，具体这部分先不展开讨论。<a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/Admin/c_settings_db.htm?id=2de625b68eb14436bf1850e13bcc1ffe#Pg0">详见帮助说明</a></p>
+<img src="PDM管理员-教程\3用户和组\用户设置.png">
+
+<h2 id="添加组"><a href="#添加组" class="headerlink" title="添加组"></a>添加组</h2><p>添加一个新组</p>
+<img src="PDM管理员-教程\3用户和组\添加组.png">
+
+<h2 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h2><p>组管理里的属性项显示和用户是类似的，会有例如：管理、文件夹、流程等等。重点我们看“组成员”。这里是我们设置该组里的成员对象</p>
+<img src="PDM管理员-教程\3用户和组\组管理.png">
+
+<h2 id="丢失用户登录信息"><a href="#丢失用户登录信息" class="headerlink" title="丢失用户登录信息"></a>丢失用户登录信息</h2><p>如果一个存档文件库内用户的信息无法从存档服务器内正确读出，则在管理工具内用户名称左上方会有一个红色的十字图标。表示该用户在修复相应的错误前将无法登录到文件库，</p>
+<img src="PDM管理员-教程\3用户和组\丢失用户登录信息.png">
+
+<h2 id="Windows或LDAP登录"><a href="#Windows或LDAP登录" class="headerlink" title="Windows或LDAP登录"></a>Windows或LDAP登录</h2><img src="PDM管理员-教程\3用户和组\Windows登录设置.png">
+
+<p>在用Windows登录前，存档服务器的系统登录设置中必须包含已添加为库用户的组，这些组必须加入存档服务器配置工具中的Windows登录设置</p>
+<p>可按以下步骤添加新用户:</p>
+<p>(1)在【管理工具-用户和组】右键单击【用户】，然后选择【新用户】</p>
+<p>(2)在【添加用户】对话框内就不会列出PDM的用户,而是采用Windows登录时所指定的用户。如果需要列出可用用户名称列表，需要单击【列举Windows用户】按钮。（如果用户域比较大，生成用户列表可能需要较长的时间。基于这点考虑，建议通过单击【新用户】手工方式添加用户。）</p>
+<p>(3)在“新用户”对话框内输入一个用户名，然后单击【确定】，则自动从系统用户列表中搜索并添加该用户到所选文件库。</p>
+<img src="PDM管理员-教程\3用户和组\Windows登录.png">
+
+<p>(4)添加用户详细信息。采用 Windows 登录方式，所使用的用户名和密码都无法在此处修改。</p>
+<h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p>特殊的用户账号，其会有一些额外的管理权限（是自带的无法通过权限选项来赋予的），例如：</p>
+<p>1、有权删除用户从其他客户端检出的文件；</p>
+<p>2、有权检入或撤销检出其他用户的检出文件；</p>
+<p>3、访问所有搜索收藏</p>
+<h1 id="4文件夹卡"><a href="#4文件夹卡" class="headerlink" title="4文件夹卡"></a>4文件夹卡</h1><h2 id="数据卡"><a href="#数据卡" class="headerlink" title="数据卡"></a>数据卡</h2><ul>
+<li>模板卡</li>
+<li>搜索卡</li>
+<li>条目卡</li>
+<li>文件夹卡</li>
+<li>文件卡</li>
+</ul>
+<h2 id="卡编辑器"><a href="#卡编辑器" class="headerlink" title="卡编辑器"></a>卡编辑器</h2><p>数据卡类似我们的窗口编辑工具，类似VB或Winform窗口的编辑。我们可以在窗口编辑区域，编辑文本、编辑框、图片等</p>
+<img src="PDM管理员-教程\4文件夹卡\卡编辑器.png">
+
+
+
+<p>卡关联，</p>
+<p>在保存数据卡时，需要留意保存的数据“卡类型”和“扩展名”</p>
+<img src="PDM管理员-教程\4文件夹卡\保存卡.png">
+
+<h2 id="设计数据卡"><a href="#设计数据卡" class="headerlink" title="设计数据卡"></a>设计数据卡</h2><ul>
+<li>控件</li>
+</ul>
+<p>静态文本控件</p>
+<p>图标控件</p>
+<p>框控件</p>
+<ul>
+<li>变量</li>
+</ul>
+<p>自由文本</p>
+<p>特殊值</p>
+<p>编辑变量操作方法</p>
+<p>编辑变量功能</p>
+<p>变量列表</p>
+<p>1变量</p>
+<p>2新变量</p>
+<p>3移除变量</p>
+<p>变量定义</p>
+<p>变量映射</p>
+<p>关于创建数据卡变量的建议</p>
+<p>创建新变量</p>
+<p>编辑框控件</p>
+<p>序列号</p>
+<p>命令按钮控件</p>
+<p>组合框下拉表控件</p>
+<p>组合框下拉式列表控件</p>
+<p>选项卡控件</p>
+<p>卡列表</p>
+<p>动态列表</p>
+<p>高级列表</p>
+<p>复选框控件</p>
+<p>日期栏区控件</p>
+<p>排列控件</p>
+<p>卡网格设置</p>
+<p>选取字体</p>
+<p>输出数据卡</p>
+<p>练习设计一个文件夹数据卡</p>
+<h1 id="5文件卡和搜索卡"><a href="#5文件卡和搜索卡" class="headerlink" title="5文件卡和搜索卡"></a>5文件卡和搜索卡</h1><p>5.1 数据卡</p>
+<p>5.2 学习实例:设计一个文件数据卡</p>
+<p>5.2.1 单选钮控件</p>
+<p>5.2.2 卡控制逻辑</p>
+<p>掩谢卡 .y..s..s…sovtss.rsutis……..t.. 98</p>
+<p>5.3 学习实例:设计一个搜索数据卡 ………..·98</p>
+<p>5.3.1 控制选项卡..*……..。100</p>
+<p>5.3.2 精合控件 …………….+………..。101</p>
+<p>5.3.3 卡搜索控件 ……+…………………. 102</p>
+<p>5.3.4 变最搜索控件 ……………………… 10</p>
+<p>5.3.5 搜索卡默认值 ………………………102</p>
+<p>练习 设计一个文件数据卡 ………………….· 102</p>
+<h1 id="6列和材料明细表"><a href="#6列和材料明细表" class="headerlink" title="6列和材料明细表"></a>6列和材料明细表</h1><p> (BOM)视图···.·104</p>
+<p>6.1 列……..;….t….st..s…..s…..s….. 104</p>
+<p>6.1.1 文件列表列………………………..104</p>
+<p>6.1.2 搜索列·……………………………..106</p>
+<p>6.2 学习实例:创建列 ……………………… 108</p>
+<p>6.3 材料明细表·…………………………….· 109</p>
+<p>6.4 学习实例:创建材料明细表··……………· 112</p>
+<p>练习 创建列视图和材料明细表视图 ………..· 114</p>
+<h1 id="7工作流程"><a href="#7工作流程" class="headerlink" title="7工作流程"></a>7工作流程</h1><p>7.1 工作流程概述 …………………………… 115</p>
+<h2 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h2><p>7.3 学习实例:新建类别 ·……………….·.·· 117</p>
+<p>7.3.1 类别条件 .·…………………………. 117</p>
+<p>7.3.2 无类别匹配 .·.·……………………..122</p>
+<p>7.3.3 重命名类别 ………………………..·123123</p>
+<p>7.3.4 删除类别 ……………………………</p>
+<p>7.3.5 新建流程······.·……···.·.·..·.········124</p>
+<p>7.3.6 保存工作流程 ·····………………….124</p>
+<p>7.3.7 重新安排工作流程布局·.·……………124124</p>
+<p>7.4 学习实例:新建工作流程····…………….·</p>
+<h2 id="工作流程状态"><a href="#工作流程状态" class="headerlink" title="工作流程状态"></a>工作流程状态</h2><h2 id="工作流程变换"><a href="#工作流程变换" class="headerlink" title="工作流程变换"></a>工作流程变换</h2><ul>
+<li>身份验证</li>
+</ul>
+<p>勾选“身份验证后，在做状态变更时会需要你填写用户密码。</p>
+<img src="PDM管理员-教程\工作流程\流程身份验证.png">
+
+<h2 id="修订版"><a href="#修订版" class="headerlink" title="修订版"></a>修订版</h2><p>7.6 学习实例:生成新修订版格式···…………136</p>
+<p>7.7 学习实例:CAD Files 修订版格式···········140</p>
+<h2 id="自动变换"><a href="#自动变换" class="headerlink" title="自动变换"></a>自动变换</h2><h2 id="并行变换"><a href="#并行变换" class="headerlink" title="并行变换"></a>并行变换</h2><p>练习 类别、修订版和工作流程………………146</p>
+<h1 id="8通知与任务"><a href="#8通知与任务" class="headerlink" title="8通知与任务"></a>8通知与任务</h1><h2 id="8-1-通知"><a href="#8-1-通知" class="headerlink" title="8.1 通知"></a>8.1 通知</h2><p>8.2学习实例:设置通知</p>
+<h2 id="8-3·任务"><a href="#8-3·任务" class="headerlink" title="8.3·任务"></a>8.3·任务</h2><p>8.3.1 添加任务到库中</p>
+<p>8.3.2 任务主机配置</p>
+<p>8.4 学习实例:转换任务</p>
+<p>练习通知和任务</p>
+<h1 id="9文件夹模板"><a href="#9文件夹模板" class="headerlink" title="9文件夹模板"></a>9文件夹模板</h1><h2 id="新建模板"><a href="#新建模板" class="headerlink" title="新建模板"></a>新建模板</h2><p>模板管理.</p>
+<p>模板向导</p>
+<p>模板变量</p>
+<p>学习实例:文件夹模板</p>
+<p>练习·文件夹模板</p>
+<h1 id="10文件模板"><a href="#10文件模板" class="headerlink" title="10文件模板"></a>10文件模板</h1><p>10.1”文件模板概述</p>
+<p>10.2”学习实例:文件模板</p>
+<p>10.3 学习实例;ACME Specifications 模板</p>
+<p>10.3.1 模板卡</p>
+<p>10.3.2 更新列表信息</p>
+<p>10.3.3ECO模板</p>
+<p>练习文件模板</p>
+<h1 id="11数据迁移"><a href="#11数据迁移" class="headerlink" title="11数据迁移"></a>11数据迁移</h1><p>11.1 迁移旧数据</p>
+<p>11.1.1 数据迁移计划</p>
+<p>11.1.2 清理数据</p>
+<p>11.1.3迁移对象</p>
+<p>11.2 学习实例:数据迁移</p>
+<p>11.3 迁移修订版</p>
+<h1 id="12库备份"><a href="#12库备份" class="headerlink" title="12库备份"></a>12库备份</h1><p>12.1 数据库备份</p>
+<p>12.2设置存档服务器备份</p>
+<p>12.3存档文件备份</p>
+<p>数据清理</p>
+<p>数据导入</p>
+<p>数据迁移</p>
+<p>项目交接</p>
+<p>附录</p>
+<p>附录A文件类型和设定</p>
+<p>附录B数据输人&#x2F;输出</p>
+<p>附录C Toolbox设置</p>
+<p>附录D Routing设置</p>
+<p>附录E CircuitWorks设置</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

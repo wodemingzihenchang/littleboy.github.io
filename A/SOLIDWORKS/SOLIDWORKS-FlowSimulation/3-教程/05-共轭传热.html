@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="共轭传热"><a href="#共轭传热" class="headerlink" title="共轭传热"></a>共轭传热</h1><p>两种热属性的物理材料之间通过介质或者直接接触，发生的一种耦合换热现象</p>
+<p>热流体分析支持使用计算流体力学 (CFD) 分析共轭热传导（固体中的热传导、流体和固体之间的对流以及辐射），可以轻松研究冷却和设计变更对零部件温度的影响。您可以快速确定设计内部和周围的流体流动的影响，以确保正确的热性能、产品质量和安全。</p>
+<p>使用真实气体创建一个稳态的耦合传热分析</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><img src="05-共轭传热/image-20241017171734084.png">
+
+<img src="05-共轭传热/image-20241017171747895.png">
+
+<img src="05-共轭传热/image-20241017171916633.png">
+
+<img src="05-共轭传热/image-20241017171929855.png">
+
+<img src="05-共轭传热/image-20241017171948291.png">
+
+<img src="05-共轭传热/image-20241017171958714.png">
+
+<img src="05-共轭传热/image-20241017172008289.png">
+
+<h2 id="计算域"><a href="#计算域" class="headerlink" title="计算域"></a>计算域</h2><p>默认计算域太大影响计算性能，调整计算域变小处理</p>
+<img src="05-共轭传热/image-20241017172119504.png">
+
+<h2 id="流体子域"><a href="#流体子域" class="headerlink" title="流体子域"></a>流体子域</h2><p>定义多个流体区域</p>
+<img src="05-共轭传热/image-20241017172239677.png">
+
+<img src="05-共轭传热/image-20241017172538669.png">
+
+<p>使用真实气体</p>
+<img src="05-共轭传热/image-20241017172506869.png">
+
+
+
+<img src="05-共轭传热/image-20241017172643666.png">
+
+
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><img src="05-共轭传热/image-20241017172826292.png">
+
+
+
+<img src="05-共轭传热/image-20241017173002624.png">
+
+
+
+<img src="05-共轭传热/image-20241017173204756.png">
+
+<h2 id="热源"><a href="#热源" class="headerlink" title="热源"></a>热源</h2><img src="05-共轭传热/image-20241017173316938.png">
+
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><img src="05-共轭传热/image-20241017173353735.png">
+
+
+
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>在流体和固体区域生成温度图解</p>
+<p>切面图</p>
+<img src="05-共轭传热/image-20241017173900297.png">
+
+<p>流动轨迹</p>
+<img src="05-共轭传热/image-20241017174257860.png">
+
+
+
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>流热固耦合，更加复杂，除热耦合外，还要求考虑两相的受力、位移&#x2F;形变的平衡。数学上，不仅要考虑两相热方程的一体求解，还需要耦合求解动量方程（包括形变、应力）。</p>
+<p>流热固耦合，更加复杂，除热耦合外，还要求考虑两相的受力、位移&#x2F;形变的平衡。数学上，不仅要考虑两相热方程的一体求解，还需要耦合求解动量方程（包括形变、应力）。</p>
+<p>工业应用中，热耦合和流热固耦合，都是常见的。前者对应可忽略固体结构变形的情况，后者对应必须考虑形变（内部传热导致或者外界因素导致固体变形）的情形。</p>
+<p>总之，前者仅考虑热耦合，后者要综合考虑力&#x2F;位移和热的耦合。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
