@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-03-10 00:21:22</span>
+</div>
+
+<div id="article"><h1 id="CAM-雕刻特征刻字"><a href="#CAM-雕刻特征刻字" class="headerlink" title="CAM-雕刻特征刻字"></a>CAM-雕刻特征刻字</h1><p>SOLIDWORKS CAM是作为SOLIDWORKS的插件加载使用。它能实现设计-加工一体的功能，在设计特征发生修改时，其对应的CAM设置也会进行提示更新。</p>
+<p>选择SW CAM的原因：</p>
+<p>\1.   2.5轴加工简单,手工编程居多</p>
+<p>\2.   2.5轴设备价低,用户不愿意再投入高成本软件</p>
+<p>\3.     批量重复性生产,代码重用性高,编程人员少</p>
+<p>当前SW CAM的不足：</p>
+<p>\1.     主要支撑用于2.5轴；</p>
+<h2 id="打开插件"><a href="#打开插件" class="headerlink" title="打开插件"></a>打开插件</h2><p>勾选启用插件【工具-插件-SOLIDWORKS CAM】，在SOLIDWORKS 插件中，找到SOLIDWORKS CAM 插件，勾选启用。</p>
+<p>（如果是需要自启动，则勾选右侧“启动”选项，下次打开SW软件时，插件即会自动加载）</p>
+<p><img src="/CAM/image-20240311140754551.png" alt="image-20240311140754551"></p>
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><h2 id="草图"><a href="#草图" class="headerlink" title="草图"></a>草图</h2><p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128142653885.png" alt="image-20241128142653885"></p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145249498.png" alt="image-20241128145249498"></p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145342987.png" alt="image-20241128145342987"></p>
+<h2 id="提取加工特征"><a href="#提取加工特征" class="headerlink" title="提取加工特征"></a>提取加工特征</h2><p>SOLIDWORKS CAM使用基于特征的加工方法，因此在创建刀具路径之前要确定需要加工的特征。</p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145411233.png" alt="image-20241128145411233"></p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145458836.png" alt="image-20241128145458836"></p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145541477.png" alt="image-20241128145541477"></p>
+<h2 id="生成操作计划"><a href="#生成操作计划" class="headerlink" title="生成操作计划"></a>生成操作计划</h2><p>（备注：显示操作名称和所选工具，并显示为蓝色，表示它们还没有工具路径。）</p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145556217.png" alt="image-20241128145556217"></p>
+<p>编辑操作</p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145620560.png" alt="image-20241128145620560"></p>
+<p>有些特征需要多次操作才能完成，而工具大小等默认设置，进给量、速度和机器策略由技术数据库控制。这里设置加工深度，让其一次性走刀。</p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145710873.png" alt="image-20241128145710873"></p>
+<h2 id="生成刀具轨迹"><a href="#生成刀具轨迹" class="headerlink" title="生成刀具轨迹"></a>生成刀具轨迹</h2><p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145725483.png" alt="image-20241128145725483"></p>
+<h2 id="模拟刀具轨迹"><a href="#模拟刀具轨迹" class="headerlink" title="模拟刀具轨迹"></a>模拟刀具轨迹</h2><p>一旦创建了工具路径，您可以通过模拟它们来更好地理解它们的加工状态。</p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145743910.png" alt="image-20241128145743910"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>刀具路径开始从图形区域的零件中加工零件</p>
+<p><img src="/%E9%9B%95%E5%88%BB%E7%89%B9%E5%BE%81-%E5%88%BB%E5%AD%97/image-20241128145824961.png" alt="image-20241128145824961"></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

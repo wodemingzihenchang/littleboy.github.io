@@ -50,6 +50,7 @@
 <h2 id="方法：删除异常模板"><a href="#方法：删除异常模板" class="headerlink" title="方法：删除异常模板"></a>方法：删除异常模板</h2><p>1、检查“文件位置”所在路径下的“自定义材质.sldmat”是否正常；<br><br>2、右键.sldmat 文件，用（支持 utf-8 格式）浏览器打开；<br><br>3、删除异常的自定义材质.sldmat 文件即可。<br></p>
 <img src="材质库使用问题/材质库报错0xc00ce557 xml声明无效2.png">
 
+<p>材质库文件可以在如下位置进行查找，文件格式是：.sldmat</p>
 <img src="材质库使用问题/image-20240322154315586.png">
 
 <h1 id="意外元素"><a href="#意外元素" class="headerlink" title="意外元素"></a>意外元素</h1><p>sheetmetalOption 为意外元素：在打开材质库编辑时出现的弹窗。该情况是高低版本的材质库问题，出现在 2019 材质更新的新功能导致 2019 以下的低版本不能使用高版本的材质库.sldmat。</p>
@@ -76,7 +77,9 @@
 <p>在零件工具栏界面【评估】-【质量属性】-【覆盖质量属性】取消勾选覆盖</p>
 <img src="材质库使用问题/image2.jpeg" >
 
-<h1 id="无效字符"><a href="#无效字符" class="headerlink" title="无效字符"></a>无效字符</h1><p><img src="/%E6%9D%90%E8%B4%A8%E5%BA%93%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/image-20240731173203779.png" alt="image-20240731173203779"></p>
+<h1 id="无效字符"><a href="#无效字符" class="headerlink" title="无效字符"></a>无效字符</h1><p>0xc00ce508:文本内容中发现无效字符</p>
+<p><img src="/%E6%9D%90%E8%B4%A8%E5%BA%93%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/image-20240731173203779.png" alt="image-20240731173203779"></p>
+<p>sldmat材质库文件是以xml文件格式进行存储，因此错误的xml格式，会影响文件的准确性。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-02-14 00:34:17</span>
+</div>
+
+<div id="article"><h1 id="IPv4设置"><a href="#IPv4设置" class="headerlink" title="IPv4设置"></a>IPv4设置</h1><p>计算机网络知识</p>
+<img src="IPv4设置/image-20241121120639392.png">
+
+
+
+<p>IP</p>
+<p>网关</p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="DNS-服务器"><a href="#DNS-服务器" class="headerlink" title="DNS 服务器"></a>DNS 服务器</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39847278/article/details/127596172">https://blog.csdn.net/qq_39847278/article/details/127596172</a></p>
+<p>hosts文件是一个用于储存计算机网络中各节点信息的计算机文件；host文件所在位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32\drivers\etc</span><br></pre></td></tr></table></figure>
+
+<p>作用是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址。</p>
+<img src="计算机网络知识/host执行过程.png">
+
+<p>原理：</p>
+<p>1、首先需要明白hosts优先级高于dns域名解析服务器，在hosts文件中把<a target="_blank" rel="noopener" href="http://www.baidu.com解析为127.0.0.1,那么浏览器实际访问的是127.0.0.1这个本地地址,并非百度域名对应的ip地址.所以网址是打不开的./">www.baidu.com解析为127.0.0.1,那么浏览器实际访问的是127.0.0.1这个本地地址，并非百度域名对应的IP地址。所以网址是打不开的。</a></p>
+<p>2、比如说有的网站服务器换IP了，但是运营商dns那边还没有相关信息，那么你是无法访问网站的。比方<a href="http://www.123.com把IP地址换成了111.111.111.111。我们该如何修改呢？在hosts文件中填写111.111.111.111">www.123.com把IP地址换成了111.111.111.111。我们该如何修改呢？在hosts文件中填写111.111.111.111</a> <a href="http://www.123.com那么就可以正常访问了。如果它的IP好记，当然你也可以在浏览器中输入111.111.111.111或者111.111.111.111:端口">www.123.com那么就可以正常访问了。如果它的IP好记，当然你也可以在浏览器中输入111.111.111.111或者111.111.111.111:端口</a></p>
+<p>3、有些网站有好多服务器分布在不同的地方，不同的地方IP地址也不一样，但是用的是同一个域名。比如<a target="_blank" rel="noopener" href="http://www.123.com有两个ip地址,一个在北京ip地址是1.2.3.4,/">www.123.com有两个IP地址，一个在北京IP地址是1.2.3.4，</a> 一个在河南，IP地址是245.63.2.8。如果你在河南这边， 我们可以通过hosts修改来让我们访问<a href="http://www.123.com时锁定在河南服务器。你可以在hosts中写入245.63.2.8">www.123.com时锁定在河南服务器。你可以在hosts中写入245.63.2.8</a> <a target="_blank" rel="noopener" href="http://www.123.com/">www.123.com</a></p>
+<p>使用：应用场景</p>
+<p>1、加快域名解析</p>
+<p>对于要经常访问的网站，我们可以通过在Hosts中配置域名和IP的映射关系，这样当我们输入域名计算机就能很快解析出IP，而不用请求网络上的DNS服务器。</p>
+<p>2、方便局域网用户</p>
+<p>在很多单位的局域网中，会有服务器提供给用户使用。但由于局域网中一般很少架设DNS服务器，访问这些服务要输入IP地址，相当麻烦。在hosts中配置服务器名称 与 IP映射，这样以后访问的时候我们输入这个服务器的名字。</p>
+<p>3、屏蔽网站</p>
+<p>将一些经常弹广告或垃圾网站，利用hosts把该网站的域名映射到错误的IP或自己计算机的IP即可，我们在Hosts写上以下内容：<br>127.0.0.1 屏蔽的网站域名 或 0.0.0.0 屏蔽的网站域名</p>
+<p>4、顺利连接系统</p>
+<p>对于Lotus的服务器和一些数据库服务器，在访问时如果直接输入IP地址那是不能访问的，只能输入服务器名才能访问。那么我们配置好hosts文件，输入服务器名就能顺利连接了。<br>最后：注意如果实际的IP有变动，也需要手动修改hosts配置</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

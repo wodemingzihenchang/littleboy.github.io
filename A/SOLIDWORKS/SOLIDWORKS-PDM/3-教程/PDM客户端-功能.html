@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2023-10-18 14:58:26</span>
+</div>
+
+<div id="article"><h1 id="PDM客户端-功能"><a href="#PDM客户端-功能" class="headerlink" title="PDM客户端-功能"></a>PDM客户端-功能</h1><span id="more"></span>
+
+<h2 id="客户端界面"><a href="#客户端界面" class="headerlink" title="客户端界面"></a>客户端界面</h2><img src="PDM客户端-功能\客户端界面.png">
+
+<h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><p>在用户里，可以进行注销登出操作，也能查看PDM关于以及帮助手册。</p>
+<p><img src="/PDM%E5%AE%A2%E6%88%B7%E7%AB%AF-%E5%8A%9F%E8%83%BD/image-20241206143315866.png" alt="image-20241206143315866"></p>
+<h1 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h1><img src="PDM客户端-功能\菜单栏.png">
+
+
+
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>操作-检入</p>
+<p>对于&lt;私有状态&gt;文件，其他电脑是看不到的，你需要进行【操作-检入】，将私有文件，上传到PDM数据库中，此时文件才算正式入库。</p>
+<p><img src="/PDM%E5%AE%A2%E6%88%B7%E7%AB%AF-%E6%95%99%E7%A8%8B/clip_image002-17286385220512.jpg" alt="img"></p>
+<img src="PDM客户端-教程\检入.png">
+
+<p>操作-检出</p>
+<p>因为&lt;检入状态&gt;的文件是在库中只读的文件，如需对库中文件进行编辑，则需要进行【操作-检出】处理。</p>
+<img src="PDM客户端-教程\检出.png">
+
+<p>操作-查看版本</p>
+<p>在检出检入过程中，文件会进行过程版本的记录控制，我们也能在【操作-获取版本】这里，查看到修改的历史版本文件，以及对应修改的评论说明</p>
+<img src="PDM客户端-教程\版本.png">
+
+<ul>
+<li><h3 id="条目"><a href="#条目" class="headerlink" title="条目"></a>条目</h3></li>
+</ul>
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><ul>
+<li>设置参考引用</li>
+</ul>
+<pre class="mermaid">graph LR
+子文件复制-->检出父文件-->粘贴为参考引用-->检入父文件</pre>
+<img src="PDM客户端-教程\设置参考引用.png">
+
+<ul>
+<li>解除参考引用</li>
+</ul>
+<pre class="mermaid">graph LR
+检出父文件-->编辑参考-->取消勾选参考-->检入父零件</pre>
+<img src="PDM客户端-教程\解除参考引用.png">
+
+<h2 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h2><p>【历史记载】</p>
+<img src="PDM客户端-教程\工具栏\历史记载.png">
+
+<p>【属性】-已删除项（回收站）</p>
+<p>您可在文件夹的属性对话框中查看删除的文件列表。如果您具有正确的用户权限，您可恢复或销毁文件夹和列表中的文件。</p>
+<img src="PDM客户端-教程\工具栏\已删除项.png">
+
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>【分支&amp;合并】</p>
+<p>【复制树】</p>
+<p>具备权限的用户可以对带参考引用的文件进行【复制树&#x2F;移动树】。类似于SOLIDWORKS的打包。</p>
+<img src="PDM客户端-教程\工具栏\复制树.png">
+
+<p>【移动树】</p>
+<img src="PDM客户端-教程\工具栏\移动树.png">
+
+<!-- 如果直接使用Ctrl+X剪切文件，再其他文件夹位置Ctrl+V复制文件，这操作对于装配体的零部件来说，会影响装配体零部件的参考位置（会造成丢失的情况）。因此利用【移动树】工具可以确保文件关联的情况下，去移动我们的数据文件。-->
+
+
+
+<p>【更新参考引用】</p>
+<p>【脱机工作】</p>
+<p>图片是点了“脱机工作”后的界面。文件夹图标显示蓝色，并且PDM联机工具会受限（例如：检入检出等操作将不可用），</p>
+<img src="PDM客户端-教程\文件夹图标\文件夹图标-脱机.png">
+
+<p>【通知】</p>
+<p>默认是PDM的信息通知</p>
+<p>当用户需要知道文档变化状态的时候自动通知自己，可以使用设置通知的功能。</p>
+<img src="PDM客户端-教程\工具栏\通知.png">
+
+
+
+
+
+<h2 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h2><p>自定义工具栏</p>
+<h1 id="文件列表"><a href="#文件列表" class="headerlink" title="文件列表"></a>文件列表</h1><h2 id="属性列表"><a href="#属性列表" class="headerlink" title="属性列表"></a>属性列表</h2><p><img src="/PDM%E5%AE%A2%E6%88%B7%E7%AB%AF-%E5%8A%9F%E8%83%BD/image-20241206141651242.png" alt="image-20241206141651242"></p>
+<h2 id="文件夹图标"><a href="#文件夹图标" class="headerlink" title="文件夹图标"></a>文件夹图标</h2><p>SOLIDWORKS® PDM 中的文件夹颜色含义如下：</p>
+<img src="PDM客户端-教程\文件夹图标\文件夹图标.png">
+
+<p>绿色 - 联机，文件夹在文件库中，可以访问文件库中数据</p>
+<img src="PDM客户端-教程\文件夹图标\文件夹图标-联机.png">
+
+<p>蓝色 - 脱机，文件夹在文件库中，但是当前用户处于脱机模式</p>
+<img src="PDM客户端-教程\文件夹图标\文件夹图标-脱机.png">
+
+<p>灰色 - 本地文件夹，在本地文件库视图中，但不在文件库数据库中。可能是尚未添加到库的文件夹，或是已从库中删除的文件夹的旧缓存副本。或是当前登录的用户没有查看特定文件夹的库访问权限。<!-- 黄色 - 本地文件夹，不在文件库中。 --></p>
+<img src="PDM客户端-教程\文件夹图标\添加到文件库.png">
+
+<h1 id="预览窗口"><a href="#预览窗口" class="headerlink" title="预览窗口"></a>预览窗口</h1><h2 id="预览标签"><a href="#预览标签" class="headerlink" title="预览标签"></a>预览标签</h2><img src="PDM客户端-教程\预览标签显示.png">
+
+<h2 id="数据卡"><a href="#数据卡" class="headerlink" title="数据卡"></a>数据卡</h2><p>在选择文件后，【预览窗口-数据卡】会显示该文件的属性，方便查看和修改(修改需要检出文件后才行)</p>
+<img src="PDM客户端-教程/image-20240905175004281.png">
+
+
+
+<h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><h2 id="材料明细表"><a href="#材料明细表" class="headerlink" title="材料明细表"></a>材料明细表</h2><h2 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h2><p>文件参考：（SW装配体和零部件的参考默认是生效的，对于其他的文件我们需要手动进行【修改-复制链接-粘贴为参考引用】）</p>
+<h2 id="使用处"><a href="#使用处" class="headerlink" title="使用处"></a>使用处</h2><h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h2 id="文件名搜索"><a href="#文件名搜索" class="headerlink" title="文件名搜索"></a>文件名搜索</h2><p>嵌入式的搜索</p>
+<p>搜索工具</p>
+<p>模糊搜索</p>
+<h2 id="属性搜索"><a href="#属性搜索" class="headerlink" title="属性搜索"></a>属性搜索</h2><p>多条件搜索</p>
+<p>结果输出</p>
+<p>收藏搜索</p>
+<p>参考：[SOLIDWORKS PDM快速搜索工具 - 知乎 (zhihu.com)](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/512512933#:~:text=%E8%A6%81%E8%AE%BF%E9%97%AE%E2%80%9C%E5%BF%AB%E9%80%9F%E6%90%9C%E7%B4%A2%E5%8F%98%E9%87%8F%E5%88%97%E8%A1%A8%E2%80%9D%EF%BC%8C%E8%AF%B7%E6%89%93%E5%BC%80">https://zhuanlan.zhihu.com/p/512512933#:~:text=要访问“快速搜索变量列表”，请打开</a> PDM 管理工具，然后展开“列表”，右键单击“快速搜索变量列表”并选择“新建列表” 在新列表中，您可以将其自定义为最多,5 个您想要的附加变量，在我的示例中，我使用这 5 个附加变量并将它们分配给我在PDM库中可用的用户。)</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

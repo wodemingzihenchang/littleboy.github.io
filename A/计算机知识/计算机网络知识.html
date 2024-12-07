@@ -43,15 +43,18 @@
 </div>
 
 <div id="article"><h1 id="计算机网络知识"><a href="#计算机网络知识" class="headerlink" title="计算机网络知识"></a>计算机网络知识</h1><p>计算机网络知识</p>
-<h1 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h1><p><img src="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/image-20240218154307664.png" alt="image-20240218154307664"></p>
+<h1 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h1><img src="计算机网络知识/image-20240218154307664.png">
+
 <p>设备：</p>
 <h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><p>最开始的连接模型</p>
-<p><img src="https://pic2.zhimg.com/80/v2-5299c37deaa95cdeb1b2a36cfb41da85_720w.webp" alt="img"></p>
+<img src="https://pic2.zhimg.com/80/v2-5299c37deaa95cdeb1b2a36cfb41da85_720w.webp">
+
 <p>集线器（Hub）</p>
 <p>随着越来越多的人加入，你发现身上开的网口实在太多了，而且网线密密麻麻，混乱不堪。（而实际上一台电脑根本开不了这么多网口。</p>
 <p>于是你们发明了一个中间设备，你们将网线都插到这个设备上，由这个设备做转发，就可以彼此之间通信了，本质上和原来一样，只不过网口的数量和网线的数量减少了，不再那么混乱。</p>
 <p>你给它取名叫集线器，它仅仅是无脑将电信号转发到所有出口（<strong>广播</strong>），不做任何处理，你觉得它是没有智商的，因此把人家定性在了物理层。</p>
-<p><img src="https://pic4.zhimg.com/80/v2-5361f611cc34bc80dd29af798dd20a53_720w.webp" alt="img"></p>
+<img src="https://pic4.zhimg.com/80/v2-5361f611cc34bc80dd29af798dd20a53_720w.webp">
+
 <p>广播和标识：</p>
 <p>由于转发到了所有出口，那 BCDE 四台机器怎么知道数据包是不是发给自己的呢？</p>
 <p>首先，你要给所有的连接到交换机的设备，都起个名字。原来你们叫 ABCD，但现在需要一个更专业的，全局唯一的名字作为标识，你把这个更高端的名字称为 MAC 地址。</p>
@@ -65,14 +68,16 @@
 <p>当然最开始的时候，MAC 地址表是空的，是怎么逐步建立起来的呢？</p>
 <p>假如在 MAC 地址表为空是，你给 B 发送了如下数据</p>
 <p><strong>桥接：</strong></p>
-<p><img src="https://pic2.zhimg.com/80/v2-b90c555938c01a6eaa804f53cb353e91_720w.webp" alt="img"></p>
+<img src="https://pic2.zhimg.com/80/v2-b90c555938c01a6eaa804f53cb353e91_720w.webp">
+
 <h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2><p>交换机已经无法记录如此庞大的映射关系了。</p>
 <p>此时你动了歪脑筋，你发现了问题的根本在于，连出去的那根红色的网线，后面不知道有多少个设备不断地连接进来，从而使得地址表越来越大。</p>
 <p>那我可不可以让那根红色的网线，接入一个<strong>新的设备</strong>，这个设备就跟电脑一样有自己独立的 MAC 地址，而且同时还能帮我把数据包做一次<strong>转发</strong>呢？</p>
 <p>这个设备就是<strong>路由器，</strong>它的功能就是，作为一台独立的拥有 MAC 地址的设备，并且可以帮我把数据包做一次转发<strong>，</strong>你把它定在了<strong>网络层。</strong></p>
 <p>NAT:网络地址转换技术，可以将大量私网地址，转换成1个公网地址。从而实现很多内部用户共用1个公网地址来访问Internet，起到节省IP地址的作用</p>
 <h3 id="路由器（网关）"><a href="#路由器（网关）" class="headerlink" title="路由器（网关）"></a>路由器（网关）</h3><p>网关是一种网络硬件设备或网络节点，旨在将两个不同的网络连接在一起，允许用户跨多个网络进行通信</p>
-<p><img src="https://pic3.zhimg.com/80/v2-ca73c6f897955e8da250dc331e8bed76_720w.webp" alt="img"></p>
+<img src="https://pic3.zhimg.com/80/v2-ca73c6f897955e8da250dc331e8bed76_720w.webp">
+
 <p>路由器用来连接不同的网络，通过路由协议（路由表）保证互联互通，确保将报文转发到目的地；</p>
 <p>现在 A 要给 C 发数据包，已经可以成功发到路由器这里了，最后一个问题就是，<strong>路由器怎么知道，收到的这个数据包，该从自己的哪个端口出去</strong>，才能直接（或间接）地最终到达目的地 C 呢。</p>
 <p>路由器收到的数据包有目的 IP 也就是 C 的 IP 地址，需要转化成从自己的哪个端口出去，很容易想到，应该有个表，就像 MAC 地址表一样。</p>

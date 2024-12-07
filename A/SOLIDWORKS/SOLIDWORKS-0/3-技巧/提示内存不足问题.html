@@ -52,7 +52,7 @@
 <p>“内存使用”：是系统提供或预留给 SOLIDWORKS以及任何其他运行在计算机上的进程的内存量。操作系统会建立”内存使用”的限制，即物理随机存储器(RAM) 的内存加上您的虚拟内存（分页内存）大小。（例如：计算机有 32 GB 的RAM，虚拟内存（分页内存）大小是 8 GB，那么”内存使用”限制为 40 GB）</p>
 <p>Windows资源包括：</p>
 <p>▪ 物理内存——系统中RAM的数量。<br>▪ 虚拟内存——Windows 为作为内存使用的一部分硬盘空间。<br>▪ 桌面堆——为用户对象(如窗口、菜单、游标、图标和菜单键盘快捷方式)保留的操作系统内存<br>▪ GDI对象——支持字体、位图、笔刷、钢笔和绘图表面等图形的资源</p>
-<h2 id="方法1：设置虚拟内存"><a href="#方法1：设置虚拟内存" class="headerlink" title="方法1：设置虚拟内存"></a>方法1：设置虚拟内存</h2><p>验证分页文件大小配置。建议使用”系统自动分配大小”。要验证您的分页文件大小，请执行以下步骤：</p>
+<h2 id="方法1虚拟内存"><a href="#方法1虚拟内存" class="headerlink" title="方法1虚拟内存"></a>方法1虚拟内存</h2><p>验证分页文件大小配置。建议使用”系统自动分配大小”。要验证您的分页文件大小，请执行以下步骤：</p>
 <p>1.转至”控制面板”&gt;“系统”。单击”高级系统设置”。</p>
 <img src="提示内存不足问题/image2.png">
 
@@ -66,7 +66,7 @@
 <img src="提示内存不足问题/image5.png">
 
 <p>通过分页文件确保操作系统和其他进程有更多的可用内存。例如，如果您没有分页文件，那么操作系统就不得不将物理内存提供给运行的进程。在您的计算机上可能有一个需要<br>2 GB 内存的进程，但仅使用了 500 MB。这意味着操作系统要强制预留 2 GB<br>的物理内存，不得由其他进程使用，而其中有 1.5 GB 物理内存未被激活使用。</p>
-<h2 id="方法2：排除消耗内存最多进程"><a href="#方法2：排除消耗内存最多进程" class="headerlink" title="方法2：排除消耗内存最多进程"></a>方法2：排除消耗内存最多进程</h2><p>1.按下 Ctrl + Alt + Delete 并启动 Windows®”任务管理器”。</p>
+<h2 id="方法2排除消耗内存最多进程"><a href="#方法2排除消耗内存最多进程" class="headerlink" title="方法2排除消耗内存最多进程"></a>方法2排除消耗内存最多进程</h2><p>1.按下 Ctrl + Alt + Delete 并启动 Windows®”任务管理器”。</p>
 <p>2.单击”性能”选项卡，然后单击”打开资源监视器”。</p>
 <img src="提示内存不足问题/image6.png">
 
@@ -79,18 +79,26 @@
 <p>如果进程是基本进程，则调查其占用太多提交内存的原因。</p>
 <p>如果进程不是 SOLIDWORKS进程，且您需要进一步协助，请咨询开发此进程的公司的支持团队。</p>
 <p>如果您需要计算机上运行的所有进程，并且确定所有进程均按预期运行，那么您可能需要为您的计算机安装更多的物理内存。</p>
-<h2 id="方法3：使用Speedpak"><a href="#方法3：使用Speedpak" class="headerlink" title="方法3：使用Speedpak"></a>方法3：使用Speedpak</h2><p>本次测试数据：6000+零部件（独立零件 1500 个），总装文件大小：95.4MB。全部文件大小：1.07GB。单纯还原打开需要7.8GB，全部部件Speedpak，如图的内存占用从 9GB 减少至 2GB，大大减少内存的占用。</p>
+<h2 id="方法3使用Speedpak"><a href="#方法3使用Speedpak" class="headerlink" title="方法3使用Speedpak"></a>方法3使用Speedpak</h2><p>本次测试数据：6000+零部件（独立零件 1500 个），总装文件大小：95.4MB。全部文件大小：1.07GB。单纯还原打开需要7.8GB，全部部件Speedpak，如图的内存占用从 9GB 减少至 2GB，大大减少内存的占用。</p>
 <p>关于 Speedpak 的使用方法，可以往期文章或视频。</p>
 <img src="提示内存不足问题/image10.png">
 
 <h2 id="方法4关闭提示"><a href="#方法4关闭提示" class="headerlink" title="方法4关闭提示"></a>方法4关闭提示</h2><p>如果一切都正常，那可以关闭 SOLIDWORKS Resource Monitor 的所有通知</p>
 <img src="提示内存不足问题/image-20240513115730933-17155726512911.png">
 
+<h2 id="方法5GDI设置"><a href="#方法5GDI设置" class="headerlink" title="方法5GDI设置"></a>方法5GDI设置</h2><p>通常情况下，用户看到该错误时，并不是RAM不足的原因（特别是有用户已经将内存加到了16GB或者32GB），而是GDI对象或用户对象达到了极限。我们可以通过修改注册表来解决这个问题。</p>
+<p>浏览到如下位置，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows</span><br></pre></td></tr></table></figure>
 
-
+<p>设置以下的值：</p>
+<p>a) GDIProcessHandleQuota ：256 ~ 65536，默认值为10000（十进制）可适当增加数值；</p>
+<p>b) USERProcessHandleQuota ：200 ~ 18000，默认值为10000（十进制）可适当增加数值。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个错误信息不一定真的是客户的实际物理内存完全不够了，出现内存耗尽的可能原因常见的有：</p>
 <h2 id="内存耗尽"><a href="#内存耗尽" class="headerlink" title="内存耗尽"></a>内存耗尽</h2><p>内存耗尽</p>
 <img src="提示内存不足问题/image-20240812120902006.png">
+
+<p>情况1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">错误模块名称: windows.storage.dll，版本: 10.0.19041.4412，时间戳: 0x7a515b73</span><br><span class="line">错误应用程序路径: D:\PROGRA~1\SOLIDW~1\SOLIDW~1\SLDWORKS.exe</span><br><span class="line">错误模块路径: C:\Windows\SYSTEM32\windows.storage.dll</span><br><span class="line"></span><br><span class="line">这里的windows.storage.dll看似是跟系统特别是存储相关的，您可以首先尝试一下重命名SolidWorks注册表：(HKEY_CURRENT_USER\Software\Solidworks)</span><br><span class="line"></span><br><span class="line">如果这个方法不起作用的话，再尝试按以下微软官方推荐方法修复Windows系统：</span><br><span class="line">在管理员命令提示符下键入以下命令：sfc /SCANNOW及</span><br><span class="line">Dism /Online /Cleanup-Image /ScanHealth</span><br><span class="line">这条命令将扫描全部系统文件并和官方系统文件对比，扫描计算机中的不一致情况。</span><br><span class="line">Dism /Online /Cleanup-Image /CheckHealth</span><br><span class="line">这条命令必须在前一条命令执行完以后，发现系统文件有损坏时使用。</span><br><span class="line">DISM /Online /Cleanup-image /RestoreHealth</span><br><span class="line">这条命令是把那些不同的系统文件还原成官方系统源文件。</span><br><span class="line">完成后重启，再键入以下命令：sfc /SCANNOW，</span><br><span class="line">检查系统文件是否被修复。</span><br><span class="line">以上命令可以直接复制到命令提示符中运行。</span><br></pre></td></tr></table></figure>
 
 <h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>客户硬件确实有问题。例如出现了内存泄漏。</p>
 <h2 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h2><p>客户设备上可用内存空间有限，在开启一些大型装配体或者文件，或者使用相对需要占用较多内存的命令，例如进行仿真分析等，出现内存耗尽，请和客户确认，是否他们仅在开启文件的时候出现内存耗尽的错误。</p>

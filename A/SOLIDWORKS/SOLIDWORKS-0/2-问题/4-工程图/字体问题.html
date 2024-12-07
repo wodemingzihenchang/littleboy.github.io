@@ -62,11 +62,14 @@
 <p>Ｑ：已知SPR1214251：[系统 Win10 20H2:TTF type Chinese font scale mapping is notworking when there is a setting in ttfontratiomap.txt。系统 Win10 20H2当ttfontratiomap.txt中有设置时，type Chinese字体比例映射不工作。</p>
 <p>A：绕行办法:即将ttfontratiomap.txt文件备份到其它位置，添加要导出字体的调整比例如”汉仪长仿宋体;0.88”，再另存txt文件为ANSI编码格式。将ttfontratiomap.txt文件放回原位置，</p>
 <h1 id="字体导出PDF问题"><a href="#字体导出PDF问题" class="headerlink" title="字体导出PDF问题"></a>字体导出PDF问题</h1><p>使用Arial字体做PDF导出时，PDF文件出现乱码。</p>
+<img src="字体问题/image-20241118152129097.png" >
+
 <p>A1：Arial 在使用中文字体的兼容性比较差。可以安装Arial UNIcode或Arial UNIcode MS</p>
 <p>通过网盘分享的文件：arial unicode ms.ttf<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1MdTtYRP-EP7uFNBx33L7jg?pwd=3cw8">https://pan.baidu.com/s/1MdTtYRP-EP7uFNBx33L7jg?pwd=3cw8</a> 提取码: 3cw8</p>
 <p>A2：可以尝试用打印方式，选择“Microsoft To PDF的打印机打印。</p>
 <p>A3：在【系统选项-导出-PDF】默认设置是勾选“嵌入字体”选项的。如果出现乱码的问题，请检查该选项是否取消勾选了。</p>
-<p><img src="http://www.sipworks.com.cn/upload/202104/06/202104061146590826.png" alt="img"></p>
+<img src="http://www.sipworks.com.cn/upload/202104/06/202104061146590826.png" >
+
 <h1 id="字体导出eDrawing问题"><a href="#字体导出eDrawing问题" class="headerlink" title="字体导出eDrawing问题"></a>字体导出eDrawing问题</h1><p>工程图常用中文字体注释用eDrawings打开时字体显示异常</p>
 <p>A：确认字体兼容问题来处理。eDrawings一系列的常用中文字体问题已经由研发确认为是eDrawings API对非英文字符支持有限导致</p>
 <h1 id="工程图字体模糊"><a href="#工程图字体模糊" class="headerlink" title="工程图字体模糊"></a>工程图字体模糊</h1><p>在低版本工程图转高版本文字显示模糊</p>

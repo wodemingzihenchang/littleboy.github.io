@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>CFD 仿真流体（液体或气体）穿过或绕过物体。分析可能非常复杂。例如，一种计算可能包含传热流、混合流、不稳定流和可压缩流。不使用某种仿真工具预测此类流对产品性能的影响可能非常耗时和代价高昂。</p>
+<h2 id="打开插件"><a href="#打开插件" class="headerlink" title="打开插件"></a>打开插件</h2><p>在菜单栏【工具-插件】找到SOLIDWORKS Flow Simulation插件，勾选启用该功能。</p>
+<img src="01-创建分析项目/image-20241015142800644.png">
+
+<h2 id="操作界面"><a href="#操作界面" class="headerlink" title="操作界面"></a>操作界面</h2><p>熟悉Flow simulation的操作界面</p>
+<img src="01-创建分析项目/image-20241015142720645.png">
+
+<h1 id="创建流体分析项目"><a href="#创建流体分析项目" class="headerlink" title="创建流体分析项目"></a>创建流体分析项目</h1><p>本章将学习如何使用向导来创建一个 SOLIDWORKS Flow Simulation 项目。 在设置项目之前， 需要先学习如何正确准备用于分析的模型。 之后将运算这个仿真项目并学习如何解释计算所得结果。</p>
+<h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><p>空气以 0. 05m³ &#x2F; s 的流量流入进气歧管装置的入口， 并从 6 个开口中流出， 如图 1-1 所示。 进气歧管设计的根本目标是将活塞头附近的燃料混合得更加均匀。 这能确保得到最佳的发动机效率。</p>
+<img src="01-创建分析项目/流动轨迹.gif">
+
+<h2 id="检查模型"><a href="#检查模型" class="headerlink" title="检查模型"></a>检查模型</h2><p>流体分析类型：内部分析&#x2F;外部分析</p>
+<p>通过检查可判断模型是否具备流体仿真的条件：内部分析要求要是一个密闭的空间，现在的结果是：失败，不满足内部流体分析的前提</p>
+<img src="01-创建分析项目/image-20241015143100564.png">
+
+<p>如果开口较多且不清楚是否开口位置，可以在检查失败后的【泄露跟踪】里，进行软件检查</p>
+<img src="01-创建分析项目/image-20241015144646721.png">
+
+<img src="01-创建分析项目/image-20241015144921756.png">
+
+<img src="01-创建分析项目/image-20241015145159068.png">
+
+<h2 id="创建端盖"><a href="#创建端盖" class="headerlink" title="创建端盖"></a>创建端盖</h2><p>在空腔开口处，我们需要进行【创建端盖】进行密封处理</p>
+<img src="01-创建分析项目/image-20241015143448214.png">
+
+<img src="01-创建分析项目/image-20241015143607205.png">
+
+<p>再次检查流体内部空腔的可行性：此时就是成功，并有密闭空腔的体积显示</p>
+<img src="01-创建分析项目/image-20241015143922227.png">
+
+<p>显示流体区域：</p>
+<img src="01-创建分析项目/image-20241015144106216.png">
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
+<img src="01-创建分析项目/向导-创建项目.png">
+
+<p>项目名称</p>
+<img src="01-创建分析项目/向导-项目名称.png">
+
+<p>单位系统</p>
+<img src="01-创建分析项目/向导-单位系统.png">
+
+<p>分析类型</p>
+<img src="01-创建分析项目/向导-分析类型.png">
+
+<p>默认流体类型</p>
+<img src="01-创建分析项目/向导-默认流体.png">
+
+<img src="01-创建分析项目/向导-默认流体2.png">
+
+<p>壁面条件</p>
+<img src="01-创建分析项目/向导-壁面条件.png">
+
+<p>初始条件</p>
+<p>对这个分析来说，我们可以按默认定义进行</p>
+<img src="01-创建分析项目/向导-初始条件.png">
+
+<img src="01-创建分析项目/image-20241015150342172.png">
+
+
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>边界条件的出入口面需要和流体空间接触的内面。用剖切面<br>把内表面显示出来，方便选取</p>
+<img src="01-创建分析项目/image-20241015150927559.png">
+
+<p>加载出口边界条件</p>
+<img src="01-创建分析项目/image-20241015150528448.png">
+
+<p>作为开口位置，我们不对其进行流体输入输出的人为控制，所以可以按环境压力来决定其状态。（和大气压保持一致即可）</p>
+<img src="01-创建分析项目/image-20241015151253914.png">
+
+<p>加载入口边界条件</p>
+<img src="01-创建分析项目/image-20241015150528448-17289761575701.png">
+
+<img src="01-创建分析项目/image-20241015151836494.png">
+
+
+
+<h2 id="添加目标"><a href="#添加目标" class="headerlink" title="添加目标"></a>添加目标</h2><p>我们想知道表面流出的流速情况，可以选择【插入表面目标】</p>
+<img src="01-创建分析项目/image-20241015153003569.png">
+
+<img src="01-创建分析项目/image-20241015153458840.png">
+
+<p>点击边界添加的对象，也是能将其选择到【目标】选择中的。</p>
+<img src="01-创建分析项目/image-20241015153532530.png">
+
+<p>插入方程目标</p>
+<p>另外，我们也考虑将6个出口的体积流量进行方程式的求和，来验证入口的流量是否会等于【方程目标】求和6个出口的流量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;SG体积流量1&#125;*&#123;SG体积流量2&#125;*&#123;SG体积流量3&#125;*&#123;SG体积流量4&#125;*&#123;SG体积流量5&#125;*&#123;SG体积流量6&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<img src="01-创建分析项目/image-20241015153843915.png">
+
+<img src="01-创建分析项目/image-20241015153914940.png">
+
+<h2 id="运行计算"><a href="#运行计算" class="headerlink" title="运行计算"></a>运行计算</h2><p>运行一个分析查看结果</p>
+<img src="01-创建分析项目/image-20241015153950347.png">
+
+<img src="01-创建分析项目/image-20241015154007912.png">
+
+
+
+<h2 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h2><p>切面图</p>
+<img src="01-创建分析项目/image-20241015161124380.png">
+
+<p>表面图： 和切面类似，只是这个是曲面的表面，上面是切面的平面</p>
+<img src="01-创建分析项目/image-20241015161431949.png">
+
+
+
+<p>等值面：查看在某个目标条件下，显示达到要求的值的面区域</p>
+<img src="01-创建分析项目/image-20241015161646063.png">
+
+<p>流动迹线</p>
+<img src="01-创建分析项目/image-20241015161930684.png">
+
+<img src="01-创建分析项目/流动轨迹.gif">
+
+<p>粒子研究</p>
+<p>点参数</p>
+<p>表面参数</p>
+<p>体积参数</p>
+<p>XY 图</p>
+<img src="01-创建分析项目/image-20241015163248784.png">
+
+<p>目标图：相比流动轨迹图，会从数值上提供一种参考，从中我们也能看到在流量1出口的流量最小</p>
+<img src="01-创建分析项目/image-20241015162702886.png">
+
+
+
+<p>报告</p>
+<p>动画</p>
+<p>导出结果</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

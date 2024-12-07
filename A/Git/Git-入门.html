@@ -140,12 +140,25 @@ develop-->Feature</pre>
 <h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>分支，但是是没有切换到新建的分支的，需要checkout检出</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
 
-<p>切换分支</p>
+<h2 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h2><p>然后本地是否变化？似乎不能</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
 
 <img src="Git-入门/image-20240518114935199.png">
 
 <p>文件夹内容显示和分支的关系（图）</p>
+<p>问题：</p>
+<p>当我们正常使用Git切换分支时，会出现以下提示（请在切换分支之前提交您的更改或隐藏它们）Please commit your changes or stash them before you switch branches.</p>
+<p>方法</p>
+<p>解决方案：</p>
+<ol>
+<li><p>因为当前的分支dev 最初也是从master 分支上衍生出来的。而此时你要再从该分支上切换到其主分支。那么你需要先把该dev分支上的改动提交后才能切换，但是该dev分支上还没有完成全部的修改，你不想提交。那么此时你就要选择 stash (存放)它们（你在当前分支上改动的却没有提交commit的内容）。<br>所以第一步，在当前分支上执行 git stash 命令。将当前分支存起来，id为 807be186826</p>
+</li>
+<li><p>这时候再执行 git status 命令，显示没有东西需要提交，接着就可以在主分支master上创建并切换到新的分支去修复另一个Bug了。</p>
+</li>
+<li><p>那修改完那个Bug也提交后，就该回到dev 分支上去继续修改那个未完成的Bug。<br>执行 git checkout dev 切换到 dev 分支，这个时候执行 git status 命令仍旧显示没有东西需要提交。毕竟我们前边已经成功将dev上未提交的改动给“隐藏“了，这时，用 $ git stash list 命令去查看我们“存储”的列表。</p>
+</li>
+</ol>
+<p><img src="/Git-%E5%85%A5%E9%97%A8/image-20241125123352445.png" alt="image-20241125123352445"></p>
 <h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>将本地分支推送到远端仓库。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
 
@@ -165,7 +178,7 @@ develop-->Feature</pre>
 
 
 <h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><p>将设计完成的功能分支进行合并到汇总分支。切换到需要汇总的分支，输入如下代码，将其他分支合并进来</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">合并</span><br><span class="line">git merge &lt;分支名&gt;</span><br><span class="line"></span><br><span class="line">提交代码至主干（master）</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
 <img src="Git-入门/image-20240518142700349.png">
 

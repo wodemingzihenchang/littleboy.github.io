@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-15 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS安装向导"><a href="#SOLIDWORKS安装向导" class="headerlink" title="SOLIDWORKS安装向导"></a>SOLIDWORKS安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类的安装向导</p>
+<span id="more"></span>
+
+<h1 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h1><p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。<br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a><br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a><br><br><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/recommended/">普吉网站的选配参考</a><br></p>
+<h2 id="硬件组成："><a href="#硬件组成：" class="headerlink" title="硬件组成："></a>硬件组成：</h2><p><strong>处理器 CPU：</strong><br>负责处理 SOLIDWORKS 程序操作过程的计算。对于零部件设计模块，其所占用的是 CPU 的单核心的计算能力，单核主频越高越好。对于模拟和渲染计算，更多核心的 cpu 有利于提高计算速度。</p>
+<p><strong>内存 RAM：</strong><br>当一个文档在 SOLIDWORKS 中打开时，它将会被加载到 RAM 内存上。因此，您需要足够的内存来运存 SOLIDWORKS 文件，我们发现在普遍在 16GB 是可以满足正常设计需求。当你需要处理大型装配体时，建议按需升级内存配置（见下表）</p>
+<p><strong>显卡 GPU:</strong><br>显卡对你的工作效率至关重要。它帮助处理器加速操作，如缩放和旋转。英特尔 HD 显卡，以及 GeForce 和 Radeon(非 Pro)等卡是不支持的消费级卡。通常性能和稳定性都很差。<br>NVIDIA 也是 SOLIDWORKS 可视化渲染中唯一支持 NVIDIA iRay 的显卡。图形和那些拥有 4GB 或更多内存的支持新的 AI 去噪(推荐 6GB+)意味着你可以更快地返回结果。最新的 Quadro RTX 显卡甚至有专门的光线追踪核心来进一步加速渲染</p>
+<p><strong>硬盘 ROM：</strong><br>固态硬盘(SSD)相对机械硬盘（HDD）提供了显著的读写性能的提升，我们建议是将操作系统，软件，操作文件放置在固态硬盘操作，至少将操作系统和程序放置在固态硬盘。对于硬盘容量尽量空余 1&#x2F;4 以上的空间，而不是占满整个硬盘，以获得最佳性能。</p>
+<p><a target="_blank" rel="noopener" href="https://support.hawkridgesys.com/hc/en-us/articles/18845987660813-SOLIDWORKS-2024-Comprehensive-Hardware-Guide#h_01HB9YAPNJR7CGHH8KBQ4R0BWP">SOLIDWORKS 综合硬件指南</a></p>
+<h2 id="设计配置参考："><a href="#设计配置参考：" class="headerlink" title="设计配置参考："></a>设计配置参考：</h2><p>如果您需要平时设计建模的流畅和响应性能，选择高频 CPU 和 16GB 以上内存是绝大多数 CAD 的理想选择。对于除了最大和最复杂的组件装配体或零部件，则按需升级硬件配置，详见下表：</p>
+<img src="安装向导\硬件配置\SW硬件配置.png">
+
+<h2 id="仿真配置参考："><a href="#仿真配置参考：" class="headerlink" title="仿真配置参考："></a>仿真配置参考：</h2><p>一般图形渲染和仿真模拟可以从更高的内核数中受益。一般会建议使用英特尔至强（Xeon）W 处理器，其在 Flow 和 FEA 模拟中表现非常出色。<br>更高的核心也有助于基于 CPU 的渲染，就像 PhotoView 360 ，Visualize 等，如果您是主要关注图形渲染方面，那么像 AMD 的 Threadripper 这样的更高核心数的平台将会更快。</p>
+<img src="安装向导\硬件配置\SW仿真硬件配置.png">
+
+<h1 id="单机版安装"><a href="#单机版安装" class="headerlink" title="单机版安装"></a>单机版安装</h1><p>找到安装程序，建议使用“管理员身份启动”安装程序</p>
+<blockquote>
+<p>..\SOLIDWORKS 20xx SP05 安装包\setup.exe<br></p>
+</blockquote>
+<p>步骤：<br>1、安装类型：单击安装<br>2、序列号：填写序列号（或临时序列号，后面再激活）<br>3、选择安装产品、位置、Toolbox位置</p>
+<img src="安装向导/01-安装/图片1：选择安装功能版本.png">
+
+<p>4、开始安装。</p>
+<h1 id="网络版版安装"><a href="#网络版版安装" class="headerlink" title="网络版版安装"></a>网络版版安装</h1><p>注意：安装前，需检查当前许可服务器配置是否支持安装环境（详细见<a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">#配置要求</a>）。</p>
+<p>1、安装SNL许可服务器：</p>
+<blockquote>
+<p>..\SOLIDWORKS 20xx SP05 安装包\swlicmgr\setup.exe</p>
+</blockquote>
+<p>2、安装客户端：参考上面的<a href="#单机版安装">#单机版安装。</a></p>
+<h1 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h1><p>插件是基于SW程序本体的拓展功能，使用需要先安装SW软件才能使用。</p>
+<p>与单机版安装区别是在【序列号】填入所需插件的序列号，在下一步的产品选择中勾选所需的插件即可安装。</p>
+<h1 id="修复安装"><a href="#修复安装" class="headerlink" title="修复安装"></a>修复安装</h1><p>修复安装异常时，可以尝试如下设置：</p>
+<p>1.打开注册表编辑器找到如下位置（如果没有就新建）；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer</span><br></pre></td></tr></table></figure>
+
+<img src="安装向导/02-修复/修复SW1.png">
+
+<p>新建一个 Dword 值，名字为“RemappedElevatedProxiesPolicy”，值为 1；</p>
+<img src="安装向导/02-修复/修复SW2.png">
+
+<p>打开 solidworks 安装程序，选修复安装；</p>
+<p>安装完后打开 Solidworks 确认问题解决后，将“RemappedElevatedProxiesPolicy” 的值改为 0。</p>
+<h1 id="常见问题-Q-A："><a href="#常见问题-Q-A：" class="headerlink" title="常见问题 Q&amp;A："></a>常见问题 Q&amp;A：</h1><p><strong>问：拥有更多 CPU 内核是否会提高 SOLIDWORKS 性能？</strong><br>答：在 SOLIDWORKS 中建模和处理装配体只能使用少量核心。具有单核心高频率的处理器将体现一般建模时的最佳性能。然而，模拟和渲染可以通过更高的核心数看到中等到较大的性能提升。这就是需要区别工作站电脑是用于主设计还是主仿真。</p>
+<p><strong>问：我需要使用 Quadro 卡还是 GeForce ？</strong><br>答：一般建议 Quadro 卡。我们发现在“带边缘阴影”模式下，即使是低端 Quadro 也将胜过最快的 GeForce 显卡。此外，使用工作站卡是获得对 Realview（俗称“小金球”）等功能的官方支持的唯一方法。详细可见：SOLIDWORKS 硬件认证。</p>
+<p><strong>问：我需要多少系统 RAM？</strong><br>答：您需要的 RAM 数量将取决于装配中零件的数量和复杂性。一般的经验法则是 SOLIDWORKS 本身需要大约 5GB 的 RAM，然后至少是您使用的最大装配体文件大小的 20 倍。大多数用户需要大约 32GB 的 RAM，以便为 SOLIDWORKS 和他们可能想要运行的其他各种应用程序提供足够的内存，但具有极其复杂的装配体或模拟的用户会想要更高。</p>
+<p><strong>问：SSD 能否帮助我更快地打开和保存装配体？</strong><br>答：是的！SSD 比传统硬盘驱动器快得多，并且在许多情况下可以显着减少打开和保存装配体所需的时间。请注意，较小的装配体往往不受 I&#x2F;O 限制，这意味着与更快的存储驱动器可能没有太大差异，但通常，打开装配体所需的时间越长，SSD 就越有用。</p>
+<p><strong>问：我需要 Xeon CPU 吗？</strong><br>答：一些英特尔至强处理器提供的核心数量比主流酷睿型号高得多，内存容量也更高，有时还支持额外的指令集。这些功能一起可以提高渲染和某些类型模拟的性能。但是，至强 CPU 的时钟频率几乎总是低于酷睿 i7 和 i9 CPU - 这意味着您将放弃少量性能来执行一般建模任务。我们提供基于这两个平台的系统，具体取决于 SOLIDWORKS 的哪些方面对您最重要 - 哪些方面更符合您的预算。</p>
+<p><strong>问：我应该买一个超频的系统吗？</strong><br>答：一般来说，我们不建议对任何专业工作站进行超频。通常，适度的性能提升不值得与超频相关的缺点，包括不稳定、更短的硬件寿命和潜在的数据不准确。</p>
+<p><strong>问：这些系统是否适用于 CATIA 或其他 CAD 软件？</strong><br>答：是的！SOLIDWORKS 和 CATIA 具有非常相似的系统要求，因此这些工作站也应该非常适合几乎任何 CAD&#x2F;CAM&#x2F;CAE 软件，包括 CATIA、Solid Edge、Creo 等。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
