@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="Costing"><a href="#Costing" class="headerlink" title="Costing"></a>Costing</h1><p>一般：SOLIDWORKS 成本计算工具通过将成本估算和报价过程自动化，帮助计算制造零件的成本是多少。</p>
+<p>此工具根据制造成本帮助设计人员做出决定，帮助制造商为客户创建报价。无论您何时更改设计，都可以立即看到更新的成本以及详细的成本细分。</p>
+<span id="more"></span>
+
+<h2 id="模型分类："><a href="#模型分类：" class="headerlink" title="模型分类："></a>模型分类：</h2><ul>
+<li>机加件</li>
+<li>钣金件</li>
+<li>多实体</li>
+<li>外购件</li>
+<li>装配体</li>
+</ul>
+<h2 id="成本构成"><a href="#成本构成" class="headerlink" title="成本构成"></a>成本构成</h2><p>原材料成本</p>
+<p>加工时长</p>
+<p>机器损耗</p>
+<p>单位时间劳动力成本</p>
+<p>其它</p>
+<h2 id="计算原理："><a href="#计算原理：" class="headerlink" title="计算原理："></a>计算原理：</h2><p>通过形状识别制造特征，通过特征在模板里的定义进行计算</p>
+<h2 id="模型准备"><a href="#模型准备" class="headerlink" title="模型准备"></a>模型准备</h2><p>1、数据准备：材质库、特征库、成本数据、costing模板</p>
+<p>2、成本规则：钣金件、机加件、采购件</p>
+<p>3、报告模板：成本分析报告（字符）</p>
+<h2 id="成本属性："><a href="#成本属性：" class="headerlink" title="成本属性："></a>成本属性：</h2><p>成本相关属性的链接关键字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;SW-Cost-TotalCost@Part.SLDPRT&quot; 总成本</span><br><span class="line">&quot;SW-Cost-MaterialCost@Part.SLDPRT&quot; 材料成本</span><br><span class="line">&quot;SW-Cost-ManufacturingCost@Part.SLDPRT&quot;制作成本</span><br><span class="line">&quot;SW-Cost-MaterialName@Part.SLDPRT&quot;材料名称</span><br><span class="line">&quot;SW-Cost-TemplateName@Part.SLDPRT&quot;模板名称</span><br><span class="line">&quot;SW-Cost-StockType@Part.SLDPRT&quot;指定计算零件成本时使用的配料类型</span><br><span class="line">&quot;SW-Cost-StockSize@Part.SLDPRT&quot;指定用于制造零件的配料大小</span><br><span class="line">&quot;SW-Cost-CostCalculationTime@Part.SLDPRT&quot;成本计算时间</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p><strong>设置文件位置</strong></p>
+<p>首先请设置文件位置，以便使用针对本课程的正确模板。默认 SW 模板文件夹位置：</p>
+<p>模板文件格式为：sldctm 机加，sldctc 多实体，sldcts 钣金</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;SW程序目录&gt;\lang\Chinese-Simplified Costing templates</span><br></pre></td></tr></table></figure>
+
+<img src="Costing简介/设置文件位置.png">
+
+
+
+<p><strong>Costing设置</strong></p>
+<p>默认值设置：</p>
+<p>预设了Costing的使用值。</p>
+<p>模板覆盖：</p>
+<p>覆盖模板设置以进行基于偏移的精加工。 您可以输入与机加工表面偏移的值，以便进行精加工和半精加工操作。 </p>
+<h1 id="查看成本"><a href="#查看成本" class="headerlink" title="查看成本"></a>查看成本</h1><p>简单了解机加件的成本</p>
+<p>（机加 costing 界面）</p>
+<img src="Costing简介/image001.png">
+
+<p>（机加 costing 界面）</p>
+<img src="Costing简介/image002.png">
+
+<h1 id="钣金模板编辑器"><a href="#钣金模板编辑器" class="headerlink" title="钣金模板编辑器"></a>钣金模板编辑器</h1><p>启动编辑器</p>
+<img src="Costing简介/启动编辑器.png">
+
+<h2 id="常规"><a href="#常规" class="headerlink" title="常规"></a>常规</h2><p>使用成本计算模板编辑器中的常规屏幕设置单位和货币选项、厂价和表面粗糙度选项。</p>
+<img src="Costing简介/costing钣金模板一般设置.png">
+
+<h2 id="材料："><a href="#材料：" class="headerlink" title="材料："></a>材料：</h2><p>材料选择与 SW 的材质库有关，可以直接选择现有材质库的材料进行添加。<br><img src="Costing简介/costing钣金材料.png"></p>
+<h2 id="厚度："><a href="#厚度：" class="headerlink" title="厚度："></a>厚度：</h2><p>在材料基础上添加“厚度”及其“成本”信息；反映到软件使用如下：<br><img src="Costing简介/costing钣金厚度.png"></p>
+<h2 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h2><h3 id="操作-剪切："><a href="#操作-剪切：" class="headerlink" title="操作-剪切："></a>操作-剪切：</h3><p>设置切割下料时的成本，包括“切割方法”&amp;“设置成本”（这里我理解是机器的固定成本，如用地用电损耗等）&amp;操作成本。反映到软件使用如下右：</p>
+<img src="Costing简介/costing钣金剪切操作.png">
+
+<h3 id="操作-折弯："><a href="#操作-折弯：" class="headerlink" title="操作-折弯："></a>操作-折弯：</h3><p>这里的设置也用上面的“操作-剪切”一样，你需要设置“折弯方法”所对应的“设置成本”和“操作成本”。折弯特征一般有：“折弯”，“褶边”等（下面以折弯Bend做说明）反映到软件使用如下右：</p>
+<img src="Costing简介/costing钣金折弯操作.png">
+
+<h3 id="操作-库特征："><a href="#操作-库特征：" class="headerlink" title="操作-库特征："></a>操作-库特征：</h3><p>这里的设置也用上面的“操作-剪切”一样，你需要设置“库特征”“设置成本”“操作成本”。<br>（这里的库特征要同名）反映到软件使用如下右：</p>
+<img src="Costing简介/costing钣金库特征操作.png">
+
+<h3 id="操作-自定义："><a href="#操作-自定义：" class="headerlink" title="操作-自定义："></a>操作-自定义：</h3><p>自定义通常用于非钣金特征的处理操作（例如：表面处理等）。反映到软件使用如下右：</p>
+<img src="Costing简介/costing钣金自定义操作.png">
+
+<h1 id="机加件模板编辑器"><a href="#机加件模板编辑器" class="headerlink" title="机加件模板编辑器"></a>机加件模板编辑器</h1><p>启动编辑器</p>
+<img src="Costing简介/启动编辑器.png">
+
+<h2 id="常规-1"><a href="#常规-1" class="headerlink" title="常规"></a>常规</h2><p>使用成本计算模板编辑器中的常规屏幕设置单位和货币选项、厂价和表面粗糙度选项。</p>
+<img src="Costing简介/costing机加工模板一般设置.png">
+
+<h2 id="材料：-1"><a href="#材料：-1" class="headerlink" title="材料："></a>材料：</h2><p>材料选择与 SW 的材质库有关，可以直接选择现有材质库的材料进行添加。这里也可以同个excel表导入方式，填入数据</p>
+<img src="Costing简介/costing机加材料.png">
+
+<p>配料类型里：</p>
+<p>胚块主要针对机加工的铣削件。<br>板块主要针对板材，即切割下来就可用，厚度方向无需加工。<br>圆柱主要针对棒料，即车削加工。</p>
+<p>方法：</p>
+<p>加工：使用 配料材料 中的加工屏幕设置您使用加工制造方法制造加工零件所需的材料。</p>
+<p>塑料：使用 Costing 模板编辑器中的塑料屏幕设置您需要使用塑料制造方法制造精加工零件的材料。</p>
+<p>铸造：使用 Costing 模板编辑器中的 Costing 屏幕设置您需要使用 Costing 制造方法制造精加工零件的材料。</p>
+<p>3D 打印：使用 Costing 模板编辑器中的 3D 打印屏幕设置您需要使用 3D 打印制造方法制造精加工零件的材料。</p>
+<p>结构构件：使用 Costing 模板编辑器中的结构构件屏幕设置您需要按拉伸零件制造结构构件的材料。</p>
+<h2 id="机床"><a href="#机床" class="headerlink" title="机床"></a>机床</h2><p>使用 Costing 模板编辑器中的机床屏幕定义与机加工操作相关的机器和成本。</p>
+<p>设置发布：</p>
+<p>影响单次加工或批量加工的装夹操作和机器启停操作时间</p>
+<img src="Costing简介/机床设置.png">
+
+<h2 id="操作：-1"><a href="#操作：-1" class="headerlink" title="操作："></a>操作：</h2><h3 id="切割-板块配料"><a href="#切割-板块配料" class="headerlink" title="切割(板块配料)"></a>切割(板块配料)</h3><p>使用成本计算模板编辑器中的切割（板块配料）屏幕定义从板块配料体制造的零件的切割方法的成本。 </p>
+<h3 id="碾磨"><a href="#碾磨" class="headerlink" title="碾磨"></a>碾磨</h3><p>使用 Costing 模板编辑器中的Costing 模板编辑器屏幕过滤与碾磨操作相关的机器。 </p>
+<h3 id="钻孔"><a href="#钻孔" class="headerlink" title="钻孔"></a>钻孔</h3><p>使用 钻孔中的Costing 模板编辑器屏幕定义与钻孔操作相关的机器。</p>
+<h3 id="车削"><a href="#车削" class="headerlink" title="车削"></a>车削</h3><p>使用 Costing 模板编辑器中的车削屏幕定义与车削操作相关的机器和成本。</p>
+<h3 id="端点切割"><a href="#端点切割" class="headerlink" title="端点切割"></a>端点切割</h3><p>使用 Costing 模板编辑器中的端点切割屏幕筛选与焊件中端点切割操作相关的机器。</p>
+<h3 id="库特征"><a href="#库特征" class="headerlink" title="库特征"></a>库特征</h3><p>使用成本计算模板编辑器中的库特征屏幕定义零件的库特征的成本。</p>
+<h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><p>使用成本计算模板编辑器中的自定义屏幕定义有助于核算零件制造成本的其他操作，例如粉末涂层。</p>
+<p>修改机加工零件设置</p>
+<p>您可以在机加工模板的机器选项卡中指定机加工零件的设置时间。 </p>
+<p>将模板备注添加至钻孔、碾磨或车削操作</p>
+<p>您可以在机加工模板上为碾磨、钻孔或车削工具添加注释。 </p>
+<p>父主题机加工模板</p>
+<p>查找机加工模板信息的位置更新模板材料成本数据创建新的机加工模板编辑机加工模板</p>
+<h2 id="规则："><a href="#规则：" class="headerlink" title="规则："></a>规则：</h2><img src="Costing简介/规则.png">
+
+
+
+<h1 id="多实体"><a href="#多实体" class="headerlink" title="多实体"></a>多实体</h1><p>多用于焊件多实体的情况，同装配体类似。我们直接看下面装配体介绍</p>
+<h1 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h1><h2 id="常规-2"><a href="#常规-2" class="headerlink" title="常规"></a>常规</h2><p>装配体的成本计算，归根到底是零件的计算。那么装配体的成本计算模板是参考了两个其他模板：一个针对【钣金实体模板】，另一个针对【机加工实体模板】。 </p>
+<p>钣金零件的操作 </p>
+<p>机加工零件的操作 </p>
+<h2 id="自定义-1"><a href="#自定义-1" class="headerlink" title="自定义"></a>自定义</h2><p>操作（例如对顶层装配体执行的装配操作、涂刷操作） </p>
+<h2 id="焊接"><a href="#焊接" class="headerlink" title="焊接"></a>焊接</h2><p>焊接操作</p>
+<p>设置操作 </p>
+<h2 id="采购的零部件"><a href="#采购的零部件" class="headerlink" title="采购的零部件"></a>采购的零部件</h2><p>购买的标准件零件，例如：电机、气缸等</p>
+<img src="Costing简介/采购的零部件.png">
+
+<h2 id="Toolbox-零部件"><a href="#Toolbox-零部件" class="headerlink" title="Toolbox 零部件"></a>Toolbox 零部件</h2><h1 id="报告："><a href="#报告：" class="headerlink" title="报告："></a>报告：</h1><h2 id="生成报告"><a href="#生成报告" class="headerlink" title="生成报告"></a>生成报告</h2><p>点击右下角“生成报告”按钮，生成分析报告:报告有Word和excel两种形式;</p>
+<p>从SW 2017版本开始，报告模板可以自定义。</p>
+<img src="Costing简介/生成报告1.png">
+
+
+
+<img src="Costing简介/生成报告2.png">
+
+
+
+<h2 id="材料明细表"><a href="#材料明细表" class="headerlink" title="材料明细表"></a>材料明细表</h2><p>使用成本属性列的材料明细表BOM</p>
+<h2 id="word文件"><a href="#word文件" class="headerlink" title="word文件"></a>word文件</h2><p>创建自定义 Costing 报告</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>1、分析的局限性:主要针对加工过程成本分析，像诸如管理费用、折旧费用、物料损耗等费用无法统计。</p>
+<p>2、参数设置偏理想化:像这种操作时间的设置，机床参数的设置、原材料成本的价格等，现实情况是比较复杂多变的，而软件只能设置成固定数值。如果组合设置模板，那模板数量会大大增加。</p>
+<p>3、某些参数含义比较费解:像下图中的成本和设置成本就很难理解它们的意义。意义无法理解，那相当于没有根基。</p>
+<p>4、钣金件用机加工方式，加工方法选择：“加工的板块”。</p>
+<h2 id="单位不匹配"><a href="#单位不匹配" class="headerlink" title="单位不匹配"></a>单位不匹配</h2><p>出现在模型类型所用的模板与模型单位不匹配导致</p>
+<img src="Costing简介/image-20231112112034728.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>

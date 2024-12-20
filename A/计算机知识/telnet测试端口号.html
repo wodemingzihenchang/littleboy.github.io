@@ -44,11 +44,12 @@
 
 <div id="article"><h1 id="telnet测试端口号"><a href="#telnet测试端口号" class="headerlink" title="telnet测试端口号"></a>telnet测试端口号</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Telnet协议是TCP&#x2F;IP协议族中的一员，是Internet远程登录服务的标准协议和主要方式。它为用户提供了在本地计算机上完成远程主机工作的能力。在终端使用者的电脑上使用telnet程序，用它连接到服务器。终端使用者可以在telnet程序中输入命令，这些命令会在服务器上运行，就像直接在服务器的控制台上输入一样。可以在本地就能控制服务器。要开始一个telnet会话，必须输入用户名和密码来登录服务器。Telnet是常用的远程控制Web服务器的方法。（引自百度百科）。</p>
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>在客户端上如何验证机器是否可以正常访问到服务器的端口呢？可以使用telnet命令来查看。</p>
-<h1 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h1><h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>在控制面板中选择“程序和功能”，在“程序和功能”界面选择“打开或关闭Windows功能”。在弹出的“windows功能”窗口中将Telnet服务器和Telnet客户端勾选并保存设置。</p>
+<h1 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h1><h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>需要有对应服务端口的使用中，</p>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>在控制面板中选择“程序和功能”，在“程序和功能”界面选择“打开或关闭Windows功能”。在弹出的“windows功能”窗口中将Telnet服务器和Telnet客户端勾选并保存设置。</p>
 <img src="telnet测试端口号/image-20241112114025046.png">
 
 <p>设置完成后需要重新打开一个命令行窗口运行telnet命令，设置前打开的命令窗口运行telnet是无效的。</p>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><h2 id="进入Telnet"><a href="#进入Telnet" class="headerlink" title="进入Telnet"></a>进入Telnet</h2><p>使用方法：在CMD命令框中输入  </p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><h2 id="进入telnet"><a href="#进入telnet" class="headerlink" title="进入telnet"></a>进入telnet</h2><p>使用方法：在CMD命令框中输入  </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet &lt;IP地址或者域名&gt; &lt;端口号&gt;</span><br></pre></td></tr></table></figure>
 
 <img src="telnet测试端口号/image-20241112113806140.png">

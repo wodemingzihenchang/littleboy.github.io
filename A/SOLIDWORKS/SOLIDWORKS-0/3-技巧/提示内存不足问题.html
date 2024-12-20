@@ -97,9 +97,26 @@
 <h2 id="内存耗尽"><a href="#内存耗尽" class="headerlink" title="内存耗尽"></a>内存耗尽</h2><p>内存耗尽</p>
 <img src="提示内存不足问题/image-20240812120902006.png">
 
-<p>情况1：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">错误模块名称: windows.storage.dll，版本: 10.0.19041.4412，时间戳: 0x7a515b73</span><br><span class="line">错误应用程序路径: D:\PROGRA~1\SOLIDW~1\SOLIDW~1\SLDWORKS.exe</span><br><span class="line">错误模块路径: C:\Windows\SYSTEM32\windows.storage.dll</span><br><span class="line"></span><br><span class="line">这里的windows.storage.dll看似是跟系统特别是存储相关的，您可以首先尝试一下重命名SolidWorks注册表：(HKEY_CURRENT_USER\Software\Solidworks)</span><br><span class="line"></span><br><span class="line">如果这个方法不起作用的话，再尝试按以下微软官方推荐方法修复Windows系统：</span><br><span class="line">在管理员命令提示符下键入以下命令：sfc /SCANNOW及</span><br><span class="line">Dism /Online /Cleanup-Image /ScanHealth</span><br><span class="line">这条命令将扫描全部系统文件并和官方系统文件对比，扫描计算机中的不一致情况。</span><br><span class="line">Dism /Online /Cleanup-Image /CheckHealth</span><br><span class="line">这条命令必须在前一条命令执行完以后，发现系统文件有损坏时使用。</span><br><span class="line">DISM /Online /Cleanup-image /RestoreHealth</span><br><span class="line">这条命令是把那些不同的系统文件还原成官方系统源文件。</span><br><span class="line">完成后重启，再键入以下命令：sfc /SCANNOW，</span><br><span class="line">检查系统文件是否被修复。</span><br><span class="line">以上命令可以直接复制到命令提示符中运行。</span><br></pre></td></tr></table></figure>
 
+
+<h3 id="情况1：系统"><a href="#情况1：系统" class="headerlink" title="情况1：系统"></a>情况1：系统</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">错误模块名称: windows.storage.dll，版本: 10.0.19041.4412，时间戳: 0x7a515b73</span><br><span class="line">错误应用程序路径: D:\PROGRA~1\SOLIDW~1\SOLIDW~1\SLDWORKS.exe</span><br><span class="line">错误模块路径: C:\Windows\SYSTEM32\windows.storage.dll</span><br><span class="line"></span><br><span class="line">这里的windows.storage.dll看似是跟系统特别是存储相关的，您可以首先尝试一下重命名SolidWorks注册表：(HKEY_CURRENT_USER\Software\Solidworks)</span><br><span class="line"></span><br><span class="line">如果这个方法不起作用的话，再尝试按以下微软官方推荐方法修复Windows系统：</span><br><span class="line">在管理员命令提示符下键入以下命令：sfc /SCANNOW及</span><br><span class="line">Dism /Online /Cleanup-Image /ScanHealth</span><br><span class="line">这条命令将扫描全部系统文件并和官方系统文件对比，扫描计算机中的不一致情况。</span><br><span class="line">Dism /Online /Cleanup-Image /CheckHealth</span><br><span class="line">这条命令必须在前一条命令执行完以后，发现系统文件有损坏时使用。</span><br><span class="line">DISM /Online /Cleanup-image /RestoreHealth</span><br><span class="line">这条命令是把那些不同的系统文件还原成官方系统源文件。</span><br><span class="line">完成后重启，再键入以下命令：sfc /SCANNOW，</span><br><span class="line">检查系统文件是否被修复。</span><br><span class="line">以上命令可以直接复制到命令提示符中运行。</span><br></pre></td></tr></table></figure>
+
+<h3 id="情况2：插件"><a href="#情况2：插件" class="headerlink" title="情况2：插件"></a>情况2：插件</h3><p>使用PLM相关插件，启用时，会在小零件情况下也发生“内存耗尽，程序正在终止”的提示。</p>
+<h3 id="情况3：服务"><a href="#情况3：服务" class="headerlink" title="情况3：服务"></a>情况3：服务</h3><p>开始&gt; 运行 &gt; 输入 ‘msconfig’ ，回车 </p>
+<p>到服务标签页，勾选‘隐藏所有 Microsoft 服务’ </p>
+<p>去除勾选所有服务(包含所有杀毒软件的服务，这些保留’SolidWorks Licensing Service’&#x2F;SolidWorks Electrical Collaborative Server&#x2F; Dassault services&#x2F;NVIDIA and office)</p>
+<p>到开机启动标签页</p>
+<p>去除Microsoft 、NVIDIA、office之外的所有服务器 </p>
+<p>测试是否有相同问题，如果没有，将其他服务器一个一个的勾选回来，重复操作设置 &gt;&gt;确认时哪个第三方服务有影响。</p>
+<h3 id="情况4：内存检查"><a href="#情况4：内存检查" class="headerlink" title="情况4：内存检查"></a>情况4：内存检查</h3><p>使用VMMａｐ工具检查SOLIDWORKS实际使用虚拟内存情况，这个是Windows的官方工具，下载路径： <a target="_blank" rel="noopener" href="http://technet.microsoft.com/en-us/sysinternals/dd535533.aspx">http://technet.microsoft.com/en-us/sysinternals/dd535533.aspx</a> 	</p>
+<p>• 先开启SOLIDWORKS，然后运行这个工具，在列表里面选择sldworks.exe进程，在出现内存耗尽信息的时候，可以F5刷新： </p>
+<img src="提示内存不足问题/image-20241209200851570.png">
+
+<p>• 看Largest 列，对应Free, 是否有足够的内存 </p>
+<p>• 看Heap行，也就是堆栈层，Commited列，是否占用很大内存。如果是，那么可能是存在堆栈数据内存溢出的情况。同样原理，也可以通过Commited列，看是否有其他类型内存溢出。 </p>
+<img src="提示内存不足问题/image-20241209203206191.png">
+
+<p>• 可能刚开始的时候SOLIDWORKS刚运行不会有内存耗尽的情况，但是可以着重观察，SOLIDWORKS运行一段时间后，或者打开某个大型装配体，图纸又关闭后，重新打开或者编辑某个简单零件的时候，看内存使用和释放情况。 </p>
 <h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>客户硬件确实有问题。例如出现了内存泄漏。</p>
 <h2 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h2><p>客户设备上可用内存空间有限，在开启一些大型装配体或者文件，或者使用相对需要占用较多内存的命令，例如进行仿真分析等，出现内存耗尽，请和客户确认，是否他们仅在开启文件的时候出现内存耗尽的错误。</p>
 <h2 id="特定文件"><a href="#特定文件" class="headerlink" title="特定文件"></a>特定文件</h2><p>客户的部分文件有问题，打开文件，显示内存耗尽，这个也同样要客户确认，内存耗尽，是否就是打开一些特定文件，或者包含有一些文件的装配体，就会出现。</p>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html><head>
+    <title>littleboy97学习笔记</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+<!-- 引入备案 -->
+</div><div id="toc"></div> <footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>	</aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/Project/index.html" class="menu-item-link">技能</a></li>
+    
+    <li class="menu-item"><a href="/工具网站/index.html" class="menu-item-link">网站</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="https://space.bilibili.com/12254884?spm_id_from=333.1007.0.0" class="menu-item-link" target="_blank">Bilibili</a></li>
+    <li class="menu-item"><a href="https://github.com/wodemingzihenchang" class="menu-item-link" target="_blank">github</a></li>
+    <li class="menu-item"><a href="https://gitee.com/littleboy97" class="menu-item-link" target="_blank">gitee</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: littleboy</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="Costing钣金件"><a href="#Costing钣金件" class="headerlink" title="Costing钣金件"></a>Costing钣金件</h1><p>在本课程中，将计算制造钣金零件的成本。在本课中，您将学习如何：<br>• 估算钣金零件成本<br>• 使用成本计算评估设计变更<br>• 更改成本计算输入<br>• 加入制造减价<br>• 增加可影响成本的自定义操作<br>• 比较不同零件材料的成本<br>• 生成成本计算结果报告</p>
+<img src="Costing钣金/image066.png">
+
+<span id="more"></span>
+
+<p>接下来打开零件，然后使用 Costing 工具计算成本。</p>
+<p>开启 Costing，“工具”工具栏或 CommandManager 上的“评估”选项卡。或者单击工具 &gt; SOLIDWORKS 应用程序 &gt; Costing</p>
+<p>在 Costing 任务窗格的方法中，选择钣金。</p>
+<img src="Costing钣金/image068.png">
+
+<p>在 Costing 任务窗格的 Costing 模板下，选择 sheet_metal_tutorial。 （成本计算模板中包含您或您的制造供应商将用于制造零件的过程。可在模板中指定如下信息：材料成本与规格、制造工序成本以及制造设置成本。）</p>
+<img src="Costing钣金/image069.png">
+
+<p>在 Costing 任务窗格中的材料下，确保：<br>a. 类设置为钢。<br>b. 名称设置为普通碳钢。</p>
+<p>在 Costing 任务窗格中的消息下，单击开始成本估算。<br>Costing 任务窗格将显示 估计的零件单位成本。<br>Costing 任务窗格项目 说明<br>比较 成本计算工具根据模板中的数据和图形区中的零件来计算零件的成本。<br>分解 成本计算的分解结果指示材料费用和制造（工时、机器运转时间和管理）费用占总成本的一定百分比。</p>
+<h2 id="更改模型几何体"><a href="#更改模型几何体" class="headerlink" title="更改模型几何体"></a>更改模型几何体</h2><p>更改模型几何体，以了解对制造成本有何影响。在图形区域中，双击零件。将所示尺寸从 120 更改为 250。（增加材料估算成本将上升）</p>
+<img src="Costing钣金/image070.png">
+
+<h2 id="更改材料的厚度和成本"><a href="#更改材料的厚度和成本" class="headerlink" title="更改材料的厚度和成本"></a>更改材料的厚度和成本</h2><p>接下来将更改材料的厚度和成本，以便了解这两者如何影响制造成本。在钣金成本计算任务窗格的材料下模板的厚度中，选择 2.0000 mm。（增加材料估算成本将上升）</p>
+<img src="Costing钣金/image071.png">
+
+<h2 id="添加设置成本"><a href="#添加设置成本" class="headerlink" title="添加设置成本"></a>添加设置成本</h2><p>SOLIDWORKS 软件窗口左侧的 CostingManager 显示成本计算工具如何对制造零件所需的每个操作进行分类。 接下来将添加设置成本，以便包含购买的单项。</p>
+<p>在 CostingManager 中，展开设置，将光标悬停在激光设置上方将显示为零件应用的设置成本部分。</p>
+<img src="Costing钣金/image073.png">
+
+<p>（CostingManager 中的所有成本值都针对单个零件。当前每个批量有 100 个零件，而该机器的设置成本为每个批量 20 美元，所以每个零件的总成本为 0.20 美元。） 2. 右键单击设置，然后单击选择设置成本 &gt; 购买定单项。（每个零件的估算成本将上升，因为设置成本拆分给了输入的总数量中的每个零件）</p>
+<h2 id="切割"><a href="#切割" class="headerlink" title="切割"></a>切割</h2><p>接下来将检查 CostingManager，以便了解为制造零件而加入的操作。</p>
+<p>展开切割路径：要切割六个激光切割路径。选择任一切割路径，切割路径将在模型中突出显示。将光标悬停在切割路径上，将显示该切割路径的成本计算。</p>
+<img src="Costing钣金/image075.png">
+
+<img src="Costing钣金/image074.png">
+
+<h2 id="折弯"><a href="#折弯" class="headerlink" title="折弯"></a>折弯</h2><p>展开折弯：共有 4 个折弯操作，并且零件中有一个褶边操作。</p>
+<img src="Costing钣金/image076.png">
+
+<h2 id="库特征"><a href="#库特征" class="headerlink" title="库特征"></a>库特征</h2><p>展开库特征。该零件中有两个库特征。仅当模板中包含库特征的信息时，成本估算中才会包含库特征。可编辑模板，以便加入任何库特征。</p>
+<img src="Costing钣金/image077.png">
+
+<img src="Costing钣金/image078.png">
+
+<h2 id="更改坯件大小"><a href="#更改坯件大小" class="headerlink" title="更改坯件大小"></a>更改坯件大小</h2><p>坯件大小是零件的制造原材料的大小。接下来将更改坯件大小，以便了解坯件大小如何影响制造成本。</p>
+<p>在钣金成本计算任务窗格的坯件大小中，选择在图形区域中预览。将显示坯件大小的边界框预览。将偏移设置为 25，然后按 Enter。边界框变大且估算成本上升。将偏移设置为 0，然后按 Enter。</p>
+<img src="Costing钣金/image080.png">
+
+<h2 id="更改数量多少"><a href="#更改数量多少" class="headerlink" title="更改数量多少"></a>更改数量多少</h2><p>清除在图形区域中预览。更改要制造的零件数量。接下来将更改要制造的零件数量，以便了解该数量如何影响制造成本。</p>
+<p>将零件总数设置为 1，然后按 Enter。估算成本将上升 （因为机器设置成本拆分给了批量中的各个零件，每个零件承担的设置成本将增加）</p>
+<h2 id="添加减价"><a href="#添加减价" class="headerlink" title="添加减价"></a>添加减价</h2><p>接下来将向零件添加减价，以便了解减价如何影响价格。</p>
+<p>在涨价&#x2F;减价下，可为零件应用涨价或减价。如果要增加利润率，请输入正值。如果从供应商处获得了减价，请输入负值。为总成本的 % 输入 -10，然后按 Enter。每个零件的估算成本将下降 10%。</p>
+<img src="Costing钣金/image083.png">
+
+<h2 id="应用自定义操作"><a href="#应用自定义操作" class="headerlink" title="应用自定义操作"></a>应用自定义操作</h2><p>接下来将对零件应用自定义操作。由于零件由普通碳钢制成，所以可能生锈，因此您可以自定义操作的形式对零件进行阳极处理。</p>
+<p>在 CostingManager 中，单击添加自定义操作。选择阳极处理。（阳极处理通常作为自定义操作列出，因为钣金模板中包含阳极处理。 PropertyManager 将显示与阳极处理操作相关的所有成本信息）</p>
+<p>（设置成本）</p>
+<img src="Costing钣金/image084.png">
+
+<p>（操作成本）</p>
+<img src="Costing钣金/image085.png">
+
+<p>比较材料成本</p>
+<p>阳极处理价格昂贵，但仍然存在生锈问题。可以比较替代材料的成本。接下来将设置一个基准价格，用于比较部件的替代材料。</p>
+<p>在 Costing 任务窗格的估计的零件单位成本下，单击设定基准。在材料下的名称中，选择 AISI 304（由于 AISI 是不锈钢可防止生锈，所以可以去除阳极处理操作）</p>
+<h2 id="生成报表"><a href="#生成报表" class="headerlink" title="生成报表"></a>生成报表</h2><p>接下来将生成成本计算结果报告。在 Costing 任务窗格底部单击生成报告 。此时会显示报告对话框。</p>
+<ol>
+<li>选取出版时显示报表。</li>
+<li>设置其它选项，然后单击发布。</li>
+<li>关闭报表。</li>
+</ol>
+<img src="Costing钣金/image086.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+</body></html>
