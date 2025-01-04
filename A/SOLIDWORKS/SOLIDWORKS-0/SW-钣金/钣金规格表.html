@@ -42,7 +42,7 @@
     <span id="post-date">2023-08-03 23:35:01</span>
 </div>
 
-<div id="article"><span id="more"></span>
+<div id="article"><h1 id="钣金规格表"><a href="#钣金规格表" class="headerlink" title="钣金规格表"></a>钣金规格表</h1><span id="more"></span>
 
 <h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><p>规格表是以 Excel 表格的形式设置规格，规格不能同名、厚度不能重复（原则就是规格不能重复）。规格表默认位置：</p>
 <blockquote>
@@ -66,15 +66,28 @@
 
 <h3 id="K-因子："><a href="#K-因子：" class="headerlink" title="K 因子："></a>K 因子：</h3><p>这里就是用 K 因子是描述中性层的位置。K 因子：中性面距内折面&#x2F;厚度，即 t&#x2F;T 随便说明下，中性层是变化的，不同厚度和半径中性层的位置也会变化的。</p>
 <p>模型钣金展开长度：100+100+5.46&#x3D;205.46</p>
-<img src="钣金规格表/image4.png">
+<img src="钣金规格表/K 因子.png">
 
 <h3 id="折弯系数："><a href="#折弯系数：" class="headerlink" title="折弯系数："></a>折弯系数：</h3><p>去除折弯半径的部分，直接使用折弯系数的数值代表该折弯半径的中性层，即固定边+折弯系数即为展开长度。</p>
 <p>模型钣金展开长度：100+100+10&#x3D;210mm</p>
-<img src="钣金规格表/image5.png">
+<img src="钣金规格表/折弯系数.png">
 
 <h3 id="折弯扣除："><a href="#折弯扣除：" class="headerlink" title="折弯扣除："></a>折弯扣除：</h3><p>草图包含折弯半径的部分，直接使用折弯扣除的数值代表该处重复多余的长度。</p>
 <p>模型钣金展开长度：100+100-10&#x3D;190mm</p>
-<img src="钣金规格表/image6.png">
+<img src="钣金规格表/折弯扣除.png">
+
+<h1 id="换算"><a href="#换算" class="headerlink" title="换算"></a>换算</h1><h2 id="K因子换算折弯系数"><a href="#K因子换算折弯系数" class="headerlink" title="K因子换算折弯系数"></a>K因子换算折弯系数</h2><p>折弯系数&#x3D;（r + KT)πA ／180</p>
+<p>K因子&#x3D;(折弯系数*180&#x2F;πA-r)&#x2F;T</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">r————内侧半径</span><br><span class="line">K————K因子</span><br><span class="line">T————材料厚度</span><br><span class="line">A————折弯角度</span><br></pre></td></tr></table></figure>
+
+<p>举例：K因子&#x3D;0.5、折弯内半径r&#x3D;0.2mm、厚度T&#x3D;1mm、带入公式得到折弯系数是：1.1mm</p>
+<p>展开长度：边长+边长-折弯内角*2+折弯系数&#x3D;（50+50-0.2-0.2+1.1）mm &#x3D;100.7mm</p>
+<img src="钣金规格表/K因子换算折弯系数.png">
+
+<p>在SW程序里，可以使用方程式定义</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;K因子&quot;=(((&quot;折弯系数&quot;*180)/(&quot;首次折弯角度&quot;*3.14))-&quot;折弯半径&quot;)/&quot;折弯厚度&quot;</span><br><span class="line"></span><br><span class="line">- &quot;首次折弯角度&quot;=90</span><br><span class="line">- &quot;折弯系数&quot;、&quot;折弯半径&quot;、&quot;折弯厚度&quot;都从钣金自定义属性获得</span><br></pre></td></tr></table></figure>
+
+<img src="钣金规格表/K因子换算折弯系数2.png">
 </div>
  			<!-- 引入正文 -->
     </div>	
